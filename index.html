@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&D — Outils de Table</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #d4a843;
+      --gold-bright: #f0c040;
+      --ember: #c44a1a;
+      --deep: #0d0a07;
+      --stone: #1a1410;
+      --stone-mid: #2a2118;
+      --stone-light: #3d3025;
+      --ink: #e8dcc8;
+      --ink-dim: #8a7a65;
+      --border: #5a4530;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--deep);
+      color: var(--ink);
+      font-family: 'EB Garamond', serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image:
+        radial-gradient(ellipse at 20% 10%, rgba(180,80,20,.15) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 90%, rgba(100,60,10,.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(212,168,67,.04) 0%, transparent 70%);
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .rune {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 20px rgba(212,168,67,.5));
+    }
+
+    h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      color: var(--gold);
+      text-shadow: 0 0 40px rgba(212,168,67,.35);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      margin-bottom: 3rem;
+    }
+
+    .divider {
+      width: 200px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 3rem;
+    }
+
+    .cards {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 240px;
+      padding: 2rem 1.5rem;
+      background: var(--stone-mid);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .card-dm::before {
+      background: radial-gradient(ellipse at 50% 0%, rgba(196,74,26,.25) 0%, transparent 70%);
+    }
+
+    .card-sheets::before {
+      background: radial-gradient(ellipse at 50% 0%, rgba(212,168,67,.2) 0%, transparent 70%);
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,.5);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-icon {
+      font-size: 2.8rem;
+      filter: drop-shadow(0 0 10px rgba(212,168,67,.3));
+      position: relative;
+    }
+
+    .card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      position: relative;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--ink-dim);
+      line-height: 1.5;
+      text-align: center;
+      position: relative;
+    }
+
+    .corner {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-color: var(--border);
+      border-style: solid;
+      transition: border-color 0.25s;
+    }
+    .corner-tl { top: 6px; left: 6px; border-width: 1px 0 0 1px; }
+    .corner-tr { top: 6px; right: 6px; border-width: 1px 1px 0 0; }
+    .corner-bl { bottom: 6px; left: 6px; border-width: 0 0 1px 1px; }
+    .corner-br { bottom: 6px; right: 6px; border-width: 0 1px 1px 0; }
+    .card:hover .corner { border-color: var(--gold); }
+
+    footer {
+      margin-top: 3.5rem;
+      font-size: 0.75rem;
+      color: var(--ink-dim);
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="rune">🐉</div>
+    <h1>D&D — Outils</h1>
+    <p class="subtitle">Donjons &amp; Dragons · 5e Édition</p>
+    <div class="divider"></div>
+
+    <div class="cards">
+      <a href="dnd-display-manager.html" class="card card-dm">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        <span class="card-icon">🎬</span>
+        <div class="card-title">Display Manager</div>
+        <div class="card-desc">Écran MJ · Scènes, sons,<br>effets &amp; initiative</div>
+      </a>
+
+      <a href="dnd5e-sheets/index.html" class="card card-sheets">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        <span class="card-icon">📜</span>
+        <div class="card-title">Fiches de Personnage</div>
+        <div class="card-desc">12 classes · Monstres<br>D&D 5e en français</div>
+      </a>
+    </div>
+
+    <footer>Outils locaux · Données sauvegardées dans le navigateur</footer>
+  </div>
+</body>
+</html>
