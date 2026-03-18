@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&D 5e — Fiche Monstre</title>
+  <link rel="stylesheet" href="../shared/style.css">
+  <style>
+    .class-icon { background: #8b1a1a22; border-color: #8b1a1a; }
+  </style>
+</head>
+<body>
+
+  <header class="sheet-header">
+    <div class="header-left">
+      <div class="class-icon">🐉</div>
+      <div>
+        <div class="header-title">Fiche Monstre</div>
+        <div class="header-subtitle">Bloc de statistiques — D&D 5e</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn" onclick="window.location.href='../index.html'">↩ Menu</button>
+      <button class="btn" onclick="MONSTER.exportJSON()">📤 Exporter</button>
+      <button class="btn" onclick="MONSTER.importJSON()">📥 Importer</button>
+      <button class="btn btn-danger" onclick="MONSTER.resetSheet()">🗑️ Reset</button>
+    </div>
+  </header>
+
+  <main class="sheet-body" style="max-width:900px">
+    <!-- MONSTER IDENTITY -->
+    <div class="monster-stat-block">
+      <div class="monster-header">
+        <div class="field-group">
+          <input type="text" class="field-input" data-field="monster_name" placeholder="Nom du monstre" style="font-family:'Cinzel Decorative',serif;font-size:1.6rem;color:var(--blood-light);background:transparent;border:none;border-bottom:2px solid var(--border-ornate);border-radius:0">
+        </div>
+        <div class="field-row" style="margin-top:0.3rem">
+          <div class="field-group" style="flex:2">
+            <input type="text" class="field-input" data-field="monster_type" placeholder="Type & taille (ex: Dragon de taille TG, chaotique mauvais)" style="font-style:italic;background:transparent;border:none;color:var(--ink-faded)">
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:1rem">
+        <!-- BASIC STATS -->
+        <div class="monster-divider"></div>
+        <div class="field-row">
+          <div class="field-group"><label class="field-label">Classe d'armure</label><input type="text" class="field-input" data-field="m_ac" placeholder="18 (armure naturelle)"></div>
+          <div class="field-group"><label class="field-label">Points de vie</label><input type="text" class="field-input" data-field="m_hp" placeholder="133 (14d12 + 42)"></div>
+          <div class="field-group"><label class="field-label">Vitesse</label><input type="text" class="field-input" data-field="m_speed" placeholder="12m, vol 24m, nage 12m"></div>
+        </div>
+
+        <div class="monster-divider"></div>
+
+        <!-- ABILITIES -->
+        <div class="monster-ability-grid">
+          <div class="monster-ability">
+            <div class="monster-ability-label">FOR</div>
+            <input type="number" class="ability-score-input" data-field="ability_str" value="10" style="width:40px;height:36px;font-size:1rem">
+            <div class="monster-ability-mod" id="mod_str">(+0)</div>
+          </div>
+          <div class="monster-ability">
+            <div class="monster-ability-label">DEX</div>
+            <input type="number" class="ability-score-input" data-field="ability_dex" value="10" style="width:40px;height:36px;font-size:1rem">
+            <div class="monster-ability-mod" id="mod_dex">(+0)</div>
+          </div>
+          <div class="monster-ability">
+            <div class="monster-ability-label">CON</div>
+            <input type="number" class="ability-score-input" data-field="ability_con" value="10" style="width:40px;height:36px;font-size:1rem">
+            <div class="monster-ability-mod" id="mod_con">(+0)</div>
+          </div>
+          <div class="monster-ability">
+            <div class="monster-ability-label">INT</div>
+            <input type="number" class="ability-score-input" data-field="ability_int" value="10" style="width:40px;height:36px;font-size:1rem">
+            <div class="monster-ability-mod" id="mod_int">(+0)</div>
+          </div>
+          <div class="monster-ability">
+            <div class="monster-ability-label">SAG</div>
+            <input type="number" class="ability-score-input" data-field="ability_wis" value="10" style="width:40px;height:36px;font-size:1rem">
+            <div class="monster-ability-mod" id="mod_wis">(+0)</div>
+          </div>
+          <div class="monster-ability">
+            <div class="monster-ability-label">CHA</div>
+            <input type="number" class="ability-score-input" data-field="ability_cha" value="10" style="width:40px;height:36px;font-size:1rem">
+            <div class="monster-ability-mod" id="mod_cha">(+0)</div>
+          </div>
+        </div>
+
+        <div class="monster-divider"></div>
+
+        <!-- EXTRA PROPERTIES -->
+        <div class="field-group"><label class="field-label">Jets de sauvegarde</label><input type="text" class="field-input" data-field="m_saves" placeholder="Dex +2, Con +5, Sag +3, Cha +4"></div>
+        <div class="field-group"><label class="field-label">Compétences</label><input type="text" class="field-input" data-field="m_skills" placeholder="Discrétion +2, Perception +6"></div>
+        <div class="field-group"><label class="field-label">Immunités aux dégâts</label><input type="text" class="field-input" data-field="m_dmg_immune" placeholder="froid"></div>
+        <div class="field-group"><label class="field-label">Résistances aux dégâts</label><input type="text" class="field-input" data-field="m_dmg_resist" placeholder=""></div>
+        <div class="field-group"><label class="field-label">Vulnérabilités aux dégâts</label><input type="text" class="field-input" data-field="m_dmg_vuln" placeholder="feu"></div>
+        <div class="field-group"><label class="field-label">Immunités aux conditions</label><input type="text" class="field-input" data-field="m_cond_immune" placeholder=""></div>
+        <div class="field-group"><label class="field-label">Sens</label><input type="text" class="field-input" data-field="m_senses" placeholder="vision aveugle 9m, vision dans le noir 36m, Perception passive 16"></div>
+        <div class="field-group"><label class="field-label">Langues</label><input type="text" class="field-input" data-field="m_languages" placeholder="commun, draconique"></div>
+        <div class="field-row">
+          <div class="field-group"><label class="field-label">Facteur de puissance</label><input type="text" class="field-input" data-field="m_cr" placeholder="6"></div>
+          <div class="field-group"><label class="field-label">Points d'expérience</label><input type="text" class="field-input" data-field="m_xp" placeholder="2300"></div>
+          <div class="field-group"><label class="field-label">Bonus de maîtrise</label><input type="text" class="field-input" data-field="m_prof" placeholder="+3"></div>
+        </div>
+
+        <div class="monster-divider"></div>
+
+        <!-- TRAITS -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem">
+          <span class="panel-title" style="color:var(--blood-light)">Traits</span>
+          <button class="panel-add-btn" onclick="MONSTER.addAction('traits-list')" title="Ajouter trait">+</button>
+        </div>
+        <div id="traits-list"></div>
+
+        <div class="monster-divider"></div>
+
+        <!-- ACTIONS -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem">
+          <span class="panel-title" style="color:var(--blood-light)">Actions</span>
+          <button class="panel-add-btn" onclick="MONSTER.addAction('actions-list')" title="Ajouter action">+</button>
+        </div>
+        <div id="actions-list"></div>
+
+        <div class="monster-divider"></div>
+
+        <!-- REACTIONS -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem">
+          <span class="panel-title" style="color:var(--blood-light)">Réactions</span>
+          <button class="panel-add-btn" onclick="MONSTER.addAction('reactions-list')" title="Ajouter réaction">+</button>
+        </div>
+        <div id="reactions-list"></div>
+
+        <div class="monster-divider"></div>
+
+        <!-- LEGENDARY ACTIONS -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem">
+          <span class="panel-title" style="color:var(--blood-light)">Actions légendaires</span>
+          <button class="panel-add-btn" onclick="MONSTER.addAction('legendary-list')" title="Ajouter action légendaire">+</button>
+        </div>
+        <div class="field-group">
+          <textarea class="notes-area" data-field="m_legendary_desc" placeholder="Description des actions légendaires (ex: Le dragon peut effectuer 3 actions légendaires...)" style="min-height:40px;margin-bottom:0.5rem"></textarea>
+        </div>
+        <div id="legendary-list"></div>
+
+        <div class="monster-divider"></div>
+
+        <!-- NOTES -->
+        <div class="field-group">
+          <label class="field-label">Notes</label>
+          <textarea id="monster-notes" class="notes-area" placeholder="Notes supplémentaires, description, lore..."></textarea>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../shared/app.js"></script>
+  <script>
+    MONSTER.init(new URLSearchParams(window.location.search).get('id') || 'default');
+  </script>
+</body>
+</html>

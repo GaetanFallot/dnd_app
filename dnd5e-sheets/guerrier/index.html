@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&D 5e — Guerrier</title>
+  <link rel="stylesheet" href="../shared/style.css">
+  <style>
+    .class-icon { background: #5a5a5a22; border-color: #5a5a5a; }
+    .panel-header { border-bottom-color: #5a5a5a55; }
+    .ability-block:hover { border-color: #5a5a5a; }
+    .hp-bar-fill { background: linear-gradient(90deg, #5a5a5a, #5a5a5acc) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="sheet-header">
+    <div class="header-left">
+      <div class="class-icon">🛡️</div>
+      <div>
+        <div class="header-title">Guerrier</div>
+        <div class="header-subtitle">Fiche de personnage — D&D 5e</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn" onclick="window.location.href='../index.html'" title="Retour">↩ Menu</button>
+      <button class="btn" onclick="DND.exportJSON()">📤 Exporter</button>
+      <button class="btn" onclick="DND.importJSON()">📥 Importer</button>
+      <button class="btn btn-danger" onclick="DND.resetSheet()">🗑️ Reset</button>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <main class="sheet-body">
+    <!-- CHARACTER INFO BAR -->
+    <div class="panel">
+      <div class="panel-body">
+        <div class="field-row">
+          <div class="field-group" style="flex:2">
+            <label class="field-label">Nom du personnage</label>
+            <input type="text" class="field-input" data-field="char_name" placeholder="Entrez le nom...">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Niveau</label>
+            <input type="number" class="field-input" data-field="level" value="1" min="1" max="20" style="text-align:center">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Archétype martial</label>
+            <select class="field-select" data-field="subclass">
+              <option value="">— Choisir —</option>
+              <option value="Champion">Champion</option>
+<option value="Maître de guerre">Maître de guerre</option>
+<option value="Chevalier occulte">Chevalier occulte</option>
+<option value="Chevalier arcanique">Chevalier arcanique</option>
+<option value="Samouraï">Samouraï</option>
+<option value="Cavalier">Cavalier</option>
+<option value="Écho">Écho</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Dé de vie</label>
+            <div style="color:var(--gold-light);font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;text-align:center">d10</div>
+          </div>
+        </div>
+        <div class="field-row" style="margin-top:0.5rem">
+          <div class="field-group">
+            <label class="field-label">Race</label>
+            <input type="text" class="field-input" data-field="race" placeholder="Humain, Elfe, Nain...">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Historique</label>
+            <input type="text" class="field-input" data-field="background" placeholder="Sage, Soldat...">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Alignement</label>
+            <select class="field-select" data-field="alignment">
+              <option value="">— Choisir —</option>
+              <option>Loyal Bon</option><option>Neutre Bon</option><option>Chaotique Bon</option>
+              <option>Loyal Neutre</option><option>Neutre</option><option>Chaotique Neutre</option>
+              <option>Loyal Mauvais</option><option>Neutre Mauvais</option><option>Chaotique Mauvais</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Expérience</label>
+            <input type="number" class="field-input" data-field="xp" value="0" min="0" style="text-align:center">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="sheet-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="col-left">
+        <!-- ABILITY SCORES -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">Caractéristiques</span>
+            <span style="color:var(--gold-light);font-family:'Cinzel',serif;font-size:0.8rem">Maîtrise: <strong id="prof-bonus">+2</strong></span>
+          </div>
+          <div class="panel-body">
+            <div class="ability-scores">
+              
+        <div class="ability-block">
+          <div class="ability-name">FOR</div>
+          <input type="number" class="ability-score-input" data-field="ability_str" value="10" min="1" max="30">
+          <div class="ability-mod" id="mod_str">+0</div>
+          <div class="ability-save">
+            <input type="checkbox" data-field="save_prof_str" checked>
+            <label>JdS</label>
+            <span class="ability-save-val" id="save_str">+0</span>
+          </div>
+        </div>
+        <div class="ability-block">
+          <div class="ability-name">DEX</div>
+          <input type="number" class="ability-score-input" data-field="ability_dex" value="10" min="1" max="30">
+          <div class="ability-mod" id="mod_dex">+0</div>
+          <div class="ability-save">
+            <input type="checkbox" data-field="save_prof_dex" >
+            <label>JdS</label>
+            <span class="ability-save-val" id="save_dex">+0</span>
+          </div>
+        </div>
+        <div class="ability-block">
+          <div class="ability-name">CON</div>
+          <input type="number" class="ability-score-input" data-field="ability_con" value="10" min="1" max="30">
+          <div class="ability-mod" id="mod_con">+0</div>
+          <div class="ability-save">
+            <input type="checkbox" data-field="save_prof_con" checked>
+            <label>JdS</label>
+            <span class="ability-save-val" id="save_con">+0</span>
+          </div>
+        </div>
+        <div class="ability-block">
+          <div class="ability-name">INT</div>
+          <input type="number" class="ability-score-input" data-field="ability_int" value="10" min="1" max="30">
+          <div class="ability-mod" id="mod_int">+0</div>
+          <div class="ability-save">
+            <input type="checkbox" data-field="save_prof_int" >
+            <label>JdS</label>
+            <span class="ability-save-val" id="save_int">+0</span>
+          </div>
+        </div>
+        <div class="ability-block">
+          <div class="ability-name">SAG</div>
+          <input type="number" class="ability-score-input" data-field="ability_wis" value="10" min="1" max="30">
+          <div class="ability-mod" id="mod_wis">+0</div>
+          <div class="ability-save">
+            <input type="checkbox" data-field="save_prof_wis" >
+            <label>JdS</label>
+            <span class="ability-save-val" id="save_wis">+0</span>
+          </div>
+        </div>
+        <div class="ability-block">
+          <div class="ability-name">CHA</div>
+          <input type="number" class="ability-score-input" data-field="ability_cha" value="10" min="1" max="30">
+          <div class="ability-mod" id="mod_cha">+0</div>
+          <div class="ability-save">
+            <input type="checkbox" data-field="save_prof_cha" >
+            <label>JdS</label>
+            <span class="ability-save-val" id="save_cha">+0</span>
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">Compétences</span>
+          </div>
+          <div class="panel-body">
+            <div style="font-size:0.7rem;color:var(--ink-faded);margin-bottom:0.5rem;font-style:italic">
+              ☑ Maîtrise &nbsp; ▪ Expertise &nbsp;|&nbsp; Options: Acrobaties, Athlétisme, Dressage, Histoire, Intimidation, Perception, Perspicacité, Survie
+            </div>
+            
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_0" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_0" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_0">+0</span>
+          <span class="skill-name">Acrobaties</span>
+          <span class="skill-ability-tag">DEX</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_1" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_1" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_1">+0</span>
+          <span class="skill-name">Arcanes</span>
+          <span class="skill-ability-tag">INT</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_2" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_2" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_2">+0</span>
+          <span class="skill-name">Athlétisme</span>
+          <span class="skill-ability-tag">FOR</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_3" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_3" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_3">+0</span>
+          <span class="skill-name">Discrétion</span>
+          <span class="skill-ability-tag">DEX</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_4" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_4" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_4">+0</span>
+          <span class="skill-name">Dressage</span>
+          <span class="skill-ability-tag">SAG</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_5" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_5" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_5">+0</span>
+          <span class="skill-name">Escamotage</span>
+          <span class="skill-ability-tag">DEX</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_6" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_6" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_6">+0</span>
+          <span class="skill-name">Histoire</span>
+          <span class="skill-ability-tag">INT</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_7" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_7" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_7">+0</span>
+          <span class="skill-name">Intimidation</span>
+          <span class="skill-ability-tag">CHA</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_8" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_8" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_8">+0</span>
+          <span class="skill-name">Investigation</span>
+          <span class="skill-ability-tag">INT</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_9" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_9" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_9">+0</span>
+          <span class="skill-name">Médecine</span>
+          <span class="skill-ability-tag">SAG</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_10" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_10" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_10">+0</span>
+          <span class="skill-name">Nature</span>
+          <span class="skill-ability-tag">INT</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_11" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_11" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_11">+0</span>
+          <span class="skill-name">Perception</span>
+          <span class="skill-ability-tag">SAG</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_12" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_12" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_12">+0</span>
+          <span class="skill-name">Perspicacité</span>
+          <span class="skill-ability-tag">SAG</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_13" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_13" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_13">+0</span>
+          <span class="skill-name">Persuasion</span>
+          <span class="skill-ability-tag">CHA</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_14" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_14" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_14">+0</span>
+          <span class="skill-name">Religion</span>
+          <span class="skill-ability-tag">INT</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_15" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_15" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_15">+0</span>
+          <span class="skill-name">Représentation</span>
+          <span class="skill-ability-tag">CHA</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_16" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_16" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_16">+0</span>
+          <span class="skill-name">Survie</span>
+          <span class="skill-ability-tag">SAG</span>
+        </div>
+        <div class="skill-item">
+          <input type="checkbox" data-field="skill_prof_17" title="Maîtrise">
+          <input type="checkbox" data-field="skill_expert_17" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+          <span class="skill-mod" id="skill_mod_17">+0</span>
+          <span class="skill-name">Tromperie</span>
+          <span class="skill-ability-tag">CHA</span>
+        </div>
+            <div style="margin-top:0.7rem;padding-top:0.5rem;border-top:1px solid var(--border-ornate)">
+              <div class="skill-item">
+                <span class="skill-name" style="color:var(--gold)">Perception passive</span>
+                <span class="skill-mod" id="passive-perception" style="font-size:1rem">10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER COLUMN -->
+      <div class="col-center">
+        <!-- COMBAT -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">⚔️ Combat</span>
+          </div>
+          <div class="panel-body">
+            <div class="combat-grid">
+              <div class="combat-stat">
+                <div class="combat-stat-label">Classe d'armure</div>
+                <div class="combat-stat-value"><input type="number" data-field="ac" value="10"></div>
+              </div>
+              <div class="combat-stat">
+                <div class="combat-stat-label">Initiative</div>
+                <div class="combat-stat-value" id="initiative">+0</div>
+              </div>
+              <div class="combat-stat">
+                <div class="combat-stat-label">Vitesse</div>
+                <div class="combat-stat-value"><input type="text" data-field="speed" value="9m" style="font-size:1.2rem"></div>
+              </div>
+            </div>
+
+            <!-- HP -->
+            <div class="hp-section">
+              <div class="hp-bar-container">
+                <div class="hp-bar-fill" id="hp-bar-fill" style="width:100%"></div>
+                <div class="hp-bar-text" id="hp-bar-text">0/0</div>
+              </div>
+              <div class="hp-inputs">
+                <div class="field-group">
+                  <label class="field-label">PV actuels</label>
+                  <input type="number" class="field-input" data-field="hp_current" value="0" style="text-align:center">
+                </div>
+                <div class="field-group">
+                  <label class="field-label">PV max</label>
+                  <input type="number" class="field-input" data-field="hp_max" value="0" style="text-align:center">
+                </div>
+                <div class="field-group">
+                  <label class="field-label">PV temp</label>
+                  <input type="number" class="field-input" data-field="hp_temp" value="0" style="text-align:center">
+                </div>
+              </div>
+            </div>
+
+            <!-- DEATH SAVES -->
+            <div style="margin-top:0.6rem">
+              <label class="field-label" style="text-align:center;display:block">Jets de sauvegarde contre la mort</label>
+              <div class="death-saves">
+                <div class="death-save-group">
+                  <label>Réussites</label>
+                  <div class="death-save-checks">
+                    <input type="checkbox" data-death="s1"><input type="checkbox" data-death="s2"><input type="checkbox" data-death="s3">
+                  </div>
+                </div>
+                <div class="death-save-group">
+                  <label>Échecs</label>
+                  <div class="death-save-checks">
+                    <input type="checkbox" data-death="f1"><input type="checkbox" data-death="f2"><input type="checkbox" data-death="f3">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- HIT DICE -->
+            <div class="field-row" style="margin-top:0.5rem">
+              <div class="field-group">
+                <label class="field-label">Dés de vie restants</label>
+                <input type="text" class="field-input" data-field="hit_dice_remaining" placeholder="ex: 5d10" style="text-align:center">
+              </div>
+              <div class="field-group">
+                <label class="field-label">Total dés de vie</label>
+                <input type="text" class="field-input" data-field="hit_dice_total" placeholder="ex: 5d10" style="text-align:center">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ATTACKS -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">⚔️ Attaques & Sorts</span>
+            <button class="panel-add-btn" onclick="DND.addAttackRow()" title="Ajouter attaque">+</button>
+          </div>
+          <div class="panel-body">
+            <table class="attacks-table">
+              <thead>
+                <tr><th>Nom</th><th>Bonus</th><th>Dégâts</th><th>Type</th><th></th></tr>
+              </thead>
+              <tbody id="attacks-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- CLASS RESOURCES -->
+        
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">⚡ Second souffle</span>
+          </div>
+          <div class="panel-body">
+            <div class="field-row" style="margin-bottom:0.5rem">
+              <div class="field-group">
+                <label class="field-label">Utilisés / Max</label>
+                <div class="field-row">
+                  <input type="number" class="field-input" data-field="res_secondwind_used" value="0" min="0" style="width:60px;text-align:center">
+                  <span style="color:var(--gold);font-size:1.2rem">/</span>
+                  <input type="number" class="field-input" data-field="res_secondwind_max" value="2" min="0" style="width:60px;text-align:center">
+                </div>
+              </div>
+            </div>
+            <div class="resource-tracker"><div class="resource-dot" data-resource="secondwind" data-index="0" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="1" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="2" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="3" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="4" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="5" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="6" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="7" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="8" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="9" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="10" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="11" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="12" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="13" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="14" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="15" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="16" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="17" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="18" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="secondwind" data-index="19" onclick="DND.toggleResource(this)"></div>
+</div>
+          </div>
+        </div>
+        
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">⚡ Fougue</span>
+          </div>
+          <div class="panel-body">
+            <div class="field-row" style="margin-bottom:0.5rem">
+              <div class="field-group">
+                <label class="field-label">Utilisés / Max</label>
+                <div class="field-row">
+                  <input type="number" class="field-input" data-field="res_surge_used" value="0" min="0" style="width:60px;text-align:center">
+                  <span style="color:var(--gold);font-size:1.2rem">/</span>
+                  <input type="number" class="field-input" data-field="res_surge_max" value="2" min="0" style="width:60px;text-align:center">
+                </div>
+              </div>
+            </div>
+            <div class="resource-tracker"><div class="resource-dot" data-resource="surge" data-index="0" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="1" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="2" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="3" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="4" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="5" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="6" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="7" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="8" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="9" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="10" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="11" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="12" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="13" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="14" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="15" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="16" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="17" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="18" onclick="DND.toggleResource(this)"></div>
+<div class="resource-dot" data-resource="surge" data-index="19" onclick="DND.toggleResource(this)"></div>
+</div>
+          </div>
+        </div>
+        
+
+        <!-- SPELL SECTION -->
+        
+
+        <!-- PERSONALITY -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">📜 Personnalité</span>
+          </div>
+          <div class="panel-body">
+            <div class="field-group">
+              <label class="field-label">Traits de personnalité</label>
+              <textarea id="traits" class="notes-area" style="min-height:50px" placeholder="Décrivez vos traits..."></textarea>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Idéaux</label>
+              <textarea id="ideals" class="notes-area" style="min-height:40px" placeholder="Ce en quoi vous croyez..."></textarea>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Liens</label>
+              <textarea id="bonds" class="notes-area" style="min-height:40px" placeholder="Vos connexions et engagements..."></textarea>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Défauts</label>
+              <textarea id="flaws" class="notes-area" style="min-height:40px" placeholder="Vos faiblesses et vices..."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="col-right">
+        <!-- CLASS FEATURES -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">🛡️ Capacités de classe</span>
+          </div>
+          <div class="panel-body">
+            <div class="feature-item">
+          <div class="feature-name">Style de combat</div>
+          <div class="feature-desc">Spécialisation: Archerie, Défense, Duel, Combat à deux armes, Protection, Arme à deux mains.</div>
+        </div>
+<div class="feature-item">
+          <div class="feature-name">Second souffle</div>
+          <div class="feature-desc">Action bonus: récupère 1d10 + niveau PV.</div>
+        </div>
+<div class="feature-item">
+          <div class="feature-name">Fougue</div>
+          <div class="feature-desc">Une action supplémentaire pendant votre tour.</div>
+        </div>
+<div class="feature-item">
+          <div class="feature-name">Attaque supplémentaire</div>
+          <div class="feature-desc">Attaquez 2 fois (3 au niv.11, 4 au niv.20).</div>
+        </div>
+
+          </div>
+        </div>
+
+        <!-- CUSTOM FEATURES -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">📋 Capacités & Traits</span>
+            <button class="panel-add-btn" onclick="DND.addListItem('features-list')" title="Ajouter">+</button>
+          </div>
+          <div class="panel-body">
+            <div id="features-list"></div>
+          </div>
+        </div>
+
+        <!-- EQUIPMENT -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">🎒 Équipement</span>
+            <button class="panel-add-btn" onclick="DND.addListItem('equipment-list')" title="Ajouter">+</button>
+          </div>
+          <div class="panel-body">
+            <div id="equipment-list"></div>
+            <div style="margin-top:0.8rem">
+              <label class="field-label">Monnaie</label>
+              <div class="currency-grid">
+                <div class="currency-item"><div class="currency-label">PC</div><input type="number" class="currency-input" data-field="cp" value="0" min="0"></div>
+                <div class="currency-item"><div class="currency-label">PA</div><input type="number" class="currency-input" data-field="sp" value="0" min="0"></div>
+                <div class="currency-item"><div class="currency-label">PE</div><input type="number" class="currency-input" data-field="ep" value="0" min="0"></div>
+                <div class="currency-item"><div class="currency-label">PO</div><input type="number" class="currency-input" data-field="gp" value="0" min="0"></div>
+                <div class="currency-item"><div class="currency-label">PP</div><input type="number" class="currency-input" data-field="pp" value="0" min="0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROFICIENCIES & LANGUAGES -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">🗣️ Maîtrises & Langues</span>
+          </div>
+          <div class="panel-body">
+            <div class="tag-list" id="prof-lang-tags"></div>
+            <div class="tag-input-wrap">
+              <input type="text" class="tag-input" id="prof-lang-input" placeholder="Ajouter..." onkeydown="if(event.key==='Enter')DND.addTagFromInput('prof-lang-tags','prof-lang-input')">
+              <button class="btn" style="padding:0.3rem 0.6rem;font-size:0.7rem" onclick="DND.addTagFromInput('prof-lang-tags','prof-lang-input')">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BACKSTORY / NOTES -->
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-title">📖 Histoire & Notes</span>
+          </div>
+          <div class="panel-body">
+            <div class="field-group">
+              <label class="field-label">Histoire du personnage</label>
+              <textarea id="backstory" class="notes-area" style="min-height:80px" placeholder="L'histoire de votre personnage..."></textarea>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Notes de jeu</label>
+              <textarea id="notes" class="notes-area" style="min-height:80px" placeholder="Notes diverses..."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end grid -->
+  </main>
+
+  <script src="../shared/app.js"></script>
+  <script>
+    window.CLASS_SAVE_PROF = ["str", "con"];
+    window.CLASS_SPELL_ABILITY = null;
+    DND.init("guerrier");
+  </script>
+</body>
+</html>
