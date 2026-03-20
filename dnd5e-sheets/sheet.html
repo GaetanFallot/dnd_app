@@ -21,8 +21,8 @@
       <div class="header-left">
         <div class="class-icon" id="header-class-icon">⚔️</div>
         <div>
-          <div class="header-title" id="header-class-name">Personnage</div>
-          <div class="header-subtitle">Fiche de personnage — D&amp;D 5e</div>
+          <div id="header-char-name" style="font-family:'Cinzel Decorative','Cinzel',serif;font-size:1.1rem;font-weight:700;color:var(--gold);letter-spacing:1px;line-height:1.2">—</div>
+          <div class="header-title" id="header-class-name" style="font-size:0.8rem;color:var(--ink-faded)">Personnage</div>
         </div>
       </div>
       <div class="header-actions">
@@ -55,8 +55,8 @@
               <input type="text" class="field-input" data-field="subclass" placeholder="Archétype...">
             </div>
             <div class="field-group">
-              <label class="field-label">Dé de vie</label>
-              <div id="hd-display" style="color:var(--gold-light);font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;text-align:center;padding:0.45rem 0">—</div>
+              <label class="field-label">Dés de vie (<span id="hd-display">—</span>)</label>
+              <input type="number" class="field-input" data-field="hd_current" value="1" min="0" max="20" style="text-align:center;font-size:0.9rem;padding:0.3rem 0.4rem">
             </div>
           </div>
           <!-- MOBILE HP WIDGET — always visible on mobile regardless of tab -->
@@ -602,6 +602,7 @@
 
   </div><!-- end sheet-body -->
 
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.3/Sortable.min.js"></script>
   <script src="shared/app.js"></script>
   <script>DND.init();</script>
 </body>

@@ -234,6 +234,20 @@ body::before {
   justify-content: space-between;
   gap: 0.5rem;
 }
+.panel-drag {
+  color: var(--ink-faded);
+  cursor: grab;
+  font-size: 1rem;
+  opacity: 0.35;
+  transition: opacity 0.15s;
+  user-select: none;
+  line-height: 1;
+  padding-right: 0.2rem;
+  flex-shrink: 0;
+}
+.panel-drag:active { cursor: grabbing; }
+.panel-header:hover .panel-drag { opacity: 0.7; }
+.panel.sortable-ghost { opacity: 0.35; }
 
 .panel-title {
   font-family: 'Cinzel', serif;

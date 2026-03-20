@@ -46,6 +46,66 @@ const DND = {
     return this._meta;
   },
 
+  initSortablePanels() {
+    if(typeof Sortable === 'undefined') return;
+    // Give each panel a stable ID based on its title text
+    document.querySelectorAll('.panel').forEach(p => {
+      if(!p.dataset.panelId) {
+        const t = p.querySelector('.panel-title')?.textContent.trim() || p.id || '';
+        p.dataset.panelId = t.toLowerCase().replace(/[^\w]/g,'_') || ('p_'+Math.random().toString(36).slice(2));
+      }
+    });
+    // Inject drag handle into every panel-header
+    document.querySelectorAll('.panel-header').forEach(h => {
+      if(!h.querySelector('.panel-drag')) {
+        const s = document.createElement('span');
+        s.className = 'panel-drag'; s.title = 'Déplacer'; s.textContent = '⠿';
+        h.prepend(s);
+      }
+    });
+    // Restore saved order first
+    this._restorePanelOrder();
+    // Init Sortable on each column
+    ['col-left','col-center','col-right'].forEach(cls => {
+      const col = document.querySelector('.'+cls);
+      if(!col) return;
+      Sortable.create(col, {
+        animation: 150,
+        handle: '.panel-drag',
+        group: 'sheet-panels',
+        ghostClass: 'sortable-ghost',
+        onEnd: () => this._savePanelOrder()
+      });
+    });
+  },
+
+  _savePanelOrder() {
+    if(!this.storageKey) return;
+    const order = {};
+    ['col-left','col-center','col-right'].forEach(cls => {
+      const col = document.querySelector('.'+cls);
+      if(col) order[cls] = [...col.querySelectorAll(':scope > .panel')].map(p => p.dataset.panelId);
+    });
+    localStorage.setItem(this.storageKey+'_panel_order', JSON.stringify(order));
+  },
+
+  _restorePanelOrder() {
+    if(!this.storageKey) return;
+    const raw = localStorage.getItem(this.storageKey+'_panel_order');
+    if(!raw) return;
+    try {
+      const order = JSON.parse(raw);
+      Object.entries(order).forEach(([cls, ids]) => {
+        const col = document.querySelector('.'+cls);
+        if(!col) return;
+        ids.forEach(id => {
+          const p = document.querySelector('.panel[data-panel-id="'+id+'"]');
+          if(p) col.appendChild(p);
+        });
+      });
+    } catch(e) {}
+  },
+
   init() {
     const id = new URLSearchParams(location.search).get('id');
     const notice = document.getElementById('no-char-notice');
@@ -59,6 +119,7 @@ const DND = {
     this.load();
     this.bindAll();
     this.recalcAll();
+    this.initSortablePanels();
     // Mobile: restore last tab or default to combat
     const savedTab = localStorage.getItem('_mtab_'+this.storageKey) || 'tab-combat';
     this.showMobileTab(savedTab);
@@ -141,6 +202,7 @@ const DND = {
     if(data._classIcon){ const el=document.getElementById('header-class-icon'); if(el) el.textContent=data._classIcon; }
     if(data._className){ const el=document.getElementById('header-class-name'); if(el) el.textContent=data._className; }
     if(data._hd){ const el=document.getElementById('hd-display'); if(el) el.textContent='d'+data._hd; }
+    if(data.char_name){ const el=document.getElementById('header-char-name'); if(el) el.textContent=data.char_name||'—'; }
     this._isSpellcaster = !!data._spellType;
     if(data._spellType){
       const sp=document.getElementById('spell-panel'); if(sp) sp.style.display='';
@@ -238,6 +300,10 @@ const DND = {
     });
     document.querySelectorAll('[data-field]').forEach(el=>{
       el.addEventListener(el.type==='checkbox'?'change':'input',()=>this.autoSave());
+    });
+    const charNameEl=document.querySelector('[data-field="char_name"]');
+    if(charNameEl) charNameEl.addEventListener('input',()=>{
+      const hdr=document.getElementById('header-char-name'); if(hdr) hdr.textContent=charNameEl.value||'—';
     });
     ['traits','ideals','bonds','flaws','notes','backstory'].forEach(id=>{
       const el=document.getElementById(id); if(el) el.addEventListener('input',()=>this.autoSave());
