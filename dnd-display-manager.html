@@ -217,84 +217,10 @@
 
 <div class="toast" id="toast"></div>
 
-<!-- ═══ CHARACTER DOCK ═══ -->
-<div id="charDock" class="monster-dock char-dock">
-  <div class="dock-header" onclick="toggleCharDock()">
-    <span class="dock-title">🧙 Personnages <span id="charDockCount" class="dock-count">0</span></span>
-    <div class="dock-actions" onclick="event.stopPropagation()">
-      <button class="dock-btn" onclick="newCharWizard()">＋ Nouveau</button>
-    </div>
-    <span class="dock-toggle">▲</span>
-  </div>
-  <div id="charDockBody" class="dock-body">
-    <div id="charList" class="monster-list"></div>
-  </div>
-</div>
-
-<!-- ═══ CHARACTER WIZARD MODAL ═══ -->
-<div id="charWizardModal" class="monster-modal" style="display:none">
-  <div class="mm-inner cw-inner">
-    <div class="mm-head">
-      <span class="mm-title">Nouveau Personnage</span>
-      <button class="mm-close" onclick="closeCharWizard()">✕</button>
-    </div>
-    <!-- Step 1: class pick -->
-    <div id="cwStep1">
-      <div class="cw-subtitle">Choisir une classe</div>
-      <div id="cwClassGrid" class="cw-class-grid"></div>
-    </div>
-    <!-- Step 2: fill details -->
-    <div id="cwStep2" style="display:none">
-      <div id="cwStep2Title" class="cw-subtitle"></div>
-      <input type="hidden" id="cwClassIdInput">
-      <div class="cw-form-grid">
-        <label>Nom<input type="text" id="cwName" placeholder="Gandalf"></label>
-        <label>Niveau<input type="number" id="cwLevel" value="1" min="1" max="20"></label>
-        <label>PV max<input type="number" id="cwMaxHp" placeholder="auto"></label>
-        <label>FOR<input type="number" id="cwStr" value="10" min="1" max="30"></label>
-        <label>DEX<input type="number" id="cwDex" value="10" min="1" max="30"></label>
-        <label>CON<input type="number" id="cwCon" value="10" min="1" max="30"></label>
-        <label>INT<input type="number" id="cwInt" value="10" min="1" max="30"></label>
-        <label>SAG<input type="number" id="cwWis" value="10" min="1" max="30"></label>
-        <label>CHA<input type="number" id="cwCha" value="10" min="1" max="30"></label>
-      </div>
-      <div class="cw-checks-row">
-        <div>
-          <div class="cw-check-label">Jets de sauvegarde</div>
-          <div id="cwSaves" class="cw-saves"></div>
-        </div>
-        <div>
-          <div class="cw-check-label">Compétences maîtrisées</div>
-          <div id="cwSkills" class="cw-skills"></div>
-        </div>
-      </div>
-      <div class="cw-btns">
-        <button onclick="document.getElementById('cwStep1').style.display='';document.getElementById('cwStep2').style.display='none'">← Retour</button>
-        <button class="mm-save" onclick="charWizardCreate()">✔ Créer</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ CHARACTER SHEET MODAL ═══ -->
-<div id="charSheetModal" class="monster-modal cs-modal" style="display:none">
-  <div class="mm-inner cs-inner">
-    <div class="mm-head">
-      <span class="mm-title">Fiche de personnage</span>
-      <div class="mm-head-btns">
-        <button class="mm-save" onclick="saveCharSheet()">💾 Sauvegarder</button>
-        <button class="mm-close" onclick="closeCharSheet()">✕</button>
-      </div>
-    </div>
-    <div id="csContent" class="cs-content"></div>
-  </div>
-</div>
-
 <script src="./js/data.js"></script>
 <script src="./js/display.js"></script>
 <script src="./js/initiative.js"></script>
 <script src="./js/soundboard.js"></script>
 <script src="./js/monsters.js"></script>
-<script src="./js/chars.js"></script>
 </body>
 </html>

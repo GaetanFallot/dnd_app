@@ -3,93 +3,635 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D&D 5e — Fiches de Personnage</title>
+  <title>D&amp;D 5e — Roster</title>
   <link rel="stylesheet" href="shared/style.css">
   <style>
-    .class-card::before {
-      background: radial-gradient(circle at center, var(--card-color, var(--gold))22 0%, transparent 70%);
+    /* Roster card styles */
+    .roster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .char-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-ornate);
+      border-radius: 8px;
+      padding: 1.2rem 1rem 1rem;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .char-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 25px var(--shadow-deep);
+    }
+    .char-card-icon {
+      font-size: 2.2rem;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 2px solid var(--gold-dark);
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.3rem;
+    }
+    .char-card-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+    .char-card-class {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      color: var(--ink-faded);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .char-card-level {
+      font-family: 'Crimson Text', serif;
+      font-size: 0.85rem;
+      color: var(--text-on-dark);
+    }
+    .char-card-hp {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      color: var(--blood-light);
+    }
+    .char-card-link {
+      display: block;
+      margin-top: 0.6rem;
+      padding: 0.4rem 1rem;
+      background: var(--bg-dark);
+      border: 1px solid var(--gold-dark);
+      border-radius: 4px;
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.2s ease;
+    }
+    .char-card-link:hover {
+      background: var(--gold-dark);
+      color: var(--parchment);
+    }
+    .char-card-delete {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid var(--blood);
+      background: transparent;
+      color: var(--blood-light);
+      font-size: 0.65rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .char-card:hover .char-card-delete { opacity: 1; }
+    .char-card-delete:hover { background: var(--blood); color: white; }
+
+    /* Wizard modal */
+    .wizard-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .wizard-overlay.active { display: flex; }
+    .wizard-modal {
+      background: var(--bg-panel);
+      border: 2px solid var(--gold-dark);
+      border-radius: 10px;
+      padding: 1.8rem;
+      width: 90%;
+      max-width: 640px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .wizard-title {
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-size: 1.2rem;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    .wizard-step { display: none; }
+    .wizard-step.active { display: block; }
+    .class-pick-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .class-pick-btn {
+      background: var(--bg-dark);
+      border: 2px solid var(--border-ornate);
+      border-radius: 6px;
+      padding: 0.7rem 0.4rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: var(--text-on-dark);
+    }
+    .class-pick-btn:hover {
+      border-color: var(--gold);
+      background: var(--bg-medium);
+    }
+    .class-pick-btn.selected {
+      border-color: var(--gold);
+      background: var(--bg-medium);
+      box-shadow: 0 0 10px rgba(201,168,76,0.3);
+    }
+    .class-pick-icon { font-size: 1.6rem; display: block; margin-bottom: 0.3rem; }
+    .class-pick-name {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .ability-wizard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .ability-wizard-item { text-align: center; }
+    .ability-wizard-item label {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+    .ability-wizard-item input {
+      width: 100%;
+      text-align: center;
+      background: var(--bg-dark);
+      border: 1px solid var(--border-ornate);
+      color: var(--text-on-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.4rem;
+      border-radius: 4px;
+    }
+    .ability-wizard-item input:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+    .wizard-actions {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: flex-end;
+      margin-top: 1.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-ornate);
+    }
+    .empty-roster {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--ink-faded);
+      font-family: 'Crimson Text', serif;
+      font-size: 1.1rem;
+    }
+    .empty-roster-icon { font-size: 3rem; display: block; margin-bottom: 1rem; opacity: 0.5; }
+    .roster-page-header {
+      background: linear-gradient(180deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+      border-bottom: 3px solid var(--gold-dark);
+      padding: 1.5rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px var(--shadow-deep);
+    }
+    .roster-page-title {
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+    .roster-page-sub {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      color: var(--ink-faded);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 2px;
+    }
+    .wizard-section-label {
+      grid-column: 1 / -1;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      color: var(--ink-faded);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: -0.2rem;
     }
   </style>
 </head>
 <body>
+
+  <!-- PAGE HEADER -->
+  <header class="roster-page-header">
+    <div>
+      <div class="roster-page-title">⚔️ D&amp;D 5e — Roster</div>
+      <div class="roster-page-sub">Vos personnages</div>
+    </div>
+    <div>
+      <button class="btn btn-primary" onclick="openWizard()">+ Nouveau personnage</button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
   <div class="index-container">
-    <div style="margin-bottom:1.5rem">
-      <a href="../index.html" style="font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-faded);text-decoration:none;border:1px solid var(--border-color);padding:0.4rem 0.9rem;border-radius:3px;transition:all 0.2s" onmouseover="this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseout="this.style.color='var(--ink-faded)';this.style.borderColor='var(--border-color)'">← Accueil</a>
-    </div>
-    <div style="text-align:center;margin-bottom:0.5rem;font-size:3rem">⚔️</div>
-    <h1 class="index-title">Donjons & Dragons</h1>
-    <p class="index-subtitle">Fiches de Personnage — 5e Édition</p>
-
-    <div class="class-grid">
-      
-        <a href="barbare/index.html" class="class-card" style="--card-color:#8b1a1a">
-          <span class="class-card-icon">⚔️</span>
-          <div class="class-card-name">Barbare</div>
-          <div class="class-card-desc">d12 · Martial</div>
-        </a>
-        <a href="barde/index.html" class="class-card" style="--card-color:#7b2d8b">
-          <span class="class-card-icon">🎵</span>
-          <div class="class-card-name">Barde</div>
-          <div class="class-card-desc">d8 · Lanceur de sorts</div>
-        </a>
-        <a href="clerc/index.html" class="class-card" style="--card-color:#daa520">
-          <span class="class-card-icon">✝️</span>
-          <div class="class-card-name">Clerc</div>
-          <div class="class-card-desc">d8 · Lanceur de sorts</div>
-        </a>
-        <a href="druide/index.html" class="class-card" style="--card-color:#2d5a27">
-          <span class="class-card-icon">🌿</span>
-          <div class="class-card-name">Druide</div>
-          <div class="class-card-desc">d8 · Lanceur de sorts</div>
-        </a>
-        <a href="ensorceleur/index.html" class="class-card" style="--card-color:#6b2fa0">
-          <span class="class-card-icon">✨</span>
-          <div class="class-card-name">Ensorceleur</div>
-          <div class="class-card-desc">d6 · Lanceur de sorts</div>
-        </a>
-        <a href="guerrier/index.html" class="class-card" style="--card-color:#5a5a5a">
-          <span class="class-card-icon">🛡️</span>
-          <div class="class-card-name">Guerrier</div>
-          <div class="class-card-desc">d10 · Martial</div>
-        </a>
-        <a href="magicien/index.html" class="class-card" style="--card-color:#2a4a7f">
-          <span class="class-card-icon">📖</span>
-          <div class="class-card-name">Magicien</div>
-          <div class="class-card-desc">d6 · Lanceur de sorts</div>
-        </a>
-        <a href="moine/index.html" class="class-card" style="--card-color:#8b7332">
-          <span class="class-card-icon">👊</span>
-          <div class="class-card-name">Moine</div>
-          <div class="class-card-desc">d8 · Martial</div>
-        </a>
-        <a href="paladin/index.html" class="class-card" style="--card-color:#c9a84c">
-          <span class="class-card-icon">⚜️</span>
-          <div class="class-card-name">Paladin</div>
-          <div class="class-card-desc">d10 · Lanceur de sorts</div>
-        </a>
-        <a href="rodeur/index.html" class="class-card" style="--card-color:#3a6b35">
-          <span class="class-card-icon">🏹</span>
-          <div class="class-card-name">Rôdeur</div>
-          <div class="class-card-desc">d10 · Lanceur de sorts</div>
-        </a>
-        <a href="roublard/index.html" class="class-card" style="--card-color:#3a3a3a">
-          <span class="class-card-icon">🗡️</span>
-          <div class="class-card-name">Roublard</div>
-          <div class="class-card-desc">d8 · Martial</div>
-        </a>
-        <a href="sorcier/index.html" class="class-card" style="--card-color:#4a1a6b">
-          <span class="class-card-icon">🔮</span>
-          <div class="class-card-name">Sorcier</div>
-          <div class="class-card-desc">d8 · Lanceur de sorts</div>
-        </a>
-    </div>
-
-
-
-    <div style="text-align:center;margin-top:3rem;color:var(--ink-faded);font-size:0.8rem">
-      <p>Les données sont sauvegardées automatiquement dans votre navigateur (localStorage).</p>
-      <p>Utilisez Export/Import pour sauvegarder en JSON.</p>
+    <div id="roster-list">
+      <!-- Cards injected by JS -->
     </div>
   </div>
+
+  <!-- ============================================================
+       WIZARD MODAL
+  ============================================================ -->
+  <div class="wizard-overlay" id="wizard-overlay" onclick="if(event.target===this)closeWizard()">
+    <div class="wizard-modal">
+      <div class="wizard-title" id="wizard-title">Nouveau personnage</div>
+
+      <!-- STEP 1: Choose class -->
+      <div class="wizard-step active" id="wizard-step-1">
+        <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--ink-faded);margin-bottom:0.8rem;text-align:center;text-transform:uppercase;letter-spacing:1px">Étape 1 / 2 — Choisissez une classe</div>
+        <div class="class-pick-grid" id="class-pick-grid">
+          <!-- filled by JS -->
+        </div>
+        <div class="wizard-actions">
+          <button class="btn" onclick="closeWizard()">Annuler</button>
+          <button class="btn btn-primary" onclick="wizardNext()">Suivant →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Fill character info -->
+      <div class="wizard-step" id="wizard-step-2">
+        <div style="font-family:'Cinzel',serif;font-size:0.75rem;color:var(--ink-faded);margin-bottom:0.8rem;text-align:center;text-transform:uppercase;letter-spacing:1px">Étape 2 / 2 — Informations du personnage</div>
+
+        <div class="field-row" style="margin-bottom:0.6rem">
+          <div class="field-group" style="flex:2">
+            <label class="field-label">Nom du personnage *</label>
+            <input type="text" class="field-input" id="wiz-name" placeholder="Nom du personnage">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Niveau</label>
+            <input type="number" class="field-input" id="wiz-level" value="1" min="1" max="20" style="text-align:center">
+          </div>
+        </div>
+
+        <div class="field-row" style="margin-bottom:0.6rem">
+          <div class="field-group">
+            <label class="field-label">Race</label>
+            <input type="text" class="field-input" id="wiz-race" placeholder="Humain, Elfe...">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Historique</label>
+            <input type="text" class="field-input" id="wiz-background" placeholder="Sage, Soldat...">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Alignement</label>
+            <select class="field-select" id="wiz-alignment">
+              <option value="">— Choisir —</option>
+              <option>Loyal Bon</option><option>Neutre Bon</option><option>Chaotique Bon</option>
+              <option>Loyal Neutre</option><option>Neutre</option><option>Chaotique Neutre</option>
+              <option>Loyal Mauvais</option><option>Neutre Mauvais</option><option>Chaotique Mauvais</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="font-family:'Cinzel',serif;font-size:0.7rem;color:var(--gold-dark);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem">Caractéristiques</div>
+        <div class="ability-wizard-grid">
+          <div class="ability-wizard-item"><label>FOR</label><input type="number" id="wiz-str" value="10" min="1" max="30"></div>
+          <div class="ability-wizard-item"><label>DEX</label><input type="number" id="wiz-dex" value="10" min="1" max="30"></div>
+          <div class="ability-wizard-item"><label>CON</label><input type="number" id="wiz-con" value="10" min="1" max="30"></div>
+          <div class="ability-wizard-item"><label>INT</label><input type="number" id="wiz-int" value="10" min="1" max="30"></div>
+          <div class="ability-wizard-item"><label>SAG</label><input type="number" id="wiz-wis" value="10" min="1" max="30"></div>
+          <div class="ability-wizard-item"><label>CHA</label><input type="number" id="wiz-cha" value="10" min="1" max="30"></div>
+        </div>
+
+        <div class="field-row" style="margin-bottom:0.6rem">
+          <div class="field-group">
+            <label class="field-label">PV max <span style="color:var(--ink-faded);font-size:0.6rem">(vide = dé de vie + mod CON)</span></label>
+            <input type="number" class="field-input" id="wiz-hp" placeholder="Auto" min="1" style="text-align:center">
+          </div>
+          <div class="field-group">
+            <label class="field-label">Classe d'armure</label>
+            <input type="number" class="field-input" id="wiz-ac" value="10" min="1" style="text-align:center">
+          </div>
+        </div>
+
+        <div class="wizard-actions">
+          <button class="btn" onclick="wizardBack()">← Retour</button>
+          <button class="btn" onclick="closeWizard()">Annuler</button>
+          <button class="btn btn-primary" onclick="wizardCreate()">Créer le personnage ✓</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CLASSES = {
+      barbare:     {name:'Barbare',    icon:'⚔️', color:'#8b1a1a',hd:12,saves:['str','con'],spellType:null,       spellAbility:null},
+      barde:       {name:'Barde',      icon:'🎵', color:'#7b2d8b',hd:8, saves:['dex','cha'],spellType:'full',      spellAbility:'cha'},
+      clerc:       {name:'Clerc',      icon:'✝️', color:'#daa520',hd:8, saves:['wis','cha'],spellType:'full',      spellAbility:'wis'},
+      druide:      {name:'Druide',     icon:'🌿', color:'#2d5a27',hd:8, saves:['int','wis'],spellType:'full',      spellAbility:'wis'},
+      ensorceleur: {name:'Ensorceleur',icon:'✨', color:'#6b2fa0',hd:6, saves:['con','cha'],spellType:'full',      spellAbility:'cha'},
+      guerrier:    {name:'Guerrier',   icon:'🛡️', color:'#5a5a5a',hd:10,saves:['str','con'],spellType:null,       spellAbility:null},
+      magicien:    {name:'Magicien',   icon:'📖', color:'#2a4a7f',hd:6, saves:['int','wis'],spellType:'full',      spellAbility:'int'},
+      moine:       {name:'Moine',      icon:'👊', color:'#8b7332',hd:8, saves:['str','dex'],spellType:null,       spellAbility:null},
+      paladin:     {name:'Paladin',    icon:'⚜️', color:'#c9a84c',hd:10,saves:['wis','cha'],spellType:'half',      spellAbility:'cha'},
+      rodeur:      {name:'Rôdeur',     icon:'🏹', color:'#3a6b35',hd:10,saves:['str','dex'],spellType:'half',      spellAbility:'wis'},
+      roublard:    {name:'Roublard',   icon:'🗡️', color:'#3a3a3a',hd:8, saves:['dex','int'],spellType:null,       spellAbility:null},
+      sorcier:     {name:'Sorcier',    icon:'🔮', color:'#4a1a6b',hd:8, saves:['wis','cha'],spellType:'warlock',   spellAbility:'cha'},
+      _full:       {name:'Lanceur (full)', icon:'🌟',color:'#5b8dd9',hd:8, saves:['int','wis'],spellType:'full',  spellAbility:'int'},
+      _half:       {name:'Mi-lanceur',    icon:'⚡',color:'#c9a84c',hd:10,saves:['wis','cha'],spellType:'half',   spellAbility:'wis'},
+      _martial:    {name:'Martial',       icon:'⚔️',color:'#5a5a5a',hd:10,saves:['str','con'],spellType:null,    spellAbility:null},
+    };
+
+    let selectedClassId = null;
+
+    // ---- HELPERS ----
+    function escHtml(s) {
+      return String(s)
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // ---- RENDER ROSTER ----
+    function renderRoster() {
+      const container = document.getElementById('roster-list');
+      const chars = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (!key || !key.startsWith('dnd5e_char_')) continue;
+        try {
+          const data = JSON.parse(localStorage.getItem(key));
+          if (data && data._id) chars.push(data);
+        } catch(e) {}
+      }
+
+      if (chars.length === 0) {
+        container.innerHTML = `
+          <div class="empty-roster">
+            <span class="empty-roster-icon">🎲</span>
+            Aucun personnage. Cliquez sur <strong style="color:var(--gold)">+ Nouveau personnage</strong> pour commencer !
+          </div>`;
+        return;
+      }
+
+      chars.sort((a,b) => (a.char_name||'').localeCompare(b.char_name||''));
+
+      container.innerHTML = '<div class="roster-grid" id="roster-grid"></div>';
+      const grid = document.getElementById('roster-grid');
+      chars.forEach(data => {
+        const id = data._id;
+        const card = document.createElement('div');
+        card.className = 'char-card';
+        const icon    = data._classIcon || '⚔️';
+        const cname   = data._className || 'Personnage';
+        const pname   = data.char_name  || '(Sans nom)';
+        const level   = data.level      || 1;
+        const hpCur   = data.hp_current !== undefined ? data.hp_current : '?';
+        const hpMax   = data.hp_max     !== undefined ? data.hp_max     : '?';
+        card.innerHTML = `
+          <button class="char-card-delete" onclick="deleteChar(event,'${escHtml(id)}')" title="Supprimer">×</button>
+          <div class="char-card-icon">${icon}</div>
+          <div class="char-card-name">${escHtml(pname)}</div>
+          <div class="char-card-class">${escHtml(cname)}</div>
+          <div class="char-card-level">Niveau ${level}</div>
+          <div class="char-card-hp">❤️ ${hpCur} / ${hpMax}</div>
+          <a href="sheet.html?id=${encodeURIComponent(id)}" class="char-card-link">Ouvrir la fiche →</a>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function deleteChar(event, id) {
+      event.stopPropagation();
+      const key = 'dnd5e_char_' + id;
+      let name = id;
+      try { name = JSON.parse(localStorage.getItem(key)).char_name || id; } catch(e) {}
+      if (confirm('Supprimer "' + name + '" ? Cette action est irréversible.')) {
+        localStorage.removeItem(key);
+        renderRoster();
+      }
+    }
+
+    // ---- WIZARD ----
+    function openWizard() {
+      selectedClassId = null;
+      document.querySelectorAll('.class-pick-btn').forEach(b => b.classList.remove('selected'));
+      document.getElementById('wiz-name').value = '';
+      document.getElementById('wiz-level').value = 1;
+      document.getElementById('wiz-race').value = '';
+      document.getElementById('wiz-background').value = '';
+      document.getElementById('wiz-alignment').value = '';
+      ['str','dex','con','int','wis','cha'].forEach(a => {
+        document.getElementById('wiz-' + a).value = 10;
+      });
+      document.getElementById('wiz-hp').value = '';
+      document.getElementById('wiz-ac').value = 10;
+      document.getElementById('wizard-step-1').classList.add('active');
+      document.getElementById('wizard-step-2').classList.remove('active');
+      document.getElementById('wizard-title').textContent = 'Nouveau personnage';
+      document.getElementById('wizard-overlay').classList.add('active');
+    }
+
+    function closeWizard() {
+      document.getElementById('wizard-overlay').classList.remove('active');
+    }
+
+    function pickClass(classId) {
+      selectedClassId = classId;
+      document.querySelectorAll('.class-pick-btn').forEach(b => b.classList.remove('selected'));
+      const btn = document.querySelector('[data-class-id="' + classId + '"]');
+      if (btn) btn.classList.add('selected');
+    }
+
+    function wizardNext() {
+      if (!selectedClassId) { alert('Veuillez choisir une classe.'); return; }
+      document.getElementById('wizard-step-1').classList.remove('active');
+      document.getElementById('wizard-step-2').classList.add('active');
+      document.getElementById('wizard-title').textContent = CLASSES[selectedClassId].name + ' — Informations';
+    }
+
+    function wizardBack() {
+      document.getElementById('wizard-step-2').classList.remove('active');
+      document.getElementById('wizard-step-1').classList.add('active');
+      document.getElementById('wizard-title').textContent = 'Nouveau personnage';
+    }
+
+    function wizardCreate() {
+      const name = document.getElementById('wiz-name').value.trim();
+      if (!name) { alert('Le nom du personnage est requis.'); return; }
+      if (!selectedClassId) { alert('Veuillez choisir une classe.'); return; }
+
+      const cls = CLASSES[selectedClassId];
+      const level   = parseInt(document.getElementById('wiz-level').value)  || 1;
+      const str     = parseInt(document.getElementById('wiz-str').value)    || 10;
+      const dex     = parseInt(document.getElementById('wiz-dex').value)    || 10;
+      const con     = parseInt(document.getElementById('wiz-con').value)    || 10;
+      const intStat = parseInt(document.getElementById('wiz-int').value)    || 10;
+      const wis     = parseInt(document.getElementById('wiz-wis').value)    || 10;
+      const cha     = parseInt(document.getElementById('wiz-cha').value)    || 10;
+      const conMod  = Math.floor((con - 10) / 2);
+      const hpInput = parseInt(document.getElementById('wiz-hp').value);
+      const hpMax   = hpInput > 0 ? hpInput : Math.max(1, cls.hd + conMod);
+      const ac      = parseInt(document.getElementById('wiz-ac').value)     || 10;
+      const race       = document.getElementById('wiz-race').value.trim();
+      const background = document.getElementById('wiz-background').value.trim();
+      const alignment  = document.getElementById('wiz-alignment').value;
+
+      const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+      const dexMod  = Math.floor((dex  - 10) / 2);
+      const profBon = Math.ceil(level / 4) + 1;
+      const _statMap = {str, dex, con, int: intStat, wis, cha};
+      const spellAbMod = cls.spellAbility ? Math.floor(((_statMap[cls.spellAbility]||10)-10)/2) : 0;
+
+      const data = {
+        _id: id,
+        _classId: selectedClassId,
+        _className: cls.name,
+        _classIcon: cls.icon,
+        _spellType: cls.spellType,
+        _spellAbility: cls.spellAbility,
+        _hd: cls.hd,
+
+        char_name:  name,
+        level:      level,
+        race:       race,
+        background: background,
+        alignment:  alignment,
+        subclass:   '',
+        xp:         0,
+
+        ability_str: str,
+        ability_dex: dex,
+        ability_con: con,
+        ability_int: intStat,
+        ability_wis: wis,
+        ability_cha: cha,
+
+        ac:           ac,
+        initiative:   dexMod,
+        speed:        '9m',
+        spell_dc:     cls.spellType ? 8 + profBon + spellAbMod : 10,
+        spell_attack: cls.spellType ? profBon + spellAbMod : 0,
+
+        hp_current: hpMax,
+        hp_max:     hpMax,
+        hp_temp:    0,
+
+        hit_dice_remaining: level + 'd' + cls.hd,
+        hit_dice_total:     level + 'd' + cls.hd,
+
+        cp: 0, sp: 0, ep: 0, gp: 0, pp: 0,
+
+        // Save proficiencies from class
+        save_prof_str: cls.saves.includes('str'),
+        save_prof_dex: cls.saves.includes('dex'),
+        save_prof_con: cls.saves.includes('con'),
+        save_prof_int: cls.saves.includes('int'),
+        save_prof_wis: cls.saves.includes('wis'),
+        save_prof_cha: cls.saves.includes('cha'),
+
+        // Skill proficiencies — all false by default
+        skill_prof_0: false,  skill_prof_1: false,  skill_prof_2: false,  skill_prof_3: false,
+        skill_prof_4: false,  skill_prof_5: false,  skill_prof_6: false,  skill_prof_7: false,
+        skill_prof_8: false,  skill_prof_9: false,  skill_prof_10: false, skill_prof_11: false,
+        skill_prof_12: false, skill_prof_13: false, skill_prof_14: false, skill_prof_15: false,
+        skill_prof_16: false, skill_prof_17: false,
+        skill_expert_0: false,  skill_expert_1: false,  skill_expert_2: false,  skill_expert_3: false,
+        skill_expert_4: false,  skill_expert_5: false,  skill_expert_6: false,  skill_expert_7: false,
+        skill_expert_8: false,  skill_expert_9: false,  skill_expert_10: false, skill_expert_11: false,
+        skill_expert_12: false, skill_expert_13: false, skill_expert_14: false, skill_expert_15: false,
+        skill_expert_16: false, skill_expert_17: false,
+
+        _attacks:       [],
+        _spells:        [],
+        _equipment:     [],
+        _features:      [],
+        _profLanguages: [],
+
+        _traits: '', _ideals: '', _bonds: '', _flaws: '',
+        _notes: '', _backstory: '',
+      };
+
+      localStorage.setItem('dnd5e_char_' + id, JSON.stringify(data));
+      window.location.href = 'sheet.html?id=' + encodeURIComponent(id);
+    }
+
+    // ---- BUILD CLASS PICKER ----
+    function buildClassPicker() {
+      const grid = document.getElementById('class-pick-grid');
+      const mainClasses   = ['barbare','barde','clerc','druide','ensorceleur','guerrier','magicien','moine','paladin','rodeur','roublard','sorcier'];
+      const customClasses = ['_full','_half','_martial'];
+
+      const lbl1 = document.createElement('div');
+      lbl1.className = 'wizard-section-label';
+      lbl1.textContent = 'Classes officielles';
+      grid.appendChild(lbl1);
+
+      mainClasses.forEach(cid => addClassBtn(grid, cid));
+
+      const lbl2 = document.createElement('div');
+      lbl2.className = 'wizard-section-label';
+      lbl2.style.marginTop = '0.4rem';
+      lbl2.textContent = 'Génériques';
+      grid.appendChild(lbl2);
+
+      customClasses.forEach(cid => addClassBtn(grid, cid));
+    }
+
+    function addClassBtn(grid, classId) {
+      const cls = CLASSES[classId];
+      const btn = document.createElement('div');
+      btn.className = 'class-pick-btn';
+      btn.setAttribute('data-class-id', classId);
+      btn.style.borderColor = cls.color + '88';
+      btn.innerHTML = `<span class="class-pick-icon">${cls.icon}</span><span class="class-pick-name">${cls.name}</span>`;
+      btn.addEventListener('click', () => pickClass(classId));
+      grid.appendChild(btn);
+    }
+
+    // ---- INIT ----
+    buildClassPicker();
+    renderRoster();
+  </script>
 </body>
 </html>
