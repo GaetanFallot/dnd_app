@@ -1,0 +1,204 @@
+{
+  "index": "oni",
+  "name": "Oni",
+  "size": "Grande",
+  "type": "géant",
+  "alignment": "loyal mauvais",
+  "armor_class": 16,
+  "hit_points": 110,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10+39",
+  "speed": {
+    "walk": "9 m.",
+    "fly": "9 m."
+  },
+  "strength": 19,
+  "dexterity": 11,
+  "constitution": 16,
+  "intelligence": 14,
+  "wisdom": 12,
+  "charisma": 15,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-arcana",
+        "name": "Skill: Arcana",
+        "url": "/api/2014/proficiencies/skill-arcana"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 14
+  },
+  "languages": "Common, Giant",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "special_abilities": [
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité innée de lancement de sorts de l'oni est le Charisme (sauvegarde contre les sorts DD 13). L'oni peut de manière innée lancer les sorts suivants, ne nécessitant aucun composant matériel :\n\nÀ volonté : obscurité, invisibilité\n1/jour chacun : charme personne, cône de froid, forme gazeuse, sommeil"
+    },
+    {
+      "name": "Armes magiques",
+      "desc": "Les attaques avec les armes de l'oni sont magiques."
+    },
+    {
+      "name": "Régénération",
+      "desc": "L'oni récupère 10 points de vie au début de son tour s'il possède au moins 1 point de vie."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "action_options",
+      "desc": "L'oni effectue deux attaques, soit avec ses griffes, soit avec son glaive.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Glaive",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Claw",
+              "desc": "If in Oni form",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "desc": "If in Oni form",
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Glaive",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Claw",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "Griffe (forme Oni uniquement)",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 8 (1d8 + 4) dégâts tranchants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Glaive",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 3 m, une cible. Touché : 15 (2d10 + 4) dégâts tranchants, ou 9 (1d10 + 4) dégâts tranchants sous forme petite ou moyenne.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Changer de forme",
+      "desc": "L'oni se métamorphose comme par magie en un humanoïde petit ou moyen, en un grand géant, ou reprend sa vraie forme. Outre sa taille, ses statistiques sont les mêmes dans chaque forme. Le seul équipement transformé est son glaive, qui rétrécit pour pouvoir être manié sous forme humanoïde. Si l'oni meurt, il reprend sa vraie forme et son glaive reprend sa taille normale.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/oni.png",
+  "url": "/api/2014/monsters/oni",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Oni",
+  "size_en": "Large",
+  "type_en": "giant",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}
