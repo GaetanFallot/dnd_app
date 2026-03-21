@@ -1,0 +1,146 @@
+{
+  "index": "hezrou",
+  "name": "Hézrou",
+  "size": "Grande",
+  "type": "fiélon",
+  "subtype": "demon",
+  "alignment": "chaotique mauvais",
+  "armor_class": 16,
+  "hit_points": 136,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10+65",
+  "speed": {
+    "walk": "9 m."
+  },
+  "strength": 19,
+  "dexterity": 17,
+  "constitution": 20,
+  "intelligence": 5,
+  "wisdom": 12,
+  "charisma": 13,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-str",
+        "name": "Saving Throw: STR",
+        "url": "/api/2014/proficiencies/saving-throw-str"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "36 m.",
+    "passive_perception": 11
+  },
+  "languages": "Abyssal, telepathy 120 ft.",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [
+    {
+      "name": "Résistance magique",
+      "desc": "Le hezrou a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    },
+    {
+      "name": "Puanteur",
+      "desc": "Toute créature qui commence son tour à moins de 3 m du hezrou doit réussir un jet de sauvegarde de Constitution DD 14 sous peine d'être empoisonnée jusqu'au début de son prochain tour. En cas de jet de sauvegarde réussi, la créature est immunisée contre la puanteur du hezrou pendant 24 heures."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le hezrou effectue trois attaques : une avec sa morsure et deux avec ses griffes.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claws",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 15 (2d10 + 4) dégâts perforants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffes",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 11 (2d6 + 4) dégâts tranchants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/hezrou.png",
+  "url": "/api/2014/monsters/hezrou",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Hezrou",
+  "size_en": "Large",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

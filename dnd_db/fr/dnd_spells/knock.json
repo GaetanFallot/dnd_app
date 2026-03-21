@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "knock",
+  "name": "Frappe",
+  "desc": [
+    "Choisissez un objet que vous pouvez voir à portée. L'objet peut être une porte, une boîte, un coffre, un ensemble de menottes, un cadenas ou tout autre objet contenant un moyen banal ou magique empêchant l'accès.\nUne cible qui est maintenue fermée par un verrou banal ou qui est bloquée ou barrée devient déverrouillée, décollée ou non barrée. Si l'objet possède plusieurs verrous, un seul d'entre eux est déverrouillé.\nSi vous choisissez une cible maintenue fermée par un verrouillage arcanique, ce sort est supprimé pendant 10 minutes, période pendant laquelle la cible peut être ouverte et fermée normalement.\nLorsque vous lancez le sort, un coup fort, audible jusqu'à 300 pieds, émane de l'objet cible."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/knock",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Knock",
+  "material": "",
+  "_translated": true
+}

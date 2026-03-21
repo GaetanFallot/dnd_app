@@ -1,0 +1,288 @@
+{
+  "index": "ancient-gold-dragon",
+  "name": "Dragon d'or antique",
+  "size": "Gargantuesque",
+  "type": "dragon",
+  "alignment": "loyal bon",
+  "armor_class": 22,
+  "hit_points": 546,
+  "hit_dice": "28d20",
+  "hit_points_roll": "28d20+252",
+  "speed": {
+    "walk": "12 m.",
+    "fly": "24 m.",
+    "swim": "12 m."
+  },
+  "strength": 30,
+  "dexterity": 14,
+  "constitution": 29,
+  "intelligence": 18,
+  "wisdom": 17,
+  "charisma": 28,
+  "proficiencies": [
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 16,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 16,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      }
+    },
+    {
+      "value": 17,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 16,
+      "proficiency": {
+        "index": "skill-persuasion",
+        "name": "Skill: Persuasion",
+        "url": "/api/2014/proficiencies/skill-persuasion"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "18 m.",
+    "darkvision": "36 m.",
+    "passive_perception": 27
+  },
+  "languages": "Common, Draconic",
+  "challenge_rating": 24,
+  "proficiency_bonus": 7,
+  "xp": 62000,
+  "special_abilities": [
+    {
+      "name": "Amphibie",
+      "desc": "Le dragon peut respirer de l'air et de l'eau."
+    },
+    {
+      "name": "Résistance légendaire",
+      "desc": "Si le dragon échoue à un jet de sauvegarde, il peut choisir de réussir à la place."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le dragon peut utiliser sa Présence Effroyable. Il effectue alors trois attaques : une avec sa morsure et deux avec ses griffes.",
+      "actions": [
+        {
+          "action_name": "Frightful Presence",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +17 pour toucher, portée 4,5 m, une cible. Touché : 21 (2d10 + 10) dégâts perforants.",
+      "attack_bonus": 17,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d10+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +17 pour toucher, portée 3 m, une cible. Touché : 17 (2d6 + 10) dégâts tranchants.",
+      "attack_bonus": 17,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Queue",
+      "desc": "Attaque au corps à corps avec une arme : +17 pour toucher, portée 6 m, une cible. Touché : 19 (2d8 + 10) dégâts contondants.",
+      "attack_bonus": 17,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d8+10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Présence effrayante",
+      "desc": "Chaque créature au choix du dragon qui se trouve à moins de 36 m du dragon et qui en a conscience doit réussir un jet de sauvegarde de Sagesse DD 24 ou devenir effrayée pendant 1 minute. Une créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite. Si le jet de sauvegarde d'une créature réussit ou si l'effet prend fin pour elle, la créature est immunisée contre la présence effrayante du dragon pendant les prochaines 24 heures.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "dc_value": 24,
+        "success_type": "none"
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Armes respiratoires",
+      "desc": "Le dragon utilise l'une des armes respiratoires suivantes.\nSouffle de Feu. Le dragon exhale du feu dans un cône de 90 pieds. Chaque créature dans cette zone doit effectuer un jet de sauvegarde de Dextérité DD 24, subissant 71 (13d10) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\nSouffle affaiblissant. Le dragon exhale du gaz dans un cône de 90 pieds. Chaque créature dans cette zone doit réussir un jet de sauvegarde de Force DD 24 ou être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant 1 minute. Une créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "Fire Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "DEX",
+                  "url": "/api/2014/ability-scores/dex"
+                },
+                "dc_value": 24,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "fire",
+                    "name": "Fire",
+                    "url": "/api/2014/damage-types/fire"
+                  },
+                  "damage_dice": "13d10"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "Weakening Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "str",
+                  "name": "STR",
+                  "url": "/api/2014/ability-scores/str"
+                },
+                "dc_value": 24,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Changer de forme",
+      "desc": "Le dragon se métamorphose comme par magie en un humanoïde ou une bête dont le niveau de défi n'est pas supérieur au sien, ou reprend sa vraie forme. Il reprend sa vraie forme s'il meurt. Tout équipement qu'il porte ou transporte est absorbé ou supporté par la nouvelle forme (au choix du dragon).\nSous une nouvelle forme, le dragon conserve son alignement, ses points de vie, ses dés de vie, sa capacité à parler, ses compétences, sa résistance légendaire, ses actions de repaire et ses scores d'intelligence, de sagesse et de charisme, ainsi que cette action. Ses statistiques et capacités sont par ailleurs remplacées par celles de la nouvelle forme, à l'exception des fonctionnalités de classe ou des actions légendaires de cette forme.",
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "Détecter",
+      "desc": "Le dragon effectue un test de Sagesse (Perception)."
+    },
+    {
+      "name": "Attaque de queue",
+      "desc": "Le dragon effectue une attaque de queue."
+    },
+    {
+      "name": "Attaque d'aile (coûte 2 actions)",
+      "desc": "Le dragon bat des ailes. Chaque créature à moins de 4,5 m. du dragon doit réussir un jet de sauvegarde de Dextérité DD 25 ou subir 17 (2d6 + 10) dégâts contondants et être jeté à terre. Le dragon peut alors voler jusqu'à la moitié de sa vitesse de vol."
+    }
+  ],
+  "image": "/api/images/monsters/ancient-gold-dragon.png",
+  "url": "/api/2014/monsters/ancient-gold-dragon",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "reactions": [],
+  "name_en": "Ancient Gold Dragon",
+  "size_en": "Gargantuan",
+  "type_en": "dragon",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

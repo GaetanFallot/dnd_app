@@ -1,0 +1,116 @@
+{
+  "index": "ettin",
+  "name": "Ettin",
+  "size": "Grande",
+  "type": "géant",
+  "alignment": "chaotique mauvais",
+  "armor_class": 12,
+  "hit_points": 85,
+  "hit_dice": "10d10",
+  "hit_points_roll": "10d10+30",
+  "speed": {
+    "walk": "12 m."
+  },
+  "strength": 21,
+  "dexterity": 8,
+  "constitution": 17,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 14
+  },
+  "languages": "Giant, Orc",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [
+    {
+      "name": "Deux têtes",
+      "desc": "L'ettin a un avantage aux tests de Sagesse (Perception) et aux jets de sauvegarde contre l'aveuglement, le charme, l'assourdissement, l'effroi, l'étourdissement et l'inconscience."
+    },
+    {
+      "name": "Éveillé",
+      "desc": "Quand l’une des têtes de l’ettin dort, son autre tête est éveillée."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "L'ettin effectue deux attaques : une avec sa hache de combat et une avec son étoile du matin.",
+      "actions": [
+        {
+          "action_name": "Battleaxe",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Morningstar",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Hache de combat",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 14 (2d8 + 5) dégâts tranchants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Étoile du matin",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 14 (2d8 + 5) dégâts perforants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/ettin.png",
+  "url": "/api/2014/monsters/ettin",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Ettin",
+  "size_en": "Large",
+  "type_en": "giant",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,97 @@
+{
+  "index": "blink-dog",
+  "name": "Chien clignotant",
+  "desc": "A blink dog takes its name from its ability to blink in and out of existence, a talent it uses to aid its attacks and to avoid harm.",
+  "size": "Moyenne",
+  "type": "fée",
+  "alignment": "loyal bon",
+  "armor_class": 13,
+  "hit_points": 22,
+  "hit_dice": "4d8",
+  "hit_points_roll": "4d8+4",
+  "speed": {
+    "walk": "12 m."
+  },
+  "strength": 12,
+  "dexterity": 17,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Blink Dog, understands Sylvan but can't speak it",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "Ouïe et odorat aiguisés",
+      "desc": "Le chien a un avantage aux tests de Sagesse (Perception) qui reposent sur l'ouïe ou l'odorat."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, portée 1,5 m, une cible. Touché : 4 (1d6 + 1) dégâts perforants.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Téléportation",
+      "desc": "Le chien se téléporte comme par magie, ainsi que tout l'équipement qu'il porte ou transporte, jusqu'à 12 m. vers un espace inoccupé qu’il peut voir. Avant ou après la téléportation, le chien peut effectuer une seule attaque par morsure.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 4
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/blink-dog.png",
+  "url": "/api/2014/monsters/blink-dog",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Blink Dog",
+  "size_en": "Medium",
+  "type_en": "fey",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

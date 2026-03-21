@@ -1,0 +1,57 @@
+{
+  "higher_level": [],
+  "index": "hideous-laughter",
+  "name": "Rire hideux",
+  "desc": [
+    "Une créature de votre choix que vous pouvez voir à portée perçoit tout comme étant hilarant et éclate de rire si ce sort l'affecte. La cible doit réussir un jet de sauvegarde de sagesse ou tomber à terre, devenant incapable de se tenir debout pendant toute la durée du sort. Une créature avec un score d'Intelligence de 4 ou moins n'est pas affectée.\nA la fin de chacun de ses tours, et à chaque fois qu'elle subit des dégâts, la cible peut effectuer un nouveau jet de sauvegarde de sagesse. La cible avait un avantage au jet de sauvegarde s'il est déclenché par des dégâts. En cas de réussite, le sort prend fin."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Des petites tartelettes et une plume qui flotte dans les airs.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 1,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "WIS",
+      "url": "/api/2014/ability-scores/wis"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/hideous-laughter",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Hideous Laughter",
+  "_translated": true
+}

@@ -1,0 +1,63 @@
+{
+  "index": "dominate-monster",
+  "name": "Dominer le monstre",
+  "desc": [
+    "Vous tentez de tromper une créature que vous pouvez voir à portée. Il doit réussir un jet de sauvegarde de sagesse ou être charmé par vous pour la durée. Si vous ou des créatures amies avec vous le combattez, il a un avantage au jet de sauvegarde.\nTant que la créature est charmée, vous entretenez un lien télépathique avec elle tant que vous êtes tous les deux sur le même plan d'existence. Vous pouvez utiliser ce lien télépathique pour donner des ordres à la créature pendant que vous êtes conscient (aucune action requise), auxquelles elle fait de son mieux pour obéir. Vous pouvez spécifier un plan d'action simple et général, tel que \"Attaquer cette créature\", \"Courir là-bas\" ou \"Récupérer cet objet\". Si la créature exécute l'ordre et ne reçoit pas d'autres instructions de votre part, elle se défend et se préserve au mieux de ses capacités.\nVous pouvez utiliser votre action pour prendre le contrôle total et précis de la cible. Jusqu'à la fin de votre prochain tour, la créature n'effectue que les actions que vous choisissez et ne fait rien que vous ne lui permettez pas de faire. Pendant ce temps, vous pouvez également amener la créature à utiliser une réaction, mais cela nécessite que vous utilisiez également votre propre réaction.\nChaque fois que la cible subit des dégâts, elle effectue un nouveau jet de sauvegarde de sagesse contre le sort. Si le jet de sauvegarde réussit, le sort prend fin."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort avec un emplacement de sort de niveau 9, la durée est concentration, jusqu'à 8 heures."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 8,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "WIS",
+      "url": "/api/2014/ability-scores/wis"
+    },
+    "dc_success": "none",
+    "desc": "On failure, the creature is charmed by you for the duration."
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/dominate-monster",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Dominate Monster",
+  "material": "",
+  "_translated": true
+}

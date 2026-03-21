@@ -1,0 +1,73 @@
+{
+  "index": "giant-sea-horse",
+  "name": "Hippocampe géant",
+  "desc": "Like their smaller kin, giant sea horses are shy, colorful fish with elongated bodies and curled tails. Aquatic elves train them as mounts.",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 13,
+  "hit_points": 16,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10",
+  "speed": {
+    "walk": "0 ft.",
+    "swim": "40 ft."
+  },
+  "strength": 12,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "Charge",
+      "desc": "Si l'hippocampe se déplace d'au moins 6 mètres en ligne droite vers une cible et la frappe ensuite avec une attaque bélier au cours du même tour, la cible subit 7 (2d6) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force DD 11 ou être mise à terre."
+    },
+    {
+      "name": "Respiration aquatique",
+      "desc": "L'hippocampe ne peut respirer que sous l'eau."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bélier",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, atteignez 1,50 m, une cible. Touché : 4 (1d6 + 1) dégâts contondants.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant-sea-horse.png",
+  "url": "/api/2014/monsters/giant-sea-horse",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Giant Sea Horse",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,53 @@
+{
+  "higher_level": [],
+  "index": "tiny-hut",
+  "name": "Petite cabane",
+  "desc": [
+    "Un dôme de force immobile d’un rayon de 10 pieds surgit autour et au-dessus de vous et reste stationnaire pendant toute la durée. Le sort prend fin si vous quittez sa zone.\nNeuf créatures de taille moyenne ou plus petite peuvent entrer avec vous à l'intérieur du dôme. Le sort échoue si sa zone comprend une créature plus grande ou plus de neuf créatures. Les créatures et les objets à l'intérieur du dôme lorsque vous lancez ce sort peuvent s'y déplacer librement. Toutes les autres créatures et objets n’ont pas le droit de le traverser. Les sorts et autres effets magiques ne peuvent pas traverser le dôme ni être lancés à travers celui-ci. L’atmosphère à l’intérieur de l’espace est confortable et sèche, quelle que soit la météo extérieure.\nJusqu'à la fin du sort, vous pouvez ordonner à l'intérieur de devenir faiblement éclairé ou sombre. Le dôme est opaque de l'extérieur, de la couleur de votre choix, mais il est transparent de l'intérieur."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une petite perle de cristal.",
+  "ritual": true,
+  "duration": "8 heures",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 3,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 10
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/tiny-hut",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Tiny Hut",
+  "_translated": true
+}

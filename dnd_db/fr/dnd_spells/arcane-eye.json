@@ -1,0 +1,47 @@
+{
+  "higher_level": [],
+  "index": "arcane-eye",
+  "name": "Œil arcanique",
+  "desc": [
+    "Vous créez un œil invisible et magique à portée qui plane dans les airs pendant toute la durée du sort.\nVous recevez mentalement des informations visuelles de l’œil, qui a une vision normale et une vision dans le noir jusqu’à 30 pieds. L’œil peut regarder dans toutes les directions.\nPar une action, vous pouvez déplacer l’œil jusqu’à 9 mètres dans n’importe quelle direction. Il n’y a pas de limite à la distance à laquelle l’œil peut s’éloigner de vous, mais il ne peut pas entrer dans un autre plan d’existence. Une barrière solide bloque le mouvement de l'œil, mais celui-ci peut passer à travers une ouverture aussi petite que 1 pouce de diamètre."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un peu de fourrure de chauve-souris.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 4,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 30
+  },
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/arcane-eye",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Arcane Eye",
+  "_translated": true
+}

@@ -1,0 +1,97 @@
+{
+  "index": "giant-scorpion",
+  "name": "Scorpion géant",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 15,
+  "hit_points": 52,
+  "hit_dice": "7d10",
+  "hit_points_roll": "7d10+14",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 15,
+  "dexterity": 13,
+  "constitution": 15,
+  "intelligence": 1,
+  "wisdom": 9,
+  "charisma": 3,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "actions": [
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, atteignez 1,50 m, une cible. Touché : 6 (1d8 + 2) dégâts contondants et la cible est agrippée (évasion DD 12). Le scorpion possède deux griffes, chacune ne pouvant agripper qu’une seule cible.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d8+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le scorpion effectue trois attaques : deux avec ses griffes et une avec sa piqûre.",
+      "actions": [
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        },
+        {
+          "action_name": "Sting",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Piquer",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,50 m, une créature. Touché : 7 (1d10 + 2) dégâts perforants, et la cible doit effectuer un jet de sauvegarde de Constitution DD 12, subissant 22 (4d10) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant-scorpion.png",
+  "url": "/api/2014/monsters/giant-scorpion",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Giant Scorpion",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

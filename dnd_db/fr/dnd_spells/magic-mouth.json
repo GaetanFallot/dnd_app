@@ -1,0 +1,49 @@
+{
+  "higher_level": [],
+  "index": "magic-mouth",
+  "name": "Bouche Magique",
+  "desc": [
+    "Vous déposez un message sur un objet à portée du sort. Le message est verbalisé lorsque les conditions de déclenchement sont remplies. Choisissez un objet que vous voyez et qui n'est pas porté ou transporté par une autre créature. Dites ensuite le message, qui ne doit pas dépasser 25 mots mais l'écoute peut prendre jusqu'à 10 minutes. Enfin, établissez les circonstances qui déclenchent le sort pour transmettre votre message.\nLorsque ces conditions sont remplies, une bouche magique apparaît sur l'objet et elle articule le message en imitant votre voix, le même ton utilisé lors de l'implantation du message. Si l'objet sélectionné a une bouche ou quelque chose qui s'approche comme la bouche d'une statue, la bouche magique prend vie à ce stade, donnant l'illusion que les mots viennent de la bouche de l'objet.\nLorsque vous lancez ce sort, vous pouvez décider que le sort se termine lorsque le message est délivré ou qu'il peut persister et répéter le message chaque fois que les circonstances se produisent.\nLa circonstance déclenchante peut être aussi générale ou aussi détaillée que vous le souhaitez, même si elle doit être basée sur des conditions visuelles ou sonores qui se produisent dans un rayon de 30 pieds de l'objet. Par exemple, vous pouvez demander à la bouche de parler lorsqu'une créature se déplace à moins de 9 mètres de l'objet ou lorsqu'une cloche en argent sonne à moins de 9 mètres de lui."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un nid d'abeille et une poussière de jade d'au moins 10 pouces, le sort consomme.",
+  "ritual": true,
+  "duration": "Jusqu'à ce qu'il soit dissipé",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 2,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/magic-mouth",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Magic Mouth",
+  "_translated": true
+}

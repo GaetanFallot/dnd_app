@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "mage-hand",
+  "name": "Main de mage",
+  "desc": [
+    "Une main spectrale flottante apparaît à un point que vous choisissez à portée. La main dure pendant toute la durée ou jusqu'à ce que vous la rejetiez comme une action. La main disparaît si elle se trouve à plus de 9 mètres de vous ou si vous lancez à nouveau ce sort.\nVous pouvez utiliser votre action pour contrôler la main. Vous pouvez utiliser la main pour manipuler un objet, ouvrir une porte ou un conteneur déverrouillé, ranger ou récupérer un article dans un conteneur ouvert ou verser le contenu d'un flacon. Vous pouvez déplacer la main jusqu'à 30 pieds à chaque fois que vous l'utilisez.\nLa main ne peut pas attaquer, activer des objets magiques ou transporter plus de 10 livres."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/mage-hand",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Mage Hand",
+  "material": "",
+  "_translated": true
+}

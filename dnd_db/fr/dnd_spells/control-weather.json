@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "control-weather",
+  "name": "Contrôler la météo",
+  "desc": [
+    "Vous prenez le contrôle de la météo dans un rayon de 5 miles autour de vous pendant toute la durée. Vous devez être à l'extérieur pour lancer ce sort. Se déplacer vers un endroit où vous n'avez pas de chemin clair vers le ciel met fin au sort plus tôt.\nLorsque vous lancez le sort, vous modifiez les conditions météorologiques actuelles, qui sont déterminées par le MJ en fonction du climat et de la saison. Vous pouvez modifier les précipitations, la température et le vent. Il faut 1d4 x 10 minutes pour que les nouvelles conditions prennent effet. Une fois cela fait, vous pouvez à nouveau modifier les conditions. Une fois la période terminée, le temps revient progressivement à la normale.\nLorsque vous modifiez les conditions météorologiques, recherchez une condition actuelle dans les tableaux suivants et modifiez son niveau d'un niveau, vers le haut ou vers le bas. Lorsque vous changez le vent, vous pouvez changer sa direction.\n##### Précipitations\n| Scène | État |\n|---|---|\n| 1 | Effacer |\n| 2 | Nuages ​​légers |\n| 3 | Ciel couvert ou brouillard au sol |\n| 4 | Pluie, grêle ou neige |\n| 5 | Pluie torrentielle, grêle battante ou blizzard |\n##### Température\n| Scène | État |\n|---|---|\n| 1 | Chaleur insupportable |\n| 2 | Chaud |\n| 3 | Chaud |\n| 4 | Frais |\n| 5 | Froid |\n| 6 | Froid arctique |\n##### Vent\n| Scène | État |\n|---|---|\n| 1 | Calme |\n| 2 | Vent modéré |\n| 3 | Vent fort |\n| 4 | Coup de vent |\n| 5 | Tempête |"
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Brûler de l'encens et des morceaux de terre et de bois mélangés à de l'eau.",
+  "ritual": false,
+  "duration": "Jusqu'à 8 heures",
+  "concentration": true,
+  "casting_time": "10 minutes",
+  "level": 8,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/control-weather",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Control Weather",
+  "_translated": true
+}

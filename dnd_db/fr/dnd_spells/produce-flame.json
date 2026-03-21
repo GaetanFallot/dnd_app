@@ -1,0 +1,57 @@
+{
+  "higher_level": [],
+  "index": "produce-flame",
+  "name": "Produire une flamme",
+  "desc": [
+    "Une flamme vacillante apparaît dans votre main. La flamme reste là pendant toute la durée et ne nuit ni à vous ni à votre équipement. La flamme projette une lumière vive dans un rayon de 10 pieds et une lumière tamisée sur 10 pieds supplémentaires. Le sort prend fin si vous le rejetez comme une action ou si vous le relancez.\nVous pouvez également attaquer avec la flamme, même si cela met fin au sort. Lorsque vous lancez ce sort, ou par une action lors d'un tour ultérieur, vous pouvez lancer la flamme sur une créature à moins de 9 mètres de vous. Effectuez une attaque magique à distance. En cas de coup, la cible subit 1d8 dégâts de feu.\nLes dégâts de ce sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8)."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "10 minutes",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "attack_type": "ranged",
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "Fire",
+      "url": "/api/2014/damage-types/fire"
+    },
+    "damage_at_character_level": {
+      "1": "1d8",
+      "5": "2d8",
+      "11": "3d8",
+      "17": "4d8"
+    }
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/produce-flame",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Produce Flame",
+  "material": "",
+  "_translated": true
+}

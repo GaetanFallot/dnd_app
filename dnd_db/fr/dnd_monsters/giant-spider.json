@@ -1,0 +1,100 @@
+{
+  "index": "giant-spider",
+  "name": "Araignée géante",
+  "desc": "To snare its prey, a giant spider spins elaborate webs or shoots sticky strands of webbing from its abdomen. Giant spiders are most commonly found underground, making their lairs on ceilings or in dark, web-filled crevices. Such lairs are often festooned with web cocoons holding past victims.",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 14,
+  "hit_points": 26,
+  "hit_dice": "4d10",
+  "hit_points_roll": "4d10+4",
+  "speed": {
+    "walk": "30 ft.",
+    "climb": "30 ft."
+  },
+  "strength": 14,
+  "dexterity": 16,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 11,
+  "charisma": 4,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "Escalade d'araignée",
+      "desc": "L'araignée peut escalader des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin d'effectuer un test de capacité."
+    },
+    {
+      "name": "Sens du Web",
+      "desc": "Lorsqu'elle est en contact avec une toile, l'araignée connaît l'emplacement exact de toute autre créature en contact avec la même toile."
+    },
+    {
+      "name": "Marcheur Web",
+      "desc": "L'araignée ignore les restrictions de mouvement causées par la sangle."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, allonge 1,50 m, une créature. Touché : 7 (1d8 + 3) dégâts perforants, et la cible doit effectuer un jet de sauvegarde de Constitution DD 11, subissant 9 (2d8) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Si les dégâts de poison réduisent la cible à 0 point de vie, la cible est stable mais empoisonnée pendant 1 heure, même après avoir récupéré des points de vie, et est paralysée lorsqu'elle est ainsi empoisonnée.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Web",
+      "desc": "Attaque avec arme à distance : +5 pour toucher, portée 30/60 pieds, une créature. Touché : La cible est retenue par une sangle. Par une action, la cible maîtrisée peut effectuer un test de Force DD 12, faisant éclater la sangle en cas de réussite. La sangle peut également être attaquée et détruite (CA 10 ; PV 5 ; vulnérabilité aux dégâts de feu ; immunité aux contondants, au poison et aux dégâts psychiques).",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "attack_bonus": 5,
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant-spider.png",
+  "url": "/api/2014/monsters/giant-spider",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Giant Spider",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,63 @@
+{
+  "index": "chain-lightning",
+  "name": "Chaîne d'éclairs",
+  "desc": [
+    "Vous créez un éclair qui se dirige vers une cible de votre choix que vous pouvez voir à portée. Trois carreaux sautent ensuite de cette cible vers trois autres cibles, chacune devant se trouver à moins de 30 pieds de la première cible. Une cible peut être une créature ou un objet et ne peut être ciblée que par un seul des carreaux.\nUne cible doit effectuer un jet de sauvegarde de dextérité. La cible subit 10d8 dégâts de foudre en cas d'échec, ou la moitié de ces dégâts en cas de réussite."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 7 ou supérieur, un éclair supplémentaire saute de la première cible à une autre cible pour chaque niveau d'emplacement supérieur au 6."
+  ],
+  "range": "150 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un peu de fourrure ; un morceau d'ambre, de verre ou une tige de cristal ; et trois épingles en argent.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "damage": {
+    "damage_type": {
+      "index": "lightning",
+      "name": "Lightning",
+      "url": "/api/2014/damage-types/lightning"
+    },
+    "damage_at_slot_level": {
+      "6": "10d8"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "DEX",
+      "url": "/api/2014/ability-scores/dex"
+    },
+    "dc_success": "half"
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/chain-lightning",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Chain Lightning",
+  "_translated": true
+}

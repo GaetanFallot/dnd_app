@@ -1,0 +1,37 @@
+{
+  "higher_level": [],
+  "index": "planar-ally",
+  "name": "Allié planaire",
+  "desc": [
+    "Vous implorez l’aide d’une entité d’un autre monde. L'être doit vous être connu : un dieu, un primordial, un prince démon ou tout autre être doté d'un pouvoir cosmique. Cette entité envoie un céleste, un élémentaire ou un démon qui lui est fidèle pour vous aider, faisant apparaître la créature dans un espace inoccupé à portée. Si vous connaissez le nom d'une créature spécifique, vous pouvez prononcer ce nom lorsque vous lancez ce sort pour demander cette créature, bien que vous puissiez quand même obtenir une créature différente (au choix du MJ).\nLorsque la créature apparaît, elle n’est pas obligée de se comporter d’une manière particulière. Vous pouvez demander à la créature de rendre un service en échange d'un paiement, mais elle n'est pas obligée de le faire. La tâche demandée peut aller du simple (nous faire traverser un gouffre ou nous aider à mener une bataille) au complexe (espionner nos ennemis ou nous protéger lors de notre incursion dans le donjon). Vous devez être capable de communiquer avec la créature pour négocier ses services.\nLe paiement peut prendre diverses formes. Un céleste peut exiger un don important d'or ou d'objets magiques à un temple allié, tandis qu'un démon peut exiger un sacrifice vivant ou un don de trésor. Certaines créatures peuvent échanger leur service contre une quête entreprise par vous.\nEn règle générale, une tâche qui peut être mesurée en minutes nécessite un paiement d'une valeur de 100 po par minute. Une tâche mesurée en heures nécessite 1 000 po par heure. Et une tâche mesurée en jours (jusqu'à 10 jours) nécessite 10 000 po par jour. Le MJ peut ajuster ces paiements en fonction des circonstances dans lesquelles vous lancez le sort. Si la tâche correspond à la philosophie de la créature, le paiement peut être réduit de moitié, voire annulé. Les tâches non dangereuses ne nécessitent généralement que la moitié du paiement suggéré, tandis que les tâches particulièrement dangereuses peuvent nécessiter un cadeau plus important. Les créatures acceptent rarement des tâches qui semblent suicidaires.\nUne fois que la créature a terminé la tâche, ou lorsque la durée de service convenue expire, la créature retourne dans son plan d'origine après vous avoir fait rapport, si cela est approprié à la tâche et si possible. Si vous ne parvenez pas à vous mettre d'accord sur un prix pour le service de la créature, la créature retourne immédiatement dans son plan d'origine.\nUne créature enrôlée pour rejoindre votre groupe compte comme membre de celui-ci et reçoit une part complète des points d'expérience attribués."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "10 minutes",
+  "level": 6,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/planar-ally",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Planar Ally",
+  "material": "",
+  "_translated": true
+}

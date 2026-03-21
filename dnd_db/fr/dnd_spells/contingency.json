@@ -1,0 +1,38 @@
+{
+  "higher_level": [],
+  "index": "contingency",
+  "name": "Contingence",
+  "desc": [
+    "Choisissez un sort de niveau 5 ou inférieur que vous pouvez lancer, qui a un temps d'incantation de 1 action et qui peut vous cibler. Vous lancez ce sort - appelé sort contingent - dans le cadre du lancement de la contingence, dépensant des emplacements de sort pour les deux, mais le sort contingent n'entre pas en vigueur. Au lieu de cela, il prend effet lorsqu’une certaine circonstance se produit. Vous décrivez cette circonstance lorsque vous lancez les deux sorts. Par exemple, une contingence avec la respiration aquatique pourrait stipuler que la respiration aquatique entre en vigueur lorsque vous êtes englouti dans l’eau ou un liquide similaire.\nLe sort contingent prend effet immédiatement après que la circonstance se présente pour la première fois, que vous le souhaitiez ou non. et puis la contingence prend fin.\nLe sort contingent ne prend effet que sur vous, même s'il peut normalement cibler les autres. Vous ne pouvez utiliser qu’un seul sort de contingence à la fois. Si vous lancez à nouveau ce sort, l'effet d'un autre sort de contingence sur vous prend fin. De plus, la contingence prend fin sur vous si jamais sa composante matérielle ne repose pas sur votre personne."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une statuette de vous-même sculptée dans de l'ivoire et décorée de pierres précieuses d'une valeur d'au moins 1 500 po.",
+  "ritual": false,
+  "duration": "10 jours",
+  "concentration": false,
+  "casting_time": "10 minutes",
+  "level": 6,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/contingency",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Contingency",
+  "_translated": true
+}

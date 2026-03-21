@@ -1,0 +1,187 @@
+{
+  "index": "lich",
+  "name": "Liche",
+  "size": "Moyenne",
+  "type": "mort-vivant",
+  "alignment": "tout alignement mauvais",
+  "armor_class": 17,
+  "hit_points": 135,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8+54",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 20,
+  "wisdom": 14,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "saving-throw-int",
+        "name": "Saving Throw: INT",
+        "url": "/api/2014/proficiencies/saving-throw-int"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 18,
+      "proficiency": {
+        "index": "skill-arcana",
+        "name": "Skill: Arcana",
+        "url": "/api/2014/proficiencies/skill-arcana"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "skill-history",
+        "name": "Skill: History",
+        "url": "/api/2014/proficiencies/skill-history"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "lightning",
+    "necrotic"
+  ],
+  "damage_immunities": [
+    "poison",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 19
+  },
+  "languages": "Common plus up to five other languages",
+  "challenge_rating": 21,
+  "proficiency_bonus": 7,
+  "xp": 33000,
+  "special_abilities": [
+    {
+      "name": "Résistance légendaire",
+      "desc": "Si la liche échoue à un jet de sauvegarde, elle peut choisir de réussir à la place."
+    },
+    {
+      "name": "Rajeunissement",
+      "desc": "Si elle possède un phylactère, une liche détruite acquiert un nouveau corps en 1d10 jours, récupérant tous ses points de vie et redevenant active. Le nouveau corps apparaît à moins de 1,50 mètre du phylactère."
+    },
+    {
+      "name": "Lancement de sorts",
+      "desc": "La liche est un lanceur de sorts de niveau 18. Sa capacité de lancement de sorts est l'Intelligence (sauvegarde des sorts DD 20, +12 pour toucher avec les attaques de sorts). La liche a préparé les sorts de sorcier suivants :\n\n- Cantrips (à volonté) : main de mage, prestidigitation, rayon de givre\n- 1er niveau (4 emplacements) : détecter la magie, le missile magique, le bouclier, l'onde de tonnerre\n- 2ème niveau (3 emplacements) : flèche acide, détection des pensées, invisibilité, image miroir\n- 3ème niveau (3 emplacements) : animer les morts, contresort, dissiper la magie, boule de feu\n- 4ème niveau (3 emplacements) : fléau, porte dimensionnelle\n- 5ème niveau (3 emplacements) : cloudkill, clairvoyance\n- 6ème niveau (1 emplacement) : désintégration, globe d'invulnérabilité\n- 7ème niveau (1 emplacement) : doigt de la mort, changement de plan\n- 8ème niveau (1 emplacement) : dominer le monstre, étourdir le mot de pouvoir\n- 9ème niveau (1 emplacement) : power word kill"
+    },
+    {
+      "name": "Résistance au virage",
+      "desc": "La liche a un avantage aux jets de sauvegarde contre tout effet qui transforme les morts-vivants."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Toucher paralysant",
+      "desc": "Attaque de sort de mêlée : +12 pour toucher, allonge 1,50 m, une créature. Touché : 10 (3d6) dégâts de froid. La cible doit réussir un jet de sauvegarde de Constitution DD 18 ou être paralysée pendant 1 minute. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "Cold",
+            "url": "/api/2014/damage-types/cold"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "Cantrip",
+      "desc": "La liche lance un sort mineur."
+    },
+    {
+      "name": "Toucher paralysant (coûte 2 actions)",
+      "desc": "La liche utilise son Toucher Paralysant."
+    },
+    {
+      "name": "Regard effrayant (coûte 2 actions)",
+      "desc": "La liche fixe son regard sur une créature qu’elle peut voir à moins de 3 mètres d’elle. La cible doit réussir un jet de sauvegarde de Sagesse DD 18 contre cette magie ou devenir effrayée pendant 1 minute. La cible effrayée peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite. Si le jet de sauvegarde d'une cible réussit ou si l'effet prend fin, la cible est immunisée contre le regard de la liche pendant les prochaines 24 heures."
+    },
+    {
+      "name": "Perturber la vie (coûte 3 actions)",
+      "desc": "Chaque créature vivante située dans un rayon de 6 mètres autour de la liche doit effectuer un jet de sauvegarde de Constitution DD 18 contre cette magie, subissant 21 (6d6) dégâts nécrotiques en cas d'échec, ou la moitié de ces dégâts en cas de réussite."
+    }
+  ],
+  "image": "/api/images/monsters/lich.png",
+  "url": "/api/2014/monsters/lich",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "reactions": [],
+  "name_en": "Lich",
+  "type_en": "undead",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

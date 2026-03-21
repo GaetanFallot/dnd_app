@@ -1,0 +1,44 @@
+{
+  "higher_level": [],
+  "index": "augury",
+  "name": "Augure",
+  "desc": [
+    "En lançant des bâtons incrustés de pierres précieuses, en faisant rouler des os de dragon, en disposant des cartes ornées ou en utilisant un autre outil de divination, vous recevez un présage d'une entité d'un autre monde concernant les résultats d'un plan d'action spécifique que vous envisagez de prendre dans les 30 prochaines minutes. Le MJ choisit parmi les présages possibles suivants :\n- Weal, pour de bons résultats\n- Malheur aux mauvais résultats\n- Heureusement et malheur, pour les bons et les mauvais résultats\n- Rien, pour des résultats qui ne sont ni particulièrement bons ni mauvais\nLe sort ne prend pas en compte les circonstances possibles qui pourraient changer le résultat, comme le lancement de sorts supplémentaires ou la perte ou le gain d'un compagnon.\nSi vous lancez le sort deux fois ou plus avant de terminer votre prochain repos long, il y a 25 % de chances cumulées pour chaque lancement après le premier que vous obteniez une lecture aléatoire. Le MJ effectue ce jet en secret."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Bâtons, os ou jetons similaires spécialement marqués valant au moins 25 po.",
+  "ritual": true,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 2,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/augury",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Augury",
+  "_translated": true
+}

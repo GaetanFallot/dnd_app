@@ -1,0 +1,59 @@
+{
+  "higher_level": [],
+  "index": "darkvision",
+  "name": "Vision dans le noir",
+  "desc": [
+    "Vous touchez une créature consentante pour lui accorder la capacité de voir dans le noir. Pendant toute cette durée, cette créature a une vision dans le noir jusqu'à une portée de 60 pieds."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Soit une pincée de carotte séchée, soit une agate.",
+  "ritual": false,
+  "duration": "8 heures",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/darkvision",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Darkvision",
+  "_translated": true
+}

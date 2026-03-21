@@ -1,0 +1,47 @@
+{
+  "higher_level": [],
+  "index": "programmed-illusion",
+  "name": "Illusion programmée",
+  "desc": [
+    "Vous créez l'illusion d'un objet, d'une créature ou d'un autre phénomène visible à portée qui s'active lorsqu'une condition spécifique se produit. L'illusion est imperceptible jusque-là. Elle ne doit pas dépasser un cube de 9 mètres, et c'est vous qui décidez, lorsque vous lancez le sort, comment l'illusion se comporte et quels sons elle produit. Cette performance scénarisée peut durer jusqu'à 5 minutes.\nLorsque la condition que vous spécifiez se produit, l’illusion surgit et se comporte de la manière que vous avez décrite. Une fois que l'illusion a fini de fonctionner, elle disparaît et reste en sommeil pendant 10 minutes. Passé ce délai, l'illusion peut être à nouveau activée.\nLa condition de déclenchement peut être aussi générale ou aussi détaillée que vous le souhaitez, même si elle doit être basée sur des conditions visuelles ou sonores qui se produisent dans un rayon de 30 pieds de la zone. Par exemple, vous pouvez créer une illusion de vous-même pour apparaître et avertir les autres qui tentent d'ouvrir une porte piégée, ou vous pouvez configurer l'illusion pour qu'elle se déclenche uniquement lorsqu'une créature prononce le mot ou la phrase correcte.\nL'interaction physique avec l'image révèle qu'elle est une illusion, car les choses peuvent passer à travers elle. Une créature qui utilise son action pour examiner l'image peut déterminer qu'il s'agit d'une illusion en réussissant un test d'Intelligence (Enquête) contre votre DD de sauvegarde de sort. Si une créature discerne l'illusion pour ce qu'elle est, elle peut voir à travers l'image, et tout bruit qu'elle fait semble creux pour la créature."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un peu de toison et de poussière de jade valant au moins 25 po.",
+  "ritual": false,
+  "duration": "Jusqu'à ce qu'il soit dissipé",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 30
+  },
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/programmed-illusion",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Programmed Illusion",
+  "_translated": true
+}

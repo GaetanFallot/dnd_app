@@ -1,0 +1,53 @@
+{
+  "higher_level": [],
+  "index": "alarm",
+  "name": "Alarme",
+  "desc": [
+    "Vous définissez une alarme contre les intrusions indésirables. Choisissez une porte, une fenêtre ou une zone à portée qui ne dépasse pas un cube de 20 pieds. Jusqu'à la fin du sort, une alarme vous avertit chaque fois qu'une créature minuscule ou plus grande touche ou entre dans la zone protégée. Lorsque vous lancez le sort, vous pouvez désigner des créatures qui ne déclencheront pas l'alarme. Vous choisissez également si l'alarme est mentale ou sonore.\nUne alarme mentale vous avertit avec un ping dans votre esprit si vous vous trouvez à moins de 1,6 km de la zone surveillée. Ce ping vous réveille si vous dormez.\nUne alarme sonore produit le son d'une clochette pendant 10 secondes dans un rayon de 60 pieds."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une petite cloche et un morceau de fil d'argent fin.",
+  "ritual": true,
+  "duration": "8 heures",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 1,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 20
+  },
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/alarm",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Alarm",
+  "_translated": true
+}

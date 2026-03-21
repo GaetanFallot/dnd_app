@@ -1,0 +1,220 @@
+{
+  "index": "mummy-lord",
+  "name": "Maman Seigneur",
+  "size": "Moyenne",
+  "type": "mort-vivant",
+  "alignment": "loyal mauvais",
+  "armor_class": 17,
+  "hit_points": 97,
+  "hit_dice": "13d8",
+  "hit_points_roll": "13d8+39",
+  "speed": {
+    "walk": "6 m."
+  },
+  "strength": 18,
+  "dexterity": 10,
+  "constitution": 17,
+  "intelligence": 11,
+  "wisdom": 18,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving-throw-int",
+        "name": "Saving Throw: INT",
+        "url": "/api/2014/proficiencies/saving-throw-int"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-history",
+        "name": "Skill: History",
+        "url": "/api/2014/proficiencies/skill-history"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-religion",
+        "name": "Skill: Religion",
+        "url": "/api/2014/proficiencies/skill-religion"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "necrotic",
+    "poison",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 14
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": 15,
+  "proficiency_bonus": 5,
+  "xp": 13000,
+  "special_abilities": [
+    {
+      "name": "Résistance magique",
+      "desc": "Le seigneur momie a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    },
+    {
+      "name": "Rajeunissement",
+      "desc": "Un seigneur momie détruit gagne un nouveau corps en 24 heures si son cœur est intact, récupérant tous ses points de vie et redevenant actif. Le nouveau corps apparaît à moins de 1,5 m du cœur du seigneur momie."
+    },
+    {
+      "name": "Lancement de sorts",
+      "desc": "Le seigneur momie est un lanceur de sorts de niveau 10. Sa capacité de lancement de sorts est la Sagesse (sauvegarde contre les sorts DD 17, +9 pour toucher avec les attaques de sorts). Le seigneur momie a préparé les sorts de clerc suivants :\n\n- Cantrips (à volonté) : flamme sacrée, thaumaturgie\n- 1er niveau (4 emplacements) : commandement, éclair de guidage, bouclier de foi\n- 2ème niveau (3 emplacements) : prise de personne, silence, arme spirituelle\n- 3ème niveau (3 emplacements) : animer les morts, dissiper la magie\n- 4ème niveau (3 emplacements) : divination, gardien de la foi\n- 5ème niveau (2 emplacements) : contagion, peste d'insectes\n- 6ème niveau (1 emplacement) : préjudice"
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "La momie peut utiliser son Dreadful Glare et effectuer une attaque avec son poing pourrissant.",
+      "actions": [
+        {
+          "action_name": "Dreadful Glare",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Rotting Fist",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Poing pourri",
+      "desc": "Attaque au corps à corps avec une arme : +9 pour toucher, portée 1,5 m, une cible. Touché : 14 (3d6 + 4) dégâts contondants plus 21 (6d6) dégâts nécrotiques. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Constitution DD 16 ou être maudite par la pourriture momie. La cible maudite ne peut pas regagner de points de vie et son maximum de points de vie diminue de 10 (3d6) toutes les 24 heures écoulées. Si la malédiction réduit le maximum de points de vie de la cible à 0, la cible meurt et son corps se transforme en poussière. La malédiction dure jusqu'à ce qu'elle soit supprimée par le sort de suppression de la malédiction ou une autre magie.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "3d6+4"
+        },
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "Necrotic",
+            "url": "/api/2014/damage-types/necrotic"
+          },
+          "damage_dice": "6d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Éblouissement épouvantable",
+      "desc": "Le seigneur momie cible une créature qu'il peut voir à moins de 18 m de lui. Si la cible peut voir le seigneur momie, elle doit réussir un jet de sauvegarde de Sagesse DD 16 contre cette magie ou devenir effrayée jusqu'à la fin du prochain tour de la momie. Si la cible échoue au jet de sauvegarde de 5 ou plus, elle est également paralysée pour la même durée. Une cible qui réussit son jet de sauvegarde est immunisée contre le regard épouvantable de toutes les momies et seigneurs momies pendant les prochaines 24 heures.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "dc_value": 16,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "Attaque",
+      "desc": "Le seigneur momie effectue une attaque avec son poing pourrissant ou utilise son Dreadful Glare."
+    },
+    {
+      "name": "Poussière aveuglante",
+      "desc": "La poussière et le sable aveuglants tourbillonnent comme par magie autour du seigneur momie. Chaque créature à moins de 1,5 m du seigneur momie doit réussir un jet de sauvegarde de Constitution DD 16 ou être aveuglée jusqu'à la fin du prochain tour de la créature."
+    },
+    {
+      "name": "Mot blasphématoire (coûte 2 actions)",
+      "desc": "Le seigneur momie prononce un mot blasphématoire. Chaque créature non-mort-vivante à moins de 3 m du seigneur momie qui peut entendre la déclaration magique doit réussir un jet de sauvegarde de Constitution DD 16 ou être étourdie jusqu'à la fin du prochain tour du seigneur momie."
+    },
+    {
+      "name": "Canaliser l’énergie négative (coûte 2 actions)",
+      "desc": "Le seigneur momie libère comme par magie l’énergie négative. Les créatures à moins de 18 m du seigneur momie, y compris celles derrière les barrières et dans les coins, ne peuvent pas regagner de points de vie avant la fin du prochain tour du seigneur momie."
+    },
+    {
+      "name": "Tourbillon de sable (coûte 2 actions)",
+      "desc": "Le seigneur momie se transforme comme par magie en un tourbillon de sable, se déplace jusqu'à 18 m et reprend sa forme normale. Lorsqu'il est sous forme de tourbillon, le seigneur momie est immunisé contre tous les dégâts et il ne peut pas être agrippé, pétrifié, mis à terre, retenu ou étourdi. Les équipements portés ou transportés par le seigneur momie restent en sa possession."
+    }
+  ],
+  "image": "/api/images/monsters/mummy-lord.png",
+  "url": "/api/2014/monsters/mummy-lord",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "reactions": [],
+  "name_en": "Mummy Lord",
+  "size_en": "Medium",
+  "type_en": "undead",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

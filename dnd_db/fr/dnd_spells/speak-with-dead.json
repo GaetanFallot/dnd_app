@@ -1,0 +1,49 @@
+{
+  "higher_level": [],
+  "index": "speak-with-dead",
+  "name": "Parler avec les morts",
+  "desc": [
+    "Vous accordez un semblant de vie et d'intelligence à un cadavre de votre choix à portée, lui permettant de répondre aux questions que vous posez. Le cadavre doit toujours avoir une bouche et ne peut pas être un mort-vivant. Le sort échoue si le cadavre a été la cible de ce sort au cours des 10 derniers jours.\nJusqu'à la fin du sort, vous pouvez poser jusqu'à cinq questions au cadavre. Le cadavre ne sait que ce qu’il a connu dans sa vie, y compris les langues qu’il connaissait. Les réponses sont généralement brèves, énigmatiques ou répétitives, et le cadavre n'est pas obligé de donner une réponse véridique si vous lui êtes hostile ou s'il vous reconnaît comme un ennemi. Ce sort ne ramène pas l'âme de la créature dans son corps, mais seulement son esprit qui l'anime. Ainsi, le cadavre ne peut pas apprendre de nouvelles informations, ne comprend rien de ce qui s’est passé depuis sa mort et ne peut pas spéculer sur les événements futurs."
+  ],
+  "range": "3 m",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Brûler de l'encens.",
+  "ritual": false,
+  "duration": "10 minutes",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/speak-with-dead",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Speak with Dead",
+  "_translated": true
+}

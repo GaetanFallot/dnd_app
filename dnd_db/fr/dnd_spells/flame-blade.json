@@ -1,0 +1,59 @@
+{
+  "index": "flame-blade",
+  "name": "Lame de flamme",
+  "desc": [
+    "Vous évoquez une lame ardente dans votre main libre. La lame est similaire en taille et en forme à un cimeterre, et elle dure toute la durée. Si vous lâchez la lame, elle disparaît, mais vous pouvez à nouveau l'évoquer par une action bonus.\nVous pouvez utiliser votre action pour lancer une attaque magique au corps à corps avec la lame enflammée. En cas de coup, la cible subit 3d6 dégâts de feu.\nLa lame enflammée projette une lumière vive dans un rayon de 10 pieds et une lumière tamisée sur 10 pieds supplémentaires."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 4 ou supérieur, les dégâts augmentent de 1d6 tous les deux niveaux d'emplacement au-dessus du niveau 2."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Feuille de sumac.",
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action bonus",
+  "level": 2,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "Fire",
+      "url": "/api/2014/damage-types/fire"
+    },
+    "damage_at_slot_level": {
+      "2": "3d6",
+      "4": "4d6",
+      "6": "5d6",
+      "8": "6d6"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/flame-blade",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Flame Blade",
+  "_translated": true
+}

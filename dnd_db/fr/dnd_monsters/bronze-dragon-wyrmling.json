@@ -1,0 +1,179 @@
+{
+  "index": "bronze-dragon-wyrmling",
+  "name": "Wyrmling dragon de bronze",
+  "size": "Moyenne",
+  "type": "dragon",
+  "alignment": "loyal bon",
+  "armor_class": 17,
+  "hit_points": 32,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8+10",
+  "speed": {
+    "walk": "9 m.",
+    "fly": "18 m.",
+    "swim": "9 m."
+  },
+  "strength": 17,
+  "dexterity": 10,
+  "constitution": 15,
+  "intelligence": 12,
+  "wisdom": 11,
+  "charisma": 15,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "3 m.",
+    "darkvision": "18 m.",
+    "passive_perception": 14
+  },
+  "languages": "Draconic",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "Amphibie",
+      "desc": "Le dragon peut respirer de l'air et de l'eau."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, portée 1,5 m, une cible. Touché : 8 (1d10 + 3) dégâts perforants.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Armes respiratoires",
+      "desc": "Le dragon utilise l'une des armes respiratoires suivantes.\nSouffle de Foudre. Le dragon exhale des éclairs sur une ligne de 40 pieds et 1,5 m de large. Chaque créature de cette ligne doit effectuer un jet de sauvegarde de Dextérité DD 12, subissant 16 (3d10) dégâts de foudre en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\nSouffle de répulsion. Le dragon exhale de l'énergie de répulsion dans un cône de 9 mètres. Chaque créature dans cette zone doit réussir un jet de sauvegarde de Force DD 12. En cas d'échec, la créature est repoussée à 9 m du dragon.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "Lightning Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "DEX",
+                  "url": "/api/2014/ability-scores/dex"
+                },
+                "dc_value": 12,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "lightning",
+                    "name": "Lightning",
+                    "url": "/api/2014/damage-types/lightning"
+                  },
+                  "damage_dice": "3d10"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "Repulsion Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "str",
+                  "name": "STR",
+                  "url": "/api/2014/ability-scores/str"
+                },
+                "dc_value": 12,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/bronze-dragon-wyrmling.png",
+  "url": "/api/2014/monsters/bronze-dragon-wyrmling",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Bronze Dragon Wyrmling",
+  "size_en": "Medium",
+  "type_en": "dragon",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,62 @@
+{
+  "higher_level": [],
+  "index": "silence",
+  "name": "Silence",
+  "desc": [
+    "Pendant toute cette durée, aucun son ne peut être créé ou traverser une sphère d'un rayon de 20 pieds centrée sur un point que vous choisissez à portée. Toute créature ou objet entièrement à l'intérieur de la sphère est immunisé contre les dégâts du tonnerre, et les créatures sont assourdies lorsqu'elles sont entièrement à l'intérieur de la sphère.\nLancer un sort comprenant une composante verbale y est impossible."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": true,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 2,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 20
+  },
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/silence",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Silence",
+  "material": "",
+  "_translated": true
+}

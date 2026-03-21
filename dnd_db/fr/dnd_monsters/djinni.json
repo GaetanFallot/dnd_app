@@ -1,0 +1,157 @@
+{
+  "index": "djinni",
+  "name": "Djinni",
+  "size": "Grande",
+  "type": "élémentaire",
+  "alignment": "chaotique bon",
+  "armor_class": 17,
+  "hit_points": 161,
+  "hit_dice": "14d10",
+  "hit_points_roll": "14d10+84",
+  "speed": {
+    "walk": "9 m.",
+    "fly": "27 m."
+  },
+  "strength": 21,
+  "dexterity": 15,
+  "constitution": 22,
+  "intelligence": 15,
+  "wisdom": 16,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning",
+    "thunder"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "36 m.",
+    "passive_perception": 13
+  },
+  "languages": "Auran",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [
+    {
+      "name": "Mort élémentaire",
+      "desc": "Si le djinn meurt, son corps se désintègre dans une brise chaude, ne laissant derrière lui que l'équipement qu'il portait ou qu'il transportait."
+    },
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité innée de lancement de sorts du djinn est le Charisme (sauvegarde contre les sorts DD 17, +9 pour toucher avec les attaques de sorts). Il peut de manière innée lancer les sorts suivants, ne nécessitant aucun composant matériel :\n\nÀ volonté : détecter le mal et le bien, détecter la magie, l'onde de tonnerre\n3/jour chacun : créer de la nourriture et de l'eau (peut créer du vin au lieu de l'eau), langues, marche dans le vent\n1/jour chacun : conjuration élémentaire (élémentaire d'air uniquement), création, forme gazeuse, invisibilité, image majeure, changement de plan"
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le djinn effectue trois attaques au cimeterre.",
+      "actions": [
+        {
+          "action_name": "Scimitar",
+          "count": "3",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Cimeterre",
+      "desc": "Attaque au corps à corps avec une arme : +9 pour toucher, portée 1,5 m, une cible. Touché : 12 (2d6 + 5) dégâts tranchants plus 3 (1d6) dégâts de foudre ou de tonnerre (au choix du djinn).",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+5"
+        },
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "lightning",
+                  "name": "Lightning",
+                  "url": "/api/2014/damage-types/lightning"
+                },
+                "damage_dice": "1d6"
+              },
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "thunder",
+                  "name": "Thunder",
+                  "url": "/api/2014/damage-types/thunder"
+                },
+                "damage_dice": "1d6"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Créer un tourbillon",
+      "desc": "Un cylindre d'air tourbillonnant d'un rayon de 1,50 mètre et d'une hauteur de 10 mètres se forme comme par magie sur un point que le djinn peut voir à moins de 36 mètres de lui. Le tourbillon dure aussi longtemps que le djinn reste concentré (comme s'il se concentrait sur un sort). Toute créature, à l'exception du djinn, qui entre dans le tourbillon doit réussir un jet de sauvegarde de Force DD 18 ou être retenue par celui-ci. Le djinn peut déplacer le tourbillon jusqu'à 18 m par une action, et les créatures retenues par le tourbillon se déplacent avec lui. Le tourbillon prend fin si le djinn le perd de vue.\nUne créature peut utiliser son action pour libérer une créature retenue par le tourbillon, y compris elle-même, en réussissant un test de Force DD 18. Si le test réussit, la créature n'est plus retenue et se déplace vers l'espace le plus proche en dehors du tourbillon.",
+      "dc": {
+        "dc_type": {
+          "index": "str",
+          "name": "STR",
+          "url": "/api/2014/ability-scores/str"
+        },
+        "dc_value": 18,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/djinni.png",
+  "url": "/api/2014/monsters/djinni",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Djinni",
+  "size_en": "Large",
+  "type_en": "elemental",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

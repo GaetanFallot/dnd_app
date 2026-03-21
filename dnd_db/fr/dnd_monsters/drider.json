@@ -1,0 +1,233 @@
+{
+  "index": "drider",
+  "name": "Pilote",
+  "size": "Grande",
+  "type": "monstruosité",
+  "alignment": "chaotique mauvais",
+  "armor_class": 19,
+  "hit_points": 123,
+  "hit_dice": "13d10",
+  "hit_points_roll": "13d10+52",
+  "speed": {
+    "walk": "30 ft.",
+    "climb": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 14,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 15
+  },
+  "languages": "Elvish, Undercommon",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [
+    {
+      "name": "Ascendance féerique",
+      "desc": "Le drider a un avantage aux jets de sauvegarde contre le charme, et la magie ne peut pas l'endormir."
+    },
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité innée de lancement de sorts du drider est la Sagesse (sauvegarde contre les sorts DD 13). Le drider peut de manière innée lancer les sorts suivants, ne nécessitant aucun composant matériel :\nÀ volonté : lumières dansantes\n1/jour chacun : obscurité, feu féerique"
+    },
+    {
+      "name": "Escalade d'araignée",
+      "desc": "Le drider peut escalader des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin d'effectuer un test de capacité."
+    },
+    {
+      "name": "Sensibilité à la lumière du soleil",
+      "desc": "Lorsqu'il est exposé au soleil, le drider est désavantagé aux jets d'attaque, ainsi qu'aux tests de Sagesse (Perception) qui reposent sur la vue."
+    },
+    {
+      "name": "Marcheur Web",
+      "desc": "Le conducteur ignore les restrictions de mouvement causées par la sangle."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "action_options",
+      "desc": "Le drider effectue trois attaques, soit avec son épée longue, soit avec son arc long. Il peut remplacer l’une de ces attaques par une attaque par morsure.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Longsword",
+              "count": 3,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Longbow",
+              "count": 3,
+              "type": "ranged"
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Longsword",
+                  "count": 2,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Longbow",
+                  "count": 2,
+                  "type": "ranged"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, allonge 1,50 m, une créature. Touché : 2 (1d4) dégâts perforants plus 9 (2d8) dégâts de poison.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d4"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          },
+          "damage_dice": "2d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Épée longue",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, atteignez 1,50 m, une cible. Touché : 7 (1d8 + 3) dégâts tranchants, ou 8 (1d10 + 3) dégâts tranchants s'il est utilisé à deux mains.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "damage_dice": "1d8+3",
+                "notes": "One handed"
+              },
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "damage_dice": "1d10+3",
+                "notes": "Two handed"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Arc",
+      "desc": "Attaque avec arme à distance : +6 pour toucher, portée 150/600 pieds, une cible. Touché : 7 (1d8 + 3) dégâts perforants plus 4 (1d8) dégâts de poison.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d8+3"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/drider.png",
+  "url": "/api/2014/monsters/drider",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Drider",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

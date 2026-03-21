@@ -1,0 +1,64 @@
+{
+  "higher_level": [],
+  "index": "incendiary-cloud",
+  "name": "Nuage incendiaire",
+  "desc": [
+    "Un nuage tourbillonnant de fumée traversé de braises chauffées à blanc apparaît dans une sphère d'un rayon de 20 pieds centrée sur un point à portée. Le nuage s'étend dans les coins et est fortement obscurci. Il dure pendant toute la durée ou jusqu'à ce qu'un vent de vitesse modérée ou supérieure (au moins 10 miles par heure) le disperse.\nLorsque le nuage apparaît, chaque créature qui s'y trouve doit effectuer un jet de sauvegarde de dextérité. Une créature subit 10d8 dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Une créature doit également effectuer ce jet de sauvegarde lorsqu'elle entre dans la zone du sort pour la première fois d'un tour ou qu'elle y termine son tour.\nLe nuage s'éloigne de 3 mètres directement de vous dans la direction que vous choisissez au début de chacun de vos tours."
+  ],
+  "range": "150 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 8,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "Fire",
+      "url": "/api/2014/damage-types/fire"
+    },
+    "damage_at_slot_level": {
+      "8": "10d8"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "DEX",
+      "url": "/api/2014/ability-scores/dex"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 20
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/incendiary-cloud",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Incendiary Cloud",
+  "material": "",
+  "_translated": true
+}

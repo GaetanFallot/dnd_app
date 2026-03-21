@@ -1,0 +1,77 @@
+{
+  "higher_level": [],
+  "index": "stinking-cloud",
+  "name": "Nuage puant",
+  "desc": [
+    "Vous créez une sphère de gaz jaune nauséabond d’un rayon de 6 mètres centrée sur un point à portée. Le nuage s'étend dans les coins et sa zone est fortement obscurcie. Le nuage reste dans l’air pendant toute la durée.\nChaque créature qui se trouve complètement dans le nuage au début de son tour doit réussir un jet de sauvegarde de constitution contre le poison. En cas d'échec, la créature passe son action ce tour-ci à avoir des haut-le-cœur et à chanceler. Les créatures qui n'ont pas besoin de respirer ou qui sont immunisées contre le poison réussissent automatiquement ce jet de sauvegarde.\nUn vent modéré (au moins 10 milles à l'heure) disperse le nuage après 4 tours. Un vent fort (au moins 20 milles à l'heure) le disperse après 1 tour."
+  ],
+  "range": "90 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un œuf pourri ou plusieurs feuilles de chou puant.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    },
+    "dc_success": "none",
+    "desc": "On a failed save, the creature spends its action that turn retching and reeling."
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 20
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    },
+    {
+      "index": "fiend",
+      "name": "Fiend",
+      "url": "/api/2014/subclasses/fiend"
+    }
+  ],
+  "url": "/api/2014/spells/stinking-cloud",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Stinking Cloud",
+  "_translated": true
+}

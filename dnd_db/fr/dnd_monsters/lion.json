@@ -1,0 +1,112 @@
+{
+  "index": "lion",
+  "name": "Lion",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 12,
+  "hit_points": 26,
+  "hit_dice": "4d10",
+  "hit_points_roll": "4d10+4",
+  "speed": {
+    "walk": "50 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "Odeur vive",
+      "desc": "Le lion a un avantage aux tests de Sagesse (Perception) qui reposent sur l'odorat."
+    },
+    {
+      "name": "Tactiques de meute",
+      "desc": "Le lion a un avantage lors d'un jet d'attaque contre une créature si au moins un des alliés du lion se trouve à moins de 1,50 mètre de la créature et que l'allié n'est pas incapable d'agir."
+    },
+    {
+      "name": "Bondir",
+      "desc": "Si le lion se déplace d'au moins 6 mètres en ligne droite vers une créature et la frappe ensuite avec une attaque de griffes au cours du même tour, cette cible doit réussir un jet de sauvegarde de Force DD 13 ou être mise à terre. Si la cible est à terre, le lion peut effectuer une attaque de morsure contre elle en guise d'action bonus."
+    },
+    {
+      "name": "Saut en cours d'exécution",
+      "desc": "Avec un départ en courant de 10 pieds, le lion peut sauter en longueur jusqu'à 25 pieds."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, atteignez 1,50 m, une cible. Touché : 7 (1d8 + 3) dégâts perforants.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, atteignez 1,50 m, une cible. Touché : 6 (1d6 + 3) dégâts tranchants.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/lion.png",
+  "url": "/api/2014/monsters/lion",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Lion",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

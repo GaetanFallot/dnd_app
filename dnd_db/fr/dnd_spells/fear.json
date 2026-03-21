@@ -1,0 +1,72 @@
+{
+  "higher_level": [],
+  "index": "fear",
+  "name": "Peur",
+  "desc": [
+    "Vous projetez une image fantasmatique des pires peurs d'une créature. Chaque créature dans un cône de 9 mètres doit réussir un jet de sauvegarde de sagesse ou laisser tomber ce qu'elle tient et devenir effrayée pendant toute la durée du sort.\nLorsqu'elle est effrayée par ce sort, une créature doit effectuer l'action Dash et s'éloigner de vous par la route disponible la plus sûre à chacun de ses tours, à moins qu'elle n'ait nulle part où se déplacer. Si la créature termine son tour dans un endroit où elle n'a pas de ligne de vue avec vous, elle peut effectuer un jet de sauvegarde de sagesse. En cas de sauvegarde réussie, le sort prend fin pour cette créature."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une plume blanche ou un cœur de poule.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "WIS",
+      "url": "/api/2014/ability-scores/wis"
+    },
+    "dc_success": "none",
+    "desc": "On fail, A creature drop whatever it is holding and become frightened for the duration."
+  },
+  "area_of_effect": {
+    "type": "cone",
+    "size": 30
+  },
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/fear",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Fear",
+  "_translated": true
+}

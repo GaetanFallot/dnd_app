@@ -129,8 +129,12 @@ async function _dbDeleteSound(s){
 // ── IndexedDB handle persistence ──
 function _idbOpen(){
   return new Promise((res, rej) => {
-    const req = indexedDB.open('dm_screen', 1);
-    req.onupgradeneeded = e => e.target.result.createObjectStore('handles');
+    const req = indexedDB.open('dm_screen', 2);
+    req.onupgradeneeded = e => {
+      const db = e.target.result;
+      if (!db.objectStoreNames.contains('handles')) db.createObjectStore('handles');
+      if (!db.objectStoreNames.contains('scenes'))  db.createObjectStore('scenes', { keyPath: 'id' });
+    };
     req.onsuccess = e => res(e.target.result);
     req.onerror = () => rej(req.error);
   });

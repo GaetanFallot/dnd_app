@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "detect-evil-and-good",
+  "name": "Détecter le mal et le bien",
+  "desc": [
+    "Pendant toute la durée, vous savez s'il y a une aberration, céleste, élémentaire, féerique, démoniaque ou mort-vivant à moins de 9 mètres de vous, ainsi que l'endroit où se trouve la créature. De même, vous savez s’il y a un lieu ou un objet à moins de 9 mètres de vous qui a été consacré ou profané par magie.\nLe sort peut pénétrer la plupart des barrières, mais il est bloqué par 1 pied de pierre, 1 pouce de métal commun, une fine feuille de plomb ou 3 pieds de bois ou de terre."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 1,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 30
+  },
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/detect-evil-and-good",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Detect Evil and Good",
+  "material": "",
+  "_translated": true
+}

@@ -1,0 +1,108 @@
+{
+  "index": "giant-octopus",
+  "name": "Poulpe géant",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 11,
+  "hit_points": 52,
+  "hit_dice": "8d10",
+  "hit_points_roll": "8d10+8",
+  "speed": {
+    "walk": "3 m.",
+    "swim": "18 m."
+  },
+  "strength": 17,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 4,
+  "wisdom": 10,
+  "charisma": 4,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 14
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "Retenir son souffle",
+      "desc": "Lorsqu'elle est hors de l'eau, la pieuvre peut retenir son souffle pendant 1 heure."
+    },
+    {
+      "name": "Camouflage sous-marin",
+      "desc": "La pieuvre a un avantage aux tests de Dextérité (Furtivité) effectués sous l'eau."
+    },
+    {
+      "name": "Respiration aquatique",
+      "desc": "La pieuvre ne peut respirer que sous l'eau."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Tentacules",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, portée 4,5 m, une cible. Touché : 10 (2d6 + 3) dégâts contondants. Si la cible est une créature, elle est agrippée (évasion DD 16). Jusqu'à la fin de cette lutte, la cible est retenue et la pieuvre ne peut pas utiliser ses tentacules sur une autre cible.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Nuage d'encre",
+      "desc": "Un nuage d'encre d'un rayon de 20 pieds s'étend tout autour de la pieuvre si elle est sous l'eau. La zone est fortement obscurcie pendant 1 minute, bien qu'un courant important puisse disperser l'encre. Après avoir libéré l'encre, la pieuvre peut utiliser l'action Dash comme action bonus.",
+      "usage": {
+        "type": "recharge after rest",
+        "rest_types": [
+          "short",
+          "long"
+        ]
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant-octopus.png",
+  "url": "/api/2014/monsters/giant-octopus",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Giant Octopus",
+  "size_en": "Large",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

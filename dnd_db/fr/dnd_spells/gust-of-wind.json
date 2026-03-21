@@ -1,0 +1,66 @@
+{
+  "higher_level": [],
+  "index": "gust-of-wind",
+  "name": "Coup de vent",
+  "desc": [
+    "Une ligne de vent fort de 60 pieds de long et 10 pieds de large souffle depuis vous dans la direction que vous choisissez pour la durée du sort. Chaque créature qui commence son tour dans la ligne doit réussir un jet de sauvegarde de force ou être poussée à 15 pieds de vous dans une direction suivant la ligne.\nToute créature dans la ligne doit dépenser 2 pieds de mouvement pour chaque 1 pied qu'elle bouge lorsqu'elle se rapproche de vous.\nLa rafale disperse le gaz ou la vapeur et éteint les bougies, les torches et les flammes similaires non protégées dans la zone. Il fait danser sauvagement les flammes protégées, comme celles des lanternes, et a 50 pour cent de chances de les éteindre.\nPar une action bonus à chacun de vos tours avant la fin du sort, vous pouvez changer la direction dans laquelle la ligne jaillit de vous."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une graine de légumineuse.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 2,
+  "dc": {
+    "dc_type": {
+      "index": "str",
+      "name": "STR",
+      "url": "/api/2014/ability-scores/str"
+    },
+    "dc_success": "none"
+  },
+  "area_of_effect": {
+    "type": "line",
+    "size": 60
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/gust-of-wind",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Gust of Wind",
+  "_translated": true
+}

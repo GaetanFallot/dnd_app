@@ -1,0 +1,48 @@
+{
+  "higher_level": [],
+  "index": "find-the-path",
+  "name": "Trouver le chemin",
+  "desc": [
+    "Ce sort vous permet de trouver l'itinéraire physique le plus court et le plus direct vers un emplacement fixe spécifique que vous connaissez sur le même plan d'existence. Si vous nommez une destination sur un autre plan d'existence, une destination qui bouge (comme une forteresse mobile) ou une destination qui n'est pas spécifique (comme « l'antre d'un dragon vert »), le sort échoue.\nPendant toute la durée, tant que vous êtes sur le même plan d'existence que la destination, vous savez à quelle distance elle se trouve et dans quelle direction elle se trouve. Pendant que vous vous y rendez, chaque fois qu'un choix de chemins vous est proposé en cours de route, vous déterminez automatiquement quel chemin est le chemin le plus court et le plus direct (mais pas nécessairement le chemin le plus sûr) vers la destination."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un ensemble d'outils divinatoires (tels que des os, des bâtons d'ivoire, des cartes, des dents ou des runes sculptées) d'une valeur de 100 po et un objet provenant de l'endroit que vous souhaitez trouver.",
+  "ritual": false,
+  "duration": "Jusqu'à 24 heures",
+  "concentration": true,
+  "casting_time": "1 minute",
+  "level": 6,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/find-the-path",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Find the Path",
+  "_translated": true
+}

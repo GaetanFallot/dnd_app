@@ -1,0 +1,37 @@
+{
+  "higher_level": [],
+  "index": "spare-the-dying",
+  "name": "Épargner les mourants",
+  "desc": [
+    "Vous touchez une créature vivante qui a 0 point de vie. La créature devient stable. Ce sort n'a aucun effet sur les morts-vivants ou les constructions."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/spare-the-dying",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Spare the Dying",
+  "material": "",
+  "_translated": true
+}

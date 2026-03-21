@@ -1,0 +1,44 @@
+{
+  "higher_level": [],
+  "index": "passwall",
+  "name": "Passwall",
+  "desc": [
+    "Un passage apparaît à un point de votre choix que vous pouvez voir sur une surface en bois, en plâtre ou en pierre (comme un mur, un plafond ou un sol) à portée, et dure toute la durée du passage. Vous choisissez les dimensions de l'ouverture : jusqu'à 5 pieds de largeur, 8 pieds de hauteur et 20 pieds de profondeur. Le passage ne crée aucune instabilité dans une structure qui l'entoure.\nLorsque l'ouverture disparaît, toutes les créatures ou objets encore dans le passage créé par le sort sont éjectés en toute sécurité vers un espace inoccupé le plus proche de la surface sur laquelle vous avez lancé le sort."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une pincée de graines de sésame.",
+  "ritual": false,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/passwall",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Passwall",
+  "_translated": true
+}

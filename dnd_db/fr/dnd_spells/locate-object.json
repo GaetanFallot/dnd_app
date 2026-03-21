@@ -1,0 +1,69 @@
+{
+  "higher_level": [],
+  "index": "locate-object",
+  "name": "Localiser un objet",
+  "desc": [
+    "Décrivez ou nommez un objet qui vous est familier. Vous ressentez la direction vers l'emplacement de l'objet, tant que cet objet se trouve à moins de 1 000 pieds de vous. Si l'objet est en mouvement, vous connaissez la direction de son mouvement.\nLe sort peut localiser un objet spécifique que vous connaissez, à condition que vous l'ayez vu de près, dans un rayon de 9 mètres, au moins une fois. Alternativement, le sort peut localiser l'objet le plus proche d'un type particulier, tel qu'un certain type de vêtement, de bijoux, de meubles, d'outils ou d'armes.\nCe sort ne peut pas localiser un objet si une épaisseur de plomb, même une fine feuille, bloque un chemin direct entre vous et l'objet."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une brindille fourchue.",
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/locate-object",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Locate Object",
+  "_translated": true
+}

@@ -1,0 +1,43 @@
+{
+  "higher_level": [],
+  "index": "phantom-steed",
+  "name": "Destrier fantôme",
+  "desc": [
+    "Une grande créature quasi réelle ressemblant à un cheval apparaît au sol dans un espace inoccupé de votre choix à portée. Vous décidez de l'apparence de la créature, mais elle est équipée d'une selle, d'un mors et d'une bride. Tout équipement créé par le sort disparaît dans un nuage de fumée s'il est transporté à plus de 3 mètres du cheval.\nPendant toute la durée du sort, vous ou une créature de votre choix pouvez monter le coursier. La créature utilise les statistiques d'un cheval de selle, sauf qu'elle a une vitesse de 100 pieds et peut parcourir 10 miles en une heure, ou 13 miles à un rythme rapide. Lorsque le sort se termine, le destrier disparaît progressivement, donnant au cavalier 1 minute pour descendre. Le sort se termine si vous utilisez une action pour le renvoyer ou si la monture subit des dégâts."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": true,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 3,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/phantom-steed",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Phantom Steed",
+  "material": "",
+  "_translated": true
+}

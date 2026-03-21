@@ -461,7 +461,8 @@
                 <div style="display:flex;gap:0.3rem;align-items:center">
                   <button class="btn" style="padding:0.15rem 0.5rem;font-size:0.6rem" onclick="DND.sortSpells('level')" title="Trier par niveau">↕ Niv.</button>
                   <button class="btn" style="padding:0.15rem 0.5rem;font-size:0.6rem" onclick="DND.sortSpells('school')" title="Trier par école">↕ École</button>
-                  <button class="panel-add-btn" onclick="DND.addSpell()" title="Ajouter sort">+</button>
+                  <button class="btn" style="padding:0.15rem 0.5rem;font-size:0.6rem;background:var(--arcane-bg,#2a1a4e);color:var(--arcane-glow,#b89fff);border-color:var(--arcane-glow,#b89fff)" onclick="SpellBrowser.open()" title="Parcourir la bibliothèque de sorts">📚 Bibliothèque</button>
+                  <button class="panel-add-btn" onclick="DND.addSpell()" title="Ajouter sort manuellement">+</button>
                 </div>
               </div>
               <div id="spell-list" class="spell-list"></div>
@@ -602,7 +603,69 @@
 
   </div><!-- end sheet-body -->
 
+  <!-- ═══ SPELL BROWSER MODAL ═══ -->
+  <div id="spell-browser-modal" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.82);align-items:stretch;justify-content:center;padding:1rem">
+    <div style="background:var(--bg-panel,#1a1410);border:1px solid var(--gold,#c8a84b);border-radius:6px;display:flex;flex-direction:column;width:100%;max-width:1100px;max-height:100%;overflow:hidden">
+
+      <!-- Header -->
+      <div style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border-bottom:1px solid var(--border-ornate,#4a3420);background:var(--bg-dark,#120e0a)">
+        <span style="font-family:'Cinzel',serif;font-size:1rem;font-weight:600;color:var(--gold,#c8a84b)">📚 Bibliothèque de Sorts</span>
+        <span style="font-size:0.7rem;color:var(--ink-faded,#7a6a55);flex:1" id="sb-count-label"></span>
+        <!-- Lang toggle -->
+        <div style="display:flex;gap:0.3rem;background:#0d0b07;border-radius:4px;padding:2px">
+          <button id="sb-lang-fr" class="sb-lang-btn active" onclick="SpellBrowser.setLang('fr')">FR</button>
+          <button id="sb-lang-en" class="sb-lang-btn" onclick="SpellBrowser.setLang('en')">EN</button>
+        </div>
+        <button onclick="SpellBrowser.close()" style="background:none;border:none;color:var(--ink-faded,#7a6a55);font-size:1.3rem;cursor:pointer;padding:0 0.3rem;line-height:1" title="Fermer">✕</button>
+      </div>
+
+      <!-- Filters bar -->
+      <div style="display:flex;flex-wrap:wrap;gap:0.4rem;padding:0.6rem 1rem;border-bottom:1px solid var(--border-ornate,#4a3420);background:#100d09">
+        <input id="sb-search" type="text" placeholder="🔍 Rechercher..." oninput="SpellBrowser.renderList()" style="flex:1;min-width:140px;background:#1e1610;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.3rem 0.6rem;border-radius:4px;font-size:0.8rem">
+        <select id="sb-filter-level" onchange="SpellBrowser.renderList()" style="background:#1e1610;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.3rem;border-radius:4px;font-size:0.75rem">
+          <option value="">Tous les niveaux</option>
+          <option value="0">Tour de magie</option>
+          <option value="1">Niveau 1</option><option value="2">Niveau 2</option>
+          <option value="3">Niveau 3</option><option value="4">Niveau 4</option>
+          <option value="5">Niveau 5</option><option value="6">Niveau 6</option>
+          <option value="7">Niveau 7</option><option value="8">Niveau 8</option>
+          <option value="9">Niveau 9</option>
+        </select>
+        <select id="sb-filter-school" onchange="SpellBrowser.renderList()" style="background:#1e1610;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.3rem;border-radius:4px;font-size:0.75rem">
+          <option value="">Toutes les écoles</option>
+        </select>
+        <select id="sb-filter-class" onchange="SpellBrowser.renderList()" style="background:#1e1610;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.3rem;border-radius:4px;font-size:0.75rem">
+          <option value="">Toutes les classes</option>
+        </select>
+        <select id="sb-filter-conc" onchange="SpellBrowser.renderList()" style="background:#1e1610;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.3rem;border-radius:4px;font-size:0.75rem">
+          <option value="">Conc. : tous</option>
+          <option value="true">⟳ Concentration</option>
+          <option value="false">Sans concentration</option>
+        </select>
+        <select id="sb-filter-ritual" onchange="SpellBrowser.renderList()" style="background:#1e1610;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.3rem;border-radius:4px;font-size:0.75rem">
+          <option value="">Rituel : tous</option>
+          <option value="true">℟ Rituel</option>
+          <option value="false">Non rituel</option>
+        </select>
+      </div>
+
+      <!-- Body: list + preview -->
+      <div style="display:flex;flex:1;overflow:hidden">
+        <!-- List -->
+        <div id="sb-list" style="flex:1;overflow-y:auto;padding:0.5rem 0;min-width:0"></div>
+        <!-- Preview -->
+        <div id="sb-preview" style="width:340px;border-left:1px solid var(--border-ornate,#4a3420);overflow-y:auto;padding:1rem;background:#0e0b08;font-size:0.82rem;color:var(--ink-light,#d8c8a8)">
+          <div style="color:var(--ink-faded,#7a6a55);font-style:italic;font-size:0.8rem;text-align:center;padding-top:3rem">Cliquez sur un sort pour voir les détails.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.3/Sortable.min.js"></script>
+  <!-- D&D 5e data bundles (generated by scripts/) -->
+  <script src="../dnd_db/bundle_spells_en.js" onerror="console.info('Spell bundle EN not found – run scripts/fetch_all.js')"></script>
+  <script src="../dnd_db/bundle_spells_fr.js" onerror="console.info('Spell bundle FR not found – run scripts/translate_fr.js')"></script>
+  <script src="shared/spell_browser.js"></script>
   <script src="shared/app.js"></script>
   <script>DND.init();</script>
 </body>

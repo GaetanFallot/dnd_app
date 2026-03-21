@@ -1,0 +1,277 @@
+{
+  "index": "adult-brass-dragon",
+  "name": "Dragon de laiton adulte",
+  "size": "Très grande",
+  "type": "dragon",
+  "alignment": "chaotique bon",
+  "armor_class": 18,
+  "hit_points": 172,
+  "hit_dice": "15d12",
+  "hit_points_roll": "15d12+75",
+  "speed": {
+    "walk": "40 ft.",
+    "burrow": "40 ft.",
+    "fly": "80 ft."
+  },
+  "strength": 23,
+  "dexterity": 10,
+  "constitution": 21,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 17,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill-history",
+        "name": "Skill: History",
+        "url": "/api/2014/proficiencies/skill-history"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill-persuasion",
+        "name": "Skill: Persuasion",
+        "url": "/api/2014/proficiencies/skill-persuasion"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "60 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 21
+  },
+  "languages": "Common, Draconic",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [
+    {
+      "name": "Résistance légendaire",
+      "desc": "Si le dragon échoue à un jet de sauvegarde, il peut choisir de réussir à la place."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le dragon peut utiliser sa Présence Effroyable. Il effectue alors trois attaques : une avec sa morsure et deux avec ses griffes.",
+      "actions": [
+        {
+          "action_name": "Frightful Presence",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +11 pour toucher, portée 10 pieds, une cible. Touché : 17 (2d10 + 6) dégâts perforants.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +11 pour toucher, atteignez 1,50 m, une cible. Touché : 13 (2d6 + 6) dégâts tranchants.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Queue",
+      "desc": "Attaque au corps à corps avec une arme : +11 pour toucher, atteignez 15 pieds, une cible. Touché : 15 (2d8 + 6) dégâts contondants.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Présence effrayante",
+      "desc": "Chaque créature au choix du dragon qui se trouve à moins de 120 pieds du dragon et qui en a conscience doit réussir un jet de sauvegarde de Sagesse DD 16 ou devenir effrayée pendant 1 minute. Une créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite. Si le jet de sauvegarde d'une créature réussit ou si l'effet prend fin pour elle, la créature est immunisée contre la présence effrayante du dragon pendant les prochaines 24 heures.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "dc_value": 16,
+        "success_type": "none"
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Armes respiratoires",
+      "desc": "Le dragon utilise l'une des armes respiratoires suivantes.\nSouffle de Feu. Le dragon exhale du feu sur une ligne de 60 pieds et 5 pieds de large. Chaque créature de cette ligne doit effectuer un jet de sauvegarde de Dextérité DD 18, subissant 45 (13d6) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\nSouffle du sommeil. Le dragon expire des gaz somnifères dans un cône de 60 pieds. Chaque créature dans cette zone doit réussir un jet de sauvegarde de Constitution DD 18 ou tomber inconsciente pendant 10 minutes. Cet effet prend fin pour une créature si celle-ci subit des dégâts ou si quelqu'un utilise une action pour la réveiller.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "Fire Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "DEX",
+                  "url": "/api/2014/ability-scores/dex"
+                },
+                "dc_value": 18,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "fire",
+                    "name": "Fire",
+                    "url": "/api/2014/damage-types/fire"
+                  },
+                  "damage_dice": "13d6"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "Sleep Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "con",
+                  "name": "CON",
+                  "url": "/api/2014/ability-scores/con"
+                },
+                "dc_value": 18,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    }
+  ],
+  "legendary_actions": [
+    {
+      "name": "Détecter",
+      "desc": "Le dragon effectue un test de Sagesse (Perception)."
+    },
+    {
+      "name": "Attaque de queue",
+      "desc": "Le dragon effectue une attaque de queue."
+    },
+    {
+      "name": "Attaque d'aile (coûte 2 actions)",
+      "desc": "Le dragon bat des ailes. Chaque créature située à moins de 3 mètres du dragon doit réussir un jet de sauvegarde de Dextérité DD 19 ou subir 13 (2d6 + 6) dégâts contondants et être jetée à terre. Le dragon peut alors voler jusqu'à la moitié de sa vitesse de vol."
+    }
+  ],
+  "image": "/api/images/monsters/adult-brass-dragon.png",
+  "url": "/api/2014/monsters/adult-brass-dragon",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "reactions": [],
+  "name_en": "Adult Brass Dragon",
+  "type_en": "dragon",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

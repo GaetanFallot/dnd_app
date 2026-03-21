@@ -1,0 +1,37 @@
+{
+  "higher_level": [],
+  "index": "animal-shapes",
+  "name": "Formes d'animaux",
+  "desc": [
+    "Votre magie transforme les autres en bêtes. Choisissez n'importe quel nombre de créatures volontaires que vous pouvez voir à portée. Vous transformez chaque cible sous la forme d'une bête de taille grande ou inférieure avec un indice de défi de 4 ou moins. Aux tours suivants, vous pouvez utiliser votre action pour transformer les créatures affectées en de nouvelles formes.\nLa transformation dure pendant toute la durée de chaque cible, ou jusqu'à ce que la cible tombe à 0 point de vie ou meure. Vous pouvez choisir un formulaire différent pour chaque cible. Les statistiques de jeu d'une cible sont remplacées par les statistiques de la bête choisie, bien que la cible conserve son alignement et ses scores d'Intelligence, de Sagesse et de Charisme. La cible prend les points de vie de sa nouvelle forme, et lorsqu'elle revient à sa forme normale, elle retrouve le nombre de points de vie qu'elle avait avant sa transformation. S'il revient à la suite d'une chute à 0 point de vie, tout dommage excédentaire reprend sa forme normale. Tant que les dégâts excessifs ne réduisent pas la forme normale de la créature à 0 point de vie, elle ne perd pas connaissance. La créature est limitée dans les actions qu'elle peut effectuer par la nature de sa nouvelle forme, et elle ne peut ni parler ni lancer de sorts.\nL'équipement de la cible se fond dans la nouvelle forme. La cible ne peut activer, utiliser ou bénéficier d'aucun de ses équipements."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 24 heures",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 8,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/animal-shapes",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Animal Shapes",
+  "material": "",
+  "_translated": true
+}

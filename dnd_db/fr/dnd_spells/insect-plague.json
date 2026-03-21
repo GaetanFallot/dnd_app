@@ -1,0 +1,82 @@
+{
+  "index": "insect-plague",
+  "name": "Peste d'insectes",
+  "desc": [
+    "Des criquets grouillants et mordants remplissent une sphère de 6 mètres de rayon centrée sur un point que vous choisissez à portée. La sphère s'étend dans les coins. La sphère reste pendant toute la durée et sa zone est légèrement obscurcie. La zone de la sphère est un terrain difficile.\nLorsque la zone apparaît, chaque créature qui s'y trouve doit effectuer un jet de sauvegarde de constitution. Une créature subit 4d10 dégâts perforants en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Une créature doit également effectuer ce jet de sauvegarde lorsqu'elle entre dans la zone du sort pour la première fois d'un tour ou qu'elle y termine son tour."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 6 ou supérieur, les dégâts augmentent de 1d10 pour chaque niveau d'emplacement supérieur au 5."
+  ],
+  "range": "300 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Quelques grains de sucre, quelques grains de céréales et un peu de graisse.",
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 5,
+  "damage": {
+    "damage_type": {
+      "index": "piercing",
+      "name": "Piercing",
+      "url": "/api/2014/damage-types/piercing"
+    },
+    "damage_at_slot_level": {
+      "5": "4d10",
+      "6": "5d10",
+      "7": "6d10",
+      "8": "7d10",
+      "9": "8d10"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 20
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/insect-plague",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Insect Plague",
+  "_translated": true
+}

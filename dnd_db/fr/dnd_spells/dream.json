@@ -1,0 +1,73 @@
+{
+  "higher_level": [],
+  "index": "dream",
+  "name": "Rêve",
+  "desc": [
+    "Ce sort façonne les rêves d'une créature. Choisissez une créature que vous connaissez comme cible de ce sort. La cible doit être sur le même plan d'existence que vous. Les créatures qui ne dorment pas, comme les elfes, ne peuvent pas être contactées par ce sort. Vous, ou une créature volontaire que vous touchez, entrez dans un état de transe, agissant comme un messager.\nEn transe, le messager est conscient de son environnement, mais ne peut pas agir ni bouger.\nSi la cible est endormie, le messager apparaît dans les rêves de la cible et peut converser avec la cible tant qu'elle reste endormie, pendant toute la durée du sort. Le messager peut également façonner l’environnement du rêve, créant des paysages, des objets et d’autres images. Le messager peut sortir de la transe à tout moment, mettant ainsi fin prématurément à l'effet du sort. La cible se souvient parfaitement du rêve au réveil. Si la cible est éveillée lorsque vous lancez le sort, le messager le sait et peut soit mettre fin à la transe (et au sort), soit attendre que la cible s'endorme, auquel cas le messager apparaît dans les rêves de la cible.\nVous pouvez faire paraître le messager monstrueux et terrifiant à la cible. Si vous le faites, le messager peut délivrer un message de dix mots maximum et la cible doit alors effectuer un jet de sauvegarde de sagesse. En cas d'échec, les échos de la monstruosité fantasmatique engendrent un cauchemar qui dure toute la durée du sommeil de la cible et l'empêche de tirer le moindre bénéfice de ce repos. De plus, lorsque la cible se réveille, elle subit 3d6 dégâts psychiques.\nSi vous avez une partie du corps, une mèche de cheveux, un ongle coupé ou une partie similaire du corps de la cible, la cible effectue son jet de sauvegarde avec un désavantage."
+  ],
+  "range": "Spécial",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une poignée de sable, une noisette d’encre et une plume arrachée à un oiseau endormi.",
+  "ritual": false,
+  "duration": "8 heures",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 5,
+  "damage": {
+    "damage_type": {
+      "index": "psychic",
+      "name": "Psychic",
+      "url": "/api/2014/damage-types/psychic"
+    },
+    "damage_at_slot_level": {
+      "5": "3d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "WIS",
+      "url": "/api/2014/ability-scores/wis"
+    },
+    "dc_success": "none",
+    "desc": "On a failed save, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target's sleep and prevents the target from gaining any benefit from that rest."
+  },
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/dream",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Dream",
+  "_translated": true
+}

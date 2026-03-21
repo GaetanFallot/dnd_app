@@ -1,0 +1,59 @@
+{
+  "higher_level": [],
+  "index": "gaseous-form",
+  "name": "Forme gazeuse",
+  "desc": [
+    "Vous transformez une créature volontaire que vous touchez, ainsi que tout ce qu'elle porte, en un nuage brumeux pour la durée du sort. Le sort se termine si la créature tombe à 0 point de vie. Une créature incorporelle n'est pas affectée.\nSous cette forme, la seule méthode de déplacement de la cible est une vitesse de vol de 10 pieds. La cible peut entrer et occuper l'espace d'une autre créature. La cible a une résistance aux dégâts non magiques et un avantage aux jets de sauvegarde de Force, de Dextérité et de Constitution. La cible peut traverser de petits trous, des ouvertures étroites et même de simples fissures, même si elle traite les liquides comme s'il s'agissait de surfaces solides. La cible ne peut pas tomber et reste en vol stationnaire même lorsqu'elle est étourdie ou frappée d'incapacité.\nSous la forme d'un nuage brumeux, la cible ne peut ni parler ni manipuler les objets, et les objets qu'elle transportait ou tenait ne peuvent pas être lâchés, utilisés ou avec lesquels interagir de quelque manière que ce soit. La cible ne peut ni attaquer ni lancer de sorts."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un peu de gaze et un filet de fumée.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/gaseous-form",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Gaseous Form",
+  "_translated": true
+}

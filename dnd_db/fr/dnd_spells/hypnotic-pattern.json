@@ -1,0 +1,67 @@
+{
+  "higher_level": [],
+  "index": "hypnotic-pattern",
+  "name": "Modèle hypnotique",
+  "desc": [
+    "Vous créez un motif tordu de couleurs qui se faufile dans l'air à l'intérieur d'un cube de 9 mètres à portée. Le motif apparaît un instant et disparaît. Chaque créature dans la zone qui voit le motif doit effectuer un jet de sauvegarde de sagesse. En cas d'échec, la créature reste charmée pour toute la durée du sort. Tant qu'elle est charmée par ce sort, la créature est incapable d'agir et a une vitesse de 0.\nLe sort prend fin pour une créature affectée si elle subit des dégâts ou si quelqu'un d'autre utilise une action pour sortir la créature de sa stupeur."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "S",
+    "M"
+  ],
+  "material": "Un bâton d'encens lumineux ou une fiole de cristal remplie d'un matériau phosphorescent.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "WIS",
+      "url": "/api/2014/ability-scores/wis"
+    },
+    "dc_success": "none",
+    "desc": "On a failed save, the creature becomes charmed for the duration."
+  },
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/hypnotic-pattern",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Hypnotic Pattern",
+  "_translated": true
+}

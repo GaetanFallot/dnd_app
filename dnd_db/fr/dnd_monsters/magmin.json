@@ -1,0 +1,76 @@
+{
+  "index": "magmin",
+  "name": "Magmine",
+  "size": "Petite",
+  "type": "élémentaire",
+  "alignment": "chaotique neutre",
+  "armor_class": 14,
+  "hit_points": 9,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6+2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 7,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 8,
+  "wisdom": 11,
+  "charisma": 10,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "Ignan",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "Explosion de la mort",
+      "desc": "Lorsque le magmin meurt, il explose dans une explosion de feu et de magma. Chaque créature située à moins de 3 mètres de celle-ci doit effectuer un jet de sauvegarde de Dextérité DD 11, subissant 7 (2d6) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Les objets inflammables qui ne sont pas portés ou transportés dans cette zone sont enflammés."
+    },
+    {
+      "name": "Éclairage allumé",
+      "desc": "Par une action bonus, le magmin peut s'enflammer ou éteindre ses flammes. Lorsqu'il est en feu, le magmin émet une lumière vive dans un rayon de 10 pieds et une lumière tamisée sur 10 pieds supplémentaires."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Touche",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, atteignez 1,50 m, une cible. Touché : 7 (2d6) dégâts de feu. Si la cible est une créature ou un objet inflammable, elle s'enflamme. Jusqu'à ce qu'une cible entreprenne une action pour éteindre le feu, la cible subit 3 (1d6) dégâts de feu à la fin de chacun de ses tours.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/magmin.png",
+  "url": "/api/2014/monsters/magmin",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Magmin",
+  "type_en": "elemental",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,43 @@
+{
+  "higher_level": [],
+  "index": "awaken",
+  "name": "Éveiller",
+  "desc": [
+    "Après avoir passé le temps d'incantation à tracer des chemins magiques dans une pierre précieuse, vous touchez une bête ou une plante de taille énorme ou plus petite. La cible doit avoir soit aucun score d'Intelligence, soit une Intelligence de 3 ou moins. La cible gagne une Intelligence de 10. La cible gagne également la capacité de parler une langue que vous connaissez. Si la cible est une plante, elle acquiert la capacité de bouger ses membres, ses racines, ses vignes, ses lianes, etc., et elle acquiert des sens similaires à ceux d'un humain. Votre MJ choisit les statistiques appropriées à la plante éveillée, comme les statistiques de l'arbuste éveillé ou de l'arbre éveillé.\nLa bête ou la plante éveillée est charmée par vous pendant 30 jours ou jusqu'à ce que vous ou vos compagnons lui fassiez quelque chose de nuisible. Lorsque l'état charmé prend fin, la créature éveillée choisit de rester amicale avec vous, en fonction de la façon dont vous l'avez traitée pendant qu'elle était charmée."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une agate valant au moins 1 000 po, que le sort consomme.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "8 heures",
+  "level": 5,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/awaken",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Awaken",
+  "_translated": true
+}

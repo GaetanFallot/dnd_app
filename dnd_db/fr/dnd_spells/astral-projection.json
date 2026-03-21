@@ -1,0 +1,48 @@
+{
+  "higher_level": [],
+  "index": "astral-projection",
+  "name": "Projection astrale",
+  "desc": [
+    "Vous et jusqu'à huit créatures volontaires à portée projetez vos corps astraux dans le plan astral (le sort échoue et le lancement est inutile si vous êtes déjà sur ce plan). Le corps matériel que vous laissez derrière vous est inconscient et dans un état d’animation suspendue ; il n'a pas besoin de nourriture ni d'air et ne vieillit pas.\nVotre corps astral ressemble à votre forme mortelle dans presque tous les sens, reproduisant vos statistiques de jeu et vos possessions. La principale différence est l'ajout d'un cordon argenté qui s'étend entre vos omoplates et traîne derrière vous, devenant invisible après 30 cm. Ce cordon est votre lien avec votre corps matériel. Tant que l’attache reste intacte, vous pouvez retrouver le chemin du retour. Si le cordon est coupé – quelque chose qui ne peut se produire que lorsqu’un effet indique spécifiquement que c’est le cas – votre âme et votre corps sont séparés, vous tuant instantanément.\nVotre forme astrale peut voyager librement à travers le plan astral et y passer par des portails menant à n’importe quel autre plan. Si vous entrez dans un nouveau plan ou retournez dans le plan dans lequel vous vous trouviez lorsque vous avez lancé ce sort, votre corps et vos biens sont transportés le long du cordon d'argent, vous permettant de réintégrer votre corps lorsque vous entrez dans le nouveau plan. Votre forme astrale est une incarnation distincte. Tout dommage ou autre effet qui s’y applique n’a aucun effet sur votre corps physique et ne persiste pas lorsque vous y revenez.\nLe sort prend fin pour vous et vos compagnons lorsque vous utilisez votre action pour le dissiper. Lorsque le sort prend fin, la créature affectée retourne dans son corps physique et se réveille.\nLe sort peut également se terminer plus tôt pour vous ou l'un de vos compagnons. Un sort de dissipation de la magie réussi utilisé contre un corps astral ou physique met fin au sort de cette créature. Si le corps d'origine d'une créature ou sa forme astrale tombe à 0 point de vie, le sort prend fin pour cette créature. Si le sort se termine et que le cordon d'argent est intact, le cordon ramène la forme astrale de la créature vers son corps, mettant ainsi fin à son état d'animation suspendue.\nSi vous retournez dans votre corps prématurément, vos compagnons restent dans leur forme astrale et doivent retrouver leur propre chemin vers leur corps, généralement en tombant à 0 point de vie."
+  ],
+  "range": "10 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Pour chaque créature que vous affectez avec ce sort, vous devez fournir une jacinthe d'une valeur d'au moins 1 000 po et une barre d'argent richement sculptée d'une valeur d'au moins 100 po, que le sort consomme.",
+  "ritual": false,
+  "duration": "Spécial",
+  "concentration": false,
+  "casting_time": "1 heure",
+  "level": 9,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/astral-projection",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Astral Projection",
+  "_translated": true
+}

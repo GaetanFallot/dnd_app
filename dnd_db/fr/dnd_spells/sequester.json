@@ -1,0 +1,38 @@
+{
+  "higher_level": [],
+  "index": "sequester",
+  "name": "Séquestrer",
+  "desc": [
+    "Grâce à ce sort, une créature volontaire ou un objet peut être caché, à l'abri de toute détection pendant toute la durée du sort. Lorsque vous lancez le sort et touchez la cible, celle-ci devient invisible et ne peut pas être ciblée par des sorts de divination ni perçue par les capteurs de vision créés par les sorts de divination.\nSi la cible est une créature, elle tombe dans un état d'animation suspendue. Le temps cesse de s'écouler pour lui et il ne vieillit pas.\nVous pouvez définir une condition pour que le sort se termine plus tôt. La condition peut être celle de votre choix, mais elle doit se produire ou être visible à moins de 1,6 km de la cible. Les exemples incluent « après 1 000 ans » ou « quand la tarrasque se réveille ». Ce sort se termine également si la cible subit des dégâts."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une poudre composée de poussière de diamant, d'émeraude, de rubis et de saphir d'une valeur d'au moins 5 000 po, que le sort consomme.",
+  "ritual": false,
+  "duration": "Jusqu'à ce qu'il soit dissipé",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/sequester",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Sequester",
+  "_translated": true
+}

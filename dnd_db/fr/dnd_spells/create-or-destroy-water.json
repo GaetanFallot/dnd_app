@@ -1,0 +1,55 @@
+{
+  "index": "create-or-destroy-water",
+  "name": "Créer ou détruire de l'eau",
+  "desc": [
+    "Soit vous créez, soit vous détruisez de l’eau.\n***Créer de l'eau.*** Vous créez jusqu'à 10 gallons d'eau propre à portée dans un récipient ouvert. Alternativement, l’eau tombe sous forme de pluie dans un cube de 30 pieds à portée.\n***Détruisez l'eau.*** Vous détruisez jusqu'à 10 gallons d'eau dans un récipient ouvert à portée. Alternativement, vous détruisez le brouillard dans un cube de 9 mètres à portée."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 2 ou supérieur, vous créez ou détruisez 10 gallons d'eau supplémentaires, ou la taille du cube augmente de 1,50 mètre, pour chaque niveau d'emplacement supérieur au 1er."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une goutte d'eau si vous créez de l'eau, ou quelques grains de sable si vous la détruisez.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 30
+  },
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/create-or-destroy-water",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Create or Destroy Water",
+  "_translated": true
+}

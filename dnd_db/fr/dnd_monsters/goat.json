@@ -1,0 +1,71 @@
+{
+  "index": "goat",
+  "name": "Chèvre",
+  "size": "Moyenne",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 10,
+  "hit_points": 4,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 12,
+  "dexterity": 10,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "Charge",
+      "desc": "Si la chèvre se déplace d'au moins 6 mètres en ligne droite vers une cible et la frappe ensuite avec une attaque de bélier au cours du même tour, la cible subit 2 (1d4) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force DD 10 ou être mise à terre."
+    },
+    {
+      "name": "Au pied sûr",
+      "desc": "La chèvre a un avantage aux jets de sauvegarde de Force et de Dextérité contre les effets qui la mettraient à terre."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bélier",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, atteignez 1,50 m, une cible. Touché : 3 (1d4 + 1) dégâts contondants.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d4+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/goat.png",
+  "url": "/api/2014/monsters/goat",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Goat",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

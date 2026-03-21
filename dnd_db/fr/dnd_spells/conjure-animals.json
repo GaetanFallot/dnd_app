@@ -1,0 +1,50 @@
+{
+  "index": "conjure-animals",
+  "name": "Conjurer des animaux",
+  "desc": [
+    "Vous invoquez des esprits féeriques qui prennent la forme de bêtes et apparaissent dans des espaces inoccupés que vous pouvez voir à portée. Choisissez l'une des options suivantes pour ce qui apparaît :\n- Une bête de défi de niveau 2 ou inférieur\n- Deux bêtes de défi de niveau 1 ou inférieur\n- Quatre bêtes de défi classées 1/2 ou moins\n- Huit bêtes de défi classées 1/4 ou moins\n- Chaque bête est également considérée comme fée, et elle disparaît lorsqu'elle tombe à 0 point de vie ou lorsque le sort se termine.\nLes créatures invoquées sont amicales envers vous et vos compagnons. Lancez l'initiative pour les créatures invoquées en tant que groupe, qui a ses propres tours. Ils obéissent à tous les ordres verbaux que vous leur donnez (aucune action requise de votre part). Si vous ne leur donnez aucun ordre, ils se défendent contre les créatures hostiles, mais ne prennent aucune mesure.\nLe MJ dispose des statistiques des créatures."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant certains emplacements de sorts de niveau supérieur, vous choisissez l'une des options d'invocation ci-dessus, et davantage de créatures apparaissent : deux fois plus avec un emplacement de niveau 5, trois fois plus avec un emplacement de niveau 7."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/conjure-animals",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Conjure Animals",
+  "material": "",
+  "_translated": true
+}

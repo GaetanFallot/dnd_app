@@ -1,0 +1,40 @@
+{
+  "higher_level": [],
+  "index": "mass-heal",
+  "name": "Guérison de masse",
+  "desc": [
+    "Un flot d’énergie curative circule de vous vers les créatures blessées autour de vous. Vous restaurez jusqu'à 700 points de vie, répartis à votre guise entre n'importe quel nombre de créatures que vous pouvez voir à portée. Les créatures soignées par ce sort sont également guéries de toutes les maladies et de tout effet les rendant aveuglées ou assourdies. Ce sort n'a aucun effet sur les morts-vivants ou les constructions."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 9,
+  "heal_at_slot_level": {
+    "9": "700"
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/mass-heal",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Mass Heal",
+  "material": "",
+  "_translated": true
+}

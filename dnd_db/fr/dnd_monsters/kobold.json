@@ -1,0 +1,90 @@
+{
+  "index": "kobold",
+  "name": "Kobold",
+  "size": "Petite",
+  "type": "humanoïde",
+  "subtype": "kobold",
+  "alignment": "loyal mauvais",
+  "armor_class": 12,
+  "hit_points": 5,
+  "hit_dice": "2d6",
+  "hit_points_roll": "2d6-2",
+  "speed": {
+    "walk": "9 m."
+  },
+  "strength": 7,
+  "dexterity": 15,
+  "constitution": 9,
+  "intelligence": 8,
+  "wisdom": 7,
+  "charisma": 8,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 8
+  },
+  "languages": "Common, Draconic",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "Sensibilité à la lumière du soleil",
+      "desc": "Lorsqu'il est exposé au soleil, le kobold est désavantagé aux jets d'attaque, ainsi qu'aux tests de Sagesse (Perception) qui reposent sur la vue."
+    },
+    {
+      "name": "Tactiques de meute",
+      "desc": "Le kobold a un avantage aux jets d'attaque contre une créature si au moins un de ses alliés se trouve à moins de 1,5 m. de la créature et l'allié n'est pas incapable d'agir."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Poignard",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, portée 1,5 m, une cible. Touché : 4 (1d4 + 2) dégâts perforants.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Fronde",
+      "desc": "Attaque avec arme à distance : +4 pour toucher, portée 30/36 m., une cible. Touché : 4 (1d4 + 2) dégâts contondants.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/kobold.png",
+  "url": "/api/2014/monsters/kobold",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Kobold",
+  "size_en": "Small",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

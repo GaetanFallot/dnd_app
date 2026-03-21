@@ -1,0 +1,41 @@
+{
+  "higher_level": [],
+  "index": "demiplane",
+  "name": "Demi-plan",
+  "desc": [
+    "Vous créez une porte sombre sur une surface solide et plane que vous pouvez voir à portée. La porte est suffisamment grande pour permettre aux créatures de taille M de passer sans entrave. Une fois ouverte, la porte mène à un demi-plan qui semble être une pièce vide de 30 pieds dans chaque dimension, faite de bois ou de pierre. Lorsque le sort se termine, la porte disparaît et toutes les créatures ou objets à l'intérieur du demi-plan y restent piégés, car la porte disparaît également de l'autre côté.\nChaque fois que vous lancez ce sort, vous pouvez créer un nouveau demi-plan ou connecter la porte sombre à un demi-plan que vous avez créé lors d'un lancement précédent de ce sort. De plus, si vous connaissez la nature et le contenu d'un demi-plan créé par le lancement de ce sort par une autre créature, vous pouvez à la place connecter la porte de l'ombre à son demi-plan."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 8,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/demiplane",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Demiplane",
+  "material": "",
+  "_translated": true
+}

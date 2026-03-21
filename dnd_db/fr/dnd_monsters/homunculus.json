@@ -1,0 +1,83 @@
+{
+  "index": "homunculus",
+  "name": "Homunculus",
+  "size": "Très petite",
+  "type": "artificiel",
+  "alignment": "neutre",
+  "armor_class": 13,
+  "hit_points": 5,
+  "hit_dice": "2d4",
+  "hit_points_roll": "2d4",
+  "speed": {
+    "walk": "6 m.",
+    "fly": "12 m."
+  },
+  "strength": 4,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 7,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 10
+  },
+  "languages": "understands the languages of its creator but can't speak",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "Lien télépathique",
+      "desc": "Bien que l'homonculus soit sur le même plan d'existence que son maître, il peut transmettre par magie ce qu'il ressent à son maître, et les deux peuvent communiquer par télépathie."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,5 m, une créature. Touché : 1 dégât perçant, et la cible doit réussir un jet de sauvegarde de Constitution DD 10 ou être empoisonnée pendant 1 minute. Si le jet de sauvegarde échoue de 5 ou plus, la cible est empoisonnée pendant 5 (1d10) minutes et perd connaissance lorsqu'elle est ainsi empoisonnée.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/homunculus.png",
+  "url": "/api/2014/monsters/homunculus",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Homunculus",
+  "size_en": "Tiny",
+  "type_en": "construct",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

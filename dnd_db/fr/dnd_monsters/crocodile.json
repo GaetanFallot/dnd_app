@@ -1,0 +1,78 @@
+{
+  "index": "crocodile",
+  "name": "Crocodile",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 12,
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10+3",
+  "speed": {
+    "walk": "6 m.",
+    "swim": "6 m."
+  },
+  "strength": 15,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 5,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "Retenir son souffle",
+      "desc": "Le crocodile peut retenir sa respiration pendant 15 minutes."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,5 m, une créature. Touché : 7 (1d10 + 2) dégâts perforants et la cible est agrippée (évasion DD 12). Jusqu'à la fin de cette lutte, la cible est retenue et le crocodile ne peut pas mordre une autre cible.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/crocodile.png",
+  "url": "/api/2014/monsters/crocodile",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Crocodile",
+  "size_en": "Large",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

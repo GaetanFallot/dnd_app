@@ -1,0 +1,51 @@
+{
+  "higher_level": [],
+  "index": "power-word-kill",
+  "name": "Tuer le mot de pouvoir",
+  "desc": [
+    "Vous prononcez un mot de pouvoir qui peut contraindre une créature que vous pouvez voir à portée de mourir instantanément. Si la créature que vous choisissez a 100 points de vie ou moins, elle meurt. Sinon, le sort n'a aucun effet."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 9,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/power-word-kill",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Power Word Kill",
+  "material": "",
+  "_translated": true
+}

@@ -1,0 +1,63 @@
+{
+  "higher_level": [],
+  "index": "sleet-storm",
+  "name": "Tempête de neige fondue",
+  "desc": [
+    "Jusqu'à la fin du sort, la pluie verglaçante et la neige fondue tombent dans un cylindre de 20 pieds de haut avec un rayon de 40 pieds centré sur un point que vous choisissez à portée. La zone est fortement obscurcie et les flammes exposées dans la zone sont éteintes.\nLe sol de la zone est recouvert de glace glissante, ce qui rend le terrain difficile. Lorsqu'une créature entre pour la première fois dans la zone du sort lors d'un tour ou y commence son tour, elle doit effectuer un jet de sauvegarde de dextérité. En cas d'échec de sauvegarde, il tombe à terre.\nSi une créature se concentre dans la zone du sort, elle doit réussir un jet de sauvegarde de constitution contre votre DD de sauvegarde de sort ou perdre sa concentration."
+  ],
+  "range": "150 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une pincée de poussière et quelques gouttes d'eau.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "area_of_effect": {
+    "type": "cylinder",
+    "size": 40
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/sleet-storm",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Sleet Storm",
+  "_translated": true
+}

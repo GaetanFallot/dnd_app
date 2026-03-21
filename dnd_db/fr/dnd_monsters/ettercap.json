@@ -1,0 +1,157 @@
+{
+  "index": "ettercap",
+  "name": "Ettercap",
+  "size": "Moyenne",
+  "type": "monstruosité",
+  "alignment": "neutre mauvais",
+  "armor_class": 13,
+  "hit_points": 44,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8+8",
+  "speed": {
+    "walk": "9 m.",
+    "climb": "9 m."
+  },
+  "strength": 14,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 7,
+  "wisdom": 12,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-survival",
+        "name": "Skill: Survival",
+        "url": "/api/2014/proficiencies/skill-survival"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "Escalade d'araignée",
+      "desc": "L'ettercap peut escalader des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin de faire un test de capacité."
+    },
+    {
+      "name": "Sens du Web",
+      "desc": "Lorsqu'il est en contact avec une toile, l'ettercap connaît l'emplacement exact de toute autre créature en contact avec la même toile."
+    },
+    {
+      "name": "Marcheur Web",
+      "desc": "L'ettercap ignore les restrictions de mouvement causées par la sangle."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "L'ettercap effectue deux attaques : une avec sa morsure et une avec ses griffes.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claws",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,5 m, une créature. Touché : 6 (1d8 + 2) dégâts perforants plus 4 (1d8) dégâts de poison. La cible doit réussir un jet de sauvegarde de Constitution DD 11 ou être empoisonnée pendant 1 minute. La créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d6+2"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          },
+          "damage_dice": "1d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffes",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, portée 1,5 m, une cible. Touché : 7 (2d4 + 2) dégâts tranchants.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Web",
+      "desc": "Attaque avec arme à distance : +4 pour toucher, portée 30/18 m., une créature de grande taille ou plus petite. Touché : La créature est retenue par une sangle. Par une action, la créature immobilisée peut effectuer un test de Force DD 11 et s'échapper de la sangle en cas de réussite. L'effet prend fin si la sangle est détruite. La sangle a une CA 10, 5 points de vie, est vulnérable aux dégâts de feu et immunisée contre les dégâts contondants.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "attack_bonus": 4,
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/ettercap.png",
+  "url": "/api/2014/monsters/ettercap",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Ettercap",
+  "size_en": "Medium",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

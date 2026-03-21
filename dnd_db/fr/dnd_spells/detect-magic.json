@@ -1,0 +1,77 @@
+{
+  "higher_level": [],
+  "index": "detect-magic",
+  "name": "Détecter la magie",
+  "desc": [
+    "Pendant toute la durée du sort, vous ressentez la présence de magie à moins de 9 mètres de vous. Si vous ressentez la magie de cette manière, vous pouvez utiliser votre action pour voir une faible aura autour de toute créature ou objet visible dans la zone qui contient de la magie, et vous apprenez son école de magie, le cas échéant.\nLe sort peut pénétrer la plupart des barrières, mais il est bloqué par 1 pied de pierre, 1 pouce de métal commun, une fine feuille de plomb ou 3 pieds de bois ou de terre."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": true,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 1,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 30
+  },
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/detect-magic",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Detect Magic",
+  "material": "",
+  "_translated": true
+}

@@ -1,0 +1,79 @@
+{
+  "index": "giant-crab",
+  "name": "Crabe géant",
+  "size": "Moyenne",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 15,
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "9 m.",
+    "swim": "9 m."
+  },
+  "strength": 13,
+  "dexterity": 15,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 9,
+  "charisma": 3,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "9 m.",
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "Amphibie",
+      "desc": "Le crabe peut respirer de l'air et de l'eau."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, portée 1,5 m, une cible. Touché : 4 (1d6 + 1) dégâts contondants et la cible est agrippée (évasion DD 11). Le crabe a deux pinces, chacune ne pouvant saisir qu'une seule cible.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant-crab.png",
+  "url": "/api/2014/monsters/giant-crab",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Giant Crab",
+  "size_en": "Medium",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

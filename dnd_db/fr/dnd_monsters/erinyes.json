@@ -1,0 +1,239 @@
+{
+  "index": "erinyes",
+  "name": "Érinyes",
+  "size": "Moyenne",
+  "type": "fiélon",
+  "subtype": "devil",
+  "alignment": "loyal mauvais",
+  "armor_class": 18,
+  "hit_points": 153,
+  "hit_dice": "18d8",
+  "hit_points_roll": "18d8+72",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 18,
+  "dexterity": 16,
+  "constitution": 18,
+  "intelligence": 14,
+  "wisdom": 14,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Infernal, telepathy 120 ft.",
+  "challenge_rating": 12,
+  "proficiency_bonus": 4,
+  "xp": 8400,
+  "special_abilities": [
+    {
+      "name": "Armes infernales",
+      "desc": "Les attaques avec les armes des erinyes sont magiques et infligent 13 (3d8) dégâts de poison supplémentaires par coup (inclus dans les attaques)."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "L'érinyes a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "action_options",
+      "desc": "Les érinyes font trois attaques",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Longsword",
+              "count": 3,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Longbow",
+              "count": 3,
+              "type": "ranged"
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Longsword",
+                  "count": 2,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Longbow",
+                  "count": 1,
+                  "type": "ranged"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Longsword",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Longbow",
+                  "count": 2,
+                  "type": "ranged"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "Épée longue",
+      "desc": "Attaque au corps à corps avec une arme : +8 pour toucher, atteignez 1,50 m, une cible. Touché : 8 (1d8 + 4) dégâts tranchants, ou 9 (1d10 + 4) dégâts tranchants si utilisé à deux mains, plus 13 (3d8) dégâts de poison.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "damage_dice": "1d8+4",
+                "notes": "One handed"
+              },
+              {
+                "option_type": "damage",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "damage_dice": "1d10+4",
+                "notes": "Two handed"
+              }
+            ]
+          }
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          },
+          "damage_dice": "3d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Arc",
+      "desc": "Attaque avec arme à distance : +7 pour toucher, portée 150/600 pieds, une cible. Touché : 7 (1d8 + 3) dégâts perforants plus 13 (3d8) dégâts de poison, et la cible doit réussir un jet de sauvegarde de Constitution DD 14 ou être empoisonnée. Le poison dure jusqu'à ce qu'il soit éliminé par le sort de restauration inférieur ou une magie similaire.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d8+3"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          },
+          "damage_dice": "3d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "reactions": [
+    {
+      "name": "Parer",
+      "desc": "L'érinyes ajoute 4 à sa CA contre une attaque de mêlée qui le toucherait. Pour ce faire, les érinyes doivent voir l'attaquant et manier une arme de mêlée."
+    }
+  ],
+  "image": "/api/images/monsters/erinyes.png",
+  "url": "/api/2014/monsters/erinyes",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "name_en": "Erinyes",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,62 @@
+{
+  "index": "command",
+  "name": "Commande",
+  "desc": [
+    "Vous prononcez une commande d'un seul mot à une créature que vous pouvez voir à portée. La cible doit réussir un jet de sauvegarde de sagesse ou suivre l'ordre lors de son prochain tour. Le sort n'a aucun effet si la cible est un mort-vivant, si elle ne comprend pas votre langue ou si votre commande lui est directement nuisible.\nVoici quelques commandes typiques et leurs effets. Vous pouvez émettre une commande autre que celle décrite ici. Si vous le faites, le MJ détermine le comportement de la cible. Si la cible ne peut pas suivre votre ordre, le sort prend fin.\n***Approche.*** La cible se déplace vers vous par le chemin le plus court et le plus direct, terminant son tour si elle se déplace à moins de 1,50 mètre de vous.\n***Laisser tomber.*** La cible laisse tomber tout ce qu'elle tient puis termine son tour.\n***Fuir.*** La cible passe son tour à s'éloigner de vous par les moyens disponibles les plus rapides.\n***Grovel.*** La cible tombe à terre puis termine son tour.\n***Arrêtez.*** La cible ne bouge pas et n'effectue aucune action. Une créature volante reste en l’air, à condition qu’elle en soit capable. S’il doit se déplacer pour rester en l’air, il parcourt la distance minimale nécessaire pour rester en l’air."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 2 ou supérieur, vous pouvez affecter une créature supplémentaire pour chaque niveau d'emplacement supérieur au 1er. Les créatures doivent être à moins de 9 mètres les unes des autres lorsque vous les ciblez."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "1 tour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "WIS",
+      "url": "/api/2014/ability-scores/wis"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "fiend",
+      "name": "Fiend",
+      "url": "/api/2014/subclasses/fiend"
+    }
+  ],
+  "url": "/api/2014/spells/command",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Command",
+  "material": "",
+  "_translated": true
+}

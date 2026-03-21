@@ -1,0 +1,136 @@
+{
+  "index": "fire-elemental",
+  "name": "Élémentaire de feu",
+  "size": "Grande",
+  "type": "élémentaire",
+  "alignment": "neutre",
+  "armor_class": 13,
+  "hit_points": 102,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10+36",
+  "speed": {
+    "walk": "15 m."
+  },
+  "strength": 10,
+  "dexterity": 17,
+  "constitution": 16,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 7,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "grappled",
+      "name": "Grappled",
+      "url": "/api/2014/conditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "Restrained",
+      "url": "/api/2014/conditions/restrained"
+    },
+    {
+      "index": "unconscious",
+      "name": "Unconscious",
+      "url": "/api/2014/conditions/unconscious"
+    }
+  ],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 10
+  },
+  "languages": "Ignan",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "Forme de feu",
+      "desc": "L'élémentaire peut se déplacer dans un espace aussi étroit que 1 pouce de large sans se serrer. Une créature qui touche l'élémentaire ou le frappe avec une attaque de mêlée à moins de 1,5 m. dont 5 (1d10) dégâts de feu. De plus, l'élémentaire peut pénétrer dans l'espace d'une créature hostile et s'y arrêter. La première fois qu'elle entre dans l'espace d'une créature au cours d'un tour, cette créature subit 5 (1d10) dégâts de feu et prend feu ; jusqu'à ce que quelqu'un entreprenne une action pour éteindre le feu, la créature subit 5 (1d10) dégâts de feu au début de chacun de ses tours."
+    },
+    {
+      "name": "Éclairage",
+      "desc": "L'élémentaire projette une lumière vive dans un rayon de 9 mètres et une lumière tamisée dans un rayon de 9 mètres supplémentaires."
+    },
+    {
+      "name": "Sensibilité à l'eau",
+      "desc": "Pour chaque 1,5 m. l'élémentaire se déplace dans l'eau, ou pour chaque gallon d'eau éclaboussé dessus, il subit 1 dégât de froid."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "L'élémentaire effectue deux attaques de contact.",
+      "actions": [
+        {
+          "action_name": "Touch",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Touche",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, portée 1,5 m, une cible. Touché : 10 (2d6 + 3) dégâts de feu. Si la cible est une créature ou un objet inflammable, elle s'enflamme. Jusqu'à ce qu'une créature entreprenne une action pour éteindre le feu, la cible subit 5 (1d10) dégâts de feu au début de chacun de ses tours.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/fire-elemental.png",
+  "url": "/api/2014/monsters/fire-elemental",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Fire Elemental",
+  "size_en": "Large",
+  "type_en": "elemental",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

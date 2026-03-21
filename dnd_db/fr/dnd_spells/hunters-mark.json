@@ -1,0 +1,38 @@
+{
+  "index": "hunters-mark",
+  "name": "Marque du chasseur",
+  "desc": [
+    "Vous choisissez une créature que vous pouvez voir à portée et la marquez mystiquement comme votre proie. Jusqu'à la fin du sort, vous infligez 1d6 dégâts supplémentaires à la cible chaque fois que vous la touchez avec une attaque avec une arme, et vous avez un avantage à tout test de Sagesse (Perception) ou de Sagesse (Survie) que vous effectuez pour la trouver. Si la cible tombe à 0 point de vie avant la fin de ce sort, vous pouvez utiliser une action bonus lors d'un tour ultérieur pour marquer une nouvelle créature."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 3 ou 4, vous pouvez maintenir votre concentration sur le sort pendant 8 heures maximum. Lorsque vous utilisez un emplacement de sort de niveau 5 ou supérieur, vous pouvez maintenir votre concentration sur le sort pendant 24 heures maximum."
+  ],
+  "range": "90 pieds",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action bonus",
+  "level": 1,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/hunters-mark",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Hunter's Mark",
+  "material": "",
+  "_translated": true
+}

@@ -1,0 +1,56 @@
+{
+  "higher_level": [],
+  "index": "enthrall",
+  "name": "Captiver",
+  "desc": [
+    "Vous tissez une chaîne de mots distrayants, incitant les créatures de votre choix que vous pouvez voir à portée et qui peuvent vous entendre à effectuer un jet de sauvegarde de sagesse. Toute créature qui ne peut pas être charmée réussit automatiquement ce jet de sauvegarde, et si vous ou vos compagnons combattez une créature, elle a un avantage à la sauvegarde. En cas d'échec, la cible est désavantagée aux tests de Sagesse (Perception) effectués pour percevoir toute créature autre que vous jusqu'à la fin du sort ou jusqu'à ce que la cible ne puisse plus vous entendre. Le sort prend fin si vous êtes incapable de parler ou si vous ne pouvez plus parler."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "WIS",
+      "url": "/api/2014/ability-scores/wis"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/enthrall",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Enthrall",
+  "material": "",
+  "_translated": true
+}

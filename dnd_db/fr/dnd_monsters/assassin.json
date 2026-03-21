@@ -1,0 +1,191 @@
+{
+  "index": "assassin",
+  "name": "Assassin",
+  "desc": "Trained in the use of poison, assassins are remorseless killers who work for nobles, guildmasters, sovereigns, and anyone else who can afford them.",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "any race",
+  "alignment": "tout alignement non bon",
+  "armor_class": 15,
+  "hit_points": 78,
+  "hit_dice": "12d8",
+  "hit_points_roll": "12d8+24",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 16,
+  "constitution": 14,
+  "intelligence": 13,
+  "wisdom": 11,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-int",
+        "name": "Saving Throw: INT",
+        "url": "/api/2014/proficiencies/saving-throw-int"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-acrobatics",
+        "name": "Skill: Acrobatics",
+        "url": "/api/2014/proficiencies/skill-acrobatics"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "poison"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "Thieves' cant plus any two languages",
+  "challenge_rating": 8,
+  "proficiency_bonus": 3,
+  "xp": 3900,
+  "special_abilities": [
+    {
+      "name": "Assassiner",
+      "desc": "Lors de son premier tour, l'assassin a un avantage aux jets d'attaque contre toute créature qui n'a pas pris de tour. Tout coup porté par l'assassin contre une créature surprise est un coup critique."
+    },
+    {
+      "name": "Évasion",
+      "desc": "Si l'assassin est soumis à un effet qui lui permet d'effectuer un jet de sauvegarde de Dextérité pour ne subir que la moitié des dégâts, l'assassin ne subit aucun dégât s'il réussit son jet de sauvegarde, et seulement la moitié des dégâts s'il échoue."
+    },
+    {
+      "name": "Attaque sournoise (1/tour)",
+      "desc": "L'assassin inflige 13 (4d6) dégâts supplémentaires lorsqu'il touche une cible avec une attaque avec une arme et qu'il a un avantage au jet d'attaque, ou lorsque la cible se trouve à moins de 1,50 mètre d'un allié de l'assassin qui n'est pas incapable d'agir et que l'assassin n'a pas de désavantage au jet d'attaque."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "L'assassin effectue deux attaques à l'épée courte.",
+      "actions": [
+        {
+          "action_name": "Shortsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Épée courte",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, atteignez 1,50 m, une cible. Touché : 6 (1d6 + 3) dégâts perforants, et la cible doit effectuer un jet de sauvegarde de Constitution DD 15, subissant 24 (7d6) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d6+3"
+        },
+        {
+          "dc": {
+            "dc_type": {
+              "index": "con",
+              "name": "CON",
+              "url": "/api/2014/ability-scores/con"
+            },
+            "dc_value": 15,
+            "success_type": "half"
+          },
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          },
+          "damage_dice": "7d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Arbalète légère",
+      "desc": "Attaque avec arme à distance : +6 pour toucher, portée 80/320 pieds, une cible. Touché : 7 (1d8 + 3) dégâts perforants, et la cible doit effectuer un jet de sauvegarde de Constitution DD 15, subissant 24 (7d6) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d8+3"
+        },
+        {
+          "dc": {
+            "dc_type": {
+              "index": "con",
+              "name": "CON",
+              "url": "/api/2014/ability-scores/con"
+            },
+            "dc_value": 15,
+            "success_type": "half"
+          },
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          },
+          "damage_dice": "7d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/assassin.png",
+  "url": "/api/2014/monsters/assassin",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Assassin",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

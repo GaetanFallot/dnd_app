@@ -1,0 +1,38 @@
+{
+  "higher_level": [],
+  "index": "telepathic-bond",
+  "name": "Lien télépathique",
+  "desc": [
+    "Vous forgez un lien télépathique entre huit créatures consentantes de votre choix à portée, reliant psychiquement chaque créature à toutes les autres pendant toute la durée du sort. Les créatures avec un score d'Intelligence de 2 ou moins ne sont pas affectées par ce sort.\nJusqu'à la fin du sort, les cibles peuvent communiquer par télépathie via le lien, qu'elles aient ou non une langue commune. La communication est possible à n'importe quelle distance, même si elle ne peut pas s'étendre à d'autres plans d'existence."
+  ],
+  "range": "9 m",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Morceaux de coquille d'œuf provenant de deux types différents de créatures",
+  "ritual": true,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/telepathic-bond",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Telepathic Bond",
+  "_translated": true
+}

@@ -162,9 +162,9 @@
   .dock-btn:hover { border-color:var(--gold); color:var(--gold); }
   .dock-toggle { color:var(--ink-dim); font-size:.75rem; transition:transform .25s; user-select:none; }
   .dock-toggle.open { transform:rotate(180deg); }
-  .dock-body { overflow-x:auto; overflow-y:hidden; max-height:0; transition:max-height .25s ease; background:var(--deep); border-top:1px solid var(--border); }
-  .dock-body.open { max-height:145px; }
-  .monster-list { display:flex; gap:.6rem; padding:.7rem 1.2rem; min-height:120px; align-items:center; }
+  .dock-body { overflow-x:auto; overflow-y:hidden; max-height:0; transition:max-height .3s ease; background:var(--deep); border-top:1px solid var(--border); }
+  .dock-body.open { max-height:210px; }
+  .monster-list { display:flex; gap:.6rem; padding:.7rem 1.2rem; min-height:185px; align-items:flex-start; }
   .monster-chip { min-width:165px; max-width:210px; background:var(--stone-mid); border:1px solid var(--border); border-radius:4px; padding:.5rem .7rem; display:flex; flex-direction:column; gap:.25rem; flex-shrink:0; transition:border-color .15s; }
   .monster-chip:hover { border-color:var(--gold); }
   .chip-name { font-family:'Cinzel',serif; font-size:.73rem; color:var(--gold); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -356,3 +356,103 @@
 .cs-feature-row input[type=text] { background:var(--stone); border:1px solid var(--border); color:var(--ink); padding:.2rem .35rem; font-family:EB Garamond,serif; font-size:.82rem; border-radius:3px; outline:none; width:100%; }
 .cs-feature-desc { background:var(--stone); border:1px solid var(--border); color:var(--ink); padding:.3rem .45rem; font-family:EB Garamond,serif; font-size:.82rem; border-radius:3px; outline:none; width:100%; resize:vertical; min-height:38px; margin-top:.2rem; grid-column:1; }
 .cs-notes { background:var(--stone); border:1px solid var(--border); color:var(--ink); padding:.4rem .55rem; font-family:EB Garamond,serif; font-size:.85rem; border-radius:3px; outline:none; width:100%; resize:vertical; min-height:80px; }
+/* ════════════════════════════════════════════
+   MONSTER BROWSER MODAL
+   ════════════════════════════════════════════ */
+
+.mb-lang-btn {
+  background: none; border: none; color: var(--ink-dim, #7a6a55);
+  font-family: 'Cinzel', serif; font-size: 0.7rem; cursor: pointer;
+  padding: 0.2rem 0.5rem; border-radius: 3px; transition: all 0.15s;
+}
+.mb-lang-btn.active { background: #2a4a7f; color: #5b8dd9; }
+.mb-lang-btn:hover:not(.active) { color: var(--gold, #c8a84b); }
+
+/* List rows */
+.mb-row {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 1rem; cursor: pointer; transition: background 0.1s;
+  border-bottom: 1px solid rgba(107,76,42,.2);
+}
+.mb-row:hover { background: rgba(200,168,75,.06); }
+.mb-row.active { background: rgba(91,141,217,.15); border-left: 3px solid #5b8dd9; }
+.mb-row-name  { flex: 1; font-size: 0.83rem; color: #d8c8a8; }
+.mb-row-type  { font-size: 0.68rem; color: #7a6a55; min-width: 120px; }
+.mb-row-cr    { font-size: 0.72rem; color: var(--gold, #c8a84b); min-width: 48px; text-align: right; }
+.mb-add-init-btn {
+  background: none; border: 1px solid #8b4513; color: #c8a84b;
+  border-radius: 3px; width: 24px; height: 24px; font-size: 0.8rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: all 0.15s; padding: 0;
+}
+.mb-add-init-btn:hover { background: #8b4513; color: #fff; }
+
+.mb-empty {
+  padding: 2rem; text-align: center; color: #7a6a55;
+  font-style: italic; font-size: 0.82rem; line-height: 1.8;
+}
+.mb-empty code {
+  display: inline-block; background: #0d0b07; color: var(--gold, #c8a84b);
+  padding: 0.2rem 0.5rem; border-radius: 3px; font-size: 0.78rem; margin-top: 0.3rem;
+}
+
+/* Stat block */
+.mb-statblock { font-family: 'EB Garamond', Georgia, serif; font-size: 0.82rem; line-height: 1.5; }
+.mb-statblock-header { margin-bottom: 0.4rem; }
+.mb-statblock-name { font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 700; color: #7a0e0e; line-height: 1.2; }
+.mb-preview-en { font-size: 0.68rem; color: #7a6a55; font-style: italic; }
+.mb-statblock-type { font-size: 0.8rem; color: #5a4030; font-style: italic; margin-top: 0.1rem; }
+.mb-divider-red { height: 6px; background: #7a0e0e; border: none; margin: 0.5rem 0; }
+.mb-divider-thin { height: 1px; background: #7a0e0e; margin: 0.3rem 0; }
+.mb-stat-row { display: flex; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.15rem; font-size: 0.8rem; }
+.mb-stat-row span:first-child { font-weight: 700; color: #7a0e0e; flex-shrink: 0; }
+.mb-ability-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 0.3rem; text-align: center; margin: 0.5rem 0; }
+.mb-ability { background: rgba(122,14,14,.08); border-radius: 3px; padding: 0.25rem 0.1rem; }
+.mb-abl-name  { font-size: 0.65rem; font-weight: 700; color: #7a0e0e; }
+.mb-abl-score { font-size: 0.95rem; font-weight: 700; }
+.mb-abl-mod   { font-size: 0.68rem; color: #5a4030; }
+.mb-section-title { font-family: 'Cinzel', serif; font-size: 0.82rem; font-weight: 700; color: #7a0e0e; margin: 0.6rem 0 0.1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.mb-entry { margin-bottom: 0.4rem; font-size: 0.78rem; line-height: 1.5; }
+.mb-entry strong { color: #d8c8a8; }
+
+.mb-action-btn {
+  flex: 1; padding: 0.4rem 0.5rem; border-radius: 4px; font-size: 0.72rem;
+  cursor: pointer; font-family: 'Cinzel', serif; letter-spacing: 0.04em;
+  transition: all 0.2s; border: 1px solid #8b4513; background: rgba(139,69,19,.2); color: #c8a84b;
+}
+.mb-action-btn:hover { background: #8b4513; color: #fff; }
+.mb-action-btn.secondary { border-color: #5b8dd9; background: rgba(91,141,217,.15); color: #5b8dd9; }
+.mb-action-btn.secondary:hover { background: #5b8dd9; color: #fff; }
+.mb-action-btn.danger { border-color: #c0392b; background: rgba(192,57,43,.15); color: #e57373; }
+.mb-action-btn.danger:hover { background: #c0392b; color: #fff; }
+.mb-del-btn {
+  flex-shrink: 0; width: 1.4rem; height: 1.4rem; border-radius: 3px; border: 1px solid #c0392b;
+  background: rgba(192,57,43,.15); color: #e57373; cursor: pointer; font-size: 0.65rem;
+  display: flex; align-items: center; justify-content: center; padding: 0; transition: all 0.15s;
+}
+.mb-del-btn:hover { background: #c0392b; color: #fff; }
+
+/* ════════════════════════════════════════════
+   MONSTER BROWSER — tabs + flash
+   ════════════════════════════════════════════ */
+
+.mb-tab-btn {
+  background: none; border: none; color: #7a6a55;
+  font-family: 'Cinzel', serif; font-size: 0.72rem; cursor: pointer;
+  padding: 0.25rem 0.6rem; border-radius: 3px; transition: all 0.15s;
+  display: flex; align-items: center; gap: 0.3rem;
+}
+.mb-tab-btn.active { background: rgba(200,168,75,.2); color: #c8a84b; }
+.mb-tab-btn:hover:not(.active) { color: #c8a84b; }
+.mb-tab-count {
+  background: rgba(200,168,75,.3); color: #c8a84b; font-size: 0.6rem;
+  padding: 0 0.3rem; border-radius: 8px; min-width: 14px; text-align: center;
+}
+
+/* Flash animation when monster added to dock from browser */
+@keyframes mb-flash-anim {
+  0%   { box-shadow: 0 0 0 0 rgba(91,141,217,.8); }
+  50%  { box-shadow: 0 0 0 6px rgba(91,141,217,.4); }
+  100% { box-shadow: 0 0 0 0 rgba(91,141,217,0); border-color: var(--gold); }
+}
+.mb-flash { animation: mb-flash-anim 1.2s ease; }

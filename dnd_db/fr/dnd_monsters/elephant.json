@@ -1,0 +1,84 @@
+{
+  "index": "elephant",
+  "name": "Éléphant",
+  "size": "Très grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 12,
+  "hit_points": 76,
+  "hit_dice": "8d12",
+  "hit_points_roll": "8d12+24",
+  "speed": {
+    "walk": "12 m."
+  },
+  "strength": 22,
+  "dexterity": 9,
+  "constitution": 17,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [
+    {
+      "name": "Charge de piétinement",
+      "desc": "Si l'éléphant bouge d'au moins 6 m. directement vers une créature puis la frappe avec une attaque sanglante au même tour, cette cible doit réussir un jet de sauvegarde de Force DD 12 ou être mise à terre. Si la cible est à terre, l'éléphant peut effectuer une attaque piétinée contre elle en guise d'action bonus."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sang",
+      "desc": "Attaque au corps à corps avec une arme : +8 pour toucher, portée 1,5 m, une cible. Touché : 19 (3d8 + 6) dégâts perforants.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "3d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Piétiner",
+      "desc": "Attaque au corps à corps avec une arme : +8 pour toucher, portée 1,5 m, une créature à terre. Touché : 22 (3d10 + 6) dégâts contondants.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "3d10+6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/elephant.png",
+  "url": "/api/2014/monsters/elephant",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Elephant",
+  "size_en": "Huge",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

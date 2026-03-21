@@ -1,0 +1,204 @@
+{
+  "index": "ice-devil",
+  "name": "Diable de glace",
+  "size": "Grande",
+  "type": "fiélon",
+  "subtype": "devil",
+  "alignment": "loyal mauvais",
+  "armor_class": 18,
+  "hit_points": 180,
+  "hit_dice": "19d10",
+  "hit_points_roll": "19d10+76",
+  "speed": {
+    "walk": "12 m."
+  },
+  "strength": 21,
+  "dexterity": 14,
+  "constitution": 18,
+  "intelligence": 18,
+  "wisdom": 15,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "blindsight": "18 m.",
+    "darkvision": "36 m.",
+    "passive_perception": 12
+  },
+  "languages": "Infernal, telepathy 120 ft.",
+  "challenge_rating": 14,
+  "proficiency_bonus": 5,
+  "xp": 11500,
+  "special_abilities": [
+    {
+      "name": "La vue du diable",
+      "desc": "L'obscurité magique n'empêche pas la vision sombre du diable."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le diable a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le diable effectue trois attaques : une avec sa morsure, une avec ses griffes et une avec sa queue.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claws",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Tail",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, portée 1,5 m, une cible. Touché : 12 (2d6 + 5) dégâts perforants plus 10 (3d6) dégâts de froid.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d6+5"
+        },
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "Cold",
+            "url": "/api/2014/damage-types/cold"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffes",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, portée 1,5 m, une cible. Touché : 10 (2d4 + 5) dégâts tranchants plus 10 (3d6) dégâts de froid.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d4+5"
+        },
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "Cold",
+            "url": "/api/2014/damage-types/cold"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Queue",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, portée 3 m, une cible. Touché : 12 (2d6 + 5) dégâts contondants plus 10 (3d6) dégâts de froid.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d6+5"
+        },
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "Cold",
+            "url": "/api/2014/damage-types/cold"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Mur de glace",
+      "desc": "Le diable forme comme par magie un mur de glace opaque sur une surface solide qu'il peut voir à moins de 18 m de celle-ci. Le mur mesure 0,3 m d'épaisseur et peut atteindre 9 m de long et 3 m de haut, ou bien il s'agit d'un dôme hémisphérique pouvant atteindre 6 m de diamètre.\nLorsque le mur apparaît, chaque créature présente dans son espace en est poussée hors par le chemin le plus court. La créature choisit de quel côté du mur se retrouver, à moins qu'elle ne soit frappée d'incapacité. La créature effectue ensuite un jet de sauvegarde de Dextérité DD 17, subissant 35 (10d6) dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\nLe mur dure 1 minute ou jusqu'à ce que le diable soit frappé d'incapacité ou meure. Le mur peut être endommagé et brisé ; chaque section de 10 pieds a une CA de 5, 30 points de vie, une vulnérabilité aux dégâts de feu et une immunité aux dégâts acides, froids, nécrotiques, poison et psychiques. Si une section est détruite, elle laisse derrière elle une feuille d’air glacial dans l’espace occupé par le mur. Chaque fois qu'une créature finit de se déplacer dans l'air glacial au cours d'un tour, volontairement ou non, la créature doit effectuer un jet de sauvegarde de Constitution DD 17, subissant 17 (5d6) dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite. L'air glacial se dissipe lorsque le reste du mur disparaît.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/ice-devil.png",
+  "url": "/api/2014/monsters/ice-devil",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Ice Devil",
+  "size_en": "Large",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

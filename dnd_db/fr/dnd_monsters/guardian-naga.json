@@ -1,0 +1,133 @@
+{
+  "index": "guardian-naga",
+  "name": "Gardien Naga",
+  "size": "Grande",
+  "type": "monstruosité",
+  "alignment": "loyal bon",
+  "armor_class": 18,
+  "hit_points": 127,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10+45",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 19,
+  "dexterity": 18,
+  "constitution": 16,
+  "intelligence": 16,
+  "wisdom": 19,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-int",
+        "name": "Saving Throw: INT",
+        "url": "/api/2014/proficiencies/saving-throw-int"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Celestial, Common",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [
+    {
+      "name": "Rajeunissement",
+      "desc": "S'il meurt, le naga revient à la vie au bout de 1d6 jours et récupère tous ses points de vie. Seul un sort de souhait peut empêcher ce trait de fonctionner."
+    },
+    {
+      "name": "Lancement de sorts",
+      "desc": "Le naga est un lanceur de sorts de niveau 11. Sa capacité de lancement de sorts est la Sagesse (DD de sauvegarde contre les sorts 16, +8 pour toucher avec les attaques de sorts), et il n'a besoin que de composants verbaux pour lancer ses sorts. Il contient les sorts de clerc suivants :\n\n- Cantrips (à volonté) : réparation, flamme sacrée, thaumaturgie\n- 1er niveau (4 emplacements) : commandement, guérison des blessures, bouclier de foi\n- 2ème niveau (3 emplacements) : calmer les émotions, retenir la personne\n- 3ème niveau (3 emplacements) : confère malédiction, clairvoyance\n- 4ème niveau (3 emplacements) : bannissement, liberté de mouvement\n- 5ème niveau (2 emplacements) : coup de flamme, geas\n- 6ème niveau (1 emplacement) : vision vraie"
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +8 pour toucher, allonge 10 pieds, une créature. Touché : 8 (1d8 + 4) dégâts perforants, et la cible doit effectuer un jet de sauvegarde de Constitution DD 15, subissant 45 (10d8) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Cracher du poison",
+      "desc": "Attaque avec arme à distance : +8 pour toucher, portée 15/30 pieds, une créature. Touché : La cible doit effectuer un jet de sauvegarde de Constitution DD 15, subissant 45 (10d8) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "attack_bonus": 8,
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/guardian-naga.png",
+  "url": "/api/2014/monsters/guardian-naga",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Guardian Naga",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

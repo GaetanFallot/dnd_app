@@ -1,0 +1,48 @@
+{
+  "higher_level": [],
+  "index": "blink",
+  "name": "Clignoter",
+  "desc": [
+    "Lancez un d20 à la fin de chacun de vos tours pendant toute la durée du sort. Sur un résultat de 11 ou plus, vous disparaissez de votre plan d'existence actuel et apparaissez dans le plan Éthéré (le sort échoue et le lancement est inutile si vous étiez déjà sur ce plan). Au début de votre prochain tour, et à la fin du sort si vous êtes sur le plan Éthéré, vous retournez dans un espace inoccupé de votre choix que vous pouvez voir à moins de 3 mètres de l'espace d'où vous avez disparu. Si aucun espace inoccupé n'est disponible dans cette plage, vous apparaissez dans l'espace inoccupé le plus proche (choisi au hasard si plusieurs espaces sont également proches). Vous pouvez annuler ce sort par une action.\nLorsque vous êtes sur le plan Éthéré, vous pouvez voir et entendre l'avion d'où vous venez, qui est moulé dans des nuances de gris, et vous ne pouvez rien y voir à plus de 60 pieds. Vous ne pouvez affecter et être affecté que par d'autres créatures sur le plan Éthéré. Les créatures qui ne sont pas là ne peuvent pas vous percevoir ni interagir avec vous, à moins qu'elles n'en aient la capacité."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/blink",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Blink",
+  "material": "",
+  "_translated": true
+}

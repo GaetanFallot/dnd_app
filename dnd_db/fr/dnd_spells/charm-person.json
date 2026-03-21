@@ -1,0 +1,73 @@
+{
+  "index": "charm-person",
+  "name": "Personne de charme",
+  "desc": [
+    "Vous tentez de charmer un humanoïde que vous pouvez voir à portée. Il doit effectuer un jet de sauvegarde de sagesse, et il le fait avec avantage si vous ou vos compagnons le combattez. S'il échoue au jet de sauvegarde, vous le charmez jusqu'à la fin du sort ou jusqu'à ce que vous ou vos compagnons lui fassiez quelque chose de nuisible. La créature charmée vous considère comme une connaissance amicale. Lorsque le sort se termine, la créature sait qu'elle a été charmée par vous."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 2 ou supérieur, vous pouvez cibler une créature supplémentaire pour chaque niveau d'emplacement supérieur au 1er. Les créatures doivent être à moins de 9 mètres les unes des autres lorsque vous les ciblez."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "WIS",
+      "url": "/api/2014/ability-scores/wis"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/charm-person",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Charm Person",
+  "material": "",
+  "_translated": true
+}

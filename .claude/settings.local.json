@@ -6,7 +6,9 @@
       "Bash(do echo:*)",
       "Bash(node -e \"console.log\\(JSON.parse\\(require\\(''fs''\\).readFileSync\\(''C:/Users/gaeta/Desktop/dnd_app/dnd5e-sheets/$f/data.json''\\)\\).save_proficiencies\\)\")",
       "Bash(done)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(wc -l *)",
+      "Bash(tasklist)"
     ]
   }
 }

@@ -1,0 +1,38 @@
+{
+  "higher_level": [],
+  "index": "find-familiar",
+  "name": "Trouver un familier",
+  "desc": [
+    "Vous bénéficiez du service d'un familier, un esprit qui prend la forme animale de votre choix : chauve-souris, chat, crabe, grenouille (crapaud), faucon, lézard, poulpe, hibou, serpent venimeux, poisson (quipper), rat, corbeau, hippocampe, araignée ou belette. Apparaissant dans un espace inoccupé à portée, le familier a les statistiques de la forme choisie, bien qu'il s'agisse d'un céleste, d'une fée ou d'un démon (votre choix) au lieu d'une bête.\nVotre familier agit indépendamment de vous, mais il obéit toujours à vos ordres. En combat, il lance son jet d'initiative et agit à son tour. Un familier ne peut pas attaquer, mais il peut entreprendre d’autres actions normalement.\nLorsque le familier tombe à 0 point de vie, il disparaît, ne laissant aucune forme physique derrière lui. Il réapparaît après avoir lancé à nouveau ce sort.\nTant que votre familier se trouve à moins de 30 mètres de vous, vous pouvez communiquer avec lui par télépathie. De plus, en tant qu'action, vous pouvez voir à travers les yeux de votre familier et entendre ce qu'il entend jusqu'au début de votre prochain tour, bénéficiant ainsi des avantages de tous les sens spéciaux dont dispose le familier. Pendant cette période, vous êtes sourd et aveugle à l’égard de vos propres sens.\nPar une action, vous pouvez renvoyer temporairement votre familier. Il disparaît dans une dimension de poche où il attend votre invocation. Alternativement, vous pouvez le ignorer pour toujours. Par une action, pendant qu'il est temporairement renvoyé, vous pouvez le faire réapparaître dans n'importe quel espace inoccupé à moins de 9 mètres de vous.\nVous ne pouvez pas avoir plus d'un familier à la fois. Si vous lancez ce sort alors que vous possédez déjà un familier, vous lui faites adopter une nouvelle forme. Choisissez l'un des formulaires dans la liste ci-dessus. Votre familier se transforme en la créature choisie.\nEnfin, lorsque vous lancez un sort avec une portée de toucher, votre familier peut lancer le sort comme s'il l'avait lancé. Votre familier doit se trouver à moins de 30 mètres de vous et il doit utiliser sa réaction pour lancer le sort lorsque vous le lancez. Si le sort nécessite un jet d'attaque, vous utilisez votre modificateur d'action pour le jet."
+  ],
+  "range": "10 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "10 po de charbon de bois, d'encens et d'herbes qui doivent être consommés au feu dans un brasero en laiton.",
+  "ritual": true,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 heure",
+  "level": 1,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/find-familiar",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Find Familiar",
+  "_translated": true
+}

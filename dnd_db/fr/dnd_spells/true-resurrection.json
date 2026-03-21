@@ -1,0 +1,43 @@
+{
+  "higher_level": [],
+  "index": "true-resurrection",
+  "name": "La vraie résurrection",
+  "desc": [
+    "Vous touchez une créature qui est morte depuis au plus 200 ans et qui est morte pour une raison quelconque, sauf la vieillesse. Si l'âme de la créature est libre et volontaire, la créature reprend vie avec tous ses points de vie.\nCe sort referme toutes les blessures, neutralise tout poison, guérit toutes les maladies et lève toutes les malédictions affectant la créature à sa mort. Le sort remplace les organes et membres endommagés ou manquants.\nLe sort peut même fournir un nouveau corps si l'original n'existe plus, auquel cas vous devez prononcer le nom de la créature. La créature apparaît alors dans un espace inoccupé que vous choisissez à moins de 3 mètres de vous."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une pincée d'eau bénite et de diamants d'une valeur d'au moins 25 000 po, que le sort consomme.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 heure",
+  "level": 9,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/true-resurrection",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "True Resurrection",
+  "_translated": true
+}

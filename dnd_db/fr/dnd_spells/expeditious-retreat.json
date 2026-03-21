@@ -1,0 +1,53 @@
+{
+  "higher_level": [],
+  "index": "expeditious-retreat",
+  "name": "Retraite expéditive",
+  "desc": [
+    "Ce sort vous permet de vous déplacer à une vitesse incroyable. Lorsque vous lancez ce sort, puis en tant qu'action bonus à chacun de vos tours jusqu'à la fin du sort, vous pouvez effectuer l'action Dash."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action bonus",
+  "level": 1,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/expeditious-retreat",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Expeditious Retreat",
+  "material": "",
+  "_translated": true
+}

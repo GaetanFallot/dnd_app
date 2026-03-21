@@ -1,0 +1,207 @@
+{
+  "index": "iron-golem",
+  "name": "Golem de fer",
+  "size": "Grande",
+  "type": "artificiel",
+  "alignment": "sans alignement",
+  "armor_class": 20,
+  "hit_points": 210,
+  "hit_dice": "20d10",
+  "hit_points_roll": "20d10+100",
+  "speed": {
+    "walk": "9 m."
+  },
+  "strength": 24,
+  "dexterity": 9,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire",
+    "poison",
+    "psychic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "36 m.",
+    "passive_perception": 10
+  },
+  "languages": "understands the languages of its creator but can't speak",
+  "challenge_rating": 16,
+  "proficiency_bonus": 5,
+  "xp": 15000,
+  "special_abilities": [
+    {
+      "name": "Absorption du feu",
+      "desc": "Chaque fois que le golem est soumis à des dégâts de feu, il ne subit aucun dégât et récupère un nombre de points de vie égal aux dégâts de feu infligés."
+    },
+    {
+      "name": "Forme immuable",
+      "desc": "Le golem est immunisé contre tout sort ou effet susceptible de modifier sa forme."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le golem a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    },
+    {
+      "name": "Armes magiques",
+      "desc": "Les attaques avec les armes du golem sont magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "action_options",
+      "desc": "Le golem effectue deux attaques au corps à corps.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Slam",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Sword",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Slam",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Sword",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "Claquer",
+      "desc": "Attaque au corps à corps avec une arme : +13 pour toucher, portée 1,5 m, une cible. Touché : 20 (3d8 + 7) dégâts contondants.",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "3d8+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Épée",
+      "desc": "Attaque au corps à corps avec une arme : +13 pour toucher, portée 3 m, une cible. Touché : 23 (3d10 + 7) dégâts tranchants.",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "3d10+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Souffle empoisonné",
+      "desc": "Le golem exhale des gaz toxiques dans un cône de 15 pieds. Chaque créature dans cette zone doit effectuer un jet de sauvegarde de Constitution DD 19, subissant 45 (10d8) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "con",
+          "name": "CON",
+          "url": "/api/2014/ability-scores/con"
+        },
+        "dc_value": 19,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          },
+          "damage_dice": "10d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/iron-golem.png",
+  "url": "/api/2014/monsters/iron-golem",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Iron Golem",
+  "size_en": "Large",
+  "type_en": "construct",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

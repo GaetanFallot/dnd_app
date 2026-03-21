@@ -1,0 +1,48 @@
+{
+  "higher_level": [],
+  "index": "tree-stride",
+  "name": "Foulée des arbres",
+  "desc": [
+    "Vous gagnez la possibilité d'entrer dans un arbre et de vous déplacer de l'intérieur vers l'intérieur d'un autre arbre du même genre dans un rayon de 150 m. Les deux arbres doivent être vivants et avoir au moins la même taille que vous. Vous devez utiliser 1,5 m de mouvement pour entrer dans un arbre. Vous connaissez instantanément l'emplacement de tous les autres arbres du même genre dans un rayon de 150 m et, dans le cadre du mouvement utilisé pour entrer dans l'arbre, vous pouvez soit passer dans l'un de ces arbres, soit sortir de l'arbre dans lequel vous vous trouvez. Vous apparaissez à l'endroit de votre choix à moins de 1,5 m de l'arbre de destination, en utilisant 1,5 m supplémentaires de mouvement. Si vous n'avez plus aucun mouvement, vous apparaissez à moins de 1,5 m de l'arbre dans lequel vous êtes entré.\nVous pouvez utiliser cette capacité de transport une fois par tour pendant toute la durée du combat. Vous devez terminer chaque tour à l'extérieur d'un arbre."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/tree-stride",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Tree Stride",
+  "material": "",
+  "_translated": true
+}

@@ -1,0 +1,67 @@
+{
+  "index": "disintegrate",
+  "name": "Désintégrer",
+  "desc": [
+    "Un mince rayon vert jaillit de votre doigt pointé vers une cible que vous pouvez voir à portée. La cible peut être une créature, un objet ou une création de force magique, comme le mur créé par le mur de force.\nUne créature ciblée par ce sort doit effectuer un jet de sauvegarde de dextérité. En cas d'échec, la cible subit 10d6 + 40 dégâts de force. Si ces dégâts réduisent la cible à 0 point de vie, elle est désintégrée.\nUne créature désintégrée et tout ce qu'elle porte, à l'exception des objets magiques, sont réduits à un tas de fine poussière grise. La créature ne peut être ramenée à la vie qu'au moyen d'une véritable résurrection ou d'un sort de souhait.\nCe sort désintègre automatiquement un objet non magique de grande taille ou plus petit ou une création de force magique. Si la cible est un objet énorme ou plus grand ou une création de force, ce sort en désintègre une partie de 10 pieds cubes. Un objet magique n'est pas affecté par ce sort."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 7 ou supérieur, les dégâts augmentent de 3d6 pour chaque niveau d'emplacement supérieur au 6."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une magnétite et une pincée de poussière.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "damage": {
+    "damage_type": {
+      "index": "force",
+      "name": "Force",
+      "url": "/api/2014/damage-types/force"
+    },
+    "damage_at_slot_level": {
+      "6": "10d6 + 40"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "DEX",
+      "url": "/api/2014/ability-scores/dex"
+    },
+    "dc_success": "none"
+  },
+  "area_of_effect": {
+    "type": "cube",
+    "size": 10
+  },
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/disintegrate",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Disintegrate",
+  "_translated": true
+}

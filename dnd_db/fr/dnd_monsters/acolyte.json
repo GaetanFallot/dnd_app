@@ -1,0 +1,87 @@
+{
+  "index": "acolyte",
+  "name": "Acolyte",
+  "desc": "Acolytes are junior members of a clergy, usually answerable to a priest. They perform a variety of functions in a temple and are granted minor spellcasting power by their deities.",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "any race",
+  "alignment": "tout alignement",
+  "armor_class": 10,
+  "hit_points": 9,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8",
+  "speed": {
+    "walk": "9 m."
+  },
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-medicine",
+        "name": "Skill: Medicine",
+        "url": "/api/2014/proficiencies/skill-medicine"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill-religion",
+        "name": "Skill: Religion",
+        "url": "/api/2014/proficiencies/skill-religion"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "Lancement de sorts",
+      "desc": "L'acolyte est un lanceur de sorts de niveau 1. Sa capacité de lancement de sorts est la Sagesse (sauvegarde contre les sorts DD 12, +4 pour toucher avec les attaques de sorts). L'acolyte a préparé les sorts de clerc suivants :\n\n- Cantrips (à volonté) : lumière, flamme sacrée, thaumaturgie\n- 1er niveau (3 emplacements) : bénir, guérir les blessures, sanctuaire"
+    }
+  ],
+  "actions": [
+    {
+      "name": "Club",
+      "desc": "Attaque au corps à corps avec une arme : +2 pour toucher, atteignez 1,5 m, une cible. Touché : 2 (1d4) dégâts contondants.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/acolyte.png",
+  "url": "/api/2014/monsters/acolyte",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Acolyte",
+  "size_en": "Medium",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

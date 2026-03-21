@@ -1,0 +1,53 @@
+{
+  "index": "mass-healing-word",
+  "name": "Mot de guérison de masse",
+  "desc": [
+    "Lorsque vous prononcez des mots de restauration, jusqu'à six créatures de votre choix que vous pouvez voir à portée récupèrent des points de vie égaux à 1d4 + votre modificateur de capacité de lancement de sorts. Ce sort n'a aucun effet sur les morts-vivants ou les constructions."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 4 ou supérieur, les soins augmentent de 1d4 pour chaque niveau d'emplacement au-dessus du niveau 3."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action bonus",
+  "level": 3,
+  "heal_at_slot_level": {
+    "3": "1d4 + MOD",
+    "4": "2d4 + MOD",
+    "5": "3d4 + MOD",
+    "6": "4d4 + MOD",
+    "7": "5d4 + MOD",
+    "8": "6d4 + MOD",
+    "9": "7d4 + MOD"
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/mass-healing-word",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Mass Healing Word",
+  "material": "",
+  "_translated": true
+}

@@ -1,0 +1,41 @@
+{
+  "higher_level": [],
+  "index": "mislead",
+  "name": "Tromper",
+  "desc": [
+    "Vous devenez invisible en même temps qu'un double illusoire de vous apparaît là où vous vous trouvez. Le double dure toute la durée, mais l'invisibilité prend fin si vous attaquez ou lancez un sort.\nVous pouvez utiliser votre action pour déplacer votre double illusoire jusqu'à deux fois votre vitesse et lui faire faire des gestes, parler et se comporter comme vous le souhaitez.\nVous pouvez voir à travers ses yeux et entendre à travers ses oreilles comme si vous étiez là où il se trouve. À chacun de vos tours, en tant qu'action bonus, vous pouvez passer de l'utilisation de ses sens aux vôtres, ou inversement. Pendant que vous utilisez ses sens, vous êtes aveuglé et assourdi par rapport à votre propre environnement."
+  ],
+  "range": "Soi",
+  "components": [
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/mislead",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Mislead",
+  "material": "",
+  "_translated": true
+}

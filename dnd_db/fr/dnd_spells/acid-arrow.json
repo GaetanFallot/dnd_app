@@ -1,0 +1,69 @@
+{
+  "index": "acid-arrow",
+  "name": "Flèche acide",
+  "desc": [
+    "Une flèche verte scintillante se dirige vers une cible à portée et éclate dans un jet d'acide. Effectuez une attaque magique à distance contre la cible. En cas de coup, la cible subit immédiatement 4d4 dégâts d'acide et 2d4 dégâts d'acide à la fin de son prochain tour. En cas d'échec, la flèche éclabousse la cible avec de l'acide pour la moitié des dégâts initiaux et aucun dégât à la fin de son tour suivant."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 3 ou supérieur, les dégâts (initiaux et ultérieurs) augmentent de 1d4 pour chaque niveau d'emplacement supérieur au 2e."
+  ],
+  "range": "90 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Feuille de rhubarbe en poudre et estomac de vipère.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "attack_type": "ranged",
+  "damage": {
+    "damage_type": {
+      "index": "acid",
+      "name": "Acid",
+      "url": "/api/2014/damage-types/acid"
+    },
+    "damage_at_slot_level": {
+      "2": "4d4",
+      "3": "5d4",
+      "4": "6d4",
+      "5": "7d4",
+      "6": "8d4",
+      "7": "9d4",
+      "8": "10d4",
+      "9": "11d4"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/acid-arrow",
+  "updated_at": "2025-10-24T20:42:14.618Z",
+  "name_en": "Acid Arrow",
+  "_translated": true
+}

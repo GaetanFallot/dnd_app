@@ -1,0 +1,112 @@
+{
+  "index": "dryad",
+  "name": "Dryade",
+  "size": "Moyenne",
+  "type": "fée",
+  "alignment": "neutre",
+  "armor_class": 11,
+  "hit_points": 22,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 10,
+  "dexterity": 12,
+  "constitution": 11,
+  "intelligence": 14,
+  "wisdom": 15,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Elvish, Sylvan",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité innée de lancement de sorts de la dryade est le Charisme (sauvegarde contre les sorts DD 14). La dryade peut de manière innée lancer les sorts suivants, ne nécessitant aucun composant matériel :\n\nÀ volonté : druidologie\n3/jour chacun : enchevêtrement, goodberry\n1/jour chacun : écorce, passe sans trace, shillelagh"
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "La dryade a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    },
+    {
+      "name": "Parler aux bêtes et aux plantes",
+      "desc": "La dryade peut communiquer avec les bêtes et les plantes comme si elles partageaient une langue."
+    },
+    {
+      "name": "Foulée des arbres",
+      "desc": "Une fois à son tour, la dryade peut utiliser 10 pieds de son mouvement pour entrer comme par magie dans un arbre vivant à sa portée et émerger d'un deuxième arbre vivant à moins de 60 pieds du premier arbre, apparaissant dans un espace inoccupé à moins de 5 pieds du deuxième arbre. Les deux arbres doivent être grands ou plus grands."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Club",
+      "desc": "Attaque au corps à corps avec une arme : +2 pour toucher (+6 pour toucher avec shillelagh), atteignez 1,50 m, une cible. Touché : 2 (1 d4) dégâts contondants, ou 8 (1d8 + 4) dégâts contondants avec shillelagh.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Charme féerique",
+      "desc": "La dryade cible un humanoïde ou une bête qu'elle peut voir à moins de 9 mètres d'elle. Si la cible peut voir la dryade, elle doit réussir un jet de sauvegarde de Sagesse DD 14 ou être charmée magiquement. La créature charmée considère la dryade comme une amie de confiance qui doit être écoutée et protégée. Bien que la cible ne soit pas sous le contrôle de la dryade, elle accepte les demandes ou les actions de la dryade de la manière la plus favorable possible.\nChaque fois que la dryade ou ses alliés font quelque chose de nuisible à la cible, elle peut répéter le jet de sauvegarde, mettant ainsi fin à l'effet sur elle-même en cas de réussite. Sinon, l'effet dure 24 heures ou jusqu'à ce que la dryade meure, se trouve sur un plan d'existence différent de la cible ou mette fin à l'effet par une action bonus. Si le jet de sauvegarde d'une cible réussit, la cible est immunisée contre le charme féerique de la dryade pendant les prochaines 24 heures.\nLa dryade ne peut pas avoir plus d'un humanoïde et jusqu'à trois bêtes charmées à la fois.",
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "dc_value": 14,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/dryad.png",
+  "url": "/api/2014/monsters/dryad",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Dryad",
+  "type_en": "fey",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "protection-from-poison",
+  "name": "Protection contre le poison",
+  "desc": [
+    "Vous touchez une créature. S'il est empoisonné, vous neutralisez le poison. Si plus d'un poison afflige la cible, vous neutralisez un poison dont vous savez qu'il est présent, ou vous en neutralisez un au hasard.\nPendant toute la durée de l'effet, la cible bénéficie d'un avantage aux jets de sauvegarde contre l'empoisonnement et d'une résistance aux dégâts de poison."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/protection-from-poison",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Protection from Poison",
+  "material": "",
+  "_translated": true
+}

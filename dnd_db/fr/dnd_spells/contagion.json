@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "contagion",
+  "name": "Contagion",
+  "desc": [
+    "Votre contact provoque des maladies. Lancez une attaque magique au corps à corps contre une créature à votre portée. En cas de coup, vous affligez la créature d'une maladie de votre choix parmi l'une de celles décrites ci-dessous.\nA la fin de chacun des tours de la cible, elle doit effectuer un jet de sauvegarde de constitution. Après avoir échoué trois de ces jets de sauvegarde, les effets de la maladie durent pendant toute la durée et la créature cesse d'effectuer ces jets de sauvegarde. Après avoir réussi trois de ces jets de sauvegarde, la créature guérit de la maladie et le sort prend fin.\nPuisque ce sort induit une maladie naturelle chez sa cible, tout effet qui supprime une maladie ou améliore autrement ses effets s'applique à elle.\n***Maladie aveuglante.*** La douleur saisit l'esprit de la créature et ses yeux deviennent d'un blanc laiteux. La créature est désavantagée aux tests de sagesse et aux jets de sauvegarde de sagesse et est aveuglée.\n***Fillh Fever.*** Une fièvre déchaînée traverse le corps de la créature. La créature est désavantagée aux tests de force, aux jets de sauvegarde de force et aux jets d'attaque qui utilisent la Force.\n***Pourriture de la chair.*** La chair de la créature se décompose. La créature a un désavantage aux tests de Charisme et une vulnérabilité à tous les dégâts.\n***Mindfire.*** L'esprit de la créature devient fébrile. La créature a un désavantage aux tests d'intelligence et aux jets de sauvegarde d'intelligence, et la créature se comporte comme si elle était sous les effets du sort de confusion pendant le combat.\n***Saisie.*** La créature est prise de tremblements. La créature est désavantagée aux tests de dextérité, aux jets de sauvegarde de dextérité et aux jets d'attaque utilisant la dextérité.\n***Slimy Doom.*** La créature commence à saigner de manière incontrôlable. La créature a un désavantage aux tests de constitution et aux jets de sauvegarde de constitution. De plus, chaque fois que la créature subit des dégâts, elle est étourdie jusqu'à la fin de son prochain tour."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "7 jours",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "attack_type": "melee",
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    },
+    "dc_success": "other",
+    "desc": "After succeeding on three of these saving throws, the creature recovers from the disease, and the spell ends."
+  },
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/contagion",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Contagion",
+  "material": "",
+  "_translated": true
+}

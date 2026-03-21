@@ -1,0 +1,78 @@
+{
+  "index": "cone-of-cold",
+  "name": "Cône de froid",
+  "desc": [
+    "Un souffle d’air froid jaillit de vos mains. Chaque créature dans un cône de 60 pieds doit effectuer un jet de sauvegarde de constitution. Une créature subit 8d8 dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\nUne créature tuée par ce sort devient une statue gelée jusqu'à ce qu'elle dégèle."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 6 ou supérieur, les dégâts augmentent de 1d8 pour chaque niveau d'emplacement supérieur au 5."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un petit cône en cristal ou en verre.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "damage": {
+    "damage_type": {
+      "index": "cold",
+      "name": "Cold",
+      "url": "/api/2014/damage-types/cold"
+    },
+    "damage_at_slot_level": {
+      "5": "8d8",
+      "6": "9d8",
+      "7": "10d8",
+      "8": "11d8",
+      "9": "12d8"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    },
+    "dc_success": "half",
+    "desc": "A creature killed by this spell becomes a frozen statue until it thaws."
+  },
+  "area_of_effect": {
+    "type": "cone",
+    "size": 60
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/cone-of-cold",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Cone of Cold",
+  "_translated": true
+}

@@ -1,0 +1,135 @@
+{
+  "index": "fire-giant",
+  "name": "Géant du Feu",
+  "size": "Très grande",
+  "type": "géant",
+  "alignment": "loyal mauvais",
+  "armor_class": 18,
+  "hit_points": 162,
+  "hit_dice": "13d12",
+  "hit_points_roll": "13d12+78",
+  "speed": {
+    "walk": "9 m."
+  },
+  "strength": 25,
+  "dexterity": 9,
+  "constitution": 23,
+  "intelligence": 10,
+  "wisdom": 14,
+  "charisma": 13,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "skill-athletics",
+        "name": "Skill: Athletics",
+        "url": "/api/2014/proficiencies/skill-athletics"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 16
+  },
+  "languages": "Giant",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le géant effectue deux attaques à l'épée.",
+      "actions": [
+        {
+          "action_name": "Greatsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Espadon",
+      "desc": "Attaque au corps à corps avec une arme : +11 pour toucher, portée 3 m, une cible. Touché : 28 (6d6 + 7) dégâts tranchants.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "6d6+7"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Rocher",
+      "desc": "Attaque avec arme à distance : +11 pour toucher, portée 60/72 m., une cible. Touché : 29 (4d10 + 7) dégâts contondants.",
+      "attack_bonus": 11,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "4d10+7"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/fire-giant.png",
+  "url": "/api/2014/monsters/fire-giant",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Fire Giant",
+  "size_en": "Huge",
+  "type_en": "giant",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,42 @@
+{
+  "id": "mn0tu2fy5r3t",
+  "name": "Crab",
+  "type": "Très petite bête, sans alignement",
+  "cr": "0",
+  "xp": "10",
+  "prof": "+2",
+  "speed": "6 m., swim 6 m.",
+  "ac": "11",
+  "hp": "2 (1d4)",
+  "str": 2,
+  "dex": 11,
+  "con": 10,
+  "int": 1,
+  "wis": 8,
+  "cha": 2,
+  "saves": "",
+  "skills": "Stealth +2",
+  "dmg_immune": "",
+  "dmg_resist": "",
+  "dmg_vuln": "",
+  "cond_immune": "",
+  "senses": "blindsight 9 m., passive perception 9",
+  "languages": "",
+  "traits": [
+    {
+      "name": "Amphibious",
+      "desc": "The crab can breathe air and water."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Claw",
+      "desc": "Melee Weapon Attack: +0 to hit, reach 1.5 m., one target. Hit: 1 bludgeoning damage."
+    }
+  ],
+  "reactions": [],
+  "legendary": [],
+  "legendaryDesc": "",
+  "notes": "",
+  "_libraryIndex": "crab"
+}

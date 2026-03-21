@@ -1,0 +1,108 @@
+{
+  "index": "ghast",
+  "name": "Horreur",
+  "size": "Moyenne",
+  "type": "mort-vivant",
+  "alignment": "chaotique mauvais",
+  "armor_class": 13,
+  "hit_points": 36,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 17,
+  "constitution": 10,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 8,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    },
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "Common",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "Puanteur",
+      "desc": "Toute créature qui commence son tour à moins de 1,50 mètre du fantôme doit réussir un jet de sauvegarde de Constitution DD 10 ou être empoisonnée jusqu'au début de son prochain tour. Si elle réussit un jet de sauvegarde, la créature est immunisée contre la puanteur du fantôme pendant 24 heures."
+    },
+    {
+      "name": "Tournez le défi",
+      "desc": "Le fantôme et toutes les goules à moins de 9 mètres de lui ont un avantage aux jets de sauvegarde contre les effets qui transforment les morts-vivants."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, allonge 1,50 m, une créature. Touché : 12 (2d8 + 3) dégâts perforants.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d8+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffes",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, atteignez 1,50 m, une cible. Touché : 10 (2d6 + 3) dégâts tranchants. Si la cible est une créature autre qu'un mort-vivant, elle doit réussir un jet de sauvegarde de Constitution DD 10 ou être paralysée pendant 1 minute. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/ghast.png",
+  "url": "/api/2014/monsters/ghast",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Ghast",
+  "type_en": "undead",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

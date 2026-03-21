@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "flesh-to-stone",
+  "name": "De la chair à la pierre",
+  "desc": [
+    "Vous essayez de transformer en pierre une créature que vous pouvez voir à portée. Si le corps de la cible est fait de chair, la créature doit réussir un jet de sauvegarde de constitution. En cas d'échec, il est retenu alors que sa chair commence à durcir. En cas de sauvegarde réussie, la créature n'est pas affectée.\nUne créature retenue par ce sort doit effectuer un nouveau jet de sauvegarde de constitution à la fin de chacun de ses tours. S'il réussit trois fois son jet de sauvegarde contre ce sort, le sort prend fin. S'il échoue trois fois à ses sauvegardes, il est transformé en pierre et soumis à l'état pétrifié pour toute la durée du sort. Les succès et les échecs ne doivent pas nécessairement être consécutifs ; gardez une trace des deux jusqu'à ce que la cible en récupère un brelan.\nSi la créature est physiquement brisée alors qu'elle est pétrifiée, elle souffre de déformations similaires si elle revient à son état d'origine.\nSi vous maintenez votre concentration sur ce sort pendant toute la durée possible, la créature se transforme en pierre jusqu'à ce que l'effet soit supprimé."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une pincée de chaux, d'eau et de terre.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 6,
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    },
+    "dc_success": "none",
+    "desc": "On a failed save, the target is restrained as its flesh begins to harden."
+  },
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/flesh-to-stone",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Flesh to Stone",
+  "_translated": true
+}

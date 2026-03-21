@@ -1,0 +1,149 @@
+{
+  "index": "invisible-stalker",
+  "name": "Traqueur invisible",
+  "size": "Moyenne",
+  "type": "élémentaire",
+  "alignment": "neutre",
+  "armor_class": 14,
+  "hit_points": 104,
+  "hit_dice": "16d8",
+  "hit_points_roll": "16d8+32",
+  "speed": {
+    "walk": "50 ft.",
+    "fly": "50 ft.",
+    "hover": true
+  },
+  "strength": 16,
+  "dexterity": 19,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 15,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "grappled",
+      "name": "Grappled",
+      "url": "/api/2014/conditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "Restrained",
+      "url": "/api/2014/conditions/restrained"
+    },
+    {
+      "index": "unconscious",
+      "name": "Unconscious",
+      "url": "/api/2014/conditions/unconscious"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 18
+  },
+  "languages": "Auran, understands Common but doesn't speak it",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [
+    {
+      "name": "Invisibilité",
+      "desc": "Le harceleur est invisible."
+    },
+    {
+      "name": "Traqueur sans faille",
+      "desc": "Le harceleur reçoit une proie de son invocateur. Le harceleur connaît la direction et la distance jusqu'à sa proie tant qu'ils sont tous deux sur le même plan d'existence. Le harceleur connaît également l'emplacement de son invocateur."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le harceleur effectue deux attaques de coup.",
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Claquer",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, atteignez 1,50 m, une cible. Touché : 10 (2d6 + 3) dégâts contondants.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/invisible-stalker.png",
+  "url": "/api/2014/monsters/invisible-stalker",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Invisible Stalker",
+  "type_en": "elemental",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

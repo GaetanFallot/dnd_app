@@ -1,0 +1,47 @@
+{
+  "higher_level": [],
+  "index": "antipathy-sympathy",
+  "name": "Antipathie/Sympathie",
+  "desc": [
+    "Ce sort attire ou repousse les créatures de votre choix. Vous ciblez quelque chose à portée, soit un objet ou une créature énorme ou plus petite, soit une zone qui ne dépasse pas un cube de 200 pieds. Spécifiez ensuite une sorte de créature intelligente, comme des dragons rouges, des gobelins ou des vampires. Vous investissez la cible d'une aura qui attire ou repousse les créatures spécifiées pendant la durée. Choisissez l'antipathie ou la sympathie comme effet de l'aura.\n***Antipathie.*** L'enchantement provoque chez les créatures du type que vous avez désigné un besoin intense de quitter la zone et d'éviter la cible. Lorsqu'une telle créature peut voir la cible ou s'en approche à moins de 18 mètres, elle doit réussir un jet de sauvegarde de sagesse ou devenir effrayée. La créature reste effrayée tant qu'elle peut voir la cible ou se trouve à moins de 20 mètres d'elle. Lorsqu'elle est effrayée par la cible, la créature doit utiliser son mouvement pour se déplacer vers l'endroit sûr le plus proche d'où elle ne peut pas voir la cible. Si la créature s'éloigne de plus de 60 pieds de la cible et ne peut pas la voir, la créature n'est plus effrayée, mais elle redevient effrayée si elle retrouve la vue de la cible ou s'en déplace à moins de 60 pieds.\n*** Sympathie. *** L'enchantement fait ressentir aux créatures spécifiées un besoin intense de s'approcher de la cible tout en étant à moins de 60 pieds d'elle ou en étant capables de la voir. Lorsqu'une telle créature peut voir la cible ou s'en approche à moins de 18 mètres, elle doit réussir un jet de sauvegarde de sagesse ou utiliser son mouvement à chacun de ses tours pour entrer dans la zone ou se déplacer à portée de la cible. Lorsque la créature l'a fait, elle ne peut pas volontairement s'éloigner de la cible.\nSi la cible blesse ou blesse d'une autre manière une créature affectée, la créature affectée peut effectuer un jet de sauvegarde de sagesse pour mettre fin à l'effet, comme décrit ci-dessous.\n***Fin de l'effet.*** Si une créature affectée termine son tour alors qu'elle n'est pas à moins de 60 pieds de la cible ou qu'elle n'est pas capable de la voir, la créature effectue un jet de sauvegarde de sagesse. En cas de jet de sauvegarde réussi, la créature n'est plus affectée par la cible et reconnaît le sentiment de répugnance ou d'attraction comme magique. De plus, une créature affectée par le sort a droit à un autre jet de sauvegarde de sagesse toutes les 24 heures tant que le sort persiste.\nUne créature qui réussit son jet de sauvegarde contre cet effet est immunisée contre cet effet pendant 1 minute, après quoi elle peut être à nouveau affectée."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Soit un morceau d'alun imbibé de vinaigre pour l'effet antipathie, soit une goutte de miel pour l'effet sympathie.",
+  "ritual": false,
+  "duration": "10 jours",
+  "concentration": false,
+  "casting_time": "1 heure",
+  "level": 8,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 200
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/antipathy-sympathy",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Antipathy/Sympathy",
+  "_translated": true
+}

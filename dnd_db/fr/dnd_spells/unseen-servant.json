@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "unseen-servant",
+  "name": "Serviteur invisible",
+  "desc": [
+    "Ce sort crée une force invisible, insensée et informe qui effectue des tâches simples sous votre commandement jusqu'à la fin du sort. Le serviteur surgit dans un espace inoccupé au sol à portée. Il a une CA de 10, 1 point de vie et une Force de 2, et il ne peut pas attaquer. S'il tombe à 0 point de vie, le sort prend fin.\nUne fois à chacun de vos tours par une action bonus, vous pouvez ordonner mentalement au serviteur de se déplacer jusqu'à 4,5 m et d'interagir avec un objet. Le serviteur peut effectuer des tâches simples qu'un serviteur humain pourrait effectuer, comme aller chercher des objets, nettoyer, raccommoder, plier des vêtements, allumer du feu, servir de la nourriture et verser du vin. Une fois que vous donnez l'ordre, le serviteur exécute la tâche au mieux de ses capacités jusqu'à ce qu'il termine la tâche, puis attend votre prochaine commande.\nSi vous commandez au serviteur d'effectuer une tâche qui l'éloignerait de plus de 18 m de vous, le sort prend fin."
+  ],
+  "range": "18 m",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un morceau de ficelle et un peu de bois.",
+  "ritual": true,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/unseen-servant",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Unseen Servant",
+  "_translated": true
+}

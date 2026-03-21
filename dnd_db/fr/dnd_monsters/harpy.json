@@ -1,0 +1,104 @@
+{
+  "index": "harpy",
+  "name": "Harpie",
+  "size": "Moyenne",
+  "type": "monstruosité",
+  "alignment": "chaotique mauvais",
+  "armor_class": 11,
+  "hit_points": 38,
+  "hit_dice": "7d8",
+  "hit_points_roll": "7d8+7",
+  "speed": {
+    "walk": "6 m.",
+    "fly": "12 m."
+  },
+  "strength": 12,
+  "dexterity": 13,
+  "constitution": 12,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 13,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "Common",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "La harpie effectue deux attaques : une avec ses griffes et une avec sa massue.",
+      "actions": [
+        {
+          "action_name": "Claws",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Club",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Griffes",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, portée 1,5 m, une cible. Touché : 6 (2d4 + 1) dégâts tranchants.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d4+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Club",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, portée 1,5 m, une cible. Touché : 3 (1d4 + 1) dégâts contondants.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d4+1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Chanson de leurre",
+      "desc": "La harpie chante une mélodie magique. Tous les humanoïdes et géants dans un rayon de 90 m. de la harpie qui peut entendre la chanson doit réussir un jet de sauvegarde de Sagesse DD 11 ou être charmée jusqu'à la fin de la chanson. La harpie doit effectuer une action bonus lors de ses tours suivants pour continuer à chanter. Il peut arrêter de chanter à tout moment. La chanson se termine si la harpie est incapable d'agir.\nPendant qu'elle est charmée par la harpie, une cible est neutralisée et ignore les chants des autres harpies. Si la cible charmée mesure plus de 1,5 m. s'éloignant de la harpie, il doit se diriger à son tour vers la harpie par la route la plus directe. Il n'évite pas les attaques d'opportunité, mais avant de se déplacer sur un terrain dommageable, comme de la lave ou une fosse, et chaque fois qu'il subit des dégâts d'une source autre que la harpie, une cible peut répéter le jet de sauvegarde. Une créature peut également refaire le jet de sauvegarde à la fin de chacun de ses tours. Si le jet de sauvegarde d'une créature réussit, l'effet prend fin sur elle.\nUne cible qui réussit son jet de sauvegarde est immunisée contre le chant de cette harpie pendant les prochaines 24 heures.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/harpy.png",
+  "url": "/api/2014/monsters/harpy",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Harpy",
+  "size_en": "Medium",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

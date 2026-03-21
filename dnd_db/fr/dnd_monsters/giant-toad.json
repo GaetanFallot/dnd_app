@@ -1,0 +1,88 @@
+{
+  "index": "giant-toad",
+  "name": "Crapaud géant",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 11,
+  "hit_points": 39,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10+6",
+  "speed": {
+    "walk": "6 m.",
+    "swim": "12 m."
+  },
+  "strength": 15,
+  "dexterity": 13,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 3,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "9 m.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "Amphibie",
+      "desc": "Le crapaud peut respirer de l'air et de l'eau"
+    },
+    {
+      "name": "Saut debout",
+      "desc": "Le saut en longueur du crapaud peut atteindre 6 m. et son saut en hauteur peut atteindre 3 m, avec ou sans départ en courant."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, portée 1,5 m, une cible. Touché : 7 (1d10 + 2) dégâts perforants plus 5 (1d10) dégâts de poison, et la cible est agrippée (évasion DD 13). Jusqu'à la fin de cette lutte, la cible est retenue et le crapaud ne peut pas mordre une autre cible.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d10+2"
+        },
+        {
+          "damage_type": {
+            "index": "poison",
+            "name": "Poison",
+            "url": "/api/2014/damage-types/poison"
+          },
+          "damage_dice": "1d10"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Avaler",
+      "desc": "Le crapaud effectue une attaque de morsure contre une cible de taille moyenne ou plus petite qu'il s'attaque. Si l'attaque réussit, la cible est engloutie et le grappin prend fin. La cible avalée est aveuglée et immobilisée, elle bénéficie d'une couverture totale contre les attaques et autres effets extérieurs au crapaud, et elle subit 10 (3d6) dégâts d'acide au début de chacun des tours du crapaud. Le crapaud ne peut avaler qu’une seule cible à la fois.\nSi le crapaud meurt, une créature avalée n'est plus retenue par celui-ci et peut s'échapper du cadavre en utilisant 1,5 m de mouvement, en sortant à plat ventre.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant-toad.png",
+  "url": "/api/2014/monsters/giant-toad",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Giant Toad",
+  "size_en": "Large",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

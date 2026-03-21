@@ -1,0 +1,166 @@
+{
+  "index": "deva",
+  "name": "Déva",
+  "size": "Moyenne",
+  "type": "céleste",
+  "alignment": "loyal bon",
+  "armor_class": 17,
+  "hit_points": 136,
+  "hit_dice": "16d8",
+  "hit_points_roll": "16d8+64",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "90 ft."
+  },
+  "strength": 18,
+  "dexterity": 18,
+  "constitution": 18,
+  "intelligence": 17,
+  "wisdom": 20,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "radiant",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    }
+  ],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 19
+  },
+  "languages": "all, telepathy 120 ft.",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [
+    {
+      "name": "Armes angéliques",
+      "desc": "Les attaques avec les armes du deva sont magiques. Lorsque le deva frappe avec une arme, celle-ci inflige 4d8 dégâts radiants supplémentaires (inclus dans l'attaque)."
+    },
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité de lancement de sorts du deva est le Charisme (sauvegarde contre les sorts DD 17). Le deva peut de manière innée lancer les sorts suivants, ne nécessitant que des composants verbaux :\nÀ volonté : détecter le mal et le bien\n1/jour chacun : commune, ressusciter les morts"
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le deva a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le deva effectue deux attaques au corps à corps.",
+      "actions": [
+        {
+          "action_name": "Mace",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Masse",
+      "desc": "Attaque au corps à corps avec une arme : +8 pour toucher, atteignez 1,50 m, une cible. Touché : 7 (1d6 + 4) dégâts contondants plus 18 (4d8) dégâts radiants.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6+4"
+        },
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "Radiant",
+            "url": "/api/2014/damage-types/radiant"
+          },
+          "damage_dice": "4d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Toucher curatif",
+      "desc": "Le deva touche une autre créature. La cible récupère magiquement 20 (4d8 + 2) points de vie et est libérée de toute malédiction, maladie, poison, cécité ou surdité.",
+      "usage": {
+        "type": "per day",
+        "times": 3
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Changer de forme",
+      "desc": "Le deva se métamorphose par magie en un humanoïde ou une bête dont le niveau de défi est égal ou inférieur au sien, ou reprend sa vraie forme. Il reprend sa vraie forme s'il meurt. Tout équipement qu'il porte ou transporte est absorbé ou supporté par la nouvelle forme (au choix du deva).\nDans une nouvelle forme, le deva conserve ses statistiques de jeu et sa capacité à parler, mais sa CA, ses modes de déplacement, sa Force, sa Dextérité et ses sens spéciaux sont remplacés par ceux de la nouvelle forme, et il gagne toutes les statistiques et capacités (à l'exception des fonctionnalités de classe, des actions légendaires et des actions de repaire) que possède la nouvelle forme mais qui lui manque.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/deva.png",
+  "url": "/api/2014/monsters/deva",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Deva",
+  "type_en": "celestial",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

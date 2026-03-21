@@ -1,0 +1,144 @@
+{
+  "index": "ice-mephit",
+  "name": "Méphit de glace",
+  "size": "Petite",
+  "type": "élémentaire",
+  "alignment": "neutre mauvais",
+  "armor_class": 11,
+  "hit_points": 21,
+  "hit_dice": "6d6",
+  "hit_points_roll": "6d6",
+  "speed": {
+    "walk": "9 m.",
+    "fly": "9 m."
+  },
+  "strength": 7,
+  "dexterity": 13,
+  "constitution": 10,
+  "intelligence": 9,
+  "wisdom": 11,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "bludgeoning",
+    "fire"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "cold",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 12
+  },
+  "languages": "Aquan, Auran",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "Explosion de la mort",
+      "desc": "Lorsque le méphit meurt, il explose dans un éclat de glace déchiquetée. Chaque créature à moins de 1,5 m. L'un d'entre eux doit effectuer un jet de sauvegarde de Dextérité DD 10, subissant 4 (1d8) dégâts tranchants en cas d'échec, ou la moitié de ces dégâts en cas de réussite."
+    },
+    {
+      "name": "Fausse apparence",
+      "desc": "Tant que le méphit reste immobile, il est impossible de le distinguer d'un éclat de glace ordinaire."
+    },
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "Le méphit peut projeter de manière innée un nuage de brouillard, ne nécessitant aucun composant matériel. Sa capacité innée de lancement de sorts est le charisme."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Griffes",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, allonge 1,5 m, une créature. Touché : 3 (1d4 + 1) dégâts tranchants plus 2 (1d4) dégâts de froid.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "1d4+1"
+        },
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "Cold",
+            "url": "/api/2014/damage-types/cold"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Souffle de givre",
+      "desc": "Le méphit exhale un cône d'air froid de 15 pieds. Chaque créature dans cette zone doit réussir un jet de sauvegarde de Dextérité DD 10, subissant 5 (2d4) dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 6
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 10,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "cold",
+            "name": "Cold",
+            "url": "/api/2014/damage-types/cold"
+          },
+          "damage_dice": "2d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/ice-mephit.png",
+  "url": "/api/2014/monsters/ice-mephit",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Ice Mephit",
+  "size_en": "Small",
+  "type_en": "elemental",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

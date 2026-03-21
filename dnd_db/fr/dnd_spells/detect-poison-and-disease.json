@@ -1,0 +1,63 @@
+{
+  "higher_level": [],
+  "index": "detect-poison-and-disease",
+  "name": "Détecter le poison et la maladie",
+  "desc": [
+    "Pendant toute la durée du sort, vous pouvez sentir la présence et l'emplacement de poisons, de créatures venimeuses et de maladies dans un rayon de 9 mètres autour de vous. Vous identifiez également le type de poison, de créature venimeuse ou de maladie dans chaque cas.\nLe sort peut pénétrer la plupart des barrières, mais il est bloqué par 1 pied de pierre, 1 pouce de métal commun, une fine feuille de plomb ou 3 pieds de bois ou de terre."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une feuille d'if.",
+  "ritual": true,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 1,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 30
+  },
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/detect-poison-and-disease",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Detect Poison and Disease",
+  "_translated": true
+}

@@ -1,0 +1,184 @@
+{
+  "index": "balor",
+  "name": "Balor",
+  "size": "Très grande",
+  "type": "fiélon",
+  "subtype": "demon",
+  "alignment": "chaotique mauvais",
+  "armor_class": 19,
+  "hit_points": 262,
+  "hit_dice": "21d12",
+  "hit_points_roll": "21d12+126",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "80 ft."
+  },
+  "strength": 26,
+  "dexterity": 15,
+  "constitution": 22,
+  "intelligence": 20,
+  "wisdom": 16,
+  "charisma": 22,
+  "proficiencies": [
+    {
+      "value": 14,
+      "proficiency": {
+        "index": "saving-throw-str",
+        "name": "Saving Throw: STR",
+        "url": "/api/2014/proficiencies/saving-throw-str"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "lightning",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 13
+  },
+  "languages": "Abyssal, telepathy 120 ft.",
+  "challenge_rating": 19,
+  "proficiency_bonus": 6,
+  "xp": 22000,
+  "special_abilities": [
+    {
+      "name": "L'agonie",
+      "desc": "Lorsque le balor meurt, il explose et chaque créature à moins de 9 mètres de lui doit effectuer un jet de sauvegarde de Dextérité DD 20, subissant 70 (20d6) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite. L'explosion enflamme les objets inflammables dans cette zone qui ne sont pas portés ou transportés, et détruit les armes du balor."
+    },
+    {
+      "name": "Aura de feu",
+      "desc": "Au début de chacun des tours du balor, chaque créature à moins de 1,50 mètre autour de lui subit 10 (3d6) dégâts de feu, et les objets inflammables dans l'aura qui ne sont pas portés ou transportés s'enflamment. Une créature qui touche le balor ou le frappe avec une attaque de mêlée alors qu'elle se trouve à moins de 1,50 mètre de lui subit 10 (3d6) dégâts de feu."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le balor a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    },
+    {
+      "name": "Armes magiques",
+      "desc": "Les attaques avec les armes du balor sont magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le balor effectue deux attaques : une avec son épée longue et une avec son fouet.",
+      "actions": [
+        {
+          "action_name": "Longsword",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Whip",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Épée longue",
+      "desc": "Attaque au corps à corps avec une arme : +14 pour toucher, portée 10 pieds, une cible. Touché : 21 (3d8 + 8) dégâts tranchants plus 13 (3d8) dégâts de foudre. Si le balor réussit un coup critique, il lance les dés de dégâts trois fois au lieu de deux.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "3d8+8"
+        },
+        {
+          "damage_type": {
+            "index": "lightning",
+            "name": "Lightning",
+            "url": "/api/2014/damage-types/lightning"
+          },
+          "damage_dice": "3d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Fouet",
+      "desc": "Attaque au corps à corps avec une arme : +14 pour toucher, atteignez 30 pieds, une cible. Touché : 15 (2d6 + 8) dégâts tranchants plus 10 (3d6) dégâts de feu, et la cible doit réussir un jet de sauvegarde de Force DD 20 ou être tirée jusqu'à 25 pieds vers le balor.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+8"
+        },
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Téléportation",
+      "desc": "Le balor se téléporte comme par magie, avec tout l'équipement qu'il porte ou transporte, jusqu'à 120 pieds dans un espace inoccupé qu'il peut voir.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/balor.png",
+  "url": "/api/2014/monsters/balor",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Balor",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

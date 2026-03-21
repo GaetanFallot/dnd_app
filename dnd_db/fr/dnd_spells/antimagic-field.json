@@ -1,0 +1,47 @@
+{
+  "higher_level": [],
+  "index": "antimagic-field",
+  "name": "Champ antimagique",
+  "desc": [
+    "Une sphère invisible d’antimagie d’un rayon de 3 mètres vous entoure. Cette zone est séparée de l’énergie magique qui imprègne le multivers. Dans la sphère, les sorts ne peuvent pas être lancés, les créatures invoquées disparaissent et même les objets magiques deviennent banals. Jusqu'à la fin du sort, la sphère se déplace avec vous, centrée sur vous.\nLes sorts et autres effets magiques, à l'exception de ceux créés par un artefact ou une divinité, sont supprimés dans la sphère et ne peuvent pas y pénétrer. Un emplacement dépensé pour lancer un sort supprimé est consommé. Lorsqu'un effet est supprimé, il ne fonctionne pas, mais le temps passé à être supprimé compte dans sa durée.\n***Effets ciblés.*** Les sorts et autres effets magiques, tels que le missile magique et le charme de personne, qui ciblent une créature ou un objet dans la sphère n'ont aucun effet sur cette cible.\n***Zones de magie.*** La zone d'un autre sort ou effet magique, comme une boule de feu, ne peut pas s'étendre dans la sphère. Si la sphère chevauche une zone de magie, la partie de la zone couverte par la sphère est supprimée. Par exemple, les flammes créées par un mur de feu sont supprimées à l’intérieur de la sphère, créant un espace dans le mur si le chevauchement est suffisamment grand.\n***Sorts.*** Tout sort actif ou autre effet magique sur une créature ou un objet dans la sphère est supprimé tant que la créature ou l'objet s'y trouve.\n***Objets magiques.*** Les propriétés et pouvoirs des objets magiques sont supprimés dans la sphère. Par exemple, une épée longue +1 dans la sphère fonctionne comme une épée longue non magique.\nLes propriétés et pouvoirs d'une arme magique sont supprimés si elle est utilisée contre une cible dans la sphère ou si elle est brandie par un attaquant dans la sphère. Si une arme magique ou une munition magique quitte complètement la sphère (par exemple, si vous tirez une flèche magique ou lancez une lance magique sur une cible en dehors de la sphère), la magie de l'objet cesse d'être supprimée dès qu'elle sort.\n***Voyage magique.*** La téléportation et le voyage planaire ne fonctionnent pas dans la sphère, que la sphère soit la destination ou le point de départ d'un tel voyage magique. Un portail vers un autre lieu, monde ou plan d'existence, ainsi qu'une ouverture vers un espace extradimensionnel tel que celui créé par le sort de tour de corde, se ferme temporairement dans la sphère.\n***Créatures et objets.*** Une créature ou un objet invoqué ou créé par magie disparaît temporairement de la sphère. Une telle créature réapparaît instantanément une fois que l'espace qu'elle occupait n'est plus dans la sphère.\n***Dissipation de la magie.*** Les sorts et effets magiques tels que la dissipation de la magie n'ont aucun effet sur la sphère. De même, les sphères créées par différents sorts de champ antimagique ne s'annulent pas."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une pincée de poudre de fer ou de limaille de fer.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 8,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 10
+  },
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/antimagic-field",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Antimagic Field",
+  "_translated": true
+}

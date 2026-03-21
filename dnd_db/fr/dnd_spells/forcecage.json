@@ -1,0 +1,52 @@
+{
+  "higher_level": [],
+  "index": "forcecage",
+  "name": "Cage de force",
+  "desc": [
+    "Une prison immobile, invisible, en forme de cube, composée de force magique, surgit autour d'une zone que vous choisissez à portée. La prison peut être une cage ou une boîte solide, selon votre choix.\nUne prison en forme de cage peut mesurer jusqu'à 20 pieds de côté et est constituée de barres de 1/2 pouce de diamètre espacées de 1/2 pouce.\nUne prison en forme de boîte peut mesurer jusqu'à 3 mètres de côté, créant une barrière solide qui empêche toute matière de la traverser et bloque tout sort lancé dans ou hors de la zone.\nLorsque vous lancez le sort, toute créature se trouvant complètement à l'intérieur de la zone de la cage est piégée. Les créatures partiellement présentes dans la zone, ou celles trop grandes pour tenir à l'intérieur de la zone, sont repoussées du centre de la zone jusqu'à ce qu'elles soient complètement à l'extérieur de la zone.\nUne créature à l’intérieur de la cage ne peut pas en sortir par des moyens non magiques. Si la créature tente d'utiliser la téléportation ou le voyage interplanaire pour quitter la cage, elle doit d'abord effectuer un jet de sauvegarde de charisme. En cas de réussite, la créature peut utiliser cette magie pour sortir de la cage. En cas d'échec, la créature ne peut pas sortir de la cage et perd l'utilisation du sort ou de l'effet. La cage s'étend également dans le plan Éthéré, bloquant les voyages éthérés.\nCe sort ne peut pas être dissipé par la dissipation de la magie."
+  ],
+  "range": "100 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Poussière de rubis d'une valeur de 1 500 po.",
+  "ritual": false,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 20
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/forcecage",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Forcecage",
+  "_translated": true
+}

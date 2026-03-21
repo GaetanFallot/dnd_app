@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "guardian-of-faith",
+  "name": "Gardien de la foi",
+  "desc": [
+    "Un grand gardien spectral apparaît et plane pendant toute la durée dans un espace inoccupé de votre choix que vous pouvez voir à portée. Le gardien occupe cet espace et est indistinct, à l'exception d'une épée et d'un bouclier brillants arborant le symbole de votre divinité.\nToute créature qui vous est hostile et qui se déplace vers un espace à moins de 3 mètres du gardien pour la première fois au cours d'un tour doit réussir un jet de sauvegarde de dextérité. La créature subit 20 dégâts radiants en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Le gardien disparaît lorsqu'il a infligé un total de 60 dégâts."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "8 heures",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "damage": {
+    "damage_type": {
+      "index": "radiant",
+      "name": "Radiant",
+      "url": "/api/2014/damage-types/radiant"
+    },
+    "damage_at_slot_level": {
+      "4": "20"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "DEX",
+      "url": "/api/2014/ability-scores/dex"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "cylinder",
+    "size": 10
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/guardian-of-faith",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Guardian of Faith",
+  "material": "",
+  "_translated": true
+}

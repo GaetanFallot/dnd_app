@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "barkskin",
+  "name": "Écorce",
+  "desc": [
+    "Vous touchez une créature consentante. Jusqu'à la fin du sort, la peau de la cible a une apparence rugueuse, semblable à celle d'une écorce, et la CA de la cible ne peut pas être inférieure à 16, quel que soit le type d'armure qu'elle porte."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une poignée d'écorce de chêne.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/barkskin",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Barkskin",
+  "_translated": true
+}

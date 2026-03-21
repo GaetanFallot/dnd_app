@@ -1,0 +1,43 @@
+{
+  "higher_level": [],
+  "index": "project-image",
+  "name": "Image du projet",
+  "desc": [
+    "Vous créez une copie illusoire de vous-même qui dure pour la durée. La copie peut apparaître à n'importe quel endroit à portée que vous avez vu auparavant, quels que soient les obstacles intermédiaires. L’illusion vous ressemble, mais elle est intangible. Si l'illusion subit des dégâts, elle disparaît et le sort prend fin.\nVous pouvez utiliser votre action pour déplacer cette illusion jusqu'à deux fois votre vitesse, et lui faire faire des gestes, parler et se comporter comme vous le souhaitez. Cela imite parfaitement vos manières.\nVous pouvez voir à travers ses yeux et entendre à travers ses oreilles comme si vous étiez dans son espace. À votre tour, en tant qu'action bonus, vous pouvez passer de l'utilisation de ses sens aux vôtres, ou inversement. Pendant que vous utilisez ses sens, vous êtes aveuglé et assourdi par rapport à votre propre environnement.\nL'interaction physique avec l'image révèle qu'elle est une illusion, car les choses peuvent passer à travers elle. Une créature qui utilise son action pour examiner l'image peut déterminer qu'il s'agit d'une illusion en réussissant un test d'Intelligence (Enquête) contre votre DD de sauvegarde de sort. Si une créature discerne l'illusion pour ce qu'elle est, elle peut voir à travers l'image, et tout bruit qu'elle fait semble creux pour la créature."
+  ],
+  "range": "500 milles",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une petite réplique de vous fabriquée à partir de matériaux valant au moins 5 po.",
+  "ritual": false,
+  "duration": "Jusqu'à 24 heures",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 7,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/project-image",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Project Image",
+  "_translated": true
+}

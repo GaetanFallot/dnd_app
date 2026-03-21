@@ -1,0 +1,49 @@
+{
+  "higher_level": [],
+  "index": "sanctuary",
+  "name": "Sanctuaire",
+  "desc": [
+    "Vous protégez une créature à portée contre une attaque. Jusqu'à la fin du sort, toute créature qui cible la créature protégée avec une attaque ou un sort nuisible doit d'abord effectuer un jet de sauvegarde de sagesse. En cas d'échec, la créature doit choisir une nouvelle cible ou perdre l'attaque ou le sort. Ce sort ne protège pas la créature protégée des effets de zone, comme l'explosion d'une boule de feu.\nSi la créature protégée effectue une attaque ou lance un sort qui affecte une créature ennemie, ce sort prend fin."
+  ],
+  "range": "9 m",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un petit miroir argenté.",
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action bonus",
+  "level": 1,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "devotion",
+      "name": "Devotion",
+      "url": "/api/2014/subclasses/devotion"
+    }
+  ],
+  "url": "/api/2014/spells/sanctuary",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Sanctuary",
+  "_translated": true
+}

@@ -1,0 +1,48 @@
+{
+  "higher_level": [],
+  "index": "shield",
+  "name": "Bouclier",
+  "desc": [
+    "Une barrière invisible de force magique apparaît et vous protège. Jusqu'au début de votre prochain tour, vous disposez d'un bonus de +5 à la CA, y compris contre l'attaque déclenchante, et vous ne subissez aucun dégât de missile magique."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 tour",
+  "concentration": false,
+  "casting_time": "1 réaction",
+  "level": 1,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/shield",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Shield",
+  "material": "",
+  "_translated": true
+}

@@ -1,0 +1,130 @@
+{
+  "index": "gray-ooze",
+  "name": "Limon gris",
+  "size": "Moyenne",
+  "type": "vase",
+  "alignment": "sans alignement",
+  "armor_class": 8,
+  "hit_points": 22,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8+9",
+  "speed": {
+    "walk": "3 m.",
+    "climb": "3 m."
+  },
+  "strength": 12,
+  "dexterity": 6,
+  "constitution": 16,
+  "intelligence": 1,
+  "wisdom": 6,
+  "charisma": 2,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "fire"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "deafened",
+      "name": "Deafened",
+      "url": "/api/2014/conditions/deafened"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    }
+  ],
+  "senses": {
+    "blindsight": "18 m. (blind beyond this radius)",
+    "passive_perception": 8
+  },
+  "languages": "",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "Amorphe",
+      "desc": "Le limon peut se déplacer dans un espace aussi étroit que 1 pouce de large sans être pressé."
+    },
+    {
+      "name": "Corroder le métal",
+      "desc": "Toute arme non magique en métal qui touche le limon se corrode. Après avoir infligé des dégâts, l'arme subit un malus permanent et cumulatif de -1 aux jets de dégâts. Si son malus descend à -5, l'arme est détruite. Les munitions non magiques en métal qui frappent le limon sont détruites après avoir infligé des dégâts.\nLe limon peut ronger du métal non magique de 2 pouces d’épaisseur en 1 tour."
+    },
+    {
+      "name": "Fausse apparence",
+      "desc": "Tant que le limon reste immobile, il est impossible de le distinguer d'une mare huileuse ou d'une roche humide."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Pseudopode",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, portée 1,5 m, une cible. Touché : 4 (1d6 + 1) dégâts contondants plus 7 (2d6) dégâts d'acide, et si la cible porte une armure métallique non magique, son armure est en partie corrodée et subit un malus permanent et cumulatif de -1 à la CA qu'elle offre. L'armure est détruite si le malus réduit sa CA à 10.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6+1"
+        },
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/2014/damage-types/acid"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/gray-ooze.png",
+  "url": "/api/2014/monsters/gray-ooze",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Gray Ooze",
+  "size_en": "Medium",
+  "type_en": "ooze",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

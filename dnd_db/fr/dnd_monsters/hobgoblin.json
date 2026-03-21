@@ -1,0 +1,107 @@
+{
+  "index": "hobgoblin",
+  "name": "Lutin",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "goblinoid",
+  "alignment": "loyal mauvais",
+  "armor_class": 18,
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+2",
+  "speed": {
+    "walk": "9 m."
+  },
+  "strength": 13,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 9,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 10
+  },
+  "languages": "Common, Goblin",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "Avantage martial",
+      "desc": "Une fois par tour, le hobgobelin peut infliger 7 (2d6) dégâts supplémentaires à une créature qu'il touche avec une attaque avec une arme si cette créature se trouve à moins de 1,5 m. d'un allié du hobgobelin qui n'est pas incapable d'agir."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Épée longue",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, portée 1,5 m, une cible. Touché : 5 (1d8 + 1) dégâts tranchants, ou 6 (1d10 + 1) dégâts tranchants s'il est utilisé à deux mains.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "notes": "One handed",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "damage_dice": "1d8+1"
+              },
+              {
+                "option_type": "damage",
+                "notes": "Two handed",
+                "damage_type": {
+                  "index": "slashing",
+                  "name": "Slashing",
+                  "url": "/api/2014/damage-types/slashing"
+                },
+                "damage_dice": "1d10+1"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Arc",
+      "desc": "Attaque avec arme à distance : +3 pour toucher, portée 150/180 m., une cible. Touché : 5 (1d8 + 1) dégâts perforants.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d8+1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/hobgoblin.png",
+  "url": "/api/2014/monsters/hobgoblin",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Hobgoblin",
+  "size_en": "Medium",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

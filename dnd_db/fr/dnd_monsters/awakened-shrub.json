@@ -1,0 +1,72 @@
+{
+  "index": "awakened-shrub",
+  "name": "Arbuste éveillé",
+  "desc": "An awakened shrub is an ordinary shrub given sentience and mobility by the awaken spell or similar magic.",
+  "size": "Petite",
+  "type": "plante",
+  "alignment": "sans alignement",
+  "armor_class": 9,
+  "hit_points": 10,
+  "hit_dice": "3d6",
+  "hit_points_roll": "3d6",
+  "speed": {
+    "walk": "20 ft."
+  },
+  "strength": 3,
+  "dexterity": 8,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [
+    "fire"
+  ],
+  "damage_resistances": [
+    "piercing"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "one language known by its creator",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "Fausse apparence",
+      "desc": "Tant que l'arbuste reste immobile, il est impossible de le distinguer d'un arbuste normal."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Râteau",
+      "desc": "Attaque au corps à corps avec une arme : +1 pour toucher, atteignez 1,50 m, une cible. Touché : 1 (1d4 - 1) dégâts tranchants.",
+      "attack_bonus": 1,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "1d4-1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/awakened-shrub.png",
+  "url": "/api/2014/monsters/awakened-shrub",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Awakened Shrub",
+  "type_en": "plant",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

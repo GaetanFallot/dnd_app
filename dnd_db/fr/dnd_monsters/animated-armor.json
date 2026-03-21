@@ -1,0 +1,130 @@
+{
+  "index": "animated-armor",
+  "name": "Armure animée",
+  "size": "Moyenne",
+  "type": "artificiel",
+  "alignment": "sans alignement",
+  "armor_class": 18,
+  "hit_points": 33,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8+6",
+  "speed": {
+    "walk": "7.5 m."
+  },
+  "strength": 14,
+  "dexterity": 11,
+  "constitution": 13,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic"
+  ],
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "deafened",
+      "name": "Deafened",
+      "url": "/api/2014/conditions/deafened"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "blindsight": "18 m. (blind beyond this radius)",
+    "passive_perception": 6
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "Susceptibilité antimagique",
+      "desc": "L'armure est neutralisée lorsqu'elle se trouve dans la zone d'un champ antimagique. Si elle est ciblée par dissipation de la magie, l'armure doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts du lanceur ou tomber inconsciente pendant 1 minute."
+    },
+    {
+      "name": "Fausse apparence",
+      "desc": "Tant que l'armure reste immobile, elle est impossible à distinguer d'une armure normale."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "L'armure effectue deux attaques au corps à corps.",
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Claquer",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, portée 1,5 m, une cible. Touché : 5 (1d6 + 2) dégâts contondants.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/animated-armor.png",
+  "url": "/api/2014/monsters/animated-armor",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Animated Armor",
+  "size_en": "Medium",
+  "type_en": "construct",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

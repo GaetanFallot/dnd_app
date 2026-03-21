@@ -1,0 +1,71 @@
+{
+  "higher_level": [],
+  "index": "sunburst",
+  "name": "Coup de soleil",
+  "desc": [
+    "La lumière du soleil brillante clignote dans un rayon de 60 pieds centré sur un point que vous choisissez à portée. Chaque créature dans cette lumière doit effectuer un jet de sauvegarde de constitution. En cas d'échec, la créature subit 12d6 dégâts radiants et est aveuglée pendant 1 minute. En cas de sauvegarde réussie, il subit deux fois moins de dégâts et n'est pas aveuglé par ce sort. Les morts-vivants et les limons sont désavantagés lors de ce jet de sauvegarde.\nUne créature aveuglée par ce sort effectue un nouveau jet de sauvegarde de constitution à la fin de chacun de ses tours. En cas de sauvegarde réussie, il n'est plus aveuglé.\nCe sort dissipe toute obscurité dans sa zone créée par un sort."
+  ],
+  "range": "45 m",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Du feu et un morceau de pierre de soleil.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 8,
+  "damage": {
+    "damage_type": {
+      "index": "radiant",
+      "name": "Radiant",
+      "url": "/api/2014/damage-types/radiant"
+    },
+    "damage_at_slot_level": {
+      "8": "12d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    },
+    "dc_success": "half",
+    "desc": "On failure, the creature is also blinded for 1 minute."
+  },
+  "area_of_effect": {
+    "type": "cylinder",
+    "size": 60
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/sunburst",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Sunburst",
+  "_translated": true
+}

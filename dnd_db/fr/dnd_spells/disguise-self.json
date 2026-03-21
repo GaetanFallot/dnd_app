@@ -1,0 +1,53 @@
+{
+  "higher_level": [],
+  "index": "disguise-self",
+  "name": "Se déguiser",
+  "desc": [
+    "Vous vous donnez, y compris vos vêtements, armures, armes et autres biens personnels, une apparence différente jusqu'à la fin du sort ou jusqu'à ce que vous utilisiez votre action pour le rejeter. Vous pouvez paraître 1 pied plus petit ou plus grand et paraître mince, gros ou entre les deux. Vous ne pouvez pas changer votre type de corps, vous devez donc adopter une forme qui a la même disposition de base des membres. Sinon, l’étendue de l’illusion dépend de vous.\nLes changements provoqués par ce sort ne résistent pas à l’inspection physique. Par exemple, si vous utilisez ce sort pour ajouter un chapeau à votre tenue, les objets passent à travers le chapeau et quiconque le touche ne ressentira rien ou sentira votre tête et vos cheveux. Si vous utilisez ce sort pour paraître plus mince que vous ne l'êtes, la main de quelqu'un qui tend la main pour vous toucher vous heurtera alors qu'elle semble encore en l'air.\nPour discerner que vous êtes déguisé, une créature peut utiliser son action pour inspecter votre apparence et doit réussir un test d'Intelligence (Enquête) contre votre DD de sauvegarde de sort."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/disguise-self",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Disguise Self",
+  "material": "",
+  "_translated": true
+}

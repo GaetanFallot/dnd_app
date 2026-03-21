@@ -1,0 +1,38 @@
+{
+  "higher_level": [],
+  "index": "clone",
+  "name": "Cloner",
+  "desc": [
+    "Ce sort fait croître une copie inerte d'une créature vivante comme protection contre la mort. Ce clone se forme à l'intérieur d'un récipient scellé et atteint sa taille maximale et sa maturité après 120 jours ; vous pouvez également choisir que le clone soit une version plus jeune de la même créature. Il reste inerte et perdure indéfiniment, tant que son récipient reste intact.\nÀ tout moment après la maturité du clone, si la créature originale meurt, son âme est transférée au clone, à condition que l'âme soit libre et disposée à revenir. Le clone est physiquement identique à l'original et a la même personnalité, les mêmes souvenirs et capacités, mais aucun des équipements de l'original. Les restes physiques de la créature originelle, s'ils existent encore, deviennent inertes et ne peuvent plus reprendre vie, puisque l'âme de la créature est ailleurs."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un diamant d'une valeur d'au moins 1 000 po et au moins 1 pouce cube de chair de la créature à cloner, que le sort consomme, et un récipient d'une valeur d'au moins 2 000 po doté d'un couvercle refermable et suffisamment grand pour contenir une créature de taille M, comme une énorme urne, un cercueil, un kyste rempli de boue dans le sol ou un récipient en cristal rempli d'eau salée.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 heure",
+  "level": 8,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/clone",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Clone",
+  "_translated": true
+}

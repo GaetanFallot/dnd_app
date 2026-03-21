@@ -1,0 +1,128 @@
+{
+  "index": "gelatinous-cube",
+  "name": "Cube gélatineux",
+  "size": "Grande",
+  "type": "vase",
+  "alignment": "sans alignement",
+  "armor_class": 6,
+  "hit_points": 84,
+  "hit_dice": "8d10",
+  "hit_points_roll": "8d10+40",
+  "speed": {
+    "walk": "4.5 m."
+  },
+  "strength": 14,
+  "dexterity": 3,
+  "constitution": 20,
+  "intelligence": 1,
+  "wisdom": 6,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "deafened",
+      "name": "Deafened",
+      "url": "/api/2014/conditions/deafened"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    }
+  ],
+  "senses": {
+    "blindsight": "18 m. (blind beyond this radius)",
+    "passive_perception": 8
+  },
+  "languages": "",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "Cube de limon",
+      "desc": "Le cube occupe tout son espace. D'autres créatures peuvent entrer dans l'espace, mais une créature qui le fait est soumise à l'Engloutissement du cube et est désavantagée au jet de sauvegarde.\nLes créatures à l'intérieur du cube sont visibles mais sont totalement couvertes.\nUne créature à moins de 1,5 m du cube peut effectuer une action pour retirer une créature ou un objet du cube. Cela nécessite un test de Force DD 12 réussi, et la créature qui tente de subir 10 (3d6) dégâts d'acide.\nLe cube ne peut contenir qu'une seule créature de grande taille ou jusqu'à quatre créatures de taille moyenne ou plus petite à la fois."
+    },
+    {
+      "name": "Transparent",
+      "desc": "Même lorsque le cube est bien en vue, il faut réussir un test de Sagesse (Perception) DD 15 pour repérer un cube qui n'a ni bougé ni attaqué. Une créature qui tente d'entrer dans l'espace du cube sans en avoir conscience est surprise par le cube."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Pseudopode",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,5 m, une créature. Touché : 10 (3d6) dégâts d'acide.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/2014/damage-types/acid"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Engloutir",
+      "desc": "Le cube avance à sa vitesse. Ce faisant, il peut entrer dans les espaces des créatures de grande ou de petite taille. Chaque fois que le cube entre dans l'espace d'une créature, celle-ci doit effectuer un jet de sauvegarde de Dextérité DD 12.\nEn cas de sauvegarde réussie, la créature peut choisir d'être repoussée de 1,5 m en arrière ou sur le côté du cube. Une créature qui choisit de ne pas être poussée subit les conséquences d'un jet de sauvegarde raté.\nEn cas d'échec, le cube entre dans l'espace de la créature, celle-ci subit 10 (3d6) dégâts d'acide et est engloutie. La créature engloutie ne peut plus respirer, est immobilisée et subit 21 (6d6) dégâts d'acide au début de chacun des tours du cube. Lorsque le cube se déplace, la créature engloutie se déplace avec lui.\nUne créature engloutie peut tenter de s'échapper en effectuant une action pour effectuer un test de Force DD 12. En cas de réussite, la créature s'échappe et pénètre dans un espace de son choix à moins de 1,5 m du cube.",
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 12,
+        "success_type": "none"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "acid",
+            "name": "Acid",
+            "url": "/api/2014/damage-types/acid"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/gelatinous-cube.png",
+  "url": "/api/2014/monsters/gelatinous-cube",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Gelatinous Cube",
+  "size_en": "Large",
+  "type_en": "ooze",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

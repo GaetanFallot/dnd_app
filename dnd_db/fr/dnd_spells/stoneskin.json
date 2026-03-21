@@ -1,0 +1,59 @@
+{
+  "higher_level": [],
+  "index": "stoneskin",
+  "name": "Peau de pierre",
+  "desc": [
+    "Ce sort rend la chair d'une créature volontaire que vous touchez aussi dure que la pierre. Jusqu'à la fin du sort, la cible a une résistance aux dégâts non magiques contondants, perçants et tranchants."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Poussière de diamant d'une valeur de 100 po, que le sort consomme.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/stoneskin",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Stoneskin",
+  "_translated": true
+}

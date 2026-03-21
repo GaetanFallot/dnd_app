@@ -1,0 +1,103 @@
+{
+  "index": "mage",
+  "name": "Mage",
+  "desc": "Mages spend their lives in the study and practice of magic. Good-aligned mages offer counsel to nobles and others in power, while evil mages dwell in isolated sites to perform unspeakable experiments without interference.",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "any race",
+  "alignment": "tout alignement",
+  "armor_class": 12,
+  "hit_points": 40,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8",
+  "speed": {
+    "walk": "9 m."
+  },
+  "strength": 9,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 17,
+  "wisdom": 12,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-int",
+        "name": "Saving Throw: INT",
+        "url": "/api/2014/proficiencies/saving-throw-int"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-arcana",
+        "name": "Skill: Arcana",
+        "url": "/api/2014/proficiencies/skill-arcana"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-history",
+        "name": "Skill: History",
+        "url": "/api/2014/proficiencies/skill-history"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "any four languages",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "special_abilities": [
+    {
+      "name": "Lancement de sorts",
+      "desc": "Le mage est un lanceur de sorts de niveau 9. Sa capacité de lancement de sorts est l'Intelligence (sauvegarde des sorts DD 14, +6 pour toucher avec les attaques de sorts). Le mage a préparé les sorts de sorcier suivants :\n\n- Cantrips (à volonté) : éclair de feu, lumière, main de mage, prestidigitation\n- 1er niveau (4 emplacements) : détection de magie, armure de mage, missile magique, bouclier\n- 2ème niveau (3 emplacements) : pas brumeux, suggestion\n- 3ème niveau (3 emplacements) : contresort, boule de feu, mouche\n- 4ème niveau (3 emplacements) : plus grande invisibilité, tempête de verglas\n- 5ème niveau (1 emplacement) : cône de froid"
+    }
+  ],
+  "actions": [
+    {
+      "name": "Poignard",
+      "desc": "Attaque au corps à corps ou à distance avec une arme : +5 pour toucher, atteignez 1,5 m. ou portée 20/18 m., une cible. Touché : 4 (1d4 + 2) dégâts perforants.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/mage.png",
+  "url": "/api/2014/monsters/mage",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Mage",
+  "size_en": "Medium",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

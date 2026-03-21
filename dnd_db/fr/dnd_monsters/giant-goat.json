@@ -1,0 +1,72 @@
+{
+  "index": "giant-goat",
+  "name": "Chèvre géante",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 11,
+  "hit_points": 19,
+  "hit_dice": "3d10",
+  "hit_points_roll": "3d10+3",
+  "speed": {
+    "walk": "12 m."
+  },
+  "strength": 17,
+  "dexterity": 11,
+  "constitution": 12,
+  "intelligence": 3,
+  "wisdom": 12,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "Charge",
+      "desc": "Si la chèvre bouge d'au moins 6 m. directement vers une cible puis la frappe avec une attaque bélier au même tour, la cible subit 5 (2d4) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force DD 13 ou être mise à terre."
+    },
+    {
+      "name": "Au pied sûr",
+      "desc": "La chèvre a un avantage aux jets de sauvegarde de Force et de Dextérité contre les effets qui la mettraient à terre."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bélier",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, portée 1,5 m, une cible. Touché : 8 (2d4 + 3) dégâts contondants.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d4+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/giant-goat.png",
+  "url": "/api/2014/monsters/giant-goat",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Giant Goat",
+  "size_en": "Large",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

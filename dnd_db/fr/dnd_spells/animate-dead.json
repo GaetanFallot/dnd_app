@@ -1,0 +1,51 @@
+{
+  "index": "animate-dead",
+  "name": "Animer les morts",
+  "desc": [
+    "Ce sort crée un serviteur mort-vivant. Choisissez un tas d'os ou le cadavre d'un humanoïde de taille moyenne ou petite à portée. Votre sort imprègne la cible d'une imitation immonde de la vie, l'élevant comme une créature mort-vivante. La cible devient un squelette si vous choisissez des os ou un zombie si vous choisissez un cadavre (le MJ dispose des statistiques de jeu de la créature).\nÀ chacun de vos tours, vous pouvez utiliser une action bonus pour commander mentalement n'importe quelle créature que vous avez créée avec ce sort si la créature se trouve à moins de 60 pieds de vous (si vous contrôlez plusieurs créatures, vous pouvez commander n'importe laquelle ou toutes en même temps, en émettant le même ordre à chacune d'entre elles). Vous décidez quelle action la créature entreprendra et où elle se déplacera lors de son prochain tour, ou vous pouvez émettre un ordre général, comme garder une pièce ou un couloir particulier. Si vous ne donnez aucun ordre, la créature se défend uniquement contre les créatures hostiles. Une fois l'ordre donné, la créature continue de le suivre jusqu'à ce que sa tâche soit accomplie.\nLa créature est sous votre contrôle pendant 24 heures, après quoi elle cesse d'obéir aux ordres que vous lui avez donnés. Pour conserver le contrôle de la créature pendant encore 24 heures, vous devez lancer à nouveau ce sort sur la créature avant la fin de la période de 24 heures en cours. Cette utilisation du sort réaffirme votre contrôle sur un maximum de quatre créatures que vous avez animées avec ce sort, plutôt que d'en animer une nouvelle."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 4 ou supérieur, vous animez ou réaffirmez le contrôle de deux créatures mort-vivantes supplémentaires pour chaque niveau d'emplacement supérieur au 3. Chacune des créatures doit provenir d’un cadavre ou d’un tas d’os différent."
+  ],
+  "range": "10 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une goutte de sang, un morceau de chair et une pincée de poussière d'os.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 3,
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/animate-dead",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Animate Dead",
+  "_translated": true
+}

@@ -1,0 +1,57 @@
+{
+  "higher_level": [],
+  "index": "speak-with-plants",
+  "name": "Parler avec les plantes",
+  "desc": [
+    "Vous confèrez aux plantes à moins de 9 m de vous une sensibilité et une animation limitées, leur donnant la capacité de communiquer avec vous et de suivre vos commandes simples. Vous pouvez interroger les plantes sur les événements survenus dans la zone du sort au cours de la journée écoulée, obtenant ainsi des informations sur les créatures décédées, la météo et d'autres circonstances.\nVous pouvez également transformer un terrain difficile causé par la croissance des plantes (comme les fourrés et les sous-bois) en terrain ordinaire qui dure pendant toute la durée du jeu. Ou vous pouvez transformer un terrain ordinaire où des plantes sont présentes en un terrain difficile qui dure pendant toute la durée, faisant en sorte que les vignes et les branches gênent les poursuivants, par exemple.\nLes plantes pourront peut-être effectuer d'autres tâches en votre nom, à la discrétion du MJ. Le sort ne permet pas aux plantes de se déraciner et de se déplacer, mais elles peuvent déplacer librement les branches, les vrilles et les tiges.\nSi une créature végétale se trouve dans la zone, vous pouvez communiquer avec elle comme si vous partagiez un langage commun, mais vous n'obtenez aucune capacité magique pour l'influencer.\nCe sort peut amener les plantes créées par le sort d'enchev��trement à libérer une créature retenue."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "10 minutes",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 30
+  },
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/speak-with-plants",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Speak with Plants",
+  "material": "",
+  "_translated": true
+}

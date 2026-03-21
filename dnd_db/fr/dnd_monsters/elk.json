@@ -1,0 +1,84 @@
+{
+  "index": "elk",
+  "name": "Wapiti",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 10,
+  "hit_points": 13,
+  "hit_dice": "2d10",
+  "hit_points_roll": "2d10+2",
+  "speed": {
+    "walk": "15 m."
+  },
+  "strength": 16,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 2,
+  "wisdom": 10,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "Charge",
+      "desc": "Si le wapiti se déplace d'au moins 6 m. directement vers une cible puis la frappe avec une attaque bélier au même tour, la cible subit 7 (2d6) dégâts supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force DD 13 ou être mise à terre."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bélier",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, portée 1,5 m, une cible. Touché : 6 (1d6 + 3) dégâts contondants.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Sabots",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, portée 1,5 m, une créature à terre. Touché : 8 (2d4 + 3) dégâts contondants.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d4+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/elk.png",
+  "url": "/api/2014/monsters/elk",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Elk",
+  "size_en": "Large",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,77 @@
+{
+  "index": "cloudkill",
+  "name": "Tuer les nuages",
+  "desc": [
+    "Vous créez une sphère de brouillard venimeux jaune-vert d'un rayon de 6 mètres centrée sur un point que vous choisissez à portée. Le brouillard se répand dans les virages. Cela dure pendant toute la durée ou jusqu'à ce qu'un vent fort disperse le brouillard, mettant ainsi fin au sort. Sa zone est fortement obscurcie.\nLorsqu'une créature entre dans la zone du sort pour la première fois au cours d'un tour ou y commence son tour, cette créature doit effectuer un jet de sauvegarde de constitution. La créature subit 5d8 dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Les créatures sont affectées même si elles retiennent leur souffle ou n'ont pas besoin de respirer.\nLe brouillard s'éloigne de 3 mètres de vous au début de chacun de vos virages, roulant à la surface du sol. Les vapeurs, étant plus lourdes que l'air, descendent jusqu'au niveau le plus bas du sol, s'écoulant même par les ouvertures."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 6 ou supérieur, les dégâts augmentent de 1d8 pour chaque niveau d'emplacement supérieur au 5."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 5,
+  "damage": {
+    "damage_type": {
+      "index": "poison",
+      "name": "Poison",
+      "url": "/api/2014/damage-types/poison"
+    },
+    "damage_at_slot_level": {
+      "5": "5d8",
+      "6": "6d8",
+      "7": "7d8",
+      "8": "8d8",
+      "9": "9d8"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    },
+    "dc_success": "half",
+    "desc": "Creatures are affected even if they hold their breath or don't need to breathe."
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 20
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/cloudkill",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Cloudkill",
+  "material": "",
+  "_translated": true
+}

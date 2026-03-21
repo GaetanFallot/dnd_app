@@ -1,0 +1,61 @@
+{
+  "higher_level": [],
+  "index": "polymorph",
+  "name": "Polymorphe",
+  "desc": [
+    "Ce sort transforme une créature que vous pouvez voir à portée en une nouvelle forme. Une créature réticente doit effectuer un jet de sauvegarde de sagesse pour éviter l'effet. Un changeur de forme réussit automatiquement ce jet de sauvegarde.\nLa transformation dure toute la durée, ou jusqu'à ce que la cible tombe à 0 point de vie ou meure. La nouvelle forme peut être n'importe quelle bête dont le niveau de défi est égal ou inférieur à celui de la cible (ou au niveau de la cible, si elle n'a pas de niveau de défi). Les statistiques de jeu de la cible, y compris les scores de capacité mentale, sont remplacées par les statistiques de la bête choisie. Il conserve son alignement et sa personnalité.\nLa cible assume les points de vie de sa nouvelle forme. Lorsqu'elle reprend sa forme normale, la créature retrouve le nombre de points de vie qu'elle avait avant sa transformation. S'il revient à la suite d'une chute à 0 point de vie, tout dommage excédentaire reprend sa forme normale. Tant que les dégâts excessifs ne réduisent pas la forme normale de la créature à 0 point de vie, elle ne perd pas connaissance.\nLa créature est limitée dans les actions qu'elle peut effectuer par la nature de sa nouvelle forme, et elle ne peut pas parler, lancer des sorts ou entreprendre toute autre action nécessitant les mains ou la parole.\nL'équipement de la cible se fond dans la nouvelle forme. La créature ne peut pas activer, utiliser, manier ou bénéficier de quelque manière que ce soit de son équipement."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un cocon de chenille.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 4,
+  "dc": {
+    "dc_type": {
+      "index": "wis",
+      "name": "WIS",
+      "url": "/api/2014/ability-scores/wis"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/polymorph",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Polymorph",
+  "_translated": true
+}

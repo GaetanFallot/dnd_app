@@ -1,0 +1,50 @@
+{
+  "higher_level": [],
+  "index": "teleport",
+  "name": "Téléportation",
+  "desc": [
+    "Ce sort vous transporte instantanément, ainsi que jusqu'à huit créatures volontaires de votre choix que vous pouvez voir à portée, ou un seul objet que vous pouvez voir à portée, vers une destination que vous sélectionnez. Si vous ciblez un objet, il doit pouvoir tenir entièrement dans un cube de 10 pieds et il ne peut pas être tenu ou transporté par une créature réticente.\nLa destination que vous choisissez doit vous être connue et elle doit se trouver sur le même plan d’existence que vous. Votre familiarité avec la destination détermine si vous y arriverez avec succès. Le MJ lance un d100 et consulte la table.\n| Familiarité | Accident | Zone similaire | Hors cible | Sur la cible |\n|---|---|---|---|---|\n| Cercle permanent | -- | -- | -- | 01-100 |\n| Objet associé | -- | -- | -- | 01-100 |\n| Très familier | 01-05 | 06-13 | 14-24 | 25-100 |\n| Vu avec désinvolture | 01-33 | 34-43 | 44-53 | 54-100 |\n| Consulté une fois | 01-43 | 44-53 | 54-73 | 74-100 |\n| Descriptif | 01-43 | 44-53 | 54-73 | 74-100 |\n| Fausse destination | 01-50 | 51-100 | -- | -- |\n***Familiarité.*** « Cercle permanent » désigne un cercle de téléportation permanent dont vous connaissez la séquence de sceaux.\n« Objet associé » signifie que vous possédez un objet provenant de la destination souhaitée au cours des six derniers mois, comme un livre de la bibliothèque d'un sorcier, du linge de lit d'une suite royale ou un morceau de marbre provenant de la tombe secrète d'une liche.\n« Très familier » est un endroit où vous êtes allé très souvent, un endroit que vous avez soigneusement étudié ou un endroit que vous pouvez voir lorsque vous lancez le sort.\n« Vu avec désinvolture » est un endroit que vous avez vu plus d'une fois mais avec lequel vous n'êtes pas très familier.\n« Vu une fois » est un endroit que vous avez vu une fois, éventuellement en utilisant la magie.\n\"Description\" est un lieu dont vous connaissez l'emplacement et l'apparence grâce à la description de quelqu'un d'autre, peut-être à partir d'une carte.\nLa « fausse destination » est un lieu qui n’existe pas. Peut-être avez-vous essayé de scruter le sanctuaire d'un ennemi mais avez plutôt vu une illusion, ou essayez-vous de vous téléporter vers un endroit familier qui n'existe plus.\n***Sur la cible.*** Vous et votre groupe (ou l'objet cible) apparaissez là où vous le souhaitez.\n***Hors cible.*** Vous et votre groupe (ou l'objet cible) apparaissez à une distance aléatoire de la destination dans une direction aléatoire. La distance hors cible est de 1d10 x 1d10 pour cent de la distance à parcourir. Par exemple, si vous essayiez de parcourir 192 km, atterrissiez hors cible et obteniez un 5 et un 3 sur les deux d10, vous seriez alors hors cible de 15 %, soit 28,8 km. Le MJ détermine aléatoirement la direction hors cible en lançant un d8 et en désignant 1 comme nord, 2 comme nord-est, 3 comme est, et ainsi de suite autour des points cardinaux.  Si vous vous téléportiez vers une ville côtière et que vous vous retrouviez à 28,8 km en mer, vous pourriez avoir des ennuis.\n***Zone similaire.*** Vous et votre groupe (ou l'objet cible) vous retrouvez dans une zone différente qui est visuellement ou thématiquement similaire à la zone cible. Si vous vous dirigez vers votre laboratoire personnel, par exemple, vous pourriez vous retrouver dans le laboratoire d'un autre sorcier ou dans un magasin de fournitures alchimiques qui possède bon nombre des mêmes outils et instruments que votre laboratoire. Généralement, vous apparaissez à l'endroit similaire le plus proche, mais comme le sort n'a pas de limite de portée, vous pourriez éventuellement vous retrouver n'importe où dans l'avion.\n***Accident.*** La magie imprévisible du sort entraîne un voyage difficile. Chaque créature téléportée (ou l'objet cible) subit 3d10 dégâts de force, et le MJ relance sur la table pour voir où vous vous retrouvez (plusieurs incidents peuvent survenir, infligeant des dégâts à chaque fois)."
+  ],
+  "range": "3 m",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 10
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/teleport",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Teleport",
+  "material": "",
+  "_translated": true
+}

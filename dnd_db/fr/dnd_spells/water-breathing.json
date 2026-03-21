@@ -1,0 +1,64 @@
+{
+  "higher_level": [],
+  "index": "water-breathing",
+  "name": "Respiration aquatique",
+  "desc": [
+    "Ce sort donne un maximum de dix créatures volontaires à portée et vous pouvez le constater, la capacité de respirer sous l'eau jusqu'à la fin de son mandat. Les créatures affectées conservent également leur rythme respiratoire normal."
+  ],
+  "range": "9 m",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un petit morceau de roseau ou de paille.",
+  "ritual": true,
+  "duration": "24 heures",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/water-breathing",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Water Breathing",
+  "_translated": true
+}

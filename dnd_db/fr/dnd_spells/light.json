@@ -1,0 +1,66 @@
+{
+  "higher_level": [],
+  "index": "light",
+  "name": "Lumière",
+  "desc": [
+    "Vous touchez un objet qui ne dépasse pas 10 pieds dans n’importe quelle dimension. Jusqu'à la fin du sort, l'objet émet une lumière vive dans un rayon de 20 pieds et une lumière tamisée sur 20 pieds supplémentaires. La lumière peut être colorée à votre guise. Recouvrir complètement l'objet avec quelque chose d'opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau ou si vous le rejetez comme une action.\nSi vous ciblez un objet tenu ou porté par une créature hostile, cette créature doit réussir un jet de sauvegarde de dextérité pour éviter le sort."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "M"
+  ],
+  "material": "Une luciole ou mousse phosphorescente.",
+  "ritual": false,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "DEX",
+      "url": "/api/2014/ability-scores/dex"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/light",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Light",
+  "_translated": true
+}

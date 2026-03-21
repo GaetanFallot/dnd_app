@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "fire-shield",
+  "name": "Bouclier de feu",
+  "desc": [
+    "Des flammes fines et vaporeuses entourent votre corps pendant toute la durée du sort, rayonnant une lumière vive dans un rayon de 3 mètres et une lumière tamisée sur 3 mètres supplémentaires. Vous pouvez mettre fin au sort en utilisant une action pour le faire disparaître.\nLes flammes vous entourent d'un bouclier thermique ou froid, au choix. Le bouclier thermique vous offre une résistance aux dommages causés par le froid et une résistance au froid aux dommages causés par le feu.\nDe plus, chaque fois qu'une créature à moins de 1,50 mètre de vous vous frappe avec une attaque de mêlée, des flammes jaillissent du bouclier. L'attaquant subit alors 2d8 points de dégâts de feu ou de froid selon les modèles."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un peu de phosphore ou une luciole.",
+  "ritual": false,
+  "duration": "10 minutes",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "Fire",
+      "url": "/api/2014/damage-types/fire"
+    },
+    "damage_at_slot_level": {
+      "4": "2d8"
+    }
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 5
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "fiend",
+      "name": "Fiend",
+      "url": "/api/2014/subclasses/fiend"
+    }
+  ],
+  "url": "/api/2014/spells/fire-shield",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Fire Shield",
+  "_translated": true
+}

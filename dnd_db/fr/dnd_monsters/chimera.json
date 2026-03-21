@@ -1,0 +1,220 @@
+{
+  "index": "chimera",
+  "name": "Chimère",
+  "size": "Grande",
+  "type": "monstruosité",
+  "alignment": "chaotique mauvais",
+  "armor_class": 14,
+  "hit_points": 114,
+  "hit_dice": "12d10",
+  "hit_points_roll": "12d10+48",
+  "speed": {
+    "walk": "9 m.",
+    "fly": "18 m."
+  },
+  "strength": 19,
+  "dexterity": 11,
+  "constitution": 19,
+  "intelligence": 3,
+  "wisdom": 14,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "18 m.",
+    "passive_perception": 18
+  },
+  "languages": "understands Draconic but can't speak",
+  "challenge_rating": 6,
+  "proficiency_bonus": 3,
+  "xp": 2300,
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "action_options",
+      "desc": "La chimère effectue trois attaques : une avec sa morsure, une avec ses cornes et une avec ses griffes. Lorsque son souffle de feu est disponible, il peut utiliser son souffle à la place de sa morsure ou de ses cornes.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Horns",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Claws",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Fire Breath",
+                  "count": 1,
+                  "type": "ability"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Horns",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Claws",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Fire Breath",
+                  "count": 1,
+                  "type": "ability"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Claws",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 11 (2d6 + 4) dégâts perforants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Cornes",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 10 (1d12 + 4) dégâts contondants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d12+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffes",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 11 (2d6 + 4) dégâts tranchants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Souffle de feu",
+      "desc": "La tête de dragon exhale du feu dans un cône de 15 pieds. Chaque créature dans cette zone doit effectuer un jet de sauvegarde de Dextérité DD 15, subissant 31 (7d8) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 15,
+        "success_type": "half"
+      },
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          },
+          "damage_dice": "7d8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/chimera.png",
+  "url": "/api/2014/monsters/chimera",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Chimera",
+  "size_en": "Large",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

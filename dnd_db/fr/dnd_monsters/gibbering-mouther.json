@@ -1,0 +1,117 @@
+{
+  "index": "gibbering-mouther",
+  "name": "Boucher baragouin",
+  "size": "Moyenne",
+  "type": "aberration",
+  "alignment": "neutre",
+  "armor_class": 9,
+  "hit_points": 67,
+  "hit_dice": "9d8",
+  "hit_points_roll": "9d8+27",
+  "speed": {
+    "walk": "10 ft.",
+    "swim": "10 ft."
+  },
+  "strength": 10,
+  "dexterity": 8,
+  "constitution": 16,
+  "intelligence": 3,
+  "wisdom": 10,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "Terrain aberrant",
+      "desc": "Le sol dans un rayon de 10 pieds autour de l’embouchure est un terrain difficile et semblable à de la pâte. Chaque créature qui commence son tour dans cette zone doit réussir un jet de sauvegarde de Force DD 10 ou voir sa vitesse réduite à 0 jusqu'au début de son prochain tour."
+    },
+    {
+      "name": "Baragouin",
+      "desc": "Le boucher babille de manière incohérente alors qu'il peut voir n'importe quelle créature et n'est pas incapable d'agir. Chaque créature qui commence son tour à moins de 6 mètres de celui qui parle et peut entendre le baragouin doit réussir un jet de sauvegarde de Sagesse DD 10. En cas d'échec, la créature ne peut pas réagir avant le début de son prochain tour et lance un d8 pour déterminer ce qu'elle fait pendant son tour. Sur un résultat de 1 à 4, la créature ne fait rien. Sur 5 ou 6, la créature n'effectue aucune action ni action bonus et utilise tout son mouvement pour se déplacer dans une direction déterminée aléatoirement. Sur 7 ou 8, la créature effectue une attaque au corps à corps contre une créature déterminée aléatoirement à sa portée ou ne fait rien si elle ne peut pas effectuer une telle attaque."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le baragouin lance une seule attaque de morsure et, s'il le peut, utilise son crachat aveuglant.",
+      "actions": [
+        {
+          "action_name": "Bites",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Blinding Spittle",
+          "count": "1",
+          "type": "ranged"
+        }
+      ]
+    },
+    {
+      "name": "Bouchées",
+      "desc": "Attaque au corps à corps avec une arme : +2 pour toucher, allonge 1,50 m, une créature. Touché : 17 (5d6) dégâts perforants. Si la cible est de taille moyenne ou inférieure, elle doit réussir un jet de sauvegarde de Force DD 10 ou être mise à terre. Si la cible est tuée par ces dégâts, ils sont absorbés par le boucher.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "5d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Crachat aveuglant",
+      "desc": "Le boucher crache une boule chimique à un point qu'il peut voir à moins de 15 pieds de lui. La boule explose dans un éclair de lumière aveuglant à l’impact. Chaque créature à moins de 1,50 mètre du flash doit réussir un jet de sauvegarde de Dextérité DD 13 ou être aveuglée jusqu'à la fin du prochain tour de celui qui parle.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "dex",
+          "name": "DEX",
+          "url": "/api/2014/ability-scores/dex"
+        },
+        "dc_value": 13,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/gibbering-mouther.png",
+  "url": "/api/2014/monsters/gibbering-mouther",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Gibbering Mouther",
+  "type_en": "aberration",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}
