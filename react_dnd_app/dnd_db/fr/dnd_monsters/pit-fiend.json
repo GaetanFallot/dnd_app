@@ -1,0 +1,196 @@
+{
+  "index": "pit-fiend",
+  "name": "Démon des fosses",
+  "size": "Grande",
+  "type": "fiélon",
+  "subtype": "devil",
+  "alignment": "loyal mauvais",
+  "armor_class": 19,
+  "hit_points": 300,
+  "hit_dice": "24d10",
+  "hit_points_roll": "24d10+168",
+  "speed": {
+    "walk": "9 m/ 30 ft.",
+    "fly": "18 m/ 60 ft."
+  },
+  "strength": 26,
+  "dexterity": 14,
+  "constitution": 24,
+  "intelligence": 22,
+  "wisdom": 18,
+  "charisma": 24,
+  "proficiencies": [
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 13,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "truesight": "36 m/ 20 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Infernal, telepathy 120 ft.",
+  "challenge_rating": 20,
+  "proficiency_bonus": 6,
+  "xp": 25000,
+  "special_abilities": [
+    {
+      "name": "Aura de peur",
+      "desc": "Toute créature hostile au démon des fosses qui commence son tour à moins de 6 m/ 20 ft du démon des fosses doit effectuer un jet de sauvegarde de Sagesse DD 21, à moins que le démon des fosses ne soit incapable d'agir. En cas d'échec, la créature est effrayée jusqu'au début de son prochain tour. Si le jet de sauvegarde d'une créature est réussi, la créature est immunisée contre l'aura de peur du démon des fosses pendant les prochaines 24 heures."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le démon des fosses a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    },
+    {
+      "name": "Armes magiques",
+      "desc": "Les attaques avec les armes du démon des fosses sont magiques."
+    },
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité de lancement de sorts du démon des fosses est le Charisme (sauvegarde contre les sorts DD 21). Le démon des fosses peut de manière innée lancer les sorts suivants, ne nécessitant aucun composant matériel :\nÀ volonté : détecter la magie, la boule de feu\n3/jour chacun : tenir un monstre, un mur de feu"
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le démon des fosses effectue quatre attaques : une avec sa morsure, une avec sa griffe, une avec sa masse et une avec sa queue.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Mace",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Tail",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +14 pour toucher, portée 1,5 m, une cible. Touché : 22 (4d6 + 8) dégâts perforants. La cible doit réussir un jet de sauvegarde de Constitution DD 21 ou être empoisonnée. Lorsqu'elle est ainsi empoisonnée, la cible ne peut pas regagner de points de vie et subit 21 (6d6) dégâts de poison au début de chacun de ses tours. La cible empoisonnée peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "4d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +14 pour toucher, portée 3 m/ 10 ft, une cible. Touché : 17 (2d8 + 8) dégâts tranchants.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d8+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Masse",
+      "desc": "Attaque au corps à corps avec une arme : +14 pour toucher, portée 3 m/ 10 ft, une cible. Touché : 15 (2d6 + 8) dégâts contondants plus 21 (6d6) dégâts de feu.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d6+8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Queue",
+      "desc": "Attaque au corps à corps avec une arme : +14 pour toucher, portée 3 m/ 10 ft, une cible. Touché : 24 (3d10 + 8) dégâts contondants.",
+      "attack_bonus": 14,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "3d10+8"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/pit-fiend.png",
+  "url": "/api/2014/monsters/pit-fiend",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Pit Fiend",
+  "size_en": "Large",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

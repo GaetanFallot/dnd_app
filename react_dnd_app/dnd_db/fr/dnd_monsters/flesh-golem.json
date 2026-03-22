@@ -1,0 +1,136 @@
+{
+  "index": "flesh-golem",
+  "name": "Golem de chair",
+  "size": "Moyenne",
+  "type": "artificiel",
+  "alignment": "neutre",
+  "armor_class": 9,
+  "hit_points": 93,
+  "hit_dice": "11d8",
+  "hit_points_roll": "11d8+44",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 9,
+  "constitution": 18,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 5,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "lightning",
+    "poison",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "understands the languages of its creator but can't speak",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "Fou furieux",
+      "desc": "Chaque fois que le golem commence son tour avec 40 points de vie ou moins, lancez un d6. Sur un 6, le golem devient fou furieux. À chacun de ses tours lorsqu'il est fou furieux, le golem attaque la créature la plus proche qu'il peut voir. Si aucune créature n'est suffisamment proche pour s'approcher et attaquer, le golem attaque un objet, avec une préférence pour un objet plus petit que lui. Une fois que le golem devient fou furieux, il continue à le faire jusqu'à ce qu'il soit détruit ou qu'il récupère tous ses points de vie.\nLe créateur du golem, s'il se trouve à moins de 20 mètres du golem fou furieux, peut essayer de le calmer en parlant de manière ferme et convaincante. Le golem doit être capable d'entendre son créateur, qui doit entreprendre une action pour réussir un test de Charisme (Persuasion) DD 15. Si le test réussit, le golem cesse d’être fou furieux. S'il subit des dégâts alors qu'il est encore à 40 points de vie ou moins, le golem pourrait redevenir fou furieux."
+    },
+    {
+      "name": "Aversion pour le feu",
+      "desc": "Si le golem subit des dégâts de feu, il est désavantagé aux jets d'attaque et aux tests de caractéristiques jusqu'à la fin de son prochain tour."
+    },
+    {
+      "name": "Forme immuable",
+      "desc": "Le golem est immunisé contre tout sort ou effet susceptible de modifier sa forme."
+    },
+    {
+      "name": "Absorption de la foudre",
+      "desc": "Chaque fois que le golem est soumis à des dégâts de foudre, il ne subit aucun dégât et récupère un nombre de points de vie égal aux dégâts de foudre infligés."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le golem a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    },
+    {
+      "name": "Armes magiques",
+      "desc": "Les attaques avec les armes du golem sont magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le golem effectue deux attaques de coup.",
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Claquer",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, atteignez 1,50 m, une cible. Touché : 13 (2d8 + 4) dégâts contondants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/flesh-golem.png",
+  "url": "/api/2014/monsters/flesh-golem",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Flesh Golem",
+  "type_en": "construct",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,44 @@
+{
+  "index": "conjure-minor-elementals",
+  "name": "Invocation d'élémentaires mineurs",
+  "desc": [
+    "Vous invoquez des élémentaires qui apparaissent dans des espaces inoccupés que vous pouvez voir à portée. Vous choisissez l'une des options suivantes pour ce qui apparaît :\n- Un élémental de niveau de défi 2 ou inférieur\n- Deux élémentaires de niveau de défi 1 ou inférieur\n- Quatre élémentaux de niveau de défi 1/2 ou moins\n- Huit élémentaires de niveau de défi 1/4 ou moins.\nUn élémentaire invoqué par ce sort disparaît lorsqu'il tombe à 0 point de vie ou à la fin du sort.\nLes créatures invoquées sont amicales envers vous et vos compagnons. Lancez l'initiative pour les créatures invoquées en tant que groupe, qui a ses propres tours. Ils obéissent à tous les ordres verbaux que vous leur donnez (aucune action requise de votre part). Si vous ne leur donnez aucun ordre, ils se défendent contre les créatures hostiles, mais ne prennent aucune mesure.\nLe MJ dispose des statistiques des créatures."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant certains emplacements de sorts de niveau supérieur, vous choisissez l'une des options d'invocation ci-dessus, et davantage de créatures apparaissent : deux fois plus avec un emplacement de niveau 6 et trois fois plus avec un emplacement de niveau 8."
+  ],
+  "range": "90 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 minute",
+  "level": 4,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/conjure-minor-elementals",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Conjure Minor Elementals",
+  "material": "",
+  "_translated": true
+}

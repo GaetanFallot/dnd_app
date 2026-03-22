@@ -1,0 +1,77 @@
+{
+  "index": "flame-strike",
+  "name": "Frappe de flamme",
+  "desc": [
+    "Une colonne verticale de feu divin descend du ciel à un endroit que vous spécifiez. Chaque créature située dans un cylindre de 10 pieds de rayon et 40 pieds de haut centré sur un point à portée doit effectuer un jet de sauvegarde de dextérité. Une créature subit 4d6 dégâts de feu et 4d6 dégâts de rayonnement en cas d'échec, ou la moitié de ces dégâts en cas de réussite."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 6 ou supérieur, les dégâts de feu ou les dégâts radiants (votre choix) augmentent de 1d6 pour chaque niveau d'emplacement supérieur au 5."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Pincée de soufre.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 5,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "Fire",
+      "url": "/api/2014/damage-types/fire"
+    },
+    "damage_at_slot_level": {
+      "5": "4d6 + 4d6",
+      "6": "4d6 + 5d6",
+      "7": "4d6 + 6d6",
+      "8": "4d6 + 7d6",
+      "9": "4d6 + 8d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "DEX",
+      "url": "/api/2014/ability-scores/dex"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "cylinder",
+    "size": 40
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "devotion",
+      "name": "Devotion",
+      "url": "/api/2014/subclasses/devotion"
+    },
+    {
+      "index": "fiend",
+      "name": "Fiend",
+      "url": "/api/2014/subclasses/fiend"
+    }
+  ],
+  "url": "/api/2014/spells/flame-strike",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Flame Strike",
+  "_translated": true
+}

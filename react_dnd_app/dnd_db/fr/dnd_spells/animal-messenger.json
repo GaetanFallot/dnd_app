@@ -1,0 +1,56 @@
+{
+  "index": "animal-messenger",
+  "name": "Messager des animaux",
+  "desc": [
+    "Grâce à ce sort, vous utilisez un animal pour délivrer un message. Choisissez une petite bête que vous pouvez voir à portée, comme un écureuil, un geai bleu ou une chauve-souris. Vous précisez un lieu que vous devez avoir visité et un destinataire qui correspond à une description générale, comme « un homme ou une femme vêtu de l'uniforme de la garde municipale » ou « un nain aux cheveux roux portant un chapeau pointu ». Vous prononcez également un message de vingt-cinq mots maximum. La bête ciblée se déplace pendant toute la durée du sort vers l'emplacement spécifié, parcourant environ 50 miles par 24 heures pour un messager volant, ou 25 miles pour les autres animaux.\nLorsque le messager arrive, il transmet votre message à la créature que vous avez décrite, reproduisant le son de votre voix. Le messager ne parle qu'à une créature correspondant à la description que vous avez donnée. Si le messager n'atteint pas sa destination avant la fin du sort, le message est perdu et la bête retourne là où vous avez lancé ce sort."
+  ],
+  "higher_level": [
+    "Si vous lancez ce sort en utilisant un emplacement de sort de niveau 3 ou supérieur, la durée du sort augmente de 48 heures pour chaque niveau d'emplacement supérieur au 2e."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un morceau de nourriture.",
+  "ritual": true,
+  "duration": "24 heures",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/animal-messenger",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Animal Messenger",
+  "_translated": true
+}

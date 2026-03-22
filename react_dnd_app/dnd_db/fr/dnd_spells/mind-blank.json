@@ -1,0 +1,42 @@
+{
+  "higher_level": [],
+  "index": "mind-blank",
+  "name": "Esprit vide",
+  "desc": [
+    "Jusqu'à la fin du sort, une créature volontaire que vous touchez est immunisée contre les dégâts psychiques, tout effet qui détecterait ses émotions ou lirait ses pensées, les sorts de divination et l'état charmé. Le sort déjoue même les sorts de souhaits et les sorts ou effets de puissance similaire utilisés pour affecter l'esprit de la cible ou pour obtenir des informations sur la cible."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "24 heures",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 8,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/mind-blank",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Mind Blank",
+  "material": "",
+  "_translated": true
+}

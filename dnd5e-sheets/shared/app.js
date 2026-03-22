@@ -179,6 +179,7 @@ const DND = {
     ['_id','_classId','_className','_classIcon','_spellType','_spellAbility','_hd'].forEach(k=>{
       if(meta[k]!==undefined) data[k]=meta[k];
     });
+    data._portrait = this._portrait || '';
     return data;
   },
 
@@ -203,6 +204,7 @@ const DND = {
     if(data._className){ const el=document.getElementById('header-class-name'); if(el) el.textContent=data._className; }
     if(data._hd){ const el=document.getElementById('hd-display'); if(el) el.textContent='d'+data._hd; }
     if(data.char_name){ const el=document.getElementById('header-char-name'); if(el) el.textContent=data.char_name||'—'; }
+    if(data._portrait){ this._portrait=data._portrait; const img=document.getElementById('portrait-img'); if(img){img.src=data._portrait;img.style.display='';} const ph=document.getElementById('portrait-placeholder'); if(ph) ph.style.display='none'; }
     this._isSpellcaster = !!data._spellType;
     if(data._spellType){
       const sp=document.getElementById('spell-panel'); if(sp) sp.style.display='';
@@ -572,6 +574,298 @@ const DND = {
   addTagFromInput(containerId,inputId) {
     const input=document.getElementById(inputId); if(!input?.value?.trim()) return;
     this.addTag(containerId,input.value.trim()); input.value='';
+  },
+
+  // ---- PORTRAIT ----
+  uploadPortrait() {
+    const input=document.createElement('input'); input.type='file'; input.accept='image/*';
+    input.onchange=(e)=>{
+      const file=e.target.files[0]; if(!file) return;
+      const reader=new FileReader();
+      reader.onload=(ev)=>{
+        this._portrait=ev.target.result;
+        const img=document.getElementById('portrait-img');
+        if(img){img.src=ev.target.result;img.style.display='';}
+        const ph=document.getElementById('portrait-placeholder'); if(ph) ph.style.display='none';
+        this.autoSave();
+        this.showToast('Portrait mis à jour');
+      };
+      reader.readAsDataURL(file);
+    };
+    input.click();
+  },
+
+  // ---- PDF EXPORT ----
+  exportPDF() {
+    const d=this.gatherData();
+    const win=window.open('','_blank');
+    win.document.write(this._buildPDFHTML(d));
+    win.document.close();
+    setTimeout(()=>win.print(),600);
+  },
+
+  _buildPDFHTML(d) {
+    const esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const mod=s=>{const m=Math.floor(((parseInt(s)||10)-10)/2);return(m>=0?'+':'')+m;};
+    const pb=this.profBonus(d.level||1);
+    const abilities=[
+      {k:'str',l:'FOR'},{k:'dex',l:'DEX'},{k:'con',l:'CON'},
+      {k:'int',l:'INT'},{k:'wis',l:'SAG'},{k:'cha',l:'CHA'},
+    ];
+    const skillMap=[
+      {n:'Acrobaties',a:'dex'},{n:'Arcanes',a:'int'},{n:'Athlétisme',a:'str'},
+      {n:'Discrétion',a:'dex'},{n:'Dressage',a:'wis'},{n:'Escamotage',a:'dex'},
+      {n:'Histoire',a:'int'},{n:'Intimidation',a:'cha'},{n:'Investigation',a:'int'},
+      {n:'Médecine',a:'wis'},{n:'Nature',a:'int'},{n:'Perception',a:'wis'},
+      {n:'Perspicacité',a:'wis'},{n:'Persuasion',a:'cha'},{n:'Religion',a:'int'},
+      {n:'Représentation',a:'cha'},{n:'Survie',a:'wis'},{n:'Tromperie',a:'cha'},
+    ];
+    const abilityMap={str:'ability_str',dex:'ability_dex',con:'ability_con',int:'ability_int',wis:'ability_wis',cha:'ability_cha'};
+    const saveMap={str:'save_prof_str',dex:'save_prof_dex',con:'save_prof_con',int:'save_prof_int',wis:'save_prof_wis',cha:'save_prof_cha'};
+
+    // Build abilities HTML
+    const abilitiesHTML=abilities.map(({k,l})=>{
+      const score=parseInt(d[abilityMap[k]])||10;
+      const m=mod(score);
+      return `<div style="text-align:center;border:1.5px solid #8b1a1a;border-radius:6px;padding:4px 8px;min-width:60px;background:#fff8ee">
+        <div style="font-size:9px;font-weight:700;letter-spacing:1px;color:#8b1a1a;font-family:'Cinzel',serif">${l}</div>
+        <div style="font-size:18px;font-weight:700;color:#2c1810;font-family:'Cinzel',serif">${score}</div>
+        <div style="font-size:13px;color:#5c3a2e;background:#f0d9a8;border-radius:10px;padding:1px 6px;margin-top:2px;font-family:'Cinzel',serif">${m}</div>
+      </div>`;
+    }).join('');
+
+    // Saves HTML
+    const savesHTML=abilities.map(({k,l})=>{
+      const score=parseInt(d[abilityMap[k]])||10;
+      const prof=d[saveMap[k]]; const val=mod(score)+(prof?pb:0);
+      return `<div style="display:flex;align-items:center;gap:5px;font-size:11px;padding:1px 0">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid #8b1a1a;background:${prof?'#8b1a1a':'transparent'};flex-shrink:0"></span>
+        <span style="color:#5c3a2e;min-width:30px;font-family:'Cinzel',serif;font-size:10px">${l}</span>
+        <span style="font-weight:700;color:#2c1810">${val>=0?'+'+val:val}</span>
+      </div>`;
+    }).join('');
+
+    // Skills HTML
+    const passivePerc=10+(parseInt(mod(parseInt(d.ability_wis)||10)))+(d['skill_prof_11']?pb:0)+(d['skill_expert_11']?pb:0);
+    const skillsHTML=skillMap.map((sk,i)=>{
+      const score=parseInt(d[abilityMap[sk.a]])||10;
+      const prof=d[`skill_prof_${i}`]; const exp=d[`skill_expert_${i}`];
+      const bonus=Math.floor(((score-10)/2))+(exp?pb*2:(prof?pb:0));
+      return `<div style="display:flex;align-items:center;gap:4px;font-size:10px;padding:1px 0;border-bottom:1px dotted #d4c089">
+        <span style="display:inline-block;width:9px;height:9px;border-radius:${exp?'2px':'50%'};border:1.5px solid #8b1a1a;background:${prof||exp?'#8b1a1a':'transparent'};flex-shrink:0"></span>
+        <span style="flex:1;color:#2c1810">${sk.n}</span>
+        <span style="color:#5c3a2e;font-size:9px;min-width:24px;text-align:right;font-style:italic">${sk.a.toUpperCase()}</span>
+        <span style="font-weight:700;color:#2c1810;min-width:22px;text-align:right">${bonus>=0?'+'+bonus:bonus}</span>
+      </div>`;
+    }).join('');
+
+    // Attacks HTML
+    const attacksHTML=(d._attacks||[]).length ? `
+      <section style="margin-top:12px">
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">⚔ ATTAQUES</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:10px">
+          <thead><tr style="background:#8b1a1a;color:#f4e4c1">
+            <th style="padding:3px 5px;text-align:left;font-family:'Cinzel',serif;font-weight:600">Nom</th>
+            <th style="padding:3px 5px;text-align:center;font-family:'Cinzel',serif;font-weight:600">Bonus</th>
+            <th style="padding:3px 5px;text-align:center;font-family:'Cinzel',serif;font-weight:600">Dégâts</th>
+            <th style="padding:3px 5px;text-align:left;font-family:'Cinzel',serif;font-weight:600">Type</th>
+          </tr></thead>
+          <tbody>${(d._attacks||[]).map((a,i)=>`<tr style="background:${i%2?'#fdf5e6':'#fff8ee'}">
+            <td style="padding:3px 5px;font-weight:600">${esc(a.name||'—')}</td>
+            <td style="padding:3px 5px;text-align:center">${esc(a.bonus||'—')}</td>
+            <td style="padding:3px 5px;text-align:center">${esc(a.damage||'—')}</td>
+            <td style="padding:3px 5px">${esc(a.type||'—')}</td>
+          </tr>`).join('')}</tbody>
+        </table>
+      </section>` : '';
+
+    // Features HTML
+    const featuresHTML=(d._features||[]).length ? `
+      <section style="margin-top:0">
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:6px;letter-spacing:1px">📋 CAPACITÉS &amp; TRAITS</h3>
+        ${(d._features||[]).map(f=>`<div style="margin-bottom:6px;font-size:10px">
+          <strong style="color:#2c1810;font-family:'Cinzel',serif">${esc(f.name||'')}</strong>${f.uses?`<span style="color:#8b1a1a;font-size:9px"> (${esc(f.used||0)}/${esc(f.uses)} ${esc(f.recharge||'')})</span>`:''}
+          ${f.desc?`<div style="color:#5c3a2e;margin-top:1px;line-height:1.4">${esc(f.desc)}</div>`:''}
+        </div>`).join('')}
+      </section>` : '';
+
+    // Equipment HTML
+    const equipHTML=(d._equipment||[]).length ? `
+      <section>
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">🎒 ÉQUIPEMENT</h3>
+        ${(d._equipment||[]).map(e=>`<div style="font-size:10px;padding:1px 0;border-bottom:1px dotted #d4c089">${esc(e.text||e)}</div>`).join('')}
+        <div style="margin-top:5px;font-size:10px;display:flex;gap:8px;flex-wrap:wrap">
+          ${['pp','gp','ep','sp','cp'].map(c=>`<span><strong style="color:#8b1a1a">${c.toUpperCase()}:</strong> ${esc(d[c]||0)}</span>`).join('')}
+        </div>
+      </section>` : '';
+
+    // Personality HTML
+    const persoHTML=`
+      <section>
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">📜 PERSONNALITÉ</h3>
+        ${d._traits?`<div style="font-size:10px;margin-bottom:4px"><strong style="color:#5c3a2e">Traits:</strong> ${esc(d._traits)}</div>`:''}
+        ${d._ideals?`<div style="font-size:10px;margin-bottom:4px"><strong style="color:#5c3a2e">Idéaux:</strong> ${esc(d._ideals)}</div>`:''}
+        ${d._bonds?`<div style="font-size:10px;margin-bottom:4px"><strong style="color:#5c3a2e">Liens:</strong> ${esc(d._bonds)}</div>`:''}
+        ${d._flaws?`<div style="font-size:10px;margin-bottom:4px"><strong style="color:#5c3a2e">Défauts:</strong> ${esc(d._flaws)}</div>`:''}
+      </section>`;
+
+    // Prof & languages
+    const profHTML=(d._profLanguages||[]).length?`
+      <section style="margin-top:8px">
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">🗣 MAÎTRISES &amp; LANGUES</h3>
+        <div style="font-size:10px;line-height:1.8">${(d._profLanguages||[]).map(t=>`<span style="background:#f0d9a8;border:1px solid #c9a84c;border-radius:3px;padding:1px 5px;margin:2px;display:inline-block">${esc(t)}</span>`).join(' ')}</div>
+      </section>`:'';
+
+    // Backstory
+    const backstoryHTML=(d._backstory||d._notes)?`
+      <div style="page-break-before:auto;margin-top:12px">
+        ${d._backstory?`<section><h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">📖 HISTOIRE</h3><p style="font-size:10px;line-height:1.6;color:#2c1810">${esc(d._backstory)}</p></section>`:''}
+        ${d._notes?`<section style="margin-top:8px"><h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">📝 NOTES</h3><p style="font-size:10px;line-height:1.6;color:#2c1810">${esc(d._notes)}</p></section>`:''}
+      </div>`:'';
+
+    // Spells HTML
+    const spellsHTML=d._spellType&&(d._spells||[]).length?`
+      <div style="page-break-before:always">
+        <h2 style="font-family:'Cinzel',serif;font-size:13px;color:#8b1a1a;border-bottom:3px solid #8b1a1a;padding-bottom:4px;margin-bottom:10px;letter-spacing:2px">🔮 SORTS</h2>
+        <div style="font-size:10px;margin-bottom:8px">
+          DD: <strong>${esc(d.spell_dc||10)}</strong> &nbsp;|&nbsp; Bonus attaque: <strong>${esc(d.spell_attack||0)}</strong>
+        </div>
+        ${[0,1,2,3,4,5,6,7,8,9].map(lvl=>{
+          const lvlSpells=(d._spells||[]).filter(s=>(parseInt(s.level)||0)===lvl);
+          if(!lvlSpells.length) return '';
+          return `<div style="margin-bottom:8px">
+            <div style="font-family:'Cinzel',serif;font-size:10px;color:#8b1a1a;background:#f0d9a8;padding:2px 6px;border-left:3px solid #8b1a1a;margin-bottom:3px">
+              ${lvl===0?'Tours de magie':`Niveau ${lvl}`}
+            </div>
+            <table style="width:100%;border-collapse:collapse;font-size:9px">
+              <thead><tr style="background:#e8d5a3">
+                <th style="padding:2px 4px;text-align:left">Nom</th>
+                <th style="padding:2px 4px">École</th>
+                <th style="padding:2px 4px">Portée</th>
+                <th style="padding:2px 4px">Durée</th>
+                <th style="padding:2px 4px">Comp.</th>
+              </tr></thead>
+              <tbody>${lvlSpells.map((s,i)=>`<tr style="background:${i%2?'#fdf5e6':'#fff8ee'}">
+                <td style="padding:2px 4px;font-weight:${s.prepared?'700':'400'};color:${s.prepared?'#2c1810':'#5c3a2e'}">${esc(s.name)}${s.concentration?' ⟳':''}${s.ritual?' ℟':''}</td>
+                <td style="padding:2px 4px;text-align:center;color:#5c3a2e">${esc(s.school||'—')}</td>
+                <td style="padding:2px 4px;text-align:center">${esc(s.range||'—')}</td>
+                <td style="padding:2px 4px;text-align:center">${esc(s.duration||'—')}</td>
+                <td style="padding:2px 4px;text-align:center">${esc((s.components||[]).join(', '))}</td>
+              </tr>`).join('')}</tbody>
+            </table>
+          </div>`;
+        }).join('')}
+      </div>`:'';
+
+    const portraitHTML=d._portrait?`<img src="${d._portrait}" style="width:90px;height:90px;object-fit:cover;border-radius:6px;border:2px solid #8b1a1a;float:right;margin-left:10px">`:'';
+
+    return `<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+      <title>${esc(d.char_name||'Personnage')} — Fiche D&amp;D 5e</title>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+      <style>
+        @page { size: A4 portrait; margin: 1.2cm 1.5cm; }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Crimson Text',Georgia,serif;background:#f4e4c1;color:#2c1810;font-size:11px;line-height:1.5}
+        .page{background:#f4e4c1;min-height:100%}
+        h1{font-family:'Cinzel',serif;font-size:22px;color:#2c1810;letter-spacing:2px;line-height:1.1}
+        .ornate-border{border:3px double #8b1a1a;padding:10px 14px;margin-bottom:10px;background:#fffdf5;position:relative}
+        .ornate-border::before{content:'✦';position:absolute;top:-8px;left:10px;background:#f4e4c1;padding:0 4px;color:#8b1a1a;font-size:12px}
+        .ornate-border::after{content:'✦';position:absolute;top:-8px;right:10px;background:#f4e4c1;padding:0 4px;color:#8b1a1a;font-size:12px}
+        .divider{border:none;border-top:2px solid #8b1a1a;margin:8px 0}
+        .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px}
+        .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+        .box{background:#fffdf5;border:1px solid #c9a84c;border-radius:4px;padding:6px 8px}
+        .box-title{font-family:'Cinzel',serif;font-size:9px;color:#8b1a1a;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #d4c089;margin-bottom:5px;padding-bottom:2px}
+        .stat-row{display:flex;justify-content:space-between;font-size:10px;padding:1px 0;border-bottom:1px dotted #d4c089}
+        .stat-row .val{font-weight:700;color:#2c1810}
+        .abilities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+        @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+      </style></head>
+    <body><div class="page">
+
+      <!-- HEADER -->
+      <div class="ornate-border" style="margin-bottom:10px">
+        ${portraitHTML}
+        <h1>${esc(d.char_name||'Personnage Sans Nom')}</h1>
+        <div style="font-family:'Cinzel',serif;font-size:11px;color:#5c3a2e;margin-top:4px">
+          ${d._className?`<strong>${esc(d._className)}</strong>`:''}${d.subclass?` — ${esc(d.subclass)}`:''} ${d.level?`Niveau <strong>${esc(d.level)}</strong>`:''}
+          ${d.race?` &nbsp;|&nbsp; Race: <strong>${esc(d.race)}</strong>`:''}
+          ${d.background?` &nbsp;|&nbsp; Fond.: <strong>${esc(d.background)}</strong>`:''}
+        </div>
+        <div style="font-size:10px;color:#8b6f5e;margin-top:2px">
+          ${d.alignment?`Alignement: ${esc(d.alignment)} &nbsp;|&nbsp; `:''}
+          Niveau: ${esc(d.level||1)} &nbsp;|&nbsp; XP: ${esc(d.xp||0)} &nbsp;|&nbsp; Maîtrise: +${pb}
+        </div>
+        <div style="clear:both"></div>
+      </div>
+
+      <!-- ROW 1: Abilities | Combat | Skills -->
+      <div class="grid-3">
+
+        <!-- Abilities + Saves -->
+        <div>
+          <div class="box" style="margin-bottom:6px">
+            <div class="box-title">Caractéristiques</div>
+            <div class="abilities-grid">${abilitiesHTML}</div>
+          </div>
+          <div class="box">
+            <div class="box-title">Jets de sauvegarde</div>
+            ${savesHTML}
+          </div>
+        </div>
+
+        <!-- Combat -->
+        <div>
+          <div class="box" style="margin-bottom:6px">
+            <div class="box-title">Combat</div>
+            <div class="stat-row"><span>Classe d'armure</span><span class="val">${esc(d.ac||10)}</span></div>
+            <div class="stat-row"><span>Points de vie</span><span class="val">${esc(d.hp_current||0)}/${esc(d.hp_max||0)}</span></div>
+            ${d.hp_temp&&parseInt(d.hp_temp)?`<div class="stat-row"><span>PV temporaires</span><span class="val">${esc(d.hp_temp)}</span></div>`:''}
+            <div class="stat-row"><span>Vitesse</span><span class="val">${esc(d.speed||'9m')}</span></div>
+            <div class="stat-row"><span>Initiative</span><span class="val">${esc(d.initiative||0)}</span></div>
+            <div class="stat-row"><span>Dés de vie</span><span class="val">${esc(d.hit_dice_remaining||d.hit_dice_total||'—')}</span></div>
+          </div>
+          <div class="box">
+            <div class="box-title">Mort &amp; Agonie</div>
+            <div style="font-size:10px;margin-bottom:3px">Réussites:
+              ${[1,2,3].map(i=>`<span style="display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid #2d5a27;background:${d['_death_s'+i]?'#2d5a27':'transparent'};margin:0 1px"></span>`).join('')}
+            </div>
+            <div style="font-size:10px">Échecs:
+              ${[1,2,3].map(i=>`<span style="display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid #8b1a1a;background:${d['_death_f'+i]?'#8b1a1a':'transparent'};margin:0 1px"></span>`).join('')}
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="box">
+          <div class="box-title">Compétences</div>
+          ${skillsHTML}
+          <div style="margin-top:4px;padding-top:3px;border-top:1px solid #c9a84c;font-size:10px;display:flex;justify-content:space-between">
+            <span style="color:#5c3a2e">Perception passive</span>
+            <strong>${passivePerc}</strong>
+          </div>
+        </div>
+
+      </div><!-- end row 1 -->
+
+      ${attacksHTML}
+
+      <!-- PAGE 2 content -->
+      <div style="page-break-before:auto;margin-top:10px">
+        <div class="grid-2">
+          <div>${featuresHTML}</div>
+          <div>
+            ${equipHTML}
+            ${profHTML}
+          </div>
+        </div>
+        ${(d._traits||d._ideals||d._bonds||d._flaws)?`<hr class="divider">${persoHTML}`:''}
+        ${backstoryHTML}
+      </div>
+
+      ${spellsHTML}
+
+    </div></body></html>`;
   },
 
   // ---- EXPORT / IMPORT / RESET ----

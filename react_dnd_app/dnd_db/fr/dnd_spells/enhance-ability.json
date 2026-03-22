@@ -1,0 +1,61 @@
+{
+  "index": "enhance-ability",
+  "name": "Améliorer la capacité",
+  "desc": [
+    "Vous touchez une créature et lui confèrez une amélioration magique. Choisissez l'un des effets suivants : la cible gagne cet effet jusqu'à la fin du sort.\n***Endurance de l'ours.*** La cible a un avantage aux tests de constitution. Il gagne également 2d6 points de vie temporaires, qui sont perdus à la fin du sort.\n***Force du taureau.*** La cible a un avantage aux tests de force et sa capacité de charge double.\n***Cat's Grace.*** La cible a un avantage aux tests de dextérité. Il ne subit pas non plus de dégâts en cas de chute de 20 pieds ou moins s'il n'est pas neutralisé.\n***Splendeur de l'aigle.*** La cible a un avantage aux tests de Charisme.\n***Fox's Cunning.*** La cible a un avantage lors des tests de renseignement.\n***Sagesse de la chouette.*** La cible a un avantage aux tests de sagesse."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 3 ou supérieur, vous pouvez cibler une créature supplémentaire pour chaque niveau d'emplacement supérieur au 2e."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Fourrure ou plume d'une bête.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/enhance-ability",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Enhance Ability",
+  "_translated": true
+}

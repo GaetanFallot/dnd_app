@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "silent-image",
+  "name": "Image silencieuse",
+  "desc": [
+    "Vous créez l'image d'un objet, d'une créature ou d'un autre phénomène visible qui ne dépasse pas un cube de 15 pieds. L'image apparaît à un endroit à portée et dure toute la durée. L'image est purement visuelle ; il n'est pas accompagné de sons, d'odeurs ou d'autres effets sensoriels.\nVous pouvez utiliser votre action pour déplacer l’image vers n’importe quel endroit à portée. À mesure que l'image change d'emplacement, vous pouvez modifier son apparence afin que ses mouvements semblent naturels pour l'image. Par exemple, si vous créez l'image d'une créature et la déplacez, vous pouvez modifier l'image pour qu'elle semble marcher.\nL'interaction physique avec l'image révèle qu'elle est une illusion, car les choses peuvent passer à travers elle. Une créature qui utilise son action pour examiner l'image peut déterminer qu'il s'agit d'une illusion en réussissant un test d'Intelligence (Enquête) contre votre DD de sauvegarde de sort. Si une créature discerne l’illusion telle qu’elle est, elle peut voir à travers l’image."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un peu de toison.",
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 1,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 15
+  },
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/silent-image",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Silent Image",
+  "_translated": true
+}

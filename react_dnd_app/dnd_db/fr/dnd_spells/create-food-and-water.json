@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "create-food-and-water",
+  "name": "Créer de la nourriture et de l'eau",
+  "desc": [
+    "Vous créez 45 livres de nourriture et 30 gallons d'eau sur le sol ou dans des conteneurs à portée, suffisamment pour nourrir jusqu'à quinze humanoïdes ou cinq coursiers pendant 24 heures. La nourriture est fade mais nourrissante et se gâte si elle n'est pas consommée après 24 heures. L'eau est propre et ne se détériore pas."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/create-food-and-water",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Create Food and Water",
+  "material": "",
+  "_translated": true
+}

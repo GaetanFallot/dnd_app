@@ -1,0 +1,59 @@
+{
+  "index": "bane",
+  "name": "Fléau",
+  "desc": [
+    "Jusqu'à trois créatures de votre choix que vous pouvez voir à portée doivent effectuer des jets de sauvegarde de charisme. Chaque fois qu'une cible qui échoue à ce jet de sauvegarde effectue un jet d'attaque ou un jet de sauvegarde avant la fin du sort, la cible doit lancer un d4 et soustraire le nombre obtenu du jet d'attaque ou du jet de sauvegarde."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 2 ou supérieur, vous pouvez cibler une créature supplémentaire pour chaque niveau d'emplacement supérieur au 1er."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une goutte de sang.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 1,
+  "dc": {
+    "dc_type": {
+      "index": "cha",
+      "name": "CHA",
+      "url": "/api/2014/ability-scores/cha"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/bane",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Bane",
+  "_translated": true
+}

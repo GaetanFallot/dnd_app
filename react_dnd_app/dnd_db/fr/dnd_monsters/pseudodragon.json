@@ -1,0 +1,111 @@
+{
+  "index": "pseudodragon",
+  "name": "Pseudodragon",
+  "size": "Très petite",
+  "type": "dragon",
+  "alignment": "neutre bon",
+  "armor_class": 13,
+  "hit_points": 7,
+  "hit_dice": "2d4",
+  "hit_points_roll": "2d4+2",
+  "speed": {
+    "walk": "15 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 6,
+  "dexterity": 15,
+  "constitution": 13,
+  "intelligence": 10,
+  "wisdom": 12,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "languages": "understands Common and Draconic but can't speak",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "Sens aiguisés",
+      "desc": "Le pseudodragon a un avantage aux tests de Sagesse (Perception) qui reposent sur la vue, l'ouïe ou l'odorat."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le pseudodragon a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    },
+    {
+      "name": "Télépathie limitée",
+      "desc": "Le pseudodragon peut communiquer par magie des idées, des émotions et des images simples par télépathie avec toute créature située à moins de 100 pieds de lui et capable de comprendre une langue."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, atteignez 1,50 m, une cible. Touché : 4 (1d4 + 2) dégâts perforants.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Piquer",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,50 m, une créature. Touché : 4 (1d4 + 2) dégâts perforants, et la cible doit réussir un jet de sauvegarde de Constitution DD 11 ou être empoisonnée pendant 1 heure. Si le jet de sauvegarde échoue de 5 ou plus, la cible tombe inconsciente pour la même durée, ou jusqu'à ce qu'elle subisse des dégâts ou qu'une autre créature utilise une action pour la réveiller.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/pseudodragon.png",
+  "url": "/api/2014/monsters/pseudodragon",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Pseudodragon",
+  "type_en": "dragon",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,40 @@
+{
+  "index": "arcane-hand",
+  "name": "Main arcanique",
+  "desc": [
+    "Vous créez une grande main de force chatoyante et translucide dans un espace inoccupé que vous pouvez voir à portée. La main dure pendant toute la durée du sort et elle bouge selon vos ordres, imitant les mouvements de votre propre main.\nLa main est un objet qui a une CA de 20 et des points de vie égaux à votre maximum de points de vie. S'il tombe à 0 point de vie, le sort prend fin. Il a une Force de 26 (+8) et une Dextérité de 10 (+0). La main ne remplit pas son espace.\nLorsque vous lancez le sort et en tant qu'action bonus lors de vos tours suivants, vous pouvez déplacer la main jusqu'à 60 pieds puis provoquer avec elle l'un des effets suivants.\n***Poing fermé.*** La main frappe une créature ou un objet à moins de 1,50 mètre de lui. Effectuez une attaque de sort de mêlée pour la main en utilisant vos statistiques de jeu. En cas de coup, la cible subit 4d8 dégâts de force.\n***Main puissante.*** La main tente de pousser une créature à moins de 1,50 mètre d'elle dans une direction que vous choisissez. Effectuez un test avec la Force de la main contestée par le test de Force (Athlétisme) de la cible. Si la cible est moyenne ou plus petite, vous avez un avantage au test. Si vous réussissez, la main pousse la cible jusqu'à 1,50 mètre plus un nombre de pieds égal à cinq fois votre modificateur de capacité de lancement de sorts. La main bouge avec la cible pour rester à moins de 1,50 mètre d'elle.\n***Main saisissante.*** La main tente d'agripper une créature de taille énorme ou plus petite à moins de 1,50 mètre d'elle. Vous utilisez le score de Force de la main pour résoudre le combat. Si la cible est moyenne ou plus petite, vous avez un avantage au test. Pendant que la main agrippe la cible, vous pouvez utiliser une action bonus pour que la main l'écrase. Lorsque vous faites ainsi, la cible subit des dégâts contondants égaux à 2d6 + le modificateur de votre capacité de lancement de sorts.\n***Main interposée.*** La main s'interpose entre vous et une créature de votre choix jusqu'à ce que vous lui donniez un ordre différent. La main bouge pour rester entre vous et la cible, vous offrant ainsi une demi-couverture contre la cible. La cible ne peut pas se déplacer dans l'espace de la main si son score de Force est inférieur ou égal au score de Force de la main. Si son score de Force est supérieur à celui de la main, la cible peut se déplacer vers vous à travers l'espace de la main, mais cet espace est un terrain difficile pour la cible."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 6 ou supérieur, les dégâts de l'option poing fermé augmentent de 2d8 et les dégâts de la main agrippante augmentent de 2d6 pour chaque niveau d'emplacement supérieur au 5."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une coquille d'œuf et un gant en peau de serpent.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/arcane-hand",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Arcane Hand",
+  "_translated": true
+}

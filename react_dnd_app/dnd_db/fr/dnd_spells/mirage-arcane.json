@@ -1,0 +1,51 @@
+{
+  "higher_level": [],
+  "index": "mirage-arcane",
+  "name": "Mirage arcanique",
+  "desc": [
+    "Vous donnez au terrain dans une zone allant jusqu'à 1 mile carré l'apparence, le son, l'odeur et même la sensation d'un autre type de terrain. La forme générale du terrain reste cependant la même. Les champs ouverts ou une route pourraient ressembler à un marécage, une colline, une crevasse ou tout autre terrain difficile ou infranchissable. Un étang peut ressembler à une prairie herbeuse, un précipice à une pente douce ou un ravin parsemé de rochers à une route large et lisse.\nDe même, vous pouvez modifier l’apparence des structures ou les ajouter là où il n’y en a pas. Le sort ne déguise pas, ne dissimule pas et n'ajoute pas de créatures.\nL'illusion comprend des éléments sonores, visuels, tactiles et olfactifs, de sorte qu'elle peut transformer un terrain dégagé en terrain difficile (ou vice versa) ou entraver les mouvements dans la zone. Tout élément du terrain illusoire (comme une pierre ou un bâton) retiré de la zone du sort disparaît immédiatement.\nLes créatures dotées d'une vision vraie peuvent voir à travers l'illusion la véritable forme du terrain ; cependant, tous les autres éléments de l'illusion demeurent, donc même si la créature est consciente de la présence de l'illusion, elle peut toujours interagir physiquement avec l'illusion."
+  ],
+  "range": "Vue",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "10 jours",
+  "concentration": false,
+  "casting_time": "10 minutes",
+  "level": 7,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 5280
+  },
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/mirage-arcane",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Mirage Arcane",
+  "material": "",
+  "_translated": true
+}

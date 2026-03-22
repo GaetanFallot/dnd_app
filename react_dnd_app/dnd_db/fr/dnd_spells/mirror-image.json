@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "mirror-image",
+  "name": "Image miroir",
+  "desc": [
+    "Trois doublons illusoires de vous-même apparaissent dans votre espace. Jusqu'à la fin du sort, les doublons se déplacent avec vous et imitent vos actions, changeant de position de sorte qu'il est impossible de savoir quelle image est réelle. Vous pouvez utiliser votre action pour rejeter les doublons illusoires.\nChaque fois qu'une créature vous cible avec une attaque pendant la durée du sort, lancez un d20 pour déterminer si l'attaque cible plutôt l'un de vos doublons.\nSi vous avez trois doublons, vous devez obtenir un 6 ou plus pour changer la cible de l'attaque en doublon. Avec deux doublons, vous devez obtenir un 8 ou plus. Avec un double, vous devez obtenir un 11 ou plus.\nLa CA d'un double est égale à 10 + votre modificateur de Dextérité. Si une attaque touche un double, celui-ci est détruit. Un double ne peut être détruit que par une attaque qui le touche. Il ignore tous les autres dégâts et effets. Le sort se termine lorsque les trois doublons sont détruits.\nUne créature n'est pas affectée par ce sort si elle ne peut pas voir, si elle s'appuie sur des sens autres que la vue, comme la vue aveugle, ou si elle peut percevoir les illusions comme fausses, comme avec la vision vraie."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "school": {
+    "index": "illusion",
+    "name": "Illusion",
+    "url": "/api/2014/magic-schools/illusion",
+    "name_fr": "Illusion"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/mirror-image",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Mirror Image",
+  "material": "",
+  "_translated": true
+}

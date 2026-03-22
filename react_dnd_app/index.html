@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&D DM Screen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- D&D 5e data bundles (sets window.DND_MONSTERS_EN/FR and window.DND_SPELLS_EN/FR) -->
+    <script src="/dnd_db/bundle_monsters_en.js" onerror="console.info('Monster bundle EN not found')"></script>
+    <script src="/dnd_db/bundle_monsters_fr.js" onerror="console.info('Monster bundle FR not found')"></script>
+    <script src="/dnd_db/bundle_spells_en.js" onerror="console.info('Spell bundle EN not found')"></script>
+    <script src="/dnd_db/bundle_spells_fr.js" onerror="console.info('Spell bundle FR not found')"></script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

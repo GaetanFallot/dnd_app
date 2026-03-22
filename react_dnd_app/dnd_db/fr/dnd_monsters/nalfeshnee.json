@@ -1,0 +1,181 @@
+{
+  "index": "nalfeshnee",
+  "name": "Nalfeshnée",
+  "size": "Grande",
+  "type": "fiélon",
+  "subtype": "demon",
+  "alignment": "chaotique mauvais",
+  "armor_class": 18,
+  "hit_points": 184,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10+96",
+  "speed": {
+    "walk": "20 ft.",
+    "fly": "30 ft."
+  },
+  "strength": 21,
+  "dexterity": 10,
+  "constitution": 22,
+  "intelligence": 19,
+  "wisdom": 12,
+  "charisma": 15,
+  "proficiencies": [
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-int",
+        "name": "Saving Throw: INT",
+        "url": "/api/2014/proficiencies/saving-throw-int"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 11
+  },
+  "languages": "Abyssal, telepathy 120 ft.",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [
+    {
+      "name": "Résistance magique",
+      "desc": "Le nalfeshnee a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le nalfeshnee utilise Horror Nimbus s'il le peut. Il effectue alors trois attaques : une avec sa morsure et deux avec ses griffes.",
+      "actions": [
+        {
+          "action_name": "Horror Nimbus",
+          "count": "1",
+          "type": "ability"
+        },
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, atteignez 1,50 m, une cible. Touché : 32 (5d10 + 5) dégâts perforants.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "5d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, atteignez 10 pieds, une cible. Touché : 15 (3d6 + 5) dégâts tranchants.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "3d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Nimbus d'horreur",
+      "desc": "Le nalfeshnee émet comme par magie une lumière scintillante et multicolore. Chaque créature à moins de 4,50 mètres du nalfeshnee qui peut voir la lumière doit réussir un jet de sauvegarde de Sagesse DD 15 ou être effrayée pendant 1 minute. Une créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite. Si le jet de sauvegarde d'une créature réussit ou si l'effet prend fin pour elle, la créature est immunisée contre le Nimbus d'horreur du nalfeshnee pendant les prochaines 24 heures.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "dc_value": 15,
+        "success_type": "none"
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Téléportation",
+      "desc": "Le nalfeshnee se téléporte comme par magie, avec tout équipement qu'il porte ou transporte, jusqu'à 120 pieds dans un espace inoccupé qu'il peut voir.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/nalfeshnee.png",
+  "url": "/api/2014/monsters/nalfeshnee",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Nalfeshnee",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

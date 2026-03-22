@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "haste",
+  "name": "Hâte",
+  "desc": [
+    "Choisissez une créature volontaire que vous pouvez voir à portée. Jusqu'à la fin du sort, la vitesse de la cible est doublée, elle gagne un bonus de +2 à la CA, elle a un avantage aux jets de sauvegarde de dextérité et elle gagne une action supplémentaire à chacun de ses tours. Cette action ne peut être utilisée que pour effectuer l'action Attaque (une seule attaque avec une arme), Se précipiter, Se désengager, Se cacher ou Utiliser un objet.\nLorsque le sort se termine, la cible ne peut ni bouger ni entreprendre d'actions avant son prochain tour, alors qu'une vague de léthargie l'envahit."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un copeau de racine de réglisse.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/haste",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Haste",
+  "_translated": true
+}

@@ -1,0 +1,185 @@
+{
+  "index": "glabrezu",
+  "name": "Glabrezu",
+  "size": "Grande",
+  "type": "fiélon",
+  "subtype": "demon",
+  "alignment": "chaotique mauvais",
+  "armor_class": 17,
+  "hit_points": 157,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10+75",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 20,
+  "dexterity": 15,
+  "constitution": 21,
+  "intelligence": 19,
+  "wisdom": 17,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-str",
+        "name": "Saving Throw: STR",
+        "url": "/api/2014/proficiencies/saving-throw-str"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 13
+  },
+  "languages": "Abyssal, telepathy 120 ft.",
+  "challenge_rating": 9,
+  "proficiency_bonus": 4,
+  "xp": 5000,
+  "special_abilities": [
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité de lancement de sorts du glabrezu est l'Intelligence (sauvegarde contre les sorts DD 16). Le glabrezu peut de manière innée lancer les sorts suivants, ne nécessitant aucun composant matériel :\nÀ volonté : ténèbres, détecter la magie, dissiper la magie\n1/jour chacun : confusion, vol, étourdissement par mot puissant"
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le glabrezu a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "action_options",
+      "desc": "Le glabrezu effectue quatre attaques : deux avec ses pinces et deux avec ses poings. Alternativement, il effectue deux attaques avec ses pinces et lance un sort.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Pincer",
+                  "count": 2,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Fist",
+                  "count": 2,
+                  "type": "ranged"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Pincer",
+                  "count": 2,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Innate Spellcasting",
+                  "count": 1,
+                  "type": "magic"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "Pince",
+      "desc": "Attaque au corps à corps avec une arme : +9 pour toucher, atteignez 10 pieds, une cible. Touché : 16 (2d10 + 5) dégâts contondants. Si la cible est une créature de taille moyenne ou inférieure, elle est agrippée (évasion DD 15). Le glabrezu possède deux pinces, chacune ne pouvant saisir qu'une seule cible.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d10+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Poing",
+      "desc": "Attaque au corps à corps avec une arme : +9 pour toucher, atteignez 1,50 m, une cible. Touché : 7 (2d4 + 2) dégâts contondants.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/glabrezu.png",
+  "url": "/api/2014/monsters/glabrezu",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Glabrezu",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

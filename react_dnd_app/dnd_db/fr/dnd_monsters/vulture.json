@@ -1,0 +1,82 @@
+{
+  "index": "vulture",
+  "name": "Vautour",
+  "size": "Moyenne",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 10,
+  "hit_points": 5,
+  "hit_dice": "1d8",
+  "hit_points_roll": "1d8+1",
+  "speed": {
+    "walk": "3 m/ 10 ft.",
+    "fly": "15 m/ 50 ft."
+  },
+  "strength": 7,
+  "dexterity": 10,
+  "constitution": 13,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 4,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "Vue et odorat aiguisés",
+      "desc": "Le vautour a un avantage aux tests de Sagesse (Perception) qui reposent sur la vue ou l'odorat."
+    },
+    {
+      "name": "Tactiques de meute",
+      "desc": "Le vautour a un avantage aux jets d'attaque contre une créature si au moins un de ses alliés se trouve à moins de 1,5 m. de la créature et l'allié n'est pas incapable d'agir."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Bec",
+      "desc": "Attaque au corps à corps avec une arme : +2 pour toucher, atteignez 1,5 m, une cible. Touché : 2 (1d4) dégâts perforants.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/vulture.png",
+  "url": "/api/2014/monsters/vulture",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Vulture",
+  "size_en": "Medium",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

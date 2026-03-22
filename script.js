@@ -51,6 +51,10 @@ function setVidAudioVol(v){
   if(secondWindow&&!secondWindow.closed)secondWindow.postMessage({type:'vid-audio',muted:!vidAudioOn,volume:v/100},'*');
 }
 function showVidAudioRow(show){document.getElementById('vidAudioRow').classList.toggle('visible',show);}
+window.onload = function() {
+  renderScenes();
+  _loadCustomScenes();
+}
 
 const SCENES=[
   {id:'taverne',name:'La Taverne du Dragon',tag:'Intérieur • Chaleureux',bg:'linear-gradient(160deg,#3d1a00,#7a3a10 40%,#4a2808 70%,#2a1505)',overlay:'radial-gradient(ellipse at 60% 40%,rgba(255,140,0,.25),transparent 60%)',emoji:'🍺'},
@@ -871,8 +875,7 @@ async function sbPlay(id){
   }
   showToast('🎵 '+id.replace(/_/g,' '));
 }
-
-renderScenes();
+console.log('render')
 
 // ════════════════════════════════════════
 // MONSTER DOCK

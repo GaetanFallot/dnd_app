@@ -1,0 +1,41 @@
+{
+  "higher_level": [],
+  "index": "time-stop",
+  "name": "Arrêt du temps",
+  "desc": [
+    "Vous arrêtez brièvement l'écoulement du temps pour tout le monde sauf vous-même. Aucun temps ne s'écoule pour les autres créatures, alors que vous effectuez 1d4 + 1 tours consécutifs, pendant lesquels vous pouvez utiliser des actions et vous déplacer normalement.\nCe sort prend fin si l'une des actions que vous utilisez pendant cette période, ou tout effet que vous créez pendant cette période, affecte une créature autre que vous ou un objet porté ou transporté par quelqu'un d'autre que vous. De plus, le sort prend fin si vous vous déplacez à plus de 1,0 m de l'endroit où vous l'avez lancé."
+  ],
+  "range": "Soi",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 9,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/time-stop",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Time Stop",
+  "material": "",
+  "_translated": true
+}

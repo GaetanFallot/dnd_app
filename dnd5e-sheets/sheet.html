@@ -19,6 +19,10 @@
     <!-- HEADER -->
     <header class="sheet-header">
       <div class="header-left">
+        <div class="portrait-thumb" id="portrait-thumb" onclick="DND.uploadPortrait()" title="Cliquer pour changer le portrait">
+          <img id="portrait-img" src="" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:50%">
+          <span id="portrait-placeholder">👤</span>
+        </div>
         <div class="class-icon" id="header-class-icon">⚔️</div>
         <div>
           <div id="header-char-name" style="font-family:'Cinzel Decorative','Cinzel',serif;font-size:1.1rem;font-weight:700;color:var(--gold);letter-spacing:1px;line-height:1.2">—</div>
@@ -27,6 +31,7 @@
       </div>
       <div class="header-actions">
         <button class="btn" onclick="window.location.href='index.html'">↩ Roster</button>
+        <button class="btn" onclick="DND.exportPDF()" title="Exporter en PDF">📄 PDF</button>
         <button class="btn" onclick="DND.exportJSON()">📤</button>
         <button class="btn" onclick="DND.importJSON()">📥</button>
         <button class="btn btn-shortrest" onclick="DND.shortRest()">☀️ Court</button>

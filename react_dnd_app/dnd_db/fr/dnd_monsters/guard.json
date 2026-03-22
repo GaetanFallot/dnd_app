@@ -1,0 +1,94 @@
+{
+  "index": "guard",
+  "name": "Garde",
+  "desc": "Guards include members of a city watch, sentries in a citadel or fortified town, and the bodyguards of merchants and nobles.",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "any race",
+  "alignment": "tout alignement",
+  "armor_class": 16,
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+2",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 13,
+  "dexterity": 12,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 12
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "actions": [
+    {
+      "name": "Lance",
+      "desc": "Attaque au corps à corps ou à distance avec une arme : +3 pour toucher, portée 1,50 m ou portée 20/60 pieds, une cible. Touché : 4 (1d6 + 1) dégâts perforants ou 5 (1d8 + 1) dégâts perforants s'il est utilisé à deux mains pour effectuer une attaque au corps à corps.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "notes": "One handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "damage_dice": "1d6+1"
+              },
+              {
+                "option_type": "damage",
+                "notes": "Two handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "damage_dice": "1d8+1"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/guard.png",
+  "url": "/api/2014/monsters/guard",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Guard",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

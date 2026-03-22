@@ -1,0 +1,72 @@
+{
+  "higher_level": [],
+  "index": "feeblemind",
+  "name": "Esprit faible",
+  "desc": [
+    "Vous faites exploser l'esprit d'une créature que vous pouvez voir à portée, tentant de briser son intellect et sa personnalité. La cible subit 4d6 dégâts psychiques et doit effectuer un jet de sauvegarde d'intelligence.\nEn cas d'échec, les valeurs d'Intelligence et de Charisme de la créature deviennent 1. La créature ne peut pas lancer de sorts, activer des objets magiques, comprendre un langage ou communiquer de manière intelligible. La créature peut cependant identifier ses amis, les suivre et même les protéger.\nTous les 30 jours, la créature peut refaire son jet de sauvegarde contre ce sort. S'il réussit son jet de sauvegarde, le sort prend fin.\nLe sort peut également être terminé par une restauration, une guérison ou un souhait supérieur."
+  ],
+  "range": "150 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une poignée de sphères d'argile, de cristal, de verre ou de minéraux.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 8,
+  "damage": {
+    "damage_type": {
+      "index": "psychic",
+      "name": "Psychic",
+      "url": "/api/2014/damage-types/psychic"
+    },
+    "damage_at_slot_level": {
+      "8": "4d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "int",
+      "name": "INT",
+      "url": "/api/2014/ability-scores/int"
+    },
+    "dc_success": "other",
+    "desc": "The target always takes the damage. On a failed save, the creature's Intelligence and Charisma scores become 1."
+  },
+  "school": {
+    "index": "enchantment",
+    "name": "Enchantment",
+    "url": "/api/2014/magic-schools/enchantment",
+    "name_fr": "Enchantement"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/feeblemind",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Feeblemind",
+  "_translated": true
+}

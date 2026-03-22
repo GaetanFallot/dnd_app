@@ -1,0 +1,63 @@
+{
+  "index": "planar-binding",
+  "name": "Liaison planaire",
+  "desc": [
+    "Avec ce sort, vous tentez de lier un céleste, un élémentaire, une fée ou un démon à votre service. La créature doit être à portée pendant toute la durée du lancement du sort. (En général, la créature est d'abord invoquée au centre d'un cercle magique inversé afin de la maintenir piégée pendant que ce sort est lancé.) À la fin du lancement, la cible doit effectuer un jet de sauvegarde de charisme. En cas d'échec de la sauvegarde, il vous servira forcément pour toute la durée. Si la créature a été invoquée ou créée par un autre sort, la durée de ce sort est prolongée pour correspondre à la durée de ce sort.\nUne créature liée doit suivre vos instructions au mieux de ses capacités. Vous pouvez ordonner à la créature de vous accompagner dans une aventure, de garder un lieu ou de transmettre un message. La créature obéit à la lettre de vos instructions, mais si la créature vous est hostile, elle s'efforce de déformer vos propos pour atteindre ses propres objectifs. Si la créature exécute complètement vos instructions avant la fin du sort, elle se déplace vers vous pour vous signaler ce fait si vous êtes sur le même plan d'existence. Si vous êtes sur un autre plan d'existence, il retourne à l'endroit où vous l'avez lié et y reste jusqu'à la fin du sort."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau supérieur, la durée passe à 10 jours avec un emplacement de niveau 6, à 30 jours avec un emplacement de niveau 7, à 180 jours avec un emplacement de niveau 8 et à un an et un jour avec un emplacement de niveau 9."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un bijou d'une valeur d'au moins 1 000 po, que le sort consomme.",
+  "ritual": false,
+  "duration": "24 heures",
+  "concentration": false,
+  "casting_time": "1 heure",
+  "level": 5,
+  "dc": {
+    "dc_type": {
+      "index": "cha",
+      "name": "CHA",
+      "url": "/api/2014/ability-scores/cha"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/planar-binding",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Planar Binding",
+  "_translated": true
+}

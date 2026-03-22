@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "nondetection",
+  "name": "Non-détection",
+  "desc": [
+    "Pendant toute la durée, vous cachez une cible que vous touchez à la magie divinatoire. La cible peut être une créature volontaire ou un lieu ou un objet ne dépassant pas 10 pieds dans n'importe quelle dimension. La cible ne peut être ciblée par aucune magie divinatoire ni perçue par des capteurs de vision magique."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une pincée de poussière de diamant d'une valeur de 25 po est répandue sur la cible, que le sort consomme.",
+  "ritual": false,
+  "duration": "8 heures",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "ranger",
+      "name": "Ranger",
+      "url": "/api/2014/classes/ranger"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/nondetection",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Nondetection",
+  "_translated": true
+}

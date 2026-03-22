@@ -1,0 +1,215 @@
+{
+  "index": "young-copper-dragon",
+  "name": "Jeune dragon de cuivre",
+  "size": "Grande",
+  "type": "dragon",
+  "alignment": "chaotique bon",
+  "armor_class": 17,
+  "hit_points": 119,
+  "hit_dice": "14d10",
+  "hit_points_roll": "14d10+42",
+  "speed": {
+    "walk": "40 ft.",
+    "climb": "40 ft.",
+    "fly": "80 ft."
+  },
+  "strength": 19,
+  "dexterity": 12,
+  "constitution": 17,
+  "intelligence": 16,
+  "wisdom": 13,
+  "charisma": 15,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "acid"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 17
+  },
+  "languages": "Common, Draconic",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le dragon effectue trois attaques : une avec sa morsure et deux avec ses griffes.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, atteignez 10 pieds, une cible. Touché : 15 (2d10 + 4) dégâts perforants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, atteignez 1,50 m, une cible. Touché : 11 (2d6 + 4) dégâts tranchants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Armes respiratoires",
+      "desc": "Le dragon utilise l'une des armes respiratoires suivantes.\nSouffle acide. Le dragon exhale de l'acide sur une ligne de 40 pieds et 5 pieds de large. Chaque créature de cette ligne doit effectuer un jet de sauvegarde de Dextérité DD 14, subissant 40 (9d8) dégâts d'acide en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\nRalentissement de la respiration. Le dragon exhale du gaz dans un cône de 9 m/ 30 ftètres. Chaque créature dans cette zone doit réussir un jet de sauvegarde de Constitution DD 14. En cas d'échec, la créature ne peut pas utiliser de réactions, sa vitesse est réduite de moitié et elle ne peut pas effectuer plus d'une attaque pendant son tour. De plus, la créature peut utiliser soit une action, soit une action bonus à son tour, mais pas les deux. Ces effets durent 1 minute. La créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même avec une sauvegarde réussie.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "Acid Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "DEX",
+                  "url": "/api/2014/ability-scores/dex"
+                },
+                "dc_value": 14,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "acid",
+                    "name": "Acid",
+                    "url": "/api/2014/damage-types/acid"
+                  },
+                  "damage_dice": "9d8"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "Slowing Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "con",
+                  "name": "CON",
+                  "url": "/api/2014/ability-scores/con"
+                },
+                "dc_value": 14,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/young-copper-dragon.png",
+  "url": "/api/2014/monsters/young-copper-dragon",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Young Copper Dragon",
+  "type_en": "dragon",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

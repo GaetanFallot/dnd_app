@@ -1,0 +1,228 @@
+{
+  "index": "young-gold-dragon",
+  "name": "Jeune dragon d'or",
+  "size": "Grande",
+  "type": "dragon",
+  "alignment": "loyal bon",
+  "armor_class": 18,
+  "hit_points": 178,
+  "hit_dice": "17d10",
+  "hit_points_roll": "17d10+85",
+  "speed": {
+    "walk": "40 ft.",
+    "fly": "80 ft.",
+    "swim": "40 ft."
+  },
+  "strength": 23,
+  "dexterity": 14,
+  "constitution": 21,
+  "intelligence": 16,
+  "wisdom": 13,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-persuasion",
+        "name": "Skill: Persuasion",
+        "url": "/api/2014/proficiencies/skill-persuasion"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "darkvision": "120 ft.",
+    "passive_perception": 19
+  },
+  "languages": "Common, Draconic",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [
+    {
+      "name": "Amphibie",
+      "desc": "Le dragon peut respirer de l'air et de l'eau."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le dragon effectue trois attaques : une avec sa morsure et deux avec ses griffes.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, atteignez 10 pieds, une cible. Touché : 17 (2d10 + 6) dégâts perforants.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d10+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, atteignez 1,50 m, une cible. Touché : 13 (2d6 + 6) dégâts tranchants.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Armes respiratoires",
+      "desc": "Le dragon utilise l'une des armes respiratoires suivantes.\nSouffle de Feu. Le dragon exhale du feu dans un cône de 9 m/ 30 ftètres. Chaque créature dans cette zone doit effectuer un jet de sauvegarde de Dextérité DD 17, subissant 55 (10d10) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\nSouffle affaiblissant. Le dragon exhale du gaz dans un cône de 9 m/ 30 ftètres. Chaque créature dans cette zone doit réussir un jet de sauvegarde de Force DD 17 ou être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant 1 minute. Une créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "Fire Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "DEX",
+                  "url": "/api/2014/ability-scores/dex"
+                },
+                "dc_value": 17,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "fire",
+                    "name": "Fire",
+                    "url": "/api/2014/damage-types/fire"
+                  },
+                  "damage_dice": "10d10"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "Weakening Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "str",
+                  "name": "STR",
+                  "url": "/api/2014/ability-scores/str"
+                },
+                "dc_value": 17,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/young-gold-dragon.png",
+  "url": "/api/2014/monsters/young-gold-dragon",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Young Gold Dragon",
+  "type_en": "dragon",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

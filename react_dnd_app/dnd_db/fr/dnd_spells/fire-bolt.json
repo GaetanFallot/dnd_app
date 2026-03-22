@@ -1,0 +1,56 @@
+{
+  "higher_level": [],
+  "index": "fire-bolt",
+  "name": "Éclair de feu",
+  "desc": [
+    "Vous lancez un grain de feu sur une créature ou un objet à portée. Effectuez une attaque magique à distance contre la cible. En cas de coup, la cible subit 1d10 dégâts de feu. Un objet inflammable touché par ce sort s'enflamme s'il n'est pas porté ou transporté.\nLes dégâts de ce sort augmentent de 1d10 lorsque vous atteignez le niveau 5 (2d10), le niveau 11 (3d10) et le niveau 17 (4d10)."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "attack_type": "ranged",
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "Fire",
+      "url": "/api/2014/damage-types/fire"
+    },
+    "damage_at_character_level": {
+      "1": "1d10",
+      "5": "2d10",
+      "11": "3d10",
+      "17": "4d10"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/fire-bolt",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Fire Bolt",
+  "material": "",
+  "_translated": true
+}

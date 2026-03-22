@@ -1,0 +1,47 @@
+{
+  "higher_level": [],
+  "index": "magic-jar",
+  "name": "Pot magique",
+  "desc": [
+    "Votre corps tombe dans un état catatonique lorsque votre âme le quitte et entre dans le conteneur que vous avez utilisé pour la composante matérielle du sort. Pendant que votre âme habite le conteneur, vous êtes conscient de votre environnement comme si vous étiez dans l'espace du conteneur. Vous ne pouvez pas bouger ni utiliser de réactions. La seule action que vous pouvez entreprendre est de projeter votre âme jusqu'à 100 pieds hors du conteneur, soit en retournant dans votre corps vivant (et en mettant fin au sort), soit en essayant de posséder un corps humanoïde.\nVous pouvez tenter de posséder n'importe quel humanoïde à moins de 30 mètres de vous et que vous pouvez voir (les créatures protégées par un sort de protection contre le mal et le bien ou un cercle magique ne peuvent pas être possédées). La cible doit effectuer un jet de sauvegarde de charisme. En cas d'échec, votre âme se déplace dans le corps de la cible et l'âme de la cible reste piégée dans le conteneur. En cas de réussite, la cible résiste à vos efforts pour la posséder et vous ne pouvez pas tenter de la posséder à nouveau pendant 24 heures.\nUne fois que vous possédez le corps d'une créature, vous le contrôlez. Vos statistiques de jeu sont remplacées par les statistiques de la créature, même si vous conservez votre alignement et vos scores d'Intelligence, de Sagesse et de Charisme. Vous conservez le bénéfice de vos propres fonctionnalités de classe. Si la cible a des niveaux de classe, vous ne pouvez utiliser aucune de ses fonctionnalités de classe.\nPendant ce temps, l'âme de la créature possédée peut percevoir depuis le conteneur en utilisant ses propres sens, mais elle ne peut pas du tout bouger ni entreprendre d'actions.\nLorsque vous possédez un corps, vous pouvez utiliser votre action pour revenir du corps hôte au conteneur s'il se trouve à moins de 30 mètres de vous, ramenant ainsi l'âme de la créature hôte dans son corps. Si le corps hôte meurt pendant que vous y êtes, la créature meurt et vous devez effectuer un jet de sauvegarde de charisme contre votre propre DD de lancement de sorts. En cas de réussite, vous retournez au conteneur s'il se trouve à moins de 100 pieds de vous. Sinon, tu meurs.\nSi le conteneur est détruit ou si le sort prend fin, votre âme retourne immédiatement dans votre corps. Si votre corps est à plus de 30 mètres de vous ou si votre corps est mort lorsque vous tentez d'y revenir, vous mourez. Si l'âme d'une autre créature se trouve dans le conteneur au moment de sa destruction, l'âme de la créature retourne dans son corps si celui-ci est vivant et dans un rayon de 30 mètres. Sinon, cette créature meurt.\nA la fin du sort, le conteneur est détruit."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une gemme, un cristal, un reliquaire ou tout autre récipient ornemental d'une valeur d'au moins 500 po.",
+  "ritual": false,
+  "duration": "Jusqu'à ce qu'il soit dissipé",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 6,
+  "dc": {
+    "dc_type": {
+      "index": "cha",
+      "name": "CHA",
+      "url": "/api/2014/ability-scores/cha"
+    },
+    "dc_success": "other",
+    "desc": "On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours."
+  },
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/magic-jar",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Magic Jar",
+  "_translated": true
+}

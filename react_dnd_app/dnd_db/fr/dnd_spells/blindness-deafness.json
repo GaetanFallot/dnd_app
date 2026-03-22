@@ -1,0 +1,72 @@
+{
+  "index": "blindness-deafness",
+  "name": "Cécité/Surdité",
+  "desc": [
+    "Vous pouvez aveugler ou assourdir un ennemi. Choisissez une créature que vous pouvez voir à portée pour effectuer un jet de sauvegarde de constitution. En cas d'échec, la cible est soit aveuglée, soit assourdie (à votre choix) pour toute la durée. A la fin de chacun de ses tours, la cible peut effectuer un jet de sauvegarde de constitution. En cas de réussite, le sort prend fin."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 3 ou supérieur, vous pouvez cibler une créature supplémentaire pour chaque niveau d'emplacement supérieur au 2e."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 2,
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    },
+    {
+      "index": "fiend",
+      "name": "Fiend",
+      "url": "/api/2014/subclasses/fiend"
+    }
+  ],
+  "url": "/api/2014/spells/blindness-deafness",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Blindness/Deafness",
+  "material": "",
+  "_translated": true
+}

@@ -1,0 +1,61 @@
+{
+  "higher_level": [],
+  "index": "dimension-door",
+  "name": "Porte dimensionnelle",
+  "desc": [
+    "Vous vous téléportez de votre position actuelle vers n’importe quel autre endroit à portée. Vous arrivez exactement à l'endroit souhaité. Il peut s'agir d'un endroit que vous pouvez voir, que vous pouvez visualiser ou que vous pouvez décrire en indiquant la distance et la direction, comme « 200 pieds tout droit vers le bas » ou « vers le haut vers le nord-ouest à un angle de 45 degrés, 300 pieds ».\nVous pouvez emporter des objets à condition que leur poids ne dépasse pas ce que vous pouvez transporter. Vous pouvez également amener une créature consentante de votre taille ou plus petite qui transporte un équipement à la hauteur de sa capacité de charge. La créature doit être à moins de 1,50 mètre de vous lorsque vous lancez ce sort.\nSi vous arrivez dans un endroit déjà occupé par un objet ou une créature, vous et toute créature voyageant avec vous subissez chacun 4d6 dégâts de force, et le sort ne parvient pas à vous téléporter."
+  ],
+  "range": "500 pieds",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "damage": {
+    "damage_type": {
+      "index": "force",
+      "name": "Force",
+      "url": "/api/2014/damage-types/force"
+    },
+    "damage_at_slot_level": {
+      "4": "4d6"
+    }
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/dimension-door",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Dimension Door",
+  "material": "",
+  "_translated": true
+}

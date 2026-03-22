@@ -1,0 +1,140 @@
+{
+  "index": "vampire-mist",
+  "name": "Vampire, forme de brume",
+  "size": "Moyenne",
+  "type": "mort-vivant",
+  "subtype": "shapechanger",
+  "alignment": "loyal mauvais",
+  "armor_class": 16,
+  "hit_points": 144,
+  "hit_dice": "17d8",
+  "hit_points_roll": "17d8+68",
+  "speed": {
+    "fly": "20 ft."
+  },
+  "forms": [
+    {
+      "index": "vampire-vampire",
+      "name": "Vampire, Vampire Form",
+      "url": "/api/2014/monsters/vampire-vampire"
+    },
+    {
+      "index": "vampire-bat",
+      "name": "Vampire, Bat Form",
+      "url": "/api/2014/monsters/vampire-bat"
+    }
+  ],
+  "strength": 18,
+  "dexterity": 18,
+  "constitution": 18,
+  "intelligence": 17,
+  "wisdom": 15,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 17
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [
+    {
+      "name": "Changeur de forme",
+      "desc": "Si le vampire n'est pas exposé à la lumière du soleil ou à l'eau courante, il peut utiliser son action pour se métamorphoser en une petite chauve-souris ou en un nuage de brume moyen, ou reprendre sa vraie forme.\nSous forme de chauve-souris, le vampire ne peut pas parler, sa vitesse de marche est de 1,50 mètre et sa vitesse de vol de 9 m/ 30 ftètres. Ses statistiques, autres que sa taille et sa vitesse, restent inchangées. Tout ce qu'il porte se transforme avec lui, mais rien de ce qu'il porte ne le fait. Il reprend sa vraie forme s'il meurt.\nSous forme de brume, le vampire ne peut entreprendre aucune action, parler ou manipuler des objets. Il est en apesanteur, a une vitesse de vol de 20 pieds, peut planer, entrer dans l'espace d'une créature hostile et s'y arrêter. De plus, si l’air peut traverser un espace, la brume peut le faire sans se presser et elle ne peut pas traverser l’eau. Il a un avantage sur les jets de sauvegarde de Force, de Dextérité et de Constitution, et il est immunisé contre tous les dégâts non magiques, à l'exception des dégâts qu'il subit du soleil."
+    },
+    {
+      "name": "Résistance légendaire",
+      "desc": "Si le vampire échoue à un jet de sauvegarde, il peut choisir de réussir à la place."
+    },
+    {
+      "name": "Évasion brumeuse",
+      "desc": "Lorsqu'il tombe à 0 point de vie en dehors de son lieu de repos, le vampire se transforme en un nuage de brume (comme dans le trait Shapechanger) au lieu de tomber inconscient, à condition qu'il ne soit pas exposé au soleil ou à l'eau courante. S'il ne peut pas se transformer, il est détruit.\nBien qu'il ait 0 point de vie sous forme de brume, il ne peut pas revenir à sa forme de vampire et doit atteindre son lieu de repos dans les 2 heures sous peine d'être détruit. Une fois dans son lieu de repos, il reprend sa forme de vampire. Il est ensuite paralysé jusqu'à ce qu'il récupère au moins 1 point de vie. Après avoir passé 1 heure sur son lieu de repos avec 0 point de vie, il regagne 1 point de vie."
+    },
+    {
+      "name": "Régénération",
+      "desc": "Le vampire récupère 20 points de vie au début de son tour s'il a au moins 1 point de vie et n'est pas exposé au soleil ou à l'eau courante. Si le vampire subit des dégâts radiants ou des dégâts d'eau bénite, ce trait ne fonctionne pas au début du prochain tour du vampire."
+    },
+    {
+      "name": "Escalade d'araignée",
+      "desc": "Le vampire peut escalader des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin de faire un test de capacité."
+    },
+    {
+      "name": "Faiblesses des vampires",
+      "desc": "Le vampire a les défauts suivants :\nInterdiction. Le vampire ne peut pas entrer dans une résidence sans invitation de l'un des occupants.\nNui à cause de l'eau courante. Le vampire subit 20 dégâts d'acide s'il termine son tour dans l'eau courante.\nUn enjeu au cœur. Si une arme perçante en bois est enfoncée dans le cœur du vampire alors que celui-ci est incapable de se maintenir dans son lieu de repos, le vampire est paralysé jusqu'à ce que le pieu soit retiré.\nHypersensibilité au soleil. Le vampire subit 20 dégâts radiants lorsqu'il commence son tour au soleil. Lorsqu'il est exposé au soleil, il a un désavantage aux jets d'attaque et aux tests de caractéristiques."
+    }
+  ],
+  "actions": [],
+  "legendary_actions": [
+    {
+      "name": "Se déplacer",
+      "desc": "Le vampire accélère sans provoquer d'attaques d'opportunité."
+    },
+    {
+      "name": "Frappe à mains nues",
+      "desc": "Le vampire effectue une frappe à mains nues."
+    },
+    {
+      "name": "Morsure (coûte 2 actions)",
+      "desc": "Le vampire effectue une seule attaque par morsure."
+    }
+  ],
+  "image": "/api/images/monsters/vampire-mist.png",
+  "url": "/api/2014/monsters/vampire-mist",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "reactions": [],
+  "name_en": "Vampire, Mist Form",
+  "type_en": "undead",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

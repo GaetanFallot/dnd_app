@@ -5,7 +5,7 @@
   "cr": "0",
   "xp": "10",
   "prof": "+2",
-  "speed": "6 m., swim 6 m.",
+  "speed": "6 m/ 20 ft., swim 6 m/ 20 ft.",
   "ac": "11",
   "hp": "2 (1d4)",
   "str": 2,
@@ -20,7 +20,7 @@
   "dmg_resist": "",
   "dmg_vuln": "",
   "cond_immune": "",
-  "senses": "blindsight 9 m., passive perception 9",
+  "senses": "blindsight 9 m/ 30 ft., passive perception 9",
   "languages": "",
   "traits": [
     {
@@ -31,7 +31,7 @@
   "actions": [
     {
       "name": "Claw",
-      "desc": "Melee Weapon Attack: +0 to hit, reach 1.5 m., one target. Hit: 1 bludgeoning damage."
+      "desc": "Melee Weapon Attack: +0 to hit, reach 1.5 m/ 5 ft., one target. Hit: 1 bludgeoning damage."
     }
   ],
   "reactions": [],

@@ -1,0 +1,62 @@
+{
+  "index": "false-life",
+  "name": "Fausse vie",
+  "desc": [
+    "En vous fortifiant d'un fac-similé nécromantique de la vie, vous gagnez 1d4 + 4 points de vie temporaires pour la durée du sort."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 2 ou supérieur, vous gagnez 5 points de vie temporaires supplémentaires pour chaque niveau d'emplacement supérieur au 1er."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une petite quantité d'alcool ou de spiritueux distillé.",
+  "ritual": false,
+  "duration": "1 heure",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 1,
+  "heal_at_slot_level": {
+    "1": "1d4 + 4",
+    "2": "1d4 + 9",
+    "3": "1d4 + 14",
+    "4": "1d4 + 19",
+    "5": "1d4 + 24",
+    "6": "1d4 + 29",
+    "7": "1d4 + 34",
+    "8": "1d4 + 39",
+    "9": "1d4 + 44"
+  },
+  "school": {
+    "index": "necromancy",
+    "name": "Necromancy",
+    "url": "/api/2014/magic-schools/necromancy",
+    "name_fr": "Nécromancie"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/false-life",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "False Life",
+  "_translated": true
+}

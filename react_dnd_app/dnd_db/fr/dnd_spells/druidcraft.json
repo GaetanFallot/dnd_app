@@ -1,0 +1,37 @@
+{
+  "higher_level": [],
+  "index": "druidcraft",
+  "name": "Druidisme",
+  "desc": [
+    "En murmurant aux esprits de la nature, vous créez l'un des effets suivants à « portée » :\n- Vous créez un petit effet sensoriel inoffensif qui prédit le temps qu'il fera à votre emplacement pour les prochaines 24 heures. L'effet peut se manifester par un orbe doré pour un ciel clair, un nuage pour la pluie, des flocons de neige qui tombent pour la neige, etc. Cet effet persiste pendant 1 round.\n- Vous faites instantanément fleurir une fleur, ouvrir une gousse ou fleurir un bourgeon de feuille.\n- Vous créez un effet sensoriel instantané et inoffensif, comme la chute de feuilles, un souffle de vent, le bruit d'un petit animal ou le léger ordre d'une mouffette. L'effet doit tenir dans un cube de 5 pieds.\n- Vous allumez ou éteignez instantanément une bougie, une torche ou un petit feu de camp."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/druidcraft",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Druidcraft",
+  "material": "",
+  "_translated": true
+}

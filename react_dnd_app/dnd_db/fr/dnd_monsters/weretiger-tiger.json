@@ -1,0 +1,123 @@
+{
+  "index": "weretiger-tiger",
+  "name": "Tigre-garou, forme de tigre",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "human",
+  "alignment": "neutre",
+  "armor_class": 12,
+  "hit_points": 120,
+  "hit_dice": "16d8",
+  "forms": [
+    {
+      "index": "weretiger-human",
+      "name": "Weretiger, Human Form",
+      "url": "/api/2014/monsters/weretiger-human"
+    },
+    {
+      "index": "weretiger-hybrid",
+      "name": "Weretiger, Hybrid Form",
+      "url": "/api/2014/monsters/weretiger-hybrid"
+    }
+  ],
+  "hit_points_roll": "16d8+48",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 17,
+  "dexterity": 15,
+  "constitution": 16,
+  "intelligence": 10,
+  "wisdom": 13,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 15
+  },
+  "languages": "",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [
+    {
+      "name": "Changeur de forme",
+      "desc": "Le tigre-garou peut utiliser son action pour se métamorphoser en un hybride tigre-humanoïde ou en tigre, ou revenir à sa vraie forme, qui est humanoïde. Ses statistiques, autres que sa taille, sont les mêmes dans chaque forme. Tout équipement qu’il porte ou transporte n’est pas transformé. Il reprend sa vraie forme s'il meurt."
+    },
+    {
+      "name": "Ouïe et odorat aiguisés",
+      "desc": "Le tigre-garou a un avantage aux tests de Sagesse (Perception) qui reposent sur l'ouïe ou l'odorat."
+    },
+    {
+      "name": "Bondir",
+      "desc": "Si le tigre-garou se déplace d'au moins 15 pieds tout droit vers une créature et la frappe ensuite avec une attaque de griffes au cours du même tour, cette cible doit réussir un jet de sauvegarde de Force DD 14 ou être mise à terre. Si la cible est à terre, le tigre-garou peut effectuer une attaque de morsure contre elle en guise d'action bonus."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, atteignez 1,50 m, une cible. Touché : 8 (1d10 + 3) dégâts perforants. Si la cible est un humanoïde, elle doit réussir un jet de sauvegarde de Constitution DD 13 ou être maudite par la lycanthropie du tigre-garou.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d10+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, atteignez 1,50 m, une cible. Touché : 7 (1d8 + 3) dégâts tranchants.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "1d8+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/weretiger-tiger.png",
+  "url": "/api/2014/monsters/weretiger-tiger",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Weretiger, Tiger Form",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

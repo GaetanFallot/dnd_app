@@ -1,0 +1,59 @@
+{
+  "higher_level": [],
+  "index": "blade-barrier",
+  "name": "Barrière de lame",
+  "desc": [
+    "Vous créez un mur vertical de lames tourbillonnantes et tranchantes comme des rasoirs faites d'énergie magique. Le mur apparaît à portée et dure pendant toute la durée. Vous pouvez créer un mur droit jusqu'à 100 pieds de long, 20 pieds de haut et 5 pieds d'épaisseur, ou un mur annelé jusqu'à 60 pieds de diamètre, 20 pieds de haut et 5 pieds d'épaisseur. Le mur offre une couverture aux trois quarts aux créatures derrière lui et son espace est un terrain difficile.\nLorsqu'une créature entre dans la zone du mur pour la première fois lors d'un tour ou y commence son tour, la créature doit effectuer un jet de sauvegarde de dextérité. En cas d'échec, la créature subit 6d10 dégâts tranchants. En cas de sauvegarde réussie, la créature subit deux fois moins de dégâts."
+  ],
+  "range": "90 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 6,
+  "damage": {
+    "damage_type": {
+      "index": "slashing",
+      "name": "Slashing",
+      "url": "/api/2014/damage-types/slashing"
+    },
+    "damage_at_slot_level": {
+      "6": "6d10"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "DEX",
+      "url": "/api/2014/ability-scores/dex"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "line",
+    "size": 100
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/blade-barrier",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Blade Barrier",
+  "material": "",
+  "_translated": true
+}

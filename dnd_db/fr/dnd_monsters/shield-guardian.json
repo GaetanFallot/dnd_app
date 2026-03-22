@@ -1,0 +1,123 @@
+{
+  "index": "shield-guardian",
+  "name": "Gardien du Bouclier",
+  "size": "Grande",
+  "type": "artificiel",
+  "alignment": "sans alignement",
+  "armor_class": 17,
+  "hit_points": 142,
+  "hit_dice": "15d10",
+  "hit_points_roll": "15d10+60",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 18,
+  "dexterity": 8,
+  "constitution": 18,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 3,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "understands commands given in any language but can't speak",
+  "challenge_rating": 7,
+  "proficiency_bonus": 3,
+  "xp": 2900,
+  "special_abilities": [
+    {
+      "name": "Lié",
+      "desc": "Le gardien du bouclier est lié par magie à une amulette. Tant que le gardien et son amulette sont sur le même plan d'existence, le porteur de l'amulette peut appeler par télépathie le gardien pour qu'il s'y rende, et le gardien connaît la distance et la direction de l'amulette. Si le gardien se trouve à moins de 20 mètres du porteur de l'amulette, la moitié des dégâts subis par le porteur (arrondi au supérieur) est transférée au gardien."
+    },
+    {
+      "name": "Régénération",
+      "desc": "Le gardien du bouclier récupère 10 points de vie au début de son tour s'il réussit au moins 1 coup. indiquer."
+    },
+    {
+      "name": "Stockage des sorts",
+      "desc": "Un lanceur de sorts qui porte l'amulette du gardien bouclier peut amener le gardien à stocker un sort de niveau 4 ou inférieur. Pour ce faire, le porteur doit lancer le sort sur le gardien. Le sort n'a aucun effet mais est stocké dans le gardien. Lorsque le porteur lui ordonne de le faire ou lorsqu'une situation prédéfinie par le lanceur de sorts se présente, le gardien lance le sort stocké avec tous les paramètres définis par le lanceur d'origine, ne nécessitant aucun composant. Lorsque le sort est lancé ou qu'un nouveau sort est stocké, tout sort précédemment stocké est perdu."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le gardien effectue deux attaques à coups de poing.",
+      "actions": [
+        {
+          "action_name": "Fist",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Poing",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, atteignez 1,50 m, une cible. Touché : 11 (2d6 + 4) dégâts contondants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "reactions": [
+    {
+      "name": "Bouclier",
+      "desc": "Lorsqu'une créature effectue une attaque contre le porteur de l'amulette du gardien, le gardien accorde un bonus de +2 à la CA du porteur si le gardien est à moins de 1,50 mètre du porteur."
+    }
+  ],
+  "image": "/api/images/monsters/shield-guardian.png",
+  "url": "/api/2014/monsters/shield-guardian",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "name_en": "Shield Guardian",
+  "type_en": "construct",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

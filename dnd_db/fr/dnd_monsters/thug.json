@@ -1,0 +1,107 @@
+{
+  "index": "thug",
+  "name": "Voyou",
+  "desc": "Thugs are ruthless enforcers skilled at intimidation and violence. They work for money and have few scruples.",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "any race",
+  "alignment": "tout alignement non bon",
+  "armor_class": 11,
+  "hit_points": 32,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8+10",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 11,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill-intimidation",
+        "name": "Skill: Intimidation",
+        "url": "/api/2014/proficiencies/skill-intimidation"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language (usually Common)",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "Tactiques de meute",
+      "desc": "Le voyou a un avantage aux jets d'attaque contre une créature si au moins un de ses alliés se trouve à moins de 1,50 mètre de la créature et que l'allié n'est pas incapable d'agir."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le voyou effectue deux attaques au corps à corps.",
+      "actions": [
+        {
+          "action_name": "Mace",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Masse",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,50 m, une créature. Touché : 5 (1d6 + 2) dégâts contondants.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Arbalète lourde",
+      "desc": "Attaque avec arme à distance : +2 pour toucher, portée 100/400 pieds, une cible. Touché : 5 (1d10) dégâts perforants.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d10"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/thug.png",
+  "url": "/api/2014/monsters/thug",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Thug",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

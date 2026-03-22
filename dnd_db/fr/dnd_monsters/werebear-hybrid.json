@@ -1,0 +1,173 @@
+{
+  "index": "werebear-hybrid",
+  "name": "Ours-garou, forme hybride",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "human",
+  "alignment": "neutre bon",
+  "armor_class": 11,
+  "hit_points": 135,
+  "hit_dice": "18d8",
+  "forms": [
+    {
+      "index": "werebear-bear",
+      "name": "Werebear, Bear Form",
+      "url": "/api/2014/monsters/werebear-bear"
+    },
+    {
+      "index": "werebear-human",
+      "name": "Werebear, Human Form",
+      "url": "/api/2014/monsters/werebear-human"
+    }
+  ],
+  "hit_points_roll": "18d8+54",
+  "speed": {
+    "walk": "12 m/ 40 ft.",
+    "climb": "9 m/ 30 ft."
+  },
+  "strength": 19,
+  "dexterity": 10,
+  "constitution": 17,
+  "intelligence": 11,
+  "wisdom": 12,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 17
+  },
+  "languages": "Common",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "Changeur de forme",
+      "desc": "L'ours-garou peut utiliser son action pour se métamorphoser en un hybride grand ours-humanoïde ou en grand ours, ou revenir à sa vraie forme, qui est humanoïde. Ses statistiques, autres que sa taille et sa CA, sont les mêmes dans chaque forme. Tout équipement qu’il porte ou transporte n’est pas transformé. Il reprend sa vraie forme s'il meurt."
+    },
+    {
+      "name": "Odeur vive",
+      "desc": "L'ours-garou a un avantage aux tests de Sagesse (Perception) qui reposent sur l'odorat."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "action_options",
+      "desc": "Sous forme d'ours, l'ours-garou effectue deux attaques de griffes. Sous forme humanoïde, il effectue deux attaques à la grande hache. Sous forme hybride, il peut attaquer comme un ours ou un humanoïde.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Claw",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "action",
+              "action_name": "Greataxe",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Greataxe",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Claw",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 15 (2d10 + 4) dégâts perforants. Si la cible est un humanoïde, elle doit réussir un jet de sauvegarde de Constitution DD 14 ou être maudite par la lycanthropie des ours-garous.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 13 (2d8 + 4) dégâts tranchants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d8+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Grande hache",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 10 (1d12 + 4) dégâts tranchants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "1d12+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/werebear-hybrid.png",
+  "url": "/api/2014/monsters/werebear-hybrid",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Werebear, Hybrid Form",
+  "size_en": "Medium",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

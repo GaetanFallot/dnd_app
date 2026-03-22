@@ -1,0 +1,68 @@
+{
+  "higher_level": [],
+  "index": "plane-shift",
+  "name": "Changement d'avion",
+  "desc": [
+    "Vous et jusqu'à huit créatures volontaires qui se donnent la main en cercle sont transportés vers un plan d'existence différent. Vous pouvez spécifier une destination cible en termes généraux, comme la Cité d'Airain sur le plan élémentaire du Feu ou le palais de Dispater au deuxième niveau des Neuf Enfers, et vous apparaissez dans ou à proximité de cette destination. Si vous essayez d'atteindre la Cité d'Airain, par exemple, vous pouvez arriver dans sa Rue d'Acier, avant sa Porte des Cendres, ou regarder la ville de l'autre côté de la Mer de Feu, à la discrétion du MJ.\nAlternativement, si vous connaissez la séquence de sceaux d'un cercle de téléportation sur un autre plan d'existence, ce sort peut vous emmener dans ce cercle. Si le cercle de téléportation est trop petit pour contenir toutes les créatures que vous avez transportées, elles apparaissent dans les espaces inoccupés les plus proches à côté du cercle.\nVous pouvez utiliser ce sort pour bannir une créature réticente vers un autre plan. Choisissez une créature à votre portée et lancez une attaque magique au corps à corps contre elle. En cas de succès, la créature doit effectuer un jet de sauvegarde de charisme. Si la créature échoue à ce jet, elle est transportée vers un endroit aléatoire sur le plan d'existence que vous spécifiez. Une créature ainsi transportée doit retrouver son propre chemin vers votre plan d’existence actuel."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une tige métallique fourchue d'une valeur d'au moins 250 po, adaptée à un plan d'existence particulier.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "attack_type": "melee",
+  "dc": {
+    "dc_type": {
+      "index": "cha",
+      "name": "CHA",
+      "url": "/api/2014/ability-scores/cha"
+    },
+    "dc_success": "none",
+    "desc": "If the creature fails this save, it is transported to a random location on the plane of existence you specify. A creature so transported must find its own way back to your current plane of existence."
+  },
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/plane-shift",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Plane Shift",
+  "_translated": true
+}

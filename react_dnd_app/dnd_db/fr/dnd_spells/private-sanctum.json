@@ -1,0 +1,44 @@
+{
+  "index": "private-sanctum",
+  "name": "Sanctuaire privé",
+  "desc": [
+    "Vous sécurisez comme par magie une zone à portée. La zone est un cube qui peut mesurer entre 5 pieds et 100 pieds de chaque côté. Le sort dure pendant toute la durée ou jusqu'à ce que vous utilisiez une action pour le renvoyer.\nLorsque vous lancez le sort, vous décidez quel type de sécurité le sort offre, en choisissant une ou plusieurs des propriétés suivantes :\n- Le son ne peut pas traverser la barrière située en bordure de la zone protégée.\n- La barrière de la zone protégée apparaît sombre et brumeuse, empêchant la vision (y compris la vision dans le noir) de la traverser.\n- Les capteurs créés par les sorts de divination ne peuvent pas apparaître à l'intérieur de la zone protégée ni traverser la barrière située à son périmètre.\n- Les créatures de la zone ne peuvent pas être ciblées par des sorts de divination.\n- Rien ne peut se téléporter dans ou hors de la zone protégée.\n- Les déplacements planaires sont bloqués dans la zone protégée.\nLancer ce sort au même endroit chaque jour pendant un an rend cet effet permanent."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 5 ou supérieur, vous pouvez augmenter la taille du cube de 100 pieds pour chaque niveau d'emplacement au-delà du 4ème. Ainsi vous pourriez protéger un cube pouvant mesurer jusqu'à 200 pieds de côté en utilisant un emplacement de sort de niveau 5."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une fine feuille de plomb, un morceau de verre opaque, un tampon de coton ou de tissu et de la chrysolite en poudre.",
+  "ritual": false,
+  "duration": "24 heures",
+  "concentration": false,
+  "casting_time": "10 minutes",
+  "level": 4,
+  "area_of_effect": {
+    "type": "cube",
+    "size": 100
+  },
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/private-sanctum",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Private Sanctum",
+  "_translated": true
+}

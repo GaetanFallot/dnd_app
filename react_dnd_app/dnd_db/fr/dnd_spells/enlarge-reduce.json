@@ -1,0 +1,57 @@
+{
+  "higher_level": [],
+  "index": "enlarge-reduce",
+  "name": "Agrandir/Réduire",
+  "desc": [
+    "Vous faites grandir ou rétrécir une créature ou un objet que vous pouvez voir à portée pendant toute la durée du sort. Choisissez soit une créature, soit un objet qui n'est ni porté ni transporté. Si la cible ne le souhaite pas, elle peut effectuer un jet de sauvegarde de Constitution. En cas de réussite, le sort n'a aucun effet.\nSi la cible est une créature, tout ce qu'elle porte change de taille avec elle. Tout objet lâché par une créature affectée reprend immédiatement sa taille normale.\n***Agrandir.*** La taille de la cible double dans toutes les dimensions et son poids est multiplié par huit. Cette croissance augmente sa taille d'une catégorie, de Moyenne à Grande, par exemple. S'il n'y a pas assez d'espace pour que la cible double sa taille, la créature ou l'objet atteint la taille maximale possible dans l'espace disponible. Jusqu'à la fin du sort, la cible bénéficie également d'un avantage aux tests de Force et aux jets de sauvegarde de Force. Les armes de la cible s'agrandissent également pour s'adapter à sa nouvelle taille. Lorsque ces armes sont agrandies, les attaques de la cible avec elles infligent 1d4 dégâts supplémentaires.\n***Réduire.*** La taille de la cible est réduite de moitié dans toutes les dimensions et son poids est réduit à un huitième de la normale. Cette réduction diminue sa taille d'une catégorie, de Moyenne à Petite, par exemple. Jusqu'à la fin du sort, la cible est également désavantagée aux tests de Force et aux jets de sauvegarde de Force. Les armes de la cible rétrécissent également pour s'adapter à sa nouvelle taille. Tant que ces armes sont réduites, les attaques de la cible avec elles infligent 1d4 dégâts en moins (cela ne peut pas réduire les dégâts en dessous de 1)."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une pincée de poudre de fer.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 2,
+  "dc": {
+    "dc_type": {
+      "index": "con",
+      "name": "CON",
+      "url": "/api/2014/ability-scores/con"
+    },
+    "dc_success": "none"
+  },
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/enlarge-reduce",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Enlarge/Reduce",
+  "_translated": true
+}

@@ -1,0 +1,49 @@
+{
+  "higher_level": [],
+  "index": "identify",
+  "name": "Identifier",
+  "desc": [
+    "Vous choisissez un objet que vous devez toucher tout au long du lancement du sort. S'il s'agit d'un objet magique ou d'un autre objet imprégné de magie, vous apprenez ses propriétés et comment les utiliser, s'il nécessite une harmonisation pour être utilisé et combien de charges il possède, le cas échéant. Vous apprenez si des sorts affectent l'objet et de quoi il s'agit. Si l'objet a été créé par un sort, vous apprenez quel sort l'a créé.\nSi, à la place, vous touchez une créature tout au long du lancement, vous apprenez quels sorts, le cas échéant, l'affectent actuellement."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une perle d'une valeur d'au moins 100 po et une plume de hibou.",
+  "ritual": true,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 1,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/identify",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Identify",
+  "_translated": true
+}

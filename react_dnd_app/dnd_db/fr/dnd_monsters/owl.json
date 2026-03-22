@@ -1,0 +1,90 @@
+{
+  "index": "owl",
+  "name": "Hibou",
+  "size": "Très petite",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 11,
+  "hit_points": 1,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4-1",
+  "speed": {
+    "walk": "5 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 3,
+  "dexterity": 13,
+  "constitution": 8,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 13
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "Survol",
+      "desc": "Le hibou ne provoque pas d'attaques d'opportunité lorsqu'il vole hors de portée d'un ennemi."
+    },
+    {
+      "name": "Une ouïe et une vue excellentes",
+      "desc": "Le hibou a un avantage aux tests de Sagesse (Perception) qui reposent sur l'ouïe ou la vue."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Serres",
+      "desc": "Attaque au corps à corps avec une arme : +3 pour toucher, atteignez 1,50 m, une cible. Touché : 1 dégât tranchant.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/owl.png",
+  "url": "/api/2014/monsters/owl",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Owl",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

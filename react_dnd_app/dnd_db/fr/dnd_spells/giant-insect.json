@@ -1,0 +1,37 @@
+{
+  "higher_level": [],
+  "index": "giant-insect",
+  "name": "Insecte géant",
+  "desc": [
+    "Vous transformez jusqu'à dix mille-pattes, trois araignées, cinq guêpes ou un scorpion à portée en versions géantes de leurs formes naturelles pour la durée du jeu. Un mille-pattes devient un mille-pattes géant, une araignée devient une araignée géante, une guêpe devient une guêpe géante et un scorpion devient un scorpion géant.\nChaque créature obéit à vos ordres verbaux et, en combat, elle agit pendant votre tour à chaque tour. Le MJ dispose des statistiques de ces créatures et résout leurs actions et leurs mouvements.\nUne créature reste dans sa taille géante pendant toute la durée, jusqu'à ce qu'elle tombe à 0 point de vie, ou jusqu'à ce que vous utilisiez une action pour annuler l'effet sur elle.\nLe MJ peut vous permettre de choisir différentes cibles. Par exemple, si vous transformez une abeille, sa version géante pourrait avoir les mêmes statistiques qu’une guêpe géante."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/giant-insect",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Giant Insect",
+  "material": "",
+  "_translated": true
+}

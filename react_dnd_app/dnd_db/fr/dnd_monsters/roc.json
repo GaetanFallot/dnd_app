@@ -1,0 +1,143 @@
+{
+  "index": "roc",
+  "name": "Roc",
+  "size": "Gargantuesque",
+  "type": "monstruosité",
+  "alignment": "sans alignement",
+  "armor_class": 15,
+  "hit_points": 248,
+  "hit_dice": "16d20",
+  "hit_points_roll": "16d20+80",
+  "speed": {
+    "walk": "20 ft.",
+    "fly": "120 ft."
+  },
+  "strength": 28,
+  "dexterity": 10,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 10,
+  "charisma": 9,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 9,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [
+    {
+      "name": "Vue vive",
+      "desc": "Le roc a un avantage aux tests de Sagesse (Perception) qui reposent sur la vue."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le roc effectue deux attaques : une avec son bec et une avec ses serres.",
+      "actions": [
+        {
+          "action_name": "Beak",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Talons",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Bec",
+      "desc": "Attaque au corps à corps avec une arme : +13 pour toucher, portée 10 pieds, une cible. Touché : 27 (4d8 + 9) dégâts perforants.",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "4d8+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Serres",
+      "desc": "Attaque au corps à corps avec une arme : +13 pour toucher, atteignez 1,50 m, une cible. Touché : 23 (4d6 + 9) dégâts tranchants et la cible est agrippée (évasion DD 19). Jusqu'à la fin de cette lutte, la cible est immobilisée et le roc ne peut pas utiliser ses serres sur une autre cible.",
+      "attack_bonus": 13,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "4d6+9"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/roc.png",
+  "url": "/api/2014/monsters/roc",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Roc",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

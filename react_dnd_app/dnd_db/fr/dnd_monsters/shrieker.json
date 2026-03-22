@@ -1,0 +1,73 @@
+{
+  "index": "shrieker",
+  "name": "Crieur",
+  "size": "Moyenne",
+  "type": "plante",
+  "alignment": "sans alignement",
+  "armor_class": 5,
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "0 m."
+  },
+  "strength": 1,
+  "dexterity": 1,
+  "constitution": 10,
+  "intelligence": 1,
+  "wisdom": 3,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "blinded",
+      "name": "Blinded",
+      "url": "/api/2014/conditions/blinded"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    }
+  ],
+  "senses": {
+    "blindsight": "9 m/ 30 ft. (blind beyond this radius)",
+    "passive_perception": 6
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "Fausse apparence",
+      "desc": "Tant que le crieur reste immobile, il est impossible de le distinguer d'un champignon ordinaire."
+    }
+  ],
+  "reactions": [
+    {
+      "name": "Cri",
+      "desc": "Lorsqu'une lumière vive ou une créature se trouve à moins de 9 m/ 30 ft du crieur, celui-ci émet un cri audible à moins de 90 m de lui. Le crieur continue de crier jusqu'à ce que la perturbation soit hors de portée et pendant 1d4 tours par la suite."
+    }
+  ],
+  "image": "/api/images/monsters/shrieker.png",
+  "url": "/api/2014/monsters/shrieker",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "actions": [],
+  "forms": [],
+  "legendary_actions": [],
+  "name_en": "Shrieker",
+  "size_en": "Medium",
+  "type_en": "plant",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

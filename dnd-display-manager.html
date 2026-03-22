@@ -100,11 +100,11 @@
       <input type="range" min="0" max="100" value="60" oninput="setVidAudioVol(this.value)">
       <label id="vidVolPct">60%</label>
     </div>
-    <div class="section-label">Scènes DnD</div>
-    <div class="scene-grid" id="sceneGrid"></div>
+    <div class="section-label collapsible" onclick="toggleCollapse('scenes')">Scènes DnD <span class="collapse-arrow" id="scenes-arrow">▾</span></div>
+    <div id="scenesBody"><div class="scene-grid" id="sceneGrid"></div></div>
     <div class="custom-section" id="customSection" style="display:none">
-      <div class="section-label">Mes imports</div>
-      <div class="scene-grid" id="customGrid"></div>
+      <div class="section-label collapsible" onclick="toggleCollapse('custom')">Mes imports <span class="collapse-arrow" id="custom-arrow">▾</span></div>
+      <div id="customBody"><div class="scene-grid" id="customGrid"></div></div>
     </div>
 
   </main>

@@ -1,0 +1,121 @@
+{
+  "index": "quasit",
+  "name": "Quasiment",
+  "size": "Très petite",
+  "type": "fiélon",
+  "subtype": "demon",
+  "alignment": "chaotique mauvais",
+  "armor_class": 13,
+  "hit_points": 7,
+  "hit_dice": "3d4",
+  "hit_points_roll": "3d4",
+  "speed": {
+    "walk": "12 m/ 40 ft."
+  },
+  "strength": 5,
+  "dexterity": 17,
+  "constitution": 10,
+  "intelligence": 7,
+  "wisdom": 10,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "fire",
+    "lightning",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "36 m/ 20 ft.",
+    "passive_perception": 10
+  },
+  "languages": "Abyssal, Common",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "Changeur de forme",
+      "desc": "Le quasit peut utiliser son action pour se métamorphoser en une forme de bête qui ressemble à une chauve-souris (vitesse 3 m/ 10 ft, voler 12 m/ 40 ft), à un mille-pattes (12 m/ 40 ft, grimper 12 m/ 40 ft) ou à un crapaud (12 m/ 40 ft, nager 12 m/ 40 ft), ou revenir à sa vraie forme. Ses statistiques sont les mêmes dans chaque forme, à l'exception des changements de vitesse constatés. Tout équipement qu'il porte ou transporte n'est pas transformé. Il reprend sa vraie forme s'il meurt."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le quasit a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Griffe (morsure sous forme de bête)",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, portée 1,5 m, une cible. Touché : 5 (1d4 + 3) dégâts perforants, et la cible doit réussir un jet de sauvegarde de Constitution DD 10 ou subir 5 (2d4) dégâts de poison et être empoisonnée pendant 1 minute. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Effrayer",
+      "desc": "Une créature au choix du quasit dans un rayon de 6 m/ 20 ft. L'un d'entre eux doit réussir un jet de sauvegarde de Sagesse DD 10 ou être effrayé pendant 1 minute. La cible peut refaire le jet de sauvegarde à la fin de chacun de ses tours, avec un désavantage si le quasit est en ligne de vue, mettant fin à l'effet sur elle-même en cas de réussite.",
+      "usage": {
+        "type": "per day",
+        "times": 1
+      },
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "dc_value": 10,
+        "success_type": "none"
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Invisibilité",
+      "desc": "Le quasit devient invisible par magie jusqu'à ce qu'il attaque ou utilise Scare, ou jusqu'à ce que sa concentration prenne fin (comme s'il se concentrait sur un sort). Tout équipement que le quasit porte ou transporte est invisible avec lui.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/quasit.png",
+  "url": "/api/2014/monsters/quasit",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Quasit",
+  "size_en": "Tiny",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

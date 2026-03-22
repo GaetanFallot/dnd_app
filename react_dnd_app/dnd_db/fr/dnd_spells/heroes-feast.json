@@ -1,0 +1,43 @@
+{
+  "higher_level": [],
+  "index": "heroes-feast",
+  "name": "Fête des Héros",
+  "desc": [
+    "Vous préparez un grand festin, comprenant de la nourriture et des boissons magnifiques. Le festin prend 1 heure à consommer et disparaît à la fin de ce temps, et les effets bénéfiques ne s'installent qu'une fois cette heure écoulée. Jusqu'à douze autres créatures peuvent participer au festin.\nUne créature qui participe au festin bénéficie de plusieurs avantages. La créature est guérie de toutes les maladies et du poison, devient immunisée contre le poison et la peur, et réussit tous les jets de sauvegarde de sagesse avec avantage. Son maximum de points de vie augmente également de 2d10, et il gagne le même nombre de points de vie. Ces avantages durent 24 heures."
+  ],
+  "range": "30 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un bol incrusté de pierres précieuses d'une valeur d'au moins 1 000 po, que le sort consomme.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "10 minutes",
+  "level": 6,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/heroes-feast",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Heroes' Feast",
+  "_translated": true
+}

@@ -1,0 +1,65 @@
+{
+  "index": "stirge",
+  "name": "Stirge",
+  "size": "Très petite",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 14,
+  "hit_points": 2,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4",
+  "speed": {
+    "walk": "3 m/ 10 ft.",
+    "fly": "12 m/ 40 ft."
+  },
+  "strength": 4,
+  "dexterity": 16,
+  "constitution": 11,
+  "intelligence": 2,
+  "wisdom": 8,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "18 m/ 60 ft.",
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "actions": [
+    {
+      "name": "Drainage du sang",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, allonge 1,5 m, une créature. Hit: 5 (1d4 + 3) piercing damage, and the stirge attaches to the target. Lorsqu'il est attaché, le strige n'attaque pas. Au lieu de cela, au début de chacun des tours du strige, la cible perd 5 (1d4 + 3) points de vie à cause de la perte de sang.\nLe strige peut se détacher en effectuant 1,5 m de son déplacement. Il le fait après avoir drainé 10 points de vie de sang de la cible ou après que la cible soit morte. Une créature, y compris la cible, peut utiliser son action pour détacher le strige.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d4+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/stirge.png",
+  "url": "/api/2014/monsters/stirge",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Stirge",
+  "size_en": "Tiny",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

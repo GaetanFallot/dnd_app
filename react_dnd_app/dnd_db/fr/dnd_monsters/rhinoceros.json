@@ -1,0 +1,68 @@
+{
+  "index": "rhinoceros",
+  "name": "Rhinocéros",
+  "size": "Grande",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 11,
+  "hit_points": 45,
+  "hit_dice": "6d10",
+  "hit_points_roll": "6d10+12",
+  "speed": {
+    "walk": "12 m/ 40 ft."
+  },
+  "strength": 21,
+  "dexterity": 8,
+  "constitution": 15,
+  "intelligence": 2,
+  "wisdom": 12,
+  "charisma": 6,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 11
+  },
+  "languages": "",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "Charge",
+      "desc": "Si le rhinocéros bouge d'au moins 6 m/ 20 ft. directement vers une cible puis la frappe avec une attaque sanglante au même tour, la cible subit 9 (2d8) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force DD 15 ou être mise à terre."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Sang",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 14 (2d8 + 5) dégâts contondants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d8+5"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/rhinoceros.png",
+  "url": "/api/2014/monsters/rhinoceros",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Rhinoceros",
+  "size_en": "Large",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

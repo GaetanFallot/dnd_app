@@ -1,0 +1,58 @@
+{
+  "higher_level": [],
+  "index": "remove-curse",
+  "name": "Supprimer la malédiction",
+  "desc": [
+    "À votre contact, toutes les malédictions affectant une créature ou un objet prennent fin. Si l'objet est un objet magique maudit, sa malédiction demeure, mais le sort brise l'affinité de son propriétaire avec l'objet afin que celui-ci puisse être retiré ou défaussé."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 3,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    },
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/remove-curse",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Remove Curse",
+  "material": "",
+  "_translated": true
+}

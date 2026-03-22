@@ -1,0 +1,50 @@
+{
+  "higher_level": [],
+  "index": "contact-other-plane",
+  "name": "Contacter un autre avion",
+  "desc": [
+    "Vous contactez mentalement un demi-dieu, l'esprit d'un sage mort depuis longtemps ou une autre entité mystérieuse d'un autre plan. Contacter cette intelligence extraplanaire peut vous fatiguer, voire vous briser l’esprit. Lorsque vous lancez ce sort, effectuez un jet de sauvegarde d'intelligence DD 15. En cas d'échec, vous subissez 6d6 dégâts psychiques et devenez fou jusqu'à ce que vous terminiez un long repos. Tant que vous êtes fou, vous ne pouvez pas agir, vous ne pouvez pas comprendre ce que disent les autres créatures, vous ne savez pas lire et vous ne parlez qu'en charabia. Un sort de restauration plus puissant lancé sur vous met fin à cet effet.\nEn cas de sauvegarde réussie, vous pouvez poser jusqu'à cinq questions à l'entité. Vous devez poser vos questions avant la fin du sort. Le MJ répond à chaque question avec un mot, tel que « oui », « non », « peut-être », « jamais », « non pertinent » ou « pas clair » (si l'entité ne connaît pas la réponse à la question). Si une réponse en un seul mot s’avère trompeuse, le MJ pourrait plutôt proposer une courte phrase comme réponse."
+  ],
+  "range": "Soi",
+  "components": [
+    "V"
+  ],
+  "ritual": true,
+  "duration": "1 minute",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 5,
+  "dc": {
+    "dc_type": {
+      "index": "int",
+      "name": "INT",
+      "url": "/api/2014/ability-scores/int"
+    },
+    "dc_success": "other",
+    "desc": "On a failure, you take 6d6 psychic damage and are insane until you finish a long rest."
+  },
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/contact-other-plane",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Contact Other Plane",
+  "material": "",
+  "_translated": true
+}

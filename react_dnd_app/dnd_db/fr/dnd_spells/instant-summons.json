@@ -1,0 +1,38 @@
+{
+  "higher_level": [],
+  "index": "instant-summons",
+  "name": "Invocation instantanée",
+  "desc": [
+    "Vous touchez un objet pesant 10 livres ou moins dont la dimension la plus longue est de 6 pieds ou moins. Le sort laisse une marque invisible sur sa surface et inscrit de manière invisible le nom de l'objet sur le saphir que vous utilisez comme composant matériel. Chaque fois que vous lancez ce sort, vous devez utiliser un saphir différent.\nÀ tout moment par la suite, vous pouvez utiliser votre action pour prononcer le nom de l'objet et écraser le saphir. L'objet apparaît instantanément dans votre main, quelles que soient les distances physiques ou planaires, et le sort prend fin.\nSi une autre créature tient ou porte l'objet, écraser le saphir ne vous transporte pas l'objet, mais vous apprenez plutôt qui est la créature qui possède l'objet et à peu près où se trouve cette créature à ce moment-là.\nDissiper la magie ou un effet similaire appliqué avec succès au saphir met fin à l'effet de ce sort."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un saphir d'une valeur de 1 000 po.",
+  "ritual": true,
+  "duration": "Jusqu'à ce qu'il soit dissipé",
+  "concentration": false,
+  "casting_time": "1 minute",
+  "level": 6,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/instant-summons",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Instant Summons",
+  "_translated": true
+}

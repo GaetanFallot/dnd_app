@@ -1,0 +1,106 @@
+{
+  "index": "rakshasa",
+  "name": "Rakshasa",
+  "size": "Moyenne",
+  "type": "fiélon",
+  "alignment": "loyal mauvais",
+  "armor_class": 16,
+  "hit_dice": "13d8",
+  "hit_points": 110,
+  "hit_points_roll": "13d8+52",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 14,
+  "dexterity": 17,
+  "constitution": 18,
+  "intelligence": 13,
+  "wisdom": 16,
+  "charisma": 20,
+  "proficiencies": [
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "piercing from magic weapons wielded by good creatures"
+  ],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "languages": "Common, Infernal",
+  "challenge_rating": 13,
+  "proficiency_bonus": 5,
+  "xp": 10000,
+  "special_abilities": [
+    {
+      "name": "Immunité magique limitée",
+      "desc": "Le rakshasa ne peut pas être affecté ou détecté par des sorts de niveau 6 ou inférieur à moins qu'il ne le souhaite. Il a un avantage aux jets de sauvegarde contre tous les autres sorts et effets magiques."
+    },
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité innée de lancement de sorts du rakshasa est le charisme (sauvegarde des sorts DD 18, +10 pour toucher avec les attaques de sorts). Le rakshasa peut de manière innée lancer les sorts suivants, ne nécessitant aucun composant matériel :\n\nÀ volonté : détecter les pensées, se déguiser, main de mage, illusion mineure\n3/jour chacun : charmer une personne, détecter la magie, invisibilité, image majeure, suggestion\n1/jour chacun : dominer la personne, voler, changer d'avion, voir vrai"
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le rakshasa effectue deux attaques de griffes",
+      "actions": [
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, atteignez 1,50 m, une cible. Touché : 9 (2d6 + 2) dégâts tranchants, et la cible est maudite si c'est une créature. La malédiction magique prend effet chaque fois que la cible prend un repos court ou long, remplissant ses pensées d'images et de rêves horribles. La cible maudite ne gagne aucun avantage à terminer un repos court ou long. La malédiction dure jusqu'à ce qu'elle soit levée par un sort de suppression de malédiction ou une magie similaire.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/rakshasa.png",
+  "url": "/api/2014/monsters/rakshasa",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Rakshasa",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,99 @@
+{
+  "index": "death-dog",
+  "name": "Chien de la mort",
+  "desc": "A death dog is an ugly two-headed hound that roams plains, and deserts. Hate burns in a death dog’s heart, and a taste for humanoid flesh drives it to attack travelers and explorers. Death dog saliva carries a foul disease that causes a victim’s flesh to slowly rot off the bone.",
+  "size": "Moyenne",
+  "type": "monstruosité",
+  "alignment": "neutre mauvais",
+  "armor_class": 12,
+  "hit_points": 39,
+  "hit_dice": "6d8",
+  "hit_points_roll": "6d8+12",
+  "speed": {
+    "walk": "40 ft."
+  },
+  "strength": 15,
+  "dexterity": 14,
+  "constitution": 14,
+  "intelligence": 3,
+  "wisdom": 13,
+  "charisma": 6,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 15
+  },
+  "languages": "",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "À deux têtes",
+      "desc": "Le chien a un avantage aux tests de Sagesse (Perception) et aux jets de sauvegarde pour éviter d'être aveuglé, charmé, assourdi, effrayé, étourdi ou assommé."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le chien effectue deux morsures.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, atteignez 1,50 m, une cible. Touché : 5 (1d6 + 2) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Constitution DD 12 contre la maladie ou être empoisonnée jusqu'à ce que la maladie soit guérie. Toutes les 24 heures qui s'écoulent, la créature doit répéter le jet de sauvegarde, réduisant ainsi son maximum de points de vie de 5 (1d10) en cas d'échec. Cette réduction dure jusqu'à ce que la maladie soit guérie. La créature meurt si la maladie réduit son maximum de points de vie à 0.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/death-dog.png",
+  "url": "/api/2014/monsters/death-dog",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Death Dog",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

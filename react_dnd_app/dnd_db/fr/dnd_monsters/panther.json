@@ -1,0 +1,106 @@
+{
+  "index": "panther",
+  "name": "Panthère",
+  "size": "Moyenne",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 12,
+  "hit_points": 13,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8",
+  "speed": {
+    "walk": "15 m/ 50 ft.",
+    "climb": "12 m/ 40 ft."
+  },
+  "strength": 14,
+  "dexterity": 15,
+  "constitution": 10,
+  "intelligence": 3,
+  "wisdom": 14,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "special_abilities": [
+    {
+      "name": "Odeur vive",
+      "desc": "La panthère a un avantage aux tests de Sagesse (Perception) qui reposent sur l'odorat."
+    },
+    {
+      "name": "Bondir",
+      "desc": "Si la panthère bouge d'au moins 6 m/ 20 ft. directement vers une créature puis la frappe avec une attaque de griffes au même tour, cette cible doit réussir un jet de sauvegarde de Force DD 12 ou être mise à terre. Si la cible est à terre, la panthère peut effectuer une attaque de morsure contre elle en guise d'action bonus."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, portée 1,5 m, une cible. Touché : 5 (1d6 + 2) dégâts perforants.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d6+2"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, portée 1,5 m, une cible. Touché : 4 (1d4 + 2) dégâts tranchants.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "1d4+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/panther.png",
+  "url": "/api/2014/monsters/panther",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Panther",
+  "size_en": "Medium",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

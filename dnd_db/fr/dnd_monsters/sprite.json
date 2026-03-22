@@ -1,0 +1,117 @@
+{
+  "index": "sprite",
+  "name": "Lutin",
+  "size": "Très petite",
+  "type": "fée",
+  "alignment": "neutre bon",
+  "armor_class": 15,
+  "hit_points": 2,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4",
+  "speed": {
+    "walk": "10 ft.",
+    "fly": "40 ft."
+  },
+  "strength": 3,
+  "dexterity": 18,
+  "constitution": 10,
+  "intelligence": 14,
+  "wisdom": 13,
+  "charisma": 11,
+  "proficiencies": [
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 8,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "Common, Elvish, Sylvan",
+  "challenge_rating": 0.25,
+  "proficiency_bonus": 2,
+  "xp": 50,
+  "actions": [
+    {
+      "name": "Épée longue",
+      "desc": "Attaque au corps à corps avec une arme : +2 pour toucher, atteignez 1,50 m, une cible. Touché : 1 dégât tranchant.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Arc court",
+      "desc": "Attaque avec arme à distance : +6 pour toucher, portée 40/160 pieds, une cible. Touché : 1 dégât perçant, et la cible doit réussir un jet de sauvegarde de Constitution DD 10 ou être empoisonnée pendant 1 minute. Si le résultat de son jet de sauvegarde est de 5 ou moins, la cible empoisonnée tombe inconsciente pendant la même durée, ou jusqu'à ce qu'elle subisse des dégâts ou qu'une autre créature fasse une action pour la réveiller.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Vue du cœur",
+      "desc": "Le sprite touche une créature et connaît comme par magie l'état émotionnel actuel de la créature. Si la cible échoue à un jet de sauvegarde de Charisme DD 10, le sprite connaît également l'alignement de la créature. Les célestes, les démons et les morts-vivants échouent automatiquement au jet de sauvegarde.",
+      "dc": {
+        "dc_type": {
+          "index": "cha",
+          "name": "CHA",
+          "url": "/api/2014/ability-scores/cha"
+        },
+        "dc_value": 10,
+        "success_type": "none"
+      },
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Invisibilité",
+      "desc": "Le sprite devient invisible par magie jusqu'à ce qu'il attaque ou lance un sort, ou jusqu'à ce que sa concentration prenne fin (comme s'il se concentrait sur un sort). Tout équipement que le sprite porte ou transporte est invisible avec lui.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/sprite.png",
+  "url": "/api/2014/monsters/sprite",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Sprite",
+  "type_en": "fey",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

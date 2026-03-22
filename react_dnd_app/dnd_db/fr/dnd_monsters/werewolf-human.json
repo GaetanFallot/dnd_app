@@ -1,0 +1,129 @@
+{
+  "index": "werewolf-human",
+  "name": "Loup-garou, forme humaine",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "human",
+  "alignment": "chaotique mauvais",
+  "armor_class": 11,
+  "hit_points": 58,
+  "hit_dice": "9d8",
+  "forms": [
+    {
+      "index": "werewolf-hybrid",
+      "name": "Werewolf, Hybrid Form",
+      "url": "/api/2014/monsters/werewolf-hybrid"
+    },
+    {
+      "index": "werewolf-wolf",
+      "name": "Werewolf, Wolf Form",
+      "url": "/api/2014/monsters/werewolf-wolf"
+    }
+  ],
+  "hit_points_roll": "9d8+18",
+  "speed": {
+    "walk": "9 m/ 30 ft."
+  },
+  "strength": 15,
+  "dexterity": 13,
+  "constitution": 14,
+  "intelligence": 10,
+  "wisdom": 11,
+  "charisma": 10,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 14
+  },
+  "languages": "Common",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "Changeur de forme",
+      "desc": "Le loup-garou peut utiliser son action pour se métamorphoser en un hybride loup-humanoïde ou en loup, ou reprendre sa vraie forme, qui est humanoïde. Ses statistiques, autres que sa CA, sont les mêmes dans chaque forme. Tout équipement qu’il porte ou transporte n’est pas transformé. Il reprend sa vraie forme s'il meurt."
+    },
+    {
+      "name": "Ouïe et odorat aiguisés",
+      "desc": "Le loup-garou a un avantage aux tests de Sagesse (Perception) qui reposent sur l'ouïe ou l'odorat."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le loup-garou effectue deux attaques : deux avec sa lance (forme humanoïde) ou une avec sa morsure et une avec ses griffes (forme hybride).",
+      "actions": [
+        {
+          "action_name": "Spear",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Lance",
+      "desc": "Attaque au corps à corps ou à distance avec une arme : +4 pour toucher, atteignez 1,5 m. ou portée 20/18 m/ 60 ft., une créature. Touché : 5 (1d6 + 2) dégâts perforants, ou 6 (1d8 + 2) dégâts perforants s'il est utilisé à deux mains pour effectuer une attaque au corps à corps.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "notes": "One handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "damage_dice": "1d6+2"
+              },
+              {
+                "option_type": "damage",
+                "notes": "Two handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "damage_dice": "1d8+2"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/werewolf-human.png",
+  "url": "/api/2014/monsters/werewolf-human",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Werewolf, Human Form",
+  "size_en": "Medium",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

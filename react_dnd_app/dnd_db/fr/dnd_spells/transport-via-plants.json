@@ -1,0 +1,37 @@
+{
+  "higher_level": [],
+  "index": "transport-via-plants",
+  "name": "Transport via les plantes",
+  "desc": [
+    "Ce sort crée un lien magique entre une plante inanimée de grande taille ou plus grande à portée et une autre plante, à n'importe quelle distance, sur le même plan d'existence. Vous devez avoir vu ou touché la plante de destination au moins une fois auparavant. Pendant toute la durée du sort, n'importe quelle créature peut entrer dans la plante cible et sortir de la plante de destination en utilisant 1,50 mètre de mouvement."
+  ],
+  "range": "10 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "1 tour",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/transport-via-plants",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Transport via Plants",
+  "material": "",
+  "_translated": true
+}

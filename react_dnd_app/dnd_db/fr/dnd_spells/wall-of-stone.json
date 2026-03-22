@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "wall-of-stone",
+  "name": "Mur de pierre",
+  "desc": [
+    "Un mur non magique de pierre solide surgit à un point que vous choisissez à portée. Le mur a une épaisseur de 6 pouces et est composé de dix panneaux de 10 pieds sur 10 pieds. Chaque panneau doit être contigu à au moins un autre panneau. Alternativement, vous pouvez créer des panneaux de 10 pieds sur 20 pieds qui n'ont que 3 pouces d'épaisseur.\nSi le mur traverse l'espace d'une créature lorsqu'il apparaît, la créature est poussée d'un côté du mur (votre choix). Si une créature est entourée de tous côtés par le mur (ou par le mur et une autre surface solide), cette créature peut effectuer un jet de sauvegarde de dextérité. En cas de réussite, il peut utiliser sa réaction pour reprendre sa vitesse afin de ne plus être encerclé par le mur.\nLe mur peut avoir n'importe quelle forme, mais il ne peut pas occuper le même espace qu'une créature ou un objet. Le mur n’a pas besoin d’être vertical ni de reposer sur une fondation solide. Il doit cependant se fondre avec la pierre existante et être solidement soutenu par celle-ci. Ainsi, vous pouvez utiliser ce sort pour combler un gouffre ou créer une rampe.\nSi vous créez une portée supérieure à 20 pieds de longueur, vous devez réduire de moitié la taille de chaque panneau pour créer des supports. Vous pouvez façonner grossièrement le mur pour créer des créneaux, des créneaux, etc.\nLe mur est un objet en pierre qui peut être endommagé et donc brisé. Chaque panneau a une CA de 15 et 30 points de vie par pouce d'épaisseur. Réduire un panneau à 0 point de vie le détruit et peut provoquer l'effondrement des panneaux connectés à la discrétion du MJ.\nSi vous restez concentré sur ce sort pendant toute sa durée, le mur devient permanent et ne peut être dissipé. Sinon, le mur disparaît à la fin du sort."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un petit bloc de granit.",
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 5,
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/wall-of-stone",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Wall of Stone",
+  "_translated": true
+}

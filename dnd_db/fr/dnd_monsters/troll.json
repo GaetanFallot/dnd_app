@@ -1,0 +1,116 @@
+{
+  "index": "troll",
+  "name": "Troll",
+  "size": "Grande",
+  "type": "géant",
+  "alignment": "chaotique mauvais",
+  "armor_class": 15,
+  "hit_points": 84,
+  "hit_dice": "8d10",
+  "hit_points_roll": "8d10+40",
+  "speed": {
+    "walk": "9 m/ 30 ft."
+  },
+  "strength": 18,
+  "dexterity": 13,
+  "constitution": 20,
+  "intelligence": 7,
+  "wisdom": 9,
+  "charisma": 7,
+  "proficiencies": [
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "18 m/ 60 ft.",
+    "passive_perception": 12
+  },
+  "languages": "Giant",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "Odeur vive",
+      "desc": "Le troll a un avantage aux tests de Sagesse (Perception) qui reposent sur l'odorat."
+    },
+    {
+      "name": "Régénération",
+      "desc": "Le troll récupère 10 points de vie au début de son tour. Si le troll subit des dégâts d'acide ou de feu, ce trait ne fonctionne pas au début du prochain tour du troll. Le troll ne meurt que s'il commence son tour avec 0 point de vie et ne se régénère pas."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le troll effectue trois attaques : une avec sa morsure et deux avec ses griffes.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Claw",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 7 (1d6 + 4) dégâts perforants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffe",
+      "desc": "Attaque au corps à corps avec une arme : +7 pour toucher, portée 1,5 m, une cible. Touché : 11 (2d6 + 4) dégâts tranchants.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d6+4"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/troll.png",
+  "url": "/api/2014/monsters/troll",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Troll",
+  "size_en": "Large",
+  "type_en": "giant",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

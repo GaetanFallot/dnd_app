@@ -1,0 +1,139 @@
+{
+  "index": "shadow",
+  "name": "Ombre",
+  "size": "Moyenne",
+  "type": "mort-vivant",
+  "alignment": "chaotique mauvais",
+  "armor_class": 12,
+  "hit_points": 16,
+  "hit_dice": "3d8",
+  "hit_points_roll": "3d8+3",
+  "speed": {
+    "walk": "12 m/ 40 ft."
+  },
+  "strength": 6,
+  "dexterity": 14,
+  "constitution": 13,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 8,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [
+    "radiant"
+  ],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "fire",
+    "lightning",
+    "thunder",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "grappled",
+      "name": "Grappled",
+      "url": "/api/2014/conditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "Restrained",
+      "url": "/api/2014/conditions/restrained"
+    }
+  ],
+  "senses": {
+    "darkvision": "18 m/ 60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.5,
+  "proficiency_bonus": 2,
+  "xp": 100,
+  "special_abilities": [
+    {
+      "name": "Amorphe",
+      "desc": "L'ombre peut se déplacer dans un espace aussi étroit que 1 pouce de large sans se presser."
+    },
+    {
+      "name": "Furtivité de l'ombre",
+      "desc": "Dans la pénombre ou dans l’obscurité, l’ombre peut effectuer l’action Cacher comme une action bonus. Son bonus de furtivité est également amélioré à +6."
+    },
+    {
+      "name": "Faiblesse à la lumière du soleil",
+      "desc": "Lorsqu'elle est exposée au soleil, l'ombre est désavantagée aux jets d'attaque, aux tests de caractéristiques et aux jets de sauvegarde."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Drain de force",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,5 m, une créature. Touché : 9 (2d6 + 2) dégâts nécrotiques et le score de Force de la cible est réduit de 1d4. La cible meurt si cela réduit sa Force à 0. Dans le cas contraire, la réduction dure jusqu'à ce que la cible termine un repos court ou long.\nSi un humanoïde non maléfique meurt suite à cette attaque, une nouvelle ombre surgit du cadavre 1d4 heures plus tard.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "Necrotic",
+            "url": "/api/2014/damage-types/necrotic"
+          },
+          "damage_dice": "2d6+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/shadow.png",
+  "url": "/api/2014/monsters/shadow",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Shadow",
+  "size_en": "Medium",
+  "type_en": "undead",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

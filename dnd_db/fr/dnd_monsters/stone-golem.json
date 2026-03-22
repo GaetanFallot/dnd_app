@@ -1,0 +1,145 @@
+{
+  "index": "stone-golem",
+  "name": "Golem de pierre",
+  "size": "Grande",
+  "type": "artificiel",
+  "alignment": "sans alignement",
+  "armor_class": 17,
+  "hit_points": 178,
+  "hit_dice": "17d10",
+  "hit_points_roll": "17d10+85",
+  "speed": {
+    "walk": "9 m/ 30 ft."
+  },
+  "strength": 22,
+  "dexterity": 9,
+  "constitution": 20,
+  "intelligence": 3,
+  "wisdom": 11,
+  "charisma": 1,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "poison",
+    "psychic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "36 m/ 20 ft.",
+    "passive_perception": 10
+  },
+  "languages": "understands the languages of its creator but can't speak",
+  "challenge_rating": 10,
+  "proficiency_bonus": 4,
+  "xp": 5900,
+  "special_abilities": [
+    {
+      "name": "Forme immuable",
+      "desc": "Le golem est immunisé contre tout sort ou effet susceptible de modifier sa forme."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le golem a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    },
+    {
+      "name": "Armes magiques",
+      "desc": "Les attaques avec les armes du golem sont magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le golem effectue deux attaques de coup.",
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Claquer",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, portée 1,5 m, une cible. Touché : 19 (3d8 + 6) dégâts contondants.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "3d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Lent",
+      "desc": "Le golem cible une ou plusieurs créatures qu'il peut voir dans un rayon de 3 m/ 10 ft. de celui-ci. Chaque cible doit réussir un jet de sauvegarde de Sagesse DD 17 contre cette magie. En cas d'échec, une cible ne peut pas utiliser de réactions, sa vitesse est réduite de moitié et elle ne peut pas effectuer plus d'une attaque pendant son tour. De plus, la cible peut effectuer soit une action, soit une action bonus à son tour, mais pas les deux. Ces effets durent 1 minute. Une cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "dc": {
+        "dc_type": {
+          "index": "wis",
+          "name": "WIS",
+          "url": "/api/2014/ability-scores/wis"
+        },
+        "dc_value": 17,
+        "success_type": "none"
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/stone-golem.png",
+  "url": "/api/2014/monsters/stone-golem",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Stone Golem",
+  "size_en": "Large",
+  "type_en": "construct",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

@@ -1,0 +1,129 @@
+{
+  "index": "couatl",
+  "name": "Couatl",
+  "size": "Moyenne",
+  "type": "céleste",
+  "alignment": "loyal bon",
+  "armor_class": 19,
+  "hit_points": 97,
+  "hit_dice": "13d8",
+  "hit_points_roll": "13d8+39",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "90 ft."
+  },
+  "strength": 16,
+  "dexterity": 20,
+  "constitution": 17,
+  "intelligence": 18,
+  "wisdom": 20,
+  "charisma": 18,
+  "proficiencies": [
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "radiant"
+  ],
+  "damage_immunities": [
+    "psychic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "truesight": "120 ft.",
+    "passive_perception": 15
+  },
+  "languages": "all, telepathy 120 ft.",
+  "challenge_rating": 4,
+  "proficiency_bonus": 2,
+  "xp": 1100,
+  "special_abilities": [
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité de lancement de sorts du couatl est le Charisme (sauvegarde contre les sorts DD 14). Il peut de manière innée lancer les sorts suivants, ne nécessitant que des composants verbaux :\n\nÀ volonté : détecter le mal et le bien, détecter la magie, détecter les pensées\n3/jour chacun : bénir, créer de la nourriture et de l'eau, guérir les blessures, restauration mineure, protection contre le poison, sanctuaire, bouclier\n1/jour chacun : rêve, restauration supérieure, vision"
+    },
+    {
+      "name": "Armes magiques",
+      "desc": "Les attaques avec les armes du couatl sont magiques."
+    },
+    {
+      "name": "Esprit protégé",
+      "desc": "Le couatl est immunisé contre la divination et contre tout effet susceptible de détecter ses émotions, de lire ses pensées ou de détecter sa position."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +8 pour toucher, allonge 1,50 m, une créature. Touché : 8 (1d6 + 5) dégâts perforants, et la cible doit réussir un jet de sauvegarde de Constitution DD 13 ou être empoisonnée pendant 24 heures. Jusqu'à ce que ce poison disparaisse, la cible reste inconsciente. Une autre créature peut utiliser une action pour réveiller la cible.",
+      "attack_bonus": 8,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d6+5"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Contraindre",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, atteignez 10 pieds, une créature de taille moyenne ou plus petite. Touché : 10 (2d6 + 3) dégâts contondants et la cible est agrippée (évasion DD 15). Jusqu'à la fin de cette lutte, la cible est immobilisée et le couatl ne peut pas contraindre une autre cible.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "2d6+3"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Changer de forme",
+      "desc": "Le couatl se métamorphose comme par magie en un humanoïde ou une bête dont le niveau de défi est égal ou inférieur au sien, ou reprend sa vraie forme. Il reprend sa vraie forme s'il meurt. Tout équipement qu'il porte ou transporte est absorbé ou supporté par la nouvelle forme (au choix du couatl).\nDans une nouvelle forme, le couatl conserve ses statistiques de jeu et sa capacité à parler, mais sa CA, ses modes de déplacement, sa Force, sa Dextérité et ses autres actions sont remplacés par ceux de la nouvelle forme, et il gagne toutes les statistiques et capacités (à l'exception des fonctionnalités de classe, des actions légendaires et des actions de repaire) que possède la nouvelle forme mais qui lui manque. Si la nouvelle forme subit une attaque par morsure, le couatl peut utiliser sa morsure sous cette forme.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/couatl.png",
+  "url": "/api/2014/monsters/couatl",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Couatl",
+  "type_en": "celestial",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

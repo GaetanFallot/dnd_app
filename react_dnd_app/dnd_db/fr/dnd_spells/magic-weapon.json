@@ -1,0 +1,50 @@
+{
+  "index": "magic-weapon",
+  "name": "Arme magique",
+  "desc": [
+    "Vous touchez une arme non magique. Jusqu'à la fin du sort, cette arme devient une arme magique avec un bonus de +1 aux jets d'attaque et de dégâts."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 4 ou supérieur, le bonus passe à +2. Lorsque vous utilisez un emplacement de sort de niveau 6 ou supérieur, le bonus passe à +3."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 1 heure",
+  "concentration": true,
+  "casting_time": "1 action bonus",
+  "level": 2,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/magic-weapon",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Magic Weapon",
+  "material": "",
+  "_translated": true
+}

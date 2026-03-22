@@ -1,0 +1,48 @@
+{
+  "higher_level": [],
+  "index": "gate",
+  "name": "Grille",
+  "desc": [
+    "Vous invoquez un portail reliant un espace inoccupé que vous pouvez voir à portée à un emplacement précis sur un plan d'existence différent. Le portail est une ouverture circulaire que vous pouvez réaliser de 5 à 20 pieds de diamètre. Vous pouvez orienter le portail dans la direction de votre choix. Le portail dure pour la durée.\nLe portail a un recto et un verso sur chaque plan où il apparaît. Le voyage à travers le portail n'est possible qu'en se déplaçant par sa façade. Tout ce qui fait cela est instantanément transporté vers l'autre plan, apparaissant dans l'espace inoccupé le plus proche du portail.\nLes divinités et autres dirigeants planaires peuvent empêcher les portails créés par ce sort de s'ouvrir en leur présence ou n'importe où dans leur domaine.\nLorsque vous lancez ce sort, vous pouvez prononcer le nom d'une créature spécifique (un pseudonyme, un titre ou un surnom ne fonctionne pas). Si cette créature se trouve sur un plan autre que celui sur lequel vous vous trouvez, le portail s'ouvre à proximité immédiate de la créature nommée et attire la créature à travers lui vers l'espace inoccupé le plus proche de votre côté du portail. Vous n'obtenez aucun pouvoir spécial sur la créature et elle est libre d'agir comme le MJ le juge approprié. Il pourrait partir, vous attaquer ou vous aider."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un diamant valant au moins 5 000 po.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 9,
+  "school": {
+    "index": "conjuration",
+    "name": "Conjuration",
+    "url": "/api/2014/magic-schools/conjuration",
+    "name_fr": "Invocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/gate",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Gate",
+  "_translated": true
+}

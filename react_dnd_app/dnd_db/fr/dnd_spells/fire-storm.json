@@ -1,0 +1,69 @@
+{
+  "higher_level": [],
+  "index": "fire-storm",
+  "name": "Tempête de feu",
+  "desc": [
+    "Une tempête composée de nappes de flammes rugissantes apparaît à un endroit que vous choisissez à portée. La zone de la tempête comprend jusqu'à dix cubes de 10 pieds, que vous pouvez disposer à votre guise. Chaque cube doit avoir au moins une face adjacente à la face d'un autre cube. Chaque créature présente dans la zone doit effectuer un jet de sauvegarde de dextérité. Il subit 7d10 dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\nL'incendie endommage les objets présents dans la zone et enflamme les objets inflammables qui ne sont pas portés ou transportés. Si vous le souhaitez, la vie végétale de la zone n'est pas affectée par ce sort."
+  ],
+  "range": "150 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 7,
+  "damage": {
+    "damage_type": {
+      "index": "fire",
+      "name": "Fire",
+      "url": "/api/2014/damage-types/fire"
+    },
+    "damage_at_slot_level": {
+      "7": "7d10"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "DEX",
+      "url": "/api/2014/ability-scores/dex"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "cube",
+    "size": 100
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "sorcerer",
+      "name": "Sorcerer",
+      "url": "/api/2014/classes/sorcerer"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/fire-storm",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Fire Storm",
+  "material": "",
+  "_translated": true
+}

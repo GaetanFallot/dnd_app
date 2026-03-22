@@ -1,0 +1,165 @@
+{
+  "index": "planetar",
+  "name": "Planétaire",
+  "size": "Grande",
+  "type": "céleste",
+  "alignment": "loyal bon",
+  "armor_class": 19,
+  "hit_points": 200,
+  "hit_dice": "16d10",
+  "hit_points_roll": "16d10+112",
+  "speed": {
+    "walk": "12 m/ 40 ft.",
+    "fly": "36 m/ 20 ft."
+  },
+  "strength": 24,
+  "dexterity": 20,
+  "constitution": 24,
+  "intelligence": 19,
+  "wisdom": 22,
+  "charisma": 25,
+  "proficiencies": [
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 12,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "radiant",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "frightened",
+      "name": "Frightened",
+      "url": "/api/2014/conditions/frightened"
+    }
+  ],
+  "senses": {
+    "truesight": "36 m/ 20 ft.",
+    "passive_perception": 21
+  },
+  "languages": "all, telepathy 120 ft.",
+  "challenge_rating": 16,
+  "proficiency_bonus": 5,
+  "xp": 15000,
+  "special_abilities": [
+    {
+      "name": "Armes angéliques",
+      "desc": "Les attaques avec les armes du planétaire sont magiques. Lorsque le planétaire frappe avec une arme, celle-ci inflige 5d8 dégâts radiants supplémentaires (inclus dans l'attaque)."
+    },
+    {
+      "name": "Conscience divine",
+      "desc": "Le planétaire sait s'il entend un mensonge."
+    },
+    {
+      "name": "Lancement de sorts inné",
+      "desc": "La capacité de lancement de sorts du planétaire est le Charisme (sauvegarde contre les sorts DD 20). Le planétaire peut de manière innée lancer les sorts suivants, ne nécessitant aucun composant matériel :\nÀ volonté : détection du mal et du bien, invisibilité (soi uniquement)\n3/jour chacun : barrière de lames, dissiper le mal et le bien, frappe de flammes, ressusciter les morts\n1/jour chacun : commune, contrôle météo, invasion d'insectes"
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le planétaire a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le planétaire effectue deux attaques au corps à corps.",
+      "actions": [
+        {
+          "action_name": "Greatsword",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Espadon",
+      "desc": "Attaque au corps à corps avec une arme : +12 pour toucher, portée 1,5 m, une cible. Touché : 21 (4d6 + 7) dégâts tranchants plus 22 (5d8) dégâts radiants.",
+      "attack_bonus": 12,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "4d6+7"
+        },
+        {
+          "damage_type": {
+            "index": "radiant",
+            "name": "Radiant",
+            "url": "/api/2014/damage-types/radiant"
+          },
+          "damage_dice": "5d8"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Toucher curatif",
+      "desc": "Le planétaire touche une autre créature. La cible récupère magiquement 30 (6d8 + 3) points de vie et est libérée de toute malédiction, maladie, poison, cécité ou surdité.",
+      "usage": {
+        "type": "per day",
+        "times": 4
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/planetar.png",
+  "url": "/api/2014/monsters/planetar",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Planetar",
+  "size_en": "Large",
+  "type_en": "celestial",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

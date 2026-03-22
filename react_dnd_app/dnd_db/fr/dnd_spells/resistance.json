@@ -1,0 +1,49 @@
+{
+  "higher_level": [],
+  "index": "resistance",
+  "name": "Résistance",
+  "desc": [
+    "Vous touchez une créature consentante. Une fois avant la fin du sort, la cible peut lancer un d4 et ajouter le nombre obtenu à un jet de sauvegarde de son choix. Il peut lancer le dé avant ou après avoir effectué le jet de sauvegarde. Le sort prend alors fin."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Une cape miniature.",
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 0,
+  "school": {
+    "index": "abjuration",
+    "name": "Abjuration",
+    "url": "/api/2014/magic-schools/abjuration",
+    "name_fr": "Abjuration"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/resistance",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Resistance",
+  "_translated": true
+}

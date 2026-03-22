@@ -1,0 +1,131 @@
+{
+  "index": "specter",
+  "name": "Spectre",
+  "size": "Moyenne",
+  "type": "mort-vivant",
+  "alignment": "chaotique mauvais",
+  "armor_class": 12,
+  "hit_points": 22,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8",
+  "speed": {
+    "walk": "0 m.",
+    "fly": "15 m/ 50 ft.",
+    "hover": true
+  },
+  "strength": 1,
+  "dexterity": 14,
+  "constitution": 11,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 11,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "acid",
+    "cold",
+    "fire",
+    "lightning",
+    "thunder",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [
+    "necrotic",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    },
+    {
+      "index": "exhaustion",
+      "name": "Exhaustion",
+      "url": "/api/2014/conditions/exhaustion"
+    },
+    {
+      "index": "grappled",
+      "name": "Grappled",
+      "url": "/api/2014/conditions/grappled"
+    },
+    {
+      "index": "paralyzed",
+      "name": "Paralyzed",
+      "url": "/api/2014/conditions/paralyzed"
+    },
+    {
+      "index": "petrified",
+      "name": "Petrified",
+      "url": "/api/2014/conditions/petrified"
+    },
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    },
+    {
+      "index": "prone",
+      "name": "Prone",
+      "url": "/api/2014/conditions/prone"
+    },
+    {
+      "index": "restrained",
+      "name": "Restrained",
+      "url": "/api/2014/conditions/restrained"
+    },
+    {
+      "index": "unconscious",
+      "name": "Unconscious",
+      "url": "/api/2014/conditions/unconscious"
+    }
+  ],
+  "senses": {
+    "darkvision": "18 m/ 60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "understands all languages it knew in life but can't speak",
+  "challenge_rating": 1,
+  "proficiency_bonus": 2,
+  "xp": 200,
+  "special_abilities": [
+    {
+      "name": "Mouvement incorporel",
+      "desc": "Le spectre peut se déplacer à travers d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet."
+    },
+    {
+      "name": "Sensibilité à la lumière du soleil",
+      "desc": "Lorsqu'il est exposé au soleil, le spectre est désavantagé aux jets d'attaque, ainsi qu'aux tests de Sagesse (Perception) qui reposent sur la vue."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Drain de vie",
+      "desc": "Attaque de sort en mêlée : +4 pour toucher, allonge 1,5 m, une créature. Touché : 10 (3d6) dégâts nécrotiques. La cible doit réussir un jet de sauvegarde de Constitution DD 10, sinon son maximum de points de vie est réduit d'un montant égal aux dégâts subis. Cette réduction dure jusqu'à ce que la créature termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "Necrotic",
+            "url": "/api/2014/damage-types/necrotic"
+          },
+          "damage_dice": "3d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/specter.png",
+  "url": "/api/2014/monsters/specter",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Specter",
+  "size_en": "Medium",
+  "type_en": "undead",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

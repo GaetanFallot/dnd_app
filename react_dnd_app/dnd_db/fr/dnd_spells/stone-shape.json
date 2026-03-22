@@ -1,0 +1,54 @@
+{
+  "higher_level": [],
+  "index": "stone-shape",
+  "name": "Forme de pierre",
+  "desc": [
+    "Vous touchez un objet en pierre de taille moyenne ou plus petite ou une section de pierre ne dépassant pas 1,50 mètre dans n'importe quelle dimension et lui donnez la forme qui convient à votre objectif. Ainsi, par exemple, vous pouvez transformer un gros rocher en arme, en idole ou en coffre, ou faire un petit passage à travers un mur, à condition que le mur ait moins de 1,50 mètre d'épaisseur. Vous pouvez également façonner une porte en pierre ou son cadre pour sceller la porte. L'objet que vous créez peut avoir jusqu'à deux charnières et un loquet, mais des détails mécaniques plus fins ne sont pas possibles."
+  ],
+  "range": "Touche",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Argile molle, à travailler grossièrement pour lui donner la forme souhaitée pour l'objet en pierre.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 4,
+  "school": {
+    "index": "transmutation",
+    "name": "Transmutation",
+    "url": "/api/2014/magic-schools/transmutation",
+    "name_fr": "Transmutation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "land",
+      "name": "Land",
+      "url": "/api/2014/subclasses/land"
+    }
+  ],
+  "url": "/api/2014/spells/stone-shape",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Stone Shape",
+  "_translated": true
+}

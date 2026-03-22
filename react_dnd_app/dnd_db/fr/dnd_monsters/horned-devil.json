@@ -1,0 +1,224 @@
+{
+  "index": "horned-devil",
+  "name": "Diable cornu",
+  "size": "Grande",
+  "type": "fiélon",
+  "subtype": "devil",
+  "alignment": "loyal mauvais",
+  "armor_class": 18,
+  "hit_points": 178,
+  "hit_dice": "17d10",
+  "hit_points_roll": "17d10+85",
+  "speed": {
+    "walk": "20 ft.",
+    "fly": "60 ft."
+  },
+  "strength": 22,
+  "dexterity": 17,
+  "constitution": 21,
+  "intelligence": 12,
+  "wisdom": 16,
+  "charisma": 17,
+  "proficiencies": [
+    {
+      "value": 10,
+      "proficiency": {
+        "index": "saving-throw-str",
+        "name": "Saving Throw: STR",
+        "url": "/api/2014/proficiencies/saving-throw-str"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "cold",
+    "bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered"
+  ],
+  "damage_immunities": [
+    "fire",
+    "poison"
+  ],
+  "condition_immunities": [
+    {
+      "index": "poisoned",
+      "name": "Poisoned",
+      "url": "/api/2014/conditions/poisoned"
+    }
+  ],
+  "senses": {
+    "darkvision": "120 ft.",
+    "passive_perception": 13
+  },
+  "languages": "Infernal, telepathy 120 ft.",
+  "challenge_rating": 11,
+  "proficiency_bonus": 4,
+  "xp": 7200,
+  "special_abilities": [
+    {
+      "name": "La vue du diable",
+      "desc": "L'obscurité magique n'empêche pas la vision sombre du diable."
+    },
+    {
+      "name": "Résistance magique",
+      "desc": "Le diable a un avantage aux jets de sauvegarde contre les sorts et autres effets magiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "action_options",
+      "desc": "Le diable effectue trois attaques au corps à corps : deux avec sa fourchette et une avec sa queue. Il peut utiliser Hurl Flame à la place de toute attaque de mêlée.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Fork",
+                  "count": 2,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Tail",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Fork",
+                  "count": 2,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Hurl Flame",
+                  "count": 1,
+                  "type": "ranged"
+                }
+              ]
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Fork",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Tail",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Hurl Flame",
+                  "count": 1,
+                  "type": "ranged"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "Fourchette",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, atteignez 10 pieds, une cible. Touché : 15 (2d8 + 6) dégâts perforants.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "2d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Queue",
+      "desc": "Attaque au corps à corps avec une arme : +10 pour toucher, atteignez 10 pieds, une cible. Touché : 10 (1d8 + 6) dégâts perforants. Si la cible est une créature autre qu'un mort-vivant ou une construction, elle doit réussir un jet de sauvegarde de Constitution DD 17 ou perdre 10 (3d6) points de vie au début de chacun de ses tours à cause d'une blessure infernale. Chaque fois que le diable touche la cible blessée avec cette attaque, les dégâts infligés par la blessure augmentent de 10 (3d6). N'importe quelle créature peut entreprendre une action pour panser la blessure en réussissant un test de Sagesse (Médecine) DD 12. La blessure se referme également si la cible reçoit des soins magiques.",
+      "attack_bonus": 10,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d8+6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Lancement de flammes",
+      "desc": "Attaque magique à distance : +7 pour toucher, portée de 150 pieds, une cible. Touché : 14 (4d6) dégâts de feu. Si la cible est un objet inflammable qui n'est pas porté ou transporté, elle prend également feu.",
+      "attack_bonus": 7,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "fire",
+            "name": "Fire",
+            "url": "/api/2014/damage-types/fire"
+          },
+          "damage_dice": "4d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/horned-devil.png",
+  "url": "/api/2014/monsters/horned-devil",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Horned Devil",
+  "type_en": "fiend",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

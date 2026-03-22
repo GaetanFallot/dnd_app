@@ -1,0 +1,65 @@
+{
+  "index": "poisonous-snake",
+  "name": "Serpent venimeux",
+  "size": "Très petite",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 13,
+  "hit_points": 2,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4",
+  "speed": {
+    "walk": "9 m/ 30 ft.",
+    "swim": "9 m/ 30 ft."
+  },
+  "strength": 2,
+  "dexterity": 16,
+  "constitution": 11,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 3,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "3 m/ 10 ft.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +5 pour toucher, portée 1,5 m, une cible. Touché : 1 dégât perforant, et la cible doit effectuer un jet de sauvegarde de Constitution DD 10, subissant 5 (2d4) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "attack_bonus": 5,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/poisonous-snake.png",
+  "url": "/api/2014/monsters/poisonous-snake",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Poisonous Snake",
+  "size_en": "Tiny",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

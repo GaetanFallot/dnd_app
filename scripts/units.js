@@ -9,8 +9,8 @@
  * as the same translation sometimes leaves them in English.
  *
  * Convention D&D FR : 1 case = 1,5 m = 5 ft
- *   5 ft  → 1,5 m      10 ft → 3 m     15 ft → 4,5 m
- *   20 ft → 6 m        30 ft → 9 m     60 ft → 18 m
+ *   5 ft  → 1,5 m      10 ft → 3 m/ 10 ft     15 ft → 4,5 m
+ *   20 ft → 6 m/ 20 ft        30 ft → 9 m/ 30 ft     60 ft → 18 m/ 60 ft
  */
 function ft(text) {
   if (!text || typeof text !== 'string') return text;

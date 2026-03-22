@@ -1,0 +1,87 @@
+{
+  "index": "spider",
+  "name": "Araignée",
+  "size": "Très petite",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 12,
+  "hit_points": 1,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4-1",
+  "speed": {
+    "walk": "6 m/ 20 ft.",
+    "climb": "6 m/ 20 ft."
+  },
+  "strength": 2,
+  "dexterity": 14,
+  "constitution": 8,
+  "intelligence": 1,
+  "wisdom": 10,
+  "charisma": 2,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "9 m/ 30 ft.",
+    "passive_perception": 12
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "special_abilities": [
+    {
+      "name": "Escalade d'araignée",
+      "desc": "L'araignée peut escalader des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin d'effectuer un test de capacité."
+    },
+    {
+      "name": "Sens du Web",
+      "desc": "Lorsqu'elle est en contact avec une toile, l'araignée connaît l'emplacement exact de toute autre créature en contact avec la même toile."
+    },
+    {
+      "name": "Marcheur Web",
+      "desc": "L'araignée ignore les restrictions de mouvement causées par la sangle."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,5 m, une créature. Touché : 1 dégât perforant, et la cible doit réussir un jet de sauvegarde de Constitution DD 9 ou subir 2 (1d4) dégâts de poison.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/spider.png",
+  "url": "/api/2014/monsters/spider",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Spider",
+  "size_en": "Tiny",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

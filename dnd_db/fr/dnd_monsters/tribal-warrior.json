@@ -1,0 +1,91 @@
+{
+  "index": "tribal-warrior",
+  "name": "Guerrier tribal",
+  "desc": "Tribal warriors live beyond civilization, most often subsisting on fishing and hunting. Each tribe acts in accordance with the wishes of its chief, who is the greatest or oldest warrior of the tribe or a tribe member blessed by the gods.",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "any race",
+  "alignment": "tout alignement",
+  "armor_class": 12,
+  "hit_points": 11,
+  "hit_dice": "2d8",
+  "hit_points_roll": "2d8+2",
+  "speed": {
+    "walk": "9 m/ 30 ft."
+  },
+  "strength": 13,
+  "dexterity": 11,
+  "constitution": 12,
+  "intelligence": 8,
+  "wisdom": 11,
+  "charisma": 8,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 10
+  },
+  "languages": "any one language",
+  "challenge_rating": 0.125,
+  "proficiency_bonus": 2,
+  "xp": 25,
+  "special_abilities": [
+    {
+      "name": "Tactiques de meute",
+      "desc": "Le guerrier a un avantage aux jets d'attaque contre une créature si au moins un de ses alliés se trouve à moins de 1,5 m. de la créature et l'allié n'est pas incapable d'agir."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Lance",
+      "desc": "Attaque au corps à corps ou à distance avec une arme : +3 pour toucher, atteignez 1,5 m. ou portée 20/18 m/ 60 ft., une cible. Touché : 4 (1d6 + 1) dégâts perforants, ou 5 (1d8 + 1) dégâts perforants s'il est utilisé à deux mains pour effectuer une attaque au corps à corps.",
+      "attack_bonus": 3,
+      "damage": [
+        {
+          "choose": 1,
+          "type": "damage",
+          "from": {
+            "option_set_type": "options_array",
+            "options": [
+              {
+                "option_type": "damage",
+                "notes": "One handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "damage_dice": "1d6+1"
+              },
+              {
+                "option_type": "damage",
+                "notes": "Two handed",
+                "damage_type": {
+                  "index": "piercing",
+                  "name": "Piercing",
+                  "url": "/api/2014/damage-types/piercing"
+                },
+                "damage_dice": "1d8+1"
+              }
+            ]
+          }
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/tribal-warrior.png",
+  "url": "/api/2014/monsters/tribal-warrior",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Tribal Warrior",
+  "size_en": "Medium",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

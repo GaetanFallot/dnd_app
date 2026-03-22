@@ -1,0 +1,121 @@
+{
+  "index": "purple-worm",
+  "name": "Ver violet",
+  "size": "Gargantuesque",
+  "type": "monstruosité",
+  "alignment": "sans alignement",
+  "armor_class": 18,
+  "hit_points": 247,
+  "hit_dice": "15d20",
+  "hit_points_roll": "15d20+90",
+  "speed": {
+    "walk": "50 ft.",
+    "burrow": "30 ft."
+  },
+  "strength": 28,
+  "dexterity": 7,
+  "constitution": 22,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 4,
+  "proficiencies": [
+    {
+      "value": 11,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "30 ft.",
+    "tremorsense": "60 ft.",
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 15,
+  "proficiency_bonus": 5,
+  "xp": 13000,
+  "special_abilities": [
+    {
+      "name": "Tunnelier",
+      "desc": "Le ver peut creuser dans la roche solide à la moitié de sa vitesse de fouille et laisse dans son sillage un tunnel de 10 pieds de diamètre."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le ver effectue deux attaques : une avec sa morsure et une avec son dard.",
+      "actions": [
+        {
+          "action_name": "Bite",
+          "count": "1",
+          "type": "melee"
+        },
+        {
+          "action_name": "Tail Stinger",
+          "count": "1",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +9 pour toucher, atteignez 10 pieds, une cible. Touché : 22 (3d8 + 9) dégâts perforants. Si la cible est une créature de taille G ou plus petite, elle doit réussir un jet de sauvegarde de Dextérité DD 19 ou être avalée par le ver. Une créature avalée est aveuglée et immobilisée, elle bénéficie d'une couverture totale contre les attaques et autres effets extérieurs au ver, et elle subit 21 (6d6) dégâts d'acide au début de chacun des tours du ver.\nSi le ver subit 30 dégâts ou plus en un seul tour de la part d'une créature à l'intérieur, le ver doit réussir un jet de sauvegarde de Constitution DD 21 à la fin de ce tour ou régurgiter toutes les créatures avalées, qui tombent à terre dans un espace situé à moins de 3 m/ 10 ftètres du ver. Si le ver meurt, la créature avalée n'est plus retenue par celui-ci et peut s'échapper du cadavre en utilisant 20 pieds de mouvement, pour sortir à plat ventre.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "3d8+9"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Dard de queue",
+      "desc": "Attaque au corps à corps avec une arme : +9 pour toucher, allonge 10 pieds, une créature. Touché : 19 (3d6 + 9) dégâts perforants, et la cible doit effectuer un jet de sauvegarde de Constitution DD 19, subissant 42 (12d6) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "attack_bonus": 9,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "3d6+9"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/purple-worm.png",
+  "url": "/api/2014/monsters/purple-worm",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Purple Worm",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

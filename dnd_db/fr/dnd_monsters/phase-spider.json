@@ -1,0 +1,87 @@
+{
+  "index": "phase-spider",
+  "name": "Araignée de phase",
+  "desc": "A phase spider possesses the magical ability to phase in and out of the Ethereal Plane. It seems to appear out of nowhere and quickly vanishes after attacking. Its movement on the Ethereal Plane before coming back to the Material Plane makes it seem like it can teleport.",
+  "size": "Grande",
+  "type": "monstruosité",
+  "alignment": "sans alignement",
+  "armor_class": 13,
+  "hit_points": 32,
+  "hit_dice": "5d10",
+  "hit_points_roll": "5d10+5",
+  "speed": {
+    "walk": "30 ft.",
+    "climb": "30 ft."
+  },
+  "strength": 15,
+  "dexterity": 15,
+  "constitution": 12,
+  "intelligence": 6,
+  "wisdom": 10,
+  "charisma": 6,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 10
+  },
+  "languages": "",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "Escapade éthérée",
+      "desc": "Par une action bonus, l'araignée peut passer comme par magie du plan Matériel au plan Éthéré, ou vice versa."
+    },
+    {
+      "name": "Escalade d'araignée",
+      "desc": "L'araignée peut escalader des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin d'effectuer un test de capacité."
+    },
+    {
+      "name": "Marcheur Web",
+      "desc": "L'araignée ignore les restrictions de mouvement causées par la sangle."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +4 pour toucher, allonge 1,50 m, une créature. Touché : 7 (1d10 + 2) dégâts perforants, et la cible doit effectuer un jet de sauvegarde de Constitution DD 11, subissant 18 (4d8) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Si les dégâts de poison réduisent la cible à 0 point de vie, la cible est stable mais empoisonnée pendant 1 heure, même après avoir récupéré des points de vie, et est paralysée lorsqu'elle est ainsi empoisonnée.",
+      "attack_bonus": 4,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d10+2"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/phase-spider.png",
+  "url": "/api/2014/monsters/phase-spider",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Phase Spider",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

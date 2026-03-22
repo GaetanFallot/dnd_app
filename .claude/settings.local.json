@@ -8,7 +8,12 @@
       "Bash(done)",
       "Bash(ls:*)",
       "Bash(wc -l *)",
-      "Bash(tasklist)"
+      "Bash(tasklist)",
+      "Bash(npm --version)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(du -sh /c/Users/gaeta/Desktop/dnd_app/react_dnd_app/dnd_db/*.js)"
     ]
   }
 }

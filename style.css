@@ -79,6 +79,11 @@
   .scene-emoji { position:absolute; top:7px; left:9px; font-size:1.1rem; z-index:2; }
   .delete-btn { position:absolute; top:6px; right:28px; font-size:.68rem; background:rgba(180,40,40,.85); color:#fff; width:17px; height:17px; border-radius:50%; display:none; align-items:center; justify-content:center; z-index:3; border:none; cursor:pointer; }
   .scene-card:hover .delete-btn { display:flex; }
+  .edit-btn { position:absolute; top:6px; right:49px; font-size:.7rem; background:rgba(40,100,200,.85); color:#fff; width:17px; height:17px; border-radius:50%; display:none; align-items:center; justify-content:center; z-index:3; border:none; cursor:pointer; line-height:1; }
+  .scene-card:hover .edit-btn { display:flex; }
+  .section-label.collapsible { cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none; }
+  .section-label.collapsible:hover { color:var(--gold-bright); }
+  .collapse-arrow { transition:transform .2s; font-size:.65rem; }
   .custom-section { margin-top:1.2rem; padding-top:1.2rem; border-top:1px solid var(--border); }
   .toast { position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%) translateY(100px); background:var(--stone-mid); border:1px solid var(--gold); color:var(--gold); padding:.5rem 1rem; border-radius:3px; font-family:'Cinzel',serif; font-size:.76rem; letter-spacing:.05em; transition:transform .3s cubic-bezier(.34,1.56,.64,1); z-index:1000; pointer-events:none; }
   .toast.show { transform:translateX(-50%) translateY(0); }
@@ -164,7 +169,7 @@
   .dock-toggle.open { transform:rotate(180deg); }
   .dock-body { overflow-x:auto; overflow-y:hidden; max-height:0; transition:max-height .3s ease; background:var(--deep); border-top:1px solid var(--border); }
   .dock-body.open { max-height:210px; }
-  .monster-list { display:flex; gap:.6rem; padding:.7rem 1.2rem; min-height:185px; align-items:flex-start; }
+  .monster-list { display:flex; flex-wrap:nowrap; gap:.6rem; padding:.7rem 1.2rem; min-height:185px; align-items:flex-start; width:max-content; min-width:100%; }
   .monster-chip { min-width:165px; max-width:210px; background:var(--stone-mid); border:1px solid var(--border); border-radius:4px; padding:.5rem .7rem; display:flex; flex-direction:column; gap:.25rem; flex-shrink:0; transition:border-color .15s; }
   .monster-chip:hover { border-color:var(--gold); }
   .chip-name { font-family:'Cinzel',serif; font-size:.73rem; color:var(--gold); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }

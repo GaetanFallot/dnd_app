@@ -1,0 +1,64 @@
+{
+  "index": "scorpion",
+  "name": "Scorpion",
+  "size": "Très petite",
+  "type": "bête",
+  "alignment": "sans alignement",
+  "armor_class": 11,
+  "hit_points": 1,
+  "hit_dice": "1d4",
+  "hit_points_roll": "1d4-1",
+  "speed": {
+    "walk": "3 m/ 10 ft."
+  },
+  "strength": 2,
+  "dexterity": 11,
+  "constitution": 8,
+  "intelligence": 1,
+  "wisdom": 8,
+  "charisma": 2,
+  "proficiencies": [],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "3 m/ 10 ft.",
+    "passive_perception": 9
+  },
+  "languages": "",
+  "challenge_rating": 0,
+  "proficiency_bonus": 2,
+  "xp": 10,
+  "actions": [
+    {
+      "name": "Piquer",
+      "desc": "Attaque au corps à corps avec une arme : +2 pour toucher, allonge 1,5 m, une créature. Touché : 1 dégât perforant, et la cible doit effectuer un jet de sauvegarde de Constitution DD 9, subissant 4 (1d8) dégâts de poison en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/scorpion.png",
+  "url": "/api/2014/monsters/scorpion",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "special_abilities": [],
+  "name_en": "Scorpion",
+  "size_en": "Tiny",
+  "type_en": "beast",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

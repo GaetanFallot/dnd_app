@@ -1,0 +1,98 @@
+{
+  "index": "priest",
+  "name": "Prêtre",
+  "desc": "Priests bring the teachings of their gods to the common folk. They are the spiritual leaders of temples and shrines and often hold positions of influence in their communities. Evil priests might work openly under a tyrant, or they might be the leaders of religious sects hidden in the shadows of good society, overseeing depraved rites.\n\nA priest typically has one or more acolytes to help with religious ceremonies and other sacred duties.",
+  "size": "Moyenne",
+  "type": "humanoïde",
+  "subtype": "any race",
+  "alignment": "tout alignement",
+  "armor_class": 13,
+  "hit_points": 27,
+  "hit_dice": "5d8",
+  "hit_points_roll": "5d8+5",
+  "speed": {
+    "walk": "25 ft."
+  },
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 12,
+  "intelligence": 13,
+  "wisdom": 16,
+  "charisma": 13,
+  "proficiencies": [
+    {
+      "value": 7,
+      "proficiency": {
+        "index": "skill-medicine",
+        "name": "Skill: Medicine",
+        "url": "/api/2014/proficiencies/skill-medicine"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-persuasion",
+        "name": "Skill: Persuasion",
+        "url": "/api/2014/proficiencies/skill-persuasion"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-religion",
+        "name": "Skill: Religion",
+        "url": "/api/2014/proficiencies/skill-religion"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "passive_perception": 13
+  },
+  "languages": "any two languages",
+  "challenge_rating": 2,
+  "proficiency_bonus": 2,
+  "xp": 450,
+  "special_abilities": [
+    {
+      "name": "Éminence divine",
+      "desc": "Par une action bonus, le prêtre peut dépenser un emplacement de sort pour que ses attaques au corps à corps infligent par magie 10 (3d6) dégâts radiants supplémentaires à une cible en cas de coup. Cet avantage dure jusqu'à la fin du tour. Si le prêtre dépense un emplacement de sort de niveau 2 ou supérieur, les dégâts supplémentaires augmentent de 1d6 pour chaque niveau supérieur au 1er."
+    },
+    {
+      "name": "Lancement de sorts",
+      "desc": "Le prêtre est un lanceur de sorts de niveau 5. Sa capacité de lancement de sorts est la Sagesse (sauvegarde contre les sorts DD 13, +5 pour toucher avec les attaques de sorts). Le prêtre a préparé les sorts de clerc suivants :\n\n- Cantrips (à volonté) : lumière, flamme sacrée, thaumaturgie\n- 1er niveau (4 emplacements) : guérison des blessures, boulon de guidage, sanctuaire\n- 2ème niveau (3 emplacements) : restauration moindre, arme spirituelle\n- 3ème niveau (2 emplacements) : dissipe la magie, gardiens spirituels"
+    }
+  ],
+  "actions": [
+    {
+      "name": "Masse",
+      "desc": "Attaque au corps à corps avec une arme : +2 pour toucher, atteignez 1,50 m, une cible. Touché : 3 (1d6) dégâts contondants.",
+      "attack_bonus": 2,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/priest.png",
+  "url": "/api/2014/monsters/priest",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Priest",
+  "type_en": "humanoid",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

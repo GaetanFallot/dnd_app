@@ -40,7 +40,10 @@ function buildCard(scene,isCustom){
   const info=document.createElement('div');info.className='scene-info';info.innerHTML=`<div class="scene-name">${scene.name}</div><div class="scene-tag">${scene.tag||''}</div>`;
   const check=document.createElement('div');check.className='check-mark';check.textContent='✓';
   card.appendChild(bg);card.appendChild(emoji);card.appendChild(grad);card.appendChild(info);card.appendChild(check);
-  if(isCustom){const del=document.createElement('button');del.className='delete-btn';del.textContent='✕';del.onclick=e=>{e.stopPropagation();_idbDeleteScene(scene.id);customScenes=customScenes.filter(s=>s.id!==scene.id);if(currentScene?.id===scene.id){currentScene=null;updateNP(null);}renderCustomScenes();};card.appendChild(del);}
+  if(isCustom){
+    const del=document.createElement('button');del.className='delete-btn';del.textContent='✕';del.onclick=e=>{e.stopPropagation();_idbDeleteScene(scene.id);customScenes=customScenes.filter(s=>s.id!==scene.id);if(currentScene?.id===scene.id){currentScene=null;updateNP(null);}renderCustomScenes();};card.appendChild(del);
+    const edit=document.createElement('button');edit.className='edit-btn';edit.textContent='✎';edit.onclick=e=>{e.stopPropagation();_editCustomScene(scene,card);};card.appendChild(edit);
+  }
   return card;
 }
 function selectScene(scene){currentScene=scene;renderScenes();renderCustomScenes();updateNP(scene);sendScene(scene);showVidAudioRow(!!scene?.isVideo);}
@@ -546,10 +549,38 @@ function setFit(fit){currentFit=fit;document.querySelectorAll('.fit-btn').forEac
 function toggleOverlay(name){if(activeOverlays.has(name)){activeOverlays.delete(name);hideSlider(name);}else{activeOverlays.add(name);showSlider(name);}document.getElementById('ov-'+name).classList.toggle('active',activeOverlays.has(name));sendOverlays();}
 function clearOverlays(){activeOverlays.clear();stormMode=false;document.getElementById('stormBtn').classList.remove('active');document.querySelectorAll('.ov-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.ov-slider-row').forEach(r=>r.classList.remove('visible'));sendOverlays();if(secondWindow&&!secondWindow.closed)secondWindow.postMessage({type:'storm-mode',active:false},'*');}
 // ── Scene IndexedDB persistence ──
+function _idbOpen(){
+  return new Promise((res,rej)=>{
+    const req=indexedDB.open('dm_screen',2);
+    req.onupgradeneeded=e=>{const db=e.target.result;if(!db.objectStoreNames.contains('handles'))db.createObjectStore('handles');if(!db.objectStoreNames.contains('scenes'))db.createObjectStore('scenes',{keyPath:'id'});};
+    req.onsuccess=e=>res(e.target.result);
+    req.onerror=()=>rej(req.error);
+  });
+}
 async function _idbSaveScene(scene){try{const db=await _idbOpen();const tx=db.transaction('scenes','readwrite');tx.objectStore('scenes').put(scene);await new Promise(r=>tx.oncomplete=r);}catch(e){console.warn('scene save error',e);}}
 async function _idbDeleteScene(id){try{const db=await _idbOpen();const tx=db.transaction('scenes','readwrite');tx.objectStore('scenes').delete(id);await new Promise(r=>tx.oncomplete=r);}catch(e){console.warn('scene delete error',e);}}
 async function _loadCustomScenes(){try{const db=await _idbOpen();const tx=db.transaction('scenes','readonly');const all=await new Promise((res,rej)=>{const r=tx.objectStore('scenes').getAll();r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});if(all&&all.length){customScenes=all;renderCustomScenes();}}catch(e){console.warn('scene load error',e);}}
 
+function _editCustomScene(scene,card){
+  const nameEl=card.querySelector('.scene-name');
+  const oldName=scene.name;
+  const input=document.createElement('input');
+  input.value=oldName;
+  input.style.cssText='background:rgba(0,0,0,.75);border:1px solid var(--gold);color:#fff;font-family:Cinzel,serif;font-size:.68rem;width:100%;padding:1px 4px;outline:none;';
+  nameEl.replaceWith(input);
+  input.focus();input.select();
+  const save=()=>{const v=input.value.trim()||oldName;scene.name=v;_idbSaveScene(scene);renderCustomScenes();if(currentScene?.id===scene.id)document.getElementById('npName').textContent=v;};
+  input.addEventListener('blur',save);
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();input.blur();}if(e.key==='Escape'){scene.name=oldName;renderCustomScenes();}});
+}
+function toggleCollapse(section){
+  const body=document.getElementById(section+'Body');
+  const arrow=document.getElementById(section+'-arrow');
+  if(!body)return;
+  const isCollapsed=body.style.display==='none';
+  body.style.display=isCollapsed?'':'none';
+  if(arrow)arrow.style.transform=isCollapsed?'':'rotate(-90deg)';
+}
 function handleUpload(event){const files=event.target.files;if(!files.length)return;Array.from(files).forEach(file=>{const isVideo=file.type.startsWith('video/');const reader=new FileReader();reader.onload=e=>{const scene={id:'custom_'+Date.now()+'_'+Math.random(),name:file.name.replace(/\.[^.]+$/,'').replace(/[_\-]/g,' '),tag:isVideo?'Vidéo importée':'Image personnalisée',src:e.target.result,emoji:isVideo?'🎬':'🗺️',isVideo};customScenes.push(scene);_idbSaveScene(scene);renderCustomScenes();showToast('✓ '+scene.name+' ajouté'+(isVideo?'e':''));};reader.readAsDataURL(file);});event.target.value='';}
 function updateBtn(on){document.getElementById('launchBtn').classList.toggle('active',on);document.getElementById('statusDot').classList.toggle('on',on);document.getElementById('launchText').textContent=on?'🖥️ Fermer l\'écran 2':'🖥️ Ouvrir l\'écran 2';}
 function requestFullscreen(){if(secondWindow&&!secondWindow.closed){secondWindow.postMessage({type:'fullscreen'},'*');showToast('Plein écran…');}else showToast('⚠️ L\'écran 2 n\'est pas ouvert');}
@@ -559,6 +590,7 @@ const zone=document.getElementById('uploadZone');
 zone.addEventListener('dragover',e=>{e.preventDefault();zone.style.borderColor='var(--gold)';});
 zone.addEventListener('dragleave',()=>{zone.style.borderColor='';});
 zone.addEventListener('drop',e=>{e.preventDefault();zone.style.borderColor='';if(e.dataTransfer.files.length)handleUpload({target:{files:e.dataTransfer.files,value:''}});});
+renderScenes();
 _loadCustomScenes();
 
 // ═══ INITIATIVE TRACKER ═══

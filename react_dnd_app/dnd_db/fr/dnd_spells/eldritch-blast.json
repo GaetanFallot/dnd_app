@@ -1,0 +1,57 @@
+{
+  "higher_level": [],
+  "index": "eldritch-blast",
+  "name": "Explosion surnaturelle",
+  "desc": [
+    "Un rayon d’énergie crépitante se dirige vers une créature à portée. Effectuez une attaque magique à distance contre la cible. En cas de coup, la cible subit 1d10 dégâts de force. Le sort crée plus d'un faisceau lorsque vous atteignez des niveaux supérieurs : deux faisceaux au niveau 5, trois faisceaux au niveau 11 et quatre faisceaux au niveau 17. Vous pouvez diriger les faisceaux vers la même cible ou vers des cibles différentes. Effectuez un jet d'attaque séparé pour chaque faisceau."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 0,
+  "attack_type": "ranged",
+  "damage": {
+    "damage_type": {
+      "index": "force",
+      "name": "Force",
+      "url": "/api/2014/damage-types/force"
+    },
+    "damage_at_character_level": {
+      "1": "1d10",
+      "5": "1d10",
+      "11": "1d10",
+      "17": "1d10"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "warlock",
+      "name": "Warlock",
+      "url": "/api/2014/classes/warlock"
+    }
+  ],
+  "subclasses": [
+    {
+      "index": "lore",
+      "name": "Lore",
+      "url": "/api/2014/subclasses/lore"
+    }
+  ],
+  "url": "/api/2014/spells/eldritch-blast",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Eldritch Blast",
+  "material": "",
+  "_translated": true
+}

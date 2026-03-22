@@ -1,0 +1,178 @@
+{
+  "index": "gold-dragon-wyrmling",
+  "name": "Wyrmling dragon d'or",
+  "size": "Moyenne",
+  "type": "dragon",
+  "alignment": "loyal bon",
+  "armor_class": 17,
+  "hit_points": 60,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8+24",
+  "speed": {
+    "walk": "30 ft.",
+    "fly": "60 ft.",
+    "swim": "30 ft."
+  },
+  "strength": 19,
+  "dexterity": 14,
+  "constitution": 17,
+  "intelligence": 14,
+  "wisdom": 11,
+  "charisma": 16,
+  "proficiencies": [
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving-throw-con",
+        "name": "Saving Throw: CON",
+        "url": "/api/2014/proficiencies/saving-throw-con"
+      }
+    },
+    {
+      "value": 2,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 5,
+      "proficiency": {
+        "index": "saving-throw-cha",
+        "name": "Saving Throw: CHA",
+        "url": "/api/2014/proficiencies/saving-throw-cha"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 4,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [
+    "fire"
+  ],
+  "condition_immunities": [],
+  "senses": {
+    "blindsight": "10 ft.",
+    "darkvision": "60 ft.",
+    "passive_perception": 14
+  },
+  "languages": "Draconic",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "Amphibie",
+      "desc": "Le dragon peut respirer de l'air et de l'eau."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, atteignez 1,50 m, une cible. Touché : 9 (1d10 + 4) dégâts perforants.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d10+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Armes respiratoires",
+      "desc": "Le dragon utilise l'une des armes respiratoires suivantes.\nSouffle de Feu. Le dragon exhale du feu dans un cône de 15 pieds. Chaque créature dans cette zone doit effectuer un jet de sauvegarde de Dextérité DD 13, subissant 22 (4d10) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\nSouffle affaiblissant. Le dragon exhale du gaz dans un cône de 15 pieds. Chaque créature dans cette zone doit réussir un jet de sauvegarde de Force DD 13 ou être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant 1 minute. Une créature peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "usage": {
+        "type": "recharge on roll",
+        "dice": "1d6",
+        "min_value": 5
+      },
+      "options": {
+        "choose": 1,
+        "type": "attack",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "breath",
+              "name": "Fire Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "dex",
+                  "name": "DEX",
+                  "url": "/api/2014/ability-scores/dex"
+                },
+                "dc_value": 13,
+                "success_type": "half"
+              },
+              "damage": [
+                {
+                  "damage_type": {
+                    "index": "fire",
+                    "name": "Fire",
+                    "url": "/api/2014/damage-types/fire"
+                  },
+                  "damage_dice": "4d10"
+                }
+              ]
+            },
+            {
+              "option_type": "breath",
+              "name": "Weakening Breath",
+              "dc": {
+                "dc_type": {
+                  "index": "str",
+                  "name": "STR",
+                  "url": "/api/2014/ability-scores/str"
+                },
+                "dc_value": 13,
+                "success_type": "none"
+              }
+            }
+          ]
+        }
+      },
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/gold-dragon-wyrmling.png",
+  "url": "/api/2014/monsters/gold-dragon-wyrmling",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Gold Dragon Wyrmling",
+  "type_en": "dragon",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

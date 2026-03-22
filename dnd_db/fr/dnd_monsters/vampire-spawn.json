@@ -1,0 +1,175 @@
+{
+  "index": "vampire-spawn",
+  "name": "Apparition de vampires",
+  "size": "Moyenne",
+  "type": "mort-vivant",
+  "alignment": "neutre mauvais",
+  "armor_class": 15,
+  "hit_points": 82,
+  "hit_dice": "11d8",
+  "hit_points_roll": "11d8+33",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 16,
+  "dexterity": 16,
+  "constitution": 16,
+  "intelligence": 11,
+  "wisdom": 10,
+  "charisma": 12,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "saving-throw-dex",
+        "name": "Saving Throw: DEX",
+        "url": "/api/2014/proficiencies/saving-throw-dex"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "saving-throw-wis",
+        "name": "Saving Throw: WIS",
+        "url": "/api/2014/proficiencies/saving-throw-wis"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-perception",
+        "name": "Skill: Perception",
+        "url": "/api/2014/proficiencies/skill-perception"
+      }
+    },
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-stealth",
+        "name": "Skill: Stealth",
+        "url": "/api/2014/proficiencies/skill-stealth"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [
+    "necrotic",
+    "bludgeoning, piercing, and slashing from nonmagical weapons"
+  ],
+  "damage_immunities": [],
+  "condition_immunities": [],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 13
+  },
+  "languages": "the languages it knew in life",
+  "challenge_rating": 5,
+  "proficiency_bonus": 3,
+  "xp": 1800,
+  "special_abilities": [
+    {
+      "name": "Régénération",
+      "desc": "Le vampire récupère 10 points de vie au début de son tour s'il a au moins 1 point de vie et n'est pas exposé au soleil ou à l'eau courante. Si le vampire subit des dégâts radiants ou des dégâts d'eau bénite, ce trait ne fonctionne pas au début du prochain tour du vampire."
+    },
+    {
+      "name": "Escalade d'araignée",
+      "desc": "Le vampire peut escalader des surfaces difficiles, y compris la tête en bas sur les plafonds, sans avoir besoin de faire un test de capacité."
+    },
+    {
+      "name": "Faiblesses des vampires",
+      "desc": "Le vampire a les défauts suivants :\nInterdiction. Le vampire ne peut pas entrer dans une résidence sans invitation de l'un des occupants.\nNui à cause de l'eau courante. Le vampire subit 20 dégâts d'acide lorsqu'il termine son tour dans l'eau courante.\nUn enjeu au cœur. Le vampire est détruit si une arme perforante en bois est enfoncée dans son cœur alors qu'il est frappé d'incapacité sur son lieu de repos.\nHypersensibilité au soleil. Le vampire subit 20 dégâts radiants lorsqu'il commence son tour au soleil. Lorsqu'il est exposé au soleil, il a un désavantage aux jets d'attaque et aux tests de caractéristiques."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "action_options",
+      "desc": "Le vampire effectue deux attaques, dont une seule peut être une attaque de morsure.",
+      "action_options": {
+        "choose": 1,
+        "type": "action",
+        "from": {
+          "option_set_type": "options_array",
+          "options": [
+            {
+              "option_type": "action",
+              "action_name": "Claws",
+              "count": 2,
+              "type": "melee"
+            },
+            {
+              "option_type": "multiple",
+              "items": [
+                {
+                  "option_type": "action",
+                  "action_name": "Bite",
+                  "count": 1,
+                  "type": "melee"
+                },
+                {
+                  "option_type": "action",
+                  "action_name": "Claws",
+                  "count": 1,
+                  "type": "melee"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "actions": []
+    },
+    {
+      "name": "Mordre",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, atteindre 1,50 m, une créature consentante ou une créature agrippée par le vampire, neutralisée ou maîtrisée. Touché : 6 (1d6 + 3) dégâts perforants plus 7 (2d6) dégâts nécrotiques. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis, et le vampire récupère des points de vie égaux à ce montant. La réduction dure jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "piercing",
+            "name": "Piercing",
+            "url": "/api/2014/damage-types/piercing"
+          },
+          "damage_dice": "1d6+3"
+        },
+        {
+          "damage_type": {
+            "index": "necrotic",
+            "name": "Necrotic",
+            "url": "/api/2014/damage-types/necrotic"
+          },
+          "damage_dice": "2d6"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "name": "Griffes",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, allonge 1,50 m, une créature. Touché : 8 (2d4 + 3) dégâts tranchants. Au lieu d'infliger des dégâts, le vampire peut agripper la cible (évasion DD 13).",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "slashing",
+            "name": "Slashing",
+            "url": "/api/2014/damage-types/slashing"
+          },
+          "damage_dice": "2d4+3"
+        }
+      ],
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/vampire-spawn.png",
+  "url": "/api/2014/monsters/vampire-spawn",
+  "updated_at": "2025-10-24T20:42:13.742Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Vampire Spawn",
+  "type_en": "undead",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}

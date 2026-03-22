@@ -1,0 +1,48 @@
+{
+  "higher_level": [],
+  "index": "legend-lore",
+  "name": "Connaissance des légendes",
+  "desc": [
+    "Nommez ou décrivez une personne, un lieu ou un objet. Le sort vous rappelle un bref résumé de l’histoire importante concernant la chose que vous avez nommée. La tradition peut consister en des contes actuels, des histoires oubliées ou même des connaissances secrètes qui n'ont jamais été largement connues. Si la chose que vous avez nommée n’a pas d’importance légendaire, vous n’obtiendrez aucune information. Plus vous disposez déjà d’informations sur la chose, plus les informations que vous recevez sont précises et détaillées.\nLes informations que vous apprenez sont exactes mais peuvent être formulées dans un langage figuré. Par exemple, si vous avez une mystérieuse hache magique sous la main, le sort pourrait donner cette information : « Malheur au malfaiteur dont la main touche la hache, car même le manche tranche la main des méchants. Seul un véritable Enfant de Pierre, amant et bien-aimé de Moradin, peut éveiller les véritables pouvoirs de la hache, et seulement avec le mot sacré *Rudnogg* sur les lèvres."
+  ],
+  "range": "Soi",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "De l'encens d'une valeur d'au moins 250 po, que le sort consomme, et quatre bandes d'ivoire d'une valeur d'au moins 50 po chacune.",
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "10 minutes",
+  "level": 5,
+  "school": {
+    "index": "divination",
+    "name": "Divination",
+    "url": "/api/2014/magic-schools/divination",
+    "name_fr": "Divination"
+  },
+  "classes": [
+    {
+      "index": "bard",
+      "name": "Bard",
+      "url": "/api/2014/classes/bard"
+    },
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/legend-lore",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Legend Lore",
+  "_translated": true
+}

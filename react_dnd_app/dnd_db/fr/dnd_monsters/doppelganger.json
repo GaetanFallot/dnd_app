@@ -1,0 +1,120 @@
+{
+  "index": "doppelganger",
+  "name": "Sosie",
+  "size": "Moyenne",
+  "type": "monstruosité",
+  "subtype": "shapechanger",
+  "alignment": "sans alignement",
+  "armor_class": 14,
+  "hit_points": 52,
+  "hit_dice": "8d8",
+  "hit_points_roll": "8d8+16",
+  "speed": {
+    "walk": "30 ft."
+  },
+  "strength": 11,
+  "dexterity": 18,
+  "constitution": 14,
+  "intelligence": 11,
+  "wisdom": 12,
+  "charisma": 14,
+  "proficiencies": [
+    {
+      "value": 6,
+      "proficiency": {
+        "index": "skill-deception",
+        "name": "Skill: Deception",
+        "url": "/api/2014/proficiencies/skill-deception"
+      }
+    },
+    {
+      "value": 3,
+      "proficiency": {
+        "index": "skill-insight",
+        "name": "Skill: Insight",
+        "url": "/api/2014/proficiencies/skill-insight"
+      }
+    }
+  ],
+  "damage_vulnerabilities": [],
+  "damage_resistances": [],
+  "damage_immunities": [],
+  "condition_immunities": [
+    {
+      "index": "charmed",
+      "name": "Charmed",
+      "url": "/api/2014/conditions/charmed"
+    }
+  ],
+  "senses": {
+    "darkvision": "60 ft.",
+    "passive_perception": 11
+  },
+  "languages": "Common",
+  "challenge_rating": 3,
+  "proficiency_bonus": 2,
+  "xp": 700,
+  "special_abilities": [
+    {
+      "name": "Changeur de forme",
+      "desc": "Le sosie peut utiliser son action pour se métamorphoser en un humanoïde de taille petite ou moyenne qu'il a vu, ou reprendre sa vraie forme. Ses statistiques, autres que sa taille, sont les mêmes dans chaque forme. Tout équipement qu’il porte ou transporte n’est pas transformé. Il reprend sa vraie forme s'il meurt."
+    },
+    {
+      "name": "Embusqué",
+      "desc": "Au premier round de combat, le sosie a l'avantage aux jets d'attaque contre toute créature qu'il a surprise."
+    },
+    {
+      "name": "Attaque surprise",
+      "desc": "Si le sosie surprend une créature et la frappe avec une attaque pendant le premier round de combat, la cible subit 10 (3d6) dégâts supplémentaires dus à l'attaque."
+    }
+  ],
+  "actions": [
+    {
+      "damage": [],
+      "name": "Multi-attaque",
+      "multiattack_type": "actions",
+      "desc": "Le sosie effectue deux attaques au corps à corps.",
+      "actions": [
+        {
+          "action_name": "Slam",
+          "count": "2",
+          "type": "melee"
+        }
+      ]
+    },
+    {
+      "name": "Claquer",
+      "desc": "Attaque au corps à corps avec une arme : +6 pour toucher, atteignez 1,50 m, une cible. Touché : 7 (1d6 + 4) dégâts contondants.",
+      "attack_bonus": 6,
+      "damage": [
+        {
+          "damage_type": {
+            "index": "bludgeoning",
+            "name": "Bludgeoning",
+            "url": "/api/2014/damage-types/bludgeoning"
+          },
+          "damage_dice": "1d6+4"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "damage": [],
+      "name": "Lire les pensées",
+      "desc": "Le sosie lit comme par magie les pensées superficielles d'une créature située à moins de 60 pieds de lui. L'effet peut pénétrer les barrières, mais 3 pieds de bois ou de terre, 2 pieds de pierre, 2 pouces de métal ou une fine feuille de plomb le bloquent. Tant que la cible est à portée, le sosie peut continuer à lire ses pensées, tant que sa concentration n'est pas interrompue (comme s'il se concentrait sur un sort). Lorsqu'il lit dans l'esprit de la cible, le sosie a un avantage aux tests de Sagesse (Perspicacité) et de Charisme (Déception, Intimidation et Persuasion) contre la cible.",
+      "actions": []
+    }
+  ],
+  "image": "/api/images/monsters/doppelganger.png",
+  "url": "/api/2014/monsters/doppelganger",
+  "updated_at": "2025-10-24T20:42:13.741Z",
+  "forms": [],
+  "legendary_actions": [],
+  "reactions": [],
+  "name_en": "Doppelganger",
+  "type_en": "monstrosity",
+  "armor_desc": "",
+  "legendary_desc": "",
+  "_translated": true
+}"_translated": true
+}

@@ -1,0 +1,55 @@
+{
+  "index": "branding-smite",
+  "name": "Frappe de marque",
+  "desc": [
+    "La prochaine fois que vous toucherez une créature avec une attaque avec une arme avant la fin de ce sort, l'arme brillera d'un éclat astral lorsque vous frapperez. L'attaque inflige 2d6 dégâts radiants supplémentaires à la cible, qui deviennent visibles si elle est invisible, et la cible émet une faible lumière dans un rayon de 1,50 mètre et ne peut pas devenir invisible jusqu'à la fin du sort."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 3 ou supérieur, les dégâts supplémentaires augmentent de 1d6 pour chaque niveau d'emplacement au-dessus du niveau 2."
+  ],
+  "range": "Soi",
+  "components": [
+    "V"
+  ],
+  "ritual": false,
+  "duration": "Jusqu'à 1 minute",
+  "concentration": true,
+  "casting_time": "1 action bonus",
+  "level": 2,
+  "damage": {
+    "damage_type": {
+      "index": "radiant",
+      "name": "Radiant",
+      "url": "/api/2014/damage-types/radiant"
+    },
+    "damage_at_slot_level": {
+      "2": "2d6",
+      "3": "3d6",
+      "4": "4d6",
+      "5": "5d6",
+      "6": "6d6",
+      "7": "7d6",
+      "8": "8d6",
+      "9": "9d6"
+    }
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "paladin",
+      "name": "Paladin",
+      "url": "/api/2014/classes/paladin"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/branding-smite",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Branding Smite",
+  "material": "",
+  "_translated": true
+}

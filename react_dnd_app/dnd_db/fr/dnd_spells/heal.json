@@ -1,0 +1,50 @@
+{
+  "index": "heal",
+  "name": "Guérir",
+  "desc": [
+    "Choisissez une créature que vous pouvez voir à portée. Une vague d'énergie positive traverse la créature, lui faisant regagner 70 points de vie. Ce sort met également fin à la cécité, à la surdité et à toute maladie affectant la cible. Ce sort n'a aucun effet sur les constructions ou les morts-vivants."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 7 ou supérieur, la quantité de soins augmente de 10 pour chaque niveau d'emplacement supérieur au 6."
+  ],
+  "range": "60 pieds",
+  "components": [
+    "V",
+    "S"
+  ],
+  "ritual": false,
+  "duration": "Instantané",
+  "concentration": false,
+  "casting_time": "1 action",
+  "level": 6,
+  "heal_at_slot_level": {
+    "6": "70",
+    "7": "80",
+    "8": "90",
+    "9": "100"
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "cleric",
+      "name": "Cleric",
+      "url": "/api/2014/classes/cleric"
+    },
+    {
+      "index": "druid",
+      "name": "Druid",
+      "url": "/api/2014/classes/druid"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/heal",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Heal",
+  "material": "",
+  "_translated": true
+}

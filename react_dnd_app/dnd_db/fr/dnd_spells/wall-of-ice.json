@@ -1,0 +1,65 @@
+{
+  "index": "wall-of-ice",
+  "name": "Mur de glace",
+  "desc": [
+    "Vous créez un mur de glace sur une surface solide à portée. Vous pouvez en faire un dôme hémisphérique ou une sphère d'un rayon allant jusqu'à 10 pieds, ou vous pouvez façonner une surface plane composée de dix panneaux carrés de 10 pieds. Chaque panneau doit être contigu à un autre panneau. Sous quelque forme que ce soit, le mur a 1 pied d’épaisseur et dure toute la durée.\nSi le mur traverse l'espace d'une créature lorsqu'il apparaît, la créature dans sa zone est poussée d'un côté du mur et doit effectuer un jet de sauvegarde de dextérité. En cas d'échec, la créature subit 10d6 dégâts de froid, soit la moitié de ces dégâts en cas de réussite.\nLe mur est un objet qui peut être endommagé et donc brisé. Il a une CA de 12 et 30 points de vie par section de 10 pieds, et il est vulnérable aux dégâts de feu. Réduire une section de mur de 10 pieds à 0 point de vie la détruit et laisse derrière lui une feuille d'air glacial dans l'espace occupé par le mur. Une créature qui se déplace à travers la feuille d'air glacial pour la première fois au cours d'un tour doit réussir un jet de sauvegarde de constitution. Cette créature subit 5d6 dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite."
+  ],
+  "higher_level": [
+    "Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 7 ou supérieur, les dégâts infligés par le mur lorsqu'il apparaît augmentent de 2d6, et les dégâts causés par le passage à travers la feuille d'air glacial augmentent de 1d6, pour chaque niveau d'emplacement supérieur au 6."
+  ],
+  "range": "120 pieds",
+  "components": [
+    "V",
+    "S",
+    "M"
+  ],
+  "material": "Un petit morceau de quartz.",
+  "ritual": false,
+  "duration": "Jusqu'à 10 minutes",
+  "concentration": true,
+  "casting_time": "1 action",
+  "level": 6,
+  "damage": {
+    "damage_type": {
+      "index": "cold",
+      "name": "Cold",
+      "url": "/api/2014/damage-types/cold"
+    },
+    "damage_at_slot_level": {
+      "6": "10d6",
+      "7": "12d6",
+      "8": "14d6",
+      "9": "16d6"
+    }
+  },
+  "dc": {
+    "dc_type": {
+      "index": "dex",
+      "name": "DEX",
+      "url": "/api/2014/ability-scores/dex"
+    },
+    "dc_success": "half"
+  },
+  "area_of_effect": {
+    "type": "sphere",
+    "size": 10
+  },
+  "school": {
+    "index": "evocation",
+    "name": "Evocation",
+    "url": "/api/2014/magic-schools/evocation",
+    "name_fr": "Évocation"
+  },
+  "classes": [
+    {
+      "index": "wizard",
+      "name": "Wizard",
+      "url": "/api/2014/classes/wizard"
+    }
+  ],
+  "subclasses": [],
+  "url": "/api/2014/spells/wall-of-ice",
+  "updated_at": "2025-10-24T20:42:14.619Z",
+  "name_en": "Wall of Ice",
+  "_translated": true
+}
