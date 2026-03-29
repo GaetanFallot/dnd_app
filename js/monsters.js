@@ -488,6 +488,93 @@ function duplicateEncounterMonster(eid){
 }
 
 // ── Import JSON → encounter ──────────────────────────────────
+
+// Normalize proficiencies: handle flat {name,value} and nested {proficiency:{name},value}
+function _normProf(profs) {
+  return (profs || []).map(p => ({
+    name:  p.name || p.proficiency?.name || '',
+    value: p.value || 0,
+  }));
+}
+
+function _crStrImport(v) {
+  if (v === 0.125) return '1/8';
+  if (v === 0.25)  return '1/4';
+  if (v === 0.5)   return '1/2';
+  return String(v ?? 0);
+}
+
+function _speedObjToStr(speed) {
+  if (!speed || typeof speed !== 'object') return speed || '';
+  return Object.entries(speed)
+    .filter(([, v]) => v)
+    .map(([k, v]) => k === 'walk' ? v : `${k} ${v}`)
+    .join(', ');
+}
+
+// Detect dnd_db raw API format (has numeric challenge_rating or hit_points + full stat names)
+function _isDndDbFormat(d) {
+  return typeof d.challenge_rating === 'number'
+      || typeof d.hit_points === 'number'
+      || typeof d.strength === 'number';
+}
+
+// Convert a raw dnd_db monster JSON → internal dock format
+function _fromDndDbFormat(d) {
+  const profs  = _normProf(d.proficiencies);
+  const saves  = profs
+    .filter(p => p.name.startsWith('Saving Throw'))
+    .map(p => p.name.replace('Saving Throw: ', '') + (p.value >= 0 ? ' +' : ' ') + p.value)
+    .join(', ');
+  const skills = profs
+    .filter(p => p.name.startsWith('Skill:'))
+    .map(p => p.name.replace('Skill: ', '') + (p.value >= 0 ? ' +' : ' ') + p.value)
+    .join(', ');
+  const ac = typeof d.armor_class === 'number' ? d.armor_class : (d.armor_class?.value ?? 10);
+  const senses = d.senses
+    ? Object.entries(d.senses).filter(([, v]) => v).map(([k, v]) => `${k.replace(/_/g, ' ')} ${v}`).join(', ')
+    : '';
+  const mapAction = a => ({
+    name: a.name, desc: a.desc || '',
+    attack_bonus: a.attack_bonus ?? null,
+    damage: a.damage || [], dc: a.dc || null, usage: a.usage || null,
+  });
+  const typeStr = `${d.size || ''} ${d.type || ''}`.trim()
+    + (d.subtype ? ` (${d.subtype})` : '')
+    + (d.alignment ? `, ${d.alignment}` : '');
+
+  return {
+    name:           d.name || '',
+    type:           typeStr,
+    cr:             _crStrImport(d.challenge_rating),
+    xp:             String(d.xp || 0),
+    prof:           `+${d.proficiency_bonus || 2}`,
+    speed:          _speedObjToStr(d.speed),
+    ac:             String(ac) + (d.armor_desc ? ` (${d.armor_desc})` : ''),
+    hp:             `${d.hit_points} (${d.hit_dice || ''})`,
+    str:            d.strength      || 10,
+    dex:            d.dexterity     || 10,
+    con:            d.constitution  || 10,
+    int:            d.intelligence  || 10,
+    wis:            d.wisdom        || 10,
+    cha:            d.charisma      || 10,
+    saves,
+    skills,
+    dmg_immune:     (d.damage_immunities      || []).join(', '),
+    dmg_resist:     (d.damage_resistances     || []).join(', '),
+    dmg_vuln:       (d.damage_vulnerabilities || []).join(', '),
+    cond_immune:    (d.condition_immunities   || []).map(c => c.name || c).join(', '),
+    senses,
+    languages:      d.languages || '',
+    legendary_desc: d.legendary_desc || '',
+    notes:          d.notes || '',
+    traits:         (d.special_abilities || []).map(a => ({ name: a.name, desc: a.desc || '', usage: a.usage || null })),
+    actions:        (d.actions          || []).map(mapAction),
+    reactions:      (d.reactions        || []).map(mapAction),
+    legendary:      (d.legendary_actions || []).map(mapAction),
+  };
+}
+
 function importMonsterJSON(){ document.getElementById('monsterImportInput').click(); }
 
 function handleMonsterImport(event){
@@ -496,41 +583,41 @@ function handleMonsterImport(event){
     reader.onload = e => {
       try {
         const d = JSON.parse(e.target.result);
-        const m = {
-          _eid: _genId(),
-          name: d.name || d.monster_name || '',
-          type: d.type || d.monster_type || '',
-          cr: d.cr || d.m_cr || '',
-          xp: d.xp || d.m_xp || '',
-          prof: d.prof || d.m_prof || '',
-          ac: d.ac || d.m_ac || '',
-          hp: d.hp || d.m_hp || '',
-          speed: d.speed || d.m_speed || '',
-          str: d.str || d.ability_str || 10,
-          dex: d.dex || d.ability_dex || 10,
-          con: d.con || d.ability_con || 10,
-          int: d.int || d.ability_int || 10,
-          wis: d.wis || d.ability_wis || 10,
-          cha: d.cha || d.ability_cha || 10,
-          saves: d.saves || d.m_saves || '',
-          skills: d.skills || d.m_skills || '',
-          dmg_immune: d.dmg_immune || d.m_dmg_immune || '',
-          dmg_resist: d.dmg_resist || d.m_dmg_resist || '',
-          dmg_vuln: d.dmg_vuln || d.m_dmg_vuln || '',
-          cond_immune: d.cond_immune || d.m_cond_immune || '',
-          senses: d.senses || d.m_senses || '',
-          languages: d.languages || d.m_languages || '',
+        const base = _isDndDbFormat(d) ? _fromDndDbFormat(d) : {
+          name:           d.name || d.monster_name || '',
+          type:           d.type || d.monster_type || '',
+          cr:             d.cr || d.m_cr || '',
+          xp:             d.xp || d.m_xp || '',
+          prof:           d.prof || d.m_prof || '',
+          ac:             d.ac || d.m_ac || '',
+          hp:             d.hp || d.m_hp || '',
+          speed:          d.speed || d.m_speed || '',
+          str:            d.str || d.ability_str || 10,
+          dex:            d.dex || d.ability_dex || 10,
+          con:            d.con || d.ability_con || 10,
+          int:            d.int || d.ability_int || 10,
+          wis:            d.wis || d.ability_wis || 10,
+          cha:            d.cha || d.ability_cha || 10,
+          saves:          d.saves || d.m_saves || '',
+          skills:         d.skills || d.m_skills || '',
+          dmg_immune:     d.dmg_immune || d.m_dmg_immune || '',
+          dmg_resist:     d.dmg_resist || d.m_dmg_resist || '',
+          dmg_vuln:       d.dmg_vuln || d.m_dmg_vuln || '',
+          cond_immune:    d.cond_immune || d.m_cond_immune || '',
+          senses:         d.senses || d.m_senses || '',
+          languages:      d.languages || d.m_languages || '',
           legendary_desc: d.legendary_desc || d.m_legendary_desc || '',
-          notes: d.notes || d._notes || '',
-          traits: d.traits || d._traits || [],
-          actions: d.actions || d._actions || [],
-          reactions: d.reactions || d._reactions || [],
-          legendary: d.legendary || d._legendary || [],
+          notes:          d.notes || d._notes || '',
+          traits:         d.traits || d._traits || [],
+          actions:        d.actions || d._actions || [],
+          reactions:      d.reactions || d._reactions || [],
+          legendary:      d.legendary || d._legendary || [],
         };
+        const m = Object.assign({ _eid: _genId() }, base);
         encounterMonsters.push(m);
         _saveEncounter();
         renderMonsterDock();
-        showToast('✓ ' + (m.name||'Monstre') + ' → rencontre');
+        showToast('✓ ' + (m.name || 'Monstre') + ' → rencontre');
       } catch(err){ showToast('⚠️ JSON invalide'); }
     };
     reader.readAsText(file);
@@ -607,43 +694,179 @@ function updateMod(stat){
   if(el && modEl){ const m = _mod(el.value); modEl.textContent = '('+(m>=0?'+':'')+m+')'; }
 }
 
+const _DMG_TYPES = [
+  {i:'',n:'— Type —'},
+  {i:'slashing',n:'Tranchant'},{i:'piercing',n:'Perforant'},{i:'bludgeoning',n:'Contondant'},
+  {i:'fire',n:'Feu'},{i:'cold',n:'Froid'},{i:'lightning',n:'Foudre'},{i:'thunder',n:'Tonnerre'},
+  {i:'acid',n:'Acide'},{i:'poison',n:'Poison'},{i:'necrotic',n:'Nécrotique'},
+  {i:'radiant',n:'Radiant'},{i:'force',n:'Force'},{i:'psychic',n:'Psychique'}
+];
+const _ABILITIES = [{i:'',n:'— Car. —'},{i:'str',n:'FOR'},{i:'dex',n:'DEX'},{i:'con',n:'CON'},{i:'int',n:'INT'},{i:'wis',n:'SAG'},{i:'cha',n:'CHA'}];
+const _ABILITY_NAMES = {str:'STR',dex:'DEX',con:'CON',int:'INT',wis:'SAG',cha:'CHA'};
+const _DAMAGE_NAMES = {
+  slashing:'Tranchant',piercing:'Perforant',bludgeoning:'Contondant',
+  fire:'Feu',cold:'Froid',lightning:'Foudre',thunder:'Tonnerre',
+  acid:'Acide',poison:'Poison',necrotic:'Nécrotique',radiant:'Radiant',force:'Force',psychic:'Psychique'
+};
+
 function renderModalList(section, items){
   const container = document.getElementById('ml_'+section);
   if(!container) return;
-  container.innerHTML = items.map((item, i) => `
-    <div class="mm-list-row">
-      <input type="text" value="${_esc(item.name||'')}" placeholder="Nom" oninput="_mlUpdate('${section}',${i},'name',this.value)">
-      <textarea placeholder="Description" oninput="_mlUpdate('${section}',${i},'desc',this.value)">${_esc(item.desc||'')}</textarea>
-      <button class="mm-rm" onclick="_mlRemove('${section}',${i})">✕</button>
-    </div>
-  `).join('');
+  const hasRich = section !== 'traits';
+
+  container.innerHTML = items.map((item, i) => {
+    // ── Usage / Recharge ──
+    const ut = item.usage?.type || '';
+    const uMin = item.usage?.min_value ?? 5;
+    const uTimes = item.usage?.times ?? 1;
+    const usageOpts = ['','recharge on roll','per day'].map(v =>
+      `<option value="${v}"${ut===v?' selected':''}>${v===''?'Aucune':v==='recharge on roll'?'Recharge dé':'X/jour'}</option>`
+    ).join('');
+    let usageSub = '';
+    if(ut === 'recharge on roll') usageSub = `<span class="mm-adv-hint">min:</span><input type="number" class="mm-adv-num" value="${uMin}" min="2" max="6" onchange="_mlUpdate('${section}',${i},'usage_min',this.value)"><span class="mm-adv-hint">–6</span>`;
+    else if(ut === 'per day') usageSub = `<input type="number" class="mm-adv-num" value="${uTimes}" min="1" max="10" onchange="_mlUpdate('${section}',${i},'usage_times',this.value)"><span class="mm-adv-hint">/jour</span>`;
+
+    let richHtml = '';
+    if(hasRich){
+      // ── Bonus attaque ──
+      const atkVal = item.attack_bonus != null ? item.attack_bonus : '';
+      richHtml += `
+      <div class="mm-adv-field">
+        <span class="mm-adv-lbl">Bonus attaque</span>
+        <input type="number" class="mm-adv-num" placeholder="—" value="${_esc(String(atkVal))}"
+          onchange="_mlUpdate('${section}',${i},'attack_bonus',this.value)">
+        <span class="mm-adv-hint">vide = aucun</span>
+      </div>`;
+
+      // ── Jet de sauvegarde ──
+      const dcIdx = item.dc?.dc_type?.index || '';
+      const dcVal = item.dc?.dc_value ?? '';
+      const dcSucc = item.dc?.success_type || 'none';
+      const dcAbil = _ABILITIES.map(a => `<option value="${a.i}"${dcIdx===a.i?' selected':''}>${a.n}</option>`).join('');
+      const dcSuccOpts = [['none','Pas d\'effet'],['half','Demi dégâts']].map(([v,n]) => `<option value="${v}"${dcSucc===v?' selected':''}>${n}</option>`).join('');
+      richHtml += `
+      <div class="mm-adv-field">
+        <span class="mm-adv-lbl">JS / DD</span>
+        <select class="mm-adv-select" onchange="_mlUpdate('${section}',${i},'dc_type',this.value)">${dcAbil}</select>
+        <input type="number" class="mm-adv-num" placeholder="DD" value="${_esc(String(dcVal))}"
+          onchange="_mlUpdate('${section}',${i},'dc_value',this.value)">
+        <select class="mm-adv-select" onchange="_mlUpdate('${section}',${i},'dc_success',this.value)">${dcSuccOpts}</select>
+      </div>`;
+
+      // ── Dégâts ──
+      const dmgRows = (item.damage||[]).map((d,di) => {
+        const typeOpts = _DMG_TYPES.map(t => `<option value="${t.i}"${(d.damage_type?.index||'')===t.i?' selected':''}>${t.n}</option>`).join('');
+        return `<div class="mm-dmg-row">
+          <input type="text" class="mm-adv-dice" placeholder="2d6+3"
+            value="${_esc(d.damage_dice||'')}"
+            onchange="_mlUpdateDmg('${section}',${i},${di},'damage_dice',this.value)">
+          <select class="mm-adv-select" onchange="_mlUpdateDmg('${section}',${i},${di},'damage_type',this.value)">${typeOpts}</select>
+          <button class="mm-rm" style="flex-shrink:0" onclick="_mlRemoveDmg('${section}',${i},${di})">✕</button>
+        </div>`;
+      }).join('');
+      richHtml += `
+      <div class="mm-adv-field mm-adv-field-col">
+        <span class="mm-adv-lbl">Dégâts</span>
+        <div class="mm-dmg-list">${dmgRows}</div>
+        <button class="mm-add-btn" style="font-size:.72rem;padding:2px 8px;margin-top:.2rem" onclick="_mlAddDmg('${section}',${i})">+ Dés</button>
+      </div>`;
+    }
+
+    return `<div class="mm-list-row">
+      <div class="mm-row-basic">
+        <input type="text" value="${_esc(item.name||'')}" placeholder="Nom" oninput="_mlUpdate('${section}',${i},'name',this.value)">
+        <textarea placeholder="Description" oninput="_mlUpdate('${section}',${i},'desc',this.value)">${_esc(item.desc||'')}</textarea>
+        <button class="mm-rm" onclick="_mlRemove('${section}',${i})">✕</button>
+      </div>
+      <div class="mm-row-adv">
+        <div class="mm-adv-field">
+          <span class="mm-adv-lbl">Utilisation</span>
+          <select class="mm-adv-select" onchange="_mlUpdate('${section}',${i},'usage_type',this.value)">${usageOpts}</select>
+          ${usageSub}
+        </div>
+        ${richHtml}
+      </div>
+    </div>`;
+  }).join('');
 }
 
 function _esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-function _mlUpdate(section, i, field, val){
-  // Try encounter first, then my monsters
-  const m = _editingEid
+function _getEditedMonster(){
+  return _editingEid
     ? encounterMonsters.find(x => x._eid === _editingEid)
     : dmMonsters.find(x => x.id === _editingMyId);
+}
+
+function _mlUpdate(section, i, field, val){
+  const m = _getEditedMonster();
   if(!m || !m[section] || !m[section][i]) return;
-  m[section][i][field] = val;
+  const item = m[section][i];
+  if(field === 'name' || field === 'desc'){
+    item[field] = val;
+  } else if(field === 'attack_bonus'){
+    item.attack_bonus = val === '' ? null : (parseInt(val) ?? null);
+  } else if(field === 'usage_type'){
+    item.usage = val ? { type:val, min_value:item.usage?.min_value??5, times:item.usage?.times??1 } : null;
+    renderModalList(section, m[section]);
+  } else if(field === 'usage_min'){
+    if(!item.usage) item.usage = { type:'recharge on roll', min_value:5, times:1 };
+    item.usage.min_value = parseInt(val)||5;
+  } else if(field === 'usage_times'){
+    if(!item.usage) item.usage = { type:'per day', min_value:5, times:1 };
+    item.usage.times = parseInt(val)||1;
+  } else if(field === 'dc_type'){
+    if(!val){ item.dc = null; }
+    else {
+      if(!item.dc) item.dc = { dc_type:{ index:val, name:_ABILITY_NAMES[val]||val.toUpperCase() }, dc_value:10, success_type:'none' };
+      else item.dc.dc_type = { index:val, name:_ABILITY_NAMES[val]||val.toUpperCase() };
+    }
+  } else if(field === 'dc_value'){
+    if(!item.dc) item.dc = { dc_type:{ index:'', name:'' }, dc_value:parseInt(val)||10, success_type:'none' };
+    else item.dc.dc_value = parseInt(val)||10;
+  } else if(field === 'dc_success'){
+    if(!item.dc) item.dc = { dc_type:{ index:'', name:'' }, dc_value:10, success_type:val };
+    else item.dc.success_type = val;
+  }
+}
+
+function _mlUpdateDmg(section, i, di, field, val){
+  const m = _getEditedMonster();
+  if(!m || !m[section] || !m[section][i]) return;
+  const item = m[section][i];
+  if(!item.damage || !item.damage[di]) return;
+  if(field === 'damage_dice') item.damage[di].damage_dice = val;
+  else if(field === 'damage_type') item.damage[di].damage_type = val ? { index:val, name:_DAMAGE_NAMES[val]||val } : null;
+}
+
+function _mlAddDmg(section, i){
+  const m = _getEditedMonster();
+  if(!m || !m[section] || !m[section][i]) return;
+  const item = m[section][i];
+  if(!item.damage) item.damage = [];
+  item.damage.push({ damage_dice:'', damage_type:null });
+  renderModalList(section, m[section]);
+}
+
+function _mlRemoveDmg(section, i, di){
+  const m = _getEditedMonster();
+  if(!m || !m[section] || !m[section][i]) return;
+  m[section][i].damage.splice(di, 1);
+  renderModalList(section, m[section]);
 }
 
 function addModalListItem(section){
-  const m = _editingEid
-    ? encounterMonsters.find(x => x._eid === _editingEid)
-    : dmMonsters.find(x => x.id === _editingMyId);
+  const m = _getEditedMonster();
   if(!m) return;
   if(!m[section]) m[section] = [];
-  m[section].push({name:'', desc:''});
+  const item = { name:'', desc:'', usage:null };
+  if(section !== 'traits'){ item.attack_bonus = null; item.damage = []; item.dc = null; }
+  m[section].push(item);
   renderModalList(section, m[section]);
 }
 
 function _mlRemove(section, i){
-  const m = _editingEid
-    ? encounterMonsters.find(x => x._eid === _editingEid)
-    : dmMonsters.find(x => x.id === _editingMyId);
+  const m = _getEditedMonster();
   if(!m || !m[section]) return;
   m[section].splice(i, 1);
   renderModalList(section, m[section]);

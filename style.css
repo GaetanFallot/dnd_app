@@ -1863,8 +1863,17 @@
   }
 
   .mm-list-row {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    border-bottom: 1px solid rgba(90,69,48,.35);
+    padding-bottom: .4rem;
+    margin-bottom: .1rem;
+  }
+
+  .mm-row-basic {
     display: grid;
-    grid-template-columns: 170px 1fr 28px;
+    grid-template-columns: 160px 1fr 28px;
     gap: .4rem;
     align-items: start;
   }
@@ -1877,6 +1886,87 @@
     min-height: 48px;
     resize: vertical;
     font-size: .85rem;
+  }
+
+  .mm-row-adv {
+    display: flex;
+    flex-direction: column;
+    gap: .22rem;
+    padding: .3rem .4rem;
+    background: rgba(0,0,0,.18);
+    border: 1px solid rgba(90,69,48,.3);
+    border-radius: 3px;
+  }
+
+  .mm-adv-field {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    flex-wrap: wrap;
+  }
+
+  .mm-adv-field-col {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mm-adv-lbl {
+    font-size: .68rem;
+    color: var(--ink-dim);
+    min-width: 80px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .mm-adv-hint {
+    font-size: .7rem;
+    color: var(--ink-dim);
+  }
+
+  .mm-adv-select {
+    background: var(--stone);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: .78rem;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+
+  .mm-adv-num {
+    width: 58px;
+    background: var(--stone);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: .78rem;
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  .mm-adv-dice {
+    width: 80px;
+    background: var(--stone);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: .78rem;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+
+  .mm-dmg-list {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+  }
+
+  .mm-dmg-row {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
   }
 
   .mm-rm {

@@ -14,6 +14,14 @@ const MonsterBrowser = (() => {
 
   // ── Helpers ──────────────────────────────────────────────────────
 
+  // Normalize proficiencies: handles flat {name,value} and nested {proficiency:{name},value}
+  function _normProf(profs) {
+    return (profs || []).map(p => ({
+      name:  p.name || p.proficiency?.name || '',
+      value: p.value || 0,
+    }));
+  }
+
   function getLibrary() {
     if (_lang === 'fr' && window.DND_MONSTERS_FR?.length) return window.DND_MONSTERS_FR;
     return window.DND_MONSTERS_EN || [];
@@ -25,8 +33,9 @@ const MonsterBrowser = (() => {
     if (typeof addToEncounter !== 'function') return;
     const makeId = typeof _genId === 'function' ? _genId : () => Date.now().toString(36) + Math.random().toString(36).slice(2,6);
     const speedS = speedStr(m.speed);
-    const saves  = (m.proficiencies||[]).filter(p=>p.name?.startsWith('Saving Throw')).map(p=>p.name.replace('Saving Throw: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
-    const skills = (m.proficiencies||[]).filter(p=>!p.name?.startsWith('Saving Throw')).map(p=>p.name.replace('Skill: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
+    const profs0 = _normProf(m.proficiencies);
+    const saves  = profs0.filter(p=>p.name.startsWith('Saving Throw')).map(p=>p.name.replace('Saving Throw: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
+    const skills = profs0.filter(p=>p.name.startsWith('Skill:')).map(p=>p.name.replace('Skill: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
     const cr     = crStr(m.challenge_rating);
     const ac     = typeof m.armor_class === 'number' ? m.armor_class : (m.armor_class?.value ?? 10);
     addToEncounter({
@@ -44,10 +53,10 @@ const MonsterBrowser = (() => {
       cond_immune: (m.condition_immunities||[]).map(c=>c.name||c).join(', '),
       senses:      m.senses ? Object.entries(m.senses).filter(([,v])=>v).map(([k,v])=>`${k.replace(/_/g,' ')} ${v}`).join(', ') : '',
       languages:   m.languages||'',
-      traits:      (m.special_abilities||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
-      actions:     (m.actions||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
-      reactions:   (m.reactions||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
-      legendary:   (m.legendary_actions||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
+      traits:      (m.special_abilities||[]).map(a=>({ name:a.name, desc:a.desc||'', usage:a.usage||null })),
+      actions:     (m.actions||[]).map(a=>({ name:a.name, desc:a.desc||'', attack_bonus:a.attack_bonus??null, damage:a.damage||[], dc:a.dc||null, usage:a.usage||null })),
+      reactions:   (m.reactions||[]).map(a=>({ name:a.name, desc:a.desc||'', attack_bonus:a.attack_bonus??null, damage:a.damage||[], dc:a.dc||null, usage:a.usage||null })),
+      legendary:   (m.legendary_actions||[]).map(a=>({ name:a.name, desc:a.desc||'', attack_bonus:a.attack_bonus??null, damage:a.damage||[], dc:a.dc||null, usage:a.usage||null })),
       notes: '',
     });
   }
@@ -303,8 +312,9 @@ const MonsterBrowser = (() => {
 
     const cr      = crStr(m.challenge_rating);
     const speed   = speedStr(m.speed);
-    const saves   = (m.proficiencies||[]).filter(p=>p.name?.startsWith('Saving Throw'));
-    const skills  = (m.proficiencies||[]).filter(p=>!p.name?.startsWith('Saving Throw'));
+    const profs1  = _normProf(m.proficiencies);
+    const saves   = profs1.filter(p=>p.name.startsWith('Saving Throw'));
+    const skills  = profs1.filter(p=>p.name.startsWith('Skill:'));
     const ac      = typeof m.armor_class === 'number' ? m.armor_class : (m.armor_class?.value ?? 10);
     const savesStr  = saves.map(p=>p.name.replace('Saving Throw: ','')+(p.value>=0?' +':' ')+p.value).join(', ') || '—';
     const skillsStr = skills.map(p=>p.name.replace('Skill: ','')+(p.value>=0?' +':' ')+p.value).join(', ') || '—';
@@ -423,8 +433,9 @@ const MonsterBrowser = (() => {
 
   function _convertToDockFormat(m) {
     const speedStr2 = speedStr(m.speed);
-    const saves  = (m.proficiencies||[]).filter(p=>p.name?.startsWith('Saving Throw')).map(p=>p.name.replace('Saving Throw: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
-    const skills = (m.proficiencies||[]).filter(p=>!p.name?.startsWith('Saving Throw')).map(p=>p.name.replace('Skill: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
+    const profs2 = _normProf(m.proficiencies);
+    const saves  = profs2.filter(p=>p.name.startsWith('Saving Throw')).map(p=>p.name.replace('Saving Throw: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
+    const skills = profs2.filter(p=>p.name.startsWith('Skill:')).map(p=>p.name.replace('Skill: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
     const cr     = crStr(m.challenge_rating);
     const ac     = typeof m.armor_class === 'number' ? m.armor_class : (m.armor_class?.value ?? 10);
     const makeId = typeof _genId === 'function' ? _genId : () => Date.now().toString(36) + Math.random().toString(36).slice(2,6);
@@ -453,10 +464,10 @@ const MonsterBrowser = (() => {
       cond_immune: (m.condition_immunities||[]).map(c=>c.name||c).join(', '),
       senses:      m.senses ? Object.entries(m.senses).filter(([,v])=>v).map(([k,v])=>`${k.replace(/_/g,' ')} ${v}`).join(', ') : '',
       languages:   m.languages || '',
-      traits:      (m.special_abilities||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
-      actions:     (m.actions||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
-      reactions:   (m.reactions||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
-      legendary:   (m.legendary_actions||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
+      traits:      (m.special_abilities||[]).map(a=>({ name:a.name, desc:a.desc||'', usage:a.usage||null })),
+      actions:     (m.actions||[]).map(a=>({ name:a.name, desc:a.desc||'', attack_bonus:a.attack_bonus??null, damage:a.damage||[], dc:a.dc||null, usage:a.usage||null })),
+      reactions:   (m.reactions||[]).map(a=>({ name:a.name, desc:a.desc||'', attack_bonus:a.attack_bonus??null, damage:a.damage||[], dc:a.dc||null, usage:a.usage||null })),
+      legendary:   (m.legendary_actions||[]).map(a=>({ name:a.name, desc:a.desc||'', attack_bonus:a.attack_bonus??null, damage:a.damage||[], dc:a.dc||null, usage:a.usage||null })),
       legendaryDesc: m.legendary_desc || '',
       notes:       '',
     };
