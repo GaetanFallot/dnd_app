@@ -1,0 +1,3517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&amp;D 5e — Personnage</title>
+  <style>
+/* ============================================
+   D&D 5e Character Sheet - Medieval Fantasy Theme
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=MedievalSharp&display=swap');
+
+:root {
+  --parchment: #f4e4c1;
+  --parchment-dark: #e8d5a3;
+  --parchment-darker: #d4c089;
+  --ink: #2c1810;
+  --ink-light: #5c3a2e;
+  --ink-faded: #8b6f5e;
+  --gold: #c9a84c;
+  --gold-light: #e8cc6e;
+  --gold-dark: #8b7332;
+  --blood: #8b1a1a;
+  --blood-light: #b22222;
+  --blood-glow: #ff4444;
+  --shadow: rgba(44, 24, 16, 0.3);
+  --shadow-deep: rgba(44, 24, 16, 0.6);
+  --arcane-blue: #2a4a7f;
+  --arcane-glow: #5b8dd9;
+  --nature-green: #2d5a27;
+  --divine-gold: #daa520;
+  --bg-dark: #1a120b;
+  --bg-medium: #2c1f14;
+  --bg-panel: #3a2a1c;
+  --border-ornate: #6b4c2a;
+  --text-on-dark: #e8d5a3;
+  --radius: 4px;
+  --transition: 0.3s ease;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Crimson Text', Georgia, serif;
+  background: var(--bg-dark);
+  color: var(--ink);
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(139, 26, 26, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(42, 74, 127, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb {
+  background: var(--border-ornate);
+  border-radius: 5px;
+  border: 2px solid var(--bg-dark);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+/* ---- HEADER ---- */
+.sheet-header {
+  background: linear-gradient(180deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+  border-bottom: 3px solid var(--gold-dark);
+  padding: 1.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 4px 20px var(--shadow-deep);
+}
+
+.sheet-header::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.portrait-thumb {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: var(--bg-panel);
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 10px rgba(201,168,76,0.15);
+}
+.portrait-thumb:hover {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 16px rgba(201,168,76,0.4);
+}
+
+.class-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: var(--bg-panel);
+  box-shadow: 0 0 15px rgba(201, 168, 76, 0.2);
+  flex-shrink: 0;
+}
+
+.header-title {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-shadow: 0 2px 4px var(--shadow-deep);
+  letter-spacing: 2px;
+}
+
+.header-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  color: var(--ink-faded);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.btn {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gold-dark);
+  background: var(--bg-panel);
+  color: var(--gold);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: var(--gold-dark);
+  color: var(--parchment);
+  box-shadow: 0 0 10px rgba(201, 168, 76, 0.3);
+}
+
+.btn-danger {
+  border-color: var(--blood);
+  color: var(--blood-light);
+}
+
+.btn-danger:hover {
+  background: var(--blood);
+  color: var(--parchment);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--bg-dark);
+  border-color: var(--gold);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 15px rgba(201, 168, 76, 0.5);
+  transform: translateY(-1px);
+}
+
+/* ---- MAIN LAYOUT ---- */
+.sheet-body {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.sheet-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 320px;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+@media (max-width: 1200px) {
+  .sheet-grid { grid-template-columns: 1fr 1fr; }
+  .sheet-grid > .col-left { grid-column: 1; }
+  .sheet-grid > .col-center { grid-column: 2; }
+  .sheet-grid > .col-right { grid-column: 1 / -1; }
+}
+
+@media (max-width: 800px) {
+  .sheet-grid { grid-template-columns: 1fr; }
+  .sheet-grid > * { grid-column: 1; }
+  .sheet-header { flex-wrap: wrap; }
+}
+
+/* ---- PANELS ---- */
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-ornate);
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: var(--transition);
+}
+
+.panel:hover {
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.panel-header {
+  background: linear-gradient(135deg, var(--bg-medium), var(--bg-panel));
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border-ornate);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.panel-drag {
+  color: var(--ink-faded);
+  cursor: grab;
+  font-size: 1rem;
+  opacity: 0.35;
+  transition: opacity 0.15s;
+  user-select: none;
+  line-height: 1;
+  padding-right: 0.2rem;
+  flex-shrink: 0;
+}
+.panel-drag:active { cursor: grabbing; }
+.panel-header:hover .panel-drag { opacity: 0.7; }
+.panel.sortable-ghost { opacity: 0.35; }
+
+.panel-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.panel-body {
+  padding: 1rem;
+}
+
+.panel-add-btn {
+  font-size: 1.1rem;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--gold-dark);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.panel-add-btn:hover {
+  background: var(--gold-dark);
+  color: var(--parchment);
+}
+
+/* ---- FORM ELEMENTS ---- */
+.field-group {
+  margin-bottom: 0.8rem;
+}
+
+.field-label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 3px;
+}
+
+.field-input,
+.field-select,
+.field-textarea {
+  width: 100%;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  color: var(--text-on-dark);
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.field-input:focus,
+.field-select:focus,
+.field-textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.25);
+}
+
+.field-textarea {
+  resize: vertical;
+  min-height: 60px;
+  line-height: 1.5;
+}
+
+.field-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c9a84c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  padding-right: 2rem;
+}
+
+.field-input[type="number"] {
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.field-input[type="number"]::-webkit-inner-spin-button,
+.field-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.field-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: end;
+}
+
+.field-row > .field-group {
+  flex: 1;
+}
+
+.field-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ---- ABILITY SCORES ---- */
+.ability-scores {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.ability-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  transition: var(--transition);
+}
+
+.ability-block:hover {
+  border-color: var(--gold-dark);
+}
+
+.ability-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.ability-score-input {
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  background: var(--bg-medium);
+  border: 2px solid var(--border-ornate);
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.ability-score-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(201, 168, 76, 0.3);
+  outline: none;
+}
+
+.ability-mod {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-on-dark);
+  width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.ability-save {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.ability-save label {
+  font-size: 0.65rem;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ability-save-val {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: var(--text-on-dark);
+  width: 30px;
+  text-align: center;
+}
+
+/* Proficiency checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border-ornate);
+  border-radius: 3px;
+  background: var(--bg-dark);
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background: var(--gold-dark);
+  border-color: var(--gold);
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--parchment);
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* ---- SKILLS LIST ---- */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(107, 76, 42, 0.2);
+  font-size: 0.9rem;
+}
+
+.skill-item:last-child { border-bottom: none; }
+
+.skill-mod {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.skill-name {
+  color: var(--text-on-dark);
+  flex: 1;
+}
+
+.skill-ability-tag {
+  font-size: 0.6rem;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ---- COMBAT STATS ---- */
+.combat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.combat-stat {
+  text-align: center;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  border-radius: 6px;
+  padding: 0.6rem;
+}
+
+.combat-stat-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.combat-stat-value {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.combat-stat-value input {
+  width: 60px;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--border-ornate);
+}
+
+.combat-stat-value input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+/* ---- HP BAR ---- */
+.hp-section {
+  margin-top: 0.8rem;
+}
+
+.hp-bar-container {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  border-radius: 20px;
+  height: 32px;
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.hp-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blood), var(--blood-light));
+  border-radius: 20px;
+  transition: width 0.5s ease;
+  box-shadow: inset 0 1px 2px rgba(255,255,255,0.15);
+}
+
+.hp-bar-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--parchment);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.hp-inputs {
+  display: flex;
+  gap: 0.6rem;
+  align-items: end;
+}
+
+.hp-inputs .field-group { flex: 1; }
+
+/* ---- DEATH SAVES ---- */
+.death-saves {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.death-save-group {
+  text-align: center;
+}
+
+.death-save-group label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.death-save-checks {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+/* ---- ATTACKS TABLE ---- */
+.attacks-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attacks-table th {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.4rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-ornate);
+}
+
+.attacks-table td {
+  padding: 0.3rem;
+}
+
+.attacks-table input {
+  width: 100%;
+  background: var(--bg-dark);
+  border: 1px solid rgba(107, 76, 42, 0.3);
+  color: var(--text-on-dark);
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius);
+}
+
+.attacks-table input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.attack-row { position: relative; }
+
+.attack-delete {
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--blood);
+  background: var(--bg-dark);
+  color: var(--blood-light);
+  font-size: 0.7rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.attack-row:hover .attack-delete { display: flex; }
+.attack-delete:hover { background: var(--blood); color: white; }
+
+/* ---- SPELLCASTING ---- */
+.spell-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 0.5rem;
+}
+
+.spell-slot-item {
+  text-align: center;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.spell-slot-level {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.spell-slot-dots {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.spell-slot-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--arcane-blue);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.spell-slot-dot.used {
+  background: var(--arcane-glow);
+  border-color: var(--arcane-glow);
+  box-shadow: 0 0 6px rgba(91, 141, 217, 0.4);
+}
+
+.spell-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.spell-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  background: var(--bg-dark);
+  border: 1px solid rgba(107, 76, 42, 0.2);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--text-on-dark);
+}
+
+.spell-item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+}
+
+.spell-item .spell-name-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-on-dark);
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+}
+
+.spell-item .spell-name-input:focus { outline: none; }
+
+.spell-item .spell-delete {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--blood);
+  background: transparent;
+  color: var(--blood-light);
+  font-size: 0.6rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.spell-item:hover .spell-delete { display: flex; }
+
+.spell-level-section {
+  margin-bottom: 0.8rem;
+}
+
+.spell-level-header {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--arcane-glow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(91, 141, 217, 0.3);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---- CLASS FEATURES ---- */
+.feature-item {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  border-radius: 6px;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.feature-desc {
+  font-size: 0.85rem;
+  color: var(--text-on-dark);
+  line-height: 1.4;
+}
+
+/* ---- CLASS RESOURCE ---- */
+.resource-tracker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.resource-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-dark);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.resource-dot.active {
+  background: var(--gold);
+  border-color: var(--gold-light);
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.4);
+}
+
+/* ---- EQUIPMENT / TRAITS ---- */
+.equipment-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(107, 76, 42, 0.15);
+}
+
+.equipment-item input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-on-dark);
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+}
+
+.equipment-item input:focus { outline: none; }
+
+.equipment-delete {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--blood);
+  background: transparent;
+  color: var(--blood-light);
+  font-size: 0.6rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.equipment-item:hover .equipment-delete { display: flex; }
+
+/* ---- NOTES ---- */
+.notes-area {
+  width: 100%;
+  min-height: 100px;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  border-radius: var(--radius);
+  color: var(--text-on-dark);
+  font-family: 'Crimson Text', serif;
+  font-size: 0.95rem;
+  padding: 0.6rem;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.notes-area:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+/* ---- CURRENCY ---- */
+.currency-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+}
+
+.currency-item {
+  text-align: center;
+}
+
+.currency-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.currency-input {
+  width: 100%;
+  text-align: center;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  padding: 0.3rem;
+  border-radius: var(--radius);
+}
+
+.currency-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+/* ---- PROFICIENCIES / LANGUAGES ---- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.tag {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  color: var(--text-on-dark);
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.tag-delete {
+  cursor: pointer;
+  color: var(--blood-light);
+  font-size: 0.7rem;
+}
+
+.tag-delete:hover { color: var(--blood-glow); }
+
+.tag-input-wrap {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.tag-input {
+  flex: 1;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  color: var(--text-on-dark);
+  font-family: 'Crimson Text', serif;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 20px;
+}
+
+.tag-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+/* ---- MONSTER SHEET SPECIFICS ---- */
+.monster-stat-block {
+  background: var(--bg-panel);
+  border: 2px solid var(--blood);
+  border-radius: 0;
+  position: relative;
+}
+
+.monster-stat-block::before,
+.monster-stat-block::after {
+  content: '';
+  display: block;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, var(--blood), transparent);
+}
+
+.monster-header {
+  padding: 1rem;
+  border-bottom: 2px solid var(--blood);
+}
+
+.monster-name {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.8rem;
+  color: var(--blood-light);
+}
+
+.monster-meta {
+  font-style: italic;
+  color: var(--ink-faded);
+  font-size: 0.95rem;
+}
+
+.monster-divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--blood), transparent);
+  margin: 0.5rem 0;
+}
+
+.monster-property {
+  padding: 0.3rem 0;
+  color: var(--text-on-dark);
+}
+
+.monster-property strong {
+  color: var(--blood-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+}
+
+.monster-ability-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.3rem;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.monster-ability {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  border-radius: 4px;
+  padding: 0.4rem;
+}
+
+.monster-ability-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--blood-light);
+  text-transform: uppercase;
+}
+
+.monster-ability-score {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.monster-ability-mod {
+  font-size: 0.8rem;
+  color: var(--ink-faded);
+}
+
+.monster-action {
+  margin-bottom: 0.6rem;
+  padding: 0.5rem;
+  background: var(--bg-dark);
+  border-left: 3px solid var(--blood);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.monster-action-name {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: var(--blood-light);
+  font-size: 0.9rem;
+}
+
+.monster-action-desc {
+  color: var(--text-on-dark);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 0.2rem;
+}
+
+/* ---- INDEX PAGE ---- */
+.index-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.index-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 3px 8px var(--shadow-deep);
+}
+
+.index-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: var(--ink-faded);
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.class-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-ornate);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.class-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.class-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 8px 25px var(--shadow-deep);
+}
+
+.class-card:hover::before { opacity: 1; }
+
+.class-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.class-card-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+}
+
+.class-card-desc {
+  font-size: 0.8rem;
+  color: var(--ink-faded);
+  line-height: 1.3;
+}
+
+.section-divider {
+  text-align: center;
+  margin: 2.5rem 0 1.5rem;
+  position: relative;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+}
+
+.section-divider span {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--gold);
+  background: var(--bg-dark);
+  padding: 0 1.5rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* ---- MODAL ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal {
+  background: var(--bg-panel);
+  border: 2px solid var(--gold-dark);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* ---- TOAST ---- */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px var(--shadow-deep);
+  z-index: 2000;
+  animation: toastIn 0.3s ease, toastOut 0.3s ease 2.5s forwards;
+}
+
+@keyframes toastIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes toastOut { from { opacity: 1; } to { opacity: 0; transform: translateY(20px); } }
+
+/* ---- REST BUTTONS ---- */
+.btn-longrest {
+  background: linear-gradient(135deg, #1a1a4e, #2d2d7a);
+  border-color: #5b5bc8;
+  color: #b8b8f0;
+}
+.btn-longrest:hover {
+  background: linear-gradient(135deg, #2d2d7a, #4a4aaa);
+  color: #ddddf8;
+  box-shadow: 0 0 12px rgba(91, 91, 200, 0.4);
+}
+.btn-shortrest {
+  background: linear-gradient(135deg, #2d1a0a, #5a3510);
+  border-color: #c87941;
+  color: #f0c080;
+}
+.btn-shortrest:hover {
+  background: linear-gradient(135deg, #5a3510, #8a5520);
+  color: #ffd8a0;
+  box-shadow: 0 0 12px rgba(200, 121, 65, 0.4);
+}
+
+/* ---- DEATH SAVES COLORS ---- */
+.death-save-success input[type="checkbox"]:checked {
+  background: #166534;
+  border-color: #22c55e;
+}
+.death-save-success input[type="checkbox"]:checked::after { color: #bbf7d0; }
+.death-save-success label { color: #22c55e !important; }
+
+.death-save-failure input[type="checkbox"]:checked {
+  background: #7f1d1d;
+  border-color: #ef4444;
+}
+.death-save-failure input[type="checkbox"]:checked::after { color: #fecaca; }
+.death-save-failure label { color: #ef4444 !important; }
+
+/* ---- RESOURCES ---- */
+.resource-item {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-ornate);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  margin-bottom: 0.5rem;
+}
+.resource-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.resource-name {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-ornate);
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.15rem 0.2rem;
+  min-width: 0;
+}
+.resource-name:focus { outline: none; border-color: var(--gold); }
+.resource-recharge {
+  background: var(--bg-medium);
+  color: var(--ink-faded);
+  border: 1px solid var(--border-ornate);
+  border-radius: 3px;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.25rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.resource-max-label {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.resource-max-input {
+  width: 36px;
+  text-align: center;
+  background: var(--bg-medium);
+  border: 1px solid var(--border-ornate);
+  color: var(--text-on-dark);
+  border-radius: 3px;
+  padding: 0.1rem 0.2rem;
+  font-size: 0.8rem;
+  font-family: 'Cinzel', serif;
+  -moz-appearance: textfield;
+}
+.resource-max-input::-webkit-inner-spin-button,
+.resource-max-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+.resource-max-input:focus { outline: none; border-color: var(--gold); }
+.resource-dots-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-height: 20px;
+}
+.resource-item .resource-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-dark);
+  background: var(--gold);
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0 5px rgba(201, 168, 76, 0.35);
+  flex-shrink: 0;
+}
+.resource-item .resource-dot:hover { transform: scale(1.2); }
+.resource-item .resource-dot.spent {
+  background: transparent;
+  border-color: var(--border-ornate);
+  box-shadow: none;
+}
+
+/* ---- SPELL ITEM (restructured with absolute actions) ---- */
+.spell-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-dark);
+  border: 1px solid rgba(107, 76, 42, 0.25);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.9rem;
+  color: var(--text-on-dark);
+}
+
+/* Absolute action buttons at top-right — never shift layout */
+.spell-item-actions {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  z-index: 1;
+}
+
+.spell-expand-btn {
+  background: transparent;
+  border: none;
+  color: var(--ink-faded);
+  font-size: 0.75rem;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  border-radius: 3px;
+}
+.spell-expand-btn:hover { color: var(--gold); background: rgba(201,168,76,0.1); }
+.spell-item.expanded .spell-expand-btn {
+  color: var(--gold);
+  transform: rotate(180deg);
+}
+
+.spell-item .spell-delete {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--blood);
+  background: transparent;
+  color: var(--blood-light);
+  font-size: 0.6rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.spell-item:hover .spell-delete { display: flex; }
+
+.spell-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.5rem;
+  padding-right: 46px; /* space for the absolute actions */
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.spell-item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.spell-level-select {
+  background: var(--bg-medium);
+  color: var(--gold);
+  border: 1px solid var(--gold-dark);
+  border-radius: 3px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.15rem;
+  width: 42px;
+  text-align: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.spell-school-select {
+  background: var(--bg-medium);
+  color: var(--arcane-glow);
+  border: 1px solid rgba(42, 74, 127, 0.6);
+  border-radius: 3px;
+  font-size: 0.65rem;
+  padding: 0.1rem 0.15rem;
+  width: 72px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.spell-item .spell-name-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-on-dark);
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+  min-width: 0;
+}
+.spell-item .spell-name-input:focus { outline: none; }
+
+.spell-range-input,
+.spell-duration-input {
+  width: 52px;
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(107,76,42,0.2);
+  color: var(--ink-faded);
+  font-family: 'Crimson Text', serif;
+  font-size: 0.78rem;
+  padding: 0 0.25rem;
+  flex-shrink: 0;
+}
+.spell-range-input:focus,
+.spell-duration-input:focus { outline: none; }
+
+.spell-component {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.62rem;
+  color: var(--ink-faded);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.spell-component input[type="checkbox"] {
+  width: 10px;
+  height: 10px;
+}
+
+.spell-summary {
+  width: 100%;
+  background: rgba(0,0,0,0.25);
+  border: none;
+  border-top: 1px solid rgba(107,76,42,0.2);
+  color: var(--ink-faded);
+  font-family: 'Crimson Text', serif;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  resize: none;
+  transition: max-height 0.25s ease, padding 0.2s ease;
+}
+.spell-item.expanded .spell-summary {
+  max-height: 160px;
+  padding: 0.4rem 0.6rem;
+  overflow-y: auto;
+}
+.spell-summary:focus { outline: none; }
+
+/* ---- MOBILE HP WIDGET ---- */
+.mobile-hp-widget { display: none; }
+
+/* ---- MOBILE TAB BAR ---- */
+.mobile-tab-bar { display: none; }
+
+@media (max-width: 768px) {
+  /* HP widget always visible */
+  .mobile-hp-widget { display: block; }
+
+  /* Show tab bar */
+  .mobile-tab-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 58px;
+    background: var(--bg-medium);
+    border-top: 2px solid var(--gold-dark);
+    z-index: 300;
+    box-shadow: 0 -4px 16px var(--shadow-deep);
+  }
+
+  .mobile-tab-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    background: transparent;
+    border: none;
+    color: var(--ink-faded);
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+    padding: 0.3rem 0;
+  }
+  .mobile-tab-btn span:first-child { font-size: 1.3rem; line-height: 1; }
+  .mobile-tab-btn.active { color: var(--gold); background: rgba(201,168,76,0.07); }
+  .mobile-tab-btn:hover { color: var(--gold-light); }
+
+  /* Layout: unset grid, columns become transparent wrappers */
+  .sheet-body { padding-bottom: 68px; padding-left: 0.8rem; padding-right: 0.8rem; }
+  .sheet-grid { display: block !important; }
+  .col-left, .col-center, .col-right { display: contents; }
+
+  /* Hide all tabbed panels by default; JS shows the active ones */
+  .panel[data-tab] { display: none; }
+
+  /* Compact header */
+  .sheet-header { padding: 0.7rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
+  .header-title { font-size: 1.1rem; }
+  .header-subtitle { display: none; }
+  .header-actions { gap: 0.3rem; flex-wrap: wrap; }
+  .btn { padding: 0.35rem 0.55rem; font-size: 0.65rem; letter-spacing: 0.5px; }
+  .class-icon { width: 38px; height: 38px; font-size: 1.2rem; }
+
+  /* Abilities: horizontal layout on mobile */
+  .ability-scores { gap: 0.4rem; }
+  .ability-block { padding: 0.4rem 0.6rem; }
+  .ability-score-input { width: 38px; height: 38px; font-size: 1.1rem; }
+
+  /* Combat grid: 3 cols stay */
+  .combat-stat-value { font-size: 1.3rem; }
+
+  /* Spell items: allow wrapping on mobile */
+  .spell-item-row { flex-wrap: wrap; gap: 0.25rem; padding-right: 44px; }
+  .spell-name-input { min-width: 120px; }
+  .spell-school-select { width: 90px; }
+
+  /* Panels fill width */
+  .panel { margin-bottom: 0.8rem; }
+  .panel-body { padding: 0.7rem; }
+}
+
+/* ---- PRINT ---- */
+@media print {
+  body { background: white; color: black; }
+  .sheet-header { position: static; background: white; border-bottom: 2px solid #333; }
+  .header-actions { display: none; }
+  .panel { break-inside: avoid; border-color: #333; background: white; }
+  .field-input, .field-select, .field-textarea, .notes-area { border-color: #999; background: #f9f9f9; color: black; }
+}
+
+/* ════════════════════════════════════════════
+   SPELL BROWSER MODAL
+   ════════════════════════════════════════════ */
+
+/* Langue buttons */
+.sb-lang-btn {
+  background: none; border: none; color: var(--ink-faded);
+  font-family: 'Cinzel', serif; font-size: 0.7rem; cursor: pointer;
+  padding: 0.2rem 0.5rem; border-radius: 3px; transition: all 0.15s;
+}
+.sb-lang-btn.active { background: var(--arcane-blue); color: var(--arcane-glow); }
+.sb-lang-btn:hover:not(.active) { color: var(--gold); }
+
+/* List rows */
+.sb-level-header {
+  font-family: 'Cinzel', serif; font-size: 0.7rem; color: var(--gold);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 0.4rem 1rem 0.2rem; background: #100d09;
+  border-top: 1px solid var(--border-ornate); border-bottom: 1px solid var(--border-ornate);
+  position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 0.5rem;
+}
+.sb-count { background: var(--bg-medium); color: var(--ink-faded); font-size: 0.65rem;
+  padding: 0 0.4rem; border-radius: 8px; font-family: 'Crimson Text', serif; }
+
+.sb-row {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.38rem 1rem; cursor: pointer; transition: background 0.1s;
+  border-bottom: 1px solid rgba(107,76,42,.25);
+}
+.sb-row:hover { background: rgba(200,168,75,.07); }
+.sb-row.active { background: rgba(91,141,217,.15); border-left: 3px solid var(--arcane-glow); }
+.sb-row-name { flex: 1; font-size: 0.82rem; color: var(--text-on-dark); }
+.sb-row-school { font-size: 0.7rem; color: var(--ink-faded); min-width: 90px; text-align: right; }
+.sb-row-tags { font-size: 0.65rem; color: var(--arcane-glow); }
+.sb-add-btn {
+  background: none; border: 1px solid var(--arcane-glow,#5b8dd9); color: var(--arcane-glow,#5b8dd9);
+  border-radius: 3px; width: 22px; height: 22px; font-size: 0.85rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  transition: all 0.15s; padding: 0;
+}
+.sb-add-btn:hover { background: var(--arcane-glow); color: #fff; }
+
+.sb-empty {
+  padding: 2rem; text-align: center; color: var(--ink-faded);
+  font-style: italic; font-size: 0.82rem; line-height: 1.8;
+}
+.sb-empty code {
+  display: inline-block; background: #0d0b07; color: var(--gold); padding: 0.2rem 0.5rem;
+  border-radius: 3px; font-size: 0.78rem; margin-top: 0.3rem;
+}
+
+/* Preview panel */
+.sb-preview-header { margin-bottom: 0.8rem; }
+.sb-preview-title  { font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700; color: var(--gold); line-height: 1.3; }
+.sb-preview-en     { font-size: 0.72rem; color: var(--ink-faded); font-style: italic; margin: 0.1rem 0; }
+.sb-preview-subtitle { font-size: 0.78rem; color: var(--ink-faded); margin: 0.2rem 0; }
+.sb-preview-tags   { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-top: 0.3rem; }
+.sb-tag { background: rgba(91,141,217,.2); color: var(--arcane-glow); font-size: 0.68rem;
+  padding: 0.1rem 0.4rem; border-radius: 10px; }
+
+.sb-stat-table { width: 100%; border-collapse: collapse; margin-bottom: 0.7rem; font-size: 0.78rem; }
+.sb-stat-table td { padding: 0.25rem 0.4rem; border-bottom: 1px solid rgba(107,76,42,.3); }
+.sb-stat-table td:first-child { color: var(--gold); font-size: 0.72rem; width: 40%; }
+
+.sb-preview-desc { line-height: 1.6; margin: 0.7rem 0; font-size: 0.8rem; color: var(--ink-light, #d8c8a8); }
+.sb-hl { margin-top: 0.5rem; padding: 0.5rem; background: rgba(200,168,75,.07);
+  border-left: 2px solid var(--gold); font-size: 0.78rem; line-height: 1.5; }
+
+.sb-import-btn {
+  width: 100%; margin-top: 1rem; padding: 0.6rem;
+  background: linear-gradient(135deg, var(--arcane-blue), #1a0a3a);
+  border: 1px solid var(--arcane-glow); color: var(--arcane-glow);
+  font-family: 'Cinzel', serif; font-size: 0.8rem; cursor: pointer;
+  border-radius: 4px; transition: all 0.2s; letter-spacing: 0.05em;
+}
+.sb-import-btn:hover { background: var(--arcane-blue); box-shadow: 0 0 8px rgba(91,141,217,.4); }
+
+/* Mobile: stack list + preview vertically */
+@media (max-width: 640px) {
+  #spell-browser-modal > div > div:last-child { flex-direction: column; }
+  #sb-preview { width: 100%; border-left: none; border-top: 1px solid var(--border-ornate); max-height: 300px; }
+}
+
+</style>
+</head>
+<body>
+
+  <div id="no-char-notice" style="display:none;position:fixed;inset:0;background:var(--bg-dark);align-items:center;justify-content:center;flex-direction:column;gap:1rem;font-family:'Cinzel',serif;color:var(--text-on-dark);z-index:100">
+    <div style="font-size:3rem">⚔️</div>
+    <div>Aucun personnage sélectionné</div>
+    
+  </div>
+
+  <div id="sheet-body" style="display:none">
+
+    <!-- HEADER -->
+    <header class="sheet-header">
+      <div class="header-left">
+        <div class="portrait-thumb" id="portrait-thumb" onclick="DND.uploadPortrait()" title="Cliquer pour changer le portrait">
+          <img id="portrait-img" src="" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:50%">
+          <span id="portrait-placeholder">👤</span>
+        </div>
+        <div class="class-icon" id="header-class-icon">⚔️</div>
+        <div>
+          <div id="header-char-name" style="font-family:'Cinzel Decorative','Cinzel',serif;font-size:1.1rem;font-weight:700;color:var(--gold);letter-spacing:1px;line-height:1.2">—</div>
+          <div class="header-title" id="header-class-name" style="font-size:0.8rem;color:var(--ink-faded)">Personnage</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        
+        
+        <button class="btn" onclick="DND.exportPDF()" title="Exporter en PDF">📄 PDF</button>
+        <button class="btn" onclick="DND.exportJSON()">📤</button>
+        <button class="btn" onclick="DND.importJSON()">📥</button>
+        
+        
+        <button class="btn btn-shortrest" onclick="DND.shortRest()">☀️ Court</button>
+        <button class="btn btn-longrest" onclick="DND.longRest()">🌙 Long</button>
+        
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <main class="sheet-body">
+
+      <!-- CHARACTER INFO BAR (always visible) -->
+      <div class="panel">
+        <div class="panel-body">
+          <div class="field-row">
+            <div class="field-group" style="flex:2">
+              <label class="field-label">Nom du personnage</label>
+              <input type="text" class="field-input" data-field="char_name" placeholder="Entrez le nom...">
+            </div>
+            <div class="field-group">
+              <label class="field-label">Niveau</label>
+              <input type="number" class="field-input" data-field="level" value="1" min="1" max="20" style="text-align:center">
+            </div>
+            <div class="field-group">
+              <label class="field-label">Sous-classe</label>
+              <input type="text" class="field-input" data-field="subclass" placeholder="Archétype...">
+            </div>
+            <div class="field-group">
+              <label class="field-label">Dés de vie (<span id="hd-display">—</span>)</label>
+              <input type="number" class="field-input" data-field="hd_current" value="1" min="0" max="20" style="text-align:center;font-size:0.9rem;padding:0.3rem 0.4rem">
+            </div>
+          </div>
+          <!-- MOBILE HP WIDGET — always visible on mobile regardless of tab -->
+          <div class="mobile-hp-widget">
+            <div class="hp-bar-container" style="height:22px;margin:0.5rem 0 0.4rem">
+              <div class="hp-bar-fill" id="mob-hp-fill" style="width:100%"></div>
+              <div class="hp-bar-text" id="mob-hp-text">0/0</div>
+            </div>
+            <div style="display:flex;gap:0.5rem;align-items:flex-end">
+              <div style="flex:1;text-align:center">
+                <label class="field-label" style="text-align:center">PV actuels</label>
+                <input type="number" id="mob-hp-cur" class="field-input" style="text-align:center;font-family:'Cinzel',serif;font-size:1.4rem;font-weight:700;color:var(--blood-light)">
+              </div>
+              <div style="color:var(--ink-faded);font-size:1.5rem;padding-bottom:0.3rem">/</div>
+              <div style="flex:1;text-align:center">
+                <label class="field-label" style="text-align:center">PV max</label>
+                <input type="number" id="mob-hp-max" class="field-input" style="text-align:center;font-family:'Cinzel',serif;font-size:1.4rem;font-weight:700">
+              </div>
+              <div style="flex:1;text-align:center">
+                <label class="field-label" style="text-align:center">Temp</label>
+                <input type="number" id="mob-hp-tmp" class="field-input" style="text-align:center;color:var(--arcane-glow)">
+              </div>
+            </div>
+          </div>
+
+          <div class="field-row" style="margin-top:0.5rem">
+            <div class="field-group">
+              <label class="field-label">Race</label>
+              <input type="text" class="field-input" data-field="race" placeholder="Humain, Elfe, Nain...">
+            </div>
+            <div class="field-group">
+              <label class="field-label">Historique</label>
+              <input type="text" class="field-input" data-field="background" placeholder="Sage, Soldat...">
+            </div>
+            <div class="field-group">
+              <label class="field-label">Alignement</label>
+              <select class="field-select" data-field="alignment">
+                <option value="">— Choisir —</option>
+                <option>Loyal Bon</option><option>Neutre Bon</option><option>Chaotique Bon</option>
+                <option>Loyal Neutre</option><option>Neutre</option><option>Chaotique Neutre</option>
+                <option>Loyal Mauvais</option><option>Neutre Mauvais</option><option>Chaotique Mauvais</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label">Expérience</label>
+              <input type="number" class="field-input" data-field="xp" value="0" min="0" style="text-align:center">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN GRID -->
+      <div class="sheet-grid">
+
+        <!-- LEFT COLUMN -->
+        <div class="col-left">
+
+          <!-- ABILITY SCORES -->
+          <div class="panel" data-tab="tab-stats">
+            <div class="panel-header">
+              <span class="panel-title">Caractéristiques</span>
+              <span style="color:var(--gold-light);font-family:'Cinzel',serif;font-size:0.8rem">Maîtrise: <strong id="prof-bonus">+2</strong></span>
+            </div>
+            <div class="panel-body">
+              <div class="ability-scores">
+
+                <div class="ability-block">
+                  <div class="ability-name">FOR</div>
+                  <input type="number" class="ability-score-input" data-field="ability_str" value="10" min="1" max="30">
+                  <div class="ability-mod" id="mod_str">+0</div>
+                  <div class="ability-save">
+                    <input type="checkbox" data-field="save_prof_str">
+                    <label>JdS</label>
+                    <span class="ability-save-val" id="save_str">+0</span>
+                  </div>
+                </div>
+
+                <div class="ability-block">
+                  <div class="ability-name">DEX</div>
+                  <input type="number" class="ability-score-input" data-field="ability_dex" value="10" min="1" max="30">
+                  <div class="ability-mod" id="mod_dex">+0</div>
+                  <div class="ability-save">
+                    <input type="checkbox" data-field="save_prof_dex">
+                    <label>JdS</label>
+                    <span class="ability-save-val" id="save_dex">+0</span>
+                  </div>
+                </div>
+
+                <div class="ability-block">
+                  <div class="ability-name">CON</div>
+                  <input type="number" class="ability-score-input" data-field="ability_con" value="10" min="1" max="30">
+                  <div class="ability-mod" id="mod_con">+0</div>
+                  <div class="ability-save">
+                    <input type="checkbox" data-field="save_prof_con">
+                    <label>JdS</label>
+                    <span class="ability-save-val" id="save_con">+0</span>
+                  </div>
+                </div>
+
+                <div class="ability-block">
+                  <div class="ability-name">INT</div>
+                  <input type="number" class="ability-score-input" data-field="ability_int" value="10" min="1" max="30">
+                  <div class="ability-mod" id="mod_int">+0</div>
+                  <div class="ability-save">
+                    <input type="checkbox" data-field="save_prof_int">
+                    <label>JdS</label>
+                    <span class="ability-save-val" id="save_int">+0</span>
+                  </div>
+                </div>
+
+                <div class="ability-block">
+                  <div class="ability-name">SAG</div>
+                  <input type="number" class="ability-score-input" data-field="ability_wis" value="10" min="1" max="30">
+                  <div class="ability-mod" id="mod_wis">+0</div>
+                  <div class="ability-save">
+                    <input type="checkbox" data-field="save_prof_wis">
+                    <label>JdS</label>
+                    <span class="ability-save-val" id="save_wis">+0</span>
+                  </div>
+                </div>
+
+                <div class="ability-block">
+                  <div class="ability-name">CHA</div>
+                  <input type="number" class="ability-score-input" data-field="ability_cha" value="10" min="1" max="30">
+                  <div class="ability-mod" id="mod_cha">+0</div>
+                  <div class="ability-save">
+                    <input type="checkbox" data-field="save_prof_cha">
+                    <label>JdS</label>
+                    <span class="ability-save-val" id="save_cha">+0</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- SKILLS -->
+          <div class="panel" data-tab="tab-stats">
+            <div class="panel-header">
+              <span class="panel-title">Compétences</span>
+            </div>
+            <div class="panel-body">
+              <div style="font-size:0.7rem;color:var(--ink-faded);margin-bottom:0.5rem;font-style:italic">
+                ☑ Maîtrise &nbsp; ▪ Expertise
+              </div>
+
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_0" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_0" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_0">+0</span>
+                <span class="skill-name">Acrobaties</span>
+                <span class="skill-ability-tag">DEX</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_1" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_1" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_1">+0</span>
+                <span class="skill-name">Arcanes</span>
+                <span class="skill-ability-tag">INT</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_2" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_2" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_2">+0</span>
+                <span class="skill-name">Athlétisme</span>
+                <span class="skill-ability-tag">FOR</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_3" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_3" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_3">+0</span>
+                <span class="skill-name">Discrétion</span>
+                <span class="skill-ability-tag">DEX</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_4" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_4" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_4">+0</span>
+                <span class="skill-name">Dressage</span>
+                <span class="skill-ability-tag">SAG</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_5" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_5" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_5">+0</span>
+                <span class="skill-name">Escamotage</span>
+                <span class="skill-ability-tag">DEX</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_6" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_6" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_6">+0</span>
+                <span class="skill-name">Histoire</span>
+                <span class="skill-ability-tag">INT</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_7" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_7" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_7">+0</span>
+                <span class="skill-name">Intimidation</span>
+                <span class="skill-ability-tag">CHA</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_8" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_8" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_8">+0</span>
+                <span class="skill-name">Investigation</span>
+                <span class="skill-ability-tag">INT</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_9" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_9" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_9">+0</span>
+                <span class="skill-name">Médecine</span>
+                <span class="skill-ability-tag">SAG</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_10" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_10" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_10">+0</span>
+                <span class="skill-name">Nature</span>
+                <span class="skill-ability-tag">INT</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_11" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_11" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_11">+0</span>
+                <span class="skill-name">Perception</span>
+                <span class="skill-ability-tag">SAG</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_12" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_12" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_12">+0</span>
+                <span class="skill-name">Perspicacité</span>
+                <span class="skill-ability-tag">SAG</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_13" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_13" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_13">+0</span>
+                <span class="skill-name">Persuasion</span>
+                <span class="skill-ability-tag">CHA</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_14" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_14" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_14">+0</span>
+                <span class="skill-name">Religion</span>
+                <span class="skill-ability-tag">INT</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_15" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_15" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_15">+0</span>
+                <span class="skill-name">Représentation</span>
+                <span class="skill-ability-tag">CHA</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_16" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_16" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_16">+0</span>
+                <span class="skill-name">Survie</span>
+                <span class="skill-ability-tag">SAG</span>
+              </div>
+              <div class="skill-item">
+                <input type="checkbox" data-field="skill_prof_17" title="Maîtrise">
+                <input type="checkbox" data-field="skill_expert_17" title="Expertise" style="width:12px;height:12px;border-radius:2px">
+                <span class="skill-mod" id="skill_mod_17">+0</span>
+                <span class="skill-name">Tromperie</span>
+                <span class="skill-ability-tag">CHA</span>
+              </div>
+
+              <div style="margin-top:0.7rem;padding-top:0.5rem;border-top:1px solid var(--border-ornate)">
+                <div class="skill-item">
+                  <span class="skill-name" style="color:var(--gold)">Perception passive</span>
+                  <span class="skill-mod" id="passive-perception" style="font-size:1rem">10</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end col-left -->
+
+        <!-- CENTER COLUMN -->
+        <div class="col-center">
+
+          <!-- COMBAT -->
+          <div class="panel" data-tab="tab-combat">
+            <div class="panel-header">
+              <span class="panel-title">⚔️ Combat</span>
+            </div>
+            <div class="panel-body">
+              <div class="combat-grid">
+                <div class="combat-stat">
+                  <div class="combat-stat-label">Classe d'armure</div>
+                  <div class="combat-stat-value"><input type="number" data-field="ac" value="10"></div>
+                </div>
+                <div class="combat-stat">
+                  <div class="combat-stat-label">Initiative</div>
+                  <div class="combat-stat-value"><input type="number" id="initiative" data-field="initiative" value="0"></div>
+                </div>
+                <div class="combat-stat">
+                  <div class="combat-stat-label">Vitesse</div>
+                  <div class="combat-stat-value"><input type="text" data-field="speed" value="9m" style="font-size:1.2rem"></div>
+                </div>
+              </div>
+
+              <!-- HP -->
+              <div class="hp-section">
+                <div class="hp-bar-container">
+                  <div class="hp-bar-fill" id="hp-bar-fill" style="width:100%"></div>
+                  <div class="hp-bar-text" id="hp-bar-text">0/0</div>
+                </div>
+                <div class="hp-inputs">
+                  <div class="field-group">
+                    <label class="field-label">PV actuels</label>
+                    <input type="number" class="field-input" data-field="hp_current" value="0" style="text-align:center">
+                  </div>
+                  <div class="field-group">
+                    <label class="field-label">PV max</label>
+                    <input type="number" class="field-input" data-field="hp_max" value="0" style="text-align:center">
+                  </div>
+                  <div class="field-group">
+                    <label class="field-label">PV temp</label>
+                    <input type="number" class="field-input" data-field="hp_temp" value="0" style="text-align:center">
+                  </div>
+                </div>
+              </div>
+
+              <!-- DEATH SAVES -->
+              <div style="margin-top:0.6rem">
+                <label class="field-label" style="text-align:center;display:block">Jets de sauvegarde contre la mort</label>
+                <div class="death-saves">
+                  <div class="death-save-group death-save-success">
+                    <label>Réussites</label>
+                    <div class="death-save-checks">
+                      <input type="checkbox" data-death="s1">
+                      <input type="checkbox" data-death="s2">
+                      <input type="checkbox" data-death="s3">
+                    </div>
+                  </div>
+                  <div class="death-save-group death-save-failure">
+                    <label>Échecs</label>
+                    <div class="death-save-checks">
+                      <input type="checkbox" data-death="f1">
+                      <input type="checkbox" data-death="f2">
+                      <input type="checkbox" data-death="f3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- HIT DICE -->
+              <div class="field-row" style="margin-top:0.5rem">
+                <div class="field-group">
+                  <label class="field-label">Dés de vie restants</label>
+                  <input type="text" class="field-input" data-field="hit_dice_remaining" placeholder="ex: 5d10" style="text-align:center">
+                </div>
+                <div class="field-group">
+                  <label class="field-label">Total dés de vie</label>
+                  <input type="text" class="field-input" data-field="hit_dice_total" placeholder="ex: 5d10" style="text-align:center">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ATTACKS -->
+          <div class="panel" data-tab="tab-combat">
+            <div class="panel-header">
+              <span class="panel-title">⚔️ Attaques</span>
+              <button class="panel-add-btn" onclick="DND.addAttackRow()" title="Ajouter attaque">+</button>
+            </div>
+            <div class="panel-body">
+              <table class="attacks-table">
+                <thead>
+                  <tr><th>Nom</th><th>Bonus</th><th>Dégâts</th><th>Type</th><th></th></tr>
+                </thead>
+                <tbody id="attacks-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SPELL PANEL (hidden by default, shown by JS for casters) -->
+          <div id="spell-panel" class="panel" data-tab="tab-spells" style="display:none">
+            <div class="panel-header"><span class="panel-title">🔮 Sorts</span></div>
+            <div class="panel-body">
+              <div style="display:flex;gap:2rem;margin-bottom:0.8rem">
+                <div class="combat-stat">
+                  <div class="combat-stat-label">DD des sorts</div>
+                  <div class="combat-stat-value"><input type="number" id="spell-dc" data-field="spell_dc" value="10"></div>
+                </div>
+                <div class="combat-stat">
+                  <div class="combat-stat-label">Bonus d'attaque</div>
+                  <div class="combat-stat-value"><input type="number" id="spell-attack" data-field="spell_attack" value="0"></div>
+                </div>
+              </div>
+              <label class="field-label">Emplacements de sorts</label>
+              <div id="spell-slots-grid" class="spell-slots-grid" style="margin-bottom:0.8rem"></div>
+              <div class="panel-header" style="margin-bottom:0.4rem">
+                <span class="panel-title" style="font-size:0.8rem">Liste de sorts</span>
+                <div style="display:flex;gap:0.3rem;align-items:center">
+                  <button class="btn" style="padding:0.15rem 0.5rem;font-size:0.6rem" onclick="DND.sortSpells('level')" title="Trier par niveau">↕ Niv.</button>
+                  <button class="btn" style="padding:0.15rem 0.5rem;font-size:0.6rem" onclick="DND.sortSpells('school')" title="Trier par école">↕ École</button>
+                  
+                  <button class="panel-add-btn" onclick="DND.addSpell()" title="Ajouter sort manuellement">+</button>
+                </div>
+              </div>
+              <div id="spell-list" class="spell-list"></div>
+            </div>
+          </div>
+
+          <!-- PERSONALITY -->
+          <div class="panel" data-tab="tab-perso">
+            <div class="panel-header">
+              <span class="panel-title">📜 Personnalité</span>
+            </div>
+            <div class="panel-body">
+              <div class="field-group">
+                <label class="field-label">Traits de personnalité</label>
+                <textarea id="traits" class="notes-area" style="min-height:50px" placeholder="Décrivez vos traits..."></textarea>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Idéaux</label>
+                <textarea id="ideals" class="notes-area" style="min-height:40px" placeholder="Ce en quoi vous croyez..."></textarea>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Liens</label>
+                <textarea id="bonds" class="notes-area" style="min-height:40px" placeholder="Vos connexions et engagements..."></textarea>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Défauts</label>
+                <textarea id="flaws" class="notes-area" style="min-height:40px" placeholder="Vos faiblesses et vices..."></textarea>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end col-center -->
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-right">
+
+          <!-- RESOURCES -->
+          <div class="panel" data-tab="tab-traits">
+            <div class="panel-header">
+              <span class="panel-title">⚡ Ressources</span>
+              <button class="panel-add-btn" onclick="DND.addResource()" title="Ajouter ressource">+</button>
+            </div>
+            <div class="panel-body" style="padding:0.7rem">
+              <div style="font-size:0.65rem;color:var(--ink-faded);margin-bottom:0.5rem;font-style:italic">Cliquer sur un point pour l'utiliser. Long/court repos pour recharger.</div>
+              <div id="resources-list"></div>
+            </div>
+          </div>
+
+          <!-- FEATURES & TRAITS -->
+          <div class="panel" data-tab="tab-traits">
+            <div class="panel-header">
+              <span class="panel-title">📋 Capacités &amp; Traits</span>
+              <button class="panel-add-btn" onclick="DND.addFeature()" title="Ajouter trait">+</button>
+            </div>
+            <div class="panel-body">
+              <div id="features-list"></div>
+            </div>
+          </div>
+
+          <!-- EQUIPMENT -->
+          <div class="panel" data-tab="tab-gear">
+            <div class="panel-header">
+              <span class="panel-title">🎒 Équipement</span>
+              <button class="panel-add-btn" onclick="DND.addListItem('equipment-list')" title="Ajouter">+</button>
+            </div>
+            <div class="panel-body">
+              <div id="equipment-list"></div>
+              <div style="margin-top:0.8rem">
+                <label class="field-label">Monnaie</label>
+                <div class="currency-grid">
+                  <div class="currency-item"><div class="currency-label">PC</div><input type="number" class="currency-input" data-field="cp" value="0" min="0"></div>
+                  <div class="currency-item"><div class="currency-label">PA</div><input type="number" class="currency-input" data-field="sp" value="0" min="0"></div>
+                  <div class="currency-item"><div class="currency-label">PE</div><input type="number" class="currency-input" data-field="ep" value="0" min="0"></div>
+                  <div class="currency-item"><div class="currency-label">PO</div><input type="number" class="currency-input" data-field="gp" value="0" min="0"></div>
+                  <div class="currency-item"><div class="currency-label">PP</div><input type="number" class="currency-input" data-field="pp" value="0" min="0"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROFICIENCIES & LANGUAGES -->
+          <div class="panel" data-tab="tab-gear">
+            <div class="panel-header">
+              <span class="panel-title">🗣️ Maîtrises &amp; Langues</span>
+            </div>
+            <div class="panel-body">
+              <div class="tag-list" id="prof-lang-tags"></div>
+              <div class="tag-input-wrap">
+                <input type="text" class="tag-input" id="prof-lang-input" placeholder="Ajouter..." onkeydown="if(event.key==='Enter')DND.addTagFromInput('prof-lang-tags','prof-lang-input')">
+                <button class="btn" style="padding:0.3rem 0.6rem;font-size:0.7rem" onclick="DND.addTagFromInput('prof-lang-tags','prof-lang-input')">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACKSTORY / NOTES -->
+          <div class="panel" data-tab="tab-perso">
+            <div class="panel-header">
+              <span class="panel-title">📖 Histoire &amp; Notes</span>
+            </div>
+            <div class="panel-body">
+              <div class="field-group">
+                <label class="field-label">Histoire du personnage</label>
+                <textarea id="backstory" class="notes-area" style="min-height:80px" placeholder="L'histoire de votre personnage..."></textarea>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Notes de jeu</label>
+                <textarea id="notes" class="notes-area" style="min-height:80px" placeholder="Notes diverses..."></textarea>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Règles personnalisées / Homebrew</label>
+                <textarea id="custom_rules" class="notes-area" style="min-height:100px" placeholder="Ajoutez ici vos règles de table, homebrew, traits de race/classe personnalisés..."></textarea>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end col-right -->
+
+      </div><!-- end sheet-grid -->
+    </main>
+
+    <!-- MOBILE TAB BAR -->
+    <nav class="mobile-tab-bar">
+      <button class="mobile-tab-btn active" data-tab-target="tab-combat" onclick="DND.showMobileTab('tab-combat')">
+        <span>⚔️</span><span>Combat</span>
+      </button>
+      <button class="mobile-tab-btn" data-tab-target="tab-stats" onclick="DND.showMobileTab('tab-stats')">
+        <span>📊</span><span>Stats</span>
+      </button>
+      <button class="mobile-tab-btn" data-tab-target="tab-spells" onclick="DND.showMobileTab('tab-spells')">
+        <span>🔮</span><span>Sorts</span>
+      </button>
+      <button class="mobile-tab-btn" data-tab-target="tab-traits" onclick="DND.showMobileTab('tab-traits')">
+        <span>⚡</span><span>Traits</span>
+      </button>
+      <button class="mobile-tab-btn" data-tab-target="tab-gear" onclick="DND.showMobileTab('tab-gear')">
+        <span>🎒</span><span>Sac</span>
+      </button>
+      <button class="mobile-tab-btn" data-tab-target="tab-perso" onclick="DND.showMobileTab('tab-perso')">
+        <span>📜</span><span>Perso</span>
+      </button>
+    </nav>
+
+  </div><!-- end sheet-body -->
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.3/Sortable.min.js"></script>
+  <!-- D&D 5e data bundles -->
+                        <script>
+const DND = {
+  // Spell slot tables
+  _SLOTS_FULL: [null, [2,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0],[4,2,0,0,0,0,0,0,0],[4,3,0,0,0,0,0,0,0],[4,3,2,0,0,0,0,0,0],[4,3,3,0,0,0,0,0,0],[4,3,3,1,0,0,0,0,0],[4,3,3,2,0,0,0,0,0],[4,3,3,3,1,0,0,0,0],[4,3,3,3,2,0,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]],
+  _SLOTS_HALF: [null,[0,0,0,0,0,0,0,0,0],[2,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0],[4,2,0,0,0,0,0,0,0],[4,2,0,0,0,0,0,0,0],[4,3,0,0,0,0,0,0,0],[4,3,0,0,0,0,0,0,0],[4,3,2,0,0,0,0,0,0],[4,3,2,0,0,0,0,0,0],[4,3,3,0,0,0,0,0,0],[4,3,3,0,0,0,0,0,0],[4,3,3,1,0,0,0,0,0],[4,3,3,1,0,0,0,0,0],[4,3,3,2,0,0,0,0,0],[4,3,3,2,0,0,0,0,0],[4,3,3,3,1,0,0,0,0],[4,3,3,3,1,0,0,0,0],[4,3,3,3,2,0,0,0,0],[4,3,3,3,2,0,0,0,0]],
+  _SLOTS_WARLOCK: [null,{s:1,l:1},{s:2,l:1},{s:2,l:2},{s:2,l:2},{s:2,l:3},{s:2,l:3},{s:2,l:4},{s:2,l:4},{s:2,l:5},{s:2,l:5},{s:3,l:5},{s:3,l:5},{s:3,l:5},{s:3,l:5},{s:3,l:5},{s:3,l:5},{s:4,l:5},{s:4,l:5},{s:4,l:5},{s:4,l:5}],
+  _SCHOOLS: ['Abjuration','Invocation','Divination','Enchantement','Évocation','Illusion','Nécromancie','Transmutation'],
+
+  getSlots(spellType, level) {
+    const lv = Math.max(1, Math.min(20, parseInt(level)||1));
+    if (spellType === 'warlock') {
+      const w = this._SLOTS_WARLOCK[lv]; if(!w) return {};
+      return { [w.l]: w.s };
+    }
+    const row = (spellType==='half' ? this._SLOTS_HALF : this._SLOTS_FULL)[lv];
+    if(!row) return {};
+    const out={};
+    row.forEach((max,i)=>{ if(max>0) out[i+1]=max; });
+    return out;
+  },
+
+  skills: [
+    {name:'Acrobaties',ability:'dex'},{name:'Arcanes',ability:'int'},
+    {name:'Athlétisme',ability:'str'},{name:'Discrétion',ability:'dex'},
+    {name:'Dressage',ability:'wis'},{name:'Escamotage',ability:'dex'},
+    {name:'Histoire',ability:'int'},{name:'Intimidation',ability:'cha'},
+    {name:'Investigation',ability:'int'},{name:'Médecine',ability:'wis'},
+    {name:'Nature',ability:'int'},{name:'Perception',ability:'wis'},
+    {name:'Perspicacité',ability:'wis'},{name:'Persuasion',ability:'cha'},
+    {name:'Religion',ability:'int'},{name:'Représentation',ability:'cha'},
+    {name:'Survie',ability:'wis'},{name:'Tromperie',ability:'cha'},
+  ],
+
+  storageKey: null,
+  _saveTimer: null,
+  _meta: null,
+  _mobileTab: 'tab-combat',
+  _isSpellcaster: false,
+
+  mod(score) { return Math.floor(((parseInt(score)||10)-10)/2); },
+  modStr(score) { const m=this.mod(score); return m>=0?'+'+m:''+m; },
+  profBonus(level) { return Math.ceil((parseInt(level)||1)/4)+1; },
+
+  _loadMeta() {
+    if(this._meta) return this._meta;
+    try { this._meta = JSON.parse(localStorage.getItem(this.storageKey)||'{}'); } catch(e){ this._meta={}; }
+    return this._meta;
+  },
+
+  initSortablePanels() {
+    if(typeof Sortable === 'undefined') return;
+    // Give each panel a stable ID based on its title text
+    document.querySelectorAll('.panel').forEach(p => {
+      if(!p.dataset.panelId) {
+        const t = p.querySelector('.panel-title')?.textContent.trim() || p.id || '';
+        p.dataset.panelId = t.toLowerCase().replace(/[^\w]/g,'_') || ('p_'+Math.random().toString(36).slice(2));
+      }
+    });
+    // Inject drag handle into every panel-header
+    document.querySelectorAll('.panel-header').forEach(h => {
+      if(!h.querySelector('.panel-drag')) {
+        const s = document.createElement('span');
+        s.className = 'panel-drag'; s.title = 'Déplacer'; s.textContent = '⠿';
+        h.prepend(s);
+      }
+    });
+    // Restore saved order first
+    this._restorePanelOrder();
+    // Init Sortable on each column
+    ['col-left','col-center','col-right'].forEach(cls => {
+      const col = document.querySelector('.'+cls);
+      if(!col) return;
+      Sortable.create(col, {
+        animation: 150,
+        handle: '.panel-drag',
+        group: 'sheet-panels',
+        ghostClass: 'sortable-ghost',
+        onEnd: () => this._savePanelOrder()
+      });
+    });
+  },
+
+  _savePanelOrder() {
+    if(!this.storageKey) return;
+    const order = {};
+    ['col-left','col-center','col-right'].forEach(cls => {
+      const col = document.querySelector('.'+cls);
+      if(col) order[cls] = [...col.querySelectorAll(':scope > .panel')].map(p => p.dataset.panelId);
+    });
+    localStorage.setItem(this.storageKey+'_panel_order', JSON.stringify(order));
+  },
+
+  _restorePanelOrder() {
+    if(!this.storageKey) return;
+    const raw = localStorage.getItem(this.storageKey+'_panel_order');
+    if(!raw) return;
+    try {
+      const order = JSON.parse(raw);
+      Object.entries(order).forEach(([cls, ids]) => {
+        const col = document.querySelector('.'+cls);
+        if(!col) return;
+        ids.forEach(id => {
+          const p = document.querySelector('.panel[data-panel-id="'+id+'"]');
+          if(p) col.appendChild(p);
+        });
+      });
+    } catch(e) {}
+  },
+
+  init() {
+    const id = new URLSearchParams(location.search).get('id');
+    const notice = document.getElementById('no-char-notice');
+    const body   = document.getElementById('sheet-body');
+    if(!id) {
+      if(notice) notice.style.display='flex';
+      return;
+    }
+    if(body) body.style.display='';
+    this.storageKey = 'dnd5e_char_'+id;
+    this.load();
+    this.bindAll();
+    this.recalcAll();
+    this.initSortablePanels();
+    // Mobile: restore last tab or default to combat
+    const savedTab = localStorage.getItem('_mtab_'+this.storageKey) || 'tab-combat';
+    this.showMobileTab(savedTab);
+    // Reapply on resize
+    window.addEventListener('resize', ()=>{
+      if(window.innerWidth > 768) {
+        // Desktop: remove inline styles, CSS grid takes over
+        document.querySelectorAll('.panel[data-tab]').forEach(el=>{
+          el.style.display = '';
+        });
+        // Spell panel: only remove inline if it's a caster (otherwise keep it hidden)
+        const sp = document.getElementById('spell-panel');
+        if(sp && !this._isSpellcaster) sp.style.display = 'none';
+      } else {
+        this.showMobileTab(this._mobileTab);
+      }
+    }, {passive:true});
+  },
+
+  save() {
+    if(!this.storageKey) return;
+    localStorage.setItem(this.storageKey, JSON.stringify(this.gatherData()));
+  },
+  autoSave() { clearTimeout(this._saveTimer); this._saveTimer=setTimeout(()=>this.save(),400); },
+
+  load() {
+    const raw = localStorage.getItem(this.storageKey);
+    if(!raw) return;
+    const data = JSON.parse(raw);
+    this._meta = data;
+    this.applyData(data);
+    document.title = 'D&D — '+(data.char_name||data._className||'Personnage');
+    this.showToast('Fiche chargée');
+  },
+
+  gatherData() {
+    const data={};
+    document.querySelectorAll('[data-field]').forEach(el=>{
+      data[el.dataset.field] = el.type==='checkbox' ? el.checked : el.value;
+    });
+    data._attacks   = this.gatherAttacks();
+    data._spells    = this.gatherSpells();
+    data._equipment = this.gatherList('equipment-list');
+    data._features  = this.gatherFeatures();
+    data._resources = this.gatherResources();
+    data._profLanguages = this.gatherTags('prof-lang-tags');
+    ['traits','ideals','bonds','flaws','notes','backstory','custom_rules'].forEach(id=>{
+      data['_'+id] = document.getElementById(id)?.value||'';
+    });
+    document.querySelectorAll('.spell-slot-dot').forEach(dot=>{
+      data['_slot_'+dot.dataset.level+'_'+dot.dataset.index] = dot.classList.contains('used');
+    });
+    document.querySelectorAll('[data-death]').forEach(cb=>{
+      data['_death_'+cb.dataset.death] = cb.checked;
+    });
+    const meta = this._loadMeta();
+    ['_id','_classId','_className','_classIcon','_spellType','_spellAbility','_hd'].forEach(k=>{
+      if(meta[k]!==undefined) data[k]=meta[k];
+    });
+    data._portrait = this._portrait || '';
+    return data;
+  },
+
+  applyData(data) {
+    document.querySelectorAll('[data-field]').forEach(el=>{
+      const v=data[el.dataset.field];
+      if(v!==undefined){ if(el.type==='checkbox') el.checked=!!v; else el.value=v; }
+    });
+    if(data._attacks)   this.restoreAttacks(data._attacks);
+    if(data._spells)    this.restoreSpells(data._spells);
+    if(data._equipment) this.restoreList('equipment-list',data._equipment);
+    if(data._features)  this.restoreFeatures(data._features);
+    if(data._resources) this.restoreResources(data._resources);
+    if(data._profLanguages) this.restoreTags('prof-lang-tags',data._profLanguages);
+    ['traits','ideals','bonds','flaws','notes','backstory','custom_rules'].forEach(id=>{
+      const el=document.getElementById(id); if(el&&data['_'+id]) el.value=data['_'+id];
+    });
+    document.querySelectorAll('[data-death]').forEach(cb=>{
+      const k='_death_'+cb.dataset.death; if(data[k]!==undefined) cb.checked=data[k];
+    });
+    if(data._classIcon){ const el=document.getElementById('header-class-icon'); if(el) el.textContent=data._classIcon; }
+    if(data._className){ const el=document.getElementById('header-class-name'); if(el) el.textContent=data._className; }
+    if(data._hd){ const el=document.getElementById('hd-display'); if(el) el.textContent='d'+data._hd; }
+    if(data.char_name){ const el=document.getElementById('header-char-name'); if(el) el.textContent=data.char_name||'—'; }
+    if(data._portrait){ this._portrait=data._portrait; const img=document.getElementById('portrait-img'); if(img){img.src=data._portrait;img.style.display='';} const ph=document.getElementById('portrait-placeholder'); if(ph) ph.style.display='none'; }
+    this._isSpellcaster = !!data._spellType;
+    if(data._spellType){
+      const sp=document.getElementById('spell-panel'); if(sp) sp.style.display='';
+      this.renderSpellSlots(data._spellType, parseInt(data.level)||1, data);
+    }
+  },
+
+  renderSpellSlots(spellType, level, savedData) {
+    const container=document.getElementById('spell-slots-grid');
+    if(!container) return;
+    const saved={};
+    container.querySelectorAll('.spell-slot-dot').forEach(dot=>{
+      saved[dot.dataset.level+'_'+dot.dataset.index]=dot.classList.contains('used');
+    });
+    container.innerHTML='';
+    const slots=this.getSlots(spellType, level);
+    Object.entries(slots).forEach(([lvl,max])=>{
+      if(!max) return;
+      const item=document.createElement('div'); item.className='spell-slot-item';
+      let dots='';
+      for(let i=0;i<max;i++){
+        const key=lvl+'_'+i;
+        const used = savedData ? !!savedData['_slot_'+key] : !!saved[key];
+        dots+=`<div class="spell-slot-dot${used?' used':''}" data-level="${lvl}" data-index="${i}" onclick="DND.toggleSlot(this)"></div>`;
+      }
+      item.innerHTML=`<div class="spell-slot-level">Niv.${lvl}</div><div class="spell-slot-dots">${dots}</div>`;
+      container.appendChild(item);
+    });
+  },
+  toggleSlot(el){ el.classList.toggle('used'); this.autoSave(); },
+
+  recalcAll() {
+    const ab={};
+    ['str','dex','con','int','wis','cha'].forEach(k=>{
+      ab[k]=parseInt(document.querySelector('[data-field="ability_'+k+'"]')?.value)||10;
+    });
+    const level=parseInt(document.querySelector('[data-field="level"]')?.value)||1;
+    const prof=this.profBonus(level);
+    const profEl=document.getElementById('prof-bonus'); if(profEl) profEl.textContent='+'+prof;
+    ['str','dex','con','int','wis','cha'].forEach(k=>{
+      const el=document.getElementById('mod_'+k); if(el) el.textContent=this.modStr(ab[k]);
+    });
+    ['str','dex','con','int','wis','cha'].forEach(k=>{
+      const cb=document.querySelector('[data-field="save_prof_'+k+'"]');
+      const el=document.getElementById('save_'+k); if(!el) return;
+      const total=this.mod(ab[k])+(cb?.checked?prof:0);
+      el.textContent=total>=0?'+'+total:''+total;
+    });
+    this.skills.forEach((sk,i)=>{
+      const cb=document.querySelector('[data-field="skill_prof_'+i+'"]');
+      const ex=document.querySelector('[data-field="skill_expert_'+i+'"]');
+      const el=document.getElementById('skill_mod_'+i); if(!el) return;
+      let total=this.mod(ab[sk.ability]);
+      if(ex?.checked) total+=prof*2; else if(cb?.checked) total+=prof;
+      el.textContent=total>=0?'+'+total:''+total;
+    });
+    const percIdx=this.skills.findIndex(s=>s.name==='Perception');
+    const percEl=document.getElementById('skill_mod_'+percIdx);
+    const passiveEl=document.getElementById('passive-perception');
+    if(passiveEl&&percEl) passiveEl.textContent=10+parseInt(percEl.textContent);
+    this.updateHPBar();
+    const meta=this._loadMeta();
+    const sp=document.getElementById('spell-panel');
+    if(sp&&sp.style.display!=='none'&&meta._spellType) this.renderSpellSlots(meta._spellType,level);
+    this.autoSave();
+  },
+
+  updateHPBar() {
+    const cur=parseInt(document.querySelector('[data-field="hp_current"]')?.value)||0;
+    const max=parseInt(document.querySelector('[data-field="hp_max"]')?.value)||1;
+    const temp=parseInt(document.querySelector('[data-field="hp_temp"]')?.value)||0;
+    const pct=Math.max(0,Math.min(100,cur/Math.max(max,1)*100));
+    const bg=pct<25?'linear-gradient(90deg,#4a0000,#8b1a1a)':pct<50?'linear-gradient(90deg,#8b1a1a,#b22222)':'linear-gradient(90deg,#8b1a1a,#cc3333)';
+    const label=cur+'/'+max+(temp?' (+'+temp+')':'');
+    // Main HP bar
+    const bar=document.getElementById('hp-bar-fill'); if(bar){ bar.style.width=pct+'%'; bar.style.background=bg; }
+    const txt=document.getElementById('hp-bar-text'); if(txt) txt.textContent=label;
+    // Mobile HP widget (sync values only when not actively focused)
+    const mobBar=document.getElementById('mob-hp-fill'); if(mobBar){ mobBar.style.width=pct+'%'; mobBar.style.background=bg; }
+    const mobTxt=document.getElementById('mob-hp-text'); if(mobTxt) mobTxt.textContent=label;
+    const mobCur=document.getElementById('mob-hp-cur'); if(mobCur&&document.activeElement!==mobCur) mobCur.value=cur||'';
+    const mobMax=document.getElementById('mob-hp-max'); if(mobMax&&document.activeElement!==mobMax) mobMax.value=max||'';
+    const mobTmp=document.getElementById('mob-hp-tmp'); if(mobTmp&&document.activeElement!==mobTmp) mobTmp.value=temp||'';
+  },
+
+  bindAll() {
+    document.querySelectorAll('[data-field^="ability_"],[data-field="level"]').forEach(el=>{
+      el.addEventListener('input',()=>this.recalcAll());
+    });
+    document.querySelectorAll('[data-field^="save_prof_"],[data-field^="skill_prof_"],[data-field^="skill_expert_"]').forEach(el=>{
+      el.addEventListener('change',()=>this.recalcAll());
+    });
+    document.querySelectorAll('[data-field^="hp_"]').forEach(el=>{
+      el.addEventListener('input',()=>{ this.updateHPBar(); this.autoSave(); });
+    });
+    document.querySelectorAll('[data-field]').forEach(el=>{
+      el.addEventListener(el.type==='checkbox'?'change':'input',()=>this.autoSave());
+    });
+    const charNameEl=document.querySelector('[data-field="char_name"]');
+    if(charNameEl) charNameEl.addEventListener('input',()=>{
+      const hdr=document.getElementById('header-char-name'); if(hdr) hdr.textContent=charNameEl.value||'—';
+    });
+    ['traits','ideals','bonds','flaws','notes','backstory'].forEach(id=>{
+      const el=document.getElementById(id); if(el) el.addEventListener('input',()=>this.autoSave());
+    });
+    document.querySelectorAll('[data-death]').forEach(cb=>{
+      cb.addEventListener('change',()=>this.autoSave());
+    });
+    // Mobile HP widget — syncs to main hp_* inputs bidirectionally
+    [['mob-hp-cur','hp_current'],['mob-hp-max','hp_max'],['mob-hp-tmp','hp_temp']].forEach(([mobId,field])=>{
+      const mobEl=document.getElementById(mobId);
+      if(!mobEl) return;
+      mobEl.addEventListener('input',()=>{
+        const mainEl=document.querySelector(`[data-field="${field}"]`);
+        if(mainEl) mainEl.value=mobEl.value;
+        this.updateHPBar();
+        this.autoSave();
+      });
+    });
+  },
+
+  // ---- MOBILE TABS ----
+  showMobileTab(name) {
+    this._mobileTab = name;
+    document.querySelectorAll('.mobile-tab-btn').forEach(btn=>{
+      btn.classList.toggle('active', btn.dataset.tabTarget === name);
+    });
+    if(this.storageKey) localStorage.setItem('_mtab_'+this.storageKey, name);
+    if(window.innerWidth > 768) return;
+    // Must use 'block' not '' — CSS media rule hides [data-tab] panels, inline '' won't override it
+    document.querySelectorAll('.panel[data-tab]').forEach(el=>{
+      const isActive = el.dataset.tab === name;
+      if(el.id === 'spell-panel') {
+        el.style.display = (isActive && this._isSpellcaster) ? 'block' : 'none';
+      } else {
+        el.style.display = isActive ? 'block' : 'none';
+      }
+    });
+  },
+
+  // ---- RESTS ----
+  longRest() {
+    if(!confirm('🌙 Effectuer un long repos ?\nPV restaurés au max, emplacements et ressources rechargés.')) return;
+    const maxEl=document.querySelector('[data-field="hp_max"]');
+    const curEl=document.querySelector('[data-field="hp_current"]');
+    if(maxEl&&curEl){ curEl.value=maxEl.value; this.updateHPBar(); }
+    document.querySelectorAll('.spell-slot-dot.used').forEach(d=>d.classList.remove('used'));
+    document.querySelectorAll('[data-death]').forEach(cb=>cb.checked=false);
+    // Reset ALL resources (long + short recharge)
+    document.querySelectorAll('.resource-item').forEach(item=>{
+      const recharge=item.querySelector('.resource-recharge')?.value;
+      if(recharge==='long'||recharge==='short'){
+        item.querySelectorAll('.resource-dot').forEach(d=>d.classList.remove('spent'));
+      }
+    });
+    this.save();
+    this.showToast('🌙 Long repos effectué !');
+  },
+
+  shortRest() {
+    if(!confirm('☀️ Effectuer un court repos ?\nLes ressources à court repos sont rechargées.')) return;
+    // Reset only short-rest resources
+    document.querySelectorAll('.resource-item').forEach(item=>{
+      const recharge=item.querySelector('.resource-recharge')?.value;
+      if(recharge==='short'){
+        item.querySelectorAll('.resource-dot').forEach(d=>d.classList.remove('spent'));
+      }
+    });
+    this.save();
+    this.showToast('☀️ Court repos effectué !');
+  },
+
+  // ---- ATTACKS ----
+  gatherAttacks() {
+    return [...document.querySelectorAll('#attacks-body tr')].map(tr=>{
+      const inp=tr.querySelectorAll('input');
+      return {name:inp[0]?.value||'',bonus:inp[1]?.value||'',damage:inp[2]?.value||'',type:inp[3]?.value||''};
+    });
+  },
+  restoreAttacks(list) {
+    const body=document.getElementById('attacks-body'); if(!body) return;
+    body.innerHTML=''; list.forEach(a=>this.addAttackRow(a));
+  },
+  addAttackRow(data={}) {
+    const body=document.getElementById('attacks-body'); if(!body) return;
+    const tr=document.createElement('tr'); tr.className='attack-row';
+    tr.innerHTML=`<td><input type="text" placeholder="Nom" value="${data.name||''}"></td><td><input type="text" placeholder="+0" value="${data.bonus||''}" style="width:48px;text-align:center"></td><td><input type="text" placeholder="1d8+3" value="${data.damage||''}"></td><td><input type="text" placeholder="Tranchant" value="${data.type||''}"></td><td><button class="attack-delete" onclick="this.closest('tr').remove();DND.autoSave()">×</button></td>`;
+    tr.querySelectorAll('input').forEach(inp=>inp.addEventListener('input',()=>this.autoSave()));
+    body.appendChild(tr);
+  },
+
+  // ---- SPELLS ----
+  gatherSpells() {
+    return [...document.querySelectorAll('#spell-list .spell-item')].map(item=>{
+      const selects=item.querySelectorAll('select');
+      const texts=item.querySelectorAll('input[type="text"]');
+      const cbs=item.querySelectorAll('input[type="checkbox"]');
+      return {
+        prepared: cbs[0]?.checked||false,
+        level:    parseInt(selects[0]?.value)||0,
+        school:   selects[1]?.value||'',
+        name:     texts[0]?.value||'',
+        range:    texts[1]?.value||'',
+        duration: texts[2]?.value||'',
+        v: cbs[1]?.checked||false,
+        s: cbs[2]?.checked||false,
+        m: cbs[3]?.checked||false,
+        summary:  item.querySelector('.spell-summary')?.value||''
+      };
+    });
+  },
+  restoreSpells(data) {
+    const container=document.getElementById('spell-list'); if(!container) return;
+    container.innerHTML='';
+    const list=Array.isArray(data)?data:Object.entries(data).flatMap(([lvl,spells])=>spells.map(s=>({...s,level:parseInt(lvl)})));
+    list.forEach(s=>this.addSpellItem(s));
+  },
+  addSpell() { this.addSpellItem({}); this.autoSave(); },
+  addSpellItem(data={}) {
+    const container=document.getElementById('spell-list'); if(!container) return;
+    const div=document.createElement('div'); div.className='spell-item';
+    const schoolOpts=this._SCHOOLS.map(s=>`<option value="${s}" ${data.school===s?'selected':''}>${s}</option>`).join('');
+    const levelOpts=[0,1,2,3,4,5,6,7,8,9].map(l=>`<option value="${l}" ${data.level==l?'selected':''}>${l===0?'Tour':l}</option>`).join('');
+    div.innerHTML=`
+      <div class="spell-item-actions">
+        <button class="spell-expand-btn" onclick="this.closest('.spell-item').classList.toggle('expanded')" title="Résumé">▾</button>
+        <button class="spell-delete" onclick="this.closest('.spell-item').remove();DND.autoSave()">×</button>
+      </div>
+      <div class="spell-item-row">
+        <input type="checkbox" class="spell-prepared-cb" title="Préparé" ${data.prepared?'checked':''}>
+        <select class="spell-level-select" title="Niveau">${levelOpts}</select>
+        <select class="spell-school-select" title="École de magie"><option value="">—</option>${schoolOpts}</select>
+        <input type="text" class="spell-name-input" placeholder="Nom du sort" value="${data.name||''}">
+        <input type="text" class="spell-range-input" placeholder="Portée" value="${data.range||''}">
+        <input type="text" class="spell-duration-input" placeholder="Durée" value="${data.duration||''}">
+        <label class="spell-component"><input type="checkbox" ${data.v?'checked':''}>V</label>
+        <label class="spell-component"><input type="checkbox" ${data.s?'checked':''}>S</label>
+        <label class="spell-component"><input type="checkbox" ${data.m?'checked':''}>M</label>
+      </div>
+      <textarea class="spell-summary" placeholder="Résumé du sort, effets, conditions…">${data.summary||''}</textarea>`;
+    div.querySelectorAll('input[type="text"],select').forEach(el=>el.addEventListener('input',()=>this.autoSave()));
+    div.querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.addEventListener('change',()=>this.autoSave()));
+    div.querySelector('.spell-summary').addEventListener('input',()=>this.autoSave());
+    container.appendChild(div);
+  },
+
+  sortSpells(by) {
+    const container=document.getElementById('spell-list'); if(!container) return;
+    const items=[...container.querySelectorAll('.spell-item')];
+    items.sort((a,b)=>{
+      if(by==='level') return parseInt(a.querySelector('.spell-level-select').value)-parseInt(b.querySelector('.spell-level-select').value);
+      if(by==='school'){
+        const sa=a.querySelector('.spell-school-select').value||'zzz';
+        const sb=b.querySelector('.spell-school-select').value||'zzz';
+        return sa.localeCompare(sb,'fr');
+      }
+      return 0;
+    });
+    items.forEach(item=>container.appendChild(item));
+    this.autoSave();
+  },
+
+  // ---- RESOURCES ----
+  addResource() { this.addResourceItem({}); },
+  addResourceItem(data={}) {
+    const container=document.getElementById('resources-list'); if(!container) return;
+    const max=parseInt(data.max)||3;
+    const div=document.createElement('div'); div.className='resource-item';
+    div.innerHTML=`
+      <div class="resource-header-row">
+        <input type="text" class="resource-name" placeholder="Rage, Ki, Inspiration bardique…" value="${data.name||''}">
+        <select class="resource-recharge">
+          <option value="long" ${!data.recharge||data.recharge==='long'?'selected':''}>⟳ Long</option>
+          <option value="short" ${data.recharge==='short'?'selected':''}>⟳ Court</option>
+          <option value="manual" ${data.recharge==='manual'?'selected':''}>Manuel</option>
+        </select>
+        <label class="resource-max-label">Max<input type="number" class="resource-max-input" value="${max}" min="0" max="30"></label>
+        <button class="equipment-delete" style="display:flex" onclick="this.closest('.resource-item').remove();DND.autoSave()">×</button>
+      </div>
+      <div class="resource-dots-row"></div>`;
+    this._renderResourceDots(div, max, data.dots);
+    div.querySelector('.resource-max-input').addEventListener('input',e=>{
+      this._renderResourceDots(div, parseInt(e.target.value)||0, null);
+      this.autoSave();
+    });
+    div.querySelector('.resource-name').addEventListener('input',()=>this.autoSave());
+    div.querySelector('.resource-recharge').addEventListener('change',()=>this.autoSave());
+    container.appendChild(div);
+  },
+  _renderResourceDots(itemEl, max, savedStates) {
+    const row=itemEl.querySelector('.resource-dots-row'); if(!row) return;
+    row.innerHTML='';
+    for(let i=0;i<Math.min(max,30);i++){
+      const dot=document.createElement('div');
+      dot.className='resource-dot'+(savedStates&&savedStates[i]?' spent':'');
+      dot.onclick=()=>{ dot.classList.toggle('spent'); this.autoSave(); };
+      row.appendChild(dot);
+    }
+  },
+  gatherResources() {
+    return [...document.querySelectorAll('#resources-list .resource-item')].map(item=>({
+      name:     item.querySelector('.resource-name')?.value||'',
+      max:      parseInt(item.querySelector('.resource-max-input')?.value)||0,
+      recharge: item.querySelector('.resource-recharge')?.value||'long',
+      dots:     [...item.querySelectorAll('.resource-dot')].map(d=>d.classList.contains('spent'))
+    }));
+  },
+  restoreResources(list) {
+    const c=document.getElementById('resources-list'); if(!c) return;
+    c.innerHTML='';
+    list.forEach(r=>this.addResourceItem(r));
+  },
+
+  // ---- FEATURES ----
+  gatherFeatures() {
+    return [...document.querySelectorAll('#features-list .feature-edit')].map(item=>({
+      name:item.querySelector('input[type="text"]')?.value||'',
+      desc:item.querySelector('textarea')?.value||''
+    }));
+  },
+  restoreFeatures(list) {
+    const container=document.getElementById('features-list'); if(!container) return;
+    container.innerHTML='';
+    list.forEach(f=>this.addFeatureItem(typeof f==='string'?{name:f,desc:''}:f));
+  },
+  addFeature() { this.addFeatureItem({}); this.autoSave(); },
+  addFeatureItem(data={}) {
+    const container=document.getElementById('features-list'); if(!container) return;
+    const div=document.createElement('div'); div.className='feature-edit';
+    div.style.cssText='display:flex;gap:0.5rem;align-items:flex-start;margin-bottom:0.5rem';
+    div.innerHTML=`<div style="flex:1;display:flex;flex-direction:column;gap:0.3rem"><input type="text" class="field-input" placeholder="Nom du trait" value="${data.name||''}"><textarea class="notes-area" placeholder="Description…" style="min-height:38px;font-size:0.85rem">${data.desc||''}</textarea></div><button class="equipment-delete" onclick="this.closest('.feature-edit').remove();DND.autoSave()">×</button>`;
+    div.querySelectorAll('input,textarea').forEach(el=>el.addEventListener('input',()=>this.autoSave()));
+    container.appendChild(div);
+  },
+
+  // ---- EQUIPMENT ----
+  gatherList(containerId) {
+    return [...document.querySelectorAll('#'+containerId+' .equipment-item input')].map(inp=>inp.value).filter(v=>v.trim());
+  },
+  restoreList(containerId,items) {
+    const c=document.getElementById(containerId); if(!c) return;
+    c.innerHTML=''; items.forEach(v=>this.addListItem(containerId,v));
+  },
+  addListItem(containerId,value='') {
+    const c=document.getElementById(containerId); if(!c) return;
+    const div=document.createElement('div'); div.className='equipment-item';
+    div.innerHTML=`<input type="text" placeholder="…" value="${value}"><button class="equipment-delete" onclick="this.parentElement.remove();DND.autoSave()">×</button>`;
+    div.querySelector('input').addEventListener('input',()=>this.autoSave());
+    c.appendChild(div); this.autoSave();
+  },
+
+  // ---- TAGS ----
+  gatherTags(id) {
+    return [...document.querySelectorAll('#'+id+' .tag')].map(t=>t.childNodes[0]?.textContent?.trim()).filter(Boolean);
+  },
+  restoreTags(id,tags) {
+    const c=document.getElementById(id); if(!c) return;
+    c.innerHTML=''; tags.forEach(t=>this.addTag(id,t));
+  },
+  addTag(id,value) {
+    if(!value?.trim()) return;
+    const c=document.getElementById(id); if(!c) return;
+    const span=document.createElement('span'); span.className='tag';
+    span.innerHTML=value+'<span class="tag-delete" onclick="this.parentElement.remove();DND.autoSave()">×</span>';
+    c.appendChild(span); this.autoSave();
+  },
+  addTagFromInput(containerId,inputId) {
+    const input=document.getElementById(inputId); if(!input?.value?.trim()) return;
+    this.addTag(containerId,input.value.trim()); input.value='';
+  },
+
+  // ---- PORTRAIT ----
+  uploadPortrait() {
+    const input=document.createElement('input'); input.type='file'; input.accept='image/*';
+    input.onchange=(e)=>{
+      const file=e.target.files[0]; if(!file) return;
+      const reader=new FileReader();
+      reader.onload=(ev)=>{
+        this._portrait=ev.target.result;
+        const img=document.getElementById('portrait-img');
+        if(img){img.src=ev.target.result;img.style.display='';}
+        const ph=document.getElementById('portrait-placeholder'); if(ph) ph.style.display='none';
+        this.autoSave();
+        this.showToast('Portrait mis à jour');
+      };
+      reader.readAsDataURL(file);
+    };
+    input.click();
+  },
+
+  // ---- PDF EXPORT ----
+  exportPDF() {
+    const d=this.gatherData();
+    const win=window.open('','_blank');
+    win.document.write(this._buildPDFHTML(d));
+    win.document.close();
+    setTimeout(()=>win.print(),600);
+  },
+
+  _buildPDFHTML(d) {
+    const esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    const mod=s=>{const m=Math.floor(((parseInt(s)||10)-10)/2);return(m>=0?'+':'')+m;};
+    const pb=this.profBonus(d.level||1);
+    const abilities=[
+      {k:'str',l:'FOR'},{k:'dex',l:'DEX'},{k:'con',l:'CON'},
+      {k:'int',l:'INT'},{k:'wis',l:'SAG'},{k:'cha',l:'CHA'},
+    ];
+    const skillMap=[
+      {n:'Acrobaties',a:'dex'},{n:'Arcanes',a:'int'},{n:'Athlétisme',a:'str'},
+      {n:'Discrétion',a:'dex'},{n:'Dressage',a:'wis'},{n:'Escamotage',a:'dex'},
+      {n:'Histoire',a:'int'},{n:'Intimidation',a:'cha'},{n:'Investigation',a:'int'},
+      {n:'Médecine',a:'wis'},{n:'Nature',a:'int'},{n:'Perception',a:'wis'},
+      {n:'Perspicacité',a:'wis'},{n:'Persuasion',a:'cha'},{n:'Religion',a:'int'},
+      {n:'Représentation',a:'cha'},{n:'Survie',a:'wis'},{n:'Tromperie',a:'cha'},
+    ];
+    const abilityMap={str:'ability_str',dex:'ability_dex',con:'ability_con',int:'ability_int',wis:'ability_wis',cha:'ability_cha'};
+    const saveMap={str:'save_prof_str',dex:'save_prof_dex',con:'save_prof_con',int:'save_prof_int',wis:'save_prof_wis',cha:'save_prof_cha'};
+
+    // Build abilities HTML
+    const abilitiesHTML=abilities.map(({k,l})=>{
+      const score=parseInt(d[abilityMap[k]])||10;
+      const m=mod(score);
+      return `<div style="text-align:center;border:1.5px solid #8b1a1a;border-radius:6px;padding:4px 8px;min-width:60px;background:#fff8ee">
+        <div style="font-size:9px;font-weight:700;letter-spacing:1px;color:#8b1a1a;font-family:'Cinzel',serif">${l}</div>
+        <div style="font-size:18px;font-weight:700;color:#2c1810;font-family:'Cinzel',serif">${score}</div>
+        <div style="font-size:13px;color:#5c3a2e;background:#f0d9a8;border-radius:10px;padding:1px 6px;margin-top:2px;font-family:'Cinzel',serif">${m}</div>
+      </div>`;
+    }).join('');
+
+    // Saves HTML
+    const savesHTML=abilities.map(({k,l})=>{
+      const score=parseInt(d[abilityMap[k]])||10;
+      const prof=d[saveMap[k]]; const val=mod(score)+(prof?pb:0);
+      return `<div style="display:flex;align-items:center;gap:5px;font-size:11px;padding:1px 0">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid #8b1a1a;background:${prof?'#8b1a1a':'transparent'};flex-shrink:0"></span>
+        <span style="color:#5c3a2e;min-width:30px;font-family:'Cinzel',serif;font-size:10px">${l}</span>
+        <span style="font-weight:700;color:#2c1810">${val>=0?'+'+val:val}</span>
+      </div>`;
+    }).join('');
+
+    // Skills HTML
+    const passivePerc=10+(parseInt(mod(parseInt(d.ability_wis)||10)))+(d['skill_prof_11']?pb:0)+(d['skill_expert_11']?pb:0);
+    const skillsHTML=skillMap.map((sk,i)=>{
+      const score=parseInt(d[abilityMap[sk.a]])||10;
+      const prof=d[`skill_prof_${i}`]; const exp=d[`skill_expert_${i}`];
+      const bonus=Math.floor(((score-10)/2))+(exp?pb*2:(prof?pb:0));
+      return `<div style="display:flex;align-items:center;gap:4px;font-size:10px;padding:1px 0;border-bottom:1px dotted #d4c089">
+        <span style="display:inline-block;width:9px;height:9px;border-radius:${exp?'2px':'50%'};border:1.5px solid #8b1a1a;background:${prof||exp?'#8b1a1a':'transparent'};flex-shrink:0"></span>
+        <span style="flex:1;color:#2c1810">${sk.n}</span>
+        <span style="color:#5c3a2e;font-size:9px;min-width:24px;text-align:right;font-style:italic">${sk.a.toUpperCase()}</span>
+        <span style="font-weight:700;color:#2c1810;min-width:22px;text-align:right">${bonus>=0?'+'+bonus:bonus}</span>
+      </div>`;
+    }).join('');
+
+    // Attacks HTML
+    const attacksHTML=(d._attacks||[]).length ? `
+      <section style="margin-top:12px">
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">⚔ ATTAQUES</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:10px">
+          <thead><tr style="background:#8b1a1a;color:#f4e4c1">
+            <th style="padding:3px 5px;text-align:left;font-family:'Cinzel',serif;font-weight:600">Nom</th>
+            <th style="padding:3px 5px;text-align:center;font-family:'Cinzel',serif;font-weight:600">Bonus</th>
+            <th style="padding:3px 5px;text-align:center;font-family:'Cinzel',serif;font-weight:600">Dégâts</th>
+            <th style="padding:3px 5px;text-align:left;font-family:'Cinzel',serif;font-weight:600">Type</th>
+          </tr></thead>
+          <tbody>${(d._attacks||[]).map((a,i)=>`<tr style="background:${i%2?'#fdf5e6':'#fff8ee'}">
+            <td style="padding:3px 5px;font-weight:600">${esc(a.name||'—')}</td>
+            <td style="padding:3px 5px;text-align:center">${esc(a.bonus||'—')}</td>
+            <td style="padding:3px 5px;text-align:center">${esc(a.damage||'—')}</td>
+            <td style="padding:3px 5px">${esc(a.type||'—')}</td>
+          </tr>`).join('')}</tbody>
+        </table>
+      </section>` : '';
+
+    // Features HTML
+    const featuresHTML=(d._features||[]).length ? `
+      <section style="margin-top:0">
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:6px;letter-spacing:1px">📋 CAPACITÉS &amp; TRAITS</h3>
+        ${(d._features||[]).map(f=>`<div style="margin-bottom:6px;font-size:10px">
+          <strong style="color:#2c1810;font-family:'Cinzel',serif">${esc(f.name||'')}</strong>${f.uses?`<span style="color:#8b1a1a;font-size:9px"> (${esc(f.used||0)}/${esc(f.uses)} ${esc(f.recharge||'')})</span>`:''}
+          ${f.desc?`<div style="color:#5c3a2e;margin-top:1px;line-height:1.4">${esc(f.desc)}</div>`:''}
+        </div>`).join('')}
+      </section>` : '';
+
+    // Equipment HTML
+    const equipHTML=(d._equipment||[]).length ? `
+      <section>
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">🎒 ÉQUIPEMENT</h3>
+        ${(d._equipment||[]).map(e=>`<div style="font-size:10px;padding:1px 0;border-bottom:1px dotted #d4c089">${esc(e.text||e)}</div>`).join('')}
+        <div style="margin-top:5px;font-size:10px;display:flex;gap:8px;flex-wrap:wrap">
+          ${['pp','gp','ep','sp','cp'].map(c=>`<span><strong style="color:#8b1a1a">${c.toUpperCase()}:</strong> ${esc(d[c]||0)}</span>`).join('')}
+        </div>
+      </section>` : '';
+
+    // Personality HTML
+    const persoHTML=`
+      <section>
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">📜 PERSONNALITÉ</h3>
+        ${d._traits?`<div style="font-size:10px;margin-bottom:4px"><strong style="color:#5c3a2e">Traits:</strong> ${esc(d._traits)}</div>`:''}
+        ${d._ideals?`<div style="font-size:10px;margin-bottom:4px"><strong style="color:#5c3a2e">Idéaux:</strong> ${esc(d._ideals)}</div>`:''}
+        ${d._bonds?`<div style="font-size:10px;margin-bottom:4px"><strong style="color:#5c3a2e">Liens:</strong> ${esc(d._bonds)}</div>`:''}
+        ${d._flaws?`<div style="font-size:10px;margin-bottom:4px"><strong style="color:#5c3a2e">Défauts:</strong> ${esc(d._flaws)}</div>`:''}
+      </section>`;
+
+    // Prof & languages
+    const profHTML=(d._profLanguages||[]).length?`
+      <section style="margin-top:8px">
+        <h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">🗣 MAÎTRISES &amp; LANGUES</h3>
+        <div style="font-size:10px;line-height:1.8">${(d._profLanguages||[]).map(t=>`<span style="background:#f0d9a8;border:1px solid #c9a84c;border-radius:3px;padding:1px 5px;margin:2px;display:inline-block">${esc(t)}</span>`).join(' ')}</div>
+      </section>`:'';
+
+    // Backstory
+    const backstoryHTML=(d._backstory||d._notes)?`
+      <div style="page-break-before:auto;margin-top:12px">
+        ${d._backstory?`<section><h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">📖 HISTOIRE</h3><p style="font-size:10px;line-height:1.6;color:#2c1810">${esc(d._backstory)}</p></section>`:''}
+        ${d._notes?`<section style="margin-top:8px"><h3 style="font-family:'Cinzel',serif;font-size:11px;color:#8b1a1a;border-bottom:2px solid #8b1a1a;padding-bottom:2px;margin-bottom:5px;letter-spacing:1px">📝 NOTES</h3><p style="font-size:10px;line-height:1.6;color:#2c1810">${esc(d._notes)}</p></section>`:''}
+      </div>`:'';
+
+    // Spells HTML
+    const spellsHTML=d._spellType&&(d._spells||[]).length?`
+      <div style="page-break-before:always">
+        <h2 style="font-family:'Cinzel',serif;font-size:13px;color:#8b1a1a;border-bottom:3px solid #8b1a1a;padding-bottom:4px;margin-bottom:10px;letter-spacing:2px">🔮 SORTS</h2>
+        <div style="font-size:10px;margin-bottom:8px">
+          DD: <strong>${esc(d.spell_dc||10)}</strong> &nbsp;|&nbsp; Bonus attaque: <strong>${esc(d.spell_attack||0)}</strong>
+        </div>
+        ${[0,1,2,3,4,5,6,7,8,9].map(lvl=>{
+          const lvlSpells=(d._spells||[]).filter(s=>(parseInt(s.level)||0)===lvl);
+          if(!lvlSpells.length) return '';
+          return `<div style="margin-bottom:8px">
+            <div style="font-family:'Cinzel',serif;font-size:10px;color:#8b1a1a;background:#f0d9a8;padding:2px 6px;border-left:3px solid #8b1a1a;margin-bottom:3px">
+              ${lvl===0?'Tours de magie':`Niveau ${lvl}`}
+            </div>
+            <table style="width:100%;border-collapse:collapse;font-size:9px">
+              <thead><tr style="background:#e8d5a3">
+                <th style="padding:2px 4px;text-align:left">Nom</th>
+                <th style="padding:2px 4px">École</th>
+                <th style="padding:2px 4px">Portée</th>
+                <th style="padding:2px 4px">Durée</th>
+                <th style="padding:2px 4px">Comp.</th>
+              </tr></thead>
+              <tbody>${lvlSpells.map((s,i)=>`<tr style="background:${i%2?'#fdf5e6':'#fff8ee'}">
+                <td style="padding:2px 4px;font-weight:${s.prepared?'700':'400'};color:${s.prepared?'#2c1810':'#5c3a2e'}">${esc(s.name)}${s.concentration?' ⟳':''}${s.ritual?' ℟':''}</td>
+                <td style="padding:2px 4px;text-align:center;color:#5c3a2e">${esc(s.school||'—')}</td>
+                <td style="padding:2px 4px;text-align:center">${esc(s.range||'—')}</td>
+                <td style="padding:2px 4px;text-align:center">${esc(s.duration||'—')}</td>
+                <td style="padding:2px 4px;text-align:center">${esc((s.components||[]).join(', '))}</td>
+              </tr>`).join('')}</tbody>
+            </table>
+          </div>`;
+        }).join('')}
+      </div>`:'';
+
+    const portraitHTML=d._portrait?`<img src="${d._portrait}" style="width:90px;height:90px;object-fit:cover;border-radius:6px;border:2px solid #8b1a1a;float:right;margin-left:10px">`:'';
+
+    return `<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+      <title>${esc(d.char_name||'Personnage')} — Fiche D&amp;D 5e</title>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+      <style>
+        @page { size: A4 portrait; margin: 1.2cm 1.5cm; }
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Crimson Text',Georgia,serif;background:#f4e4c1;color:#2c1810;font-size:11px;line-height:1.5}
+        .page{background:#f4e4c1;min-height:100%}
+        h1{font-family:'Cinzel',serif;font-size:22px;color:#2c1810;letter-spacing:2px;line-height:1.1}
+        .ornate-border{border:3px double #8b1a1a;padding:10px 14px;margin-bottom:10px;background:#fffdf5;position:relative}
+        .ornate-border::before{content:'✦';position:absolute;top:-8px;left:10px;background:#f4e4c1;padding:0 4px;color:#8b1a1a;font-size:12px}
+        .ornate-border::after{content:'✦';position:absolute;top:-8px;right:10px;background:#f4e4c1;padding:0 4px;color:#8b1a1a;font-size:12px}
+        .divider{border:none;border-top:2px solid #8b1a1a;margin:8px 0}
+        .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px}
+        .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+        .box{background:#fffdf5;border:1px solid #c9a84c;border-radius:4px;padding:6px 8px}
+        .box-title{font-family:'Cinzel',serif;font-size:9px;color:#8b1a1a;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #d4c089;margin-bottom:5px;padding-bottom:2px}
+        .stat-row{display:flex;justify-content:space-between;font-size:10px;padding:1px 0;border-bottom:1px dotted #d4c089}
+        .stat-row .val{font-weight:700;color:#2c1810}
+        .abilities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+        @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+      </style></head>
+    <body><div class="page">
+
+      <!-- HEADER -->
+      <div class="ornate-border" style="margin-bottom:10px">
+        ${portraitHTML}
+        <h1>${esc(d.char_name||'Personnage Sans Nom')}</h1>
+        <div style="font-family:'Cinzel',serif;font-size:11px;color:#5c3a2e;margin-top:4px">
+          ${d._className?`<strong>${esc(d._className)}</strong>`:''}${d.subclass?` — ${esc(d.subclass)}`:''} ${d.level?`Niveau <strong>${esc(d.level)}</strong>`:''}
+          ${d.race?` &nbsp;|&nbsp; Race: <strong>${esc(d.race)}</strong>`:''}
+          ${d.background?` &nbsp;|&nbsp; Fond.: <strong>${esc(d.background)}</strong>`:''}
+        </div>
+        <div style="font-size:10px;color:#8b6f5e;margin-top:2px">
+          ${d.alignment?`Alignement: ${esc(d.alignment)} &nbsp;|&nbsp; `:''}
+          Niveau: ${esc(d.level||1)} &nbsp;|&nbsp; XP: ${esc(d.xp||0)} &nbsp;|&nbsp; Maîtrise: +${pb}
+        </div>
+        <div style="clear:both"></div>
+      </div>
+
+      <!-- ROW 1: Abilities | Combat | Skills -->
+      <div class="grid-3">
+
+        <!-- Abilities + Saves -->
+        <div>
+          <div class="box" style="margin-bottom:6px">
+            <div class="box-title">Caractéristiques</div>
+            <div class="abilities-grid">${abilitiesHTML}</div>
+          </div>
+          <div class="box">
+            <div class="box-title">Jets de sauvegarde</div>
+            ${savesHTML}
+          </div>
+        </div>
+
+        <!-- Combat -->
+        <div>
+          <div class="box" style="margin-bottom:6px">
+            <div class="box-title">Combat</div>
+            <div class="stat-row"><span>Classe d'armure</span><span class="val">${esc(d.ac||10)}</span></div>
+            <div class="stat-row"><span>Points de vie</span><span class="val">${esc(d.hp_current||0)}/${esc(d.hp_max||0)}</span></div>
+            ${d.hp_temp&&parseInt(d.hp_temp)?`<div class="stat-row"><span>PV temporaires</span><span class="val">${esc(d.hp_temp)}</span></div>`:''}
+            <div class="stat-row"><span>Vitesse</span><span class="val">${esc(d.speed||'9m')}</span></div>
+            <div class="stat-row"><span>Initiative</span><span class="val">${esc(d.initiative||0)}</span></div>
+            <div class="stat-row"><span>Dés de vie</span><span class="val">${esc(d.hit_dice_remaining||d.hit_dice_total||'—')}</span></div>
+          </div>
+          <div class="box">
+            <div class="box-title">Mort &amp; Agonie</div>
+            <div style="font-size:10px;margin-bottom:3px">Réussites:
+              ${[1,2,3].map(i=>`<span style="display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid #2d5a27;background:${d['_death_s'+i]?'#2d5a27':'transparent'};margin:0 1px"></span>`).join('')}
+            </div>
+            <div style="font-size:10px">Échecs:
+              ${[1,2,3].map(i=>`<span style="display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid #8b1a1a;background:${d['_death_f'+i]?'#8b1a1a':'transparent'};margin:0 1px"></span>`).join('')}
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="box">
+          <div class="box-title">Compétences</div>
+          ${skillsHTML}
+          <div style="margin-top:4px;padding-top:3px;border-top:1px solid #c9a84c;font-size:10px;display:flex;justify-content:space-between">
+            <span style="color:#5c3a2e">Perception passive</span>
+            <strong>${passivePerc}</strong>
+          </div>
+        </div>
+
+      </div><!-- end row 1 -->
+
+      ${attacksHTML}
+
+      <!-- PAGE 2 content -->
+      <div style="page-break-before:auto;margin-top:10px">
+        <div class="grid-2">
+          <div>${featuresHTML}</div>
+          <div>
+            ${equipHTML}
+            ${profHTML}
+          </div>
+        </div>
+        ${(d._traits||d._ideals||d._bonds||d._flaws)?`<hr class="divider">${persoHTML}`:''}
+        ${backstoryHTML}
+      </div>
+
+      ${spellsHTML}
+
+    </div></body></html>`;
+  },
+
+  // ---- EXPORT / IMPORT / RESET ----
+  exportJSON() {
+    const data=this.gatherData();
+    const name=(data.char_name||data._className||'personnage').replace(/\s+/g,'_');
+    const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob); const a=document.createElement('a');
+    a.href=url; a.download=name+'.json'; a.click(); URL.revokeObjectURL(url);
+    this.showToast('Fiche exportée !');
+  },
+  exportPortable() {
+    const tmpl = window.__PORTABLE_TEMPLATE__;
+    if (!tmpl) {
+      alert('Template portable non disponible.\n\nLance d\'abord depuis le dossier dnd5e-sheets :\n  node scripts/build_portable.js\n\nEnsuite recharge la page.');
+      return;
+    }
+    this.showToast('Export portable...');
+    const data = this.gatherData();
+    const name = (data.char_name || data._className || 'personnage').replace(/\s+/g,'_');
+    const html = tmpl.replace('/*__CHAR_DATA__*/', JSON.stringify(data));
+    const blob = new Blob([html], {type:'text/html'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name+'_portable.html';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    this.showToast('Fiche portable exportée !');
+  },
+
+  exportHTML() {
+    if (!window.__PORTABLE_LIGHT__) {
+      alert('Template portable léger non disponible.\n\nLance une fois depuis le dossier dnd5e-sheets/ :\n  node scripts/build_light.js\n\nEnsuite recharge la page.');
+      return;
+    }
+    const data = this.gatherData();
+    const slug = (data.char_name || 'personnage').replace(/[\s/\\:*?"<>|]+/g, '_').toLowerCase();
+    // Escape <\/script> and use function replacement to avoid $& / $' / $` substitution
+    const safeJson = JSON.stringify(data).replace(/<\/script>/gi, '<\\/script>');
+    const html = window.__PORTABLE_LIGHT__.replace(
+      `window.__PORTABLE_DATA__ = /*__CHAR_DATA__*/null;`,
+      () => `window.__PORTABLE_DATA__ = ${safeJson};`
+    );
+    const blob = new Blob([html], { type: 'text/html' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = slug + '_fiche.html';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    this.showToast('📄 ' + (data.char_name || 'Personnage') + ' exporté !');
+  },
+
+  shareLink() {
+    const data = this.gatherData();
+    const json = JSON.stringify(data);
+    // Unicode-safe base64 (fonctionne avec les accents, emojis, etc.)
+    const b64  = btoa(unescape(encodeURIComponent(json)));
+    const url  = 'https://gaetanfallot.github.io/dnd_app/dnd5e-sheets/view.html#' + b64;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url)
+        .then(() => this.showToast('🔗 Lien copié !'))
+        .catch(() => prompt('Copie ce lien :', url));
+    } else {
+      prompt('Copie ce lien :', url);
+    }
+  },
+
+  importJSON() {
+    const input=document.createElement('input'); input.type='file'; input.accept='.json';
+    input.onchange=(e)=>{
+      const file=e.target.files[0]; if(!file) return;
+      const reader=new FileReader();
+      reader.onload=(ev)=>{
+        try {
+          const data=JSON.parse(ev.target.result);
+          this._meta=data; this.applyData(data); this.recalcAll(); this.save();
+          this.showToast('Fiche importée !');
+        } catch(err){ alert('Erreur: fichier JSON invalide'); }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  },
+  resetSheet() {
+    if(confirm('⚠️ Effacer toutes les données ?')) {
+      localStorage.removeItem(this.storageKey);
+      window.location.href='index.html';
+    }
+  },
+
+  showToast(msg) {
+    const ex=document.querySelector('.toast'); if(ex) ex.remove();
+    const div=document.createElement('div'); div.className='toast'; div.textContent=msg;
+    document.body.appendChild(div); setTimeout(()=>div.remove(),2500);
+  }
+};
+
+// ---- MONSTER SHEET ENGINE ----
+const MONSTER = {
+  storageKey: null,
+
+  init(monsterId) {
+    this.storageKey = `dnd5e_monster_${monsterId || 'default'}`;
+    this.bindAll();
+    this.load();
+    this.recalcAll();
+  },
+
+  mod(score) { return DND.mod(score); },
+  modStr(score) { return DND.modStr(score); },
+
+  save() { localStorage.setItem(this.storageKey, JSON.stringify(this.gatherData())); },
+  autoSave() { clearTimeout(this._saveTimer); this._saveTimer = setTimeout(() => this.save(), 500); },
+
+  load() {
+    const raw = localStorage.getItem(this.storageKey);
+    if (raw) { try { this.applyData(JSON.parse(raw)); } catch (e) { console.warn(e); } }
+  },
+
+  gatherData() {
+    const data = {};
+    document.querySelectorAll('[data-field]').forEach(el => {
+      data[el.dataset.field] = el.type === 'checkbox' ? el.checked : el.value;
+    });
+    data._actions = this.gatherActions('actions-list');
+    data._reactions = this.gatherActions('reactions-list');
+    data._legendary = this.gatherActions('legendary-list');
+    data._traits = this.gatherActions('traits-list');
+    data._notes = document.getElementById('monster-notes')?.value || '';
+    return data;
+  },
+
+  applyData(data) {
+    document.querySelectorAll('[data-field]').forEach(el => {
+      if (data[el.dataset.field] !== undefined) {
+        if (el.type === 'checkbox') el.checked = data[el.dataset.field];
+        else el.value = data[el.dataset.field];
+      }
+    });
+    if (data._actions) this.restoreActions('actions-list', data._actions);
+    if (data._reactions) this.restoreActions('reactions-list', data._reactions);
+    if (data._legendary) this.restoreActions('legendary-list', data._legendary);
+    if (data._traits) this.restoreActions('traits-list', data._traits);
+    const notes = document.getElementById('monster-notes');
+    if (notes && data._notes) notes.value = data._notes;
+  },
+
+  gatherActions(containerId) {
+    const list = [];
+    document.querySelectorAll(`#${containerId} .monster-action`).forEach(el => {
+      list.push({ name: el.querySelector('.action-name-input')?.value || '', desc: el.querySelector('.action-desc-input')?.value || '' });
+    });
+    return list;
+  },
+
+  restoreActions(containerId, actions) {
+    const container = document.getElementById(containerId); if (!container) return;
+    container.innerHTML = '';
+    actions.forEach(a => this.addAction(containerId, a));
+  },
+
+  addAction(containerId, data = {}) {
+    const container = document.getElementById(containerId); if (!container) return;
+    const div = document.createElement('div'); div.className = 'monster-action';
+    div.innerHTML = `<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.3rem"><input type="text" class="action-name-input field-input" style="flex:1;font-family:'Cinzel',serif;font-weight:700;color:var(--blood-light)" placeholder="Nom de l'action" value="${data.name || ''}"><button class="equipment-delete" style="display:flex" onclick="this.closest('.monster-action').remove();MONSTER.autoSave()">×</button></div><textarea class="action-desc-input field-textarea" placeholder="Description..." style="min-height:50px">${data.desc || ''}</textarea>`;
+    div.querySelectorAll('input,textarea').forEach(el => el.addEventListener('input', () => this.autoSave()));
+    container.appendChild(div);
+    this.autoSave();
+  },
+
+  recalcAll() {
+    ['str', 'dex', 'con', 'int', 'wis', 'cha'].forEach(ab => {
+      const input = document.querySelector(`[data-field="ability_${ab}"]`);
+      const modEl = document.getElementById(`mod_${ab}`);
+      if (modEl && input) modEl.textContent = `(${this.modStr(input.value)})`;
+    });
+    this.autoSave();
+  },
+
+  bindAll() {
+    document.querySelectorAll('[data-field^="ability_"]').forEach(el => { el.addEventListener('input', () => this.recalcAll()); });
+    document.querySelectorAll('[data-field]').forEach(el => { el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', () => this.autoSave()); });
+    const notes = document.getElementById('monster-notes');
+    if (notes) notes.addEventListener('input', () => this.autoSave());
+  },
+
+  exportJSON() {
+    const data = this.gatherData(); const name = data.monster_name || 'monstre';
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob); const a = document.createElement('a');
+    a.href = url; a.download = `monstre_${name.replace(/\s+/g, '_')}.json`; a.click(); URL.revokeObjectURL(url);
+    DND.showToast('Monstre exporté !');
+  },
+
+  importJSON() {
+    const input = document.createElement('input'); input.type = 'file'; input.accept = '.json';
+    input.onchange = (e) => {
+      const file = e.target.files[0]; if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => { try { this.applyData(JSON.parse(ev.target.result)); this.recalcAll(); this.save(); DND.showToast('Monstre importé !'); } catch (err) { alert('Fichier JSON invalide'); } };
+      reader.readAsText(file);
+    };
+    input.click();
+  },
+
+  resetSheet() {
+    if (confirm('⚠️ Effacer toutes les données de ce monstre ?')) { localStorage.removeItem(this.storageKey); location.reload(); }
+  }
+};
+
+</script>
+  <!-- Pre-built portable template (run: node scripts/build_portable.js) -->
+    <!-- Lightweight portable template — no bundles (run: node scripts/build_light.js) -->
+    <script>
+(function(){
+  // Décode le JSON du personnage depuis le hash URL (base64)
+  var hash = window.location.hash.slice(1);
+  var data = null;
+  if (hash) {
+    try { data = JSON.parse(decodeURIComponent(escape(atob(hash)))); } catch(e) { console.warn('view.html: hash invalide', e); }
+  }
+  var body   = document.getElementById('sheet-body');
+  var notice = document.getElementById('no-char-notice');
+  if (!data) { if (notice) notice.style.display = 'flex'; return; }
+  DND.storageKey = 'dnd5e_char___portable__';
+  DND._meta = data;
+  DND.applyData(data);
+  try { localStorage.setItem(DND.storageKey, JSON.stringify(data)); } catch(e) {}
+  if (notice) notice.style.display = 'none';
+  if (body)   body.style.display   = '';
+  DND.bindAll(); DND.recalcAll(); DND.initSortablePanels();
+  var savedTab = (function(){ try { return localStorage.getItem('_mtab_' + DND.storageKey); } catch(e) { return null; } })() || 'tab-combat';
+  DND.showMobileTab(savedTab);
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      document.querySelectorAll('.panel[data-tab]').forEach(function(el){ el.style.display = ''; });
+      var sp = document.getElementById('spell-panel');
+      if (sp && !DND._isSpellcaster) sp.style.display = 'none';
+    } else DND.showMobileTab(DND._mobileTab);
+  }, { passive: true });
+  // Bouton 💾 : télécharge une copie locale via portable_light.js (chargé en demande)
+  if (!document.getElementById('__save_btn__')) {
+    var btn = document.createElement('button');
+    btn.id = '__save_btn__';
+    btn.title = 'Télécharger une copie locale';
+    btn.innerHTML = '&#128190;';
+    btn.style.cssText = 'position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;width:3.2rem;height:3.2rem;border-radius:50%;border:2px solid #c9a84c;background:#3a2a1c;color:#c9a84c;font-size:1.4rem;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;';
+    btn.onclick = function() {
+      if (window.__PORTABLE_LIGHT__) {
+        DND.exportHTML();
+      } else {
+        var s = document.createElement('script');
+        s.src = './portable_light.js';
+        s.onload = function() { DND.exportHTML(); };
+        s.onerror = function() { alert('portable_light.js introuvable'); };
+        document.head.appendChild(s);
+      }
+    };
+    document.body.appendChild(btn);
+  }
+})();
+</script>
+</body>
+</html>

@@ -35,7 +35,8 @@
         <button class="btn" onclick="DND.exportPDF()" title="Exporter en PDF">📄 PDF</button>
         <button class="btn" onclick="DND.exportJSON()">📤</button>
         <button class="btn" onclick="DND.importJSON()">📥</button>
-        <button class="btn" onclick="DND.exportPortable()" title="Exporter fiche portable">📦</button>
+        <button class="btn" onclick="DND.exportHTML()" title="Exporter fiche portable (HTML)">📄</button>
+        <button class="btn" onclick="DND.shareLink()" title="Copier le lien GitHub Pages">🔗</button>
         <button class="btn btn-shortrest" onclick="DND.shortRest()">☀️ Court</button>
         <button class="btn btn-longrest" onclick="DND.longRest()">🌙 Long</button>
         <button class="btn btn-danger" onclick="DND.resetSheet()">🗑️</button>
@@ -688,6 +689,8 @@
   <script src="shared/app.js"></script>
   <!-- Pre-built portable template (run: node scripts/build_portable.js) -->
   <script src="portable_template.js" onerror="console.info('portable_template.js not built yet — run: node scripts/build_portable.js')"></script>
+  <!-- Lightweight portable template — no bundles (run: node scripts/build_light.js) -->
+  <script src="portable_light.js" onerror="console.info('portable_light.js not built yet — run: node scripts/build_light.js')"></script>
   <script>DND.init();</script>
 </body>
 </html>

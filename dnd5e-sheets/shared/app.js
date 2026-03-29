@@ -895,6 +895,44 @@ const DND = {
     URL.revokeObjectURL(a.href);
     this.showToast('Fiche portable exportée !');
   },
+
+  exportHTML() {
+    if (!window.__PORTABLE_LIGHT__) {
+      alert('Template portable léger non disponible.\n\nLance une fois depuis le dossier dnd5e-sheets/ :\n  node scripts/build_light.js\n\nEnsuite recharge la page.');
+      return;
+    }
+    const data = this.gatherData();
+    const slug = (data.char_name || 'personnage').replace(/[\s/\\:*?"<>|]+/g, '_').toLowerCase();
+    // Escape </script> and use function replacement to avoid $& / $' / $` substitution
+    const safeJson = JSON.stringify(data).replace(/<\/script>/gi, '<\\/script>');
+    const html = window.__PORTABLE_LIGHT__.replace(
+      `window.__PORTABLE_DATA__ = /*__CHAR_DATA__*/null;`,
+      () => `window.__PORTABLE_DATA__ = ${safeJson};`
+    );
+    const blob = new Blob([html], { type: 'text/html' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = slug + '_fiche.html';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    this.showToast('📄 ' + (data.char_name || 'Personnage') + ' exporté !');
+  },
+
+  shareLink() {
+    const data = this.gatherData();
+    const json = JSON.stringify(data);
+    // Unicode-safe base64 (fonctionne avec les accents, emojis, etc.)
+    const b64  = btoa(unescape(encodeURIComponent(json)));
+    const url  = 'https://gaetanfallot.github.io/dnd_app/dnd5e-sheets/view.html#' + b64;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url)
+        .then(() => this.showToast('🔗 Lien copié !'))
+        .catch(() => prompt('Copie ce lien :', url));
+    } else {
+      prompt('Copie ce lien :', url);
+    }
+  },
+
   importJSON() {
     const input=document.createElement('input'); input.type='file'; input.accept='.json';
     input.onchange=(e)=>{
