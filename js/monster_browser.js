@@ -21,6 +21,37 @@ const MonsterBrowser = (() => {
 
   function getCustom() { return typeof dmMonsters !== 'undefined' ? dmMonsters : []; }
 
+  function _addToEncounterFromLib(m) {
+    if (typeof addToEncounter !== 'function') return;
+    const makeId = typeof _genId === 'function' ? _genId : () => Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+    const speedS = speedStr(m.speed);
+    const saves  = (m.proficiencies||[]).filter(p=>p.name?.startsWith('Saving Throw')).map(p=>p.name.replace('Saving Throw: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
+    const skills = (m.proficiencies||[]).filter(p=>!p.name?.startsWith('Saving Throw')).map(p=>p.name.replace('Skill: ','')+(p.value>=0?' +':' ')+p.value).join(', ');
+    const cr     = crStr(m.challenge_rating);
+    const ac     = typeof m.armor_class === 'number' ? m.armor_class : (m.armor_class?.value ?? 10);
+    addToEncounter({
+      name:        m.name,
+      type:        `${m.size||''} ${m.type||''}`.trim() + (m.subtype?` (${m.subtype})`:'') + (m.alignment?`, ${m.alignment}`:''),
+      cr, xp: String(m.xp||0), prof: `+${m.proficiency_bonus||2}`, speed: speedS,
+      ac: String(ac) + (m.armor_desc?` (${m.armor_desc})`:''),
+      hp: `${m.hit_points} (${m.hit_dice})`,
+      str: m.strength||10, dex: m.dexterity||10, con: m.constitution||10,
+      int: m.intelligence||10, wis: m.wisdom||10, cha: m.charisma||10,
+      saves, skills,
+      dmg_immune:  (m.damage_immunities||[]).join(', '),
+      dmg_resist:  (m.damage_resistances||[]).join(', '),
+      dmg_vuln:    (m.damage_vulnerabilities||[]).join(', '),
+      cond_immune: (m.condition_immunities||[]).map(c=>c.name||c).join(', '),
+      senses:      m.senses ? Object.entries(m.senses).filter(([,v])=>v).map(([k,v])=>`${k.replace(/_/g,' ')} ${v}`).join(', ') : '',
+      languages:   m.languages||'',
+      traits:      (m.special_abilities||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
+      actions:     (m.actions||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
+      reactions:   (m.reactions||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
+      legendary:   (m.legendary_actions||[]).map(a=>({ name:a.name, desc:a.desc||'' })),
+      notes: '',
+    });
+  }
+
   function mod(score) {
     const m = Math.floor((score - 10) / 2);
     return (m >= 0 ? '+' : '') + m;
@@ -53,12 +84,33 @@ const MonsterBrowser = (() => {
     document.getElementById('mb-tab-custom')?.classList.toggle('active', tab === 'custom');
     const customCount = document.getElementById('mb-tab-custom-count');
     if (customCount) customCount.textContent = getCustom().length || '';
+    const newBtn = document.getElementById('mb-new-custom-btn');
+    if (newBtn) newBtn.style.display = tab === 'custom' ? '' : 'none';
+    // Show/hide lang toggle
+    const langDiv = document.querySelector('.mb-lang-container');
+    if (langDiv) langDiv.style.display = tab === 'library' ? '' : 'none';
     buildFilters();
     renderList();
     // Clear preview
     const panel = document.getElementById('mb-preview');
     if (panel) panel.innerHTML = '<div style="color:#7a6a55;font-style:italic;font-size:0.8rem;text-align:center;padding-top:3rem">Cliquez sur un monstre pour voir sa fiche.</div>';
     _selected = null;
+  }
+
+  function newCustomMonster() {
+    if (typeof dmMonsters === 'undefined') return;
+    const makeId = typeof _genId === 'function' ? _genId : () => Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+    const m = {
+      id: makeId(), name:'', type:'', cr:'', xp:'', prof:'',
+      ac:'', hp:'', speed:'', str:10, dex:10, con:10, int:10, wis:10, cha:10,
+      saves:'', skills:'', dmg_immune:'', dmg_resist:'', dmg_vuln:'', cond_immune:'',
+      senses:'', languages:'', legendary_desc:'', notes:'',
+      traits:[], actions:[], reactions:[], legendary:[]
+    };
+    dmMonsters.push(m);
+    if (typeof _saveMyMonsters === 'function') _saveMyMonsters();
+    close();
+    if (typeof openMyMonsterModal === 'function') openMyMonsterModal(m.id);
   }
 
   // ── Filters ──────────────────────────────────────────────────────
@@ -133,7 +185,7 @@ const MonsterBrowser = (() => {
         <span class="mb-row-name">${_esc(m.name)}</span>
         <span class="mb-row-type">${_esc(type)}</span>
         <span class="mb-row-cr">FP ${cr}</span>
-        <button class="mb-add-init-btn" onclick="event.stopPropagation();MonsterBrowser.addToInitFromLib('${m.index}')" title="Ajouter à l'initiative + dock">⚔</button>
+        <button class="mb-add-init-btn" onclick="event.stopPropagation();MonsterBrowser.addToEncounterFromLib('${m.index}')" title="Ajouter à la rencontre">⚔</button>
       </div>`;
     }
     listEl.innerHTML = html;
@@ -161,7 +213,7 @@ const MonsterBrowser = (() => {
         <span class="mb-row-name">${_esc(m.name || '—')}</span>
         <span class="mb-row-type">${_esc(m.type || '—')}</span>
         <span class="mb-row-cr">FP ${_esc(m.cr || '?')}</span>
-        <button class="mb-add-init-btn" onclick="event.stopPropagation();MonsterBrowser.addCustomToInit('${m.id}')" title="Ajouter à l'initiative">⚔</button>
+        <button class="mb-add-init-btn" onclick="event.stopPropagation();MonsterBrowser.addCustomToEncounter('${m.id}')" title="Ajouter à la rencontre">⚔</button>
         <button class="mb-del-btn" onclick="event.stopPropagation();MonsterBrowser.deleteCustom('${m.id}')" title="Supprimer">✕</button>
       </div>`;
     }
@@ -236,8 +288,8 @@ const MonsterBrowser = (() => {
         ${legendary ? `<div class="mb-section-title">Actions légendaires</div><div class="mb-divider-thin"></div>${legendary}` : ''}
         ${m.notes   ? `<div class="mb-section-title">Notes</div><div class="mb-entry">${_esc(m.notes)}</div>` : ''}
         <div style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap">
-          <button class="mb-action-btn" onclick="MonsterBrowser.addCustomToInit('${m.id}')">⚔ Ajouter à l'initiative</button>
-          <button class="mb-action-btn secondary" onclick="editMonster('${m.id}');MonsterBrowser.close()">✏ Éditer</button>
+          <button class="mb-action-btn" onclick="MonsterBrowser.addCustomToEncounter('${m.id}')">⚔ Ajouter à la rencontre</button>
+          <button class="mb-action-btn secondary" onclick="openMyMonsterModal('${m.id}');MonsterBrowser.close()">✏ Éditer</button>
           <button class="mb-action-btn danger" onclick="MonsterBrowser.deleteCustom('${m.id}')">🗑 Supprimer</button>
         </div>
       </div>`;
@@ -306,86 +358,42 @@ const MonsterBrowser = (() => {
           ${m.legendary_desc?`<div class="mb-entry" style="font-style:italic">${_esc(m.legendary_desc)}</div>`:''}
           ${renderEntries(m.legendary_actions)}`:''}
         <div style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap">
-          <button class="mb-action-btn" onclick="MonsterBrowser.addToInitFromLib('${m.index}')">⚔ Ajouter à l'initiative</button>
-          <button class="mb-action-btn secondary" onclick="MonsterBrowser.importToDock('${m.index}')">💾 Sauvegarder dans mes monstres</button>
+          <button class="mb-action-btn" onclick="MonsterBrowser.addToEncounterFromLib('${m.index}')">⚔ Ajouter à la rencontre</button>
+          <button class="mb-action-btn secondary" onclick="MonsterBrowser.importToDock('${m.index}')">💾 Sauvegarder dans Mes Monstres</button>
         </div>
       </div>`;
   }
 
-  // ── Add library monster to initiative + dock ──────────────────────
+  // ── Add library monster to encounter ─────────────────────────────
 
-  function addToInitFromLib(index) {
+  function addToEncounterFromLib(index) {
     const m = _library.find(x => x.index === index);
     if (!m) return;
-
-    // Check if already in dock (by _libraryIndex)
-    let existing = (typeof dmMonsters !== 'undefined' ? dmMonsters : []).find(x => x._libraryIndex === index);
-    let dockId;
-
-    if (existing) {
-      dockId = existing.id;
-    } else {
-      // Import to dock
-      const newMonsterData = _convertToDockFormat(m);
-      newMonsterData._libraryIndex = index;
-      dmMonsters.push(newMonsterData);
-      if (typeof _saveMonsters === 'function') _saveMonsters();
-      if (typeof renderMonsterDock === 'function') renderMonsterDock();
-      existing = newMonsterData;
-      dockId = newMonsterData.id;
-    }
-
-    // Add to initiative via existing function
-    if (typeof addMonsterToInit === 'function') {
-      addMonsterToInit(dockId);
-    } else {
-      // Fallback
-      const dexMod = Math.floor(((m.dexterity||10)-10)/2);
-      const roll   = Math.floor(Math.random()*20)+1+dexMod;
-      if (window.combatants) { window.combatants.push({ id: Date.now()+Math.random(), name: m.name, init: roll }); }
-      if (typeof renderTurnList === 'function') renderTurnList();
-      if (typeof showToast === 'function') showToast(`⚔ ${m.name} → init ${roll}`);
-    }
-
-    // Open dock and scroll to the chip
-    if (typeof _dockOpen !== 'undefined' && !_dockOpen && typeof toggleMonsterDock === 'function') {
-      toggleMonsterDock();
-    }
-    setTimeout(() => {
-      const chip = document.querySelector(`[data-id="${dockId}"]`);
-      if (chip) {
-        chip.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        chip.classList.add('mb-flash');
-        setTimeout(() => chip.classList.remove('mb-flash'), 1200);
-      }
-    }, 150);
-
-    // Visual feedback on row
+    _addToEncounterFromLib(m);
+    // Feedback
     const row = document.querySelector(`.mb-row[data-index="${index}"] .mb-add-init-btn`);
     if (row) { row.textContent='✓'; row.style.color='#8f5'; setTimeout(()=>{row.textContent='⚔';row.style.color='';},1500); }
   }
 
-  // ── Add saved monster to initiative ───────────────────────────────
+  // ── Add My Monster to encounter ───────────────────────────────────
 
-  function addCustomToInit(id) {
-    if (typeof addMonsterToInit === 'function') {
-      addMonsterToInit(id);
-    }
-    // Scroll to chip in dock
-    if (typeof _dockOpen !== 'undefined' && !_dockOpen && typeof toggleMonsterDock === 'function') {
-      toggleMonsterDock();
-    }
-    setTimeout(() => {
-      const chip = document.querySelector(`[data-id="${id}"]`);
-      if (chip) {
-        chip.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        chip.classList.add('mb-flash');
-        setTimeout(() => chip.classList.remove('mb-flash'), 1200);
-      }
-    }, 150);
-    // Feedback on row
+  function addCustomToEncounter(id) {
+    const m = getCustom().find(x => x.id === id);
+    if (!m || typeof addToEncounter !== 'function') return;
+    addToEncounter(m);
+    // Feedback
     const row = document.querySelector(`.mb-row[data-id="${id}"] .mb-add-init-btn`);
     if (row) { row.textContent='✓'; row.style.color='#8f5'; setTimeout(()=>{row.textContent='⚔';row.style.color='';},1500); }
+  }
+
+  // ── Legacy: addToInitFromLib (kept for compatibility) ─────────────
+
+  function addToInitFromLib(index) {
+    addToEncounterFromLib(index);
+  }
+
+  function addCustomToInit(id) {
+    addCustomToEncounter(id);
   }
 
   // ── Import library monster to dock (without adding to initiative) ─
@@ -396,16 +404,15 @@ const MonsterBrowser = (() => {
 
     const existing = (typeof dmMonsters !== 'undefined' ? dmMonsters : []).find(x => x._libraryIndex === index);
     if (existing) {
-      if (typeof showToast === 'function') showToast(`${m.name} est déjà dans vos monstres`);
+      if (typeof showToast === 'function') showToast(`${m.name} est déjà dans Mes Monstres`);
       return;
     }
 
     const monster = _convertToDockFormat(m);
     monster._libraryIndex = index;
     dmMonsters.push(monster);
-    if (typeof _saveMonsters === 'function') _saveMonsters();
-    if (typeof renderMonsterDock === 'function') renderMonsterDock();
-    if (typeof showToast === 'function') showToast(`💾 ${m.name} ajouté à vos monstres`);
+    if (typeof _saveMyMonsters === 'function') _saveMyMonsters();
+    if (typeof showToast === 'function') showToast(`💾 ${m.name} sauvegardé dans Mes Monstres`);
 
     // Update tab count
     const customCount = document.getElementById('mb-tab-custom-count');
@@ -512,7 +519,7 @@ const MonsterBrowser = (() => {
     if (!m) return;
     if (!confirm(`Supprimer « ${m.name} » de vos monstres ?`)) return;
     dmMonsters.splice(dmMonsters.findIndex(x => x.id === id), 1);
-    if (typeof _saveMonsters === 'function') _saveMonsters();
+    if (typeof _saveMyMonsters === 'function') _saveMyMonsters();
     if (typeof renderMonsterDock === 'function') renderMonsterDock();
     // Update count badge
     const customCount = document.getElementById('mb-tab-custom-count');
@@ -529,6 +536,8 @@ const MonsterBrowser = (() => {
 
   // ── Public API ────────────────────────────────────────────────────
   return { open, close, setLang, setTab, renderList, previewLib, previewCustom,
-           addToInitFromLib, addCustomToInit, importToDock, deleteCustom };
+           addToInitFromLib, addCustomToInit,
+           addToEncounterFromLib, addCustomToEncounter,
+           importToDock, deleteCustom };
 
 })();

@@ -166,7 +166,7 @@ const DND = {
     data._features  = this.gatherFeatures();
     data._resources = this.gatherResources();
     data._profLanguages = this.gatherTags('prof-lang-tags');
-    ['traits','ideals','bonds','flaws','notes','backstory'].forEach(id=>{
+    ['traits','ideals','bonds','flaws','notes','backstory','custom_rules'].forEach(id=>{
       data['_'+id] = document.getElementById(id)?.value||'';
     });
     document.querySelectorAll('.spell-slot-dot').forEach(dot=>{
@@ -194,7 +194,7 @@ const DND = {
     if(data._features)  this.restoreFeatures(data._features);
     if(data._resources) this.restoreResources(data._resources);
     if(data._profLanguages) this.restoreTags('prof-lang-tags',data._profLanguages);
-    ['traits','ideals','bonds','flaws','notes','backstory'].forEach(id=>{
+    ['traits','ideals','bonds','flaws','notes','backstory','custom_rules'].forEach(id=>{
       const el=document.getElementById(id); if(el&&data['_'+id]) el.value=data['_'+id];
     });
     document.querySelectorAll('[data-death]').forEach(cb=>{
@@ -876,6 +876,24 @@ const DND = {
     const url=URL.createObjectURL(blob); const a=document.createElement('a');
     a.href=url; a.download=name+'.json'; a.click(); URL.revokeObjectURL(url);
     this.showToast('Fiche exportée !');
+  },
+  exportPortable() {
+    const tmpl = window.__PORTABLE_TEMPLATE__;
+    if (!tmpl) {
+      alert('Template portable non disponible.\n\nLance d\'abord depuis le dossier dnd5e-sheets :\n  node scripts/build_portable.js\n\nEnsuite recharge la page.');
+      return;
+    }
+    this.showToast('Export portable...');
+    const data = this.gatherData();
+    const name = (data.char_name || data._className || 'personnage').replace(/\s+/g,'_');
+    const html = tmpl.replace('/*__CHAR_DATA__*/', JSON.stringify(data));
+    const blob = new Blob([html], {type:'text/html'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name+'_portable.html';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    this.showToast('Fiche portable exportée !');
   },
   importJSON() {
     const input=document.createElement('input'); input.type='file'; input.accept='.json';

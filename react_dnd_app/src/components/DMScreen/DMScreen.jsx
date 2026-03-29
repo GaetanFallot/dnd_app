@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth } from '../../hooks/useAuth'
 import { useCollection, fsAdd, fsSet, fsDelete } from '../../hooks/useFirestore'
 import { SCENES } from '../../data/dnd5e'
 import styles from '../../styles/dm.module.css'
+import { compressImage } from '../../utils/compressImage'
 import SceneGrid from './SceneGrid'
 import OverlayPanel from './OverlayPanel'
 import InitiativeTracker from './InitiativeTracker'
@@ -64,7 +64,40 @@ function resize(){W=cvs.width=innerWidth;H=cvs.height=innerHeight;}
 resize();window.addEventListener('resize',resize);
 let audioCtx=null;
 function getAC(){if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx;}
-function unlockAudio(){getAC();audioUnlocked=true;document.getElementById('audio-gate').classList.add('hidden');}
+// Ambient audio nodes
+const ambientNodes={};
+function _noiseBuf(ac,secs){const buf=ac.createBuffer(1,ac.sampleRate*secs,ac.sampleRate);const d=buf.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;return buf;}
+function startAmbient(id){
+  if(ambientNodes[id]||!audioUnlocked)return;
+  const ac=getAC();const gain=ac.createGain();gain.connect(ac.destination);
+  const src=ac.createBufferSource();src.loop=true;
+  let filter;
+  if(id==='rain'){src.buffer=_noiseBuf(ac,2);filter=ac.createBiquadFilter();filter.type='lowpass';filter.frequency.value=1200;gain.gain.value=masterVol*0.22;}
+  else if(id==='thunder'){src.buffer=_noiseBuf(ac,3);filter=ac.createBiquadFilter();filter.type='lowpass';filter.frequency.value=100;gain.gain.value=masterVol*0.04;}
+  else if(id==='fire'){src.buffer=_noiseBuf(ac,2);filter=ac.createBiquadFilter();filter.type='bandpass';filter.frequency.value=700;filter.Q.value=0.6;gain.gain.value=masterVol*0.14;}
+  else if(id==='magic'){src.buffer=_noiseBuf(ac,2);filter=ac.createBiquadFilter();filter.type='bandpass';filter.frequency.value=2000;filter.Q.value=2;gain.gain.value=masterVol*0.06;}
+  else return;
+  src.connect(filter);filter.connect(gain);src.start();
+  ambientNodes[id]={src,gain,stop(){try{src.stop();}catch(e){}gain.disconnect();}};
+}
+function stopAmbient(id){if(!ambientNodes[id])return;ambientNodes[id].stop();delete ambientNodes[id];}
+function syncAmbient(active){['rain','thunder','fire','magic'].forEach(id=>{if(active.has(id))startAmbient(id);else stopAmbient(id);});}
+function unlockAudio(){getAC();audioUnlocked=true;document.getElementById('audio-gate').classList.add('hidden');syncAmbient(activeEffects);}
+function playThunderCrack(){
+  if(!audioUnlocked)return;
+  const ac=getAC();
+  const dur=2.8;
+  const buf=ac.createBuffer(1,ac.sampleRate*dur,ac.sampleRate);
+  const d=buf.getChannelData(0);
+  for(let i=0;i<d.length;i++){
+    const t=i/ac.sampleRate;
+    d[i]=(Math.random()*2-1)*Math.exp(-t*1.1)*(0.5+0.5*Math.exp(-t*4));
+  }
+  const gain=ac.createGain();gain.gain.value=masterVol*0.75;gain.connect(ac.destination);
+  const src=ac.createBufferSource();
+  const lpf=ac.createBiquadFilter();lpf.type='lowpass';lpf.frequency.value=280;
+  src.buffer=buf;src.connect(lpf);lpf.connect(gain);src.start();
+}
 // Rain
 function initRain(){rainDrops=[];for(let i=0;i<500;i++)rainDrops.push({x:Math.random()*W*1.2,y:Math.random()*H,len:Math.random()*25+12,speed:Math.random()*12+14,opacity:Math.random()*.4+.2,width:Math.random()*1.5+.5,wind:Math.random()*2+1});}
 function drawRain(){rainDrops.forEach(d=>{ctx.strokeStyle='rgba(174,194,224,'+d.opacity+')';ctx.lineWidth=d.width;ctx.beginPath();ctx.moveTo(d.x,d.y);ctx.lineTo(d.x-d.wind*2,d.y+d.len);ctx.stroke();d.y+=d.speed;d.x-=d.wind;if(d.y>H){d.y=Math.random()*-100;d.x=Math.random()*(W+300);}});}
@@ -80,6 +113,7 @@ function drawThunder(){
     const x=Math.random()*W;
     flash.style.opacity='0.7';setTimeout(()=>flash.style.opacity='0',120);
     lightningBolts.push({x,life:30,segments:genLightning(x,0)});
+    setTimeout(playThunderCrack, Math.random()*500+80);
   }
   lightningBolts=lightningBolts.filter(b=>{
     b.life--;
@@ -159,6 +193,7 @@ window.addEventListener('message',e=>{
     if(activeEffects.has('snow')&&!snowFlakes.length)initSnow();
     if(activeEffects.has('thunder'))initThunder();
     applyOverlays((d.active||[]).filter(id=>overlay.includes(id)));
+    syncAmbient(activeEffects);
   }
   if(d.type==='fit'){iw.className=d.fit||'cover';}
   if(d.type==='black'){bg.style.background='#000';iw.style.opacity='0';}
@@ -168,21 +203,70 @@ window.addEventListener('message',e=>{
 }
 
 export default function DMScreen() {
-  const { user } = useAuth()
   const [secondWindow, setSecondWindow] = useState(null)
   const [currentScene, setCurrentScene] = useState(null)
   const [activeOverlays, setActiveOverlays] = useState(new Set())
   const [currentFit, setCurrentFit] = useState('cover')
   const [masterVolume, setMasterVolume] = useState(50)
   const [monsterBrowserOpen, setMonsterBrowserOpen] = useState(false)
-  const [customSounds, setCustomSounds] = useState([])
-  const soundsPath = user ? `users/${user.uid}/scenes` : null
+  const [customSounds, setCustomSounds] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('dnd:customSounds') || '[]') } catch { return [] }
+  })
+  const [stormMode, setStormMode] = useState(false)
+  const [effectSettings, setEffectSettings] = useState({})
+  // { [effectId]: { volume: 60, soundId: null } }
+  const [customEffects, setCustomEffects] = useState([])
+  // [{ id, name, icon, soundId }]
+  const ambientAudioRef = useRef({}) // looping Audio objects for custom linked sounds
+  const initiativeRef = useRef(null)
+  const { docs: customScenes, refresh: refreshScenes } = useCollection('local/data/scenes')
+  const { docs: firestoreMonsters, refresh: refreshMonsters } = useCollection('local/data/monsters')
+  const [encounterMonsters, setEncounterMonsters] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('dnd:encounter') || '[]') } catch { return [] }
+  })
 
-  // Custom scenes from Firestore
-  const { docs: customScenes } = useCollection(user ? `users/${user.uid}/scenes` : null)
-  const { docs: firestoreMonsters } = useCollection(user ? `users/${user.uid}/monsters` : null)
+  function addToEncounter(m) {
+    const instance = { ...m, _eid: Date.now() + Math.random() }
+    setEncounterMonsters(prev => {
+      const next = [...prev, instance]
+      localStorage.setItem('dnd:encounter', JSON.stringify(next))
+      return next
+    })
+  }
 
   const winRef = useRef(null)
+
+  function getEffectVolume(id) { return effectSettings[id]?.volume ?? 60 }
+  function getEffectSoundId(id) { return effectSettings[id]?.soundId ?? null }
+
+  function updateEffectSetting(id, partial) {
+    setEffectSettings(prev => ({ ...prev, [id]: { ...(prev[id] || {}), ...partial } }))
+  }
+
+  function playLinkedSound(effectId, loop = false) {
+    const soundId = getEffectSoundId(effectId)
+    if (!soundId) return null
+    const sound = customSounds.find(s => s.id === soundId)
+    if (!sound) return null
+    try {
+      const audio = new Audio(sound.src)
+      audio.volume = (getEffectVolume(effectId) / 100) * (masterVolume / 100)
+      audio.loop = loop
+      audio.play().catch(() => {})
+      return audio
+    } catch (e) { return null }
+  }
+
+  function startLinkedAmbient(effectId) {
+    stopLinkedAmbient(effectId)
+    const audio = playLinkedSound(effectId, true)
+    if (audio) ambientAudioRef.current[effectId] = audio
+  }
+
+  function stopLinkedAmbient(effectId) {
+    const audio = ambientAudioRef.current[effectId]
+    if (audio) { try { audio.pause(); audio.src = '' } catch (e) {} delete ambientAudioRef.current[effectId] }
+  }
 
   function openSecondScreen() {
     if (winRef.current && !winRef.current.closed) {
@@ -229,15 +313,78 @@ export default function DMScreen() {
   function toggleOverlay(id) {
     setActiveOverlays(prev => {
       const next = new Set(prev)
-      if (next.has(id)) next.delete(id); else next.add(id)
+      if (next.has(id)) {
+        next.delete(id)
+        stopLinkedAmbient(id)
+      } else {
+        next.add(id)
+        startLinkedAmbient(id)
+      }
       sendOverlays(next)
       return next
     })
   }
 
   function clearOverlays() {
+    Object.keys(ambientAudioRef.current).forEach(stopLinkedAmbient)
+    customEffects.forEach(ce => stopLinkedAmbient('custom_' + ce.id))
     setActiveOverlays(new Set())
+    setStormMode(false)
     sendOverlays(new Set())
+  }
+
+  function toggleCustomEffect(ceId) {
+    const fullId = 'custom_' + ceId
+    setActiveOverlays(prev => {
+      const next = new Set(prev)
+      if (next.has(fullId)) {
+        next.delete(fullId)
+        stopLinkedAmbient(fullId)
+      } else {
+        next.add(fullId)
+        const ce = customEffects.find(c => c.id === ceId)
+        if (ce && ce.soundId) {
+          const sound = customSounds.find(s => s.id === ce.soundId)
+          if (sound) {
+            stopLinkedAmbient(fullId)
+            try {
+              const audio = new Audio(sound.src)
+              audio.volume = masterVolume / 100
+              audio.loop = true
+              audio.play().catch(() => {})
+              ambientAudioRef.current[fullId] = audio
+            } catch (e) {}
+          }
+        }
+      }
+      sendOverlays(next)
+      return next
+    })
+  }
+
+  function addCustomEffect(name, icon, soundId) {
+    setCustomEffects(prev => [...prev, { id: Date.now(), name, icon: icon || '🎵', soundId }])
+  }
+
+  function removeCustomEffect(ceId) {
+    stopLinkedAmbient('custom_' + ceId)
+    setActiveOverlays(prev => { const next = new Set(prev); next.delete('custom_' + ceId); return next })
+    setCustomEffects(prev => prev.filter(ce => ce.id !== ceId))
+  }
+
+  function toggleStorm() {
+    setStormMode(prev => {
+      const next = !prev
+      if (next) {
+        const storm = new Set(['rain', 'thunder', 'darkness'])
+        setActiveOverlays(storm)
+        sendOverlays(storm)
+      } else {
+        setActiveOverlays(new Set())
+        sendOverlays(new Set())
+      }
+      return next
+    })
   }
 
   function setFit(fit) {
@@ -258,29 +405,36 @@ export default function DMScreen() {
     const files = [...e.target.files]
     for (const file of files) {
       const isVideo = file.type.startsWith('video/')
-      const reader = new FileReader()
-      reader.onload = async ev => {
-        const scene = {
-          id: Date.now() + Math.random(),
-          name: file.name.replace(/\.[^.]+$/, ''),
-          src: ev.target.result,
-          isVideo,
-          emoji: isVideo ? '🎬' : '🖼️',
-          tag: 'Import',
-          bg: '#1a1410',
-        }
-        if (user) {
-          await fsAdd(`users/${user.uid}/scenes`, scene)
-        }
+      let src
+      if (isVideo) {
+        // Videos: read as-is (no compression possible)
+        src = await new Promise(resolve => {
+          const reader = new FileReader()
+          reader.onload = ev => resolve(ev.target.result)
+          reader.readAsDataURL(file)
+        })
+      } else {
+        // Images: compress to max 1920×1080
+        src = await compressImage(file, 1920, 1080, 0.85)
       }
-      reader.readAsDataURL(file)
+      const scene = {
+        id: Date.now() + Math.random(),
+        name: file.name.replace(/\.[^.]+$/, ''),
+        src,
+        isVideo,
+        emoji: isVideo ? '🎬' : '🖼️',
+        tag: 'Import',
+        bg: '#1a1410',
+      }
+      await fsAdd('local/data/scenes', scene)
+      setTimeout(refreshScenes, 100)
     }
     e.target.value = ''
   }
 
   async function deleteCustomScene(id) {
-    if (!user) return
-    await fsDelete(`users/${user.uid}/scenes`, id)
+    await fsDelete('local/data/scenes', id)
+    setTimeout(refreshScenes, 100)
     if (currentScene?.id === id) setCurrentScene(null)
   }
 
@@ -290,7 +444,11 @@ export default function DMScreen() {
     files.forEach(file => {
       const reader = new FileReader()
       reader.onload = ev => {
-        setCustomSounds(prev => [...prev, { id: Date.now(), name: file.name, src: ev.target.result }])
+        setCustomSounds(prev => {
+          const next = [...prev, { id: Date.now(), name: file.name, src: ev.target.result }]
+          try { localStorage.setItem('dnd:customSounds', JSON.stringify(next)) } catch {}
+          return next
+        })
       }
       reader.readAsDataURL(file)
     })
@@ -308,7 +466,8 @@ export default function DMScreen() {
   const screenOnline = secondWindow && !secondWindow.closed
 
   return (
-    <div className={styles.dmLayout}>
+    <>
+    <div className={styles.dmLayout} style={{ paddingBottom: 48 }}>
 
       {/* LEFT SIDEBAR */}
       <aside className={styles.sidebar}>
@@ -360,23 +519,46 @@ export default function DMScreen() {
             activeOverlays={activeOverlays}
             onToggle={toggleOverlay}
             onClear={clearOverlays}
+            onStorm={toggleStorm}
+            stormMode={stormMode}
             masterVolume={masterVolume}
             onMasterVolume={setMasterVolume}
+            effectSettings={effectSettings}
+            onEffectSettingChange={updateEffectSetting}
+            customSounds={customSounds}
+            customEffects={customEffects}
+            onToggleCustomEffect={toggleCustomEffect}
+            onAddCustomEffect={addCustomEffect}
+            onRemoveCustomEffect={removeCustomEffect}
             styles={styles}
           />
 
           {/* Soundboard */}
           <div className={styles.sectionLabel}>🎲 Soundboard</div>
           <div className={styles.sbGrid}>
-            <button className={`${styles.sbBtn} ${styles.thunder}`} onClick={() => playSound('thunder', masterVolume)} title="Tonnerre">
+            <button className={`${styles.sbBtn} ${styles.thunder}`} onClick={() => playSound('thunder', masterVolume)} title="Coup de tonnerre">
               <span className={styles.sbIcon}>⚡</span><span>Tonnerre</span>
+            </button>
+            <button className={`${styles.sbBtn} ${styles.fire}`} onClick={() => playSound('fireball', masterVolume)} title="Boule de feu">
+              <span className={styles.sbIcon}>🔥</span><span>Boule de feu</span>
+            </button>
+            <button className={`${styles.sbBtn} ${styles.sword}`} onClick={() => playSound('sword_clash', masterVolume)} title="Choc d'épées">
+              <span className={styles.sbIcon}>⚔️</span><span>Épée</span>
+            </button>
+            <button className={`${styles.sbBtn} ${styles.sword}`} onClick={() => playSound('sword_draw', masterVolume)} title="Dégainage">
+              <span className={styles.sbIcon}>🗡️</span><span>Dégainage</span>
             </button>
           </div>
           <div className={styles.customSbGrid}>
             {customSounds.map(s => (
               <div key={s.id} className={styles.customSbItem}>
                 <button className={styles.customSbPlayBtn} onClick={() => playCustomSound(s.src)}>▶</button>
-                <span className={styles.customSbName}>{s.name}</span>
+                <input
+                  className={styles.customSbName}
+                  value={s.name}
+                  onChange={e => setCustomSounds(prev => prev.map(x => x.id === s.id ? { ...x, name: e.target.value } : x))}
+                  style={{ background: 'none', border: 'none', outline: 'none', cursor: 'text' }}
+                />
                 <button style={{ background: 'none', border: 'none', color: '#7a6a55', cursor: 'pointer', fontSize: '0.75rem' }} onClick={() => setCustomSounds(prev => prev.filter(x => x.id !== s.id))}>×</button>
               </div>
             ))}
@@ -435,47 +617,118 @@ export default function DMScreen() {
         </div>
       </main>
 
-      {/* RIGHT PANEL */}
+      {/* RIGHT PANEL — initiative only */}
       <section className={styles.rightPanel}>
-        <InitiativeTracker styles={styles} />
-        <MonsterDock
-          firestoreMonsters={firestoreMonsters}
-          user={user}
-          onOpenBrowser={() => setMonsterBrowserOpen(true)}
-          styles={styles}
-        />
+        <InitiativeTracker ref={initiativeRef} styles={styles} />
       </section>
 
-      {/* Monster Browser Modal */}
-      {monsterBrowserOpen && (
-        <MonsterBrowser
-          user={user}
-          onClose={() => setMonsterBrowserOpen(false)}
-          styles={styles}
-        />
-      )}
-
     </div>
+
+    {/* MONSTER DOCK — fixed bottom bar */}
+    <MonsterDock
+      encounterMonsters={encounterMonsters}
+      setEncounterMonsters={setEncounterMonsters}
+      onOpenBrowser={() => setMonsterBrowserOpen(true)}
+      onAddToInitiative={(name, init) => initiativeRef.current?.addCombatant(name, init)}
+      styles={styles}
+    />
+
+    {/* Monster Browser Modal */}
+    {monsterBrowserOpen && (
+      <MonsterBrowser
+        firestoreMonsters={firestoreMonsters}
+        onAddToEncounter={addToEncounter}
+        onClose={() => setMonsterBrowserOpen(false)}
+        styles={styles}
+      />
+    )}
+  </>
   )
 }
 
 function playSound(type, volume) {
-  // Simple synthesized sound using Web Audio API
   try {
     const ctx = new (window.AudioContext || window.webkitAudioContext)()
+    if (ctx.state === 'suspended') ctx.resume()
+    const gain = ctx.createGain()
+    gain.gain.value = volume / 100
+    gain.connect(ctx.destination)
+
     if (type === 'thunder') {
-      const buffer = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate)
-      const data = buffer.getChannelData(0)
-      for (let i = 0; i < data.length; i++) {
-        data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (ctx.sampleRate * 0.5))
+      // Grondement grave avec décroissance lente
+      const dur = 2.5
+      const buf = ctx.createBuffer(1, ctx.sampleRate * dur, ctx.sampleRate)
+      const d = buf.getChannelData(0)
+      for (let i = 0; i < d.length; i++) {
+        const t = i / ctx.sampleRate
+        d[i] = (Math.random() * 2 - 1) * Math.exp(-t * 1.2) * (0.4 + 0.6 * Math.exp(-t * 3))
       }
-      const source = ctx.createBufferSource()
-      const gain = ctx.createGain()
-      gain.gain.value = volume / 100
-      source.buffer = buffer
-      source.connect(gain)
-      gain.connect(ctx.destination)
-      source.start()
+      const src = ctx.createBufferSource()
+      const lpf = ctx.createBiquadFilter()
+      lpf.type = 'lowpass'
+      lpf.frequency.value = 300
+      src.buffer = buf
+      src.connect(lpf)
+      lpf.connect(gain)
+      src.start()
+
+    } else if (type === 'fireball') {
+      // Whoosh + explosion
+      const dur = 1.8
+      const buf = ctx.createBuffer(1, ctx.sampleRate * dur, ctx.sampleRate)
+      const d = buf.getChannelData(0)
+      for (let i = 0; i < d.length; i++) {
+        const t = i / ctx.sampleRate
+        const explosion = Math.exp(-t * 2.5)
+        const whoosh = t < 0.3 ? Math.exp(-Math.pow((t - 0.05) * 30, 2)) : 0
+        d[i] = (Math.random() * 2 - 1) * (explosion * 0.7 + whoosh * 0.5)
+      }
+      const src = ctx.createBufferSource()
+      const bpf = ctx.createBiquadFilter()
+      bpf.type = 'bandpass'
+      bpf.frequency.value = 600
+      bpf.Q.value = 0.8
+      src.buffer = buf
+      src.connect(bpf)
+      bpf.connect(gain)
+      src.start()
+
+    } else if (type === 'sword_clash') {
+      // Choc métallique bref
+      const dur = 0.8
+      const buf = ctx.createBuffer(1, ctx.sampleRate * dur, ctx.sampleRate)
+      const d = buf.getChannelData(0)
+      for (let i = 0; i < d.length; i++) {
+        const t = i / ctx.sampleRate
+        d[i] = (Math.random() * 2 - 1) * Math.exp(-t * 8) +
+                Math.sin(2 * Math.PI * 800 * t) * Math.exp(-t * 15) * 0.4 +
+                Math.sin(2 * Math.PI * 1200 * t) * Math.exp(-t * 20) * 0.2
+      }
+      const src = ctx.createBufferSource()
+      const hpf = ctx.createBiquadFilter()
+      hpf.type = 'highpass'
+      hpf.frequency.value = 400
+      src.buffer = buf
+      src.connect(hpf)
+      hpf.connect(gain)
+      src.start()
+
+    } else if (type === 'sword_draw') {
+      // Dégainage : sifflement montant
+      const dur = 0.6
+      const buf = ctx.createBuffer(1, ctx.sampleRate * dur, ctx.sampleRate)
+      const d = buf.getChannelData(0)
+      for (let i = 0; i < d.length; i++) {
+        const t = i / ctx.sampleRate
+        const env = Math.sin(Math.PI * t / dur) * Math.exp(-t * 1.5)
+        const freq = 800 + t * 3000
+        d[i] = (Math.random() * 2 - 1) * 0.3 * env +
+                Math.sin(2 * Math.PI * freq * t) * 0.1 * env
+      }
+      const src = ctx.createBufferSource()
+      src.buffer = buf
+      src.connect(gain)
+      src.start()
     }
   } catch (e) {}
 }

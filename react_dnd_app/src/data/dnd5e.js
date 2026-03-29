@@ -103,6 +103,39 @@ export function getSlots(spellType, level) {
   return out
 }
 
+// Multiclassing combined spell slot table (caster level 1-20 → slots for levels 1-9)
+const MULTICLASS_SLOTS_TABLE = [
+  [2,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0],[4,2,0,0,0,0,0,0,0],[4,3,0,0,0,0,0,0,0],
+  [4,3,2,0,0,0,0,0,0],[4,3,3,0,0,0,0,0,0],[4,3,3,1,0,0,0,0,0],[4,3,3,2,0,0,0,0,0],
+  [4,3,3,3,1,0,0,0,0],[4,3,3,3,2,0,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,0,0,0],
+  [4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,0],
+  [4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1],
+]
+const MC_WEIGHT = { full: 1, half: 0.5, third: 1/3, warlock: 0 }
+
+// Returns { slots: {level: count}, warlockSlots: {slots, level} | null }
+export function computeMulticlassSlots(picks) {
+  let casterLevel = 0
+  let warlockLevel = 0
+  for (const pick of (picks || [])) {
+    const cls = CLASSES.find(c => c.id === pick.classId)
+    if (!cls) continue
+    const lv = Math.max(1, Math.min(20, parseInt(pick.level) || 1))
+    if (cls.spellType === 'warlock') {
+      warlockLevel = lv
+    } else {
+      casterLevel += Math.floor(lv * (MC_WEIGHT[cls.spellType] || 0))
+    }
+  }
+  const slots = {}
+  if (casterLevel >= 1) {
+    const row = MULTICLASS_SLOTS_TABLE[Math.min(casterLevel, 20) - 1]
+    row.forEach((max, i) => { if (max > 0) slots[i + 1] = max })
+  }
+  const warlockSlots = warlockLevel > 0 ? SLOTS_WARLOCK[warlockLevel] : null
+  return { slots, warlockSlots }
+}
+
 export const DEFAULT_CHARACTER = {
   char_name: '',
   level: 1,

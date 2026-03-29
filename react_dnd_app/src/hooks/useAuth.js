@@ -1,18 +1,4 @@
-import { useState, useEffect } from 'react'
-import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from '../firebase'
-
+// Stub — auth supprimée, plus besoin de connexion
 export function useAuth() {
-  const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (u) => {
-      setUser(u)
-      setLoading(false)
-    })
-    return unsub
-  }, [])
-
-  return { user, loading }
+  return { user: { uid: 'local', displayName: 'Local' }, loading: false }
 }

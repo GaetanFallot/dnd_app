@@ -1,24 +1,22 @@
 import { useCollection, fsAdd, fsSet, fsDelete } from './useFirestore'
-import { useAuth } from './useAuth'
 
 export function useCharacters() {
-  const { user } = useAuth()
-  const path = user ? `users/${user.uid}/characters` : null
-  const { docs: characters, loading } = useCollection(path)
+  const { docs: characters, loading, refresh } = useCollection('local/data/characters')
 
   const addCharacter = async (data) => {
-    if (!user) return
-    return fsAdd(`users/${user.uid}/characters`, data)
+    const result = await fsAdd('local/data/characters', data)
+    setTimeout(refresh, 100)
+    return result
   }
 
   const updateCharacter = async (id, data) => {
-    if (!user) return
-    return fsSet(`users/${user.uid}/characters`, id, data)
+    await fsSet('local/data/characters', id, data)
+    setTimeout(refresh, 100)
   }
 
   const deleteCharacter = async (id) => {
-    if (!user) return
-    return fsDelete(`users/${user.uid}/characters`, id)
+    await fsDelete('local/data/characters', id)
+    setTimeout(refresh, 100)
   }
 
   return { characters, loading, addCharacter, updateCharacter, deleteCharacter }

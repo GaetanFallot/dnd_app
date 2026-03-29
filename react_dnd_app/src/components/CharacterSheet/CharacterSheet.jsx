@@ -1,11 +1,17 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { doc, onSnapshot } from 'firebase/firestore'
-import { db } from '../../firebase'
 import { useAuth } from '../../hooks/useAuth'
 import { fsSet } from '../../hooks/useFirestore'
-import { mod, modStr, profBonus, getSlots, SKILLS, SPELL_SCHOOLS, DEFAULT_CHARACTER } from '../../data/dnd5e'
+import { useCampaign } from '../../context/CampaignContext'
+import { mod, modStr, profBonus, getSlots, computeMulticlassSlots, CLASSES, SKILLS, SPELL_SCHOOLS, DEFAULT_CHARACTER } from '../../data/dnd5e'
 import styles from '../../styles/sheet.module.css'
+import { compressImage } from '../../utils/compressImage'
+
+const DEFAULT_PANEL_LAYOUT = {
+  left:   ['abilities', 'skills'],
+  center: ['combat', 'attacks', 'spells', 'personality'],
+  right:  ['resources', 'features', 'equipment', 'proficiencies', 'backstory']
+}
 
 // Toast system
 function useToast() {
@@ -21,43 +27,43 @@ function useToast() {
 export default function CharacterSheet() {
   const { id } = useParams()
   const { user } = useAuth()
+  const { readFile } = useCampaign()
   const navigate = useNavigate()
   const { toasts, show: showToast } = useToast()
 
   const [char, setChar] = useState(null)
   const [loading, setLoading] = useState(true)
   const saveTimer = useRef(null)
+  const spellDragState = useRef({ active: false, fromIdx: -1, toIdx: -1 })
+  const [spellDragOver, setSpellDragOver] = useState(-1)
+  const spellListRef = useRef(null)
+  const panelDragRef = useRef(null)
+  const [draggingPanel, setDraggingPanel] = useState(null)
+  const [panelDragTarget, setPanelDragTarget] = useState(null)
   const [mobileTab, setMobileTab] = useState('tab-combat')
   const [spellBrowserOpen, setSpellBrowserOpen] = useState(false)
 
-  // Load character from Firestore
+  // Load character from local storage
   useEffect(() => {
-    if (!user || !id) return
-    const ref = doc(db, `users/${user.uid}/characters/${id}`)
-    const unsub = onSnapshot(ref, snap => {
-      if (snap.exists()) {
-        const data = { ...DEFAULT_CHARACTER, ...snap.data() }
-        setChar(data)
-        setLoading(false)
-      } else {
-        setLoading(false)
-      }
-    })
-    return unsub
-  }, [user, id])
+    if (!id) return
+    readFile('characters', id).then(data => {
+      if (data) setChar({ ...DEFAULT_CHARACTER, ...data })
+      setLoading(false)
+    }).catch(() => setLoading(false))
+  }, [id])
 
   // Debounced auto-save
   const autoSave = useCallback((updatedChar) => {
     clearTimeout(saveTimer.current)
     saveTimer.current = setTimeout(async () => {
-      if (!user || !id) return
+      if (!id) return
       try {
-        await fsSet(`users/${user.uid}/characters`, id, updatedChar)
+        await fsSet('local/data/characters', id, updatedChar)
       } catch (e) {
         console.error('Save error', e)
       }
     }, 400)
-  }, [user, id])
+  }, [id])
 
   const update = useCallback((partial) => {
     setChar(prev => {
@@ -102,7 +108,11 @@ export default function CharacterSheet() {
   const hpBarBg = hpPct < 25 ? 'linear-gradient(90deg,#4a0000,#8b1a1a)' : hpPct < 50 ? 'linear-gradient(90deg,#8b1a1a,#b22222)' : 'linear-gradient(90deg,#8b1a1a,#cc3333)'
   const hpLabel = `${hpCur}/${hpMax}${hpTemp ? ` (+${hpTemp})` : ''}`
 
-  const spellSlots = char?._spellType ? getSlots(char._spellType, level) : {}
+  const multiclassResult = char?._multiclass ? computeMulticlassSlots(char._classes || []) : null
+  const spellSlots = char?._multiclass
+    ? (multiclassResult?.slots || {})
+    : (char?._spellType ? getSlots(char._spellType, level) : {})
+  const warlockMultiSlots = multiclassResult?.warlockSlots || null
   const slotUsed = char?._slotUsed || {}
 
   function toggleSlot(lvl, idx) {
@@ -127,17 +137,27 @@ export default function CharacterSheet() {
     const input = document.createElement('input')
     input.type = 'file'
     input.accept = 'image/*'
-    input.onchange = e => {
+    input.onchange = async e => {
       const file = e.target.files[0]
       if (!file) return
-      const reader = new FileReader()
-      reader.onload = ev => {
-        update({ _portrait: ev.target.result })
+      try {
+        const compressed = await compressImage(file, 300, 300, 0.85)
+        update({ _portrait: compressed })
         showToast('Portrait mis à jour')
-      }
-      reader.readAsDataURL(file)
+      } catch { showToast('Erreur lors du chargement de l\'image') }
     }
     input.click()
+  }
+
+  async function handlePortraitDrop(e) {
+    e.preventDefault()
+    const file = e.dataTransfer?.files?.[0]
+    if (!file || !file.type.startsWith('image/')) return
+    try {
+      const compressed = await compressImage(file, 300, 300, 0.85)
+      update({ _portrait: compressed })
+      showToast('Portrait mis à jour')
+    } catch { showToast('Erreur lors du chargement de l\'image') }
   }
 
   // Long rest
@@ -329,9 +349,93 @@ export default function CharacterSheet() {
     return mobileTab === tab
   }
 
+  function startSpellDrag(e, fromIdx) {
+    e.preventDefault()
+    spellDragState.current = { active: true, fromIdx, toIdx: fromIdx }
+    setSpellDragOver(fromIdx)
+
+    function onMove(ev) {
+      if (!spellListRef.current) return
+      const items = [...spellListRef.current.querySelectorAll('[data-spell-idx]')]
+      let closest = -1, closestDist = Infinity
+      items.forEach(el => {
+        const rect = el.getBoundingClientRect()
+        const midY = rect.top + rect.height / 2
+        const dist = Math.abs(ev.clientY - midY)
+        if (dist < closestDist) { closestDist = dist; closest = parseInt(el.dataset.spellIdx) }
+      })
+      if (closest !== -1 && closest !== spellDragState.current.toIdx) {
+        spellDragState.current.toIdx = closest
+        setSpellDragOver(closest)
+      }
+    }
+
+    function onUp() {
+      const { fromIdx, toIdx } = spellDragState.current
+      spellDragState.current = { active: false, fromIdx: -1, toIdx: -1 }
+      setSpellDragOver(-1)
+      if (fromIdx !== toIdx && fromIdx >= 0 && toIdx >= 0) {
+        const spells = [...(char?._spells || [])]
+        const [moved] = spells.splice(fromIdx, 1)
+        spells.splice(toIdx, 0, moved)
+        update({ _spells: spells })
+      }
+      window.removeEventListener('pointermove', onMove)
+      window.removeEventListener('pointerup', onUp)
+    }
+
+    window.addEventListener('pointermove', onMove)
+    window.addEventListener('pointerup', onUp)
+  }
+
+  // Panel drag/drop
+  const panelLayout = char?._panelLayout || DEFAULT_PANEL_LAYOUT
+
+  function onPanelDragStart(id, col) {
+    panelDragRef.current = { id, col }
+    setDraggingPanel(id)
+  }
+
+  function onPanelDrop(targetId, targetCol) {
+    const drag = panelDragRef.current
+    setDraggingPanel(null)
+    if (!drag || drag.id === targetId) { panelDragRef.current = null; return }
+    const layout = {
+      left: [...(panelLayout.left || [])],
+      center: [...(panelLayout.center || [])],
+      right: [...(panelLayout.right || [])]
+    }
+    layout[drag.col] = layout[drag.col].filter(id => id !== drag.id)
+    const targetIdx = layout[targetCol].indexOf(targetId)
+    if (targetIdx >= 0) layout[targetCol].splice(targetIdx, 0, drag.id)
+    else layout[targetCol].push(drag.id)
+    update({ _panelLayout: layout })
+    panelDragRef.current = null
+  }
+
+  function onColumnDrop(targetCol) {
+    const drag = panelDragRef.current
+    setDraggingPanel(null)
+    if (!drag) return
+    const layout = {
+      left: [...(panelLayout.left || [])],
+      center: [...(panelLayout.center || [])],
+      right: [...(panelLayout.right || [])]
+    }
+    if (layout[drag.col].includes(drag.id)) {
+      layout[drag.col] = layout[drag.col].filter(id => id !== drag.id)
+      layout[targetCol].push(drag.id)
+      update({ _panelLayout: layout })
+    }
+    panelDragRef.current = null
+  }
+
+  function resetPanelLayout() {
+    update({ _panelLayout: DEFAULT_PANEL_LAYOUT })
+  }
+
   // Add spell from browser
   function addSpellFromBrowser(spellData) {
-    addSpell()
     const spells = [...(char?._spells || []), {
       prepared: false,
       level: spellData.level || 0,
@@ -342,7 +446,7 @@ export default function CharacterSheet() {
       v: !!(spellData.components?.verbal),
       s: !!(spellData.components?.somatic),
       m: !!(spellData.components?.material),
-      summary: spellData.desc?.[0] || '',
+      summary: (Array.isArray(spellData.desc) ? spellData.desc[0] : spellData.desc) || '',
       expanded: false,
     }]
     update({ _spells: spells })
@@ -371,12 +475,594 @@ export default function CharacterSheet() {
     return { k, total, isProf }
   })
 
+  // Panel mobile tab mapping
+  const PANEL_MOBILE_TAB = {
+    abilities: 'tab-stats', skills: 'tab-stats',
+    combat: 'tab-combat', attacks: 'tab-combat',
+    spells: 'tab-spells',
+    personality: 'tab-perso', backstory: 'tab-perso',
+    resources: 'tab-traits', features: 'tab-traits',
+    equipment: 'tab-gear', proficiencies: 'tab-gear'
+  }
+
+  function wrapPanel(id, col, content) {
+    if (id === 'spells' && !char?._spellType && !char?._multiclass) return null
+    const mobileHidden = PANEL_MOBILE_TAB[id] && mobileTab !== PANEL_MOBILE_TAB[id] && typeof window !== 'undefined' && window.innerWidth <= 768
+    return (
+      <div
+        key={id}
+        data-panel-id={id}
+        draggable
+        onDragStart={e => { e.dataTransfer.effectAllowed = 'move'; e.stopPropagation(); onPanelDragStart(id, col) }}
+        onDragOver={e => { e.preventDefault(); e.stopPropagation(); setPanelDragTarget(id) }}
+        onDragLeave={e => { if (!e.currentTarget.contains(e.relatedTarget)) setPanelDragTarget(null) }}
+        onDrop={e => { e.preventDefault(); e.stopPropagation(); setPanelDragTarget(null); onPanelDrop(id, col) }}
+        style={mobileHidden ? { display: 'none' } : {
+          opacity: draggingPanel === id ? 0.45 : 1,
+          outline: panelDragTarget === id && draggingPanel !== id ? '2px solid #d4a843' : 'none',
+          outlineOffset: '2px',
+          borderRadius: '4px',
+          transition: 'opacity 0.15s, outline 0.1s'
+        }}
+      >
+        {content}
+      </div>
+    )
+  }
+
+  function getPanelContent(id, col) {
+    switch (id) {
+      case 'abilities': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>Caractéristiques</span>
+            <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.7rem', color: '#7a6a55' }}>
+              Maîtrise: <strong style={{ color: '#d4a843' }}>+{prof}</strong>
+            </span>
+          </div>
+          <div className={styles.panelBody}>
+            <div className={styles.abilityScores}>
+              {[
+                { k: 'str', label: 'FOR' }, { k: 'dex', label: 'DEX' }, { k: 'con', label: 'CON' },
+                { k: 'int', label: 'INT' }, { k: 'wis', label: 'SAG' }, { k: 'cha', label: 'CHA' }
+              ].map(({ k, label }) => {
+                const saveData = saves.find(s => s.k === k)
+                const abilField = `ability_${k}`
+                return (
+                  <div key={k} className={styles.abilityBlock}>
+                    <div className={styles.abilityName}>{label}</div>
+                    <input
+                      type="number" min="1" max="30"
+                      className={styles.abilityScoreInput}
+                      {...numField(abilField, 10)}
+                    />
+                    <div className={styles.abilityMod}>{modStr(char?.[abilField] ?? 10)}</div>
+                    <div className={styles.abilitySave}>
+                      <input
+                        type="checkbox"
+                        checked={!!(char?.[`save_prof_${k}`])}
+                        onChange={() => update({ [`save_prof_${k}`]: !(char?.[`save_prof_${k}`]) })}
+                      />
+                      <label>JdS</label>
+                      <span className={styles.abilitySaveVal}>{saveData?.total >= 0 ? '+' + saveData?.total : '' + saveData?.total}</span>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      ))
+
+      case 'skills': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>Compétences</span>
+          </div>
+          <div className={styles.panelBody}>
+            <div style={{ fontSize: '0.65rem', color: '#7a6a55', marginBottom: '0.4rem', fontStyle: 'italic' }}>
+              ☑ Maîtrise ▪ Expertise
+            </div>
+            {SKILLS.map((sk, i) => {
+              const isProf = !!(char?._skillProf?.[i])
+              const isExpert = !!(char?._skillExpert?.[i])
+              const m = skillMods[i]
+              return (
+                <div key={i} className={styles.skillItem}>
+                  <input type="checkbox" checked={isProf} onChange={() => toggleSkillProf(i)} title="Maîtrise" style={{ accentColor: '#d4a843' }} />
+                  <input type="checkbox" checked={isExpert} onChange={() => toggleSkillExpert(i)} title="Expertise" style={{ width: 12, height: 12, borderRadius: 2, accentColor: '#d4a843' }} />
+                  <span className={styles.skillMod} style={{ color: isProf || isExpert ? '#d4a843' : '#d8c8a8' }}>{m >= 0 ? `+${m}` : `${m}`}</span>
+                  <span className={styles.skillName}>{sk.name}</span>
+                  <span className={styles.skillAbilityTag}>{sk.ability.toUpperCase()}</span>
+                </div>
+              )
+            })}
+            <div style={{ marginTop: '0.7rem', paddingTop: '0.5rem', borderTop: '1px solid #4a3420' }}>
+              <div className={styles.skillItem}>
+                <span className={styles.skillName} style={{ color: '#d4a843' }}>Perception passive</span>
+                <span className={styles.passivePerception}>{passivePerc}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+
+      case 'combat': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>⚔️ Combat</span>
+          </div>
+          <div className={styles.panelBody}>
+            <div className={styles.combatGrid}>
+              {[
+                { label: "Classe d'armure", field: 'ac', defaultVal: 10 },
+                { label: 'Initiative', field: 'initiative', defaultVal: 0 },
+                { label: 'Vitesse', field: 'speed', defaultVal: '9m', text: true },
+              ].map(({ label, field: f, defaultVal, text }) => (
+                <div key={f} className={styles.combatStat}>
+                  <div className={styles.combatStatLabel}>{label}</div>
+                  <div className={styles.combatStatValue}>
+                    <input
+                      type={text ? 'text' : 'number'}
+                      value={char?.[f] ?? defaultVal}
+                      onChange={e => update({ [f]: text ? e.target.value : Number(e.target.value) })}
+                      style={{ fontSize: text ? '1rem' : '1.3rem' }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* HP */}
+            <div className={styles.hpSection}>
+              <div className={styles.hpBarContainer}>
+                <div className={styles.hpBarFill} style={{ width: `${hpPct}%`, background: hpBarBg }} />
+                <div className={styles.hpBarText}>{hpLabel}</div>
+              </div>
+              <div className={styles.hpInputs}>
+                {[
+                  { label: 'PV actuels', f: 'hp_current' },
+                  { label: 'PV max', f: 'hp_max' },
+                  { label: 'PV temp', f: 'hp_temp' },
+                ].map(({ label, f }) => (
+                  <div key={f} className={styles.fieldGroup}>
+                    <label className={styles.fieldLabel}>{label}</label>
+                    <input className={styles.fieldInput} type="number" style={{ textAlign: 'center' }} {...numField(f)} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Death saves */}
+            <div style={{ marginTop: '0.6rem' }}>
+              <label className={styles.fieldLabel} style={{ textAlign: 'center', display: 'block' }}>
+                Jets de sauvegarde contre la mort
+              </label>
+              <div className={styles.deathSaves}>
+                <div className={`${styles.deathSaveGroup} ${styles.deathSaveSuccess}`}>
+                  <label>Réussites</label>
+                  <div className={styles.deathSaveChecks}>
+                    {['s1','s2','s3'].map(k => (
+                      <input key={k} type="checkbox" checked={!!(char?._deathSaves?.[k])} onChange={() => toggleDeathSave(k)} />
+                    ))}
+                  </div>
+                </div>
+                <div className={`${styles.deathSaveGroup} ${styles.deathSaveFailure}`}>
+                  <label>Échecs</label>
+                  <div className={styles.deathSaveChecks}>
+                    {['f1','f2','f3'].map(k => (
+                      <input key={k} type="checkbox" checked={!!(char?._deathSaves?.[k])} onChange={() => toggleDeathSave(k)} />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Hit dice */}
+            <div className={styles.fieldRow} style={{ marginTop: '0.5rem' }}>
+              <div className={styles.fieldGroup}>
+                <label className={styles.fieldLabel}>DV restants</label>
+                <input className={styles.fieldInput} type="text" placeholder="ex: 5d10" style={{ textAlign: 'center' }} {...field('hit_dice_remaining')} />
+              </div>
+              <div className={styles.fieldGroup}>
+                <label className={styles.fieldLabel}>Total DV</label>
+                <input className={styles.fieldInput} type="text" placeholder="ex: 5d10" style={{ textAlign: 'center' }} {...field('hit_dice_total')} />
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+
+      case 'attacks': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>⚔️ Attaques</span>
+            <button className={styles.panelAddBtn} onClick={addAttack} title="Ajouter attaque">+</button>
+          </div>
+          <div className={styles.panelBody}>
+            <table className={styles.attacksTable}>
+              <thead>
+                <tr>
+                  <th>Nom</th><th>Bonus</th><th>Dégâts</th><th>Type</th><th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {(char?._attacks || []).map((atk, i) => (
+                  <tr key={i}>
+                    <td><input type="text" placeholder="Nom" value={atk.name || ''} onChange={e => updateAttack(i, 'name', e.target.value)} /></td>
+                    <td><input type="text" placeholder="+0" value={atk.bonus || ''} onChange={e => updateAttack(i, 'bonus', e.target.value)} style={{ width: 48, textAlign: 'center' }} /></td>
+                    <td><input type="text" placeholder="1d8+3" value={atk.damage || ''} onChange={e => updateAttack(i, 'damage', e.target.value)} /></td>
+                    <td><input type="text" placeholder="Tranchant" value={atk.type || ''} onChange={e => updateAttack(i, 'type', e.target.value)} /></td>
+                    <td><button className={styles.attackDelete} onClick={() => removeAttack(i)}>×</button></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ))
+
+      case 'spells': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>🔮 Sorts</span>
+          </div>
+          <div className={styles.panelBody}>
+            <div style={{ display: 'flex', gap: '2rem', marginBottom: '0.8rem' }}>
+              {[
+                { label: 'DD des sorts', f: 'spell_dc' },
+                { label: "Bonus d'attaque", f: 'spell_attack' },
+              ].map(({ label, f }) => (
+                <div key={f} className={styles.combatStat}>
+                  <div className={styles.combatStatLabel}>{label}</div>
+                  <div className={styles.combatStatValue}>
+                    <input type="number" {...numField(f, 10)} />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Multiclasse toggle + class pickers */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+              <label className={styles.fieldLabel} style={{ margin: 0 }}>Multiclasse</label>
+              <input type="checkbox" checked={!!char?._multiclass}
+                onChange={e => update({ _multiclass: e.target.checked, _classes: char?._classes?.length ? char._classes : [{ classId: '', level: 1 }, { classId: '', level: 1 }] })} />
+            </div>
+            {char?._multiclass && (
+              <div style={{ marginBottom: '0.8rem', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                {(char._classes || []).map((pick, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '0.35rem', alignItems: 'center' }}>
+                    <select value={pick.classId}
+                      onChange={e => {
+                        const classes = [...(char._classes || [])]
+                        classes[i] = { ...classes[i], classId: e.target.value }
+                        update({ _classes: classes })
+                      }}
+                      style={{ flex: 1, background: '#1a1410', border: '1px solid #4a3420', color: pick.classId ? '#d8c8a8' : '#7a6a55', borderRadius: 3, padding: '0.25rem 0.4rem', fontSize: '0.78rem', fontFamily: 'EB Garamond, serif' }}>
+                      <option value="">— Classe —</option>
+                      {CLASSES.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                    </select>
+                    <input type="number" min="1" max="20" value={pick.level}
+                      onChange={e => {
+                        const classes = [...(char._classes || [])]
+                        classes[i] = { ...classes[i], level: Math.max(1, Math.min(20, parseInt(e.target.value) || 1)) }
+                        update({ _classes: classes })
+                      }}
+                      style={{ width: 44, background: '#1a1410', border: '1px solid #4a3420', color: '#d4a843', borderRadius: 3, padding: '0.25rem', fontSize: '0.85rem', textAlign: 'center' }} />
+                    {(char._classes || []).length > 1 && (
+                      <button onClick={() => { const classes = (char._classes || []).filter((_, j) => j !== i); update({ _classes: classes }) }}
+                        style={{ background: 'none', border: 'none', color: '#7a6a55', cursor: 'pointer', fontSize: '0.85rem', padding: '0 0.15rem' }}>✕</button>
+                    )}
+                  </div>
+                ))}
+                {(char._classes || []).length < 6 && (
+                  <button onClick={() => update({ _classes: [...(char._classes || []), { classId: '', level: 1 }] })}
+                    style={{ background: 'none', border: '1px dashed #4a3420', color: '#7a6a55', borderRadius: 3, padding: '0.2rem', fontSize: '0.7rem', cursor: 'pointer', fontFamily: 'Cinzel, serif' }}>
+                    + Ajouter une classe
+                  </button>
+                )}
+                <div style={{ fontSize: '0.68rem', color: '#7a6a55' }}>
+                  Niveau total : {(char._classes || []).reduce((s, p) => s + (parseInt(p.level) || 0), 0)}/20
+                </div>
+              </div>
+            )}
+
+            <label className={styles.fieldLabel}>Emplacements de sorts</label>
+            <div className={styles.spellSlotsGrid}>
+              {Object.entries(spellSlots).map(([lvl, maxSlots]) => (
+                <div key={lvl} className={styles.spellSlotItem}>
+                  <div className={styles.spellSlotLevel}>Niv.{lvl}</div>
+                  <div className={styles.spellSlotDots}>
+                    {Array.from({ length: maxSlots }, (_, i) => {
+                      const key = `${lvl}_${i}`
+                      return (
+                        <div
+                          key={i}
+                          className={`${styles.spellSlotDot}${slotUsed[key] ? ' ' + styles.used : ''}`}
+                          onClick={() => toggleSlot(lvl, i)}
+                          title={slotUsed[key] ? 'Utilisé' : 'Disponible'}
+                        />
+                      )
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+            {warlockMultiSlots && (
+              <div style={{ marginTop: '0.4rem' }}>
+                <label className={styles.fieldLabel} style={{ color: '#b89fff' }}>Magie de Pacte (Occultiste)</label>
+                <div className={styles.spellSlotsGrid}>
+                  <div className={styles.spellSlotItem}>
+                    <div className={styles.spellSlotLevel} style={{ color: '#b89fff' }}>Niv.{warlockMultiSlots.l}</div>
+                    <div className={styles.spellSlotDots}>
+                      {Array.from({ length: warlockMultiSlots.s }, (_, i) => {
+                        const key = `pact_${i}`
+                        return (
+                          <div key={i}
+                            className={`${styles.spellSlotDot}${slotUsed[key] ? ' ' + styles.used : ''}`}
+                            onClick={() => toggleSlot('pact', i)}
+                            title={slotUsed[key] ? 'Utilisé' : 'Disponible'}
+                            style={{ borderColor: '#b89fff' }}
+                          />
+                        )
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <div className={styles.panelHeader} style={{ marginBottom: '0.4rem', padding: '0.3rem 0' }}>
+              <span className={styles.panelTitle} style={{ fontSize: '0.72rem' }}>Liste de sorts</span>
+              <div className={styles.spellSortBtns}>
+                <button className={styles.btnSmall} onClick={() => sortSpells('level')}>↕ Niv.</button>
+                <button className={styles.btnSmall} onClick={() => sortSpells('school')}>↕ École</button>
+                <button className={`${styles.btnSmall} ${styles.btnArcane}`} onClick={() => setSpellBrowserOpen(true)}>📚 Bibliothèque</button>
+                <button className={styles.panelAddBtn} onClick={addSpell}>+</button>
+              </div>
+            </div>
+
+            <div ref={spellListRef} className={styles.spellList}>
+              {(char?._spells || []).map((sp, i) => (
+                <div key={i} data-spell-idx={i} style={{ position: 'relative' }}>
+                  {spellDragOver === i && spellDragState.current.fromIdx !== i && (
+                    <div style={{
+                      position: 'absolute', top: -2, left: 0, right: 0, height: 3,
+                      background: '#d4a843', borderRadius: 2, zIndex: 10,
+                      boxShadow: '0 0 8px rgba(212,168,67,0.8)'
+                    }} />
+                  )}
+                  <SpellItem
+                    spell={sp}
+                    onChange={partial => updateSpell(i, partial)}
+                    onRemove={() => removeSpell(i)}
+                    onDragHandlePointerDown={e => startSpellDrag(e, i)}
+                    isDragging={spellDragState.current.active && spellDragState.current.fromIdx === i}
+                    styles={styles}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))
+
+      case 'personality': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>📜 Personnalité</span>
+          </div>
+          <div className={styles.panelBody}>
+            {[
+              { label: 'Traits de personnalité', f: '_traits', placeholder: 'Décrivez vos traits...' },
+              { label: 'Idéaux', f: '_ideals', placeholder: 'Ce en quoi vous croyez...' },
+              { label: 'Liens', f: '_bonds', placeholder: 'Vos connexions...' },
+              { label: 'Défauts', f: '_flaws', placeholder: 'Vos faiblesses...' },
+            ].map(({ label, f, placeholder }) => (
+              <div key={f} className={styles.fieldGroup} style={{ marginBottom: '0.6rem' }}>
+                <label className={styles.fieldLabel}>{label}</label>
+                <textarea
+                  className={styles.notesArea}
+                  style={{ minHeight: 46 }}
+                  placeholder={placeholder}
+                  value={char?.[f] || ''}
+                  onChange={e => update({ [f]: e.target.value })}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+
+      case 'resources': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>⚡ Ressources</span>
+            <button className={styles.panelAddBtn} onClick={addResource}>+</button>
+          </div>
+          <div className={styles.panelBody} style={{ padding: '0.6rem' }}>
+            <div style={{ fontSize: '0.65rem', color: '#7a6a55', marginBottom: '0.4rem', fontStyle: 'italic' }}>
+              Cliquer sur un point pour l'utiliser.
+            </div>
+            {(char?._resources || []).map((res, i) => (
+              <div key={i} className={styles.resourceItem}>
+                <div className={styles.resourceHeaderRow}>
+                  <input
+                    type="text"
+                    className={styles.resourceName}
+                    placeholder="Rage, Ki..."
+                    value={res.name || ''}
+                    onChange={e => updateResource(i, { name: e.target.value })}
+                  />
+                  <select
+                    className={styles.resourceRecharge}
+                    value={res.recharge || 'long'}
+                    onChange={e => updateResource(i, { recharge: e.target.value })}
+                  >
+                    <option value="long">⟳ Long</option>
+                    <option value="short">⟳ Court</option>
+                    <option value="manual">Manuel</option>
+                  </select>
+                  <label className={styles.resourceMaxLabel}>
+                    Max
+                    <input
+                      type="number" min="0" max="30"
+                      className={styles.resourceMaxInput}
+                      value={res.max || 0}
+                      onChange={e => updateResource(i, { max: parseInt(e.target.value) || 0 })}
+                    />
+                  </label>
+                  <button className={styles.equipmentDelete} onClick={() => removeResource(i)}>×</button>
+                </div>
+                <div className={styles.resourceDotsRow}>
+                  {(res.dots || []).map((spent, j) => (
+                    <div
+                      key={j}
+                      className={`${styles.resourceDot}${spent ? ' ' + styles.spent : ''}`}
+                      onClick={() => toggleResourceDot(i, j)}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+
+      case 'features': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>📋 Capacités & Traits</span>
+            <button className={styles.panelAddBtn} onClick={addFeature}>+</button>
+          </div>
+          <div className={styles.panelBody}>
+            {(char?._features || []).map((feat, i) => (
+              <div key={i} className={styles.featureEdit}>
+                <div className={styles.featureFields}>
+                  <input
+                    type="text"
+                    className={styles.fieldInput}
+                    placeholder="Nom du trait"
+                    value={feat.name || ''}
+                    onChange={e => updateFeature(i, { name: e.target.value })}
+                  />
+                  <textarea
+                    className={styles.notesArea}
+                    placeholder="Description…"
+                    style={{ minHeight: 38, fontSize: '0.85rem' }}
+                    value={feat.desc || ''}
+                    onChange={e => updateFeature(i, { desc: e.target.value })}
+                  />
+                </div>
+                <button className={styles.equipmentDelete} onClick={() => removeFeature(i)}>×</button>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+
+      case 'equipment': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>🎒 Équipement</span>
+            <button className={styles.panelAddBtn} onClick={addEquipment}>+</button>
+          </div>
+          <div className={styles.panelBody}>
+            {(char?._equipment || []).map((item, i) => (
+              <div key={i} className={styles.equipmentItem}>
+                <input
+                  type="text"
+                  placeholder="…"
+                  value={item}
+                  onChange={e => updateEquipment(i, e.target.value)}
+                />
+                <button className={styles.equipmentDelete} onClick={() => removeEquipment(i)}>×</button>
+              </div>
+            ))}
+            <div style={{ marginTop: '0.8rem' }}>
+              <label className={styles.fieldLabel}>Monnaie</label>
+              <div className={styles.currencyGrid}>
+                {[
+                  { label: 'PC', f: 'cp' },
+                  { label: 'PA', f: 'sp' },
+                  { label: 'PE', f: 'ep' },
+                  { label: 'PO', f: 'gp' },
+                  { label: 'PP', f: 'pp' },
+                ].map(({ label, f }) => (
+                  <div key={f} className={styles.currencyItem}>
+                    <div className={styles.currencyLabel}>{label}</div>
+                    <input type="number" className={styles.currencyInput} min="0" {...numField(f)} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+
+      case 'proficiencies': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>🗣️ Maîtrises & Langues</span>
+          </div>
+          <div className={styles.panelBody}>
+            <div className={styles.tagList}>
+              {(char?._profLanguages || []).map((tag, i) => (
+                <span key={i} className={styles.tag}>
+                  {tag}
+                  <button className={styles.tagDelete} onClick={() => removeTag(i)}>×</button>
+                </span>
+              ))}
+            </div>
+            <TagInput onAdd={addTag} styles={styles} />
+          </div>
+        </div>
+      ))
+
+      case 'backstory': return wrapPanel(id, col, (
+        <div className={styles.panel}>
+          <div className={styles.panelHeader}>
+            <span className={styles.panelDragHandle} title="Déplacer le panneau">⠿</span>
+            <span className={styles.panelTitle}>📖 Histoire & Notes</span>
+          </div>
+          <div className={styles.panelBody}>
+            <div className={styles.fieldGroup} style={{ marginBottom: '0.6rem' }}>
+              <label className={styles.fieldLabel}>Histoire du personnage</label>
+              <textarea className={styles.notesArea} style={{ minHeight: 80 }} placeholder="L'histoire de votre personnage..."
+                value={char?._backstory || ''} onChange={e => update({ _backstory: e.target.value })} />
+            </div>
+            <div className={styles.fieldGroup}>
+              <label className={styles.fieldLabel}>Notes de jeu</label>
+              <textarea className={styles.notesArea} style={{ minHeight: 80 }} placeholder="Notes diverses..."
+                value={char?._notes || ''} onChange={e => update({ _notes: e.target.value })} />
+            </div>
+          </div>
+        </div>
+      ))
+
+      default: return null
+    }
+  }
+
   return (
     <div>
       {/* HEADER */}
       <header className={styles.sheetHeader}>
         <div className={styles.headerLeft}>
-          <div className={styles.portraitThumb} onClick={uploadPortrait} title="Cliquer pour changer le portrait">
+          <div className={styles.portraitThumb} onClick={uploadPortrait} title="Cliquer ou glisser une image"
+            onDragOver={e => e.preventDefault()}
+            onDrop={handlePortraitDrop}
+          >
             {char._portrait
               ? <img src={char._portrait} alt="Portrait" />
               : <span style={{ fontSize: '1.3rem' }}>👤</span>
@@ -395,6 +1081,7 @@ export default function CharacterSheet() {
           <button className={`${styles.btn} ${styles.btnLongRest}`} onClick={longRest}>🌙 Long</button>
           <button className={styles.btn} onClick={exportJSON} title="Exporter JSON">📤</button>
           <button className={styles.btn} onClick={importJSON} title="Importer JSON">📥</button>
+          <button className={styles.btn} onClick={resetPanelLayout} title="Réinitialiser la mise en page">⊞</button>
           <button className={`${styles.btn} ${styles.btnDanger}`} onClick={resetSheet} title="Réinitialiser">🗑️</button>
         </div>
       </header>
@@ -477,458 +1164,27 @@ export default function CharacterSheet() {
         <div className={styles.sheetGrid}>
 
           {/* LEFT COLUMN */}
-          <div className="col-left">
-
-            {/* ABILITIES */}
-            <div className={styles.panel} data-tab="tab-stats" style={mobileTab !== 'tab-stats' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>Caractéristiques</span>
-                <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.7rem', color: '#7a6a55' }}>
-                  Maîtrise: <strong style={{ color: '#d4a843' }}>+{prof}</strong>
-                </span>
-              </div>
-              <div className={styles.panelBody}>
-                <div className={styles.abilityScores}>
-                  {[
-                    { k: 'str', label: 'FOR' }, { k: 'dex', label: 'DEX' }, { k: 'con', label: 'CON' },
-                    { k: 'int', label: 'INT' }, { k: 'wis', label: 'SAG' }, { k: 'cha', label: 'CHA' }
-                  ].map(({ k, label }) => {
-                    const saveData = saves.find(s => s.k === k)
-                    const abilField = `ability_${k}`
-                    return (
-                      <div key={k} className={styles.abilityBlock}>
-                        <div className={styles.abilityName}>{label}</div>
-                        <input
-                          type="number" min="1" max="30"
-                          className={styles.abilityScoreInput}
-                          {...numField(abilField, 10)}
-                        />
-                        <div className={styles.abilityMod}>{modStr(char?.[abilField] ?? 10)}</div>
-                        <div className={styles.abilitySave}>
-                          <input
-                            type="checkbox"
-                            checked={!!(char?.[`save_prof_${k}`])}
-                            onChange={() => update({ [`save_prof_${k}`]: !(char?.[`save_prof_${k}`]) })}
-                          />
-                          <label>JdS</label>
-                          <span className={styles.abilitySaveVal}>{saveData?.total >= 0 ? '+' + saveData?.total : '' + saveData?.total}</span>
-                        </div>
-                      </div>
-                    )
-                  })}
-                </div>
-              </div>
-            </div>
-
-            {/* SKILLS */}
-            <div className={styles.panel} data-tab="tab-stats" style={mobileTab !== 'tab-stats' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>Compétences</span>
-              </div>
-              <div className={styles.panelBody}>
-                <div style={{ fontSize: '0.65rem', color: '#7a6a55', marginBottom: '0.4rem', fontStyle: 'italic' }}>
-                  ☑ Maîtrise ▪ Expertise
-                </div>
-                {SKILLS.map((sk, i) => {
-                  const isProf = !!(char?._skillProf?.[i])
-                  const isExpert = !!(char?._skillExpert?.[i])
-                  const m = skillMods[i]
-                  return (
-                    <div key={i} className={styles.skillItem}>
-                      <input type="checkbox" checked={isProf} onChange={() => toggleSkillProf(i)} title="Maîtrise" style={{ accentColor: '#d4a843' }} />
-                      <input type="checkbox" checked={isExpert} onChange={() => toggleSkillExpert(i)} title="Expertise" style={{ width: 12, height: 12, borderRadius: 2, accentColor: '#d4a843' }} />
-                      <span className={styles.skillMod} style={{ color: isProf || isExpert ? '#d4a843' : '#d8c8a8' }}>{m >= 0 ? `+${m}` : `${m}`}</span>
-                      <span className={styles.skillName}>{sk.name}</span>
-                      <span className={styles.skillAbilityTag}>{sk.ability.toUpperCase()}</span>
-                    </div>
-                  )
-                })}
-                <div style={{ marginTop: '0.7rem', paddingTop: '0.5rem', borderTop: '1px solid #4a3420' }}>
-                  <div className={styles.skillItem}>
-                    <span className={styles.skillName} style={{ color: '#d4a843' }}>Perception passive</span>
-                    <span className={styles.passivePerception}>{passivePerc}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div className="col-left"
+            onDragOver={e => e.preventDefault()}
+            onDrop={e => { e.preventDefault(); onColumnDrop('left') }}
+          >
+            {(panelLayout.left || []).map(id => getPanelContent(id, 'left'))}
           </div>
 
           {/* CENTER COLUMN */}
-          <div className="col-center">
-
-            {/* COMBAT */}
-            <div className={styles.panel} data-tab="tab-combat" style={mobileTab !== 'tab-combat' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>⚔️ Combat</span>
-              </div>
-              <div className={styles.panelBody}>
-                <div className={styles.combatGrid}>
-                  {[
-                    { label: "Classe d'armure", field: 'ac', defaultVal: 10 },
-                    { label: 'Initiative', field: 'initiative', defaultVal: 0 },
-                    { label: 'Vitesse', field: 'speed', defaultVal: '9m', text: true },
-                  ].map(({ label, field: f, defaultVal, text }) => (
-                    <div key={f} className={styles.combatStat}>
-                      <div className={styles.combatStatLabel}>{label}</div>
-                      <div className={styles.combatStatValue}>
-                        <input
-                          type={text ? 'text' : 'number'}
-                          value={char?.[f] ?? defaultVal}
-                          onChange={e => update({ [f]: text ? e.target.value : Number(e.target.value) })}
-                          style={{ fontSize: text ? '1rem' : '1.3rem' }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* HP */}
-                <div className={styles.hpSection}>
-                  <div className={styles.hpBarContainer}>
-                    <div className={styles.hpBarFill} style={{ width: `${hpPct}%`, background: hpBarBg }} />
-                    <div className={styles.hpBarText}>{hpLabel}</div>
-                  </div>
-                  <div className={styles.hpInputs}>
-                    {[
-                      { label: 'PV actuels', f: 'hp_current' },
-                      { label: 'PV max', f: 'hp_max' },
-                      { label: 'PV temp', f: 'hp_temp' },
-                    ].map(({ label, f }) => (
-                      <div key={f} className={styles.fieldGroup}>
-                        <label className={styles.fieldLabel}>{label}</label>
-                        <input className={styles.fieldInput} type="number" style={{ textAlign: 'center' }} {...numField(f)} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Death saves */}
-                <div style={{ marginTop: '0.6rem' }}>
-                  <label className={styles.fieldLabel} style={{ textAlign: 'center', display: 'block' }}>
-                    Jets de sauvegarde contre la mort
-                  </label>
-                  <div className={styles.deathSaves}>
-                    <div className={`${styles.deathSaveGroup} ${styles.deathSaveSuccess}`}>
-                      <label>Réussites</label>
-                      <div className={styles.deathSaveChecks}>
-                        {['s1','s2','s3'].map(k => (
-                          <input key={k} type="checkbox" checked={!!(char?._deathSaves?.[k])} onChange={() => toggleDeathSave(k)} />
-                        ))}
-                      </div>
-                    </div>
-                    <div className={`${styles.deathSaveGroup} ${styles.deathSaveFailure}`}>
-                      <label>Échecs</label>
-                      <div className={styles.deathSaveChecks}>
-                        {['f1','f2','f3'].map(k => (
-                          <input key={k} type="checkbox" checked={!!(char?._deathSaves?.[k])} onChange={() => toggleDeathSave(k)} />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Hit dice */}
-                <div className={styles.fieldRow} style={{ marginTop: '0.5rem' }}>
-                  <div className={styles.fieldGroup}>
-                    <label className={styles.fieldLabel}>DV restants</label>
-                    <input className={styles.fieldInput} type="text" placeholder="ex: 5d10" style={{ textAlign: 'center' }} {...field('hit_dice_remaining')} />
-                  </div>
-                  <div className={styles.fieldGroup}>
-                    <label className={styles.fieldLabel}>Total DV</label>
-                    <input className={styles.fieldInput} type="text" placeholder="ex: 5d10" style={{ textAlign: 'center' }} {...field('hit_dice_total')} />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* ATTACKS */}
-            <div className={styles.panel} data-tab="tab-combat" style={mobileTab !== 'tab-combat' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>⚔️ Attaques</span>
-                <button className={styles.panelAddBtn} onClick={addAttack} title="Ajouter attaque">+</button>
-              </div>
-              <div className={styles.panelBody}>
-                <table className={styles.attacksTable}>
-                  <thead>
-                    <tr>
-                      <th>Nom</th><th>Bonus</th><th>Dégâts</th><th>Type</th><th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {(char?._attacks || []).map((atk, i) => (
-                      <tr key={i}>
-                        <td><input type="text" placeholder="Nom" value={atk.name || ''} onChange={e => updateAttack(i, 'name', e.target.value)} /></td>
-                        <td><input type="text" placeholder="+0" value={atk.bonus || ''} onChange={e => updateAttack(i, 'bonus', e.target.value)} style={{ width: 48, textAlign: 'center' }} /></td>
-                        <td><input type="text" placeholder="1d8+3" value={atk.damage || ''} onChange={e => updateAttack(i, 'damage', e.target.value)} /></td>
-                        <td><input type="text" placeholder="Tranchant" value={atk.type || ''} onChange={e => updateAttack(i, 'type', e.target.value)} /></td>
-                        <td><button className={styles.attackDelete} onClick={() => removeAttack(i)}>×</button></td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* SPELLS */}
-            {char?._spellType && (
-              <div className={styles.panel} data-tab="tab-spells" style={mobileTab !== 'tab-spells' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-                <div className={styles.panelHeader}>
-                  <span className={styles.panelTitle}>🔮 Sorts</span>
-                </div>
-                <div className={styles.panelBody}>
-                  <div style={{ display: 'flex', gap: '2rem', marginBottom: '0.8rem' }}>
-                    {[
-                      { label: 'DD des sorts', f: 'spell_dc' },
-                      { label: "Bonus d'attaque", f: 'spell_attack' },
-                    ].map(({ label, f }) => (
-                      <div key={f} className={styles.combatStat}>
-                        <div className={styles.combatStatLabel}>{label}</div>
-                        <div className={styles.combatStatValue}>
-                          <input type="number" {...numField(f, 10)} />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <label className={styles.fieldLabel}>Emplacements de sorts</label>
-                  <div className={styles.spellSlotsGrid}>
-                    {Object.entries(spellSlots).map(([lvl, maxSlots]) => (
-                      <div key={lvl} className={styles.spellSlotItem}>
-                        <div className={styles.spellSlotLevel}>Niv.{lvl}</div>
-                        <div className={styles.spellSlotDots}>
-                          {Array.from({ length: maxSlots }, (_, i) => {
-                            const key = `${lvl}_${i}`
-                            return (
-                              <div
-                                key={i}
-                                className={`${styles.spellSlotDot}${slotUsed[key] ? ' ' + styles.used : ''}`}
-                                onClick={() => toggleSlot(lvl, i)}
-                                title={slotUsed[key] ? 'Utilisé' : 'Disponible'}
-                              />
-                            )
-                          })}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className={styles.panelHeader} style={{ marginBottom: '0.4rem', padding: '0.3rem 0' }}>
-                    <span className={styles.panelTitle} style={{ fontSize: '0.72rem' }}>Liste de sorts</span>
-                    <div className={styles.spellSortBtns}>
-                      <button className={styles.btnSmall} onClick={() => sortSpells('level')}>↕ Niv.</button>
-                      <button className={styles.btnSmall} onClick={() => sortSpells('school')}>↕ École</button>
-                      <button className={`${styles.btnSmall} ${styles.btnArcane}`} onClick={() => setSpellBrowserOpen(true)}>📚 Bibliothèque</button>
-                      <button className={styles.panelAddBtn} onClick={addSpell}>+</button>
-                    </div>
-                  </div>
-
-                  <div className={styles.spellList}>
-                    {(char?._spells || []).map((sp, i) => (
-                      <SpellItem
-                        key={i}
-                        spell={sp}
-                        onChange={partial => updateSpell(i, partial)}
-                        onRemove={() => removeSpell(i)}
-                        styles={styles}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* PERSONALITY */}
-            <div className={styles.panel} data-tab="tab-perso" style={mobileTab !== 'tab-perso' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>📜 Personnalité</span>
-              </div>
-              <div className={styles.panelBody}>
-                {[
-                  { label: 'Traits de personnalité', f: '_traits', placeholder: 'Décrivez vos traits...' },
-                  { label: 'Idéaux', f: '_ideals', placeholder: 'Ce en quoi vous croyez...' },
-                  { label: 'Liens', f: '_bonds', placeholder: 'Vos connexions...' },
-                  { label: 'Défauts', f: '_flaws', placeholder: 'Vos faiblesses...' },
-                ].map(({ label, f, placeholder }) => (
-                  <div key={f} className={styles.fieldGroup} style={{ marginBottom: '0.6rem' }}>
-                    <label className={styles.fieldLabel}>{label}</label>
-                    <textarea
-                      className={styles.notesArea}
-                      style={{ minHeight: 46 }}
-                      placeholder={placeholder}
-                      value={char?.[f] || ''}
-                      onChange={e => update({ [f]: e.target.value })}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
+          <div className="col-center"
+            onDragOver={e => e.preventDefault()}
+            onDrop={e => { e.preventDefault(); onColumnDrop('center') }}
+          >
+            {(panelLayout.center || []).map(id => getPanelContent(id, 'center'))}
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="col-right">
-
-            {/* RESOURCES */}
-            <div className={styles.panel} data-tab="tab-traits" style={mobileTab !== 'tab-traits' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>⚡ Ressources</span>
-                <button className={styles.panelAddBtn} onClick={addResource}>+</button>
-              </div>
-              <div className={styles.panelBody} style={{ padding: '0.6rem' }}>
-                <div style={{ fontSize: '0.65rem', color: '#7a6a55', marginBottom: '0.4rem', fontStyle: 'italic' }}>
-                  Cliquer sur un point pour l'utiliser.
-                </div>
-                {(char?._resources || []).map((res, i) => (
-                  <div key={i} className={styles.resourceItem}>
-                    <div className={styles.resourceHeaderRow}>
-                      <input
-                        type="text"
-                        className={styles.resourceName}
-                        placeholder="Rage, Ki..."
-                        value={res.name || ''}
-                        onChange={e => updateResource(i, { name: e.target.value })}
-                      />
-                      <select
-                        className={styles.resourceRecharge}
-                        value={res.recharge || 'long'}
-                        onChange={e => updateResource(i, { recharge: e.target.value })}
-                      >
-                        <option value="long">⟳ Long</option>
-                        <option value="short">⟳ Court</option>
-                        <option value="manual">Manuel</option>
-                      </select>
-                      <label className={styles.resourceMaxLabel}>
-                        Max
-                        <input
-                          type="number" min="0" max="30"
-                          className={styles.resourceMaxInput}
-                          value={res.max || 0}
-                          onChange={e => updateResource(i, { max: parseInt(e.target.value) || 0 })}
-                        />
-                      </label>
-                      <button className={styles.equipmentDelete} onClick={() => removeResource(i)}>×</button>
-                    </div>
-                    <div className={styles.resourceDotsRow}>
-                      {(res.dots || []).map((spent, j) => (
-                        <div
-                          key={j}
-                          className={`${styles.resourceDot}${spent ? ' ' + styles.spent : ''}`}
-                          onClick={() => toggleResourceDot(i, j)}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* FEATURES */}
-            <div className={styles.panel} data-tab="tab-traits" style={mobileTab !== 'tab-traits' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>📋 Capacités & Traits</span>
-                <button className={styles.panelAddBtn} onClick={addFeature}>+</button>
-              </div>
-              <div className={styles.panelBody}>
-                {(char?._features || []).map((feat, i) => (
-                  <div key={i} className={styles.featureEdit}>
-                    <div className={styles.featureFields}>
-                      <input
-                        type="text"
-                        className={styles.fieldInput}
-                        placeholder="Nom du trait"
-                        value={feat.name || ''}
-                        onChange={e => updateFeature(i, { name: e.target.value })}
-                      />
-                      <textarea
-                        className={styles.notesArea}
-                        placeholder="Description…"
-                        style={{ minHeight: 38, fontSize: '0.85rem' }}
-                        value={feat.desc || ''}
-                        onChange={e => updateFeature(i, { desc: e.target.value })}
-                      />
-                    </div>
-                    <button className={styles.equipmentDelete} onClick={() => removeFeature(i)}>×</button>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* EQUIPMENT */}
-            <div className={styles.panel} data-tab="tab-gear" style={mobileTab !== 'tab-gear' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>🎒 Équipement</span>
-                <button className={styles.panelAddBtn} onClick={addEquipment}>+</button>
-              </div>
-              <div className={styles.panelBody}>
-                {(char?._equipment || []).map((item, i) => (
-                  <div key={i} className={styles.equipmentItem}>
-                    <input
-                      type="text"
-                      placeholder="…"
-                      value={item}
-                      onChange={e => updateEquipment(i, e.target.value)}
-                    />
-                    <button className={styles.equipmentDelete} onClick={() => removeEquipment(i)}>×</button>
-                  </div>
-                ))}
-                <div style={{ marginTop: '0.8rem' }}>
-                  <label className={styles.fieldLabel}>Monnaie</label>
-                  <div className={styles.currencyGrid}>
-                    {[
-                      { label: 'PC', f: 'cp' },
-                      { label: 'PA', f: 'sp' },
-                      { label: 'PE', f: 'ep' },
-                      { label: 'PO', f: 'gp' },
-                      { label: 'PP', f: 'pp' },
-                    ].map(({ label, f }) => (
-                      <div key={f} className={styles.currencyItem}>
-                        <div className={styles.currencyLabel}>{label}</div>
-                        <input type="number" className={styles.currencyInput} min="0" {...numField(f)} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* PROFICIENCIES & LANGUAGES */}
-            <div className={styles.panel} data-tab="tab-gear" style={mobileTab !== 'tab-gear' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>🗣️ Maîtrises & Langues</span>
-              </div>
-              <div className={styles.panelBody}>
-                <div className={styles.tagList}>
-                  {(char?._profLanguages || []).map((tag, i) => (
-                    <span key={i} className={styles.tag}>
-                      {tag}
-                      <button className={styles.tagDelete} onClick={() => removeTag(i)}>×</button>
-                    </span>
-                  ))}
-                </div>
-                <TagInput onAdd={addTag} styles={styles} />
-              </div>
-            </div>
-
-            {/* BACKSTORY & NOTES */}
-            <div className={styles.panel} data-tab="tab-perso" style={mobileTab !== 'tab-perso' && typeof window !== 'undefined' && window.innerWidth <= 768 ? { display: 'none' } : {}}>
-              <div className={styles.panelHeader}>
-                <span className={styles.panelTitle}>📖 Histoire & Notes</span>
-              </div>
-              <div className={styles.panelBody}>
-                <div className={styles.fieldGroup} style={{ marginBottom: '0.6rem' }}>
-                  <label className={styles.fieldLabel}>Histoire du personnage</label>
-                  <textarea className={styles.notesArea} style={{ minHeight: 80 }} placeholder="L'histoire de votre personnage..."
-                    value={char?._backstory || ''} onChange={e => update({ _backstory: e.target.value })} />
-                </div>
-                <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>Notes de jeu</label>
-                  <textarea className={styles.notesArea} style={{ minHeight: 80 }} placeholder="Notes diverses..."
-                    value={char?._notes || ''} onChange={e => update({ _notes: e.target.value })} />
-                </div>
-              </div>
-            </div>
-
+          <div className="col-right"
+            onDragOver={e => e.preventDefault()}
+            onDrop={e => { e.preventDefault(); onColumnDrop('right') }}
+          >
+            {(panelLayout.right || []).map(id => getPanelContent(id, 'right'))}
           </div>
         </div>
       </div>
@@ -970,16 +1226,25 @@ export default function CharacterSheet() {
   )
 }
 
-function SpellItem({ spell, onChange, onRemove, styles }) {
+function SpellItem({ spell, onChange, onRemove, onDragHandlePointerDown, isDragging, styles }) {
   const [expanded, setExpanded] = useState(spell.expanded || false)
 
   return (
-    <div className={`${styles.spellItem}${expanded ? ' ' + styles.expanded : ''}`}>
+    <div
+      className={`${styles.spellItem}${expanded ? ' ' + styles.expanded : ''}`}
+      style={{ opacity: isDragging ? 0.4 : 1, transition: 'opacity 0.15s' }}
+    >
       <div className={styles.spellItemActions}>
         <button className={styles.spellExpandBtn} onClick={() => setExpanded(!expanded)} title="Résumé">▾</button>
         <button className={styles.spellDelete} onClick={onRemove}>×</button>
       </div>
       <div className={styles.spellItemRow}>
+        <span
+          className={styles.spellDragHandle}
+          title="Réordonner"
+          style={{ cursor: 'grab', touchAction: 'none' }}
+          onPointerDown={onDragHandlePointerDown}
+        >⠿</span>
         <input type="checkbox" className={styles.spellPreparedCb} title="Préparé" checked={!!spell.prepared} onChange={e => onChange({ prepared: e.target.checked })} />
         <select
           className={styles.spellLevelSelect}
@@ -1010,13 +1275,25 @@ function SpellItem({ spell, onChange, onRemove, styles }) {
         ))}
       </div>
       {expanded && (
-        <textarea
-          className={styles.spellSummary}
-          placeholder="Résumé du sort, effets, conditions…"
-          value={spell.summary || ''}
-          onChange={e => onChange({ summary: e.target.value })}
-          style={{ display: 'block', maxHeight: 'none', padding: '0.4rem', minHeight: 50 }}
-        />
+        <>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.3rem' }}>
+            <label style={{ fontSize: '0.65rem', color: '#7a6a55', fontFamily: 'Cinzel, serif', whiteSpace: 'nowrap' }}>Description courte</label>
+            <input
+              type="text"
+              style={{ flex: 1, background: 'rgba(0,0,0,0.2)', border: '1px solid #4a3420', borderRadius: 3, color: '#d8c8a8', padding: '0.25rem 0.4rem', fontSize: '0.78rem', fontFamily: 'EB Garamond, serif' }}
+              placeholder="Résumé en une ligne…"
+              value={spell.short || ''}
+              onChange={e => onChange({ short: e.target.value })}
+            />
+          </div>
+          <textarea
+            className={styles.spellSummary}
+            placeholder="Résumé du sort, effets, conditions…"
+            value={spell.summary || ''}
+            onChange={e => onChange({ summary: e.target.value })}
+            style={{ display: 'block', maxHeight: 'none', padding: '0.4rem', minHeight: 50 }}
+          />
+        </>
       )}
     </div>
   )
@@ -1207,13 +1484,13 @@ function SpellPreview({ spell, onAdd }) {
         </div>
       ))}
       <hr style={{ border: 'none', borderTop: '1px solid #4a3420', margin: '0.6rem 0' }} />
-      {(spell.desc || []).map((p, i) => (
+      {(Array.isArray(spell.desc) ? spell.desc : spell.desc ? [spell.desc] : []).map((p, i) => (
         <p key={i} style={{ marginBottom: '0.5rem', lineHeight: 1.6 }}>{p}</p>
       ))}
-      {spell.higher_level?.length > 0 && (
+      {(Array.isArray(spell.higher_level) ? spell.higher_level : spell.higher_level ? [spell.higher_level] : []).length > 0 && (
         <>
           <p style={{ fontWeight: 700, fontStyle: 'italic', marginTop: '0.5rem', color: '#d4a843' }}>Aux niveaux supérieurs</p>
-          {spell.higher_level.map((p, i) => <p key={i} style={{ marginBottom: '0.3rem' }}>{p}</p>)}
+          {(Array.isArray(spell.higher_level) ? spell.higher_level : [spell.higher_level]).map((p, i) => <p key={i} style={{ marginBottom: '0.3rem' }}>{p}</p>)}
         </>
       )}
       <button onClick={onAdd}

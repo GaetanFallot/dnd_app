@@ -995,3 +995,26 @@
     display: none !important;
   }
 }
+
+.panelDragHandle {
+  cursor: grab;
+  color: #7a6a55;
+  font-size: 1rem;
+  padding: 0 0.35rem 0 0;
+  user-select: none;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+.panelDragHandle:hover { opacity: 1; color: #d4a843; }
+
+.spellDragHandle {
+  cursor: grab;
+  color: #7a6a55;
+  font-size: 1rem;
+  padding: 0 0.3rem;
+  user-select: none;
+  touch-action: none;
+  flex-shrink: 0;
+}
+.spellDragHandle:hover { color: #d4a843; }
+.spellDragHandle:active { cursor: grabbing; }

@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { fsAdd, fsSet, fsDelete } from '../../hooks/useFirestore'
-import { mod, modStr } from '../../data/dnd5e'
+import React, { useState, useRef } from 'react'
+import { fsAdd } from '../../hooks/useFirestore'
 
 function crStr(v) {
   if (v === 0.125) return '1/8'
@@ -9,13 +8,73 @@ function crStr(v) {
   return String(v ?? 0)
 }
 
-export default function MonsterDock({ firestoreMonsters, user, onOpenBrowser, styles }) {
-  const [dockOpen, setDockOpen] = useState(true)
-  const [expandedId, setExpandedId] = useState(null)
+function parseMaxHp(hpStr) {
+  if (!hpStr) return null
+  const m = String(hpStr).match(/^(\d+)/)
+  return m ? parseInt(m[1]) : null
+}
+
+export default function MonsterDock({ encounterMonsters, setEncounterMonsters, onOpenBrowser, onAddToInitiative, styles }) {
+  const [dockOpen, setDockOpen] = useState(false)
+  const [expandedEid, setExpandedEid] = useState(null)
   const [modalOpen, setModalOpen] = useState(false)
   const [editingMonster, setEditingMonster] = useState(null)
+  const [hpMap, setHpMap] = useState({})
+  const importInputRef = useRef(null)
 
-  const monsters = firestoreMonsters || []
+  const monsters = encounterMonsters || []
+
+  function saveToStorage(next) {
+    setEncounterMonsters(next)
+    localStorage.setItem('dnd:encounter', JSON.stringify(next))
+  }
+
+  function getCurrentHp(m) {
+    if (hpMap[m._eid] !== undefined) return hpMap[m._eid]
+    const max = parseMaxHp(m.hp)
+    return max !== null ? max : null
+  }
+
+  function adjustHp(eid, delta) {
+    const m = monsters.find(x => x._eid === eid)
+    if (!m) return
+    const max = parseMaxHp(m.hp)
+    const cur = getCurrentHp(m) ?? max ?? 0
+    setHpMap(prev => ({ ...prev, [eid]: Math.max(0, cur + delta) }))
+  }
+
+  function setHp(eid, val) {
+    setHpMap(prev => ({ ...prev, [eid]: Math.max(0, parseInt(val) || 0) }))
+  }
+
+  function resetHp(eid) {
+    setHpMap(prev => { const next = { ...prev }; delete next[eid]; return next })
+  }
+
+  function removeFromEncounter(eid) {
+    saveToStorage(monsters.filter(x => x._eid !== eid))
+    if (expandedEid === eid) setExpandedEid(null)
+    resetHp(eid)
+  }
+
+  function duplicateMonster(m) {
+    const rawName = m.name || 'Monstre'
+    const baseName = rawName.replace(/\s+\d+$/, '')
+    const nums = monsters
+      .map(x => x.name || '')
+      .filter(n => n.startsWith(baseName + ' '))
+      .map(n => parseInt(n.slice(baseName.length + 1)))
+      .filter(n => !isNaN(n) && n > 0)
+    const nextNum = nums.length > 0 ? Math.max(...nums) + 1 : 2
+    const copy = { ...m, name: baseName + ' ' + nextNum, _eid: Date.now() + Math.random() }
+    saveToStorage([...monsters, copy])
+  }
+
+  function clearEncounter() {
+    saveToStorage([])
+    setHpMap({})
+    setExpandedEid(null)
+  }
 
   function newMonster() {
     setEditingMonster({
@@ -30,65 +89,39 @@ export default function MonsterDock({ firestoreMonsters, user, onOpenBrowser, st
       notes: '',
     })
     setModalOpen(true)
+    if (!dockOpen) setDockOpen(true)
   }
 
-  async function saveMonster(data) {
-    if (!user) return
-    if (data.firestoreId) {
-      await fsSet(`users/${user.uid}/monsters`, data.firestoreId, data)
+  function saveMonster(data) {
+    if (data._eid) {
+      // Edit existing encounter instance
+      saveToStorage(monsters.map(x => x._eid === data._eid ? data : x))
     } else {
-      await fsAdd(`users/${user.uid}/monsters`, data)
+      // New monster added directly to encounter
+      const instance = { ...data, _eid: Date.now() + Math.random() }
+      saveToStorage([...monsters, instance])
     }
     setModalOpen(false)
     setEditingMonster(null)
   }
 
-  async function deleteMonster(id) {
-    if (!user) return
-    await fsDelete(`users/${user.uid}/monsters`, id)
-    if (expandedId === id) setExpandedId(null)
+  async function saveToMyMonsters(data) {
+    const copy = { ...data }
+    delete copy._eid
+    await fsAdd('local/data/monsters', copy)
   }
 
   function editMonster(m) {
-    setEditingMonster({ ...m, firestoreId: m.id })
+    setEditingMonster({ ...m })
     setModalOpen(true)
   }
 
-  function importJSON() {
-    const input = document.createElement('input')
-    input.type = 'file'
-    input.accept = '.json'
-    input.multiple = true
-    input.onchange = e => {
-      const files = [...e.target.files]
-      files.forEach(file => {
-        const reader = new FileReader()
-        reader.onload = async ev => {
-          try {
-            const data = JSON.parse(ev.target.result)
-            if (user) await fsAdd(`users/${user.uid}/monsters`, data)
-          } catch {}
-        }
-        reader.readAsText(file)
-      })
-    }
-    input.click()
-  }
-
-  function exportMonster(m) {
-    const blob = new Blob([JSON.stringify(m, null, 2)], { type: 'application/json' })
-    const a = document.createElement('a')
-    a.href = URL.createObjectURL(blob)
-    a.download = (m.name || 'monstre').toLowerCase().replace(/\s+/g, '-') + '.json'
-    a.click()
-    URL.revokeObjectURL(a.href)
-  }
-
   return (
-    <div className={styles.monsterDock}>
+    <div className={styles.monsterDockBottom}>
+      {/* Fixed header bar */}
       <div className={styles.dockHeader} onClick={() => setDockOpen(!dockOpen)}>
         <span className={styles.dockTitle}>
-          🐉 Fiches Monstres
+          ⚔ Rencontre
           <span className={styles.dockCount}>{monsters.length || ''}</span>
         </span>
         <div className={styles.dockActions} onClick={e => e.stopPropagation()}>
@@ -96,29 +129,146 @@ export default function MonsterDock({ firestoreMonsters, user, onOpenBrowser, st
             📖 Bibliothèque
           </button>
           <button className={styles.dockBtn} onClick={newMonster}>＋ Nouveau</button>
-          <button className={styles.dockBtn} onClick={importJSON}>📥 Importer</button>
+          <button className={styles.dockBtn} onClick={() => importInputRef.current?.click()}>📥 Importer</button>
+          {monsters.length > 0 && (
+            <button className={styles.dockBtn} style={{ color: '#c44a1a', borderColor: '#c44a1a' }} onClick={clearEncounter}>🗑 Vider</button>
+          )}
         </div>
-        <span className={styles.dockToggle} style={{ transform: dockOpen ? 'none' : 'rotate(180deg)' }}>▲</span>
+        <span className={styles.dockToggle} style={{ transform: dockOpen ? 'rotate(180deg)' : 'none' }}>▲</span>
       </div>
 
+      {/* Expandable body (opens upward via CSS) */}
       {dockOpen && (
-        <div className={styles.dockBody}>
+        <div className={styles.dockBodyBottom}>
           <div className={styles.monsterList}>
-            {monsters.map(m => (
-              <MonsterChip
-                key={m.id}
-                monster={m}
-                isExpanded={expandedId === m.id}
-                onToggle={() => setExpandedId(expandedId === m.id ? null : m.id)}
-                onEdit={() => editMonster(m)}
-                onDelete={() => deleteMonster(m.id)}
-                onExport={() => exportMonster(m)}
-                styles={styles}
-              />
-            ))}
+            {monsters.map(m => {
+              const maxHp = parseMaxHp(m.hp)
+              const curHp = getCurrentHp(m)
+              const hpPct = maxHp > 0 && curHp !== null ? curHp / maxHp : 1
+              const hpCls = curHp <= 0 ? styles.hpDead : hpPct <= 0.25 ? styles.hpCritical : hpPct <= 0.5 ? styles.hpWounded : ''
+
+              return (
+                <div key={m._eid} className={styles.monsterChip}>
+                  <div className={styles.chipHead} onClick={() => setExpandedEid(expandedEid === m._eid ? null : m._eid)}>
+                    <span className={styles.chipName}>{m.name || 'Sans nom'}</span>
+                    <span className={styles.chipCr}>FP {crStr(parseFloat(m.cr ?? m.challenge_rating) || 0)}</span>
+
+                    {/* HP controls */}
+                    {maxHp !== null && (
+                      <div className={styles.chipHpRow} onClick={e => e.stopPropagation()}>
+                        <button className={styles.chipHpBtn} onClick={() => adjustHp(m._eid, -10)}>−10</button>
+                        <button className={styles.chipHpBtn} onClick={() => adjustHp(m._eid, -5)}>−5</button>
+                        <button className={styles.chipHpBtn} onClick={() => adjustHp(m._eid, -1)}>−</button>
+                        <input
+                          className={`${styles.chipHpInput} ${hpCls}`}
+                          type="number"
+                          value={curHp ?? maxHp}
+                          min="0"
+                          onChange={e => setHp(m._eid, e.target.value)}
+                          onClick={e => e.target.select()}
+                        />
+                        <span className={`${styles.chipHpMax} ${hpCls}`}>/{maxHp}</span>
+                        <button className={styles.chipHpBtn} onClick={() => adjustHp(m._eid, 1)}>＋</button>
+                        <button className={styles.chipHpBtn} onClick={() => adjustHp(m._eid, 5)}>＋5</button>
+                        <button className={styles.chipHpBtn} onClick={() => adjustHp(m._eid, 10)}>＋10</button>
+                        <button className={styles.chipHpBtn} onClick={() => resetHp(m._eid)} title="Reset PV">↺</button>
+                      </div>
+                    )}
+
+                    <div className={styles.chipActions}>
+                      <button className={styles.chipBtn} onClick={e => { e.stopPropagation(); onAddToInitiative?.(m.name, 0) }} title="Ajouter à l'initiative" style={{ color: '#5b8dd9' }}>⚔</button>
+                      <button className={styles.chipBtn} onClick={e => { e.stopPropagation(); editMonster(m) }} title="Modifier">✎</button>
+                      <button className={styles.chipBtn} onClick={e => { e.stopPropagation(); duplicateMonster(m) }} title="Dupliquer">📋</button>
+                      <button className={styles.chipBtn} onClick={e => { e.stopPropagation(); saveToMyMonsters(m) }} title="Sauvegarder dans Mes Monstres" style={{ color: '#d4a843' }}>💾</button>
+                      <button className={styles.chipBtn} onClick={e => { e.stopPropagation(); removeFromEncounter(m._eid) }} title="Retirer de la rencontre" style={{ color: '#c44a1a' }}>✕</button>
+                    </div>
+                  </div>
+
+                  {expandedEid === m._eid && (
+                    <div className={`${styles.chipBody} ${styles.open}`}>
+                      {m.image && (
+                        <img
+                          src={`https://www.dnd5eapi.co${m.image}`}
+                          alt={m.name}
+                          onError={e => { e.target.style.display = 'none' }}
+                          style={{ width: '100%', maxHeight: 200, objectFit: 'contain', borderRadius: 4, marginBottom: '0.5rem', background: 'rgba(0,0,0,0.3)' }}
+                        />
+                      )}
+                      {m.type && <div style={{ fontSize: '0.75rem', color: '#7a6a55', fontStyle: 'italic', marginBottom: '0.4rem' }}>{m.type}</div>}
+                      <div style={{ display: 'flex', gap: '0.8rem', marginBottom: '0.3rem', flexWrap: 'wrap' }}>
+                        {m.ac && <span style={{ fontSize: '0.75rem' }}>CA : <strong>{m.ac}</strong></span>}
+                        {m.speed && <span style={{ fontSize: '0.75rem' }}>Vit : <strong>{m.speed}</strong></span>}
+                        {m.senses && <span style={{ fontSize: '0.72rem', color: '#7a6a55' }}>{m.senses}</span>}
+                      </div>
+                      <div className={styles.monsterStats}>
+                        {['str','dex','con','int','wis','cha'].map(k => {
+                          const score = parseInt(m[k] || m[`ability_${k}`]) || 10
+                          const mv = Math.floor((score - 10) / 2)
+                          return (
+                            <div key={k} className={styles.monsterStatBox}>
+                              <div className={styles.monsterStatLabel}>{k.toUpperCase()}</div>
+                              <div className={styles.monsterStatVal}>{score}</div>
+                              <div className={styles.monsterStatMod}>{mv >= 0 ? '+' + mv : '' + mv}</div>
+                            </div>
+                          )
+                        })}
+                      </div>
+                      {(m.saves || m.skills) && (
+                        <div style={{ fontSize: '0.72rem', color: '#a09070', margin: '0.3rem 0' }}>
+                          {m.saves && <div>Jets de sauvegarde : {m.saves}</div>}
+                          {m.skills && <div>Compétences : {m.skills}</div>}
+                        </div>
+                      )}
+                      {(m.dmg_immune || m.dmg_resist || m.dmg_vuln || m.cond_immune) && (
+                        <div style={{ fontSize: '0.72rem', color: '#a09070', margin: '0.3rem 0' }}>
+                          {m.dmg_immune && <div>Immunités : {m.dmg_immune}</div>}
+                          {m.dmg_resist && <div>Résistances : {m.dmg_resist}</div>}
+                          {m.dmg_vuln && <div>Vulnérabilités : {m.dmg_vuln}</div>}
+                          {m.cond_immune && <div>Immunités conditions : {m.cond_immune}</div>}
+                        </div>
+                      )}
+                      {(m.traits || []).length > 0 && (
+                        <div style={{ fontSize: '0.75rem', marginTop: '0.4rem' }}>
+                          <div style={{ fontFamily: 'Cinzel, serif', fontSize: '0.65rem', color: '#d4a843', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.25rem' }}>Traits</div>
+                          {(m.traits || []).map((t, i) => (
+                            <div key={i} style={{ marginBottom: '0.35rem' }}>
+                              <strong style={{ color: '#d8c8a8' }}>{t.name}</strong>
+                              {t.desc ? <span style={{ color: '#a09070' }}>. {t.desc}</span> : ''}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {(m.actions || []).length > 0 && (
+                        <div style={{ fontSize: '0.75rem', marginTop: '0.4rem' }}>
+                          <div style={{ fontFamily: 'Cinzel, serif', fontSize: '0.65rem', color: '#d4a843', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.25rem' }}>Actions</div>
+                          {(m.actions || []).map((a, i) => (
+                            <div key={i} style={{ marginBottom: '0.35rem' }}>
+                              <em style={{ fontWeight: 700, color: '#d8c8a8', fontStyle: 'normal' }}>{a.name}</em>
+                              {a.desc ? <span style={{ color: '#a09070' }}>. {a.desc}</span> : ''}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {(m.legendary_actions || []).length > 0 && (
+                        <div style={{ fontSize: '0.75rem', marginTop: '0.4rem' }}>
+                          <div style={{ fontFamily: 'Cinzel, serif', fontSize: '0.65rem', color: '#d4a843', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.25rem' }}>Actions légendaires</div>
+                          {(m.legendary_actions || []).map((a, i) => (
+                            <div key={i} style={{ marginBottom: '0.35rem' }}>
+                              <em style={{ fontWeight: 700, color: '#d8c8a8', fontStyle: 'normal' }}>{a.name}</em>
+                              {a.desc ? <span style={{ color: '#a09070' }}>. {a.desc}</span> : ''}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {m.notes && <div style={{ fontSize: '0.75rem', color: '#7a6a55', marginTop: '0.4rem', fontStyle: 'italic', borderTop: '1px solid #2a2010', paddingTop: '0.3rem' }}>{m.notes}</div>}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
             {monsters.length === 0 && (
-              <div style={{ color: '#7a6a55', fontSize: '0.8rem', fontStyle: 'italic', padding: '0.5rem', textAlign: 'center' }}>
-                Aucun monstre. Ajoutez depuis la bibliothèque ou créez-en un.
+              <div style={{ color: '#7a6a55', fontSize: '0.8rem', fontStyle: 'italic', padding: '0.8rem', textAlign: 'center' }}>
+                Aucun monstre dans la rencontre. Ajoutez depuis la bibliothèque ou Mes Monstres.
               </div>
             )}
           </div>
@@ -133,60 +283,32 @@ export default function MonsterDock({ firestoreMonsters, user, onOpenBrowser, st
           styles={styles}
         />
       )}
-    </div>
-  )
-}
-
-function MonsterChip({ monster, isExpanded, onToggle, onEdit, onDelete, onExport, styles }) {
-  const abilities = ['str','dex','con','int','wis','cha']
-  return (
-    <div className={styles.monsterChip}>
-      <div className={styles.chipHead} onClick={onToggle}>
-        <span className={styles.chipName}>{monster.name || 'Sans nom'}</span>
-        <span className={styles.chipCr}>FP {crStr(parseFloat(monster.cr ?? monster.challenge_rating) || 0)}</span>
-        <div className={styles.chipActions}>
-          <button className={styles.chipBtn} onClick={e => { e.stopPropagation(); onEdit() }} title="Modifier">✎</button>
-          <button className={styles.chipBtn} onClick={e => { e.stopPropagation(); onExport() }} title="Exporter">📤</button>
-          <button className={styles.chipBtn} onClick={e => { e.stopPropagation(); onDelete() }} title="Supprimer" style={{ color: '#c44a1a' }}>✕</button>
-        </div>
-      </div>
-      {isExpanded && (
-        <div className={`${styles.chipBody} ${styles.open}`}>
-          {monster.type && <div style={{ fontSize: '0.75rem', color: '#7a6a55', fontStyle: 'italic', marginBottom: '0.4rem' }}>{monster.type}</div>}
-          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.3rem', flexWrap: 'wrap' }}>
-            {monster.ac && <span style={{ fontSize: '0.75rem' }}>CA : <strong>{monster.ac}</strong></span>}
-            {monster.hp && <span style={{ fontSize: '0.75rem' }}>PV : <strong>{monster.hp}</strong></span>}
-            {monster.speed && <span style={{ fontSize: '0.75rem' }}>Vit : <strong>{monster.speed}</strong></span>}
-          </div>
-          <div className={styles.monsterStats}>
-            {abilities.map(k => {
-              const score = parseInt(monster[k] || monster[`ability_${k}`]) || 10
-              const m = Math.floor((score - 10) / 2)
-              return (
-                <div key={k} className={styles.monsterStatBox}>
-                  <div className={styles.monsterStatLabel}>{k.toUpperCase()}</div>
-                  <div className={styles.monsterStatVal}>{score}</div>
-                  <div className={styles.monsterStatMod}>{m >= 0 ? '+' + m : '' + m}</div>
-                </div>
-              )
-            })}
-          </div>
-          {(monster.actions || monster.traits) && (
-            <div style={{ fontSize: '0.75rem', marginTop: '0.3rem' }}>
-              {(monster.traits || []).slice(0, 3).map((t, i) => (
-                <div key={i} style={{ marginBottom: '0.3rem' }}>
-                  <strong>{t.name}</strong>{t.desc ? ': ' + t.desc.slice(0, 80) + (t.desc.length > 80 ? '…' : '') : ''}
-                </div>
-              ))}
-              {(monster.actions || []).slice(0, 3).map((a, i) => (
-                <div key={i} style={{ marginBottom: '0.3rem' }}>
-                  <em style={{ fontWeight: 700 }}>{a.name}</em>{a.desc ? ': ' + a.desc.slice(0, 80) + (a.desc.length > 80 ? '…' : '') : ''}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
+      <input
+        ref={importInputRef}
+        type="file"
+        accept=".json"
+        multiple
+        style={{ display: 'none' }}
+        onChange={e => {
+          const files = [...e.target.files]
+          files.forEach(file => {
+            const reader = new FileReader()
+            reader.onload = ev => {
+              try {
+                const data = JSON.parse(ev.target.result)
+                const instance = { ...data, _eid: Date.now() + Math.random() }
+                setEncounterMonsters(prev => {
+                  const next = [...prev, instance]
+                  localStorage.setItem('dnd:encounter', JSON.stringify(next))
+                  return next
+                })
+              } catch {}
+            }
+            reader.readAsText(file)
+          })
+          e.target.value = ''
+        }}
+      />
     </div>
   )
 }
@@ -216,7 +338,7 @@ function MonsterModal({ monster, onSave, onClose, styles }) {
     <div className={styles.monsterModal}>
       <div className={styles.mmInner}>
         <div className={styles.mmHead}>
-          <span className={styles.mmTitle}>{data.firestoreId ? 'Modifier' : 'Nouveau'} Monstre</span>
+          <span className={styles.mmTitle}>{data._eid ? 'Modifier' : 'Nouveau'} Monstre (Rencontre)</span>
           <div className={styles.mmHeadBtns}>
             <button className={styles.mmSave} onClick={() => onSave(data)}>💾 Sauvegarder</button>
             <button className={styles.mmClose} onClick={onClose}>✕</button>
@@ -229,7 +351,7 @@ function MonsterModal({ monster, onSave, onClose, styles }) {
               <input type="text" placeholder="Gobelin" value={data.name || ''} onChange={e => upd({ name: e.target.value })} />
             </div>
             <div className={styles.mmField} style={{ gridColumn: '1/-1' }}>
-              <label>Type & taille</label>
+              <label>Type &amp; taille</label>
               <input type="text" placeholder="Petite créature humanoïde, neutre mauvais" value={data.type || ''} onChange={e => upd({ type: e.target.value })} />
             </div>
           </div>
@@ -280,11 +402,8 @@ function MonsterModal({ monster, onSave, onClose, styles }) {
             ))}
           </div>
 
-          {/* Traits */}
           <ActionSection label="Traits" field="traits" data={data} onAdd={addAction} onUpdate={updateAction} onRemove={removeAction} styles={styles} />
-          {/* Actions */}
           <ActionSection label="Actions" field="actions" data={data} onAdd={addAction} onUpdate={updateAction} onRemove={removeAction} styles={styles} />
-          {/* Legendary */}
           <ActionSection label="Actions légendaires" field="legendary_actions" data={data} onAdd={addAction} onUpdate={updateAction} onRemove={removeAction} styles={styles} />
 
           <div className={styles.mmField} style={{ marginTop: '0.6rem' }}>

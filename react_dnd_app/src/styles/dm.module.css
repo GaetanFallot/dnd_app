@@ -659,13 +659,81 @@
 
 .turnDel:hover { color: var(--ember); }
 
-/* Monster dock */
+/* Monster dock — fixed bottom bar */
 .monsterDock {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
+
+.monsterDockBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--stone);
+  border-top: 2px solid var(--border);
+  z-index: 200;
+  font-family: 'Cinzel', serif;
+}
+
+.dockBodyBottom {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--stone);
+}
+
+/* HP controls in chip */
+.chipHpRow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.chipHpBtn {
+  background: var(--stone-light);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--ink-dim);
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  padding: 0.15rem 0.35rem;
+  cursor: pointer;
+  transition: all 0.1s;
+  white-space: nowrap;
+}
+
+.chipHpBtn:hover { border-color: var(--gold); color: var(--gold); }
+.chipHpBtn:active { transform: scale(0.93); }
+
+.chipHpInput {
+  width: 40px;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  padding: 0.1rem 0.2rem;
+}
+
+.chipHpMax {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  color: var(--ink-dim);
+  white-space: nowrap;
+}
+
+.chipHpInput:focus { outline: none; border-color: var(--gold); }
+
+.hpDead { color: #8b1a1a !important; border-color: #8b1a1a !important; }
+.hpCritical { color: #c44a1a !important; border-color: #c44a1a !important; }
+.hpWounded { color: #c8a84b !important; border-color: #c8a84b !important; }
 
 .dockHeader {
   display: flex;

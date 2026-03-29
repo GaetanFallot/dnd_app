@@ -13,7 +13,8 @@
       "Bash(npm create:*)",
       "Bash(npm install:*)",
       "Bash(npm run:*)",
-      "Bash(du -sh /c/Users/gaeta/Desktop/dnd_app/react_dnd_app/dnd_db/*.js)"
+      "Bash(du -sh /c/Users/gaeta/Desktop/dnd_app/react_dnd_app/dnd_db/*.js)",
+      "Bash(firebase --version)"
     ]
   }
 }

@@ -1,43 +1,104 @@
 // ════════════════════════════════════════
-// MONSTER DOCK
+// MY MONSTERS (persistent, DB-backed)
 // ════════════════════════════════════════
 let dmMonsters = JSON.parse(localStorage.getItem('dm_monsters') || '[]');
-let _expandedChipId = null;
+
+// ════════════════════════════════════════
+// ENCOUNTER MONSTERS (dock / ephemeral)
+// ════════════════════════════════════════
+let encounterMonsters = JSON.parse(localStorage.getItem('dm_encounter') || '[]');
+console.log(encounterMonsters)
+let _expandedEid = null;
 let _dbDirHandle = null;
 let _dbNeedsReconnect = false;
 
-function _saveMonsters(){
+// ── Persist helpers ──────────────────────────────────────────
+function _saveMyMonsters(){
   localStorage.setItem('dm_monsters', JSON.stringify(dmMonsters));
   if(_dbDirHandle) dmMonsters.forEach(m => _dbSaveOne(m));
   _updateDbBar();
 }
 
+function _saveEncounter(){
+  localStorage.setItem('dm_encounter', JSON.stringify(encounterMonsters));
+}
+
+// ── Add / remove from encounter ──────────────────────────────
+function addToEncounter(data){
+  const instance = Object.assign({}, data, { _eid: _genId() });
+  delete instance.id; // avoid id conflict with My Monsters
+  encounterMonsters.push(instance);
+  _saveEncounter();
+  renderMonsterDock();
+  if(!_dockOpen) toggleMonsterDock();
+  showToast('⚔ ' + (data.name || 'Monstre') + ' → rencontre');
+}
+
+function removeFromEncounter(eid){
+  const m = encounterMonsters.find(x => x._eid === eid);
+  encounterMonsters = encounterMonsters.filter(x => x._eid !== eid);
+  _saveEncounter();
+  if(_expandedEid === eid){
+    _expandedEid = null;
+    document.getElementById('monsterDockBody').classList.remove('has-expanded');
+  }
+  renderMonsterDock();
+  if(m) showToast('✕ ' + (m.name||'Monstre') + ' retiré');
+}
+
+function clearEncounter(){
+  if(!encounterMonsters.length) return;
+  encounterMonsters = [];
+  _saveEncounter();
+  _expandedEid = null;
+  document.getElementById('monsterDockBody').classList.remove('has-expanded');
+  renderMonsterDock();
+  showToast('🗑 Rencontre vidée');
+}
+
+function saveEncounterMonsterToMine(eid){
+  const m = encounterMonsters.find(x => x._eid === eid);
+  if(!m) return;
+  const copy = Object.assign({}, m, { id: _genId() });
+  delete copy._eid;
+  delete copy.currentHp;
+  const existing = dmMonsters.findIndex(x => x.name === copy.name);
+  if(existing >= 0){ dmMonsters[existing] = copy; }
+  else { dmMonsters.push(copy); }
+  _saveMyMonsters();
+  showToast('💾 ' + (copy.name||'Monstre') + ' sauvegardé dans Mes Monstres');
+}
+
+// ── DB status bar ────────────────────────────────────────────
 function _updateDbBar(){
-  const bar = document.getElementById('dbBar');
+  const bar  = document.getElementById('dbBar');
   const icon = document.getElementById('dbBarIcon');
   const text = document.getElementById('dbBarText');
-  const btn = document.getElementById('dbConnectBtn');
+  const btn  = document.getElementById('dbConnectBtn');
   if(!bar) return;
   if(_dbDirHandle){
     bar.classList.add('connected'); bar.classList.remove('needs-reconnect');
     if(icon) icon.textContent = '✅';
-    if(text) text.innerHTML = '<strong>DB connectée</strong> — sauvegarde auto activée (monstres &amp; sons)';
+    if(text) text.innerHTML = '<strong>DB connectée</strong> — sauvegarde auto de Mes Monstres';
     if(btn){ btn.textContent = '📁 Changer dossier'; btn.onclick = selectDbDir; }
   } else if(_dbNeedsReconnect){
     bar.classList.remove('connected'); bar.classList.add('needs-reconnect');
     if(icon) icon.textContent = '🔄';
-    if(text) text.innerHTML = '<strong>DB connue</strong> — cliquez pour reconnecter (un seul clic suffit)';
+    if(text) text.innerHTML = '<strong>DB connue</strong> — cliquez pour reconnecter';
     if(btn){ btn.textContent = '🔄 Reconnecter DB'; btn.onclick = reconnectDb; }
   } else {
     bar.classList.remove('connected'); bar.classList.remove('needs-reconnect');
     if(icon) icon.textContent = '💾';
-    if(text) text.innerHTML = 'Sauvegarde locale uniquement — <strong>Connectez un dossier DB</strong> pour persister';
+    if(text) text.innerHTML = 'Mes Monstres : mémoire locale — <strong>Connectez un dossier DB</strong> pour persister';
     if(btn){ btn.textContent = '📁 Connecter dossier DB'; btn.onclick = selectDbDir; }
   }
+  // update monster browser custom tab count
+  const mbCount = document.getElementById('mb-tab-custom-count');
+  if(mbCount) mbCount.textContent = dmMonsters.length || '';
 }
 
 async function selectDbDir(){
-  if(!('showDirectoryPicker' in window)){ showToast('⚠️ Navigateur non compatible (utilisez Chrome/Edge)'); return; }
+  if(!('showDirectoryPicker' in window)){ showToast('⚠️ Navigateur non compatible (Chrome/Edge)'); return; }
   try {
     _dbDirHandle = await window.showDirectoryPicker({ mode:'readwrite' });
     window._dbDir = _dbDirHandle;
@@ -52,10 +113,10 @@ async function selectDbDir(){
 }
 
 function dbExportAll(){
-  if(!dmMonsters.length){ showToast('⚠️ Aucun monstre à exporter'); return; }
+  if(!dmMonsters.length){ showToast('⚠️ Aucun monstre dans Mes Monstres'); return; }
   dmMonsters.forEach((m, i) => {
     setTimeout(() => {
-      const slug = (m.name || 'monstre').replace(/s+/g,'_').toLowerCase().replace(/[^a-z0-9_]/g,'') || ('monstre_'+i);
+      const slug = (m.name||'monstre').replace(/\s+/g,'_').toLowerCase().replace(/[^a-z0-9_]/g,'') || ('monstre_'+i);
       const blob = new Blob([JSON.stringify(m, null, 2)], {type:'application/json'});
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
@@ -76,23 +137,22 @@ async function _dbLoad(){
       const f = await handle.getFile();
       const data = JSON.parse(await f.text());
       if(name.startsWith('sound_')) sounds.push(data);
-      else if(!name.startsWith('char_')) monsters.push(data);
+      else if(!name.startsWith('char_') && !name.startsWith('encounter_')) monsters.push(data);
     } catch(e){}
   }
   if(monsters.length){
     dmMonsters = monsters;
     localStorage.setItem('dm_monsters', JSON.stringify(dmMonsters));
-    renderMonsterDock();
+    _updateDbBar();
   }
   if(sounds.length){
     dmCustomSounds = sounds;
     localStorage.setItem('dm_custom_sounds', JSON.stringify(dmCustomSounds));
     renderCustomSounds();
   }
-  // Load chars if chars.js is loaded
   if(typeof _dbLoadChars === 'function') await _dbLoadChars();
   const tot = monsters.length + sounds.length;
-  if(tot) showToast('✓ DB : ' + monsters.length + ' monstres, ' + sounds.length + ' sons');
+  if(tot) showToast('✓ DB : ' + monsters.length + ' Mes Monstres, ' + sounds.length + ' sons');
   else showToast('📂 Dossier DB vide');
 }
 
@@ -126,14 +186,14 @@ async function _dbDeleteSound(s){
   try { await _dbDirHandle.removeEntry('sound_' + s.id + '.json'); } catch(e){}
 }
 
-// ── IndexedDB handle persistence ──
+// ── IndexedDB handle persistence ─────────────────────────────
 function _idbOpen(){
   return new Promise((res, rej) => {
     const req = indexedDB.open('dm_screen', 2);
     req.onupgradeneeded = e => {
       const db = e.target.result;
-      if (!db.objectStoreNames.contains('handles')) db.createObjectStore('handles');
-      if (!db.objectStoreNames.contains('scenes'))  db.createObjectStore('scenes', { keyPath: 'id' });
+      if(!db.objectStoreNames.contains('handles')) db.createObjectStore('handles');
+      if(!db.objectStoreNames.contains('scenes'))  db.createObjectStore('scenes', { keyPath:'id' });
     };
     req.onsuccess = e => res(e.target.result);
     req.onerror = () => rej(req.error);
@@ -143,17 +203,17 @@ function _idbOpen(){
 async function _idbSaveHandle(handle){
   try {
     const db = await _idbOpen();
-    const tx = db.transaction('handles', 'readwrite');
-    tx.objectStore('handles').put(handle, 'dbDir');
+    const tx = db.transaction('handles','readwrite');
+    tx.objectStore('handles').put(handle,'dbDir');
     await new Promise(r => tx.oncomplete = r);
     db.close();
-  } catch(e){ console.warn('idb save:', e); }
+  } catch(e){}
 }
 
 async function _idbLoadHandle(){
   try {
     const db = await _idbOpen();
-    const tx = db.transaction('handles', 'readonly');
+    const tx = db.transaction('handles','readonly');
     const r = await new Promise(res => { const q = tx.objectStore('handles').get('dbDir'); q.onsuccess = () => res(q.result); q.onerror = () => res(null); });
     db.close();
     return r || null;
@@ -178,7 +238,7 @@ async function _autoConnectDb(){
       _pendingDbHandle = handle;
       _updateDbBar();
     }
-  } catch(e){ console.warn('Auto-connect:', e); }
+  } catch(e){}
 }
 
 let _pendingDbHandle = null;
@@ -197,29 +257,13 @@ async function reconnectDb(){
       _updateDbBar();
       await _dbLoad();
     }
-  } catch(e){ console.warn('Reconnect:', e); }
+  } catch(e){}
 }
 
 function _genId(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
 
-function toggleChipExpand(event, id){
-  const el = event.currentTarget;
-  const wasExpanded = el.classList.contains('expanded');
-  document.querySelectorAll('.monster-chip.expanded').forEach(c => c.classList.remove('expanded'));
-  const body = document.getElementById('monsterDockBody');
-  if(!wasExpanded){
-    if(!_dockOpen) toggleMonsterDock();
-    el.classList.add('expanded');
-    _expandedChipId = id;
-    body.classList.add('has-expanded');
-    setTimeout(() => el.scrollIntoView({behavior:'smooth', block:'nearest', inline:'nearest'}), 50);
-  } else {
-    _expandedChipId = null;
-    body.classList.remove('has-expanded');
-  }
-}
-
-function _modStr(v){ const m = Math.floor((parseInt(v)||10 - 10) / 2); return (m >= 0 ? '+' : '') + m; }
+// ── HP helpers ───────────────────────────────────────────────
+function _modStr(v){ const m = Math.floor(((parseInt(v)||10) - 10) / 2); return (m >= 0 ? '+' : '') + m; }
 function _mod(v){ return Math.floor(((parseInt(v)||10) - 10) / 2); }
 
 function _parseMaxHp(hpStr){
@@ -228,116 +272,179 @@ function _parseMaxHp(hpStr){
   return isNaN(n) ? null : n;
 }
 
-function addMonsterToInit(id){
-  const m = dmMonsters.find(x => x.id === id);
-  if(!m) return;
-  const name = m.name || 'Monstre';
-  const dexMod = _mod(m.dex || 10);
-  const roll = Math.ceil(Math.random() * 20) + dexMod;
-  combatants.push({ id: Date.now() + Math.random(), name, init: roll });
-  renderTurnList();
-  showToast('⚔ ' + name + ' → init ' + roll + ' (d20' + (dexMod >= 0 ? '+' : '') + dexMod + ')');
-}
-
-function updateChipHp(id, delta){
-  const m = dmMonsters.find(x => x.id === id);
-  if(!m) return;
-  if(m.currentHp === undefined || m.currentHp === null) m.currentHp = _parseMaxHp(m.hp) ?? 0;
-  m.currentHp = Math.max(0, m.currentHp + delta);
-  const chip = document.querySelector('[data-id="' + id + '"]');
-  if(chip){
-    const inp = chip.querySelector('.chip-hp-input');
-    if(inp) inp.value = m.currentHp;
-    _refreshHpBadge(chip, m);
-  }
-  _saveMonsters();
-}
-
-function setChipHp(id, val){
-  const m = dmMonsters.find(x => x.id === id);
-  if(!m) return;
-  m.currentHp = Math.max(0, parseInt(val) || 0);
-  const chip = document.querySelector('[data-id="' + id + '"]');
-  if(chip) _refreshHpBadge(chip, m);
-  _saveMonsters();
-}
-
-function _refreshHpBadge(chip, m){
-  const badge = chip.querySelector('.chip-hp-badge');
-  if(!badge) return;
+function _refreshHpColor(chip, m){
   const maxHp = _parseMaxHp(m.hp);
   if(maxHp === null) return;
   const cur = m.currentHp !== undefined ? m.currentHp : maxHp;
   const pct = maxHp > 0 ? cur / maxHp : 0;
-  badge.className = 'chip-hp-badge' + (cur <= 0 ? ' dead' : pct <= 0.25 ? ' critical' : pct <= 0.5 ? ' wounded' : '');
-  badge.textContent = '♥ ' + cur + '/' + maxHp;
+  const cls = cur <= 0 ? 'hp-dead' : pct <= 0.25 ? 'hp-critical' : pct <= 0.5 ? 'hp-wounded' : '';
+  const inp = chip.querySelector('.chip-hp-input');
+  const max = chip.querySelector('.chip-hp-max');
+  if(inp){ inp.className = 'chip-hp-input' + (cls ? ' '+cls : ''); }
+  if(max){ max.className = 'chip-hp-max' + (cls ? ' '+cls : ''); }
 }
 
+// ── HP controls on encounter monsters ───────────────────────
+function updateChipHp(eid, delta){
+  const m = encounterMonsters.find(x => x._eid === eid);
+  if(!m) return;
+  if(m.currentHp === undefined || m.currentHp === null) m.currentHp = _parseMaxHp(m.hp) ?? 0;
+  m.currentHp = Math.max(0, m.currentHp + delta);
+  const chip = document.querySelector('[data-eid="' + eid + '"]');
+  if(chip){
+    const inp = chip.querySelector('.chip-hp-input');
+    if(inp) inp.value = m.currentHp;
+    _refreshHpColor(chip, m);
+  }
+  _saveEncounter();
+}
+
+function setChipHp(eid, val){
+  const m = encounterMonsters.find(x => x._eid === eid);
+  if(!m) return;
+  m.currentHp = Math.max(0, parseInt(val) || 0);
+  const chip = document.querySelector('[data-eid="' + eid + '"]');
+  if(chip) _refreshHpColor(chip, m);
+  _saveEncounter();
+}
+
+// ── Add to initiative from encounter ────────────────────────
+function addEncounterMonsterToInit(eid){
+  const m = encounterMonsters.find(x => x._eid === eid);
+  if(!m) return;
+  const dexMod = _mod(m.dex || 10);
+  const roll = Math.ceil(Math.random() * 20) + dexMod;
+  combatants.push({ id: Date.now() + Math.random(), name: m.name, init: roll });
+  renderTurnList();
+  showToast('⚔ ' + m.name + ' → init ' + roll + ' (d20' + (dexMod >= 0 ? '+' : '') + dexMod + ')');
+}
+
+// ── Action metadata helpers ───────────────────────────────────
+const _DMG_FR = {
+  piercing:'perf.', slashing:'tranch.', bludgeoning:'cont.',
+  lightning:'foudre', fire:'feu', cold:'froid', acid:'acide',
+  poison:'poison', necrotic:'néc.', radiant:'rad.',
+  thunder:'tonner.', force:'force', psychic:'psy.'
+};
+
+function _fmtActionMeta(a){
+  const parts = [];
+  if(a.usage){
+    const u = a.usage;
+    if(u.type === 'recharge on roll') parts.push(`<span class="chip-tag recharge">⟳ ${u.min_value}–6</span>`);
+    else if(u.type === 'per day' && u.times) parts.push(`<span class="chip-tag recharge">${u.times}/jour</span>`);
+  }
+  if(a.attack_bonus != null) parts.push(`<span class="chip-tag atk">+${a.attack_bonus} toucher</span>`);
+  if(a.dc){
+    const suf = a.dc.success_type === 'half' ? ' ½' : '';
+    parts.push(`<span class="chip-tag dc">JS ${a.dc.dc_type?.name||''} DD ${a.dc.dc_value}${suf}</span>`);
+  }
+  if(a.damage && a.damage.length){
+    const dmgStr = a.damage.map(d => {
+      const t = d.damage_type ? (_DMG_FR[d.damage_type.index] || d.damage_type.name) : '';
+      return `${d.damage_dice}${t?' '+t:''}`;
+    }).join(' + ');
+    parts.push(`<span class="chip-tag dmg">⚔ ${_esc(dmgStr)}</span>`);
+  }
+  return parts.length ? `<div class="chip-action-meta">${parts.join('')}</div>` : '';
+}
+
+function _chipEntry(a){
+  console.log(a)
+  return `<div class="chip-entry">
+    <span class="chip-entry-name">${_esc(a.name||'')}${a.name?'. ':''}</span>
+    <span class="chip-entry-desc">${_esc(a.desc||'')}</span>
+    ${_fmtActionMeta(a)}
+  </div>`;
+}
+
+// ── Render dock (encounter monsters) ────────────────────────
 function renderMonsterDock(){
-  const list = document.getElementById('monsterList');
+  const list  = document.getElementById('monsterList');
   const count = document.getElementById('dockCount');
-  count.textContent = dmMonsters.length;
-  if(!dmMonsters.length){
-    list.innerHTML = '<div class="dock-empty">Aucun monstre — cliquez ＋ Nouveau pour créer</div>';
+  count.textContent = encounterMonsters.length || '';
+  if(!encounterMonsters.length){
+    list.innerHTML = '<div class="dock-empty">Aucun monstre dans la rencontre — ajoutez depuis la Bibliothèque ou Mes Monstres.</div>';
     return;
   }
-  list.innerHTML = dmMonsters.map(m => {
-    const traits = (m.traits||[]).map(t => `<div class="chip-entry"><span class="chip-entry-name">${_esc(t.name||'')}${t.name?'. ':''}</span><span class="chip-entry-desc">${_esc(t.desc||'')}</span></div>`).join('');
-    const actions = (m.actions||[]).map(a => `<div class="chip-entry"><span class="chip-entry-name">${_esc(a.name||'')}${a.name?'. ':''}</span><span class="chip-entry-desc">${_esc(a.desc||'')}</span></div>`).join('');
-    const reactions = (m.reactions||[]).map(r => `<div class="chip-entry"><span class="chip-entry-name">${_esc(r.name||'')}${r.name?'. ':''}</span><span class="chip-entry-desc">${_esc(r.desc||'')}</span></div>`).join('');
-    const legendary = (m.legendary||[]).map(l => `<div class="chip-entry"><span class="chip-entry-name">${_esc(l.name||'')}${l.name?'. ':''}</span><span class="chip-entry-desc">${_esc(l.desc||'')}</span></div>`).join('');
+  list.innerHTML = encounterMonsters.map(m => {
+    const traits    = (m.traits||[]).map(t => _chipEntry(t)).join('');
+    const actions   = (m.actions||[]).map(a => _chipEntry(a)).join('');
+    const reactions = (m.reactions||[]).map(r => _chipEntry(r)).join('');
+    const legendary = (m.legendary||[]).map(l => _chipEntry(l)).join('');
+
+    const maxHp = _parseMaxHp(m.hp);
+    const cur   = m.currentHp !== undefined ? m.currentHp : maxHp;
+    const pct   = maxHp !== null && maxHp > 0 ? cur / maxHp : 1;
+    const hpCls = cur <= 0 ? ' hp-dead' : pct <= 0.25 ? ' hp-critical' : pct <= 0.5 ? ' hp-wounded' : '';
+
+    const hpHtml = maxHp !== null ? `
+      <div class="chip-hp-row" onclick="event.stopPropagation()">
+        <button class="chip-hp-btn" onclick="updateChipHp('${m._eid}',-10)">−10</button>
+        <button class="chip-hp-btn" onclick="updateChipHp('${m._eid}',-5)">−5</button>
+        <button class="chip-hp-btn" onclick="updateChipHp('${m._eid}',-1)">−</button>
+        <input class="chip-hp-input${hpCls}" type="number" value="${cur??maxHp}" min="0"
+          onchange="setChipHp('${m._eid}',this.value)" onclick="this.select()">
+        <span class="chip-hp-max${hpCls}">/${maxHp}</span>
+        <button class="chip-hp-btn" onclick="updateChipHp('${m._eid}',+1)">＋</button>
+        <button class="chip-hp-btn" onclick="updateChipHp('${m._eid}',+5)">＋5</button>
+        <button class="chip-hp-btn" onclick="updateChipHp('${m._eid}',+10)">＋10</button>
+      </div>` : '';
+
+    const bodyOpen = _expandedEid === m._eid ? ' open' : '';
+
     return `
-    <div class="monster-chip" data-id="${m.id}" onclick="toggleChipExpand(event,'${m.id}')">
-      <div class="chip-header-row">
-        <div class="chip-name" title="${_esc(m.name||'')}" style="flex:1;min-width:0">${_esc(m.name) || '<em style="opacity:.5">Sans nom</em>'}</div>
-        <span class="chip-arrow">▼</span>
-      </div>
-      <div class="chip-type">${_esc(m.type||'—')}</div>
-      <div class="chip-meta" onclick="event.stopPropagation()">
+    <div class="monster-chip" data-eid="${m._eid}">
+      <div class="chip-head" onclick="toggleChipExpand('${m._eid}')">
+        <span class="chip-name" title="${_esc(m.name||'')}">${_esc(m.name) || '<em style="opacity:.5">Sans nom</em>'}</span>
         <span class="chip-cr">FP ${_esc(m.cr||'?')}</span>
-        ${(() => {
-          const maxHp = _parseMaxHp(m.hp);
-          if(maxHp === null) return m.hp ? `<span class="chip-hp-badge">♥ ${_esc(m.hp)}</span>` : '';
-          const cur = m.currentHp !== undefined ? m.currentHp : maxHp;
-          const pct = maxHp > 0 ? cur / maxHp : 0;
-          const cls = cur <= 0 ? ' dead' : pct <= 0.25 ? ' critical' : pct <= 0.5 ? ' wounded' : '';
-          return `<div class="chip-hp-row">
-            <button class="chip-hp-btn wide" onclick="updateChipHp('${m.id}',-10)" title="-10">−10</button>
-            <button class="chip-hp-btn wide" onclick="updateChipHp('${m.id}',-5)" title="-5">−5</button>
-            <button class="chip-hp-btn" onclick="updateChipHp('${m.id}',-1)">−</button>
-            <input class="chip-hp-input" type="number" value="${cur}" min="0"
-              onchange="setChipHp('${m.id}',this.value)" onclick="this.select()" oninput="this.style.width=(this.value.length+1)*8+'px'">
-            <span class="chip-hp-badge${cls}" title="PV actuels / max">/${maxHp}</span>
-            <button class="chip-hp-btn" onclick="updateChipHp('${m.id}',+1)">＋</button>
-            <button class="chip-hp-btn wide" onclick="updateChipHp('${m.id}',+5)" title="+5">＋5</button>
-            <button class="chip-hp-btn wide" onclick="updateChipHp('${m.id}',+10)" title="+10">＋10</button>
-          </div>`;
-        })()}
-        <button class="chip-init-btn" onclick="addMonsterToInit('${m.id}')" title="Ajouter à l'initiative (roll dex)">⚔</button>
-      </div>
-      <div class="chip-expand-body">
-        <div class="chip-stat-row">
-          ${['str','dex','con','int','wis','cha'].map(s => `<div class="chip-stat"><span class="chip-stat-lbl">${s.toUpperCase()}</span><span class="chip-stat-val">${m[s]||10}</span><span class="chip-stat-mod">${_modStr(m[s]||10)}</span></div>`).join('')}
+        ${hpHtml}
+        <div class="chip-actions" onclick="event.stopPropagation()">
+          <button class="chip-btn" onclick="addEncounterMonsterToInit('${m._eid}')" title="Initiative" style="color:#5b8dd9">⚔</button>
+          <button class="chip-btn" onclick="editEncounterMonster('${m._eid}')" title="Éditer">✎</button>
+          <button class="chip-btn" onclick="duplicateEncounterMonster('${m._eid}')" title="Dupliquer">📋</button>
+          <button class="chip-btn" onclick="saveEncounterMonsterToMine('${m._eid}')" title="Sauvegarder dans Mes Monstres" style="color:#d4a843">💾</button>
+          <button class="chip-btn danger" onclick="removeFromEncounter('${m._eid}')" title="Retirer">✕</button>
         </div>
-        ${m.ac||m.speed ? `<div style="font-size:.6rem;color:var(--ink-dim);margin-bottom:.2rem">${m.ac?'CA '+_esc(m.ac):''}${m.ac&&m.speed?' · ':''}${m.speed?'Vit. '+_esc(m.speed):''}</div>` : ''}
-        ${traits ? `<div class="chip-section">Capacités</div>${traits}` : ''}
-        ${actions ? `<div class="chip-section">Actions</div>${actions}` : ''}
-        ${reactions ? `<div class="chip-section">Réactions</div>${reactions}` : ''}
-        ${legendary ? `<div class="chip-section">Légendaires</div>${legendary}` : ''}
-        ${m.notes ? `<div class="chip-section">Notes</div><div class="chip-entry-desc">${_esc(m.notes)}</div>` : ''}
       </div>
-      <div class="chip-btns" onclick="event.stopPropagation()">
-        <button class="chip-btn" onclick="editMonster('${m.id}')">✏ Éditer</button>
-        <button class="chip-btn" onclick="duplicateMonster('${m.id}')">📋 Dup</button>
-        <button class="chip-btn danger" onclick="deleteMonster('${m.id}')">🗑</button>
+      <div class="chip-body${bodyOpen}" id="chip-body-${m._eid}">
+        ${m.type ? `<div style="font-size:.72rem;color:var(--ink-dim);font-style:italic;margin-bottom:.35rem">${_esc(m.type)}</div>` : ''}
+        <div style="font-size:.7rem;color:var(--ink-dim);margin-bottom:.4rem">
+          ${m.ac ? `CA <strong style="color:var(--ink)">${_esc(m.ac)}</strong>` : ''}
+          ${m.ac && m.speed ? ' · ' : ''}
+          ${m.speed ? `Vit. <strong style="color:var(--ink)">${_esc(m.speed)}</strong>` : ''}
+          ${m.hp && !maxHp ? ` · PV ${_esc(m.hp)}` : ''}
+        </div>
+        <div class="chip-stat-grid">
+          ${['str','dex','con','int','wis','cha'].map(s => `
+            <div class="chip-stat-box">
+              <div class="chip-stat-lbl">${s.toUpperCase()}</div>
+              <div class="chip-stat-val">${m[s]||10}</div>
+              <div class="chip-stat-mod">${_modStr(m[s]||10)}</div>
+            </div>`).join('')}
+        </div>
+        ${traits    ? `<div class="chip-section">Capacités</div>${traits}`    : ''}
+        ${actions   ? `<div class="chip-section">Actions</div>${actions}`     : ''}
+        ${reactions ? `<div class="chip-section">Réactions</div>${reactions}` : ''}
+        ${legendary ? `<div class="chip-section">Légendaires</div>${legendary}`: ''}
+        ${m.notes   ? `<div class="chip-section">Notes</div><div class="chip-entry">${_esc(m.notes)}</div>` : ''}
       </div>
     </div>`;
   }).join('');
-  // Re-apply expanded state after re-render
-  if(_expandedChipId){
-    const el = list.querySelector(`[data-id="${_expandedChipId}"]`);
-    if(el){ el.classList.add('expanded'); document.getElementById('monsterDockBody').classList.add('has-expanded'); }
-    else { _expandedChipId = null; document.getElementById('monsterDockBody').classList.remove('has-expanded'); }
+}
+
+function toggleChipExpand(eid){
+  const bodyEl = document.getElementById('chip-body-' + eid);
+  if(!bodyEl) return;
+  const isOpen = bodyEl.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.chip-body.open').forEach(b => b.classList.remove('open'));
+  _expandedEid = null;
+  if(!isOpen){
+    bodyEl.classList.add('open');
+    _expandedEid = eid;
+    if(!_dockOpen) toggleMonsterDock();
+    setTimeout(() => bodyEl.parentElement?.scrollIntoView({behavior:'smooth', block:'nearest'}), 50);
   }
 }
 
@@ -348,55 +455,39 @@ function toggleMonsterDock(){
   document.getElementById('dockToggleArrow').classList.toggle('open', _dockOpen);
 }
 
+// ── Create/edit/duplicate encounter monsters ─────────────────
 function newMonster(){
   const m = {
-    id: _genId(), name:'', type:'', cr:'', xp:'', prof:'',
+    _eid: _genId(), name:'', type:'', cr:'', xp:'', prof:'',
     ac:'', hp:'', speed:'',
     str:10, dex:10, con:10, int:10, wis:10, cha:10,
     saves:'', skills:'', dmg_immune:'', dmg_resist:'', dmg_vuln:'', cond_immune:'',
     senses:'', languages:'', legendary_desc:'', notes:'',
     traits:[], actions:[], reactions:[], legendary:[]
   };
-  dmMonsters.push(m);
-  _saveMonsters();
+  encounterMonsters.push(m);
+  _saveEncounter();
   renderMonsterDock();
-  openMonsterModal(m.id);
+  openMonsterModal(m._eid);
   if(!_dockOpen) toggleMonsterDock();
 }
 
-function editMonster(id){ openMonsterModal(id); if(!_dockOpen) toggleMonsterDock(); }
+function editEncounterMonster(eid){ openMonsterModal(eid); if(!_dockOpen) toggleMonsterDock(); }
 
-function duplicateMonster(id){
-  const orig = dmMonsters.find(m => m.id === id);
+function duplicateEncounterMonster(eid){
+  const orig = encounterMonsters.find(m => m._eid === eid);
   if(!orig) return;
-  const rawName = orig.name || 'Monstre';
-  // Strip trailing number to get the base name
-  const baseName = rawName.replace(/\s+\d+$/, '');
-  // Find the highest existing number for this base name
-  const nums = dmMonsters
-    .map(m => m.name || '')
-    .filter(n => n.startsWith(baseName + ' '))
-    .map(n => parseInt(n.slice(baseName.length + 1)))
-    .filter(n => !isNaN(n) && n > 0);
+  const baseName = (orig.name||'Monstre').replace(/\s+\d+$/, '');
+  const nums = encounterMonsters.map(m => m.name||'').filter(n => n.startsWith(baseName+' ')).map(n => parseInt(n.slice(baseName.length+1))).filter(n => !isNaN(n) && n > 0);
   const nextNum = nums.length > 0 ? Math.max(...nums) + 1 : 2;
-  const copy = JSON.parse(JSON.stringify(orig));
-  copy.id = _genId();
-  copy.name = baseName + ' ' + nextNum;
-  dmMonsters.push(copy);
-  _saveMonsters();
+  const copy = Object.assign({}, JSON.parse(JSON.stringify(orig)), { _eid: _genId(), name: baseName + ' ' + nextNum });
+  encounterMonsters.push(copy);
+  _saveEncounter();
   renderMonsterDock();
   showToast('📋 ' + copy.name);
 }
 
-function deleteMonster(id){
-  const m = dmMonsters.find(x => x.id === id);
-  const name = m ? (m.name || 'Monstre') : 'Monstre';
-  dmMonsters = dmMonsters.filter(m => m.id !== id);
-  _saveMonsters();
-  renderMonsterDock();
-  showToast('🗑 ' + name + ' supprimé');
-}
-
+// ── Import JSON → encounter ──────────────────────────────────
 function importMonsterJSON(){ document.getElementById('monsterImportInput').click(); }
 
 function handleMonsterImport(event){
@@ -406,7 +497,7 @@ function handleMonsterImport(event){
       try {
         const d = JSON.parse(e.target.result);
         const m = {
-          id: d.id || _genId(),
+          _eid: _genId(),
           name: d.name || d.monster_name || '',
           type: d.type || d.monster_type || '',
           cr: d.cr || d.m_cr || '',
@@ -436,11 +527,10 @@ function handleMonsterImport(event){
           reactions: d.reactions || d._reactions || [],
           legendary: d.legendary || d._legendary || [],
         };
-        const idx = dmMonsters.findIndex(x => x.id === m.id);
-        if(idx >= 0) dmMonsters[idx] = m; else dmMonsters.push(m);
-        _saveMonsters();
+        encounterMonsters.push(m);
+        _saveEncounter();
         renderMonsterDock();
-        showToast('✓ ' + (m.name || 'Monstre') + ' importé');
+        showToast('✓ ' + (m.name||'Monstre') + ' → rencontre');
       } catch(err){ showToast('⚠️ JSON invalide'); }
     };
     reader.readAsText(file);
@@ -448,12 +538,12 @@ function handleMonsterImport(event){
   event.target.value = '';
 }
 
-// ── Monster Modal ──
-let _editingId = null;
+// ── Monster Modal (edits encounter monsters) ─────────────────
+let _editingEid = null;
 
-function openMonsterModal(id){
-  _editingId = id;
-  const m = dmMonsters.find(x => x.id === id);
+function openMonsterModal(eid){
+  _editingEid = eid;
+  const m = encounterMonsters.find(x => x._eid === eid);
   if(!m) return;
   document.getElementById('mmTitle').textContent = m.name || 'Nouveau Monstre';
   ['name','type','cr','xp','prof','ac','hp','speed',
@@ -466,29 +556,48 @@ function openMonsterModal(id){
     const el = document.getElementById('mf_'+f);
     if(el){ el.value = m[f] || 10; updateMod(f); }
   });
-  ['traits','actions','reactions','legendary'].forEach(s => renderModalList(s, m[s] || []));
+  ['traits','actions','reactions','legendary'].forEach(s => renderModalList(s, m[s]||[]));
   document.getElementById('monsterModal').style.display = 'flex';
 }
 
-function _saveMonsterFields(){
-  const m = dmMonsters.find(x => x.id === _editingId);
+// ── My Monster Modal (edits dmMonsters, from browser) ────────
+let _editingMyId = null;
+
+function openMyMonsterModal(id){
+  _editingMyId = id;
+  _editingEid = null;
+  const m = dmMonsters.find(x => x.id === id);
   if(!m) return;
+  document.getElementById('mmTitle').textContent = '(Mes Monstres) ' + (m.name||'Nouveau Monstre');
   ['name','type','cr','xp','prof','ac','hp','speed',
    'saves','skills','dmg_immune','dmg_resist','dmg_vuln','cond_immune',
    'senses','languages','legendary_desc','notes'].forEach(f => {
     const el = document.getElementById('mf_'+f);
-    if(el) m[f] = el.value;
+    if(el) el.value = m[f] || '';
   });
   ['str','dex','con','int','wis','cha'].forEach(f => {
     const el = document.getElementById('mf_'+f);
-    if(el) m[f] = parseInt(el.value) || 10;
+    if(el){ el.value = m[f] || 10; updateMod(f); }
   });
-  _saveMonsters();
-  renderMonsterDock();
+  ['traits','actions','reactions','legendary'].forEach(s => renderModalList(s, m[s]||[]));
+  document.getElementById('monsterModal').style.display = 'flex';
+}
+
+function _readModalFields(target){
+  ['name','type','cr','xp','prof','ac','hp','speed',
+   'saves','skills','dmg_immune','dmg_resist','dmg_vuln','cond_immune',
+   'senses','languages','legendary_desc','notes'].forEach(f => {
+    const el = document.getElementById('mf_'+f);
+    if(el) target[f] = el.value;
+  });
+  ['str','dex','con','int','wis','cha'].forEach(f => {
+    const el = document.getElementById('mf_'+f);
+    if(el) target[f] = parseInt(el.value)||10;
+  });
 }
 
 function closeMonsterModal(){
-  _saveMonsterFields();
+  saveMonsterModal();
   document.getElementById('monsterModal').style.display = 'none';
 }
 
@@ -513,13 +622,18 @@ function renderModalList(section, items){
 function _esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
 function _mlUpdate(section, i, field, val){
-  const m = dmMonsters.find(x => x.id === _editingId);
+  // Try encounter first, then my monsters
+  const m = _editingEid
+    ? encounterMonsters.find(x => x._eid === _editingEid)
+    : dmMonsters.find(x => x.id === _editingMyId);
   if(!m || !m[section] || !m[section][i]) return;
   m[section][i][field] = val;
 }
 
 function addModalListItem(section){
-  const m = dmMonsters.find(x => x.id === _editingId);
+  const m = _editingEid
+    ? encounterMonsters.find(x => x._eid === _editingEid)
+    : dmMonsters.find(x => x.id === _editingMyId);
   if(!m) return;
   if(!m[section]) m[section] = [];
   m[section].push({name:'', desc:''});
@@ -527,43 +641,46 @@ function addModalListItem(section){
 }
 
 function _mlRemove(section, i){
-  const m = dmMonsters.find(x => x.id === _editingId);
+  const m = _editingEid
+    ? encounterMonsters.find(x => x._eid === _editingEid)
+    : dmMonsters.find(x => x.id === _editingMyId);
   if(!m || !m[section]) return;
   m[section].splice(i, 1);
   renderModalList(section, m[section]);
 }
 
 async function saveMonsterModal(){
-  const m = dmMonsters.find(x => x.id === _editingId);
-  if(!m) return;
-  ['name','type','cr','xp','prof','ac','hp','speed',
-   'saves','skills','dmg_immune','dmg_resist','dmg_vuln','cond_immune',
-   'senses','languages','legendary_desc','notes'].forEach(f => {
-    const el = document.getElementById('mf_'+f);
-    if(el) m[f] = el.value;
-  });
-  ['str','dex','con','int','wis','cha'].forEach(f => {
-    const el = document.getElementById('mf_'+f);
-    if(el) m[f] = parseInt(el.value) || 10;
-  });
-  _saveMonsters();
-  renderMonsterDock();
-  document.getElementById('mmTitle').textContent = m.name || 'Monstre';
-  if(!_dbDirHandle && 'showDirectoryPicker' in window){
-    const pick = confirm('Pas de dossier DB connecté.\nVoulez-vous choisir un dossier pour sauvegarder les fiches en fichiers JSON ?');
-    if(pick) await selectDbDir();
+  if(_editingEid){
+    // Save to encounter
+    const m = encounterMonsters.find(x => x._eid === _editingEid);
+    if(!m) return;
+    _readModalFields(m);
+    _saveEncounter();
+    renderMonsterDock();
+    document.getElementById('mmTitle').textContent = m.name || 'Monstre';
+    showToast('✓ ' + (m.name||'Monstre') + ' sauvegardé (rencontre)');
+  } else if(_editingMyId){
+    // Save to My Monsters
+    const m = dmMonsters.find(x => x.id === _editingMyId);
+    if(!m) return;
+    _readModalFields(m);
+    _saveMyMonsters();
+    document.getElementById('mmTitle').textContent = m.name || 'Monstre';
+    showToast('✓ ' + (m.name||'Monstre') + ' sauvegardé (Mes Monstres)');
+    if(typeof MonsterBrowser !== 'undefined') MonsterBrowser.renderList();
   }
-  showToast('✓ ' + (m.name || 'Monstre') + ' sauvegardé');
 }
 
 function exportMonsterFromModal(){
   saveMonsterModal();
-  const m = dmMonsters.find(x => x.id === _editingId);
+  const m = _editingEid
+    ? encounterMonsters.find(x => x._eid === _editingEid)
+    : dmMonsters.find(x => x.id === _editingMyId);
   if(!m) return;
   const blob = new Blob([JSON.stringify(m, null, 2)], {type:'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  const slug = (m.name || 'monstre').replace(/\s+/g,'_').toLowerCase().replace(/[^a-z0-9_]/g,'');
+  const slug = (m.name||'monstre').replace(/\s+/g,'_').toLowerCase().replace(/[^a-z0-9_]/g,'');
   a.download = `monstre_${slug}_${new Date().toISOString().slice(0,10)}.json`;
   a.click();
   URL.revokeObjectURL(a.href);
@@ -600,7 +717,7 @@ function addCustomSound(event){
       renderCustomSounds();
       showToast('✓ Son ajouté : ' + name);
     };
-    reader.readAsDataURL(file); // → data:audio/wav;base64,...
+    reader.readAsDataURL(file);
   });
   event.target.value = '';
 }

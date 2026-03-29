@@ -11,7 +11,6 @@
 <header>
   <a href="index.html" style="position:absolute;left:1.2rem;top:50%;transform:translateY(-50%);font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-dim);text-decoration:none;border:1px solid var(--border);padding:0.35rem 0.75rem;border-radius:3px;transition:all 0.2s" onmouseover="this.style.color='var(--gold)';this.style.borderColor='var(--gold)'" onmouseout="this.style.color='var(--ink-dim)';this.style.borderColor='var(--border)'">← Accueil</a>
   <div class="title-rune">⚔ DM Screen Controller ⚔</div>
-  <div class="title-sub">Gestionnaire d'affichage secondaire</div>
 </header>
 <div class="layout">
   <aside>
@@ -129,12 +128,13 @@
 <!-- ═══ MONSTER DOCK ═══ -->
 <div id="monsterDock" class="monster-dock">
   <div class="dock-header" onclick="toggleMonsterDock()">
-    <span class="dock-title">🐉 Fiches Monstres <span id="dockCount" class="dock-count">0</span></span>
+    <span class="dock-title">⚔ Rencontre <span id="dockCount" class="dock-count"></span></span>
     <div class="dock-actions" onclick="event.stopPropagation()">
-      <span id="dbStatus" class="db-status disconnected" title="Cliquer pour connecter le dossier DB" onclick="selectDbDir()" style="cursor:pointer">💾 DB</span>
+      <span id="dbStatus" class="db-status disconnected" title="Cliquer pour connecter le dossier DB (Mes Monstres)" onclick="selectDbDir()" style="cursor:pointer">💾 DB</span>
       <button class="dock-btn" style="background:rgba(91,141,217,.15);border-color:#5b8dd9;color:#5b8dd9" onclick="MonsterBrowser.open()">📖 Bibliothèque</button>
       <button class="dock-btn" onclick="newMonster()">＋ Nouveau</button>
       <button class="dock-btn" onclick="importMonsterJSON()">📥 Importer</button>
+      <button class="dock-btn" style="color:#c44a1a;border-color:#c44a1a" onclick="clearEncounter()">🗑 Vider</button>
       <input type="file" id="monsterImportInput" accept=".json" multiple style="display:none" onchange="handleMonsterImport(event)">
     </div>
     <span id="dockToggleArrow" class="dock-toggle">▲</span>
@@ -228,6 +228,7 @@
       <div style="display:flex;gap:0.2rem;background:#0d0b07;border-radius:4px;padding:2px">
         <button id="mb-tab-library" class="mb-tab-btn active" onclick="MonsterBrowser.setTab('library')">📖 Bibliothèque</button>
         <button id="mb-tab-custom"  class="mb-tab-btn" onclick="MonsterBrowser.setTab('custom')">🐉 Mes Monstres <span id="mb-tab-custom-count" class="mb-tab-count"></span></button>
+        <button id="mb-new-custom-btn" class="mb-tab-btn" style="display:none;background:rgba(212,168,67,0.1);color:#d4a843;border-color:#d4a843" onclick="MonsterBrowser.newCustomMonster()">＋ Nouveau</button>
       </div>
       <span style="font-size:0.7rem;color:#7a6a55;flex:1" id="mb-count-label"></span>
       <!-- Lang -->
