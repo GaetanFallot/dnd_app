@@ -1,0 +1,13 @@
+{
+  "index": "sneak-attack",
+  "name": "Attaque sournoise",
+  "level": 1,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "Dès le niveau 1, vous savez frapper subtilement et exploiter la distraction de l'ennemi. Une fois par tour, vous pouvez infliger 1d6 dégâts supplémentaires à une créature que vous frappez avec une attaque si vous avez un avantage au jet d'attaque. L'attaque doit utiliser une arme de finesse ou à distance.\nVous n'avez pas besoin d'un avantage au jet d'attaque si un autre ennemi de la cible se trouve à moins de 1,50 mètre de celle-ci, cet ennemi n'est pas incapable d'agir et vous n'avez pas de désavantage au jet d'attaque.\nLe montant des dégâts supplémentaires augmente à mesure que vous gagnez des niveaux dans cette classe, comme indiqué dans la colonne Attaque sournoise du tableau des Voleurs."
+  ],
+  "name_en": "Sneak Attack",
+  "class_name_fr": "",
+  "_translated": true
+}

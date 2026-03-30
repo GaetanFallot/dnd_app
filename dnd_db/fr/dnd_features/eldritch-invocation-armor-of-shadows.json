@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-armor-of-shadows",
+  "name": "Invocation surnaturelle : Armure des Ombres",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer une armure de mage sur vous-même à volonté, sans dépenser d'emplacement de sort ni de composants matériels."
+  ],
+  "name_en": "Eldritch Invocation: Armor of Shadows",
+  "class_name_fr": "",
+  "_translated": true
+}

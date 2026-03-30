@@ -1,0 +1,13 @@
+{
+  "index": "holy-nimbus",
+  "name": "Nimbus sacré",
+  "level": 20,
+  "class": "paladin",
+  "subclass": "devotion",
+  "desc": [
+    "Au niveau 20, par une action, vous pouvez émettre une aura de soleil. Pendant 1 minute, une lumière vive brille autour de vous dans un rayon de 9 mètres, et une lumière faible brille 9 mètres au-delà.\nChaque fois qu'une créature ennemie commence son tour sous une lumière vive, elle subit 10 dégâts radiants.\nDe plus, pendant toute la durée, vous bénéficiez d'un avantage aux jets de sauvegarde contre les sorts lancés par des démons ou des morts-vivants."
+  ],
+  "name_en": "Holy Nimbus",
+  "class_name_fr": "",
+  "_translated": true
+}

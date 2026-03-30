@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-quickened-spell",
+  "name": "Métamagie : sort accéléré",
+  "level": 3,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez un sort qui a un temps d'incantation de 1 action, vous pouvez dépenser 2 points de sorcellerie pour changer le temps d'incantation en 1 action bonus pour ce lancement."
+  ],
+  "name_en": "Metamagic: Quickened Spell",
+  "class_name_fr": "",
+  "_translated": true
+}

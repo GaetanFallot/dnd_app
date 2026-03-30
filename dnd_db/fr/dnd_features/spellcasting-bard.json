@@ -1,0 +1,13 @@
+{
+  "index": "spellcasting-bard",
+  "name": "Lanceur de sorts : Barde",
+  "level": 1,
+  "class": "bard",
+  "subclass": null,
+  "desc": [
+    "Vous avez appris à démêler et à remodeler le tissu de la réalité en harmonie avec vos souhaits et votre musique. Vos sorts font partie de votre vaste répertoire, une magie que vous pouvez adapter à différentes situations."
+  ],
+  "name_en": "Spellcasting: Bard",
+  "class_name_fr": "",
+  "_translated": true
+}

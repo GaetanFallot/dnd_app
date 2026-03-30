@@ -1,0 +1,13 @@
+{
+  "index": "channel-divinity",
+  "name": "Canal Divinité",
+  "level": 3,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Votre serment vous permet de canaliser l'énergie divine pour alimenter des effets magiques. Chaque option Channel Divinity fournie par votre serment explique comment l'utiliser.\nLorsque vous utilisez votre Channel Divinity, vous choisissez quelle option utiliser. Vous devez ensuite terminer un repos court ou long pour utiliser à nouveau votre Channel Divinity.\nCertains effets de Channel Divinity nécessitent des jets de sauvegarde. Lorsque vous utilisez un tel effet de cette classe, le DD est égal à votre DD de sauvegarde des sorts de paladin."
+  ],
+  "name_en": "Channel Divinity",
+  "class_name_fr": "",
+  "_translated": true
+}

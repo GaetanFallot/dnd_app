@@ -1,0 +1,36 @@
+{
+  "index": "monk-astral-self",
+  "name": "Moine : Voie du Soi Astral",
+  "class": "monk",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Un moine qui suit la Voie du Soi Astral croit que son corps est une illusion. Ils voient leur ki comme une représentation de leur véritable forme, un moi astral. Ce moi astral a la capacité d'être une force d'ordre ou de désordre, certains monastères formant les étudiants à utiliser leur pouvoir pour protéger les faibles et d'autres instruisant les aspirants sur la manière de se manifester au service des puissants.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Bras du Soi Astral",
+      "level": 3,
+      "desc": "Au niveau 3, votre maîtrise de votre ki vous permet d'invoquer une partie de votre moi astral. Par une action bonus, vous pouvez dépenser 1 point de ki pour invoquer les bras de votre moi astral. Lorsque vous faites cela, chaque créature de votre choix que vous pouvez voir à moins de 3 mètres de vous doit réussir un jet de sauvegarde de Dextérité ou subir des dégâts de force égaux à deux lancers de votre dé d'Arts Martiaux.\n\nPendant 10 minutes, ces bras spectraux planent près de vos épaules ou entourent vos bras (au choix). Vous déterminez l'apparence des armes et elles disparaissent prématurément si vous êtes frappé d'incapacité ou si vous mourez.\n\nTant que les bras spectraux sont présents, vous bénéficiez des avantages suivants :\n• Vous pouvez utiliser votre modificateur de Sagesse à la place de votre modificateur de Force lorsque vous effectuez des tests de Force et des jets de sauvegarde de Force.\n• Vous pouvez utiliser les bras spectraux pour effectuer des frappes à mains nues.\n• Lorsque vous effectuez une frappe à mains nues avec les bras pendant votre tour, votre portée est de 1,50 mètre supérieure à la normale.\n• Les frappes à mains nues que vous effectuez avec les bras peuvent utiliser votre modificateur de Sagesse à la place de votre modificateur de Force ou de Dextérité pour les jets d'attaque et de dégâts, et leur type de dégâts est la force.",
+      "name_en": "Arms of the Astral Self"
+    },
+    {
+      "name": "Visage du Soi Astral",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 6, vous pouvez invoquer le visage de votre moi astral. En tant qu'action bonus, ou dans le cadre de l'action bonus que vous effectuez pour activer les Armes du Soi Astral, vous pouvez dépenser 1 point de ki pour invoquer ce visage pendant 10 minutes. Il disparaît prématurément si vous êtes frappé d'incapacité ou si vous mourez.\n\nLe visage spectral couvre votre visage comme un casque ou un masque. Vous déterminez son apparence.\n\nTant que le visage spectral est présent, vous bénéficiez des avantages suivants.\n\nVue Astrale. Vous pouvez voir normalement dans l'obscurité, à la fois magique et non magique, jusqu'à une distance de 120 pieds.\n\nSagesse de l'Esprit. Vous avez un avantage aux tests de Sagesse (Perspicacité) et de Charisme (Intimidation).\n\nParole de l'Esprit. Lorsque vous parlez, vous pouvez diriger vos paroles vers une créature de votre choix que vous pouvez voir à moins de 60 pieds de vous, de manière à ce que seule cette créature puisse vous entendre. Alternativement, vous pouvez amplifier votre voix afin que toutes les créatures à moins de 600 pieds puissent vous entendre.",
+      "name_en": "Visage of the Astral Self"
+    },
+    {
+      "name": "Corps du Soi Astral",
+      "level": 11,
+      "desc": "À partir du niveau 11, lorsque vos bras astraux et votre visage sont invoqués, vous pouvez faire apparaître le corps de votre moi astral (aucune action requise). Ce corps spectral recouvre votre forme physique comme une armure, se connectant aux bras et au visage. Vous déterminez son apparence.\n\nTant que le corps spectral est présent, vous bénéficiez des avantages suivants.\n\nDévier l’énergie. Lorsque vous subissez des dégâts d'acide, de froid, de feu, de force, de foudre ou de tonnerre, vous pouvez utiliser votre réaction pour les dévier. Lorsque vous faites ainsi, les dégâts que vous subissez sont réduits de 1d10 + votre modificateur de Sagesse (réduction minimum de 1).\n\nDes armes puissantes. Une fois à chacun de vos tours, lorsque vous touchez une cible avec les bras du Soi astral, vous pouvez infliger à la cible des dégâts supplémentaires égaux à votre dé d'arts martiaux.",
+      "name_en": "Body of the Astral Self"
+    },
+    {
+      "name": "Soi astral éveillé",
+      "level": 17,
+      "desc": "À partir du niveau 17, votre connexion à votre moi astral est complète, vous permettant de libérer tout son potentiel. Par une action bonus, vous pouvez dépenser 5 points de ki pour invoquer les bras, le visage et le corps de votre moi astral et le réveiller pendant 10 minutes. Cet éveil se termine tôt si vous êtes frappé d’incapacité ou si vous mourez.\n\nPendant que votre moi astral est éveillé, vous bénéficiez des avantages suivants.\n\nArmure de l'Esprit. Vous gagnez un bonus de +2 à la classe d'armure.\n\nBarrage astral. Chaque fois que vous utilisez la fonction Extra Attack pour attaquer deux fois, vous pouvez attaquer trois fois si toutes les attaques sont effectuées avec vos bras astraux.",
+      "name_en": "Awakened Astral Self"
+    }
+  ],
+  "name_en": "Monk: Way of the Astral Self",
+  "_translated": true
+}

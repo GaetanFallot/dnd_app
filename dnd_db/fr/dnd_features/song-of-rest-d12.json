@@ -1,0 +1,13 @@
+{
+  "index": "song-of-rest-d12",
+  "name": "Chant de repos (d12)",
+  "level": 17,
+  "class": "bard",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 2, vous pouvez utiliser une musique ou un discours apaisant pour aider à revitaliser vos alliés blessés pendant un court repos. Si vous ou toute créature amie qui peut entendre votre performance récupérez des points de vie à la fin du court repos en dépensant un ou plusieurs dés de vie, chacune de ces créatures récupère 1d6 points de vie supplémentaires. \nLes points de vie supplémentaires augmentent lorsque vous atteignez certains niveaux dans cette classe : jusqu'à 1d8 au niveau 9, jusqu'à 1d10 au niveau 13 et jusqu'à 1d12 au niveau 17."
+  ],
+  "name_en": "Song of Rest (d12)",
+  "class_name_fr": "",
+  "_translated": true
+}

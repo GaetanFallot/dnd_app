@@ -1,0 +1,42 @@
+{
+  "index": "druid-moon",
+  "name": "Druide : Cercle de la Lune",
+  "class": "druid",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Les druides du Cercle de la Lune sont de féroces gardiens de la nature. Leur ordre se rassemble sous la pleine lune pour partager des nouvelles et des avertissements commerciaux. Ils hantent les parties les plus profondes de la nature sauvage, où ils peuvent passer des semaines entières avant de croiser la route d'une autre créature humanoïde, sans parler d'un autre druide.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Combattre la forme sauvage",
+      "level": 2,
+      "desc": "Lorsque vous choisissez ce cercle au niveau 2, vous gagnez la possibilité d'utiliser Forme Sauvage à votre tour comme une action bonus, plutôt que comme une action.\n\nDe plus, pendant que vous êtes transformé par Wild Shape, vous pouvez utiliser une action bonus pour dépenser un emplacement de sort afin de regagner 1d8 points de vie par niveau d'emplacement de sort dépensé.",
+      "name_en": "Combat Wild Shape"
+    },
+    {
+      "name": "Formes de cercle",
+      "level": 2,
+      "desc": "Les rites de votre cercle vous confèrent la capacité de vous transformer en formes animales plus dangereuses. À partir du niveau 2, vous pouvez utiliser votre Forme Sauvage pour vous transformer en bête avec un indice de défi allant jusqu'à 1. Vous ignorez le Max. Colonne CR du tableau Formes de bêtes, mais doit respecter les autres limitations qui s'y trouvent.\n\nÀ partir du niveau 6, vous pouvez vous transformer en bête avec un niveau de défi aussi élevé que votre niveau de druide divisé par 3, arrondi à l'inférieur.",
+      "name_en": "Circle Forms"
+    },
+    {
+      "name": "Frappe primordiale",
+      "level": 6,
+      "desc": "À partir du niveau 6, vos attaques sous forme de bête sont considérées comme magiques dans le but de vaincre la résistance et l'immunité aux attaques et dégâts non magiques.",
+      "name_en": "Primal Strike"
+    },
+    {
+      "name": "Forme sauvage élémentaire",
+      "level": 10,
+      "desc": "Au niveau 10, vous pouvez dépenser deux utilisations de Forme sauvage en même temps pour vous transformer en élémentaire d'air, en élémentaire de terre, en élémentaire de feu ou en élémentaire d'eau.",
+      "name_en": "Elemental Wild Shape"
+    },
+    {
+      "name": "Mille formes",
+      "level": 14,
+      "desc": "Au niveau 14, vous avez appris à utiliser la magie pour modifier votre forme physique de manière plus subtile. Vous pouvez lancer le sort Alter Self à volonté.",
+      "name_en": "Thousand Forms"
+    }
+  ],
+  "name_en": "Druid: Circle of the Moon",
+  "_translated": true
+}

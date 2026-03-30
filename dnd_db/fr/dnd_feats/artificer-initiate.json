@@ -1,0 +1,14 @@
+{
+  "index": "artificer-initiate",
+  "name": "Artificier Initié",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": null,
+  "desc": "Vous avez appris une partie de l’inventivité d’un artisan :",
+  "benefits": [
+    "Vous apprenez un sort mineur de votre choix dans la liste des sorts d'Artificier, et vous apprenez un sort de 1er niveau de votre choix dans cette liste. L'intelligence est votre capacité à lancer des sorts pour ces sorts.",
+    "Vous pouvez lancer le sort de niveau 1 de ce don sans emplacement de sort, et vous devez terminer un long repos avant de pouvoir le lancer à nouveau de cette manière. Vous pouvez également lancer le sort en utilisant n’importe quel emplacement de sort dont vous disposez.",
+    "Vous gagnez la maîtrise d'un type d'outils d'artisan de votre choix, et vous pouvez utiliser ce type d'outil comme foyer de lancement de sorts pour tout sort que vous lancez et qui utilise l'Intelligence comme capacité de lancement de sorts."
+  ],
+  "name_en": "Artificer Initiate",
+  "_translated": true
+}

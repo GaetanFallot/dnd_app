@@ -1,0 +1,13 @@
+{
+  "index": "martial-archetype-improvement-2",
+  "name": "Fonctionnalité d'archétype martial",
+  "level": 10,
+  "class": "fighter",
+  "subclass": null,
+  "desc": [
+    "Au niveau 3, vous choisissez un archétype que vous vous efforcez d'imiter dans vos styles et techniques de combat, comme Champion. L'archétype que vous choisissez vous accorde des fonctionnalités au niveau 3 et encore aux niveaux 7, 10, 15 et 18."
+  ],
+  "name_en": "Martial Archetype feature",
+  "class_name_fr": "",
+  "_translated": true
+}

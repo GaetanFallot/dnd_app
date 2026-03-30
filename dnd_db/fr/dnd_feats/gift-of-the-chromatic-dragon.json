@@ -1,0 +1,13 @@
+{
+  "index": "gift-of-the-chromatic-dragon",
+  "name": "Don du Dragon Chromatique",
+  "source": "Fizban's Treasury of Dragons",
+  "prerequisite": null,
+  "desc": "Vous avez manifesté une partie du pouvoir des dragons chromatiques, vous accordant les avantages suivants :",
+  "benefits": [
+    "Infusion Chromatique. Par une action bonus, vous pouvez toucher une arme simple ou martiale et lui infliger l'un des types de dégâts suivants : acide, froid, feu, foudre ou poison. Pendant la minute suivante, l'arme inflige 1d4 dégâts supplémentaires du type choisi lorsqu'elle touche. Après avoir utilisé cette action bonus, vous ne pouvez plus la faire avant d’avoir terminé un repos long.",
+    "Résistance réactive. Lorsque vous subissez des dégâts d'acide, de froid, de feu, de foudre ou de poison, vous pouvez utiliser votre réaction pour vous conférer une résistance à cette instance de dégâts. Vous pouvez utiliser cette réaction un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long."
+  ],
+  "name_en": "Gift of the Chromatic Dragon",
+  "_translated": true
+}

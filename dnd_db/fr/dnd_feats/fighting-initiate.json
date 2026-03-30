@@ -1,0 +1,10 @@
+{
+  "index": "fighting-initiate",
+  "name": "Initié au combat",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": "Maîtrise d'une arme martiale",
+  "desc": "Votre entraînement martial vous a permis de développer un style de combat particulier. En conséquence, vous apprenez une option de style de combat de votre choix auprès de la classe de combattant. Si vous avez déjà un style, celui que vous choisirez doit être différent.",
+  "benefits": [],
+  "name_en": "Fighting Initiate",
+  "_translated": true
+}

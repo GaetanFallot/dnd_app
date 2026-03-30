@@ -1,0 +1,14 @@
+{
+  "index": "greater-dragonmark",
+  "name": "Grande marque du dragon (UA)",
+  "source": "Wayfinder's Guide to Eberron",
+  "prerequisite": "Niveau 8, le personnage doit posséder une marque de dragon",
+  "desc": "Votre dracogramme a grandi en taille et en puissance. Cela améliore votre marque de dragon existante et les avantages sont basés sur la marque que vous possédez déjà. Une plus grande marque de dragon offre les avantages suivants :",
+  "benefits": [
+    "Le type de dé de votre dé d’intuition marqué draconique augmente de un (par exemple, passant d’un d4 à un d6).",
+    "Augmentez un score de capacité de 1, jusqu'à un maximum de 20. Les capacités disponibles sont basées sur votre marque, comme indiqué dans le tableau des avantages du Grand Dragonmark.",
+    "Vous apprenez un ensemble de sorts, que vous pouvez lancer chacun une fois sans dépenser d'emplacement de sort ni utiliser de composant matériel. La liste des sorts, leur capacité de lancement de sorts et le type de repos que vous devez effectuer pour retrouver l'utilisation de ces sorts sont indiqués dans le tableau des avantages de la Grande Marque de Dragon."
+  ],
+  "name_en": "Greater Dragonmark (UA)",
+  "_translated": true
+}

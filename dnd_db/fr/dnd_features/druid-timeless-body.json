@@ -1,0 +1,13 @@
+{
+  "index": "druid-timeless-body",
+  "name": "Corps intemporel",
+  "level": 18,
+  "class": "druid",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 18, la magie primitive que vous exercez vous fait vieillir plus lentement. Tous les 10 ans qui passent, votre corps ne vieillit que d’un an."
+  ],
+  "name_en": "Timeless Body",
+  "class_name_fr": "",
+  "_translated": true
+}

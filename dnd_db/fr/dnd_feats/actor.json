@@ -1,0 +1,14 @@
+{
+  "index": "actor",
+  "name": "Acteur",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Habile en mimétisme et en théâtre, vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Charisme de 1, jusqu'à un maximum de 20.",
+    "Vous avez un avantage aux tests de Charisme (Tromperie) et de Charisme (Performance) lorsque vous essayez de vous faire passer pour une personne différente.",
+    "Vous pouvez imiter le discours d'une autre personne ou les sons émis par d'autres créatures. Vous devez avoir entendu la personne parler, ou entendu la créature émettre le son, pendant au moins 1 minute. Un test de Sagesse (Perspicacité) réussi et contesté par votre test de Charisme (Tromperie) permet à un auditeur de déterminer que l'effet est truqué."
+  ],
+  "name_en": "Actor",
+  "_translated": true
+}

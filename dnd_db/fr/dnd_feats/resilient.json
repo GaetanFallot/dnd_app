@@ -1,0 +1,13 @@
+{
+  "index": "resilient",
+  "name": "Résilient",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Choisissez une valeur de capacité. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez le score de capacité choisi de 1, jusqu'à un maximum de 20.",
+    "Vous gagnez la maîtrise des jets de sauvegarde en utilisant la capacité choisie."
+  ],
+  "name_en": "Resilient",
+  "_translated": true
+}

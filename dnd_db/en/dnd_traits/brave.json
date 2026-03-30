@@ -1,0 +1,9 @@
+{
+  "index": "brave",
+  "name": "Brave",
+  "races": [
+    "halfling"
+  ],
+  "subraces": [],
+  "desc": "You have advantage on saving throw against being frightened."
+}

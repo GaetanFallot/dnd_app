@@ -1,0 +1,48 @@
+{
+  "index": "paladin-devotion",
+  "name": "Paladin : Serment de dévotion",
+  "class": "paladin",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Le serment de dévotion lie un paladin aux idéaux les plus élevés de justice, de vertu et d'ordre. Parfois appelés cavaliers, chevaliers blancs ou guerriers sacrés, ces paladins répondent à l'idéal du chevalier en armure étincelante, agissant avec honneur dans la poursuite de la justice et du bien commun. Ils se soumettent aux normes de conduite les plus élevées et certains, pour le meilleur ou pour le pire, imposent aux mêmes normes le reste du monde. Beaucoup de ceux qui prêtent ce serment sont dévoués aux dieux de la loi et du bien et utilisent les principes de leurs dieux comme mesure de leur dévotion. Ils considèrent les anges – les parfaits serviteurs du bien – comme leurs idéaux et incorporent des images d’ailes angéliques dans leurs casques ou leurs armoiries.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Principes de dévotion",
+      "level": null,
+      "desc": "Bien que les mots exacts et les restrictions du Serment de Dévotion varient, les paladins de ce serment partagent ces principes.\n\nHonnêteté. Ne mentez pas et ne trichez pas. Que ta parole soit ta promesse.\n\nCourage. N’ayez jamais peur d’agir, même si la prudence est de mise.\n\nCompassion. Aidez les autres, protégez les faibles et punissez ceux qui les menacent. Faites preuve de miséricorde envers vos ennemis, mais tempérez-la avec sagesse.\n\nHonneur. Traitez les autres avec équité et laissez vos actes honorables leur servir d’exemple. Faites le plus de bien possible en causant le moins de mal possible.\n\nDevoir. Soyez responsable de vos actes et de leurs conséquences, protégez ceux qui vous sont confiés et obéissez à ceux qui ont une juste autorité sur vous.",
+      "name_en": "Tenets of Devotion"
+    },
+    {
+      "name": "Sorts de serment",
+      "level": null,
+      "desc": "Vous gagnez des sorts de serment aux niveaux de paladin indiqués.\nSorts de serment de dévotion\nNiveau Paladin | Sorts\n3ème | Protection contre le mal et le bien, sanctuaire\n5ème | Petite Restauration, Zone de Vérité\n9ème | Balise d'espoir, dissipe la magie\n13e | Liberté de circulation, gardienne de la foi\n17e | Commune, grève des flammes",
+      "name_en": "Oath Spells"
+    },
+    {
+      "name": "Canal Divinité",
+      "level": 3,
+      "desc": "Lorsque vous prêtez ce serment au niveau 3, vous obtenez les deux options de canalisation divine suivantes.\n• Arme sacrée. Par une action, vous pouvez imprégner une arme que vous tenez d’énergie positive, en utilisant votre Channel Divinity. Pendant 1 minute, vous ajoutez votre modificateur de Charisme aux jets d'attaque effectués avec cette arme (avec un bonus minimum de +1). L'arme émet également une lumière vive dans un rayon de 20 pieds et une lumière faible 20 pieds au-delà. Si l’arme n’est pas déjà magique, elle le devient pour la durée. Vous pouvez mettre fin à cet effet à votre tour dans le cadre de n'importe quelle autre action. Si vous ne tenez plus ou ne portez plus cette arme, ou si vous perdez connaissance, cet effet prend fin.\n• Transformez l'Impie. En guise d'action, vous présentez votre symbole sacré et prononcez une prière censurant les démons et les morts-vivants, en utilisant votre canal divinité. Chaque démon ou mort-vivant qui peut vous voir ou vous entendre dans un rayon de 9 mètres autour de vous doit effectuer un jet de sauvegarde de Sagesse. Si la créature échoue à son jet de sauvegarde, elle est retournée pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. Une créature transformée doit passer son tour à essayer de s'éloigner le plus possible de vous, et elle ne peut pas volontairement se déplacer vers un espace situé à moins de 9 mètres de vous. Il ne peut pas non plus accepter de réactions. Pour son action, il peut utiliser uniquement l'action Dash ou tenter d'échapper à un effet qui l'empêche de bouger. S'il n'y a nulle part où se déplacer, la créature peut utiliser l'action Esquiver.",
+      "name_en": "Channel Divinity"
+    },
+    {
+      "name": "Aura de dévotion",
+      "level": 7,
+      "desc": "À partir du niveau 7, vous et les créatures amies situées à moins de 3 mètres de vous ne pouvez plus être charmés tant que vous êtes conscient.\n\nAu niveau 18, la portée de cette aura passe à 9 mètres.",
+      "name_en": "Aura of Devotion"
+    },
+    {
+      "name": "Pureté de l'Esprit",
+      "level": 15,
+      "desc": "À partir du niveau 15, vous êtes toujours sous l’effet d’un sort Protection contre le Mal et le Bien.",
+      "name_en": "Purity of Spirit"
+    },
+    {
+      "name": "Nimbus sacré",
+      "level": 20,
+      "desc": "Au niveau 20, par une action, vous pouvez émettre une aura de soleil. Pendant 1 minute, une lumière vive brille autour de vous dans un rayon de 9 mètres, et une lumière faible brille 9 mètres au-delà.\n\nChaque fois qu'une créature ennemie commence son tour sous une lumière vive, elle subit 10 dégâts radiants.\n\nDe plus, pendant toute la durée, vous bénéficiez d'un avantage aux jets de sauvegarde contre les sorts lancés par des démons ou des morts-vivants.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Holy Nimbus"
+    }
+  ],
+  "name_en": "Paladin: Oath of Devotion",
+  "_translated": true
+}

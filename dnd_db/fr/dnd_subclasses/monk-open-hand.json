@@ -1,0 +1,36 @@
+{
+  "index": "monk-open-hand",
+  "name": "Moine : Voie de la main ouverte",
+  "class": "monk",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Les moines de la Voie de la Main Ouverte sont les maîtres ultimes du combat dans les arts martiaux, qu'ils soient armés ou non. Ils apprennent des techniques pour pousser et faire trébucher leurs adversaires, manipuler le ki pour soigner les dommages causés à leur corps et pratiquer une méditation avancée qui peut les protéger du mal.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Technique de la main ouverte",
+      "level": 3,
+      "desc": "À partir du moment où vous choisissez cette tradition au niveau 3, vous pouvez manipuler le ki de votre ennemi lorsque vous exploitez le vôtre. À chaque fois que vous touchez une créature avec l'une des attaques accordées par votre Rafale de coups, vous pouvez imposer l'un des effets suivants à cette cible :\n• Il doit réussir un jet de sauvegarde de Dextérité ou être mis à terre.\n• Il doit effectuer un jet de sauvegarde de Force. S'il échoue, vous pouvez le pousser jusqu'à 15 pieds de vous.\n• Il ne peut pas réagir avant la fin de votre prochain tour.",
+      "name_en": "Open Hand Technique"
+    },
+    {
+      "name": "Intégrité du corps",
+      "level": 6,
+      "desc": "Au niveau 6, vous gagnez la capacité de vous soigner. Par une action, vous pouvez récupérer des points de vie égaux à trois fois votre niveau de moine. Vous devez terminer un long repos avant de pouvoir utiliser à nouveau cette fonctionnalité.",
+      "name_en": "Wholeness of Body"
+    },
+    {
+      "name": "Tranquillité",
+      "level": 11,
+      "desc": "À partir du niveau 11, vous pouvez entrer dans une méditation spéciale qui vous entoure d’une aura de paix. À la fin d'un repos long, vous bénéficiez de l'effet d'un sort Sanctuaire qui dure jusqu'au début de votre prochain repos long (le sort peut se terminer plus tôt que d'habitude). Le DD du jet de sauvegarde du sort est égal à 8 + votre modificateur de Sagesse + votre bonus de maîtrise.",
+      "name_en": "Tranquility"
+    },
+    {
+      "name": "Paume frémissante",
+      "level": 17,
+      "desc": "Au niveau 17, vous obtenez la capacité de créer des vibrations mortelles dans le corps de quelqu'un. Lorsque vous frappez une créature avec une frappe à mains nues, vous pouvez dépenser 3 points de ki pour déclencher ces vibrations imperceptibles, qui durent un nombre de jours égal à votre niveau de moine. Les vibrations sont inoffensives à moins que vous n'utilisiez votre action pour y mettre fin. Pour ce faire, vous et la cible devez être sur le même plan d’existence. Lorsque vous utilisez cette action, la créature doit effectuer un jet de sauvegarde de Constitution. En cas d'échec, il est réduit à 0 point de vie. S'il réussit, il subit 10d10 dégâts nécrotiques.\n\nVous ne pouvez avoir qu'une seule créature sous l'effet de cette fonctionnalité à la fois. Vous pouvez choisir de mettre fin aux vibrations de manière inoffensive sans recourir à une action.",
+      "name_en": "Quivering Palm"
+    }
+  ],
+  "name_en": "Monk: Way of the Open Hand",
+  "_translated": true
+}

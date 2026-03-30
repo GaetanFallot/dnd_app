@@ -1,0 +1,11 @@
+{
+  "index": "gnome-cunning",
+  "name": "Gnome rusé",
+  "races": [
+    "gnome"
+  ],
+  "subraces": [],
+  "desc": "Vous avez un avantage sur tous les jets de sauvegarde d'Intelligence, de Sagesse et de Charisme contre la magie.",
+  "name_en": "Gnome Cunning",
+  "_translated": true
+}

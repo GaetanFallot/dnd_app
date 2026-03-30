@@ -1,0 +1,9 @@
+{
+  "index": "elf-weapon-training",
+  "name": "Elf Weapon Training",
+  "races": [],
+  "subraces": [
+    "high-elf"
+  ],
+  "desc": "You have proficiency with the longsword, shortsword, shortbow, and longbow."
+}

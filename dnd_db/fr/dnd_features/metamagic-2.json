@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-2",
+  "name": "Métamagie",
+  "level": 10,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Au niveau 3, vous gagnez la capacité de modifier vos sorts selon vos besoins. Vous gagnez deux des options métamagiques suivantes de votre choix. Vous en gagnez un autre aux niveaux 10 et 17.\nVous ne pouvez utiliser qu'une seule option métamagique sur un sort lorsque vous le lancez, sauf indication contraire."
+  ],
+  "name_en": "Metamagic",
+  "class_name_fr": "",
+  "_translated": true
+}

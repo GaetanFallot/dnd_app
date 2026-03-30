@@ -1,0 +1,16 @@
+{
+  "index": "aberrant-dragonmark",
+  "name": "Marque de dragon aberrante",
+  "source": "Eberron - Rising from the Last War",
+  "prerequisite": "Aucune autre marque de dragon",
+  "desc": "Vous avez manifesté une marque de dragon aberrante. Déterminez son apparence et le défaut qui y est associé. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Constitution de 1, jusqu'à un maximum de 20.",
+    "Vous apprenez un sort mineur de votre choix dans la liste des sorts de sorcier. De plus, choisissez un sort de niveau 1 dans la liste des sorts de sorcier. Vous apprenez ce sort et pouvez le lancer grâce à votre marque. Une fois que vous l'avez lancé, vous devez terminer un repos court ou long avant de pouvoir le lancer à nouveau à travers la marque. La Constitution est votre capacité à lancer des sorts pour ces sorts.",
+    "Lorsque vous lancez le sort de niveau 1 à travers votre marque, vous pouvez dépenser un de vos dés de vie et le lancer. Si vous obtenez un nombre pair, vous gagnez un nombre de points de vie temporaires égal au nombre obtenu. Si vous obtenez un nombre impair, une créature aléatoire à moins de 9 mètres de vous (vous non compris) subit des dégâts de force égaux au nombre obtenu. Si aucune autre créature n'est à portée, vous subissez les dégâts.",
+    "Au choix du MD, un personnage doté du don Aberrant Dragonmark a une chance de manifester un plus grand pouvoir. En atteignant le niveau 10, un tel personnage a 10 pour cent de chances d'obtenir un avantage épique parmi les options du chapitre 7 du Guide du maître du donjon. Si le personnage ne parvient pas à obtenir un avantage, il aura 10 % de chances la prochaine fois qu'il gagnera un niveau.",
+    "Si le personnage gagne un avantage, le MD le choisit ou le détermine au hasard. Le personnage perd également définitivement un de ses dés de vie et son maximum de points de vie est réduit d'un montant égal à un lancer de ce dé plus son modificateur de Constitution (réduction minimale de 1). Cette réduction ne peut en aucun cas être inversée."
+  ],
+  "name_en": "Aberrant Dragonmark",
+  "_translated": true
+}

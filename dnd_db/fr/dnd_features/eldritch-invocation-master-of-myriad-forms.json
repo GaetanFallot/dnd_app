@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-master-of-myriad-forms",
+  "name": "Invocation surnaturelle : Maître des myriades de formes",
+  "level": 15,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer une modification de soi à volonté, sans dépenser d'emplacement de sort."
+  ],
+  "name_en": "Eldritch Invocation: Master of Myriad Forms",
+  "class_name_fr": "",
+  "_translated": true
+}

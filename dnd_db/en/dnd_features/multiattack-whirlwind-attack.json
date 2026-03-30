@@ -1,0 +1,8 @@
+{
+  "index": "multiattack-whirlwind-attack",
+  "name": "Multiattack: Whirlwind Attack",
+  "level": 11,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": "You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target."
+}

@@ -1,0 +1,13 @@
+{
+  "index": "step-of-the-wind",
+  "name": "Pas du vent",
+  "level": 2,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez dépenser 1 point ki pour effectuer l'action Désengagement ou Dash comme action bonus pendant votre tour, et votre distance de saut est doublée pour le tour."
+  ],
+  "name_en": "Step of the Wind",
+  "class_name_fr": "",
+  "_translated": true
+}

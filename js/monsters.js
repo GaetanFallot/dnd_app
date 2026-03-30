@@ -894,6 +894,23 @@ async function saveMonsterModal(){
   }
 }
 
+function shareMonsterLink(){
+  saveMonsterModal();
+  const m = _editingEid
+    ? encounterMonsters.find(x => x._eid === _editingEid)
+    : dmMonsters.find(x => x.id === _editingMyId);
+  if(!m) return;
+  const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(m))));
+  const url = 'https://gaetanfallot.github.io/dnd_app/monster-view.html#' + b64;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(url)
+      .then(()=>showToast('🔗 Lien monstre copié !'))
+      .catch(()=>prompt('Copie ce lien :', url));
+  } else {
+    prompt('Copie ce lien :', url);
+  }
+}
+
 function exportMonsterFromModal(){
   saveMonsterModal();
   const m = _editingEid

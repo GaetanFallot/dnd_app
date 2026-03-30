@@ -1,0 +1,35 @@
+{
+  "index": "ranger-swarmkeeper",
+  "name": "Ranger: Swarmkeeper",
+  "class": "ranger",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Feeling a deep connection to the environment around them, some rangers reach out through their magical connection to the world and bond with a swarm of nature spirits. The swarm becomes a potent force in battle, as well as helpful company for the ranger. Some Swarmkeepers are outcasts or hermits, keeping to themselves and their attendant swarms rather than dealing with the discomfort of others. Other Swarmkeepers enjoy building vibrant communities that work for the mutual benefit of all those they consider part of their swarm.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Gathered Swarm",
+      "level": 3,
+      "desc": "At 3rd level, a swarm of intangible nature spirits has bonded itself to you and can assist you in battle. While you’re alive, the swarm remains in your space, crawling on you or flying and skittering around you within your space. You determine its appearance, or you generate its appearance by rolling on the Swarm Appearance table.\nSwarm Appearance | \nd4 | Appearance\n1 | Swarming insects\n2 | Miniature twig blights\n3 | Fluttering birds\n4 | Playful pixies\n\nOnce on each of your turns, you can cause the swarm to assist you in one of the following ways, immediately after you hit a creature with an attack:\n• The attack's target takes 1d6 piercing damage from the swarm.\n• The attack's target must succeed on a Strength saving throw against your spell save DC or be moved by the swarm up to 15 feet horizontally in a direction of your choice.\n• You are moved by the swarm 5 feet horizontally in a direction of your choice."
+    },
+    {
+      "name": "Swarmkeeper Magic",
+      "level": 3,
+      "desc": "Also at 3rd level, you learn the Mage Hand cantrip if you don't already know it. When you cast it, the hand takes the form of your swarming nature spirits.\n\nYou also learn an additional spell of 1st level or higher when you reach certain levels in this class, as shown in the Swarmkeeper Spells table. Each spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.\nSwarmkeeper spells | \nRanger Level | Spell\n3rd | Faerie Fire, Mage Hand\n5th | Web\n9th | Gaseous Form\n13th | Arcane Eye\n17th | Insect Plague"
+    },
+    {
+      "name": "Writhing Tide",
+      "level": 7,
+      "desc": "Beginning at 7th level, you can condense part of your swarm into a focused mass that lifts you up. As a bonus action, you gain a flying speed of 10 feet and can hover. This effect lasts for 1 minute or until you are incapacitated.\n\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+    },
+    {
+      "name": "Mighty Swarm",
+      "level": 11,
+      "desc": "At 11th level, your Gathered Swarm grows mightier in the following ways:\n• The damage of Gathered Swarm increases to 1d8.\n• If a creature fails its saving throw against being moved by the Gathered Swarm, you can also cause the swarm to knock the creature prone.\n• When you are moved by Gathered Swarm, it gives you half cover until the start of your next turn."
+    },
+    {
+      "name": "Swarming Dispersal",
+      "level": null,
+      "desc": "When you reach 15th level, you can discorporate into your swarm, avoiding danger. When you take damage, you can use your reaction to give yourself resistance to that damage. You vanish into your swarm and then teleport to an unoccupied space that you can see within 30 feet of you, where you reappear with the swarm.\n\nYou can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+    }
+  ]
+}

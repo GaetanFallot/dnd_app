@@ -1,0 +1,13 @@
+{
+  "index": "ranger-fighting-style-defense",
+  "name": "Style de combat : Défense",
+  "level": 2,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "Tant que vous portez une armure, vous gagnez un bonus de +1 à la CA."
+  ],
+  "name_en": "Fighting Style: Defense",
+  "class_name_fr": "",
+  "_translated": true
+}

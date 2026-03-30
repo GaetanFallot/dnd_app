@@ -1,0 +1,13 @@
+{
+  "index": "primal-champion",
+  "name": "Champion primordial",
+  "level": 20,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "Au niveau 20, vous incarnez le pouvoir de la nature. Vos scores de Force et de Constitution augmentent de 4. Votre maximum pour ces scores est désormais de 24."
+  ],
+  "name_en": "Primal Champion",
+  "class_name_fr": "",
+  "_translated": true
+}

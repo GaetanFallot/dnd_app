@@ -1,0 +1,13 @@
+{
+  "index": "circle-of-the-land-swamp",
+  "name": "Cercle de terre : marais",
+  "level": 2,
+  "class": "druid",
+  "subclass": "land",
+  "desc": [
+    "Le Cercle de la Terre est composé de mystiques et de sages qui sauvegardent les savoirs et les rites anciens à travers une vaste tradition orale. Ces druides se réunissent dans des cercles sacrés d'arbres ou de pierres dressées pour murmurer des secrets primordiaux en druidique. Les membres les plus sages du cercle président en tant que prêtres en chef des communautés attachées à l'ancienne foi et servent de conseillers aux dirigeants de ces gens. En tant que membre de ce cercle, votre magie est influencée par le pays où vous avez été initié aux rites mystérieux du cercle."
+  ],
+  "name_en": "Circle of the Land: Swamp",
+  "class_name_fr": "",
+  "_translated": true
+}

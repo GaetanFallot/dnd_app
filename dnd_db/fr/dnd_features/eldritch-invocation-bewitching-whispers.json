@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-bewitching-whispers",
+  "name": "Invocation surnaturelle : murmures envoûtants",
+  "level": 7,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer la contrainte une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos."
+  ],
+  "name_en": "Eldritch Invocation: Bewitching Whispers",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "defensive-tactics",
+  "name": "Tactiques défensives",
+  "level": 7,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Au niveau 7, vous obtenez l'une des fonctionnalités suivantes de votre choix.\nÉchapper à la Horde\nDéfense multi-attaques\nVolonté d'acier"
+  ],
+  "name_en": "Defensive Tactics",
+  "class_name_fr": "",
+  "_translated": true
+}

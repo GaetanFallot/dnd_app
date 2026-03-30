@@ -1,0 +1,8 @@
+{
+  "index": "spellcasting-cleric",
+  "name": "Spellcasting: Cleric",
+  "level": 1,
+  "class": "cleric",
+  "subclass": null,
+  "desc": "As a conduit for divine power, you can cast cleric spells."
+}

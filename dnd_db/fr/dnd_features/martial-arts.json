@@ -1,0 +1,13 @@
+{
+  "index": "martial-arts",
+  "name": "Arts martiaux",
+  "level": 1,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "Au niveau 1, votre pratique des arts martiaux vous permet de maîtriser les styles de combat utilisant les frappes à mains nues et les armes de moine, qui sont des épées courtes et toutes les armes de mêlée simples qui n'ont pas la propriété à deux mains ou lourdes.\nVous bénéficiez des avantages suivants lorsque vous n'êtes pas armé ou que vous n'utilisez que des armes de moine et que vous ne portez pas d'armure ni de bouclier :\n- Vous pouvez utiliser la Dextérité au lieu de la Force pour les jets d'attaque et de dégâts de vos frappes à mains nues et de vos armes de moine.\n- Vous pouvez lancer un d4 à la place des dégâts normaux de votre frappe à mains nues ou de votre arme de moine. Ce dé change à mesure que vous gagnez des niveaux de moine, comme indiqué dans la colonne Arts martiaux du Tableau : Le Moine.\n- Lorsque vous utilisez l'action Attaque avec une frappe à mains nues ou une arme de moine à votre tour, vous pouvez effectuer une frappe à mains nues en guise d'action bonus. Par exemple, si vous effectuez l'action Attaque et attaquez avec un bâton, vous pouvez également effectuer une frappe à mains nues comme action bonus, en supposant que vous n'avez pas déjà effectué d'action bonus ce tour-ci.\nCertains monastères utilisent des formes spécialisées d'armes de moine. Par exemple, vous pouvez utiliser un club composé de deux longueurs de bois reliées par une chaîne courte (appelée nunchaku) ou une faucille avec une lame plus courte et plus droite (appelée kama). Quel que soit le nom que vous utilisez pour une arme de moine, vous pouvez utiliser les statistiques de jeu fournies pour l'arme."
+  ],
+  "name_en": "Martial Arts",
+  "class_name_fr": "",
+  "_translated": true
+}

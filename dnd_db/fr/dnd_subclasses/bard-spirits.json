@@ -1,0 +1,42 @@
+{
+  "index": "bard-spirits",
+  "name": "Barde : Collège des Esprits",
+  "class": "bard",
+  "source": "Van Richten's Guide to Ravenloft",
+  "subclass_flavor": "Les bardes du Collège des Esprits recherchent des contes dotés d'un pouvoir inhérent - qu'il s'agisse de légendes, d'histoires ou de fictions - et donnent vie à leurs sujets. Utilisant des pièges occultes, ces bardes évoquent des incarnations spirituelles de forces puissantes pour changer une fois de plus le monde. Ces esprits sont cependant capricieux, et ce qu'un barde invoque n'est pas toujours entièrement sous leur contrôle.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Murmures guidantes",
+      "level": 3,
+      "desc": "Au niveau 3, vous pouvez contacter les esprits pour vous guider, vous et les autres. Vous apprenez le sort mineur Guidage, qui ne compte pas dans le nombre de sorts mineurs de barde que vous connaissez. Pour vous, il a une portée de 60 pieds lorsque vous le lancez.",
+      "name_en": "Guiding Whispers"
+    },
+    {
+      "name": "Concentration spirituelle",
+      "level": 3,
+      "desc": "Au niveau 3, vous utilisez des outils qui vous aident à canaliser les esprits, qu'il s'agisse de personnages historiques ou d'archétypes fictifs. Vous pouvez utiliser les objets suivants comme foyer de lancement de sorts pour vos sorts de barde : une bougie, une boule de cristal, un crâne, une planche spirituelle ou un jeu de tarokka.\n\nÀ partir du niveau 6, lorsque vous lancez un sort de barde qui inflige des dégâts ou restaure des points de vie grâce à la concentration spirituelle, lancez un d6 et vous gagnez un bonus à un jet de dégâts ou de soins du sort égal au nombre obtenu.",
+      "name_en": "Spiritual Focus"
+    },
+    {
+      "name": "Contes d'au-delà",
+      "level": 3,
+      "desc": "Au niveau 3, vous contactez les esprits qui racontent leurs histoires à travers vous. Pendant que vous maintenez votre Concentration Spirituelle, vous pouvez utiliser une action bonus pour dépenser une utilisation de votre Inspiration Bardique et lancer un jet sur la table Contes Spirituels en utilisant votre dé d'Inspiration Bardique pour déterminer l'histoire que les esprits vous demandent de raconter. Vous gardez le conte à l’esprit jusqu’à ce que vous lui accordiez l’effet ou que vous terminiez un repos court ou long.\n\nVous pouvez utiliser une action pour choisir une créature que vous pouvez voir à moins de 9 mètres de vous (cela peut être vous) pour être la cible de l’effet du conte. Une fois que vous l’avez fait, vous ne pouvez plus redonner l’effet du conte jusqu’à ce que vous l’ayez relancé.\n\nVous ne pouvez retenir qu’une seule de ces histoires à la fois, et lancer un jet sur le tableau des Contes spirituels met immédiatement fin à l’effet de l’histoire précédente.\n\nSi le conte nécessite un jet de sauvegarde, le DD est égal à votre DD de sauvegarde de sort.\nContes d'esprit\nInsp. bardique. Mourir | Conte raconté à travers vous\n1 | Conte de l'animal intelligent. Pendant les 10 minutes suivantes, chaque fois que la cible effectue un test d'Intelligence, de Sagesse ou de Charisme, la cible peut lancer un dé supplémentaire immédiatement après avoir lancé le d20 et ajouter le numéro du dé supplémentaire au test. Le dé supplémentaire est du même type que votre dé d’Inspiration Bardique.\n2 | Conte du célèbre duelliste. Vous lancez une attaque magique au corps à corps contre la cible. Sur un coup, la cible subit des dégâts de force égaux à deux lancers de votre dé d'Inspiration bardique + votre modificateur de Charisme.\n3 | Conte des amis bien-aimés. La cible et une autre créature de son choix qu'elle peut voir à moins de 1,50 mètre d'elle gagnent des points de vie temporaires égaux à un jet de votre dé d'Inspiration bardique + votre modificateur de Charisme.\n4 | Conte du fugitif. La cible peut immédiatement utiliser sa réaction pour se téléporter jusqu'à 9 mètres dans un espace inoccupé qu'elle peut voir. Lorsque la cible se téléporte, elle peut choisir un nombre de créatures qu'elle peut voir dans un rayon de 9 mètres autour d'elle jusqu'à concurrence de votre modificateur de Charisme (minimum de 0) pour utiliser immédiatement la même réaction.\n5 | Conte du Vengeur. Pendant 1 minute, toute créature qui touche la cible avec une attaque de mêlée subit des dégâts de force égaux à un jet de votre dé d'inspiration bardique.\n6 | Conte du Voyageur. La cible gagne des points de vie temporaires égaux à un lancer de votre dé d'inspiration bardique + votre niveau de barde. Tant qu'elle dispose de ces points de vie temporaires, la vitesse de marche de la cible augmente de 3 mètres et elle gagne un bonus de +1 à sa CA.\n7 | Conte du séducteur. La cible doit réussir un jet de sauvegarde de Sagesse ou subir des dégâts psychiques égaux à deux lancers de votre dé d'Inspiration bardique, et la cible est frappée d'incapacité jusqu'à la fin de son prochain tour.\n8 | Conte du fantôme. La cible devient invisible jusqu'à la fin de son prochain tour ou jusqu'à ce qu'elle touche une créature avec une attaque. Si elle touche une créature avec une attaque pendant cette invisibilité, la créature qu'elle touche subit des dégâts nécrotiques égaux à un jet de votre dé d'inspiration bardique et est effrayée par la cible jusqu'à la fin du prochain tour de la créature effrayée.\n9 | Conte de la Brute. Chaque créature au choix de la cible qu’elle peut voir dans un rayon de 9 mètres autour d’elle doit effectuer un jet de sauvegarde de Force. En cas d'échec, une créature subit des dégâts de tonnerre égaux à trois lancers de votre dé d'inspiration bardique et est mise à terre. Une créature qui réussit son jet de sauvegarde subit la moitié de dégâts et n’est pas mise à terre.\n10 | Conte du Dragon. La cible crache du feu depuis la bouche dans un cône de 30 pieds. Chaque créature dans cette zone doit effectuer un jet de sauvegarde de Dextérité, subissant des dégâts de feu égaux à quatre lancers de votre dé d'Inspiration bardique en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\n11 | Conte de l'Ange. La cible récupère des points de vie égaux à deux lancers de votre dé d'Inspiration bardique + votre modificateur de Charisme, et vous mettez fin à une condition de la liste suivante affectant la cible : aveuglée, assourdie, paralysée, pétrifiée ou empoisonnée.\n12 | Tale of the Mind-Bender Vous évoquez une fable incompréhensible d'un être d'un autre monde. La cible doit réussir un jet de sauvegarde d'Intelligence ou subir des dégâts psychiques égaux à trois lancers de votre dé d'Inspiration bardique et être étourdie jusqu'à la fin de son prochain tour.",
+      "name_en": "Tales from Beyond"
+    },
+    {
+      "name": "Séance spirituelle",
+      "level": 6,
+      "desc": "Au niveau 6, les esprits vous fournissent des informations surnaturelles. Vous pouvez mener un rituel d'une heure pour canaliser les esprits (qui peut être effectué pendant un repos court ou long) en utilisant votre concentration spirituelle. Vous pouvez mener le rituel avec un nombre de créatures volontaires égal à votre bonus de maîtrise (y compris vous-même). À la fin du rituel, vous apprenez temporairement un sort de votre choix dans n'importe quelle classe.\n\nLe sort que vous choisissez doit être d'un niveau égal ou inférieur au nombre de créatures qui ont mené le rituel, le sort doit être d'un niveau que vous pouvez lancer et il doit appartenir à l'école de divination ou de nécromancie. Le sort choisi compte pour vous comme un sort de barde mais ne compte pas dans le nombre de sorts de barde que vous connaissez.\n\nUne fois que vous avez effectué le rituel, vous ne pouvez plus le refaire tant que vous n’avez pas commencé un repos long, et vous connaissez le sort choisi jusqu’à ce que vous ayez commencé un repos long.",
+      "name_en": "Spirit Session"
+    },
+    {
+      "name": "Connexion mystique",
+      "level": 14,
+      "desc": "Au niveau 14, vous avez désormais la possibilité de pousser les esprits de Tales from Beyond vers certains contes. Chaque fois que vous lancez un jet sur la table Spirit Tales, vous pouvez lancer le dé deux fois et choisir lequel des deux effets accorder. Si vous obtenez le même nombre sur les deux dés, vous pouvez ignorer le nombre et choisir n’importe quel effet sur la table.",
+      "name_en": "Mystical Connection"
+    }
+  ],
+  "name_en": "Bard: College of Spirits",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "moderately-armored",
+  "name": "Modérément blindé",
+  "source": "Player's Handbook",
+  "prerequisite": "Maîtrise des armures légères",
+  "desc": "Vous vous êtes entraîné à maîtriser l'utilisation des armures et des boucliers moyens, bénéficiant ainsi des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Force ou de Dextérité de 1, jusqu'à un maximum de 20.",
+    "Vous gagnez en maîtrise avec les armures et les boucliers moyens."
+  ],
+  "name_en": "Moderately Armored",
+  "_translated": true
+}

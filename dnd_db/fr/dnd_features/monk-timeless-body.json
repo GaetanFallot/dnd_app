@@ -1,0 +1,13 @@
+{
+  "index": "monk-timeless-body",
+  "name": "Corps intemporel",
+  "level": 15,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "Au niveau 15, votre ki vous soutient afin que vous ne souffriez pas de la fragilité de la vieillesse et que vous ne puissiez pas vieillir comme par magie. Mais on peut quand même mourir de vieillesse. De plus, vous n’avez plus besoin de nourriture ni d’eau."
+  ],
+  "name_en": "Timeless Body",
+  "class_name_fr": "",
+  "_translated": true
+}

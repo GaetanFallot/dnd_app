@@ -1,0 +1,11 @@
+{
+  "index": "keen-senses",
+  "name": "Sens aiguisés",
+  "races": [
+    "elf"
+  ],
+  "subraces": [],
+  "desc": "Vous maîtrisez la compétence Perception.",
+  "name_en": "Keen Senses",
+  "_translated": true
+}

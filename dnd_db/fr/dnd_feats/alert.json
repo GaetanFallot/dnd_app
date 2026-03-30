@@ -1,0 +1,14 @@
+{
+  "index": "alert",
+  "name": "Alerte",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Toujours à l'affût du danger, vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Vous ne pouvez pas être surpris lorsque vous êtes conscient.",
+    "Vous gagnez un bonus de +5 à l'initiative.",
+    "Les autres créatures ne bénéficient pas d'avantage aux jets d'attaque contre vous parce qu'elles ne sont pas vues par vous."
+  ],
+  "name_en": "Alert",
+  "_translated": true
+}

@@ -1,0 +1,48 @@
+{
+  "index": "fighter-echo-knight",
+  "name": "Combattant : Echo Knight",
+  "class": "fighter",
+  "source": "Explorer's Guide to Wildemount",
+  "subclass_flavor": "Guerrier de première ligne mystérieux et redouté de la dynastie Kryn, l'Echo Knight maîtrise l'art d'utiliser les dunamis pour invoquer les ombres décolorées des lignes temporelles non réalisées afin de les aider au combat. Entourés des échos de leur propre puissance, ils chargent dans la mêlée comme un essaim cyclique d'ombres et de frappes.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Écho manifeste",
+      "level": 3,
+      "desc": "Au niveau 3, vous pouvez utiliser une action bonus pour manifester comme par magie un écho de vous-même dans un espace inoccupé que vous pouvez voir à moins de 4,50 mètres de vous. Cet écho est une image magique, translucide et grise de vous qui dure jusqu'à ce qu'elle soit détruite, jusqu'à ce que vous la rejetiez par une action bonus, jusqu'à ce que vous manifestiez un autre écho ou jusqu'à ce que vous soyez incapable d'agir.\n\nVotre écho a une CA de 14 + votre bonus de maîtrise, 1 point de vie et une immunité à toutes les conditions. S'il doit effectuer un jet de sauvegarde, il utilise votre bonus de jet de sauvegarde pour le lancer. Il fait la même taille que vous et occupe son espace. À votre tour, vous pouvez commander mentalement à l'écho de se déplacer jusqu'à 9 mètres dans n'importe quelle direction (aucune action requise). Si votre écho se trouve à plus de 9 mètres de vous à la fin de votre tour, il est détruit.\n• Par une action bonus, vous pouvez vous téléporter, en échangeant comme par magie vos places avec votre écho pour un coût de 15 pieds de mouvement, quelle que soit la distance qui vous sépare.\n• Lorsque vous effectuez l'action Attaque à votre tour, toute attaque que vous effectuez avec cette action peut provenir de votre espace ou de l'espace de l'écho. Vous faites ce choix pour chaque attaque.\n• Lorsqu'une créature que vous pouvez voir à moins de 1,50 mètre de votre écho s'éloigne d'au moins 1,50 mètre, vous pouvez utiliser votre réaction pour lancer une attaque d'opportunité contre cette créature comme si vous étiez dans l'espace de l'écho.",
+      "name_en": "Manifest Echo"
+    },
+    {
+      "name": "Libérez l'incarnation",
+      "level": 3,
+      "desc": "Au niveau 3, vous pouvez augmenter la fureur de votre écho. Chaque fois que vous effectuez l'action Attaque, vous pouvez effectuer une attaque de mêlée supplémentaire depuis la position de l'écho.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Constitution (au minimum une fois). Vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Unleash Incarnation"
+    },
+    {
+      "name": "Avatar Écho",
+      "level": 7,
+      "desc": "À partir du niveau 7, vous pouvez transférer temporairement votre conscience vers votre écho. Par une action, vous pouvez voir à travers les yeux de votre écho et entendre à travers ses oreilles. Pendant ce temps, vous êtes devenus sourds et aveuglés. Vous pouvez maintenir cet effet jusqu’à 10 minutes et y mettre fin à tout moment (ne nécessite aucune action). Pendant que votre écho est utilisé de cette manière, il peut se trouver jusqu'à 1 000 pieds de vous sans être détruit.",
+      "name_en": "Echo Avatar"
+    },
+    {
+      "name": "Martyre de l'Ombre",
+      "level": 10,
+      "desc": "À partir du niveau 10, vous pouvez faire en sorte que votre écho se projette devant une attaque dirigée sur une autre créature que vous pouvez voir. Avant que le jet d'attaque ne soit effectué, vous pouvez utiliser votre réaction pour téléporter l'écho dans un espace inoccupé à moins de 1,50 mètre de la créature ciblée. Le jet d'attaque qui a déclenché la réaction est plutôt effectué contre votre écho.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Shadow Martyr"
+    },
+    {
+      "name": "Potentiel de récupération",
+      "level": 15,
+      "desc": "Au niveau 15, vous avez appris à absorber la magie éphémère de votre écho. Lorsqu'un de vos échos est détruit en subissant des dégâts, vous pouvez gagner un nombre de points de vie temporaires égal à 2d6 + votre modificateur de Constitution, à condition que vous ne disposiez pas déjà de points de vie temporaires.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Constitution (au minimum une fois). Vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Reclaim Potential"
+    },
+    {
+      "name": "Légion d'Un",
+      "level": 18,
+      "desc": "Au niveau 18, vous pouvez utiliser une action bonus pour créer deux échos avec votre fonction Écho manifeste, et ces échos peuvent coexister. Si vous essayez de créer un troisième écho, les deux échos précédents sont détruits. Tout ce que vous pouvez faire à partir de la position d'un écho peut être fait à partir de celle de l'autre.\n\nDe plus, lorsque vous lancez un jet d'initiative et que vous n'avez plus aucune utilisation de votre fonctionnalité Libérer l'incarnation, vous récupérez une utilisation de cette fonctionnalité.",
+      "name_en": "Legion of One"
+    }
+  ],
+  "name_en": "Fighter: Echo Knight",
+  "_translated": true
+}

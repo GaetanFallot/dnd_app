@@ -1,0 +1,13 @@
+{
+  "index": "use-magic-device",
+  "name": "Utiliser un appareil magique",
+  "level": 13,
+  "class": "rogue",
+  "subclass": "thief",
+  "desc": [
+    "Au niveau 13, vous en savez suffisamment sur le fonctionnement de la magie pour pouvoir improviser l'utilisation d'objets même lorsqu'ils ne vous sont pas destinés. Vous ignorez toutes les exigences de classe, de race et de niveau concernant l’utilisation des objets magiques."
+  ],
+  "name_en": "Use Magic Device",
+  "class_name_fr": "",
+  "_translated": true
+}

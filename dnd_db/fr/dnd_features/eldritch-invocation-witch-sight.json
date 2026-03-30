@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-witch-sight",
+  "name": "Invocation surnaturelle : vue de sorcière",
+  "level": 15,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez voir la véritable forme de n'importe quel changeur de forme ou créature dissimulée par une illusion ou une magie de transmutation tant que la créature se trouve à moins de 9 mètres de vous et dans votre champ de vision."
+  ],
+  "name_en": "Eldritch Invocation: Witch Sight",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "hurl-through-hell",
+  "name": "Traversez l'enfer",
+  "level": 14,
+  "class": "warlock",
+  "subclass": "fiend",
+  "desc": [
+    "À partir du niveau 14, lorsque vous touchez une créature avec une attaque, vous pouvez utiliser cette fonctionnalité pour transporter instantanément la cible à travers les plans inférieurs. La créature disparaît et se précipite dans un paysage cauchemardesque.\nÀ la fin de votre prochain tour, la cible retourne dans la case qu'elle occupait précédemment, ou dans la case inoccupée la plus proche. Si la cible n’est pas un démon, elle subit 10d10 dégâts psychiques lorsqu’elle se remet de son horrible expérience.\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos."
+  ],
+  "name_en": "Hurl Through Hell",
+  "class_name_fr": "",
+  "_translated": true
+}

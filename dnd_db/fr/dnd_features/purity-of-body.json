@@ -1,0 +1,13 @@
+{
+  "index": "purity-of-body",
+  "name": "Pureté du corps",
+  "level": 10,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "Au niveau 10, votre maîtrise du ki qui vous traverse vous rend immunisé contre les maladies et les poisons."
+  ],
+  "name_en": "Purity of Body",
+  "class_name_fr": "",
+  "_translated": true
+}

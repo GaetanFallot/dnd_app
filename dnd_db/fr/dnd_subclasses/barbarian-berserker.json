@@ -1,0 +1,36 @@
+{
+  "index": "barbarian-berserker",
+  "name": "Barbare : Voie du Berserker",
+  "class": "barbarian",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Pour certains barbares, la rage est un moyen pour parvenir à une fin – cette fin étant la violence. La Voie du Berserker est une voie de fureur sans entrave, recouverte de sang. Alors que vous entrez dans la rage du berserker, vous vibrez dans le chaos de la bataille, sans vous soucier de votre propre santé ou de votre bien-être.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Frénésie",
+      "level": 3,
+      "desc": "À partir du moment où vous choisissez cette voie au niveau 3, vous pouvez entrer dans une frénésie lorsque vous êtes en colère. Si vous le faites, pendant toute la durée de votre rage, vous pouvez effectuer une seule attaque avec une arme de mêlée comme une action bonus à chacun de vos tours suivants celui-ci. Lorsque votre rage prend fin, vous souffrez d’un niveau d’épuisement.",
+      "name_en": "Frenzy"
+    },
+    {
+      "name": "Rage insensée",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous ne pouvez plus être charmé ou effrayé lorsque vous êtes en colère. Si vous êtes charmé ou effrayé lorsque vous entrez dans votre rage, l'effet est suspendu pour la durée de la rage.",
+      "name_en": "Mindless Rage"
+    },
+    {
+      "name": "Présence intimidante",
+      "level": 10,
+      "desc": "À partir du niveau 10, vous pouvez utiliser votre action pour effrayer quelqu'un avec votre présence menaçante. Ce faisant, choisissez une créature que vous pouvez voir à moins de 9 mètres de vous. Si la créature peut vous voir ou vous entendre, elle doit réussir un jet de sauvegarde de Sagesse (DD égal à 8 + votre bonus de maîtrise + votre modificateur de Charisme) ou avoir peur de vous jusqu'à la fin de votre prochain tour. Aux tours suivants, vous pouvez utiliser votre action pour prolonger la durée de cet effet sur la créature effrayée jusqu'à la fin de votre prochain tour. Cet effet prend fin si la créature termine son tour hors de votre champ de vision ou à plus de 20 mètres de vous.\n\nSi la créature réussit son jet de sauvegarde, vous ne pourrez plus utiliser cette fonctionnalité sur cette créature pendant 24 heures.",
+      "name_en": "Intimidating Presence"
+    },
+    {
+      "name": "Représailles",
+      "level": 14,
+      "desc": "À partir du niveau 14, lorsque vous subissez des dégâts d'une créature située à moins de 1,50 mètre de vous, vous pouvez utiliser votre réaction pour lancer une attaque au corps à corps avec une arme contre cette créature.",
+      "name_en": "Retaliation"
+    }
+  ],
+  "name_en": "Barbarian: Path of the Berserker",
+  "_translated": true
+}

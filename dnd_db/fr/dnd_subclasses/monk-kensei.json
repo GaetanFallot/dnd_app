@@ -1,0 +1,36 @@
+{
+  "index": "monk-kensei",
+  "name": "Moine : Voie du Kensei",
+  "class": "monk",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Les moines de la Voie du Kensei s'entraînent sans relâche avec leurs armes, au point que l'arme devient comme une extension du corps. Fondée sur la maîtrise du combat à l’épée, la tradition s’est élargie pour inclure de nombreuses armes différentes.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Chemin du Kensei",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cette tradition au niveau 3, votre formation particulière en arts martiaux vous amène à maîtriser l'usage de certaines armes. Ce parcours comprend également un enseignement des traits habiles de la calligraphie ou de la peinture. Vous bénéficiez des avantages suivants :\n• Armes Kensei. Choisissez deux types d'armes comme armes kensei : une arme de mêlée et une arme à distance. Chacune de ces armes peut être n’importe quelle arme simple ou martiale dépourvue de propriétés lourdes et spéciales. L'arc long est également un choix valable. Vous maîtrisez ces armes si vous ne les possédez pas déjà. Les armes des types choisis sont des armes de moine pour vous. La plupart des fonctionnalités de cette tradition ne fonctionnent qu'avec vos armes Kensei. Lorsque vous atteignez les niveaux 6, 11 et 17 dans cette classe, vous pouvez choisir un autre type d'arme – de mêlée ou à distance – comme arme de kensei, en suivant les critères ci-dessus.\n• Parade agile. Si vous effectuez une frappe à mains nues dans le cadre de l'action d'attaque de votre tour et que vous tenez une arme kensei, vous pouvez l'utiliser pour vous défendre s'il s'agit d'une arme de mêlée. Vous gagnez un bonus de +2 à la CA jusqu’au début de votre prochain tour, tant que l’arme est dans votre main et que vous n’êtes pas incapable d’agir.\n• Le tir de Kensei. Vous pouvez utiliser une action bonus à votre tour pour rendre vos attaques à distance avec une arme kensei plus meurtrières. Lorsque vous faites cela, toute cible touchée avec une attaque à distance utilisant une arme Kensei subit 1d4 dégâts supplémentaires du type de l'arme. Vous conservez cet avantage jusqu'à la fin du tour en cours.\n• Chemin du Pinceau. Vous gagnez en maîtrise avec votre choix de fournitures de calligraphe ou de fournitures de peintre.",
+      "name_en": "Path of the Kensei"
+    },
+    {
+      "name": "Un avec la lame",
+      "level": 6,
+      "desc": "Au niveau 6, vous étendez votre ki dans vos armes Kensei, vous accordant les avantages suivants.\n• Armes magiques Kensei. Vos attaques avec vos armes Kensei sont considérées comme magiques dans le but de vaincre la résistance et l'immunité aux attaques et dégâts non magiques.\n• Frappe habile. Lorsque vous touchez une cible avec une arme Kensei, vous pouvez dépenser 1 point ki pour que l'arme inflige des dégâts supplémentaires à la cible égaux à votre dé d'arts martiaux. Vous ne pouvez utiliser cette fonctionnalité qu’une seule fois à chacun de vos tours.",
+      "name_en": "One with the Blade"
+    },
+    {
+      "name": "Affûter la lame",
+      "level": 11,
+      "desc": "Au niveau 11, vous obtenez la possibilité d'augmenter davantage vos armes avec votre ki. En tant qu'action bonus, vous pouvez dépenser jusqu'à 3 points de ki pour accorder à une arme Kensei que vous touchez un bonus aux jets d'attaque et de dégâts lorsque vous attaquez avec elle. Le bonus est égal au nombre de points ki que vous avez dépensés. Ce bonus dure 1 minute ou jusqu'à ce que vous utilisiez à nouveau cette fonctionnalité. Cette fonctionnalité n'a aucun effet sur une arme magique qui possède déjà un bonus aux jets d'attaque et de dégâts.",
+      "name_en": "Sharpen the Blade"
+    },
+    {
+      "name": "Précision infaillible",
+      "level": 17,
+      "desc": "Au niveau 17, votre maîtrise des armes vous confère une précision extraordinaire. Si vous ratez un jet d'attaque utilisant une arme de moine à votre tour, vous pouvez le relancer. Vous ne pouvez utiliser cette fonctionnalité qu’une seule fois à chacun de vos tours.",
+      "name_en": "Unerring Accuracy"
+    }
+  ],
+  "name_en": "Monk: Way of the Kensei",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-ascendant-step",
+  "name": "Invocation surnaturelle : étape ascendante",
+  "level": 9,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer Lévitation sur vous-même à volonté, sans dépenser d'emplacement de sort ni de composants matériels."
+  ],
+  "name_en": "Eldritch Invocation: Ascendant Step",
+  "class_name_fr": "",
+  "_translated": true
+}

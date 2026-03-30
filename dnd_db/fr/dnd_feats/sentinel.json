@@ -1,0 +1,14 @@
+{
+  "index": "sentinel",
+  "name": "Sentinelle",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous maîtrisez les techniques nécessaires pour profiter de chaque baisse de garde ennemie, bénéficiant ainsi des avantages suivants.",
+  "benefits": [
+    "Lorsque vous touchez une créature avec une attaque d'opportunité, la vitesse de la créature devient 0 pour le reste du tour.",
+    "Les créatures provoquent des attaques d'opportunité de votre part même si elles effectuent l'action Désengagement avant de quitter votre portée.",
+    "Lorsqu'une créature à moins de 1,50 mètre de vous effectue une attaque contre une cible autre que vous (et que cette cible ne possède pas ce don), vous pouvez utiliser votre réaction pour lancer une attaque au corps à corps avec une arme contre la créature attaquante."
+  ],
+  "name_en": "Sentinel",
+  "_translated": true
+}

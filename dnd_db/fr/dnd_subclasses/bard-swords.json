@@ -1,0 +1,42 @@
+{
+  "index": "bard-swords",
+  "name": "Barde : Collège des Épées",
+  "class": "bard",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Les bardes du Collège des Épées sont appelés des lames, et ils divertissent grâce à des prouesses audacieuses en matière d'armes. Les lames effectuent des cascades telles que avaler des épées, lancer des couteaux, jongler et simuler des combats. Bien qu’ils utilisent leurs armes pour se divertir, ils sont également des guerriers hautement qualifiés et compétents.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétences bonus",
+      "level": 3,
+      "desc": "Lorsque vous rejoignez le Collège des Épées au niveau 3, vous maîtrisez l'armure moyenne et le cimeterre.\n\nSi vous maîtrisez une arme de mêlée simple ou martiale, vous pouvez l’utiliser comme cible de lancement de sorts pour vos sorts de barde.",
+      "name_en": "Bonus Proficiencies"
+    },
+    {
+      "name": "Style de combat",
+      "level": 3,
+      "desc": "Au niveau 3, vous adoptez un style de combat particulier comme spécialité. Choisissez l'une des options suivantes. Vous ne pouvez pas choisir une option de style de combat plus d'une fois, même si vous devez ensuite choisir à nouveau.\n• Duel. Lorsque vous maniez une arme de mêlée dans une main et aucune autre arme, vous gagnez un bonus de +2 aux jets de dégâts avec cette arme.\n• Combat à deux armes. Lorsque vous vous engagez dans un combat à deux armes, vous pouvez ajouter votre modificateur de capacité aux dégâts de la deuxième attaque.",
+      "name_en": "Fighting Style"
+    },
+    {
+      "name": "Épanouissement de la lame",
+      "level": 3,
+      "desc": "Au niveau 3, vous apprenez à réaliser des démonstrations impressionnantes de prouesses martiales et de vitesse.\n\nChaque fois que vous effectuez l'action d'attaque à votre tour, votre vitesse de marche augmente de 10 pieds jusqu'à la fin du tour, et si une attaque avec une arme que vous effectuez dans le cadre de cette action touche une créature, vous pouvez utiliser l'une des options suivantes de Blade Flourish de votre choix. Vous ne pouvez utiliser qu’une seule option Blade Flourish par tour.\n\nÉpanouissement défensif. Vous pouvez dépenser une utilisation de votre Inspiration bardique pour que l'arme inflige des dégâts supplémentaires à la cible que vous touchez. Les dégâts sont égaux au nombre obtenu sur le dé d’inspiration bardique. Vous ajoutez également le nombre obtenu à votre CA jusqu'au début de votre prochain tour.\n\nS'épanouir. Vous pouvez dépenser une utilisation de votre Inspiration bardique pour que l'arme inflige des dégâts supplémentaires à la cible que vous touchez et à toute autre créature de votre choix que vous pouvez voir à moins de 1,50 mètre de vous. Les dégâts sont égaux au nombre obtenu sur le dé d’inspiration bardique.\n\nÉpanouissement mobile. Vous pouvez dépenser une utilisation de votre Inspiration bardique pour que l'arme inflige des dégâts supplémentaires à la cible que vous touchez. Les dégâts sont égaux au nombre obtenu sur le dé d’inspiration bardique. Vous pouvez également pousser la cible jusqu'à 1,50 m de vous, plus un nombre de pieds égal au nombre obtenu sur ce dé. Vous pouvez alors immédiatement utiliser votre réaction pour vous déplacer à votre vitesse de marche vers un espace inoccupé à moins de 1,50 mètre de la cible.",
+      "name_en": "Blade Flourish"
+    },
+    {
+      "name": "Attaque supplémentaire",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez attaquer deux fois, au lieu d'une, chaque fois que vous effectuez l'action Attaque pendant votre tour.",
+      "name_en": "Extra Attack"
+    },
+    {
+      "name": "L'épanouissement du Maître",
+      "level": 14,
+      "desc": "À partir du niveau 14, chaque fois que vous utilisez une option Blade Flourish, vous pouvez lancer un d6 et l’utiliser au lieu de dépenser un dé d’inspiration bardique.",
+      "name_en": "Master's Flourish"
+    }
+  ],
+  "name_en": "Bard: College of Swords",
+  "_translated": true
+}

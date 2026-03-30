@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-thief-of-five-fates",
+  "name": "Invocation Eldritch : Voleur des Cinq Destins",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer le fléau une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos."
+  ],
+  "name_en": "Eldritch Invocation: Thief of Five Fates",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "spell-mastery",
+  "name": "Maîtrise des sorts",
+  "level": 18,
+  "class": "wizard",
+  "subclass": null,
+  "desc": [
+    "Au niveau 18, vous maîtrisez tellement certains sorts que vous pouvez les lancer à volonté. Choisissez un sort de sorcier de 1er niveau et un sort de sorcier de 2e niveau qui se trouvent dans votre livre de sorts. Vous pouvez lancer ces sorts à leur niveau le plus bas sans dépenser un emplacement de sort lorsque vous les avez préparés. Si vous souhaitez lancer l'un ou l'autre sort à un niveau supérieur, vous devez dépenser un emplacement de sort comme d'habitude.\nEn passant 8 heures en étude, vous pouvez échanger un ou les deux sorts que vous avez choisis contre différents sorts de mêmes niveaux."
+  ],
+  "name_en": "Spell Mastery",
+  "class_name_fr": "",
+  "_translated": true
+}

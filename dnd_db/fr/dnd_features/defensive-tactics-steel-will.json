@@ -1,0 +1,13 @@
+{
+  "index": "defensive-tactics-steel-will",
+  "name": "Tactiques défensives : Volonté d'acier",
+  "level": 7,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Vous avez un avantage aux jets de sauvegarde contre la peur."
+  ],
+  "name_en": "Defensive Tactics: Steel Will",
+  "class_name_fr": "",
+  "_translated": true
+}

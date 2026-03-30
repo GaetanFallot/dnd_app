@@ -1,0 +1,48 @@
+{
+  "index": "paladin-watchers",
+  "name": "Paladin : Serment des Veilleurs",
+  "class": "paladin",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Le Serment des Veilleurs oblige les paladins à protéger les royaumes mortels des prédations de créatures extraplanaires, dont beaucoup peuvent dévaster les soldats mortels. Ainsi, les Veilleurs aiguisent leur esprit, leur esprit et leur corps pour devenir les armes ultimes contre de telles menaces.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Principes des observateurs",
+      "level": null,
+      "desc": "Un paladin qui prête le Serment des Veilleurs jure de protéger les royaumes mortels des menaces d'un autre monde.\n\nVigilance. Les menaces auxquelles vous faites face sont rusées, puissantes et subversives. Soyez toujours attentif à leur corruption.\n\nLoyauté. N'acceptez jamais de cadeaux ou de faveurs de la part d'amis ou de ceux qui voyagent avec eux. Restez fidèle à votre ordre, à vos camarades et à votre devoir.\n\nDiscipline. Vous êtes le bouclier contre les terreurs sans fin qui se cachent au-delà des étoiles. Votre lame doit être toujours tranchante et votre esprit désireux de survivre à ce qui se trouve au-delà.",
+      "name_en": "Tenets of the Watchers"
+    },
+    {
+      "name": "Sorts de serment",
+      "level": null,
+      "desc": "Vous gagnez des sorts de serment aux niveaux de paladin indiqués.\nSerment des sorts des observateurs\nNiveau Paladin | Sorts\n3ème | Alarme, détection de magie\n5ème | Moonbeam, voir l'invisibilité\n9ème | Contresort, non-détection\n13e | Aura de pureté, bannissement\n17e | Tenir le monstre, scrutation",
+      "name_en": "Oath Spells"
+    },
+    {
+      "name": "Canal Divinité",
+      "level": 3,
+      "desc": "Lorsque vous prêtez ce serment au niveau 3, vous obtenez les deux options de canalisation divine suivantes. Consultez la fonctionnalité de classe Sacred Oath pour savoir comment fonctionne Channel Divinity.\n• Volonté de l'Observateur. Vous pouvez utiliser votre Channel Divinity pour investir votre présence du pouvoir protecteur de votre foi. Par une action, vous pouvez choisir un nombre de créatures que vous pouvez voir dans un rayon de 9 mètres autour de vous, jusqu'à un nombre égal à votre modificateur de Charisme (au minimum une créature). Pendant 1 minute, vous et les créatures choisies avez un avantage aux jets de sauvegarde d'Intelligence, de Sagesse et de Charisme.\n• Abjurez l'extraplanaire. Vous pouvez utiliser votre Channel Divinity pour fustiger les êtres surnaturels. Par une action, vous présentez votre symbole sacré et chaque aberration, céleste, élémentaire, féerique ou démoniaque à moins de 9 mètres de vous et qui peut vous entendre, vous devez effectuer un jet de sauvegarde de Sagesse. En cas d'échec de la sauvegarde, la créature est retournée pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. Une créature transformée doit passer son tour à essayer de s'éloigner le plus possible de vous, et elle ne peut pas volontairement terminer son mouvement dans un espace situé à moins de 9 mètres de vous. Pour son action, il peut utiliser uniquement l'action Dash ou tenter d'échapper à un effet qui l'empêche de bouger. S'il n'y a nulle part où se déplacer, la créature peut effectuer l'action Esquiver.",
+      "name_en": "Channel Divinity"
+    },
+    {
+      "name": "Aura de la Sentinelle",
+      "level": 7,
+      "desc": "Au niveau 7, vous dégagez une aura de vigilance alors que vous n'êtes pas incapable d'agir. Lorsque vous et toute créature de votre choix à moins de 3 mètres de vous lancez un jet d'initiative, vous gagnez tous un bonus d'initiative égal à votre bonus de maîtrise.\n\nAu niveau 18, la portée de cette aura passe à 9 mètres.",
+      "name_en": "Aura of the Sentinel"
+    },
+    {
+      "name": "Réprimande vigilante",
+      "level": 15,
+      "desc": "Au niveau 15, vous avez appris à châtier quiconque ose user de séduction contre vous et vos protections. Chaque fois que vous ou une créature que vous pouvez voir à moins de 9 mètres de vous réussissez un jet de sauvegarde d'Intelligence, de Sagesse ou de Charisme, vous pouvez utiliser votre réaction pour infliger 2d8 + les dégâts de force de votre modificateur de Charisme à la créature qui a forcé le jet de sauvegarde.",
+      "name_en": "Vigilant Rebuke"
+    },
+    {
+      "name": "Rempart mortel",
+      "level": 20,
+      "desc": "Au niveau 20, vous manifestez une étincelle de pouvoir divin pour défendre les royaumes mortels. Par une action bonus, vous bénéficiez des avantages suivants pendant 1 minute :\n• Vous obtenez une vision vraie avec une portée de 120 pieds.\n• Vous avez un avantage aux jets d'attaque contre les aberrations, les célestes, les élémentaires, les fées et les démons.\n• Lorsque vous touchez une créature avec un jet d'attaque et lui infligez des dégâts, vous pouvez également la forcer à effectuer un jet de sauvegarde de Charisme contre votre DD de sauvegarde de sort. En cas d'échec, la créature est bannie comme par magie dans son plan d'existence d'origine si elle n'y est pas actuellement. En cas de sauvegarde réussie, la créature ne peut pas être bannie par cette fonctionnalité pendant 24 heures.\n\nUne fois que vous avez utilisé cette action bonus, vous ne pouvez plus l'utiliser avant d'avoir terminé un repos long, à moins que vous ne dépensiez un emplacement de sort de niveau 5 pour l'utiliser à nouveau.",
+      "name_en": "Mortal Bulwark"
+    }
+  ],
+  "name_en": "Paladin: Oath of the Watchers",
+  "_translated": true
+}

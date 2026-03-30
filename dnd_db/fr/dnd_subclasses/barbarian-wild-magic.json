@@ -1,0 +1,42 @@
+{
+  "index": "barbarian-wild-magic",
+  "name": "Barbare : la voie de la magie sauvage",
+  "class": "barbarian",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "De nombreux endroits du multivers regorgent de beauté, d’émotions intenses et de magie effrénée ; le Feywild, les plans supérieurs et d’autres royaumes de pouvoir surnaturel rayonnent de telles forces et peuvent profondément influencer les gens. En tant que gens dotés de sentiments profonds, les barbares sont particulièrement sensibles à ces influences sauvages, certains barbares étant transformés par la magie. Ces barbares imprégnés de magie parcourent le Chemin de la Magie Sauvage. Les barbares elfes, tieffelins, aasimars et genasis recherchent souvent cette voie, désireux de manifester la magie surnaturelle de leurs ancêtres.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Conscience magique",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cette voie au niveau 3, en tant qu'action, vous pouvez ouvrir votre conscience à la présence de magie concentrée. Jusqu'à la fin de votre prochain tour, vous connaissez l'emplacement de tout sort ou objet magique dans un rayon de 20 mètres autour de vous et qui n'est pas à couvert. Lorsque vous ressentez un sort, vous apprenez à quelle école de magie il appartient.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Magic Awareness"
+    },
+    {
+      "name": "Vague sauvage",
+      "level": 3,
+      "desc": "Également au niveau 3, l’énergie magique qui bouillonne en vous jaillit parfois de vous. Lorsque vous entrez dans votre rage, lancez un jet sur le tableau Wild Magic pour déterminer l'effet magique produit.\n\nSi l'effet nécessite un jet de sauvegarde, le DD est égal à 8 + votre bonus de maîtrise + votre modificateur de Constitution.\nMagie sauvage\nd8 | Effet\n1 | Chaque créature de votre choix que vous pouvez voir à moins de 9 mètres de vous doit réussir un jet de sauvegarde de Constitution ou subir 1d12 dégâts nécrotiques. Vous gagnez également 1d12 points de vie temporaires.\n2 | Vous vous téléportez jusqu'à 9 mètres dans un espace inoccupé que vous pouvez voir. Jusqu'à la fin de votre rage, vous pouvez réutiliser cet effet à chacun de vos tours comme action bonus.\n3 | Un esprit intangible, qui ressemble à un flumph ou à un lutin (votre choix), apparaît à moins de 1,50 mètre d'une créature de votre choix que vous pouvez voir à moins de 9 mètres de vous. À la fin du tour en cours, l'esprit explose et chaque créature à moins de 1,50 mètre de lui doit réussir un jet de sauvegarde de Dextérité ou subir 1d6 dégâts de force. Jusqu'à la fin de votre rage, vous pouvez utiliser à nouveau cet effet, en invoquant un autre esprit, à chacun de vos tours comme une action bonus.\n4 | La magie infuse une arme de votre choix que vous tenez. Jusqu'à la fin de votre rage, le type de dégâts de l'arme se transforme en force et elle acquiert les propriétés de lumière et de projection, avec une portée normale de 20 pieds et une longue portée de 60 pieds. Si l'arme quitte votre main, elle réapparaît dans votre main à la fin du tour en cours.\n5 | Chaque fois qu'une créature vous frappe avec un jet d'attaque avant la fin de votre rage, cette créature subit 1d6 dégâts de force, tandis que la magie se déchaîne en représailles.\n6 | Jusqu'à ce que votre rage prenne fin, vous êtes entouré de lumières protectrices multicolores ; vous gagnez un bonus de +1 à la CA, et à moins de 3 mètres de vous, vos alliés bénéficient du même bonus.\n7 | Des fleurs et des vignes poussent temporairement autour de vous ; jusqu'à ce que votre rage prenne fin, le sol à moins de 15 pieds de vous constitue un terrain difficile pour vos ennemis.\n8 | Un éclair de lumière jaillit de votre poitrine. Une autre créature de votre choix que vous pouvez voir à moins de 9 mètres de vous doit réussir un jet de sauvegarde de Constitution ou subir 1d6 dégâts radiants et être aveuglée jusqu'au début de votre prochain tour. Jusqu'à la fin de votre rage, vous pouvez réutiliser cet effet à chacun de vos tours comme action bonus.",
+      "name_en": "Wild Surge"
+    },
+    {
+      "name": "Renforcer la magie",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez exploiter votre magie sauvage pour vous renforcer ou renforcer un compagnon. Par une action, vous pouvez toucher une créature (qui peut être vous-même) et conférer à cette créature l'un des avantages suivants de votre choix :\n• Pendant 10 minutes, la créature peut lancer un d3 à chaque fois qu'elle effectue un jet d'attaque ou un test de capacité et ajouter le nombre obtenu au jet de d20.\n• Lancez un d3. La créature récupère un emplacement de sort dépensé, dont le niveau est égal ou inférieur au nombre obtenu (au choix de la créature). Une fois qu’une créature reçoit cet avantage, elle ne peut plus le recevoir avant un long repos.\n\nVous pouvez effectuer cette action un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Bolstering Magic"
+    },
+    {
+      "name": "Jeu instable",
+      "level": 10,
+      "desc": "Au niveau 10, lorsque vous êtes en danger pendant votre rage, la magie en vous peut se déchaîner ; immédiatement après avoir subi des dégâts ou échoué à un jet de sauvegarde alors que vous êtes enragé, vous pouvez utiliser votre réaction pour lancer un jet sur la table Wild Magic et produire immédiatement l'effet obtenu. Cet effet remplace votre effet Wild Magic actuel.",
+      "name_en": "Unstable Backlash"
+    },
+    {
+      "name": "Surtension contrôlée",
+      "level": 14,
+      "desc": "Au niveau 14, chaque fois que vous lancez un jet sur la table Wild Magic, vous pouvez lancer le dé deux fois et choisir lequel des deux effets déclencher. Si vous obtenez le même nombre sur les deux dés, vous pouvez ignorer le nombre et choisir n’importe quel effet sur la table.",
+      "name_en": "Controlled Surge"
+    }
+  ],
+  "name_en": "Barbarian: Path of Wild Magic",
+  "_translated": true
+}

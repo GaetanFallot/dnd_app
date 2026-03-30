@@ -1,0 +1,17 @@
+{
+  "index": "failed-merchant",
+  "name": "Background: Failed Merchant",
+  "source": "Acquisitions Incorporated",
+  "desc": "Maybe you come from a long line of merchants. Perhaps you were an entrepreneur. Regardless. your ventures ended poorly. Whether it was because of outside influences, bad luck, or simply because your business acumen was weak, you lost everything.\n\nWith failure, however. comes experience. You're free of that old life, having made some connections and learned your lessons. Prepared to pursue the life of an adventurer, your insight into the world of commerce brought you into the sphere of Acquisitions Incorporated - and a franchise just might be in your future.\n\nSkill Proficiencies: Investigation, Persuasion\nTool Proficiencies: One type of artisan's tools\nLanguages: Any one of your choice\nEquipment: One set of artisan's tools, merchant's scaleValue:5gp Weight:3lbs, a set of fine clothesValue:15gp Weight:6lbs, and a belt pouch containing 10 gp.",
+  "skill_proficiencies": [
+    "Investigation",
+    "Persuasion\nTool Proficiencies: One type of artisan's tools\nLanguages: Any one of your choice\nEquipment: One set of artisan's tools",
+    "merchant's scaleValue:5gp Weight:3lbs",
+    "a set of fine clothesValue:15gp Weight:6lbs",
+    "and a belt pouch containing 10 gp."
+  ],
+  "feature": {
+    "name": "Supply Chain",
+    "desc": "From your time as a merchant, you retain connections with wholesalers, suppliers, and other merchants and entrepreneurs. You can call upon these connections when looking for items or information."
+  }
+}

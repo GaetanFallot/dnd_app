@@ -1,0 +1,13 @@
+{
+  "index": "aura-improvements",
+  "name": "Améliorations de l'aura",
+  "level": 18,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Au niveau 18, la portée de vos auras passe à 9 mètres."
+  ],
+  "name_en": "Aura improvements",
+  "class_name_fr": "",
+  "_translated": true
+}

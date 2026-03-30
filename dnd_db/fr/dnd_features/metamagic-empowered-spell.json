@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-empowered-spell",
+  "name": "Métamagie : sort puissant",
+  "level": 3,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez des dégâts pour un sort, vous pouvez dépenser 1 point de sorcellerie pour relancer un nombre de dés de dégâts jusqu'à concurrence de votre modificateur de Charisme (au minimum un). Vous devez utiliser les nouveaux rouleaux.\nVous pouvez utiliser le sort surpuissant même si vous avez déjà utilisé une option métamagique différente lors du lancement du sort."
+  ],
+  "name_en": "Metamagic: Empowered Spell",
+  "class_name_fr": "",
+  "_translated": true
+}

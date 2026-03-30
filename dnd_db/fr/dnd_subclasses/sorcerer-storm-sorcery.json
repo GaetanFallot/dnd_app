@@ -1,0 +1,48 @@
+{
+  "index": "sorcerer-storm-sorcery",
+  "name": "Sorcier : Sorcellerie des Tempêtes",
+  "class": "sorcerer",
+  "source": "Sword Coast Adventurer's Guide, Xanathar's Guide to Everything",
+  "subclass_flavor": "Votre magie innée vient du pouvoir de l’air élémentaire. Beaucoup de personnes possédant ce pouvoir peuvent faire remonter leur magie à une expérience de mort imminente provoquée par la Grande Pluie, mais peut-être êtes-vous né pendant un vent hurlant si puissant que les gens en racontent encore des histoires, ou votre lignée pourrait inclure l'influence de puissantes créatures aériennes telles que les vaati ou les djinns. Quoi qu’il en soit, la magie de la tempête imprègne votre être.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Haut-parleur à vent",
+      "level": null,
+      "desc": "La magie arcanique que vous commandez est imprégnée d’air élémentaire. Vous pouvez parler, lire et écrire Primordial. Connaître cette langue permet de comprendre et d'être compris par ceux qui parlent ses dialectes : Aquan, Auran, Ignan et Terran.",
+      "name_en": "Wind Speaker"
+    },
+    {
+      "name": "Magie tumultueuse",
+      "level": 1,
+      "desc": "À partir du niveau 1, vous pouvez utiliser une action bonus pendant votre tour pour provoquer des rafales tourbillonnantes d'air élémentaire qui vous entourent brièvement, immédiatement avant ou après avoir lancé un sort de niveau 1 ou supérieur. Cela vous permet de voler jusqu'à 10 pieds sans provoquer d'attaques d'opportunité.",
+      "name_en": "Tempestuous Magic"
+    },
+    {
+      "name": "Cœur de la tempête",
+      "level": 6,
+      "desc": "Au niveau 6, vous gagnez la résistance aux dégâts de foudre et de tonnerre. De plus, chaque fois que vous commencez à lancer un sort de niveau 1 ou supérieur qui inflige des dégâts de foudre ou de tonnerre, une magie orageuse jaillit de vous. Cette éruption fait que les créatures de votre choix que vous pouvez voir à moins de 3 mètres de vous subissent des dégâts de foudre ou de tonnerre (à choisir à chaque activation de cette capacité) égaux à la moitié de votre niveau de sorcier.",
+      "name_en": "Heart of the Storm"
+    },
+    {
+      "name": "Guide des tempêtes",
+      "level": 6,
+      "desc": "Au niveau 6, vous gagnez la capacité de contrôler subtilement la météo autour de vous.\n\nS'il pleut, vous pouvez utiliser une action pour empêcher la pluie de tomber dans une sphère de 6 mètres de rayon centrée sur vous. Vous pouvez mettre fin à cet effet par une action bonus.\n\nS'il y a du vent, vous pouvez utiliser une action bonus à chaque tour pour choisir la direction dans laquelle le vent souffle dans une sphère de 100 pieds de rayon centrée sur vous. Le vent souffle dans cette direction jusqu’à la fin de votre prochain tour. Cette fonctionnalité ne modifie pas la vitesse du vent.",
+      "name_en": "Storm Guide"
+    },
+    {
+      "name": "Fureur de la tempête",
+      "level": 14,
+      "desc": "À partir du niveau 14, lorsque vous êtes touché par une attaque au corps à corps, vous pouvez utiliser votre réaction pour infliger des dégâts de foudre à l'attaquant. Les dégâts sont égaux à votre niveau de sorcier. L'attaquant doit également effectuer un jet de sauvegarde de Force contre le DD de votre sort de sorcier. En cas d'échec, l'attaquant est poussé en ligne droite jusqu'à 20 pieds de vous.",
+      "name_en": "Storm's Fury"
+    },
+    {
+      "name": "Âme du vent",
+      "level": 18,
+      "desc": "Au niveau 18, vous gagnez l’immunité contre les dégâts de foudre et de tonnerre.\n\nVous gagnez également une vitesse de vol magique de 60 pieds. Par une action, vous pouvez réduire votre vitesse de vol à 9 mètres pendant 1 heure et choisir un nombre de créatures dans un rayon de 9 mètres autour de vous égal à 3 + votre modificateur de Charisme. Les créatures choisies gagnent une vitesse de vol magique de 9 mètres pendant 1 heure. Une fois que vous réduisez votre vitesse de vol de cette manière, vous ne pouvez plus le faire avant d'avoir terminé un repos court ou long.",
+      "name_en": "Wind Soul"
+    }
+  ],
+  "name_en": "Sorcerer: Storm Sorcery",
+  "_translated": true
+}

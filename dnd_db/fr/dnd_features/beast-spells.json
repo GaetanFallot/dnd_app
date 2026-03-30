@@ -1,0 +1,13 @@
+{
+  "index": "beast-spells",
+  "name": "Sorts de bête",
+  "level": 18,
+  "class": "druid",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 18, vous pouvez lancer plusieurs de vos sorts de druide sous n'importe quelle forme que vous prenez en utilisant Wild Shape. Vous pouvez exécuter les composantes somatiques et verbales d'un sort de druide sous forme de bête, mais vous n'êtes pas en mesure de fournir des composantes matérielles."
+  ],
+  "name_en": "Beast Spells",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,14 @@
+{
+  "index": "observant",
+  "name": "Observateur",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "En remarquant rapidement les détails de votre environnement, vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score d'Intelligence ou de Sagesse de 1, jusqu'à un maximum de 20.",
+    "Si vous pouvez voir la bouche d'une créature pendant qu'elle parle une langue que vous comprenez, vous pouvez interpréter ce qu'elle dit en lisant sur ses lèvres.",
+    "Vous disposez d’un bonus de +5 à vos scores passifs de Sagesse (Perception) et d’Intelligence passive (Enquête)."
+  ],
+  "name_en": "Observant",
+  "_translated": true
+}

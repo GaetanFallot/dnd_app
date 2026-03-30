@@ -1,0 +1,13 @@
+{
+  "index": "primeval-awareness",
+  "name": "Conscience primitive",
+  "level": 3,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 3, vous pouvez utiliser votre action et dépenser un emplacement de sort de rôdeur pour concentrer votre attention sur la région qui vous entoure. Pendant 1 minute par niveau d'emplacement de sort que vous dépensez, vous pouvez sentir si les types de créatures suivants sont présents dans un rayon de 1 mile de vous (ou dans un rayon de 6 miles si vous êtes sur votre terrain préféré) : aberrations, célestes, dragons, élémentaires, fées, démons et morts-vivants. Cette fonctionnalité ne révèle pas l'emplacement ni le numéro des créatures."
+  ],
+  "name_en": "Primeval Awareness",
+  "class_name_fr": "",
+  "_translated": true
+}

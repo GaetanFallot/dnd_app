@@ -1,0 +1,11 @@
+{
+  "index": "artificers-lore",
+  "name": "Connaissance de l'artificier",
+  "races": [],
+  "subraces": [
+    "rock-gnome"
+  ],
+  "desc": "Chaque fois que vous effectuez un test d'Intelligence (Histoire) lié à des objets magiques, des objets alchimiques ou des appareils technologiques, vous pouvez ajouter deux fois votre bonus de maîtrise, au lieu de tout bonus de maîtrise que vous appliquez normalement.",
+  "name_en": "Artificer's Lore",
+  "_translated": true
+}

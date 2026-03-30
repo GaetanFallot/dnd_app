@@ -1,0 +1,48 @@
+{
+  "index": "cleric-light",
+  "name": "Clerc : Domaine de Lumière",
+  "class": "cleric",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Les dieux de la lumière, notamment Helm, Lathandre, Pholtus, Branchala, la Flamme d'argent, Belenus, Apollo et Re-Horakhty, promeuvent les idéaux de renaissance et de renouveau, de vérité, de vigilance et de beauté, en utilisant souvent le symbole du soleil. Certains de ces dieux sont représentés comme le soleil lui-même ou comme un conducteur de char qui guide le soleil à travers le ciel. D’autres sont des sentinelles infatigables dont les yeux percent chaque ombre et voient à travers chaque tromperie. Certaines sont des divinités de la beauté et du talent artistique, qui enseignent que l’art est un véhicule pour l’amélioration de l’âme. Les prêtres d'un dieu de la lumière sont des âmes illuminées imprégnées du rayonnement et du pouvoir de la vision perspicace de leurs dieux, chargées de chasser les mensonges et de brûler les ténèbres.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Cantrip bonus",
+      "level": 1,
+      "desc": "Lorsque vous choisissez ce domaine au niveau 1, vous gagnez le cantrip Lumière si vous ne le connaissez pas déjà. Ce sort mineur ne compte pas dans le nombre de sorts mineurs de clerc que vous connaissez.",
+      "name_en": "Bonus Cantrip"
+    },
+    {
+      "name": "Fusée de protection",
+      "level": 1,
+      "desc": "Au niveau 1 également, vous pouvez interposer une lumière divine entre vous et un ennemi attaquant. Lorsque vous êtes attaqué par une créature visible à moins de 9 mètres de vous, vous pouvez utiliser votre réaction pour imposer un désavantage au jet d'attaque, provoquant l'éclat de la lumière devant l'attaquant avant qu'il ne touche ou ne rate. Un attaquant qui ne peut pas être aveuglé est immunisé contre cette fonctionnalité.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Sagesse (au minimum une fois). Vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Warding Flare"
+    },
+    {
+      "name": "Channel Divinity: Radiance of the Dawn",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous pouvez utiliser votre canal divinité pour exploiter la lumière du soleil, bannir les ténèbres et infliger des dégâts radiants à vos ennemis.\n\nPar une action, vous présentez votre symbole sacré et toute obscurité magique dans un rayon de 9 mètres autour de vous est dissipée. De plus, chaque créature hostile dans un rayon de 9 mètres autour de vous doit effectuer un jet de sauvegarde de Constitution. Une créature subit des dégâts radiants égaux à 2d10 + votre niveau de clerc en cas d'échec d'un jet de sauvegarde, et la moitié de ces dégâts en cas de réussite. Une créature qui b��néficie d'une couverture totale contre vous n'est pas affectée.",
+      "name_en": "Channel Divinity: Radiance of the Dawn"
+    },
+    {
+      "name": "Flare améliorée",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez également utiliser votre fonction Warding Flare lorsqu'une créature que vous pouvez voir à moins de 9 mètres de vous attaque une créature autre que vous.",
+      "name_en": "Improved Flare"
+    },
+    {
+      "name": "Lancement de sorts puissant",
+      "level": 8,
+      "desc": "À partir du niveau 8, vous ajoutez votre modificateur de Sagesse aux dégâts que vous infligez avec n'importe quel cantrip de clerc.",
+      "name_en": "Potent Spellcasting"
+    },
+    {
+      "name": "Couronne de Lumière",
+      "level": 17,
+      "desc": "À partir du niveau 17, vous pouvez utiliser votre action pour activer une aura de soleil qui dure 1 minute ou jusqu'à ce que vous la dissipiez en utilisant une autre action. Vous émettez une lumière vive dans un rayon de 60 pieds et une lumière tamisée 30 pieds au-delà. Vos ennemis dans la lumière vive ont un désavantage aux jets de sauvegarde contre tout sort qui inflige des dégâts de feu ou de rayonnement.",
+      "name_en": "Corona of Light"
+    }
+  ],
+  "name_en": "Cleric: Light Domain",
+  "_translated": true
+}

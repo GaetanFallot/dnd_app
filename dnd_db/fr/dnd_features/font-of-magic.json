@@ -1,0 +1,13 @@
+{
+  "index": "font-of-magic",
+  "name": "Fonte de Magie",
+  "level": 2,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Au niveau 2, vous puisez dans une profonde source de magie en vous. Cette source est représentée par des points de sorcellerie, qui permettent de créer divers effets magiques.\nPoints de sorcellerie\nVous disposez de 2 points de sorcellerie, et vous en gagnez davantage à mesure que vous atteignez des niveaux plus élevés, comme indiqué dans la colonne Points de sorcellerie du tableau des Sorciers. Vous ne pouvez jamais avoir plus de points de sorcellerie que ce qui est indiqué sur le tableau pour votre niveau. Vous récupérez tous les points de sorcellerie dépensés lorsque vous terminez un repos long."
+  ],
+  "name_en": "Font of Magic",
+  "class_name_fr": "",
+  "_translated": true
+}

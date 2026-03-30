@@ -1,0 +1,48 @@
+{
+  "index": "cleric-life",
+  "name": "Clerc : Domaine de la vie",
+  "class": "cleric",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Le domaine Vie se concentre sur l’énergie positive vibrante – l’une des forces fondamentales de l’univers – qui soutient toute vie. Les dieux de la vie promeuvent la vitalité et la santé en guérissant les malades et les blessés, en prenant soin de ceux qui en ont besoin et en chassant les forces de mort et de non-vie. Presque toutes les divinités non maléfiques peuvent revendiquer une influence sur ce domaine, en particulier les divinités agricoles (telles que Chauntea, Arawai et Déméter), les dieux du soleil (tels que Lathandre, Pelor et Re-Horakhty), les dieux de la guérison ou de l'endurance (tels que Ilmater, Mishakal, Apollo et Diancecht) et les dieux de la maison et de la communauté (tels que Hestia, Hathor et Boldrci).",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétence bonus",
+      "level": 1,
+      "desc": "Lorsque vous choisissez ce domaine au niveau 1, vous gagnez en maîtrise des armures lourdes.",
+      "name_en": "Bonus Proficiency"
+    },
+    {
+      "name": "Disciple de Vie",
+      "level": 1,
+      "desc": "Dès le niveau 1 également, vos sorts de soins sont plus efficaces. À chaque fois que vous utilisez un sort de niveau 1 ou supérieur pour redonner des points de vie à une créature, la créature récupère des points de vie supplémentaires égaux à 2 + le niveau du sort.",
+      "name_en": "Disciple of Life"
+    },
+    {
+      "name": "Channel Divinity : Préserver la vie",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous pouvez utiliser votre canal divinité pour soigner les blessés graves.\n\nPar une action, vous présentez votre symbole sacré et évoquez une énergie de guérison qui peut restaurer un nombre de points de vie égal à cinq fois votre niveau de clerc. Choisissez n'importe quelle créature à moins de 9 mètres de vous et répartissez ces points de vie entre elles. Cette fonctionnalité ne peut restaurer une créature qu'à la moitié de son maximum de points de vie. Vous ne pouvez pas utiliser cette fonctionnalité sur un mort-vivant ou une construction.",
+      "name_en": "Channel Divinity: Preserve Life"
+    },
+    {
+      "name": "Guérisseur béni",
+      "level": 6,
+      "desc": "À partir du niveau 6, les sorts de guérison que vous lancez sur les autres vous soignent également. Lorsque vous lancez un sort de niveau 1 ou supérieur qui redonne des points de vie à une créature autre que vous, vous récupérez des points de vie égaux à 2 + le niveau du sort.",
+      "name_en": "Blessed Healer"
+    },
+    {
+      "name": "Frappe divine",
+      "level": 8,
+      "desc": "Au niveau 8, vous gagnez la capacité d’imprégner vos frappes d’énergie divine. Une fois à chacun de vos tours, lorsque vous touchez une créature avec une attaque avec une arme, vous pouvez faire en sorte que l'attaque inflige 1d8 dégâts radiants supplémentaires à la cible. Lorsque vous atteignez le niveau 14, les dégâts supplémentaires passent à 2d8.",
+      "name_en": "Divine Strike"
+    },
+    {
+      "name": "Guérison Suprême",
+      "level": 17,
+      "desc": "À partir du niveau 17, alors que vous lanceriez normalement un ou plusieurs dés pour restaurer des points de vie avec un sort, vous utilisez à la place le nombre le plus élevé possible pour chaque dé. Par exemple, au lieu de redonner 2d6 points de vie à une créature, vous en restaurez 12.",
+      "name_en": "Supreme Healing"
+    }
+  ],
+  "name_en": "Cleric: Life Domain",
+  "_translated": true
+}

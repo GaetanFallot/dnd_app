@@ -1,0 +1,13 @@
+{
+  "index": "slippery-mind",
+  "name": "Esprit glissant",
+  "level": 15,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "Au niveau 15, vous avez acquis une plus grande force mentale. Vous gagnez la maîtrise des jets de sauvegarde de Sagesse."
+  ],
+  "name_en": "Slippery Mind",
+  "class_name_fr": "",
+  "_translated": true
+}

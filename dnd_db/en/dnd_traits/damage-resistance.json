@@ -1,0 +1,9 @@
+{
+  "index": "damage-resistance",
+  "name": "Damage Resistance",
+  "races": [
+    "dragonborn"
+  ],
+  "subraces": [],
+  "desc": "You have resistance to the damage type associated with your draconic ancestry."
+}

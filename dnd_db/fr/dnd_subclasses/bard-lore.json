@@ -1,0 +1,36 @@
+{
+  "index": "bard-lore",
+  "name": "Barde : Collège du savoir",
+  "class": "bard",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Les bardes du Collège du savoir savent quelque chose sur la plupart des choses, rassemblant des bribes de connaissances provenant de sources aussi diverses que des tomes savants et des contes paysans. Qu'il s'agisse de chanter des ballades folkloriques dans les tavernes ou des compositions élaborées dans les cours royales, ces bardes utilisent leurs dons pour captiver le public. Lorsque les applaudissements s'apaisent, les membres du public pourraient se retrouver à remettre en question tout ce qu'ils tenaient pour vrai, depuis leur foi dans le sacerdoce du temple local jusqu'à leur loyauté envers le roi.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétences bonus",
+      "level": 3,
+      "desc": "Lorsque vous rejoignez le Collège du savoir au niveau 3, vous maîtrisez trois compétences de votre choix.",
+      "name_en": "Bonus Proficiencies"
+    },
+    {
+      "name": "Couper les mots",
+      "level": 3,
+      "desc": "Au niveau 3 également, vous apprenez à utiliser votre esprit pour distraire, confondre et saper la confiance et la compétence des autres. Lorsqu'une créature que vous pouvez voir à moins de 60 pieds de vous effectue un jet d'attaque, un test de capacité ou un jet de dégâts, vous pouvez utiliser votre réaction pour dépenser l'une de vos utilisations d'Inspiration bardique, en lançant un dé d'Inspiration bardique et en soustrayant le nombre obtenu au jet de la créature. Vous pouvez choisir d'utiliser cette fonctionnalité après que la créature a effectué son jet, mais avant que le MD ne détermine si le jet d'attaque ou le test de capacité réussit ou échoue, ou avant que la créature n'inflige ses blessures. La créature est immunisée si elle ne peut pas vous entendre ou si elle est immunisée contre les charmes.",
+      "name_en": "Cutting Words"
+    },
+    {
+      "name": "Secrets magiques supplémentaires",
+      "level": 6,
+      "desc": "Au niveau 6, vous apprenez deux sorts de votre choix dans n'importe quelle classe. Un sort que vous choisissez doit être d'un niveau que vous pouvez lancer, comme indiqué sur la table des bardes, ou un sort mineur. Les sorts choisis comptent pour vous comme des sorts de barde mais ne comptent pas dans le nombre de sorts de barde que vous connaissez.",
+      "name_en": "Additional Magical Secrets"
+    },
+    {
+      "name": "Compétence inégalée",
+      "level": 14,
+      "desc": "À partir du niveau 14, lorsque vous effectuez un test de caractéristique, vous pouvez dépenser une utilisation d'Inspiration bardique. Lancez un dé d’inspiration bardique et ajoutez le nombre obtenu à votre test de capacité. Vous pouvez choisir de le faire après avoir lancé le dé pour le test de capacité, mais avant que le DM ne vous dise si vous réussissez ou échouez.",
+      "name_en": "Peerless Skill"
+    }
+  ],
+  "name_en": "Bard: College of Lore",
+  "_translated": true
+}

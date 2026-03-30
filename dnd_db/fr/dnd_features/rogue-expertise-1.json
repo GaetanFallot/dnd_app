@@ -1,0 +1,13 @@
+{
+  "index": "rogue-expertise-1",
+  "name": "Compétence",
+  "level": 1,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "Au niveau 1, choisissez deux de vos compétences, ou une de vos compétences et votre maîtrise des outils de voleur. Votre bonus de maîtrise est doublé pour tout test de capacité que vous effectuez et qui utilise l'une ou l'autre des compétences choisies.\nAu niveau 6, vous pouvez choisir deux autres de vos compétences (en compétences ou en outils de voleur) pour bénéficier de cet avantage."
+  ],
+  "name_en": "Expertise",
+  "class_name_fr": "",
+  "_translated": true
+}

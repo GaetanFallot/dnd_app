@@ -1,0 +1,13 @@
+{
+  "index": "draconic-presence",
+  "name": "Présence draconique",
+  "level": 18,
+  "class": "sorcerer",
+  "subclass": "draconic",
+  "desc": [
+    "À partir du niveau 18, vous pouvez canaliser la présence redoutable de votre ancêtre dragon, provoquant la stupéfaction ou la peur chez ceux qui vous entourent. Par une action, vous pouvez dépenser 5 points de sorcellerie pour utiliser ce pouvoir et dégager une aura de crainte ou de peur (au choix) jusqu'à une distance de 60 pieds. Pendant 1 minute ou jusqu'à ce que vous perdiez votre concentration (comme si vous lanciez un sort de concentration), chaque créature hostile qui commence son tour dans cette aura doit réussir un jet de sauvegarde de Sagesse ou être charmée (si vous avez choisi la crainte) ou effrayée (si vous avez choisi la peur) jusqu'à la fin de l'aura. Une créature qui réussit ce jet de sauvegarde est immunisée contre votre aura pendant 24 heures."
+  ],
+  "name_en": "Draconic Presence",
+  "class_name_fr": "",
+  "_translated": true
+}

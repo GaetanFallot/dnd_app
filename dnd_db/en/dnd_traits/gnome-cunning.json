@@ -1,0 +1,9 @@
+{
+  "index": "gnome-cunning",
+  "name": "Gnome Cunning",
+  "races": [
+    "gnome"
+  ],
+  "subraces": [],
+  "desc": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+}

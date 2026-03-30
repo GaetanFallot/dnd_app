@@ -1,0 +1,48 @@
+{
+  "index": "fighter-samurai",
+  "name": "Combattant : Samouraï",
+  "class": "fighter",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Le Samouraï est un combattant qui fait appel à un esprit combatif implacable pour vaincre ses ennemis. La détermination d’un samouraï est presque inébranlable, et les ennemis sur son chemin ont deux choix : céder ou mourir au combat.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétence bonus",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cet archétype au niveau 3, vous maîtrisez l'une des compétences suivantes de votre choix : Histoire, Perspicacité, Performance ou Persuasion. Alternativement, vous apprenez une langue de votre choix.",
+      "name_en": "Bonus Proficiency"
+    },
+    {
+      "name": "Esprit combatif",
+      "level": 3,
+      "desc": "À partir du niveau 3, votre intensité au combat peut vous protéger et vous aider à frapper juste. Par une action bonus lors de votre tour, vous pouvez vous donner un avantage sur tous les jets d'attaque avec arme jusqu'à la fin du tour en cours. Ce faisant, vous gagnez également 5 points de vie temporaires. Le nombre de points de vie augmente lorsque vous atteignez certains niveaux dans cette classe, passant à 10 au niveau 10 et 15 au niveau 15.\n\nVous pouvez utiliser cette fonctionnalité trois fois. Vous en récupérez toutes les utilisations dépensées lorsque vous terminez un long repos.",
+      "name_en": "Fighting Spirit"
+    },
+    {
+      "name": "Courtisan élégant",
+      "level": 7,
+      "desc": "À partir du niveau 7, votre discipline et votre souci du détail vous permettent d'exceller dans les situations sociales. Chaque fois que vous effectuez un test de Charisme (Persuasion), vous gagnez un bonus au test égal à votre modificateur de Sagesse.\n\nVotre maîtrise de soi vous permet également de maîtriser les jets de sauvegarde de Sagesse. Si vous possédez déjà cette compétence, vous gagnez à la place la maîtrise des jets de sauvegarde d'Intelligence ou de Charisme (au choix).",
+      "name_en": "Elegant Courtier"
+    },
+    {
+      "name": "Esprit infatigable",
+      "level": 10,
+      "desc": "À partir du niveau 10, lorsque vous lancez un jet d’initiative et qu’il ne vous reste plus aucune utilisation d’Esprit combatif, vous récupérez une utilisation.",
+      "name_en": "Tireless Spirit"
+    },
+    {
+      "name": "Frappe rapide",
+      "level": 15,
+      "desc": "À partir du niveau 15, vous apprenez à troquer la précision contre des frappes rapides. Si vous effectuez l'action Attaque à votre tour et avez l'avantage sur un jet d'attaque contre l'une des cibles, vous pouvez renoncer à l'avantage de ce jet pour effectuer une attaque avec une arme supplémentaire contre cette cible, dans le cadre de la même action. Vous ne pouvez pas le faire plus d'une fois par tour.",
+      "name_en": "Rapid Strike"
+    },
+    {
+      "name": "La force avant la mort",
+      "level": 18,
+      "desc": "À partir du niveau 18, votre esprit combatif peut retarder l’approche de la mort. Si vous subissez des dégâts qui vous réduisent à 0 point de vie, vous pouvez utiliser votre réaction pour retarder votre perte de conscience et vous pouvez immédiatement prendre un tour supplémentaire. Tant que vous avez 0 point de vie pendant ce tour supplémentaire, subir des dégâts provoque des échecs de jet de sauvegarde contre la mort comme d'habitude, et trois échecs de jet de sauvegarde contre la mort peuvent toujours vous tuer. À la fin du tour supplémentaire, vous perdez connaissance si vous n’avez toujours aucun point de vie.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un long repos.",
+      "name_en": "Strength Before Death"
+    }
+  ],
+  "name_en": "Fighter: Samurai",
+  "_translated": true
+}

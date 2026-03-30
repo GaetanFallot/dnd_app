@@ -1,0 +1,48 @@
+{
+  "index": "paladin-vengeance",
+  "name": "Paladin : Serment de vengeance",
+  "class": "paladin",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Le serment de vengeance est un engagement solennel à punir ceux qui ont commis un péché grave. Lorsque les forces du mal massacrent des villageois sans défense, lorsqu'un peuple entier se retourne contre la volonté des dieux, lorsqu'une guilde de voleurs devient trop violente et trop puissante, lorsqu'un dragon se déchaîne dans la campagne, dans des moments comme ceux-ci, des paladins se lèvent et prêtent serment de vengeance pour réparer ce qui n'a pas fonctionné. Pour ces paladins – parfois appelés vengeurs ou chevaliers noirs – leur propre pureté n'est pas aussi importante que de rendre la justice.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Principes de vengeance",
+      "level": null,
+      "desc": "Les principes du Serment de Vengeance varient selon le paladin, mais tous tournent autour de la punition des malfaiteurs par tous les moyens nécessaires. Les paladins qui respectent ces principes sont prêts à sacrifier même leur propre droiture pour rendre justice à ceux qui font le mal, c'est pourquoi les paladins sont souvent d'alignement neutre ou loyalement neutre. Les principes fondamentaux des principes sont extrêmement simples.\n\nCombattez le plus grand mal. Face au choix entre combattre mes ennemis jurés ou combattre un mal moindre, je choisis le mal le plus grand.\n\nPas de pitié pour les méchants. Les ennemis ordinaires pourraient gagner ma miséricorde, mais pas mes ennemis jurés.\n\nPar tous les moyens nécessaires. Mes scrupules ne peuvent pas m’empêcher d’exterminer mes ennemis.\n\nRestitution. Si mes ennemis sèment la ruine dans le monde, c’est parce que je n’ai pas réussi à les arrêter. Je dois aider ceux qui ont été blessés par leurs méfaits.",
+      "name_en": "Tenets of Vengeance"
+    },
+    {
+      "name": "Sorts de serment",
+      "level": null,
+      "desc": "Vous gagnez des sorts de serment aux niveaux de paladin indiqués.\nSorts du Serment de Vengeance\nNiveau Paladin | Sorts\n3ème | Bane, marque du chasseur\n5ème | Tenez la personne, Misty Step\n9ème | Hâte, protection contre l'énergie\n13e | Bannissement, porte dimensionnelle\n17e | Tenir le monstre, scrutation",
+      "name_en": "Oath Spells"
+    },
+    {
+      "name": "Canal Divinité",
+      "level": 3,
+      "desc": "Lorsque vous prêtez ce serment au niveau 3, vous obtenez les deux options de canalisation divine suivantes.\n• Abjurer l'ennemi. En guise d'action, vous présentez votre symbole sacré et prononcez une prière de dénonciation, en utilisant votre Divinité Canal. Choisissez une créature que vous pouvez voir à moins de 60 pieds de vous. Cette créature doit effectuer un jet de sauvegarde de Sagesse, à moins qu'elle ne soit immunisée contre la peur. Les démons et les morts-vivants sont désavantagés lors de ce jet de sauvegarde. En cas d'échec, la créature est effrayée pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. Tant qu'elle est effrayée, la vitesse de la créature est de 0 et elle ne peut bénéficier d'aucun bonus à sa vitesse. En cas de sauvegarde réussie, la vitesse de la créature est réduite de moitié pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts.\n• Vœu d'inimitié. Par une action bonus, vous pouvez prononcer un vœu d'inimitié contre une créature que vous pouvez voir à moins de 3 mètres de vous, en utilisant votre Canal Divinité. Vous bénéficiez d'un avantage aux jets d'attaque contre la créature pendant 1 minute ou jusqu'à ce qu'elle tombe à 0 point de vie ou tombe inconsciente.",
+      "name_en": "Channel Divinity"
+    },
+    {
+      "name": "Vengeur implacable",
+      "level": 7,
+      "desc": "Au niveau 7, votre concentration surnaturelle vous aide à bloquer la retraite d'un ennemi. Lorsque vous touchez une créature avec une attaque d'opportunité, vous pouvez vous déplacer jusqu'à la moitié de votre vitesse immédiatement après l'attaque et dans le cadre de la même réaction. Ce mouvement ne provoque pas d'attaques d'opportunité.",
+      "name_en": "Relentless Avenger"
+    },
+    {
+      "name": "Âme de vengeance",
+      "level": 15,
+      "desc": "À partir du niveau 15, l'autorité avec laquelle vous prononcez votre vœu d'inimitié vous confère un plus grand pouvoir sur votre ennemi. Lorsqu'une créature sous l'effet de votre Vœu d'inimitié effectue une attaque, vous pouvez utiliser votre réaction pour lancer une attaque au corps à corps avec une arme contre cette créature si elle est à portée.",
+      "name_en": "Soul of Vengeance"
+    },
+    {
+      "name": "Ange vengeur",
+      "level": 20,
+      "desc": "Au niveau 20, vous pouvez prendre la forme d’un vengeur angélique. Grâce à votre action, vous subissez une transformation. Pendant 1 heure, vous bénéficiez des avantages suivants :\n• Des ailes poussent dans votre dos et vous confèrent une vitesse de vol de 60 pieds.\n• Vous dégagez une aura de menace dans un rayon de 9 mètres. La première fois qu'une créature ennemie entre dans l'aura ou y commence son tour au cours d'un combat, la créature doit réussir un jet de sauvegarde de Sagesse ou avoir peur de vous pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. Les jets d'attaque contre la créature effrayée ont un avantage.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Avenging Angel"
+    }
+  ],
+  "name_en": "Paladin: Oath of Vengeance",
+  "_translated": true
+}

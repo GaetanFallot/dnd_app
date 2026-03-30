@@ -1,0 +1,13 @@
+{
+  "index": "oath-spells",
+  "name": "Sorts de serment",
+  "level": 3,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Chaque serment a une liste de sorts associés. Vous avez accès à ces sorts aux niveaux spécifiés dans la description du serment. Une fois que vous avez accès à un sort de serment, vous l’avez toujours préparé. Les sorts de serment ne comptent pas dans le nombre de sorts que vous pouvez préparer chaque jour.\nSi vous gagnez un sort de serment qui n'apparaît pas dans la liste des sorts de paladin, le sort est néanmoins un sort de paladin pour vous."
+  ],
+  "name_en": "Oath Spells",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,8 @@
+{
+  "index": "bonus-cantrip",
+  "name": "Bonus Cantrip",
+  "level": 2,
+  "class": "druid",
+  "subclass": "land",
+  "desc": "When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice."
+}

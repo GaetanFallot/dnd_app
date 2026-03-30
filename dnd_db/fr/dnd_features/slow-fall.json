@@ -1,0 +1,13 @@
+{
+  "index": "slow-fall",
+  "name": "Chute lente",
+  "level": 4,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 4, vous pouvez utiliser votre réaction lorsque vous tombez pour réduire les dégâts de chute que vous subissez d'un montant égal à cinq fois votre niveau de moine."
+  ],
+  "name_en": "Slow Fall",
+  "class_name_fr": "",
+  "_translated": true
+}

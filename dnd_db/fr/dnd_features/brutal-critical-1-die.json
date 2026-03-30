@@ -1,0 +1,13 @@
+{
+  "index": "brutal-critical-1-die",
+  "name": "Critique brutal (1 dé)",
+  "level": 9,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 9, vous pouvez lancer un dé de dégâts d'arme supplémentaire pour déterminer les dégâts supplémentaires d'un coup critique avec une attaque de mêlée. Cela passe à deux dés supplémentaires au niveau 13 et à trois dés supplémentaires au niveau 17."
+  ],
+  "name_en": "Brutal Critical (1 die)",
+  "class_name_fr": "",
+  "_translated": true
+}

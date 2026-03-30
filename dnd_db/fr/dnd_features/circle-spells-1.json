@@ -1,0 +1,13 @@
+{
+  "index": "circle-spells-1",
+  "name": "Sorts de cercle",
+  "level": 3,
+  "class": "druid",
+  "subclass": "land",
+  "desc": [
+    "Votre lien mystique avec la terre vous confère la capacité de lancer certains sorts. Aux niveaux 3, 5, 7 et 9, vous avez accès aux sorts de cercle liés au terrain où vous êtes devenu druide.\nChoisissez cette terre (Arctique, côte, désert, forêt, prairie, montagne ou marais) et consultez la liste de sorts associée.\nUne fois que vous avez accès à un sort de cercle, vous l'avez toujours préparé, et il ne compte pas dans le nombre de sorts que vous pouvez préparer chaque jour. Si vous accédez à un sort qui n'apparaît pas dans la liste des sorts de druide, le sort n'en est pas moins un sort de druide pour vous."
+  ],
+  "name_en": "Circle Spells",
+  "class_name_fr": "",
+  "_translated": true
+}

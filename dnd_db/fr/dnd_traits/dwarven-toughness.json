@@ -1,0 +1,11 @@
+{
+  "index": "dwarven-toughness",
+  "name": "Robustesse naine",
+  "races": [],
+  "subraces": [
+    "hill-dwarf"
+  ],
+  "desc": "Votre maximum de points de vie augmente de 1, et il augmente de 1 à chaque fois que vous gagnez un niveau.",
+  "name_en": "Dwarven Toughness",
+  "_translated": true
+}

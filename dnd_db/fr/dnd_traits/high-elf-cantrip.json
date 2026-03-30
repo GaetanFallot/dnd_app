@@ -1,0 +1,11 @@
+{
+  "index": "high-elf-cantrip",
+  "name": "Cantrip haut elfe",
+  "races": [],
+  "subraces": [
+    "high-elf"
+  ],
+  "desc": "Vous connaissez un cantrip de votre choix dans la liste des sorts du sorcier. L'intelligence est votre capacité à lancer des sorts.",
+  "name_en": "High Elf Cantrip",
+  "_translated": true
+}

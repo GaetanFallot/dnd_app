@@ -1,0 +1,308 @@
+{
+  "index": "fighter",
+  "name": "Guerrier",
+  "hit_die": 10,
+  "proficiencies": [
+    "All armor",
+    "Shields",
+    "Simple Weapons",
+    "Martial Weapons",
+    "Saving Throw: STR",
+    "Saving Throw: CON"
+  ],
+  "saving_throws": [
+    "STR",
+    "CON"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival",
+      "choose": 2,
+      "options": [
+        "Skill: Acrobatics",
+        "Skill: Animal Handling",
+        "Skill: Athletics",
+        "Skill: History",
+        "Skill: Insight",
+        "Skill: Intimidation",
+        "Skill: Perception",
+        "Skill: Survival"
+      ]
+    }
+  ],
+  "starting_equipment": [],
+  "subclasses": [
+    "champion"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "fighter-fighting-style",
+        "second-wind"
+      ],
+      "class_specific": {
+        "action_surges": 0,
+        "indomitable_uses": 0,
+        "extra_attacks": 0
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "action-surge-1-use"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 0,
+        "extra_attacks": 0
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "martial-archetype"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 0,
+        "extra_attacks": 0
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "fighter-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 0,
+        "extra_attacks": 0
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [
+        "extra-attack-1"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 0,
+        "extra_attacks": 1
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "fighter-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 0,
+        "extra_attacks": 1
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [
+        "martial-archetype-improvement-1"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 0,
+        "extra_attacks": 1
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "fighter-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 0,
+        "extra_attacks": 1
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [
+        "indomitable-1-use"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 1,
+        "extra_attacks": 1
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "martial-archetype-improvement-2"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 1,
+        "extra_attacks": 1
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [
+        "extra-attack-2"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 1,
+        "extra_attacks": 2
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "fighter-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 1,
+        "extra_attacks": 2
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [
+        "indomitable-2-uses"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 2,
+        "extra_attacks": 2
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "fighter-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 2,
+        "extra_attacks": 2
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [
+        "martial-archetype-improvement-3"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 2,
+        "extra_attacks": 2
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "fighter-ability-score-improvement-6"
+      ],
+      "class_specific": {
+        "action_surges": 1,
+        "indomitable_uses": 2,
+        "extra_attacks": 2
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [
+        "action-surge-2-uses",
+        "indomitable-3-uses"
+      ],
+      "class_specific": {
+        "action_surges": 2,
+        "indomitable_uses": 3,
+        "extra_attacks": 2
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "martial-archetype-improvement-4"
+      ],
+      "class_specific": {
+        "action_surges": 2,
+        "indomitable_uses": 3,
+        "extra_attacks": 2
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "fighter-ability-score-improvement-7"
+      ],
+      "class_specific": {
+        "action_surges": 2,
+        "indomitable_uses": 3,
+        "extra_attacks": 2
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "extra-attack-3"
+      ],
+      "class_specific": {
+        "action_surges": 2,
+        "indomitable_uses": 3,
+        "extra_attacks": 3
+      }
+    }
+  ],
+  "feature_indices": [
+    "fighter-fighting-style",
+    "second-wind",
+    "action-surge-1-use",
+    "martial-archetype",
+    "fighter-ability-score-improvement-1",
+    "extra-attack-1",
+    "fighter-ability-score-improvement-2",
+    "martial-archetype-improvement-1",
+    "fighter-ability-score-improvement-3",
+    "indomitable-1-use",
+    "martial-archetype-improvement-2",
+    "extra-attack-2",
+    "fighter-ability-score-improvement-4",
+    "indomitable-2-uses",
+    "fighter-ability-score-improvement-5",
+    "martial-archetype-improvement-3",
+    "fighter-ability-score-improvement-6",
+    "action-surge-2-uses",
+    "indomitable-3-uses",
+    "martial-archetype-improvement-4",
+    "fighter-ability-score-improvement-7",
+    "extra-attack-3"
+  ],
+  "name_en": "Fighter",
+  "desc": "",
+  "_translated": true
+}

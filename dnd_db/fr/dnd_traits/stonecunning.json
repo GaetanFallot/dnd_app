@@ -1,0 +1,11 @@
+{
+  "index": "stonecunning",
+  "name": "Ruse de pierre",
+  "races": [
+    "dwarf"
+  ],
+  "subraces": [],
+  "desc": "Chaque fois que vous effectuez un test d'Intelligence (Histoire) lié à l'origine de la pierre, vous êtes considéré comme maîtrisant la compétence Histoire et ajoutez le double de votre bonus de maîtrise au test, au lieu de votre bonus de maîtrise normal.",
+  "name_en": "Stonecunning",
+  "_translated": true
+}

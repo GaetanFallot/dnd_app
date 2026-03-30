@@ -1,0 +1,13 @@
+{
+  "index": "elusive",
+  "name": "Insaisissable",
+  "level": 18,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 18, vous êtes si évasif que les attaquants prennent rarement le dessus sur vous. Aucun jet d'attaque n'a d'avantage contre vous tant que vous n'êtes pas incapable d'agir."
+  ],
+  "name_en": "Elusive",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "blessed-healer",
+  "name": "Guérisseur béni",
+  "level": 6,
+  "class": "cleric",
+  "subclass": "life",
+  "desc": [
+    "À partir du niveau 6, les sorts de guérison que vous lancez sur les autres vous soignent également. Lorsque vous lancez un sort de niveau 1 ou supérieur qui redonne des points de vie à une créature autre que vous, vous récupérez des points de vie égaux à 2 + le niveau du sort."
+  ],
+  "name_en": "Blessed Healer",
+  "class_name_fr": "",
+  "_translated": true
+}

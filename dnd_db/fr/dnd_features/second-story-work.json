@@ -1,0 +1,13 @@
+{
+  "index": "second-story-work",
+  "name": "Travail au deuxième étage",
+  "level": 3,
+  "class": "rogue",
+  "subclass": "thief",
+  "desc": [
+    "Lorsque vous choisissez cet archétype au niveau 3, vous gagnez la capacité de grimper plus vite que la normale ; grimper ne vous coûte plus de mouvement supplémentaire.\nDe plus, lorsque vous effectuez un saut en courant, la distance que vous parcourez augmente d'un nombre de pieds égal à votre modificateur de Dextérité."
+  ],
+  "name_en": "Second-Story Work",
+  "class_name_fr": "",
+  "_translated": true
+}

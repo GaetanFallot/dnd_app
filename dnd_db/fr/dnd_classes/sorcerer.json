@@ -1,0 +1,699 @@
+{
+  "index": "sorcerer",
+  "name": "Ensorceleur",
+  "hit_die": 6,
+  "proficiencies": [
+    "Daggers",
+    "Darts",
+    "Slings",
+    "Quarterstaffs",
+    "Crossbows, light",
+    "Saving Throw: CON",
+    "Saving Throw: CHA"
+  ],
+  "saving_throws": [
+    "CON",
+    "CHA"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion",
+      "choose": 2,
+      "options": [
+        "Skill: Arcana",
+        "Skill: Deception",
+        "Skill: Insight",
+        "Skill: Intimidation",
+        "Skill: Persuasion",
+        "Skill: Religion"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "Dagger",
+        "url": "/api/2014/equipment/dagger"
+      },
+      "quantity": 2
+    }
+  ],
+  "subclasses": [
+    "draconic"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "spellcasting-sorcerer",
+        "sorcerous-origin"
+      ],
+      "class_specific": {
+        "sorcery_points": 0,
+        "metamagic_known": 0,
+        "creating_spell_slots": []
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "font-of-magic",
+        "flexible-casting-creating-spell-slots",
+        "flexible-casting-converting-spell-slot"
+      ],
+      "class_specific": {
+        "sorcery_points": 2,
+        "metamagic_known": 0,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "metamagic-1"
+      ],
+      "class_specific": {
+        "sorcery_points": 3,
+        "metamagic_known": 2,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "sorcerer-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "sorcery_points": 4,
+        "metamagic_known": 2,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [],
+      "class_specific": {
+        "sorcery_points": 5,
+        "metamagic_known": 2,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "sorcerous-origin-improvement-1"
+      ],
+      "class_specific": {
+        "sorcery_points": 6,
+        "metamagic_known": 2,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [],
+      "class_specific": {
+        "sorcery_points": 7,
+        "metamagic_known": 2,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "sorcerer-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "sorcery_points": 8,
+        "metamagic_known": 2,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "sorcery_points": 9,
+        "metamagic_known": 2,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "metamagic-2"
+      ],
+      "class_specific": {
+        "sorcery_points": 10,
+        "metamagic_known": 3,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "sorcery_points": 11,
+        "metamagic_known": 3,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "sorcerer-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "sorcery_points": 12,
+        "metamagic_known": 3,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "sorcery_points": 13,
+        "metamagic_known": 3,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "sorcerous-origin-improvement-2"
+      ],
+      "class_specific": {
+        "sorcery_points": 14,
+        "metamagic_known": 3,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "sorcery_points": 15,
+        "metamagic_known": 3,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "sorcerer-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "sorcery_points": 16,
+        "metamagic_known": 4,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [
+        "metamagic-3"
+      ],
+      "class_specific": {
+        "sorcery_points": 17,
+        "metamagic_known": 4,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "sorcerous-origin-improvement-3"
+      ],
+      "class_specific": {
+        "sorcery_points": 18,
+        "metamagic_known": 4,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "sorcerer-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "sorcery_points": 19,
+        "metamagic_known": 4,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "sorcerous-restoration"
+      ],
+      "class_specific": {
+        "sorcery_points": 20,
+        "metamagic_known": 4,
+        "creating_spell_slots": [
+          {
+            "spell_slot_level": 1,
+            "sorcery_point_cost": 2
+          },
+          {
+            "spell_slot_level": 2,
+            "sorcery_point_cost": 3
+          },
+          {
+            "spell_slot_level": 3,
+            "sorcery_point_cost": 5
+          },
+          {
+            "spell_slot_level": 4,
+            "sorcery_point_cost": 6
+          },
+          {
+            "spell_slot_level": 5,
+            "sorcery_point_cost": 7
+          }
+        ]
+      }
+    }
+  ],
+  "feature_indices": [
+    "spellcasting-sorcerer",
+    "sorcerous-origin",
+    "font-of-magic",
+    "flexible-casting-creating-spell-slots",
+    "flexible-casting-converting-spell-slot",
+    "metamagic-1",
+    "sorcerer-ability-score-improvement-1",
+    "sorcerous-origin-improvement-1",
+    "sorcerer-ability-score-improvement-2",
+    "metamagic-2",
+    "sorcerer-ability-score-improvement-3",
+    "sorcerous-origin-improvement-2",
+    "sorcerer-ability-score-improvement-4",
+    "metamagic-3",
+    "sorcerous-origin-improvement-3",
+    "sorcerer-ability-score-improvement-5",
+    "sorcerous-restoration"
+  ],
+  "name_en": "Sorcerer",
+  "desc": "",
+  "_translated": true
+}

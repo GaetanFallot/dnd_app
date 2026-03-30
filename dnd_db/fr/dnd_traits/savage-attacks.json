@@ -1,0 +1,11 @@
+{
+  "index": "savage-attacks",
+  "name": "Attaques sauvages",
+  "races": [
+    "half-orc"
+  ],
+  "subraces": [],
+  "desc": "Lorsque vous obtenez un coup critique avec une attaque au corps à corps avec une arme, vous pouvez lancer une fois de plus l'un des dés de dégâts de l'arme et l'ajouter aux dégâts supplémentaires du coup critique.",
+  "name_en": "Savage Attacks",
+  "_translated": true
+}

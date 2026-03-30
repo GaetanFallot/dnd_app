@@ -1,0 +1,13 @@
+{
+  "index": "bonus-proficiencies",
+  "name": "Compétences bonus",
+  "level": 3,
+  "class": "bard",
+  "subclass": "lore",
+  "desc": [
+    "Lorsque vous rejoignez le Collège du savoir au niveau 3, vous maîtrisez trois compétences de votre choix."
+  ],
+  "name_en": "Bonus Proficiencies",
+  "class_name_fr": "",
+  "_translated": true
+}

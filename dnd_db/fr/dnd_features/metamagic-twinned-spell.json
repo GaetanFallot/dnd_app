@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-twinned-spell",
+  "name": "Métamagie : sort jumelé",
+  "level": 3,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez un sort qui cible une seule créature et n'a pas de portée, vous pouvez dépenser un nombre de points de sorcellerie égal au niveau du sort pour cibler une deuxième créature à portée avec le même sort (1 point de sorcellerie si le sort est un sort mineur).\nPour être éligible, un sort doit être incapable de cibler plus d'une créature au niveau actuel du sort. Par exemple, le missile magique et le rayon brûlant ne sont pas éligibles, mais le rayon de givre l'est."
+  ],
+  "name_en": "Metamagic: Twinned Spell",
+  "class_name_fr": "",
+  "_translated": true
+}

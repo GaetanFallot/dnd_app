@@ -1,0 +1,13 @@
+{
+  "index": "superior-hunters-defense-stand-against-the-tide",
+  "name": "Défense supérieure du chasseur : tenez-vous à contre-courant",
+  "level": 15,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Lorsqu'une créature hostile vous manque lors d'une attaque au corps à corps, vous pouvez utiliser votre réaction pour forcer cette créature à répéter la même attaque contre une autre créature (autre qu'elle-même) de votre choix."
+  ],
+  "name_en": "Superior Hunter's Defense: Stand Against the Tide",
+  "class_name_fr": "",
+  "_translated": true
+}

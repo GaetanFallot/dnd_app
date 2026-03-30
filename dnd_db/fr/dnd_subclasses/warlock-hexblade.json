@@ -1,0 +1,48 @@
+{
+  "index": "warlock-hexblade",
+  "name": "Démoniste : La Hexblade",
+  "class": "warlock",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Vous avez conclu un pacte avec une entité mystérieuse de Shadowfell – une force qui se manifeste dans des armes magiques sensibles taillées dans la matière de l'ombre. La puissante épée Blackrazor est la plus remarquable de ces armes, qui se sont répandues dans le multivers au fil des âges. La force obscure derrière ces armes peut offrir du pouvoir aux sorciers qui concluent des pactes avec elle. De nombreux démonistes à lame hexagonale créent des armes qui imitent celles formées dans Shadowfell. D’autres renoncent à ces armes, se contentant d’intégrer la magie noire de ce plan dans leurs sorts.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Liste de sorts étendue",
+      "level": null,
+      "desc": "L'Hexblade vous permet de choisir parmi une liste étendue de sorts lorsque vous apprenez un sort de démoniste. Les sorts suivants sont ajoutés à la liste des sorts de démoniste pour vous.\nSorts étendus Hexblade\nNiveau de sort | Sorts\n1er | Bouclier, Châtiment courroucé\n2ème | Flou, Branding Smite\n3ème | Clignotement, arme élémentaire\n4ème | Tueur fantasmatique, Châtiment stupéfiant\n5ème | Banishing Smite, Cône de froid",
+      "name_en": "Expanded Spell List"
+    },
+    {
+      "name": "La malédiction de Hexblade",
+      "level": 1,
+      "desc": "À partir du niveau 1, vous acquérez la capacité de lancer une malédiction funeste sur quelqu'un. Par une action bonus, choisissez une créature que vous pouvez voir à moins de 9 mètres de vous. La cible est maudite pendant 1 minute. La malédiction prend fin plus tôt si la cible meurt, si vous mourez ou si vous êtes frappé d'incapacité. Jusqu'à la fin de la malédiction, vous bénéficiez des avantages suivants :\n• Vous bénéficiez d'un bonus aux jets de dégâts contre la cible maudite. Le bonus est égal à votre bonus de compétence.\n• Tout jet d'attaque que vous effectuez contre la cible maudite est un coup critique sur un résultat de 19 ou 20 sur le d20.\n• Si la cible maudite meurt, vous récupérez des points de vie égaux à votre niveau de démoniste + votre modificateur de Charisme (minimum de 1 point de vie).\n\nVous ne pouvez plus utiliser cette fonctionnalité tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Hexblade's Curse"
+    },
+    {
+      "name": "Guerrier maléfique",
+      "level": 1,
+      "desc": "Au niveau 1, vous acquérez l’entraînement nécessaire pour vous armer efficacement pour le combat. Vous maîtrisez les armures moyennes, les boucliers et les armes martiales.\n\nL’influence de votre patron vous permet également de canaliser mystiquement votre volonté à travers une arme particulière. Chaque fois que vous terminez un repos long, vous pouvez toucher une arme que vous maîtrisez et qui n'a pas la propriété à deux mains. Lorsque vous attaquez avec cette arme, vous pouvez utiliser votre modificateur de Charisme, au lieu de Force ou de Dextérité, pour les jets d'attaque et de dégâts. Cet avantage dure jusqu'à la fin d'un repos long. Si vous obtenez plus tard la fonctionnalité Pacte de la Lame, cet avantage s'étend à chaque arme du pacte que vous invoquez avec cette fonctionnalité, quel que soit le type d'arme.",
+      "name_en": "Hex Warrior"
+    },
+    {
+      "name": "Spectre maudit",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez maudire l'âme d'une personne que vous tuez, la liant temporairement à votre service. Lorsque vous tuez un humanoïde, vous pouvez faire sortir son esprit de son cadavre sous la forme d'un spectre, dont les statistiques se trouvent dans le Manuel des Monstres. Lorsque le spectre apparaît, il gagne des points de vie temporaires égaux à la moitié de votre niveau de démoniste. Lancez un jet d'initiative pour le spectre, qui a ses propres tours. Il obéit à vos ordres verbaux et gagne un bonus spécial à ses jets d'attaque égal à votre modificateur de Charisme (minimum de +0).\n\nLe spectre reste à votre service jusqu'à la fin de votre prochain long repos, après quoi il disparaît dans l'au-delà.\n\nUne fois que vous avez lié un spectre avec cette fonctionnalité, vous ne pouvez plus l'utiliser avant d'avoir terminé un long repos.",
+      "name_en": "Accursed Specter"
+    },
+    {
+      "name": "Armure d'hexagones",
+      "level": 10,
+      "desc": "Au niveau 10, votre hexagone devient plus puissant. Si la cible maudite par votre Malédiction de Hexblade vous frappe avec un jet d'attaque, vous pouvez utiliser votre réaction pour lancer un d6. Sur 4 ou plus, l'attaque vous manque, quel que soit son jet.",
+      "name_en": "Armor of Hexes"
+    },
+    {
+      "name": "Maître des hexagones",
+      "level": 14,
+      "desc": "À partir du niveau 14, vous pouvez propager la malédiction de votre Hexblade d'une créature tuée à une autre créature. Lorsque la créature maudite par la malédiction de votre Hexblade meurt, vous pouvez appliquer la malédiction à une autre créature que vous pouvez voir à moins de 9 mètres de vous, à condition que vous ne soyez pas incapable d'agir. Lorsque vous appliquez la malédiction de cette manière, vous ne récupérez pas de points de vie suite à la mort de la créature précédemment maudite.",
+      "name_en": "Master of Hexes"
+    }
+  ],
+  "name_en": "Warlock: The Hexblade",
+  "_translated": true
+}

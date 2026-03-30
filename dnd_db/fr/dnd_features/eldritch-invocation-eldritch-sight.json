@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-eldritch-sight",
+  "name": "Invocation surnaturelle : vue surnaturelle",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer la détection de magie à volonté, sans dépenser d'emplacement de sort."
+  ],
+  "name_en": "Eldritch Invocation: Eldritch Sight",
+  "class_name_fr": "",
+  "_translated": true
+}

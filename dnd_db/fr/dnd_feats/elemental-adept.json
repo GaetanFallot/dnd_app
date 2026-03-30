@@ -1,0 +1,14 @@
+{
+  "index": "elemental-adept",
+  "name": "Adepte élémentaire",
+  "source": "Player's Handbook",
+  "prerequisite": "La capacité de lancer au moins un sort",
+  "desc": "",
+  "benefits": [
+    "Lorsque vous obtenez ce don, choisissez l'un des types de dégâts suivants : acide, froid, feu, foudre ou tonnerre.",
+    "Les sorts que vous lancez ignorent la résistance aux dégâts du type choisi. De plus, lorsque vous lancez des dégâts pour un sort que vous lancez et qui inflige des dégâts de ce type, vous pouvez traiter n'importe quel 1 sur un dé de dégâts comme un 2.",
+    "Vous pouvez sélectionner cet exploit plusieurs fois. À chaque fois que vous le faites, vous devez choisir un type de dégâts différent."
+  ],
+  "name_en": "Elemental Adept",
+  "_translated": true
+}

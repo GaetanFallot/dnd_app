@@ -37,6 +37,7 @@
         <button class="btn" onclick="DND.importJSON()">📥</button>
         <button class="btn" onclick="DND.exportHTML()" title="Exporter fiche portable (HTML)">📄</button>
         <button class="btn" onclick="DND.shareLink()" title="Copier le lien GitHub Pages">🔗</button>
+        <button class="btn" onclick="DND.openImportLinkModal()" title="Importer depuis un lien">📎</button>
         <button class="btn btn-shortrest" onclick="DND.shortRest()">☀️ Court</button>
         <button class="btn btn-longrest" onclick="DND.longRest()">🌙 Long</button>
         <button class="btn btn-danger" onclick="DND.resetSheet()">🗑️</button>
@@ -60,7 +61,10 @@
             </div>
             <div class="field-group">
               <label class="field-label">Sous-classe</label>
-              <input type="text" class="field-input" data-field="subclass" placeholder="Archétype...">
+              <div style="display:flex;gap:0.3rem;align-items:center">
+                <input type="text" class="field-input" data-field="subclass" placeholder="Archétype..." style="flex:1">
+                <button class="btn" style="padding:0.15rem 0.5rem;font-size:0.6rem;background:var(--arcane-bg,#2a1a4e);color:var(--arcane-glow,#b89fff);border-color:var(--arcane-glow,#b89fff)" onclick="SubclassBrowser.open()" title="Parcourir les sous-classes">🎭 Archétypes</button>
+              </div>
             </div>
             <div class="field-group">
               <label class="field-label">Dés de vie (<span id="hd-display">—</span>)</label>
@@ -616,6 +620,59 @@
   </div><!-- end sheet-body -->
 
   <!-- ═══ SPELL BROWSER MODAL ═══ -->
+  <!-- ── Import From Link Modal ────────────────────────────────── -->
+  <div id="import-link-modal" style="display:none;position:fixed;inset:0;z-index:1100;background:rgba(0,0,0,.82);align-items:center;justify-content:center;padding:1rem"
+    onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:var(--bg-panel,#1a1410);border:1px solid var(--gold,#c8a84b);border-radius:6px;padding:1.2rem 1.5rem;width:100%;max-width:520px">
+      <div style="font-family:'Cinzel',serif;font-size:0.95rem;color:var(--gold,#c8a84b);margin-bottom:0.8rem">📎 Importer depuis un lien</div>
+      <input id="import-link-input" type="text" placeholder="Colle ici le lien de partage…"
+        style="width:100%;box-sizing:border-box;background:#100d09;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.45rem 0.7rem;border-radius:4px;font-size:0.85rem;margin-bottom:0.8rem"
+        onkeydown="if(event.key==='Enter')DND.importFromLink()">
+      <div style="display:flex;gap:0.5rem;justify-content:flex-end">
+        <button onclick="document.getElementById('import-link-modal').style.display='none'"
+          style="padding:0.35rem 0.9rem;background:none;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-faded,#7a6a55);border-radius:4px;cursor:pointer;font-size:0.8rem">Annuler</button>
+        <button onclick="DND.importFromLink()"
+          style="padding:0.35rem 0.9rem;background:var(--arcane-bg,#2a1a4e);color:var(--arcane-glow,#b89fff);border:1px solid var(--arcane-glow,#b89fff);border-radius:4px;cursor:pointer;font-size:0.8rem">Importer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Subclass Browser Modal ─────────────────────────────────── -->
+  <div id="subclass-browser-modal" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.82);align-items:stretch;justify-content:center;padding:1rem">
+    <div style="background:var(--bg-panel,#1a1410);border:1px solid var(--gold,#c8a84b);border-radius:6px;display:flex;flex-direction:column;width:100%;max-width:1100px;max-height:100%;overflow:hidden">
+
+      <!-- Header -->
+      <div style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border-bottom:1px solid var(--border-ornate,#4a3420);background:var(--bg-dark,#120e0a)">
+        <span style="font-family:'Cinzel',serif;font-size:1rem;font-weight:600;color:var(--gold,#c8a84b)">🎭 Archétypes &amp; Sous-classes</span>
+        <span style="font-size:0.7rem;color:var(--ink-faded,#7a6a55);flex:1" id="scb-count-label"></span>
+        <!-- Lang toggle -->
+        <div style="display:flex;gap:0.3rem;background:#0d0b07;border-radius:4px;padding:2px">
+          <button id="scb-lang-fr" class="sb-lang-btn active" onclick="SubclassBrowser.setLang('fr')">FR</button>
+          <button id="scb-lang-en" class="sb-lang-btn" onclick="SubclassBrowser.setLang('en')">EN</button>
+        </div>
+        <button onclick="SubclassBrowser.close()" style="background:none;border:none;color:var(--ink-faded,#7a6a55);font-size:1.3rem;cursor:pointer;padding:0 0.3rem;line-height:1" title="Fermer">✕</button>
+      </div>
+
+      <!-- Filters bar -->
+      <div style="display:flex;flex-wrap:wrap;gap:0.4rem;padding:0.6rem 1rem;border-bottom:1px solid var(--border-ornate,#4a3420);background:#100d09">
+        <input id="scb-search" type="text" placeholder="🔍 Rechercher..." oninput="SubclassBrowser.renderList()" style="flex:1;min-width:140px;background:#1e1610;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.3rem 0.6rem;border-radius:4px;font-size:0.8rem">
+        <select id="scb-filter-class" onchange="SubclassBrowser.renderList()" style="background:#1e1610;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.3rem;border-radius:4px;font-size:0.75rem">
+          <option value="">Toutes les classes</option>
+        </select>
+      </div>
+
+      <!-- Body: list + preview -->
+      <div style="display:flex;flex:1;overflow:hidden">
+        <!-- List -->
+        <div id="scb-list" style="flex:1;overflow-y:auto;padding:0.5rem 0;min-width:0"></div>
+        <!-- Preview -->
+        <div id="scb-preview" style="width:380px;border-left:1px solid var(--border-ornate,#4a3420);overflow-y:auto;padding:1rem;background:#0e0b08;font-size:0.82rem;color:var(--ink-light,#d8c8a8)">
+          <div style="color:var(--ink-faded,#7a6a55);font-style:italic;font-size:0.8rem;text-align:center;padding-top:3rem">Cliquez sur une sous-classe pour voir les détails.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="spell-browser-modal" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.82);align-items:stretch;justify-content:center;padding:1rem">
     <div style="background:var(--bg-panel,#1a1410);border:1px solid var(--gold,#c8a84b);border-radius:6px;display:flex;flex-direction:column;width:100%;max-width:1100px;max-height:100%;overflow:hidden">
 
@@ -685,7 +742,10 @@
   <script src="../dnd_db/bundle_backgrounds_fr.js" onerror="console.info('Backgrounds FR bundle missing')"></script>
   <script src="../dnd_db/bundle_feats_en.js" onerror="console.info('Feats bundle missing')"></script>
   <script src="../dnd_db/bundle_feats_fr.js" onerror="console.info('Feats FR bundle missing')"></script>
+  <script src="../dnd_db/bundle_subclasses_en.js" onerror="console.info('Subclasses bundle EN missing')"></script>
+  <script src="../dnd_db/bundle_subclasses_fr.js" onerror="console.info('Subclasses bundle FR missing')"></script>
   <script src="shared/spell_browser.js"></script>
+  <script src="shared/subclass_browser.js"></script>
   <script src="shared/app.js"></script>
   <!-- Pre-built portable template (run: node scripts/build_portable.js) -->
   <script src="portable_template.js" onerror="console.info('portable_template.js not built yet — run: node scripts/build_portable.js')"></script>

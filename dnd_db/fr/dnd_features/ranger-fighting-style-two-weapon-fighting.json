@@ -1,0 +1,13 @@
+{
+  "index": "ranger-fighting-style-two-weapon-fighting",
+  "name": "Style de combat : Combat à deux armes",
+  "level": 2,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous vous engagez dans un combat à deux armes, vous pouvez ajouter votre modificateur de capacité aux dégâts de la deuxième attaque."
+  ],
+  "name_en": "Fighting Style: Two-Weapon Fighting",
+  "class_name_fr": "",
+  "_translated": true
+}

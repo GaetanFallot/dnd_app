@@ -1,0 +1,10 @@
+{
+  "index": "eldritch-adept",
+  "name": "Adepte surnaturel",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": "Fonctionnalité de lancement de sorts ou de magie du pacte",
+  "desc": "En étudiant les traditions occultes, vous apprenez une option d’invocation surnaturelle de votre choix auprès de la classe de démoniste. Votre capacité de lancement de sorts pour l'invocation est l'Intelligence, la Sagesse ou le Charisme (à choisir lorsque vous sélectionnez ce don). Si l’invocation comporte une condition préalable, quelle qu’elle soit, vous ne pouvez choisir cette invocation que si vous êtes un démoniste qui remplit la condition préalable.",
+  "benefits": [],
+  "name_en": "Eldritch Adept",
+  "_translated": true
+}

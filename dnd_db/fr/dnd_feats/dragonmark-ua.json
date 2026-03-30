@@ -1,0 +1,14 @@
+{
+  "index": "dragonmark-ua",
+  "name": "Marque du dragon (UA)",
+  "source": "Unearthed Arcana 1 - Eberron",
+  "prerequisite": null,
+  "desc": "Vous possédez une marque magique qui indique que vous êtes membre de l'une des maisons marquées d'un dragon. Sélectionnez l'une des options du tableau Dragonmarks.",
+  "benefits": [
+    "Lorsque vous acceptez ce don pour la première fois, vous gagnez le moins de marque de dragon. Vous apprenez les sorts répertoriés dans la colonne Moins.",
+    "Au niveau 5 et plus, votre marque devient plus puissante, s'améliorant en une marque de dragon moindre. Vous apprenez également le sort répertorié dans la colonne Lesser.",
+    "Au niveau 9 et supérieur, la puissance de votre marque augmente à nouveau, devenant une marque de dragon plus grande. Vous apprenez également le sort répertorié dans la colonne Plus grand."
+  ],
+  "name_en": "Dragonmark (UA)",
+  "_translated": true
+}

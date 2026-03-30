@@ -1,0 +1,42 @@
+{
+  "index": "rogue-thief",
+  "name": "Voleur : Voleur",
+  "class": "rogue",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Vous perfectionnez vos compétences dans les arts du vol. Les cambrioleurs, bandits, voleurs de bourses et autres criminels suivent généralement cet archétype, tout comme les voleurs qui préfèrent se considérer comme des chercheurs de trésors, des explorateurs, des fouilleurs et des enquêteurs professionnels. En plus d'améliorer votre agilité et votre furtivité, vous acquérez des compétences utiles pour fouiller dans des ruines antiques, lire des langues inconnues et utiliser des objets magiques que vous ne pourriez normalement pas utiliser.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Des mains rapides",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous pouvez utiliser l'action bonus accordée par votre action de ruse pour effectuer un test de Dextérité (tour de passe-passe), utiliser les outils de vos voleurs pour désamorcer un piège ou ouvrir une serrure, ou encore effectuer l'action Utiliser un objet.",
+      "name_en": "Fast Hands"
+    },
+    {
+      "name": "Travail au deuxième étage",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cet archétype au niveau 3, vous gagnez la capacité de grimper plus vite que la normale ; grimper ne vous coûte plus de mouvement supplémentaire.\n\nDe plus, lorsque vous effectuez un saut en courant, la distance que vous parcourez augmente d'un nombre de pieds égal à votre modificateur de Dextérité.",
+      "name_en": "Second-Story Work"
+    },
+    {
+      "name": "Furtivité suprême",
+      "level": 9,
+      "desc": "À partir du niveau 9, vous avez un avantage lors d'un test de Dextérité (Furtivité) si vous ne vous déplacez pas à plus de la moitié de votre vitesse au cours du même tour.",
+      "name_en": "Supreme Sneak"
+    },
+    {
+      "name": "Utiliser un appareil magique",
+      "level": 13,
+      "desc": "Au niveau 13, vous en savez suffisamment sur le fonctionnement de la magie pour pouvoir improviser l'utilisation d'objets même lorsqu'ils ne vous sont pas destinés. Vous ignorez toutes les exigences de classe, de race et de niveau concernant l’utilisation des objets magiques.",
+      "name_en": "Use Magic Device"
+    },
+    {
+      "name": "Les réflexes du voleur",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 17, vous êtes devenu adepte de l'art de tendre des embuscades et d'échapper rapidement au danger. Vous pouvez jouer deux tours au cours du premier round de n'importe quel combat. Vous prenez votre premier tour à votre initiative normale et votre deuxième tour à votre initiative moins 10. Vous ne pouvez pas utiliser cette fonctionnalité lorsque vous êtes surpris.",
+      "name_en": "Thief's Reflexes"
+    }
+  ],
+  "name_en": "Rogue: Thief",
+  "_translated": true
+}

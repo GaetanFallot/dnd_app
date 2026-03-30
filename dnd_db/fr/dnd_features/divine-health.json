@@ -1,0 +1,13 @@
+{
+  "index": "divine-health",
+  "name": "Santé divine",
+  "level": 3,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Au niveau 3, la magie divine qui vous traverse vous rend immunisé contre les maladies."
+  ],
+  "name_en": "Divine Health",
+  "class_name_fr": "",
+  "_translated": true
+}

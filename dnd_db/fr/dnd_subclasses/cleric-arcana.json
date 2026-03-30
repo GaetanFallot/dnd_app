@@ -1,0 +1,42 @@
+{
+  "index": "cleric-arcana",
+  "name": "Clerc : Domaine Arcana",
+  "class": "cleric",
+  "source": "Sword Coast Adventurer's Guide",
+  "subclass_flavor": "La magie est une énergie qui imprègne le multivers et qui alimente à la fois la destruction et la création. Les dieux du domaine Arcana connaissent intimement les secrets et le potentiel de la magie. Pour certains de ces dieux, la connaissance magique est une grande responsabilité qui s’accompagne d’une compréhension particulière de la nature de la réalité. D’autres dieux d’Arcana voient la magie comme un pouvoir pur, à utiliser comme bon lui semble.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Initié arcanique",
+      "level": 1,
+      "desc": "Lorsque vous choisissez ce domaine au niveau 1, vous maîtrisez la compétence Arcana et vous gagnez deux sorts mineurs de votre choix dans la liste des sorts du sorcier. Pour vous, ces petits sorts comptent comme des petits sorts de clerc.",
+      "name_en": "Arcane Initiate"
+    },
+    {
+      "name": "Divinité de canal : Abjuration arcanique",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous pouvez utiliser votre canal divinité pour abjurer des créatures d'un autre monde.\n\nPar une action, vous présentez votre symbole sacré, et un céleste, élémentaire, fée ou démon de votre choix qui se trouve à moins de 9 mètres de vous doit effectuer un jet de sauvegarde de sagesse, à condition que la créature puisse vous voir ou vous entendre. Si la créature échoue à son jet de sauvegarde, elle est retournée pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts.\n\nUne créature transformée doit passer son tour à essayer de s'éloigner le plus possible de vous, et elle ne peut pas volontairement terminer son mouvement dans un espace situé à moins de 9 mètres de vous. Il ne peut pas non plus accepter de réactions. Pour son action, il ne peut utiliser que l'action Dash ou tenter d'échapper à un effet qui l'empêche de bouger. S'il n'y a nulle part où se déplacer, la créature peut utiliser l'action Esquiver.\n\nAprès avoir atteint le niveau 5, lorsqu'une créature échoue à son jet de sauvegarde contre votre fonction Abjuration arcanique, la créature est bannie pendant 1 minute (comme dans le sort Bannissement, aucune concentration requise) si elle n'est pas sur son plan d'origine et que son niveau de défi est égal ou inférieur à un certain seuil, comme indiqué sur le tableau de bannissement arcanique.\nBannissement des Arcanes\nNiveau clerc | Bannit les créatures de CR…\n5ème | 1/2 ou moins\n8ème | 1 ou moins\n11e | 2 ou moins\n14e | 3 ou moins\n17e | 4 ou moins",
+      "name_en": "Channel Divinity: Arcane Abjuration"
+    },
+    {
+      "name": "Brise-sort",
+      "level": 6,
+      "desc": "À partir du niveau 6, lorsque vous redonnez des points de vie à un allié possédant un sort de niveau 1 ou supérieur, vous pouvez également mettre fin à un sort de votre choix sur cette créature. Le niveau du sort que vous mettez fin doit être égal ou inférieur au niveau de l'emplacement de sort que vous utilisez pour lancer le sort de guérison.",
+      "name_en": "Spell Breaker"
+    },
+    {
+      "name": "Lancement de sorts puissant",
+      "level": 8,
+      "desc": "À partir du niveau 8, vous ajoutez votre modificateur de Sagesse aux dégâts que vous infligez avec n'importe quel cantrip de clerc.",
+      "name_en": "Potent Spellcasting"
+    },
+    {
+      "name": "Maîtrise des arcanes",
+      "level": 17,
+      "desc": "Au niveau 17, vous choisissez quatre sorts dans la liste des sorts du magicien, un de chacun des niveaux suivants : 6e, 7e, 8e et 9e. Vous les ajoutez à votre liste de sorts de domaine. Comme vos autres sorts de domaine, ils sont toujours préparés et comptent pour vous comme des sorts de clerc.",
+      "name_en": "Arcane Mastery"
+    }
+  ],
+  "name_en": "Cleric: Arcana Domain",
+  "_translated": true
+}

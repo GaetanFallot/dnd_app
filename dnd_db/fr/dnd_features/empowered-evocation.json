@@ -1,0 +1,13 @@
+{
+  "index": "empowered-evocation",
+  "name": "Évocation puissante",
+  "level": 10,
+  "class": "wizard",
+  "subclass": "evocation",
+  "desc": [
+    "À partir du niveau 10, vous pouvez ajouter votre modificateur d'Intelligence à un jet de dégâts de n'importe quel sort d'évocation de sorcier que vous lancez."
+  ],
+  "name_en": "Empowered Evocation",
+  "class_name_fr": "",
+  "_translated": true
+}

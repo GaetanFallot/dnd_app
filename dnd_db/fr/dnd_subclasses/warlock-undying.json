@@ -1,0 +1,42 @@
+{
+  "index": "warlock-undying",
+  "name": "Démoniste : l'immortel",
+  "class": "warlock",
+  "source": "Sword Coast Adventurer's Guide",
+  "subclass_flavor": "La mort n’a aucune emprise sur votre protecteur, qui a percé les secrets de la vie éternelle, même si un tel prix – comme tout pouvoir – a un prix. Une fois mortels, les Immortels ont vu les vies des mortels passer comme les saisons, comme le scintillement de jours et de nuits sans fin. Il a les secrets des âges à partager, les secrets de la vie et de la mort. Les êtres de cette sorte incluent Vecna, Seigneur de la Main et de l'Œil ; le redoutable Iuz ; la reine-liche Vol; la Cour éternelle d'Aerenal ; Vlaakith, reine-liche des githyanki ; et le sorcier immortel Fistandantalus.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Liste de sorts étendue",
+      "level": null,
+      "desc": "The Undying vous permet de choisir parmi une liste étendue de sorts lorsque vous apprenez un sort de démoniste. Les sorts suivants sont ajoutés à la liste des sorts de démoniste pour vous.\nSorts étendus éternels\nNiveau de sort | Sorts\n1er | Fausse vie, rayon de maladie\n2ème | Cécité/Surdité, Silence\n3ème | Feindre la mort, parler aux morts\n4ème | Aura de vie, quartier de la mort\n5ème | Contagion, légende",
+      "name_en": "Expanded Spell List"
+    },
+    {
+      "name": "Parmi les morts",
+      "level": 1,
+      "desc": "À partir du niveau 1, vous apprenez le cantrip Spare the Dying, qui compte pour vous comme un cantrip de démoniste. Vous bénéficiez également d'un avantage aux jets de sauvegarde contre n'importe quelle maladie.\n\nDe plus, les morts-vivants ont du mal à vous faire du mal. Si un mort-vivant vous cible directement avec une attaque ou un sort nuisible, cette créature doit effectuer un jet de sauvegarde de Sagesse contre votre DD de sauvegarde de sort (un mort-vivant n'a pas besoin d'effectuer le jet de sauvegarde lorsqu'il vous inclut dans un effet de zone, comme l'explosion d'une boule de feu). En cas d'échec, la créature doit choisir une nouvelle cible ou renoncer à cibler quelqu'un à votre place, ce qui risque de gaspiller l'attaque ou le sort. En cas de sauvegarde réussie, la créature est immunisée contre cet effet pendant 24 heures. Un mort-vivant est également immunisé contre cet effet pendant 24 heures si vous le ciblez avec une attaque ou un sort nuisible.",
+      "name_en": "Among the Dead"
+    },
+    {
+      "name": "Défier la mort",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez vous donner de la vitalité lorsque vous trompez la mort ou lorsque vous aidez quelqu'un d'autre à la tromper. Vous pouvez récupérer des points de vie égaux à 1d8 + votre modificateur de Constitution (minimum de 1 point de vie) lorsque vous réussissez un jet de sauvegarde contre la mort ou lorsque vous stabilisez une créature avec Spare the Dying.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Defy Death"
+    },
+    {
+      "name": "Nature éternelle",
+      "level": 10,
+      "desc": "À partir du niveau 10, vous pouvez retenir votre souffle indéfiniment et vous n'avez pas besoin de nourriture, d'eau ou de sommeil, même si vous avez toujours besoin de repos pour réduire l'épuisement et que vous bénéficiez toujours de repos courts et longs.\n\nDe plus, vous vieillissez plus lentement. Tous les 10 ans qui passent, votre corps ne vieillit que d’un an et vous êtes immunisé contre le vieillissement magique.",
+      "name_en": "Undying Nature"
+    },
+    {
+      "name": "Vie indestructible",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 14, vous découvrez certains des véritables secrets des Immortels. A votre tour, vous pouvez utiliser une action bonus pour récupérer des points de vie égaux à 1d8 + votre niveau de démoniste. De plus, si vous remettez en place une partie de votre corps coupée lorsque vous utilisez cette fonction, la partie se rattache.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Indestructible Life"
+    }
+  ],
+  "name_en": "Warlock: The Undying",
+  "_translated": true
+}

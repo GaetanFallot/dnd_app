@@ -1,0 +1,13 @@
+{
+  "index": "natures-ward",
+  "name": "Le quartier de la nature",
+  "level": 10,
+  "class": "druid",
+  "subclass": "land",
+  "desc": [
+    "Lorsque vous atteignez le niveau 10, vous ne pouvez plus être charmé ou effrayé par les élémentaires ou les fées, et vous êtes immunisé contre le poison et la maladie."
+  ],
+  "name_en": "Nature's Ward",
+  "class_name_fr": "",
+  "_translated": true
+}

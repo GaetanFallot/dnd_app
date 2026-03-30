@@ -1,0 +1,8 @@
+{
+  "index": "bonus-proficiency",
+  "name": "Bonus Proficiency",
+  "level": 1,
+  "class": "cleric",
+  "subclass": "life",
+  "desc": "When you choose this domain at 1st level, you gain proficiency with heavy armor."
+}

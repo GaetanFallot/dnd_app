@@ -1,0 +1,13 @@
+{
+  "index": "improved-critical",
+  "name": "Critique amélioré",
+  "level": 3,
+  "class": "fighter",
+  "subclass": "champion",
+  "desc": [
+    "À partir du moment où vous choisissez cet archétype au niveau 3, vos attaques avec votre arme infligent un coup critique sur un résultat de 19 ou 20."
+  ],
+  "name_en": "Improved Critical",
+  "class_name_fr": "",
+  "_translated": true
+}

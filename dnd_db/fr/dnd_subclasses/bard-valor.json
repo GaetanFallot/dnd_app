@@ -1,0 +1,36 @@
+{
+  "index": "bard-valor",
+  "name": "Barde : Collège de la Valeur",
+  "class": "bard",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Les bardes du Collège de la Valeur sont des scaldes audacieux dont les récits entretiennent la mémoire des grands héros du passé et inspirent ainsi une nouvelle génération de héros. Ces bardes se rassemblent dans les hydromels ou autour de grands feux de joie pour chanter les exploits des puissants, passés et présents. Ils parcourent le pays pour être témoins de grands événements et pour s'assurer que le souvenir de ces événements ne disparaisse pas du monde. Avec leurs chansons, ils inspirent les autres à atteindre les mêmes sommets d’accomplissement que les héros d’autrefois.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétences bonus",
+      "level": 3,
+      "desc": "Lorsque vous rejoignez le Collège de la Valeur au niveau 3, vous maîtrisez les armures moyennes, les boucliers et les armes martiales.",
+      "name_en": "Bonus Proficiencies"
+    },
+    {
+      "name": "Inspiration de combat",
+      "level": 3,
+      "desc": "Au niveau 3 également, vous apprenez à inspirer les autres au combat. Une créature qui a un dé d'Inspiration bardique de votre part peut lancer ce dé et ajouter le nombre obtenu à un jet de dégâts d'arme qu'elle vient de faire. Alternativement, lorsqu'un jet d'attaque est effectué contre la créature, elle peut utiliser sa réaction pour lancer le dé d'inspiration bardique et ajouter le nombre obtenu à sa CA contre cette attaque, après avoir vu le jet mais avant de savoir si elle touche ou rate.",
+      "name_en": "Combat Inspiration"
+    },
+    {
+      "name": "Attaque supplémentaire",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez attaquer deux fois, au lieu d'une, chaque fois que vous effectuez l'action Attaque pendant votre tour.",
+      "name_en": "Extra Attack"
+    },
+    {
+      "name": "Magie de combat",
+      "level": 14,
+      "desc": "Au niveau 14, vous maîtrisez l’art de combiner le lancement de sorts et l’utilisation d’armes en un seul acte harmonieux. Lorsque vous utilisez votre action pour lancer un sort de barde, vous pouvez effectuer une attaque avec une arme en tant qu'action bonus.",
+      "name_en": "Battle Magic"
+    }
+  ],
+  "name_en": "Bard: College of Valor",
+  "_translated": true
+}

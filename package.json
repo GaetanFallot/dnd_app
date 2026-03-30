@@ -1,0 +1,24 @@
+{
+  "name": "dnd_app",
+  "version": "1.0.0",
+  "description": "local app to enhance dm an player experience",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaetanFallot/dnd_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GaetanFallot/dnd_app/issues"
+  },
+  "homepage": "https://github.com/GaetanFallot/dnd_app#readme",
+  "devDependencies": {
+    "cheerio": "^1.2.0"
+  }
+}

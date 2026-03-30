@@ -1,0 +1,17 @@
+{
+  "index": "rival-intern",
+  "name": "Background: Rival Intern",
+  "source": "Acquisitions Incorporated",
+  "desc": "You were an intern at a rival of Acquisitions Incorporated, and you gained a healthy respect for not just the job and the franchising opportunities. but for the ruthless and efficient way Acquisitions Incorporated goes about its business. Why deal with the rest, when you can work for the best?\n\nPerhaps the rival did not treat you as well as you were hoping, or you washed out of that organization. Maybe you hope to leverage the knowledge you gained there for an advantage at Acquisitions Incorporated. Either way, you're now bringing your talents to the company, ready to put your skills to use.\n\nSkill Proficiencies: History, Investigation\nTool Proficiencies: One type of artisan's tools\nLanguages: Any one of your choice\nEquipment: One set of artisan's tools, a ledger from your previous employer containing a small piece of useful information, a set of fine clothesValue:15gp Weight:6lbs, and a belt pouch containing 10 gp.",
+  "skill_proficiencies": [
+    "History",
+    "Investigation\nTool Proficiencies: One type of artisan's tools\nLanguages: Any one of your choice\nEquipment: One set of artisan's tools",
+    "a ledger from your previous employer containing a small piece of useful information",
+    "a set of fine clothesValue:15gp Weight:6lbs",
+    "and a belt pouch containing 10 gp."
+  ],
+  "feature": {
+    "name": "Inside Informant",
+    "desc": "You have connections to your previous employer or other groups you dealt with during your previous employment. You can communicate with your contacts, gaining information at the DM's discretion."
+  }
+}

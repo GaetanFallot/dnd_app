@@ -1,0 +1,13 @@
+{
+  "index": "mystic-arcanum-7th-level",
+  "name": "Arcane mystique (niveau 7)",
+  "level": 13,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Au niveau 11, votre patron vous confie un secret magique appelé arcane. Choisissez un sort de niveau 6 dans la liste des sorts de démoniste comme arcane.\nVous pouvez lancer votre sort d'arcane une fois sans dépenser d'emplacement de sort. Vous devez terminer un long repos avant de pouvoir recommencer.\nAux niveaux supérieurs, vous gagnez davantage de sorts de démoniste de votre choix qui peuvent être lancés de cette manière : un sort de niveau 7 au niveau 13, un sort de niveau 8 au niveau 15 et un sort de niveau 9 au niveau 17. Vous retrouvez tous les usages de votre Arcane Mystique lorsque vous terminez un repos long."
+  ],
+  "name_en": "Mystic Arcanum (7th level)",
+  "class_name_fr": "",
+  "_translated": true
+}

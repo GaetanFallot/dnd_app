@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-beguiling-influence",
+  "name": "Invocation surnaturelle : influence séduisante",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous maîtrisez les compétences de tromperie et de persuasion."
+  ],
+  "name_en": "Eldritch Invocation: Beguiling Influence",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,14 @@
+{
+  "index": "revenant-blade",
+  "name": "Lame revenante",
+  "source": "Eberron - Rising from the Last War",
+  "prerequisite": "Elfe",
+  "desc": "Vous descendez d’un maître du cimeterre à double lame, et une partie de cette maîtrise vous a été transmise. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Dextérité ou de Force de 1, jusqu'à un maximum de 20.",
+    "Tant que vous tenez un cimeterre à deux lames à deux mains, vous gagnez un bonus de +1 à la classe d'armure.",
+    "Un cimeterre à double lame possède la propriété de finesse lorsque vous le maniez."
+  ],
+  "name_en": "Revenant Blade",
+  "_translated": true
+}

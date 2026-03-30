@@ -1,0 +1,13 @@
+{
+  "index": "channel-divinity-sacred-weapon",
+  "name": "Channel Divinity : Arme sacrée",
+  "level": 3,
+  "class": "paladin",
+  "subclass": "devotion",
+  "desc": [
+    "Par une action, vous pouvez imprégner une arme que vous tenez d’énergie positive, en utilisant votre Channel Divinity. Pendant 1 minute, vous ajoutez votre modificateur de Charisme aux jets d'attaque effectués avec cette arme (avec un bonus minimum de +1). L'arme émet également une lumière vive dans un rayon de 20 pieds et une lumière faible 20 pieds au-delà. Si l’arme n’est pas déjà magique, elle le devient pour la durée.\nVous pouvez mettre fin à cet effet à votre tour dans le cadre de n'importe quelle autre action. Si vous ne tenez plus ou ne portez plus cette arme, ou si vous perdez connaissance, cet effet prend fin."
+  ],
+  "name_en": "Channel Divinity: Sacred Weapon",
+  "class_name_fr": "",
+  "_translated": true
+}

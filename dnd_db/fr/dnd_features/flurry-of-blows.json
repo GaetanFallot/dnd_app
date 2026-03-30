@@ -1,0 +1,13 @@
+{
+  "index": "flurry-of-blows",
+  "name": "Déluge de coups",
+  "level": 2,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "Immédiatement après avoir effectué l'action Attaque à votre tour, vous pouvez dépenser 1 point ki pour effectuer deux frappes à mains nues en guise d'action bonus."
+  ],
+  "name_en": "Flurry of Blows",
+  "class_name_fr": "",
+  "_translated": true
+}

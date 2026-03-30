@@ -1,0 +1,15 @@
+{
+  "index": "keen-mind",
+  "name": "Esprit vif",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous avez un esprit capable de suivre le temps, la direction et les détails avec une précision étrange. Vous bénéficiez des avantages suivants.",
+  "benefits": [
+    "Augmentez votre score d'Intelligence de 1, jusqu'à un maximum de 20.",
+    "Vous savez toujours où se trouve le nord.",
+    "Vous connaissez toujours le nombre d’heures restant avant le prochain lever ou coucher du soleil.",
+    "Vous pouvez vous rappeler avec précision tout ce que vous avez vu ou entendu au cours du mois dernier."
+  ],
+  "name_en": "Keen Mind",
+  "_translated": true
+}

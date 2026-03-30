@@ -1,0 +1,11 @@
+{
+  "index": "menacing",
+  "name": "Menaçant",
+  "races": [
+    "half-orc"
+  ],
+  "subraces": [],
+  "desc": "Vous maîtrisez la compétence Intimidation.",
+  "name_en": "Menacing",
+  "_translated": true
+}

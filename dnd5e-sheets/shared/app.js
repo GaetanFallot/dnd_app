@@ -933,6 +933,26 @@ const DND = {
     }
   },
 
+  openImportLinkModal() {
+    const m = document.getElementById('import-link-modal');
+    if (!m) return;
+    m.style.display = 'flex';
+    const inp = document.getElementById('import-link-input');
+    if (inp) { inp.value = ''; inp.focus(); }
+  },
+
+  importFromLink() {
+    const raw = (document.getElementById('import-link-input')?.value || '').trim();
+    const hash = raw.includes('#') ? raw.split('#').pop() : raw;
+    if (!hash) { alert('Colle un lien de partage valide.'); return; }
+    try {
+      const data = JSON.parse(decodeURIComponent(escape(atob(hash))));
+      this._meta = data; this.applyData(data); this.recalcAll(); this.save();
+      document.getElementById('import-link-modal').style.display = 'none';
+      this.showToast('✓ Fiche importée depuis le lien !');
+    } catch(e) { alert('Lien invalide ou corrompu.'); }
+  },
+
   importJSON() {
     const input=document.createElement('input'); input.type='file'; input.accept='.json';
     input.onchange=(e)=>{

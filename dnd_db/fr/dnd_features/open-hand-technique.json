@@ -1,0 +1,13 @@
+{
+  "index": "open-hand-technique",
+  "name": "Technique de la main ouverte",
+  "level": 3,
+  "class": "monk",
+  "subclass": "open-hand",
+  "desc": [
+    "À partir du moment où vous choisissez cette tradition au niveau 3, vous pouvez manipuler le ki de votre ennemi lorsque vous exploitez le vôtre. À chaque fois que vous touchez une créature avec l'une des attaques accordées par votre Rafale de coups, vous pouvez imposer l'un des effets suivants à cette cible :\n- It must succeed on a Dexterity saving throw or be knocked prone.\n- Il doit effectuer un jet de sauvegarde de Force. S'il échoue, vous pouvez le pousser jusqu'à 15 pieds de vous.\n- It can't take reactions until the end of your next turn."
+  ],
+  "name_en": "Open Hand Technique",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "grappler",
+  "name": "Grappin",
+  "source": "Player's Handbook",
+  "prerequisite": "Force 13 ou plus",
+  "desc": "Vous avez développé les compétences nécessaires pour vous défendre dans des combats rapprochés. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Vous avez un avantage aux jets d'attaque contre une créature que vous luttez.",
+    "Vous pouvez utiliser votre action pour tenter de coincer une créature que vous agrippez. Pour ce faire, effectuez une autre vérification du grappin. Si vous réussissez, vous et la créature êtes tous deux retenus jusqu'à la fin du combat."
+  ],
+  "name_en": "Grappler",
+  "_translated": true
+}

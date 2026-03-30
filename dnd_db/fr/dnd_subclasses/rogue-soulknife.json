@@ -1,0 +1,42 @@
+{
+  "index": "rogue-soulknife",
+  "name": "Voleur : Couteau d'âme",
+  "class": "rogue",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "La plupart des assassins frappent avec des armes physiques, et de nombreux cambrioleurs et espions utilisent les outils des voleurs pour infiltrer des lieux sécurisés. En revanche, un Soulknife frappe et s'infiltre dans l'esprit, franchissant les barrières physiques et psychiques. Ces voleurs découvrent un pouvoir psionique en eux-mêmes et le canalisent pour accomplir leur travail espiègle. Ils trouvent facilement un emploi en tant que membres de guildes de voleurs, même si les voleurs se méfient souvent d'eux, qui se méfient de quiconque utilise d'étranges pouvoirs mentaux pour mener leurs affaires. La plupart des gouvernements seraient également heureux d’employer un Soulknife comme espion.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Pouvoir psionique",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous abritez en vous une source d’énergie psionique. Cette énergie est représentée par vos dés d’Énergie Psionique, qui sont chacun un d6. Vous disposez d'un nombre de ces dés égal à deux fois votre bonus de maîtrise, et ils alimentent divers pouvoirs psioniques dont vous disposez, qui sont détaillés ci-dessous.\n\nCertains de vos pouvoirs dépensent le dé d'énergie psionique qu'ils utilisent, comme spécifié dans la description d'un pouvoir, et vous ne pouvez pas utiliser un pouvoir s'il nécessite que vous utilisiez un dé lorsque vos dés sont tous dépensés. Vous récupérez tous vos dés d'énergie psionique dépensés lorsque vous terminez un repos long. De plus, par une action bonus, vous pouvez récupérer un dé d'énergie psionique dépensé, mais vous ne pouvez plus le faire avant d'avoir terminé un repos court ou long.\n\nLorsque vous atteignez certains niveaux dans cette classe, la taille de vos dés d'énergie psionique augmente : au niveau 5 (d8), au niveau 11 (d10) et au niveau 17 (d12).\n\nLes pouvoirs ci-dessous utilisent vos dés d'énergie psionique.\n\nTalent renforcé par le Psi. Lorsque votre entraînement non psionique échoue, votre pouvoir psionique peut vous aider : si vous échouez à un test de capacité en utilisant une compétence ou un outil que vous maîtrisez, vous pouvez lancer un dé d'énergie psionique et ajouter le nombre obtenu au test, transformant potentiellement l'échec en succès. Vous dépensez le dé uniquement si le jet réussit.\n\nMurmures psychiques. Vous pouvez établir une communication télépathique entre vous et les autres – parfaite pour une infiltration silencieuse. Par une action, choisissez une ou plusieurs créatures que vous pouvez voir, jusqu'à un nombre de créatures égal à votre bonus de maîtrise, puis lancez un dé d'énergie psionique. Pendant un nombre d'heures égal au nombre obtenu, les créatures choisies peuvent vous parler par télépathie, et vous pouvez leur parler par télépathie. Pour envoyer ou recevoir un message (aucune action requise), vous et l'autre créature devez être à moins de 1 mile l'un de l'autre. Une créature ne peut pas utiliser cette télépathie si elle ne parle aucune langue, et une créature peut mettre fin à la connexion télépathique à tout moment (aucune action requise). Vous et la créature n’avez pas besoin de parler une langue commune pour vous comprendre.\n\nLa première fois que vous utilisez ce pouvoir après chaque long repos, vous ne dépensez pas le dé d'énergie psionique. Toutes les autres fois où vous utilisez le pouvoir, vous dépensez le dé.",
+      "name_en": "Psionic Power"
+    },
+    {
+      "name": "Lames psychiques",
+      "level": 3,
+      "desc": "Également au niveau 3, vous pouvez manifester votre pouvoir psionique sous la forme de lames scintillantes d'énergie psychique. Chaque fois que vous effectuez l’action Attaque, vous pouvez manifester une lame psychique depuis votre main libre et effectuer l’attaque avec cette lame. Cette lame magique est une arme de mêlée simple dotée de la finesse et des propriétés de lancer. Il a une portée normale de 60 pieds et pas de longue portée, et en cas de coup, il inflige des dégâts psychiques égaux à 1d6 plus le modificateur de capacité que vous avez utilisé pour le jet d'attaque. La lame disparaît immédiatement après avoir touché ou manqué sa cible, et elle ne laisse aucune marque sur sa cible si elle inflige des dégâts.\n\nAprès avoir attaqué avec la lame, vous pouvez effectuer une attaque au corps à corps ou à distance avec une deuxième lame psychique comme action bonus au même tour, à condition que votre autre main soit libre de la créer. Le dé de dégâts de cette attaque bonus est de 1d4, au lieu de 1d6.",
+      "name_en": "Psychic Blades"
+    },
+    {
+      "name": "Lames d'âme",
+      "level": 9,
+      "desc": "À partir du niveau 9, vos Lames Psychiques sont désormais une expression de votre âme imprégnée de psi, vous donnant ces pouvoirs qui utilisent vos dés d'énergie psionique :\n\nFrappes à tête chercheuse. Si vous effectuez un jet d'attaque avec vos Lames Psychiques et ratez la cible, vous pouvez lancer un dé d'Énergie Psionique et ajouter le nombre obtenu au jet d'attaque. Si cela provoque l'attaque, vous dépensez le dé d'énergie psionique.\n\nTéléportation psychique. Par une action bonus, vous manifestez une de vos Lames Psychiques, dépensez un dé d'Énergie Psionique, lancez-le et lancez la lame sur un espace inoccupé que vous pouvez voir, jusqu'à un nombre de mètres égal à 10 fois le nombre obtenu. Vous vous téléportez ensuite dans cet espace et la lame disparaît.",
+      "name_en": "Soul Blades"
+    },
+    {
+      "name": "Voile psychique",
+      "level": 13,
+      "desc": "Au niveau 13, vous pouvez tisser un voile de statique psychique pour vous masquer. Par une action, vous pouvez devenir comme par magie invisible, ainsi que tout ce que vous portez ou transportez, pendant 1 heure ou jusqu'à ce que vous annuliez cet effet (aucune action requise). Cette invisibilité prend fin immédiatement après que vous avez infligé des blessures à une créature ou que vous avez forcé une créature à effectuer un jet de sauvegarde.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus le faire avant d'avoir terminé un long repos, à moins que vous ne dépensiez un dé d'énergie psionique pour utiliser à nouveau cette fonctionnalité.",
+      "name_en": "Psychic Veil"
+    },
+    {
+      "name": "Déchirer l'esprit",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 17, vous pouvez balayer votre lame psychique directement dans l'esprit d'une créature. Lorsque vous utilisez vos Lames Psychiques pour infliger des dégâts d'Attaque sournoise à une créature, vous pouvez forcer cette cible à effectuer un jet de sauvegarde de Sagesse (DD égal à 8 + votre bonus de maîtrise + votre modificateur de Dextérité). Si la sauvegarde échoue, la cible est étourdie pendant 1 minute. La cible étourdie peut refaire le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus le faire avant d'avoir terminé un long repos, à moins que vous ne dépensiez trois dés d'énergie psionique pour l'utiliser à nouveau.",
+      "name_en": "Rend Mind"
+    }
+  ],
+  "name_en": "Rogue: Soulknife",
+  "_translated": true
+}

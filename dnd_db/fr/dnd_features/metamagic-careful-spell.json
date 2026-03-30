@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-careful-spell",
+  "name": "Métamagie : sort prudent",
+  "level": 3,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez un sort qui oblige d'autres créatures à effectuer un jet de sauvegarde, vous pouvez protéger certaines de ces créatures de toute la force du sort. Pour ce faire, vous dépensez 1 point de sorcellerie et choisissez un nombre de ces créatures jusqu'à concurrence de votre modificateur de Charisme (au minimum une créature). Une créature choisie réussit automatiquement son jet de sauvegarde contre le sort."
+  ],
+  "name_en": "Metamagic: Careful Spell",
+  "class_name_fr": "",
+  "_translated": true
+}

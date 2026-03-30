@@ -1,0 +1,13 @@
+{
+  "index": "polearm-master",
+  "name": "Maître d'arme d'hast",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Lorsque vous effectuez l'action Attaque et attaquez avec uniquement un glaive, une hallebarde, un bâton ou une lance, vous pouvez utiliser une action bonus pour effectuer une attaque au corps à corps avec l'extrémité opposée de l'arme. Cette attaque utilise le même modificateur de capacité que l'attaque principale. Le dé de dégâts de l'arme pour cette attaque est un d4 et elle inflige des dégâts contondants.",
+    "Pendant que vous brandissez un glaive, une hallebarde, une pique, un bâton ou une lance, d'autres créatures provoquent une attaque d'opportunité de votre part lorsqu'elles entrent dans la portée que vous avez avec cette arme."
+  ],
+  "name_en": "Polearm Master",
+  "_translated": true
+}

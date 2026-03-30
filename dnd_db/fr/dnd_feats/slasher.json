@@ -1,0 +1,14 @@
+{
+  "index": "slasher",
+  "name": "Trancheur",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": null,
+  "desc": "Vous avez appris où couper pour obtenir les meilleurs résultats, vous offrant les avantages suivants :",
+  "benefits": [
+    "Augmentez votre Force ou votre Dextérité de 1, jusqu'à un maximum de 20.",
+    "Une fois par tour, lorsque vous touchez une créature avec une attaque qui inflige des dégâts tranchants, vous pouvez réduire la vitesse de la cible de 10 pieds jusqu'au début de votre prochain tour.",
+    "Lorsque vous infligez un coup critique qui inflige des dégâts tranchants à une créature, vous la blessez grièvement. Jusqu'au début de votre prochain tour, la cible est désavantagée à tous les jets d'attaque."
+  ],
+  "name_en": "Slasher",
+  "_translated": true
+}

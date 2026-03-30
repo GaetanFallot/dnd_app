@@ -1,0 +1,11 @@
+{
+  "index": "tinker",
+  "name": "Bricoler",
+  "races": [],
+  "subraces": [
+    "rock-gnome"
+  ],
+  "desc": "Vous maîtrisez les outils d'artisan (outils de bricoleur). En utilisant ces outils, vous pouvez dépenser 1 heure et 10 po de matériaux pour construire un petit appareil mécanique (CA 5, 1 hp). L'appareil cesse de fonctionner au bout de 24 heures (sauf si vous passez 1 heure à le réparer pour que l'appareil continue de fonctionner), ou lorsque vous utilisez votre action pour le démonter ; à ce moment-là, vous pourrez récupérer les matériaux utilisés pour le créer. Vous pouvez avoir jusqu’à trois appareils de ce type actifs à la fois.\nLorsque vous créez un appareil, choisissez l'une des options suivantes :\nJouet mécanique : Ce jouet est un animal, un monstre ou une personne mécanique, comme une grenouille, une souris, un oiseau, un dragon ou un soldat. Lorsqu'il est placé sur le sol, le jouet se déplace de 1,50 mètre sur le sol à chacun de vos tours dans une direction aléatoire. Il émet des bruits adaptés à la créature qu'il représente.\nAllume-feu : l'appareil produit une flamme miniature que vous pouvez utiliser pour allumer une bougie, une torche ou un feu de camp. L'utilisation de l'appareil nécessite votre action.\nBoîte à musique : une fois ouverte, cette boîte à musique joue une seule chanson à un volume modéré. La boîte s'arrête lorsqu'elle atteint la fin de la chanson ou lorsqu'elle est fermée.",
+  "name_en": "Tinker",
+  "_translated": true
+}

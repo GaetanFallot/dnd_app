@@ -1,0 +1,13 @@
+{
+  "index": "medium-armor-master",
+  "name": "Maître des armures moyennes",
+  "source": "Player's Handbook",
+  "prerequisite": "Maîtrise de l'armure moyenne",
+  "desc": "Vous vous êtes entraîné à vous déplacer avec une armure moyenne pour bénéficier des avantages suivants :",
+  "benefits": [
+    "Le port d'une armure moyenne n'impose pas de désavantage à vos tests de Dextérité (Furtivité).",
+    "Lorsque vous portez une armure moyenne, vous pouvez ajouter 3, au lieu de 2, à votre CA si vous avez une Dextérité de 16 ou plus."
+  ],
+  "name_en": "Medium Armor Master",
+  "_translated": true
+}

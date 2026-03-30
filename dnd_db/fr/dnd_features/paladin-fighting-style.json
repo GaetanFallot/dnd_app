@@ -1,0 +1,13 @@
+{
+  "index": "paladin-fighting-style",
+  "name": "Style de combat",
+  "level": 2,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Au niveau 2, vous adoptez un style de combat comme spécialité. Choisissez l'une des options suivantes. Vous ne pouvez pas choisir une option de style de combat plus d'une fois, même si vous devez ensuite choisir à nouveau."
+  ],
+  "name_en": "Fighting Style",
+  "class_name_fr": "",
+  "_translated": true
+}

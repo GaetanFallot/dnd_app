@@ -1,0 +1,36 @@
+{
+  "index": "bard-dirge-singer",
+  "name": "Barde : Collège du Dirge Singer (HB)",
+  "class": "bard",
+  "source": "Exploring Eberron",
+  "subclass_flavor": "Les bardes du Collège du Dirge Singer sont formés pour inspirer leur peuple et diriger les soldats sur le champ de bataille. Étudiants à la fois en histoire et en guerre, les chanteurs funéraires utilisent les récits de gloire passée et leur connaissance des grandes victoires pour inspirer leurs alliés et leur fournir une vision stratégique approfondie, leur ordonnant de frapper lorsque les ennemis sont faibles.",
+  "desc": "Les bardes du Collège du Dirge Singer sont formés pour inspirer leur peuple et diriger les soldats sur le champ de bataille. Étudiants à la fois en histoire et en guerre, les chanteurs funéraires utilisent les récits de gloire passée et leur connaissance des grandes victoires pour inspirer leurs alliés et leur fournir une vision stratégique approfondie, leur ordonnant de frapper lorsque les ennemis sont faibles.\n\nCette ancienne tradition s'est développée dans l'Empire de Dhakaan et est largement inconnue au-delà des gobelinoïdes du Kech Dhakaan. Les duur'kala – Gobelin pour chanteur de chant funèbre – sont les historiens, les diplomates et les chefs spirituels de l'empire. Si vous ne faites pas partie des dar, réfléchissez à la façon dont vous avez appris cette tradition. Vous êtes-vous entraîné avec un mentor ghaal’dar ? Ou avez-vous trouvé votre propre chemin vers ces techniques ?",
+  "features": [
+    {
+      "name": "Large inspiration",
+      "level": 3,
+      "desc": "Lorsque vous rejoignez le Collège des Chanteurs Dirge au niveau 3, vous apprenez à renforcer le cœur de vos troupes et à les amener à la grandeur. Vous apprenez le sort mineur Guidage, qui est considéré comme un sort de barde pour vous, mais ne compte pas dans votre nombre de sorts mineurs connus.\n\nDe plus, par une action bonus, vous pouvez dépenser une utilisation de votre Inspiration bardique pour inspirer plusieurs alliés. Lorsque vous faites cela, choisissez deux créatures à moins de 60 pieds de vous qui peuvent vous entendre. Chaque créature gagne un dé d'inspiration bardique.\n\nVotre dé d'Inspiration bardique ne change pas au niveau 5, mais reste un d6 ; il devient un d8 au niveau 10 et un d10 au niveau 15.",
+      "name_en": "Broad Inspiration"
+    },
+    {
+      "name": "Gardien de l'Histoire",
+      "level": 3,
+      "desc": "Au 3ème niveau également, vous acquérez des compétences en histoire ou en performance. Si vous maîtrisez déjà ces deux compétences, vous maîtrisez l'une des compétences suivantes de votre choix : Arcanes, Intimidation ou Persuasion.\n\nDe plus, choisissez Historique ou Performances. Votre bonus de maîtrise est doublé pour tout test de capacité que vous effectuez et qui utilise cette compétence.",
+      "name_en": "Keeper of History"
+    },
+    {
+      "name": "Voix imposante",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous excellez dans l’art d’inspirer et de diriger les soldats au combat. Lorsqu'une créature qui a un dé d'Inspiration bardique de votre part effectue l'action d'attaque à son tour, vous pouvez utiliser votre réaction pour lui permettre une attaque d'arme supplémentaire. La créature lance le dé d'inspiration bardique, en ajoutant le nombre obtenu à son jet de dégâts d'arme.",
+      "name_en": "Commanding Voice"
+    },
+    {
+      "name": "Maître commandant",
+      "level": 14,
+      "desc": "À partir du niveau 14, vous maintenez sans relâche le moral et la discipline de votre unité. Pendant votre tour, vous pouvez utiliser Contre-charme comme action bonus. Lorsque vous démarrez une performance de Contre-charme, si une créature qui bénéficie de son bénéfice est actuellement charmée ou effrayée, elle peut immédiatement effectuer un autre jet de sauvegarde contre l'effet qui a imposé la condition.\n\nDe plus, lorsqu'une créature qui bénéficie de votre performance Contre-charme effectue un test de capacité ou un jet de sauvegarde, elle peut lancer un d4 et ajouter le nombre obtenu au test de capacité ou au jet de sauvegarde.",
+      "name_en": "Master Commander"
+    }
+  ],
+  "name_en": "Bard: College of the Dirge Singer (HB)",
+  "_translated": true
+}

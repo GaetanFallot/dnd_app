@@ -1,0 +1,13 @@
+{
+  "index": "flexible-casting-converting-spell-slot",
+  "name": "Casting flexible : conversion de l'emplacement de sort",
+  "level": 2,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Par une action bonus à votre tour, vous pouvez dépenser un emplacement de sort et gagner un nombre de points de sorcellerie égal au niveau de l'emplacement."
+  ],
+  "name_en": "Flexible Casting: Converting Spell Slot",
+  "class_name_fr": "",
+  "_translated": true
+}

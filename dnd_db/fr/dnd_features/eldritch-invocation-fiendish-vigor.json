@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-fiendish-vigor",
+  "name": "Invocation surnaturelle : Vigueur diabolique",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez vous lancer une fausse vie à volonté en tant que sort de niveau 1, sans dépenser d'emplacement de sort ni de composants matériels."
+  ],
+  "name_en": "Eldritch Invocation: Fiendish Vigor",
+  "class_name_fr": "",
+  "_translated": true
+}

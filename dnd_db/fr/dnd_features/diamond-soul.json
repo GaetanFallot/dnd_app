@@ -1,0 +1,13 @@
+{
+  "index": "diamond-soul",
+  "name": "Âme de diamant",
+  "level": 14,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 14, votre maîtrise du ki vous permet de maîtriser tous les jets de sauvegarde.\nDe plus, chaque fois que vous effectuez un jet de sauvegarde et échouez, vous pouvez dépenser 1 point ki pour le relancer et prendre le deuxième résultat."
+  ],
+  "name_en": "Diamond Soul",
+  "class_name_fr": "",
+  "_translated": true
+}

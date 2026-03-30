@@ -1,0 +1,13 @@
+{
+  "index": "channel-divinity-1-rest",
+  "name": "Canal Divinité (1/repos)",
+  "level": 2,
+  "class": "cleric",
+  "subclass": null,
+  "desc": [
+    "Au niveau 2, vous gagnez la capacité de canaliser l'énergie divine directement de votre divinité, en utilisant cette énergie pour alimenter des effets magiques. Vous commencez avec deux de ces effets : Turn Undead et un effet déterminé par votre domaine. Certains domaines vous accordent des effets supplémentaires à mesure que vous progressez dans les niveaux, comme indiqué dans la description du domaine.\nLorsque vous utilisez votre Channel Divinity, vous choisissez l'effet à créer. Vous devez ensuite terminer un repos court ou long pour utiliser à nouveau votre Channel Divinity.\nCertains effets de Channel Divinity nécessitent des jets de sauvegarde. Lorsque vous utilisez un tel effet de cette classe, le DD est égal à votre DD de sauvegarde des sorts de clerc.\nÀ partir du niveau 6, vous pouvez utiliser votre Channel Divinity deux fois entre les repos, et à partir du niveau 18, vous pouvez l'utiliser trois fois entre les repos. Lorsque vous terminez un repos court ou long, vous récupérez vos utilisations dépensées."
+  ],
+  "name_en": "Channel Divinity (1/rest)",
+  "class_name_fr": "",
+  "_translated": true
+}

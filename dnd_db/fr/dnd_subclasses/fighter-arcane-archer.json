@@ -1,0 +1,48 @@
+{
+  "index": "fighter-arcane-archer",
+  "name": "Combattant : Archer arcanique",
+  "class": "fighter",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Un archer arcanique étudie une méthode elfique unique de tir à l'arc qui intègre la magie dans des attaques pour produire des effets surnaturels. Les archers arcaniques font partie des guerriers les plus élites parmi les elfes. Ils surveillent les limites des domaines elfiques, surveillant de près les intrus et utilisant des flèches magiques pour vaincre les monstres et les envahisseurs avant qu'ils ne puissent atteindre les colonies elfiques. Au fil des siècles, les méthodes de ces archers elfes ont été apprises par des membres d'autres races qui peuvent également équilibrer leurs aptitudes arcaniques avec le tir à l'arc.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Connaissance des archers arcaniques",
+      "level": 3,
+      "desc": "Au niveau 3, vous apprenez la théorie magique ou certains secrets de la nature – typiques des pratiquants de cette tradition martiale elfique. Vous choisissez de maîtriser soit la compétence Arcanes, soit la compétence Nature, et vous choisissez d'apprendre le cantrip Prestidigitation ou Druidcraft.",
+      "name_en": "Arcane Archer Lore"
+    },
+    {
+      "name": "Tir arcanique",
+      "level": 3,
+      "desc": "Au niveau 3, vous apprenez à déclencher des effets magiques spéciaux avec certains de vos tirs. Lorsque vous obtenez cette fonctionnalité, vous apprenez deux options de tir arcanique de votre choix (voir « Options de tir arcanique » ci-dessous).\n\nUne fois par tour, lorsque vous tirez une flèche avec un arc court ou un arc long dans le cadre de l'action d'attaque, vous pouvez appliquer l'une de vos options Tir arcanique à cette flèche. Vous décidez d’utiliser l’option lorsque la flèche touche, à moins que l’option n’implique pas de jet d’attaque. Vous disposez de deux utilisations de cette capacité, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos court ou long.\n\nVous obtenez une option Arcane Shot supplémentaire de votre choix lorsque vous atteignez certains niveaux de cette classe : 7e, 10e, 15e et 18e niveau. Chaque option s'améliore également lorsque vous devenez un combattant de niveau 18.",
+      "name_en": "Arcane Shot"
+    },
+    {
+      "name": "Flèche magique",
+      "level": 7,
+      "desc": "Au niveau 7, vous gagnez la capacité d’imprégner de magie les flèches. Chaque fois que vous tirez une flèche non magique avec un arc court ou un arc long, vous pouvez la rendre magique dans le but de vaincre la résistance et l'immunité aux attaques et dégâts non magiques. La magie disparaît de la flèche immédiatement après qu'elle ait atteint ou raté sa cible.",
+      "name_en": "Magic Arrow"
+    },
+    {
+      "name": "Tir courbe",
+      "level": 7,
+      "desc": "Au niveau 7, vous apprenez à diriger une flèche errante vers une nouvelle cible. Lorsque vous effectuez un jet d'attaque avec une flèche magique et que vous le ratez, vous pouvez utiliser une action bonus pour relancer le jet d'attaque contre une cible différente à moins de 60 pieds de la cible d'origine.",
+      "name_en": "Curving Shot"
+    },
+    {
+      "name": "Prise de vue toujours prête",
+      "level": 15,
+      "desc": "À partir du niveau 15, votre tir à l'arc magique est disponible dès que la bataille commence. Si vous lancez un jet d'initiative et qu'il ne vous reste plus aucune utilisation de Tir arcanique, vous en récupérez une utilisation.",
+      "name_en": "Ever-Ready Shot"
+    },
+    {
+      "name": "Options de tir arcanique",
+      "level": null,
+      "desc": "La fonction Arcane Shot vous permet de choisir des options à certains niveaux. Les options sont présentées ici par ordre alphabétique. Ce sont tous des effets magiques, et chacun est associé à l’une des écoles de magie.\n\nSi une option nécessite un jet de sauvegarde, votre DD de sauvegarde Arcane Shot est égal à 8 + votre bonus de maîtrise + votre modificateur d'Intelligence.\n\nFlèche de bannissement. Vous utilisez la magie d'abjuration pour tenter de bannir temporairement votre cible dans un endroit inoffensif du Feywild. La créature touchée par la flèche doit également réussir un jet de sauvegarde de Charisme ou être bannie. Lorsqu'il est banni de cette manière, sa vitesse est de 0 et il est frappé d'incapacité. A la fin de son prochain tour, la cible réapparaît dans l'espace qu'elle a quitté ou dans l'espace inoccupé le plus proche si cet espace est occupé.\n\nAprès avoir atteint le niveau 18 dans cette classe, une cible subit également 2d6 dégâts de force lorsque la flèche la touche.\n\nFlèche séduisante. Votre magie d'enchantement fait que cette flèche séduit temporairement sa cible. La créature touchée par la flèche subit 2d6 dégâts psychiques supplémentaires et choisissez l'un de vos alliés à moins de 9 mètres de la cible. La cible doit réussir un jet de sauvegarde de Sagesse, sinon elle est charmée par l'allié choisi jusqu'au début de votre prochain tour. Cet effet se termine prématurément si l'allié choisi attaque la cible charmée, lui inflige des dégâts ou l'oblige à effectuer un jet de sauvegarde.\n\nLes dégâts psychiques augmentent à 4d6 lorsque vous atteignez le niveau 18 dans cette classe.\n\nFlèche éclatante. Vous imprégnez votre flèche d’énergie de force tirée de l’école de l’évocation. La flèche explose après votre attaque. Immédiatement après que la flèche a touché la créature, la cible et toutes les autres créatures à moins de 3 mètres autour d'elle subissent chacune 2d6 dégâts de force.\n\nLes dégâts de force passent à 4d6 lorsque vous atteignez le niveau 18 dans cette classe.\n\nFlèche affaiblissante. Vous insérez de la magie nécromantique dans votre flèche. La créature touchée par la flèche subit 2d6 dégâts nécrotiques supplémentaires. La cible doit également réussir un jet de sauvegarde de Constitution, sinon les dégâts infligés par ses attaques avec une arme sont réduits de moitié jusqu'au début de votre prochain tour.\n\nLes dégâts nécrotiques augmentent à 4d6 lorsque vous atteignez le niveau 18 dans cette classe.\n\nFlèche saisissante. Lorsque cette flèche atteint sa cible, la magie de conjuration crée des ronces venimeuses et agrippantes qui s'enroulent autour de la cible. La créature touchée par la flèche subit 2d6 dégâts de poison supplémentaires, sa vitesse est réduite de 3 mètres et elle subit 2d6 dégâts tranchants la première fois à chaque tour où elle se déplace d'un pied ou plus sans se téléporter. La cible ou toute créature pouvant l'atteindre peut utiliser son action pour éliminer les ronces en réussissant un test de Force (Athlétisme) contre votre DD de sauvegarde Arcane Shot. Sinon, les ronces durent 1 minute ou jusqu'à ce que vous utilisiez à nouveau cette option.\n\nLes dégâts de poison et les dégâts tranchants augmentent tous deux à 4d6 lorsque vous atteignez le niveau 18 dans cette classe.\n\nFlèche perçante. Vous utilisez la magie de transmutation pour donner à votre flèche une qualité éthérée. Lorsque vous utilisez cette option, vous n’effectuez pas de jet d’attaque pour l’attaque. Au lieu de cela, la flèche tire vers l'avant sur une ligne de 1 pied de large et 30 pieds de long, avant de disparaître. La flèche traverse sans danger les objets, ignorant la couverture. Chaque créature de cette ligne doit effectuer un jet de sauvegarde de Dextérité. En cas d'échec, la créature subit des dégâts comme si elle avait été touchée par la flèche, plus 1d6 dégâts perforants supplémentaires. En cas de sauvegarde réussie, la cible subit deux fois moins de dégâts.\n\nLes dégâts perçants augmentent à 2d6 lorsque vous atteignez le niveau 18 dans cette classe.\n\nFlèche à la recherche. En utilisant la magie divinatoire, vous accordez à votre flèche la capacité de rechercher votre cible, lui permettant ainsi de se courber et de tordre sa trajectoire à la recherche de sa proie. Lorsque vous utilisez cette option, vous n’effectuez pas de jet d’attaque pour l’attaque. Choisissez plutôt une créature que vous avez vue au cours de la dernière minute. La flèche vole vers cette créature, se déplaçant dans les coins si nécessaire et ignorant les trois quarts et la moitié de la couverture. Si la cible est à portée de l’arme et qu’il existe un chemin suffisamment large pour que la flèche puisse atteindre la cible, la cible doit effectuer un jet de sauvegarde de Dextérité. En cas d'échec, il subit des dégâts comme s'il était touché par la flèche, plus 1d6 dégâts de force supplémentaires, et vous apprenez l'emplacement actuel de la cible. En cas de sauvegarde réussie, la cible subit deux fois moins de dégâts et vous ne connaissez pas son emplacement.\n\nLes dégâts de force augmentent à 2d6 lorsque vous atteignez le niveau 18 dans cette classe.\nFlèche d'ombre. Vous insérez de la magie d’illusion dans votre flèche, l’amenant à obstruer la vision de votre ennemi avec des ombres. La créature touchée par la flèche subit 2d6 dégâts psychiques supplémentaires, et elle doit réussir un jet de sauvegarde de Sagesse ou être incapable de voir quoi que ce soit à plus de 1,50 mètre jusqu'au début de votre prochain tour.\n\nLes dégâts psychiques augmentent à 4d6 lorsque vous atteignez le niveau 18 dans cette classe.",
+      "name_en": "Arcane Shot Options"
+    }
+  ],
+  "name_en": "Fighter: Arcane Archer",
+  "_translated": true
+}

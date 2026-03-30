@@ -1,0 +1,48 @@
+{
+  "index": "cleric-order",
+  "name": "Clerc : domaine de commande",
+  "class": "cleric",
+  "source": "Guildmaster's Guide to Ravnica, Tasha's Cauldron of Everything",
+  "subclass_flavor": "Le Domaine de l'Ordre représente la discipline, ainsi que le dévouement aux lois qui régissent une société, une institution ou une philosophie. Les prêtres de l'Ordre méditent sur la logique et la justice lorsqu'ils servent leurs dieux, dont des exemples apparaissent dans le tableau des divinités de l'Ordre.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétences bonus",
+      "level": 1,
+      "desc": "Lorsque vous choisissez ce domaine au niveau 1, vous gagnez en maîtrise des armures lourdes. Vous acquérez également la maîtrise de la compétence Intimidation ou Persuasion (votre choix).",
+      "name_en": "Bonus Proficiencies"
+    },
+    {
+      "name": "Voix de l'autorité",
+      "level": 1,
+      "desc": "À partir du niveau 1, vous pouvez invoquer le pouvoir de la loi pour encourager un allié à attaquer. Si vous lancez un sort avec un emplacement de sort de niveau 1 ou supérieur et ciblez un allié avec le sort, cet allié peut utiliser sa réaction immédiatement après le sort pour lancer une attaque avec une arme contre une créature de votre choix que vous pouvez voir.\n\nSi le sort cible plus d’un allié, vous choisissez celui qui peut lancer l’attaque.",
+      "name_en": "Voice of Authority"
+    },
+    {
+      "name": "Channel Divinity : demande de l'ordre",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous pouvez utiliser votre canal divinité pour exercer une présence intimidante sur les autres.\n\nEn tant qu'action, vous présentez votre symbole sacré, et chaque créature de votre choix qui peut vous voir ou vous entendre dans un rayon de 9 mètres autour de vous doit réussir un jet de sauvegarde de sagesse ou être charmée par vous jusqu'à la fin de votre prochain tour ou jusqu'à ce que la créature charmée subisse des dégâts. Vous pouvez également faire en sorte que n'importe quelle créature charmée lâche ce qu'elle tient lorsqu'elle échoue au jet de sauvegarde.",
+      "name_en": "Channel Divinity: Order's Demand"
+    },
+    {
+      "name": "Incarnation de la loi",
+      "level": 6,
+      "desc": "Au niveau 6, vous devenez remarquablement habile à canaliser l'énergie magique pour contraindre les autres.\n\nSi vous lancez un sort de l'école d'enchantement en utilisant un emplacement de sort de niveau 1 ou supérieur, vous pouvez modifier le temps d'incantation du sort à 1 action bonus pour ce lancement, à condition que le temps d'incantation du sort soit normalement de 1 action.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Sagesse (au minimum une fois), et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Embodiment of the Law"
+    },
+    {
+      "name": "Frappe divine",
+      "level": 8,
+      "desc": "Au niveau 8, vous gagnez la capacité d’imprégner vos frappes d’énergie divine. Une fois à chacun de vos tours, lorsque vous touchez une créature avec une attaque avec une arme, vous pouvez faire en sorte que l'attaque inflige 1d8 dégâts psychiques supplémentaires à la cible. Lorsque vous atteignez le niveau 14, les dégâts supplémentaires passent à 2d8.",
+      "name_en": "Divine Strike"
+    },
+    {
+      "name": "La colère de l'ordre",
+      "level": 17,
+      "desc": "À partir du niveau 17, les ennemis que vous désignez pour la destruction se fanent sous les efforts combinés de vous et de vos alliés. Si vous infligez des dégâts de votre Frappe divine à une créature pendant votre tour, vous pouvez maudire cette créature jusqu'au début de votre prochain tour. La prochaine fois qu'un de vos alliés frappe la créature maudite avec une attaque, la cible subit également 2d8 dégâts psychiques et la malédiction prend fin. Vous ne pouvez maudire une créature de cette manière qu'une seule fois par tour.",
+      "name_en": "Order's Wrath"
+    }
+  ],
+  "name_en": "Cleric: Order Domain",
+  "_translated": true
+}

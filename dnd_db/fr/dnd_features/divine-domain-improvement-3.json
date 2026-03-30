@@ -1,0 +1,13 @@
+{
+  "index": "divine-domain-improvement-3",
+  "name": "Fonctionnalité du domaine divin",
+  "level": 8,
+  "class": "cleric",
+  "subclass": null,
+  "desc": [
+    "Choisissez un domaine lié à votre divinité, tel que la connaissance, la vie, la lumière, la nature, la tempête, la supercherie ou la guerre. Seul le domaine Life est détaillé dans le SRD sous licence Open Game. Les domaines supplémentaires sont décrits dans les livres de règles officiels ou dans les produits d'autres éditeurs.\nVotre domaine vous accorde des sorts de domaine et d'autres fonctionnalités lorsque vous le choisissez au 1er niveau. Il vous offre également des façons supplémentaires d'utiliser Channel Divinity lorsque vous obtenez cette fonctionnalité au niveau 2, ainsi que des avantages supplémentaires aux niveaux 6, 8 et 17."
+  ],
+  "name_en": "Divine Domain feature",
+  "class_name_fr": "",
+  "_translated": true
+}

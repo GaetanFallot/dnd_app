@@ -1,0 +1,9 @@
+{
+  "index": "high-elf-cantrip",
+  "name": "High Elf Cantrip",
+  "races": [],
+  "subraces": [
+    "high-elf"
+  ],
+  "desc": "You know one cantrip of your choice form the wizard spell list. Intelligence is your spellcasting ability for it."
+}

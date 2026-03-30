@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-mask-of-many-faces",
+  "name": "Invocation Eldritch : Masque aux multiples visages",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer un déguisement à volonté, sans dépenser d'emplacement de sort."
+  ],
+  "name_en": "Eldritch Invocation: Mask of Many Faces",
+  "class_name_fr": "",
+  "_translated": true
+}

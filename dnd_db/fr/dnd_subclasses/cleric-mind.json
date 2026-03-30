@@ -1,0 +1,48 @@
+{
+  "index": "cleric-mind",
+  "name": "Clerc : Domaine mental (HB)",
+  "class": "cleric",
+  "source": "Exploring Eberron",
+  "subclass_flavor": "Ce chemin allie dévotion divine et pouvoir psychique. Les forces liées au domaine de l’Esprit enseignent aux adeptes que l’esprit est le meilleur outil et l’arme la plus puissante de la création. Un prêtre du domaine Esprit apprend à exploiter son propre pouvoir mental, puis utilise ce don pour protéger ses fidèles et châtier ses ennemis.",
+  "desc": "Ce chemin allie dévotion divine et pouvoir psychique. Les forces liées au domaine de l’Esprit enseignent aux adeptes que l’esprit est le meilleur outil et l’arme la plus puissante de la création. Un prêtre du domaine Esprit apprend à exploiter son propre pouvoir mental, puis utilise ce don pour protéger ses fidèles et châtier ses ennemis.\n\nÀ Eberron, le domaine de l’Esprit est le plus associé à la Voie de la Lumière de Kalashtar et à la Voie de l’Inspiration de Riedran. Cependant, les adeptes des cultes du Dragon d’En-Bas pourraient également suivre cette voie. Si les visions de Xoriat peuvent certainement conduire un prêtre à la folie, elles peuvent également révéler des secrets plus profonds et des pouvoirs mentaux.",
+  "features": [
+    {
+      "name": "Flash de perspicacité",
+      "level": 1,
+      "desc": "À partir du niveau 1, vous pouvez invoquer la puissance d’un puits d’énergie mentale situé en votre sein. Lorsque vous effectuez un test de capacité, vous pouvez choisir de le relancer après avoir vu le résultat, mais avant de savoir s'il réussit ou échoue. Vous obtenez un bonus à cette relance égal à la moitié de votre niveau de clerc (minimum de 1).\n\nVous pouvez utiliser cette fonctionnalité deux fois. Vous récupérez les utilisations dépensées lorsque vous terminez un repos court ou long.",
+      "name_en": "Flash of Insight"
+    },
+    {
+      "name": "Force psychique",
+      "level": 1,
+      "desc": "Au niveau 1 également, vous apprenez à secouer vos ennemis avec votre puissance mentale. Lorsque vous lancez un sort de clerc ou un cantrip qui inflige des dégâts radiants, vous pouvez choisir de lui faire infliger des dégâts psychiques à la place.",
+      "name_en": "Psychic Force"
+    },
+    {
+      "name": "Channel Divinity : rétroaction psychique",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous pouvez utiliser votre canal divinité pour perturber l’esprit d’un ennemi. Lorsqu'une créature à moins de 9 mètres de vous doit effectuer un jet de sauvegarde de Sagesse, vous pouvez utiliser votre réaction pour lui imposer un désavantage en utilisant votre Canal Divinité. Vous devez utiliser cette fonctionnalité avant de connaître le résultat du lancer.\n\nSi le sort ou l'effet qui a provoqué le jet de sauvegarde de Sagesse n'est pas créé par un sort que vous lancez, vous pouvez également choisir d'infliger des dégâts psychiques à la cible, égaux à la moitié de votre niveau de clerc, immédiatement avant que la cible n'effectue son jet de sauvegarde.",
+      "name_en": "Channel Divinity: Psychic Feedback"
+    },
+    {
+      "name": "Ancre Gestalt",
+      "level": 6,
+      "desc": "À partir du niveau 6, votre puissance mentale augmente, apaisant l'esprit de ceux qui vous entourent grâce à votre simple présence. Chaque fois que vous ou une créature amie à moins de 3 mètres de vous devez effectuer un jet de sauvegarde d'Intelligence, de Sagesse ou de Charisme, la créature gagne un bonus de +2 au jet de sauvegarde. Vous devez en être conscient pour accorder ce bonus.",
+      "name_en": "Gestalt Anchor"
+    },
+    {
+      "name": "Lancement de sorts puissant",
+      "level": 8,
+      "desc": "À partir du niveau 8, vous ajoutez votre modificateur de Sagesse aux dégâts que vous infligez avec n'importe quel cantrip de clerc.",
+      "name_en": "Potent Spellcasting"
+    },
+    {
+      "name": "Plier la réalité",
+      "level": 17,
+      "desc": "À partir du niveau 17, lorsque vous voyez un allié à moins de 9 mètres de vous échouer à un jet de sauvegarde, vous pouvez remplacer le jet par un 20, ce qui peut potentiellement changer le résultat. Une fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un repos court ou long.",
+      "name_en": "Bend Reality"
+    }
+  ],
+  "name_en": "Cleric: Mind Domain (HB)",
+  "_translated": true
+}

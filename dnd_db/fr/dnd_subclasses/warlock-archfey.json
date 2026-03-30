@@ -1,0 +1,42 @@
+{
+  "index": "warlock-archfey",
+  "name": "Démoniste : L'Archfey",
+  "class": "warlock",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Votre patron est un seigneur ou une dame des fées, une créature légendaire qui détient des secrets oubliés avant la naissance des races mortelles. Les motivations de cet être sont souvent impénétrables, et parfois fantaisistes, et peuvent impliquer une recherche d'un plus grand pouvoir magique ou le règlement de rancunes séculaires. Les êtres de ce genre incluent le Prince du Givre ; la Reine de l'Air et des Ténèbres, dirigeante de la Cour Gloaming ; Titania de la Cour d'Été ; son épouse Obéron, le Seigneur Vert ; Hyrsam, le prince des fous ; et les vieilles sorcières.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Liste de sorts étendue",
+      "level": null,
+      "desc": "L'Archfey vous permet de choisir parmi une liste étendue de sorts lorsque vous apprenez un sort de démoniste. Les sorts suivants sont ajoutés à la liste des sorts de démoniste pour vous.\nSorts étendus d'Archfey\nNiveau de sort | Sorts\n1er | Feu féerique, sommeil\n2ème | Émotions calmes, force fantasmatique\n3ème | Clignement des yeux, croissance des plantes\n4ème | Dominez la bête, plus grande invisibilité\n5ème | Dominer la personne, semblant",
+      "name_en": "Expanded Spell List"
+    },
+    {
+      "name": "Présence féerique",
+      "level": 1,
+      "desc": "À partir du niveau 1, votre patron vous confère la capacité de projeter la présence séduisante et redoutable des fées. Par une action, vous pouvez amener chaque créature d'un cube de 10 pieds provenant de vous à effectuer un jet de sauvegarde de Sagesse contre le DD de sauvegarde de votre sort de démoniste. Les créatures qui échouent à leur jet de sauvegarde sont toutes charmées ou effrayées par vous (votre choix) jusqu'à la fin de votre prochain tour.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Fey Presence"
+    },
+    {
+      "name": "Évasion brumeuse",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez disparaître dans un nuage de brume en réponse à un mal. Lorsque vous subissez des dégâts, vous pouvez utiliser votre réaction pour devenir invisible et vous téléporter jusqu'à 60 pieds dans un espace inoccupé que vous pouvez voir. Vous restez invisible jusqu'au début de votre prochain tour ou jusqu'à ce que vous attaquiez ou lanciez un sort.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Misty Escape"
+    },
+    {
+      "name": "Défenses séduisantes",
+      "level": 10,
+      "desc": "À partir du niveau 10, votre patron vous apprend à retourner contre eux la magie mentale de vos ennemis. Vous êtes immunisé contre le charme, et lorsqu'une autre créature tente de vous charmer, vous pouvez utiliser votre réaction pour tenter de retourner le charme sur cette créature. La créature doit réussir un jet de sauvegarde de Sagesse contre le DD de sauvegarde de votre sort de démoniste ou être charmée par vous pendant 1 minute ou jusqu'à ce que la créature subisse des dégâts.",
+      "name_en": "Beguiling Defenses"
+    },
+    {
+      "name": "Délire sombre",
+      "level": 14,
+      "desc": "À partir du niveau 14, vous pouvez plonger une créature dans un royaume illusoire. Par une action, choisissez une créature que vous pouvez voir dans un rayon de 20 mètres autour de vous. Il doit effectuer un jet de sauvegarde de Sagesse contre le DD de sauvegarde de votre sort de démoniste. En cas d'échec, il est charmé ou effrayé par vous (au choix) pendant 1 minute ou jusqu'à ce que votre concentration soit brisée (comme si vous vous concentriez sur un sort). Cet effet se termine plus tôt si la créature subit des dégâts.\n\nJusqu'à la fin de cette illusion, la créature pense qu'elle est perdue dans un royaume brumeux dont vous choisissez l'apparence. La créature ne peut voir et entendre qu'elle-même, vous et l'illusion.\n\nVous devez terminer un repos court ou long avant de pouvoir utiliser à nouveau cette fonctionnalité.",
+      "name_en": "Dark Delirium"
+    }
+  ],
+  "name_en": "Warlock: The Archfey",
+  "_translated": true
+}

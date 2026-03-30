@@ -1,0 +1,14 @@
+{
+  "index": "sharpshooter",
+  "name": "Tireur d'élite",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous maîtrisez les armes à distance et pouvez réaliser des tirs que d'autres trouvent impossibles. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Attaquer à longue distance n'impose pas de désavantage sur vos jets d'attaque avec une arme à distance.",
+    "Vos attaques avec des armes à distance ignorent la moitié et les trois quarts de la couverture.",
+    "Avant de lancer une attaque avec une arme à distance que vous maîtrisez, vous pouvez choisir de subir un malus de -5 au jet d'attaque. Si cette attaque réussit, vous ajoutez +10 aux dégâts de l'attaque."
+  ],
+  "name_en": "Sharpshooter",
+  "_translated": true
+}

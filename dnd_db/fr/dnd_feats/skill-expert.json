@@ -1,0 +1,14 @@
+{
+  "index": "skill-expert",
+  "name": "Expert en compétences",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": null,
+  "desc": "Vous avez perfectionné vos compétences avec des compétences particulières, vous offrant les avantages suivants :",
+  "benefits": [
+    "Augmentez un score de capacité de votre choix de 1, jusqu'à un maximum de 20.",
+    "Vous maîtrisez une compétence de votre choix.",
+    "Choisissez une compétence que vous maîtrisez. Vous gagnez de l'expertise avec cette compétence, ce qui signifie que votre bonus de maîtrise est doublé pour tout test de capacité que vous effectuez avec cette compétence. La compétence que vous choisissez doit être une compétence qui ne bénéficie pas déjà d'une fonctionnalité, telle que l'Expertise, qui double votre bonus de maîtrise."
+  ],
+  "name_en": "Skill Expert",
+  "_translated": true
+}

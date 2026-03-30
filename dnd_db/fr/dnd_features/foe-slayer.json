@@ -1,0 +1,13 @@
+{
+  "index": "foe-slayer",
+  "name": "Tueur d'ennemis",
+  "level": 20,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "Au niveau 20, vous devenez un chasseur d'ennemis hors pair. Une fois à chacun de vos tours, vous pouvez ajouter votre modificateur de Sagesse au jet d'attaque ou au jet de dégâts d'une attaque que vous effectuez contre l'un de vos ennemis favoris. Vous pouvez choisir d'utiliser cette fonctionnalité avant ou après le jet, mais avant que les effets du jet ne soient appliqués."
+  ],
+  "name_en": "Foe Slayer",
+  "class_name_fr": "",
+  "_translated": true
+}

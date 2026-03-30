@@ -1,0 +1,14 @@
+{
+  "index": "telekinetic",
+  "name": "Télékinésie",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": null,
+  "desc": "Vous apprenez à déplacer les choses avec votre esprit, vous offrant ainsi les avantages suivants :",
+  "benefits": [
+    "Augmentez votre score d'Intelligence, de Sagesse ou de Charisme de 1, jusqu'à un maximum de 20.",
+    "Vous apprenez le cantrip de la main du mage. Vous pouvez le lancer sans composants verbaux ou somatiques, et vous pouvez rendre la main spectrale invisible. Si vous connaissez déjà ce sort, sa portée augmente de 9 mètres lorsque vous le lancez. Sa capacité de lancer des sorts est la capacité augmentée par ce don.",
+    "Par une action bonus, vous pouvez essayer de pousser par télékinésie une créature que vous pouvez voir à moins de 9 mètres de vous. Lorsque vous faites cela, la cible doit réussir un jet de sauvegarde de Force (DD 8 + votre bonus de maîtrise + le modificateur de capacité du score augmenté par ce don) ou être déplacée de 1,50 mètre vers ou loin de vous. Une créature peut volontairement échouer à ce jet."
+  ],
+  "name_en": "Telekinetic",
+  "_translated": true
+}

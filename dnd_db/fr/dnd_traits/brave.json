@@ -1,0 +1,11 @@
+{
+  "index": "brave",
+  "name": "Courageux",
+  "races": [
+    "halfling"
+  ],
+  "subraces": [],
+  "desc": "Vous avez l'avantage au jet de sauvegarde contre la peur.",
+  "name_en": "Brave",
+  "_translated": true
+}

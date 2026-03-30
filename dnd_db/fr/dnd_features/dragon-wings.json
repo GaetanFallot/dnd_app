@@ -1,0 +1,13 @@
+{
+  "index": "dragon-wings",
+  "name": "Ailes de dragon",
+  "level": 14,
+  "class": "sorcerer",
+  "subclass": "draconic",
+  "desc": [
+    "Au niveau 14, vous obtenez la capacité de faire pousser une paire d'ailes de dragon depuis votre dos, gagnant ainsi une vitesse de vol égale à votre vitesse actuelle. Vous pouvez créer ces ailes comme une action bonus pendant votre tour. Ils durent jusqu'à ce que vous les rejetiez comme une action bonus à votre tour.\nVous ne pouvez pas manifester vos ailes lorsque vous portez une armure à moins que l'armure ne soit conçue pour les accueillir, et les vêtements non conçus pour accueillir vos ailes peuvent être détruits lorsque vous les manifestez."
+  ],
+  "name_en": "Dragon Wings",
+  "class_name_fr": "",
+  "_translated": true
+}

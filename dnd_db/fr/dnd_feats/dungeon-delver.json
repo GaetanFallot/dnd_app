@@ -1,0 +1,15 @@
+{
+  "index": "dungeon-delver",
+  "name": "Sondeur de donjon",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Alerté aux pièges cachés et aux portes secrètes que l'on trouve dans de nombreux donjons, vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Vous avez un avantage aux tests de Sagesse (Perception) et d'Intelligence (Enquête) effectués pour détecter la présence de portes secrètes.",
+    "Vous avez un avantage sur les jets de sauvegarde effectués pour éviter ou résister aux pièges.",
+    "Vous avez une résistance aux dégâts infligés par les pièges.",
+    "Voyager à un rythme rapide n'impose pas la pénalité normale de -5 sur votre score passif de Sagesse (Perception)."
+  ],
+  "name_en": "Dungeon Delver",
+  "_translated": true
+}

@@ -1,0 +1,42 @@
+{
+  "index": "sorcerer-clockwork-soul",
+  "name": "Sorcier : Âme mécanique",
+  "class": "sorcerer",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "La force cosmique de l’ordre vous a imprégné de magie. Ce pouvoir provient de Mechanus ou d'un royaume similaire, un plan d'existence entièrement façonné par l'efficacité d'une horloge. Vous, ou quelqu'un de votre lignée, avez peut-être été mêlé aux machinations des modrons, les êtres ordonnés qui habitent Mechanus. Peut-être que votre ancêtre a même participé à la Grande Marche de Modron. Quelle que soit son origine en vous, le pouvoir de l'ordre peut paraître étrange aux autres, mais pour vous, il fait partie d'un vaste et glorieux système.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Magie mécanique",
+      "level": null,
+      "desc": "Vous apprenez des sorts supplémentaires lorsque vous atteignez certains niveaux dans cette classe, comme indiqué dans le tableau des sorts mécaniques. Chaque sort compte pour vous comme un sort de sorcier, mais il ne compte pas dans le nombre de sorts de sorcier que vous connaissez.\n\nChaque fois que vous gagnez un niveau de sorcier, vous pouvez remplacer un sort que vous avez gagné grâce à cette fonctionnalité par un autre sort du même niveau. Le nouveau sort doit être un sort d'abjuration ou de transmutation de la liste des sorts de sorcier, démoniste ou sorcier.\nSorts d’horlogerie | \nNiveau Sorcier | Sorts\n1er | Alarme, protection contre le mal et le bien\n3ème | Aide, moindre restauration\n5ème | Dissipation de la magie, protection contre l'énergie\n7ème | Liberté de mouvement, invocation de construction\n9ème | Grande Restauration, Mur de Force\n\nDe plus, consultez le tableau des Manifestations de l'Ordre et choisissez ou déterminez au hasard la manière dont votre connexion à l'ordre se manifeste pendant que vous lancez l'un de vos sorts de sorcier.\nManifestations de l'Ordre | \nd6 | Manifestation\n1 | Des roues dentées spectrales planent derrière vous.\n2 | Les aiguilles d’une horloge tournent dans vos yeux.\n3 | Votre peau brille d’un éclat cuivré.\n4 | Des équations flottantes et des objets géométriques recouvrent votre corps.\n5 | Votre concentration de lancement de sorts prend temporairement la forme d’un petit mécanisme d’horlogerie.\n6 | Le tic-tac des engrenages ou la sonnerie d'une horloge peuvent être entendus par vous et les personnes affectées par votre magie.",
+      "name_en": "Clockwork Magic"
+    },
+    {
+      "name": "Restaurer l'équilibre",
+      "level": 1,
+      "desc": "Dès le niveau 1, votre connexion au plan de l’ordre absolu vous permet d’égaliser les moments chaotiques. Lorsqu'une créature que vous pouvez voir à moins de 20 mètres de vous est sur le point de lancer un d20 avec un avantage ou un désavantage, vous pouvez utiliser votre réaction pour éviter que le jet ne soit affecté par un avantage ou un désavantage.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Restore Balance"
+    },
+    {
+      "name": "Bastion du Droit",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez puiser dans la grande équation de l’existence pour imprégner une créature d’un bouclier d’ordre scintillant. Par une action, vous pouvez dépenser 1 à 5 points de sorcellerie pour créer une protection magique autour de vous ou d'une autre créature que vous pouvez voir à moins de 9 mètres de vous. La protection dure jusqu'à ce que vous ayez terminé un long repos ou jusqu'à ce que vous utilisiez à nouveau cette fonctionnalité.\n\nLa balise est représentée par un nombre de d8 égal au nombre de points de sorcellerie dépensés pour la créer. Lorsque la créature protégée subit des dégâts, elle peut dépenser un certain nombre de ces dés, les lancer et réduire les dégâts subis du total lancé sur ces dés.",
+      "name_en": "Bastion of Law"
+    },
+    {
+      "name": "Transe de l'Ordre",
+      "level": 14,
+      "desc": "À partir du niveau 14, vous acquérez la capacité d’aligner votre conscience sur les calculs sans fin de Mechanus. Par une action bonus, vous pouvez entrer dans cet état pendant 1 minute. Pendant toute la durée du sort, les jets d'attaque contre vous ne peuvent pas bénéficier d'un avantage, et chaque fois que vous effectuez un jet d'attaque, un test de capacité ou un jet de sauvegarde, vous pouvez traiter un jet de 9 ou moins sur le d20 comme un 10.\n\nUne fois que vous avez utilisé cette action bonus, vous ne pouvez plus l'utiliser avant d'avoir terminé un repos long, à moins que vous ne dépensiez 5 points de sorcellerie pour l'utiliser à nouveau.",
+      "name_en": "Trance of Order"
+    },
+    {
+      "name": "Cavalcade mécanique",
+      "level": 18,
+      "desc": "Au niveau 18, vous invoquez des esprits de l'ordre pour dissiper le désordre autour de vous. Par une action, vous invoquez les esprits dans un cube de 9 mètres provenant de vous. Les esprits ressemblent à des modrons ou à d'autres constructions de votre choix. Les esprits sont intangibles et invulnérables, et ils créent les effets suivants dans le cube avant de disparaître :\n• Les esprits restaurent jusqu'à 100 points de vie, répartis à votre guise entre n'importe quel nombre de créatures de votre choix dans le cube.\n• Tous les objets endommagés entièrement dans le cube sont réparés instantanément.\n• Chaque sort de niveau 6 ou inférieur se termine sur les créatures et objets de votre choix dans le cube.\n\nUne fois que vous avez utilisé cette action, vous ne pouvez plus l’utiliser avant d’avoir terminé un long repos, à moins que vous ne dépensiez 7 points de sorcellerie pour l’utiliser à nouveau.",
+      "name_en": "Clockwork Cavalcade"
+    }
+  ],
+  "name_en": "Sorcerer: Clockwork Soul",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "dwarven-resilience",
+  "name": "Courage nain",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Nain",
+  "desc": "Le sang des héros nains coule dans vos veines. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Constitution de 1, jusqu'à un maximum de 20.",
+    "Chaque fois que vous effectuez l’action Esquive au combat, vous pouvez dépenser un dé de vie pour vous soigner. Lancez le dé, ajoutez votre modificateur de Constitution et récupérez un nombre de points de vie égal au total (minimum de 1)."
+  ],
+  "name_en": "Dwarven Fortitude",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-repelling-blast",
+  "name": "Invocation surnaturelle : Explosion repoussante",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous touchez une créature avec une explosion surnaturelle, vous pouvez la pousser jusqu'à 10 pieds de vous en ligne droite."
+  ],
+  "name_en": "Eldritch Invocation: Repelling Blast",
+  "class_name_fr": "",
+  "_translated": true
+}

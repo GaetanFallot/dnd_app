@@ -1,0 +1,42 @@
+{
+  "index": "rogue-scout",
+  "name": "Voleur : éclaireur",
+  "class": "rogue",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Vous êtes doué pour la furtivité et survivez loin des rues d'une ville, ce qui vous permet d'éclairer vos compagnons lors des expéditions. Les voleurs qui adoptent cet archétype sont chez eux dans la nature, parmi les barbares et les rôdeurs, et de nombreux éclaireurs servent d'yeux et d'oreilles aux bandes de guerre. Embusqué, espion, chasseur de primes : ce ne sont là que quelques-uns des rôles que les scouts assument lorsqu'ils parcourent le monde.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Tirailleur",
+      "level": 3,
+      "desc": "Dès le niveau 3, vous êtes difficile à cerner lors d'un combat. Vous pouvez vous déplacer jusqu'à la moitié de votre vitesse en réaction lorsqu'un ennemi termine son tour à moins de 1,50 mètre de vous. Ce mouvement ne provoque pas d’attaques d’opportunité.",
+      "name_en": "Skirmisher"
+    },
+    {
+      "name": "Survivaliste",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cet archétype au niveau 3, vous gagnez la maîtrise des compétences Nature et Survie si vous ne les possédez pas déjà. Votre bonus de maîtrise est doublé pour tout test de capacité que vous effectuez et qui utilise l'une ou l'autre de ces compétences.",
+      "name_en": "Survivalist"
+    },
+    {
+      "name": "Mobilité supérieure",
+      "level": 9,
+      "desc": "Au niveau 9, votre vitesse de marche augmente de 3 mètres. Si vous avez une vitesse de montée ou de nage, cette augmentation s'applique également à cette vitesse.",
+      "name_en": "Superior Mobility"
+    },
+    {
+      "name": "Maître d'embuscade",
+      "level": 13,
+      "desc": "À partir du niveau 13, vous excellez dans l’art de mener des embuscades et d’agir en premier dans un combat.\n\nVous avez l'avantage aux jets d'initiative. De plus, la première créature que vous touchez lors du premier round d'un combat devient plus facile à frapper pour vous et les autres ; les jets d'attaque contre cette cible ont un avantage jusqu'au début de votre prochain tour.",
+      "name_en": "Ambush Master"
+    },
+    {
+      "name": "Frappe soudaine",
+      "level": 17,
+      "desc": "À partir du niveau 17, vous pouvez frapper à une vitesse mortelle. Si vous effectuez l'action Attaque à votre tour, vous pouvez effectuer une attaque supplémentaire en tant qu'action bonus. Cette attaque peut bénéficier de votre attaque sournoise même si vous l'avez déjà utilisée ce tour-ci, mais vous ne pouvez pas utiliser votre attaque sournoise contre la même cible plus d'une fois par tour.",
+      "name_en": "Sudden Strike"
+    }
+  ],
+  "name_en": "Rogue: Scout",
+  "_translated": true
+}

@@ -1,0 +1,8 @@
+{
+  "index": "destroy-undead-cr-3-or-below",
+  "name": "Destroy Undead (CR 3 or below)",
+  "level": 14,
+  "class": "cleric",
+  "subclass": null,
+  "desc": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold."
+}

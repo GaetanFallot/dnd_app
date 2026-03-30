@@ -1,0 +1,18 @@
+{
+  "index": "monk-four-elements",
+  "name": "Moine : Voie des Quatre Éléments",
+  "class": "monk",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Vous suivez une tradition monastique qui vous apprend à maîtriser les éléments. Lorsque vous concentrez votre ki, vous pouvez vous aligner sur les forces de création et plier les quatre éléments à votre volonté, en les utilisant comme une extension de votre corps. Certains membres de cette tradition se consacrent à un seul élément, mais d'autres tissent les éléments ensemble.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Disciple des éléments",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cette tradition au niveau 3, vous apprenez des disciplines magiques qui exploitent la puissance des quatre éléments. Une discipline vous oblige à dépenser des points de ki à chaque fois que vous l'utilisez.\n\nVous connaissez la discipline d'harmonisation élémentaire et une autre discipline élémentaire de votre choix. Vous apprenez une discipline élémentaire supplémentaire de votre choix aux niveaux 6, 11 et 17.\n\nChaque fois que vous apprenez une nouvelle discipline élémentaire, vous pouvez également remplacer une discipline élémentaire que vous connaissez déjà par une discipline différente.\n\nLancer des sorts élémentaires. Certaines disciplines élémentaires permettent de lancer des sorts. Voir le chapitre 10 pour les règles générales du lancement de sorts. Pour lancer l'un de ces sorts, vous utilisez son temps d'incantation et d'autres règles, mais vous n'avez pas besoin de lui fournir de composants matériels.\n\nUne fois que vous atteignez le niveau 5 dans cette classe, vous pouvez dépenser des points de ki supplémentaires pour augmenter le niveau d'un sort de discipline élémentaire que vous lancez, à condition que le sort ait un effet amélioré à un niveau supérieur, comme le fait Burning Hands. Le niveau du sort augmente de 1 pour chaque point de ki supplémentaire dépensé. Par exemple, si vous êtes un moine de niveau 5 et que vous utilisez Frappe de cendre balayante pour lancer Mains brûlantes, vous pouvez dépenser 3 points de ki pour le lancer comme un sort de niveau 2 (le coût de base de la discipline est de 2 points de ki plus 1).\n\nLe nombre maximum de points ki que vous pouvez dépenser pour lancer un sort de cette manière (y compris son coût de base en points ki et tous les points ki supplémentaires que vous dépensez pour augmenter son niveau) est déterminé par votre niveau de moine, comme indiqué dans le tableau des sorts et des points Ki.\nSorts et points Ki\nNiveaux de moine | Points Ki maximum pour un sort\n5e-8e | 3\n9-12 | 4\n13-16 | 5\n17-20 | 6",
+      "name_en": "Disciple of the Elements"
+    }
+  ],
+  "name_en": "Monk: Way of the Four Elements",
+  "_translated": true
+}

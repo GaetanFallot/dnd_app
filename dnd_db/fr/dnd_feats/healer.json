@@ -1,0 +1,13 @@
+{
+  "index": "healer",
+  "name": "Guérisseur",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous êtes un médecin compétent, ce qui vous permet de panser rapidement vos blessures et de remettre vos alliés dans le combat. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Lorsque vous utilisez un kit de guérisseur pour stabiliser une créature mourante, cette créature récupère également 1 point de vie.",
+    "Par une action, vous pouvez utiliser un kit de guérisseur pour soigner une créature et lui redonner 1d6 + 4 points de vie, plus des points de vie supplémentaires égaux au nombre maximum de dés de vie de la créature. La créature ne peut plus regagner de points de vie grâce à ce don tant qu'elle n'a pas terminé un repos court ou long."
+  ],
+  "name_en": "Healer",
+  "_translated": true
+}

@@ -1,0 +1,8 @@
+{
+  "index": "skilled",
+  "name": "Skilled",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "You gain proficiency in any combination of three skills or tools of your choice.",
+  "benefits": []
+}

@@ -1,0 +1,13 @@
+{
+  "index": "remarkable-athlete",
+  "name": "Athlète remarquable",
+  "level": 7,
+  "class": "fighter",
+  "subclass": "champion",
+  "desc": [
+    "À partir du niveau 7, vous pouvez ajouter la moitié de votre bonus de maîtrise (arrondi au supérieur) à tout test de Force, de Dextérité ou de Constitution que vous effectuez et qui n'utilise pas déjà votre bonus de maîtrise. De plus, lorsque vous effectuez un saut en longueur en courant, la distance que vous pouvez parcourir augmente d'un nombre de pieds égal à votre modificateur de Force."
+  ],
+  "name_en": "Remarkable Athlete",
+  "class_name_fr": "",
+  "_translated": true
+}

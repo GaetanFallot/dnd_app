@@ -1,0 +1,36 @@
+{
+  "index": "bard-glamour",
+  "name": "Barde : Collège du Glamour",
+  "class": "bard",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Le Collège du Glamour est la demeure des bardes qui ont maîtrisé leur métier dans le royaume vibrant de Feywild ou sous la tutelle de quelqu'un qui y a vécu. Encadrés par des satyres, des éladrins et d'autres fées, ces bardes apprennent à utiliser leur magie pour ravir et captiver les autres.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Manteau d'inspiration",
+      "level": 3,
+      "desc": "Lorsque vous rejoignez le Collège du Glamour au niveau 3, vous obtenez la capacité de tisser un chant de magie féerique qui imprègne vos alliés de vigueur et de vitesse.\n\nPar une action bonus, vous pouvez dépenser une utilisation de votre Inspiration bardique pour vous accorder une apparence merveilleuse. Ce faisant, choisissez un nombre de créatures que vous pouvez voir et qui peuvent vous voir dans un rayon de 60 pieds autour de vous, jusqu'à un nombre égal à votre modificateur de Charisme (au minimum un). Chacun d'eux gagne 5 points de vie temporaires. Lorsqu'une créature gagne ces points de vie temporaires, elle peut immédiatement utiliser sa réaction pour se déplacer à sa vitesse, sans provoquer d'attaques d'opportunité.\n\nLe nombre de points de vie temporaires augmente lorsque vous atteignez certains niveaux dans cette classe, passant à 8 au niveau 5, 11 au niveau 10 et 14 au niveau 15.",
+      "name_en": "Mantle of Inspiration"
+    },
+    {
+      "name": "Des performances passionnantes",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous pouvez charger votre performance avec une magie féerique et séduisante.\n\nSi vous jouez pendant au moins 1 minute, vous pouvez tenter d'émerveiller votre public en chantant, en récitant un poème ou en dansant. À la fin de la représentation, choisissez un nombre d'humanoïdes à moins de 60 pieds de vous qui ont tout regardé et écouté, jusqu'à un nombre égal à votre modificateur de Charisme (au minimum un). Chaque cible doit réussir un jet de sauvegarde de Sagesse contre votre DD de sauvegarde de sorts ou être charmée par vous. Pendant qu'elle est ainsi charmée, la cible vous idolâtre, elle parle de vous avec enthousiasme à quiconque lui parle et elle gêne quiconque s'oppose à vous, évitant la violence à moins qu'elle ne soit déjà encline à se battre en votre nom. Cet effet se termine sur une cible après 1 heure, si elle subit des dégâts, si vous l'attaquez ou si elle vous voit attaquer ou endommager l'un de ses alliés.\n\nSi une cible réussit son jet de sauvegarde, elle n'a aucune idée que vous avez essayé de la charmer.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un repos court ou long.",
+      "name_en": "Enthralling Performance"
+    },
+    {
+      "name": "Manteau de majesté",
+      "level": 6,
+      "desc": "Au niveau 6, vous acquérez la capacité de vous envelopper d’une magie féerique qui donne envie aux autres de vous servir. Par une action bonus, vous lancez Commandement, sans dépenser d'emplacement de sort, et vous prenez une apparence d'une beauté surnaturelle pendant 1 minute ou jusqu'à la fin de votre concentration (comme si vous vous concentriez sur un sort). Pendant ce temps, vous pouvez lancer Commandement comme une action bonus à chacun de vos tours, sans dépenser d'emplacement de sort.\n\nToute créature charmée par vous échoue automatiquement à son jet de sauvegarde contre le commandement que vous lancez avec cette fonctionnalité.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un long repos.",
+      "name_en": "Mantle of Majesty"
+    },
+    {
+      "name": "Majesté incassable",
+      "level": 14,
+      "desc": "Au niveau 14, votre apparence acquiert définitivement un aspect surnaturel qui vous rend plus belle et plus féroce.\n\nDe plus, par une action bonus, vous pouvez assumer une présence magiquement majestueuse pendant 1 minute ou jusqu'à ce que vous soyez incapable d'agir. Pendant toute la durée du sort, chaque fois qu'une créature tente de vous attaquer pour la première fois au cours d'un tour, l'attaquant doit effectuer un jet de sauvegarde de Charisme contre votre DD de sauvegarde de sort. En cas d'échec, il ne peut pas vous attaquer ce tour-ci et doit choisir une nouvelle cible pour son attaque, sinon l'attaque est inutile. En cas de sauvegarde réussie, il peut vous attaquer ce tour-ci, mais il est désavantagé à tout jet de sauvegarde qu'il effectue contre vos sorts lors de votre prochain tour.\n\nUne fois que vous assumez cette présence majestueuse, vous ne pouvez plus le faire avant d'avoir terminé un repos court ou long.",
+      "name_en": "Unbreakable Majesty"
+    }
+  ],
+  "name_en": "Bard: College of Glamour",
+  "_translated": true
+}

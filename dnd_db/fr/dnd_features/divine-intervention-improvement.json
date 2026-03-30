@@ -1,0 +1,13 @@
+{
+  "index": "divine-intervention-improvement",
+  "name": "Amélioration de l'intervention divine",
+  "level": 20,
+  "class": "cleric",
+  "subclass": null,
+  "desc": [
+    "Au niveau 20, votre appel à l'intervention réussit automatiquement, aucun jet n'est requis."
+  ],
+  "name_en": "Divine Intervention Improvement",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "fast-movement",
+  "name": "Mouvement rapide",
+  "level": 5,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 5, votre vitesse augmente de 3 mètres tant que vous ne portez pas d'armure lourde."
+  ],
+  "name_en": "Fast Movement",
+  "class_name_fr": "",
+  "_translated": true
+}

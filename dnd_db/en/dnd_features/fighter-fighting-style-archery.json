@@ -1,0 +1,8 @@
+{
+  "index": "fighter-fighting-style-archery",
+  "name": "Fighting Style: Archery",
+  "level": 1,
+  "class": "fighter",
+  "subclass": null,
+  "desc": "You gain a +2 bonus to attack rolls you make with ranged weapons."
+}

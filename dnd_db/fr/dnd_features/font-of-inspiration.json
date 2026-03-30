@@ -1,0 +1,13 @@
+{
+  "index": "font-of-inspiration",
+  "name": "Source d’inspiration",
+  "level": 5,
+  "class": "bard",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 5, vous récupérez toutes vos utilisations d'inspiration bardique lorsque vous terminez un repos court ou long."
+  ],
+  "name_en": "Font of Inspiration",
+  "class_name_fr": "",
+  "_translated": true
+}

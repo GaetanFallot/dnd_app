@@ -1,0 +1,299 @@
+{
+  "index": "cleric",
+  "name": "Cleric",
+  "hit_die": 8,
+  "proficiencies": [
+    "Light Armor",
+    "Medium Armor",
+    "Shields",
+    "Simple Weapons",
+    "Saving Throw: WIS",
+    "Saving Throw: CHA"
+  ],
+  "saving_throws": [
+    "WIS",
+    "CHA"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from History, Insight, Medicine, Persuasion, and Religion",
+      "choose": 2,
+      "options": [
+        "Skill: History",
+        "Skill: Insight",
+        "Skill: Medicine",
+        "Skill: Persuasion",
+        "Skill: Religion"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "shield",
+        "name": "Shield",
+        "url": "/api/2014/equipment/shield"
+      },
+      "quantity": 1
+    }
+  ],
+  "subclasses": [
+    "life"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "spellcasting-cleric",
+        "divine-domain",
+        "domain-spells-1"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 0,
+        "destroy_undead_cr": 0
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "channel-divinity-1-rest",
+        "channel-divinity-turn-undead",
+        "divine-domain-improvement-1"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 1,
+        "destroy_undead_cr": 0
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "domain-spells-2"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 1,
+        "destroy_undead_cr": 0
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "cleric-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 1,
+        "destroy_undead_cr": 0
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [
+        "domain-spells-3",
+        "destroy-undead-cr-1-2-or-below"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 1,
+        "destroy_undead_cr": 0.5
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "channel-divinity-2-rest",
+        "divine-domain-improvement-2"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 0.5
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [
+        "domain-spells-4"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 0.5
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "cleric-ability-score-improvement-2",
+        "destroy-undead-cr-1-or-below",
+        "divine-domain-improvement-3"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 1
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [
+        "domain-spells-5"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 1
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "divine-intervention"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 1
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [
+        "destroy-undead-cr-2-or-below"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 2
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "cleric-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 2
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 2
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "destroy-undead-cr-3-or-below"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 3
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 3
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "cleric-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 3
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [
+        "destroy-undead-cr-4-or-below",
+        "divine-domain-improvement-4"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 2,
+        "destroy_undead_cr": 4
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "channel-divinity-3-rest"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 3,
+        "destroy_undead_cr": 4
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "cleric-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 3,
+        "destroy_undead_cr": 4
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "divine-intervention-improvement"
+      ],
+      "class_specific": {
+        "channel_divinity_charges": 3,
+        "destroy_undead_cr": 4
+      }
+    }
+  ],
+  "feature_indices": [
+    "spellcasting-cleric",
+    "divine-domain",
+    "domain-spells-1",
+    "channel-divinity-1-rest",
+    "channel-divinity-turn-undead",
+    "divine-domain-improvement-1",
+    "domain-spells-2",
+    "cleric-ability-score-improvement-1",
+    "domain-spells-3",
+    "destroy-undead-cr-1-2-or-below",
+    "channel-divinity-2-rest",
+    "divine-domain-improvement-2",
+    "domain-spells-4",
+    "cleric-ability-score-improvement-2",
+    "destroy-undead-cr-1-or-below",
+    "divine-domain-improvement-3",
+    "domain-spells-5",
+    "divine-intervention",
+    "destroy-undead-cr-2-or-below",
+    "cleric-ability-score-improvement-3",
+    "destroy-undead-cr-3-or-below",
+    "cleric-ability-score-improvement-4",
+    "destroy-undead-cr-4-or-below",
+    "divine-domain-improvement-4",
+    "channel-divinity-3-rest",
+    "cleric-ability-score-improvement-5",
+    "divine-intervention-improvement"
+  ]
+}

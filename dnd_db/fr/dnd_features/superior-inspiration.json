@@ -1,0 +1,13 @@
+{
+  "index": "superior-inspiration",
+  "name": "Inspiration supérieure",
+  "level": 20,
+  "class": "bard",
+  "subclass": null,
+  "desc": [
+    "Au niveau 20, lorsque vous lancez un jet d'initiative et qu'il ne vous reste plus aucune utilisation d'Inspiration bardique, vous récupérez une utilisation."
+  ],
+  "name_en": "Superior Inspiration",
+  "class_name_fr": "",
+  "_translated": true
+}

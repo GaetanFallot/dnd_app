@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-otherworldly-leap",
+  "name": "Invocation surnaturelle : saut d'un autre monde",
+  "level": 9,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer saut sur vous-même à volonté, sans dépenser d'emplacement de sort ni de composants matériels."
+  ],
+  "name_en": "Eldritch Invocation: Otherworldly Leap",
+  "class_name_fr": "",
+  "_translated": true
+}

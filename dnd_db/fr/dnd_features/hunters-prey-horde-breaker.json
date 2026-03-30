@@ -1,0 +1,13 @@
+{
+  "index": "hunters-prey-horde-breaker",
+  "name": "La proie du chasseur : briseur de horde",
+  "level": 3,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Une fois à chacun de vos tours, lorsque vous effectuez une attaque avec une arme, vous pouvez effectuer une autre attaque avec la même arme contre une créature différente qui se trouve à moins de 1,50 mètre de la cible d'origine et à portée de votre arme."
+  ],
+  "name_en": "Hunter's Prey: Horde Breaker",
+  "class_name_fr": "",
+  "_translated": true
+}

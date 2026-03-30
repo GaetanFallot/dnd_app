@@ -1,0 +1,8 @@
+{
+  "index": "eldritch-invocation-eldritch-sight",
+  "name": "Eldritch Invocation: Eldritch Sight",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": "You can cast detect magic at will, without expending a spell slot."
+}

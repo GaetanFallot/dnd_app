@@ -1,0 +1,8 @@
+{
+  "index": "indomitable-might",
+  "name": "Indomitable Might",
+  "level": 18,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."
+}

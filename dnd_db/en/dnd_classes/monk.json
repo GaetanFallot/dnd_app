@@ -1,0 +1,391 @@
+{
+  "index": "monk",
+  "name": "Monk",
+  "hit_die": 8,
+  "proficiencies": [
+    "Simple Weapons",
+    "Shortswords",
+    "Saving Throw: DEX",
+    "Saving Throw: STR"
+  ],
+  "saving_throws": [
+    "STR",
+    "DEX"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth",
+      "choose": 2,
+      "options": [
+        "Skill: Acrobatics",
+        "Skill: Athletics",
+        "Skill: History",
+        "Skill: Insight",
+        "Skill: Religion",
+        "Skill: Stealth"
+      ]
+    },
+    {
+      "desc": "Choose one type of artisan’s tools or one musical instrument",
+      "choose": 1,
+      "options": []
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "dart",
+        "name": "Dart",
+        "url": "/api/2014/equipment/dart"
+      },
+      "quantity": 10
+    }
+  ],
+  "subclasses": [
+    "open-hand"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "monk-unarmored-defense",
+        "martial-arts"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 4
+        },
+        "ki_points": 0,
+        "unarmored_movement": 0
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "ki",
+        "flurry-of-blows",
+        "patient-defense",
+        "step-of-the-wind",
+        "unarmored-movement-1"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 4
+        },
+        "ki_points": 2,
+        "unarmored_movement": 10
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "monastic-tradition",
+        "deflect-missiles"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 4
+        },
+        "ki_points": 3,
+        "unarmored_movement": 10
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "monk-ability-score-improvement-1",
+        "slow-fall"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 4
+        },
+        "ki_points": 4,
+        "unarmored_movement": 10
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [
+        "monk-extra-attack",
+        "stunning-strike"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 6
+        },
+        "ki_points": 5,
+        "unarmored_movement": 10
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "ki-empowered-strikes",
+        "monastic-tradition-improvement-1"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 6
+        },
+        "ki_points": 6,
+        "unarmored_movement": 15
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [
+        "monk-evasion",
+        "stillness-of-mind"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 6
+        },
+        "ki_points": 7,
+        "unarmored_movement": 15
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "monk-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 6
+        },
+        "ki_points": 8,
+        "unarmored_movement": 15
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [
+        "unarmored-movement-2"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 6
+        },
+        "ki_points": 9,
+        "unarmored_movement": 15
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "purity-of-body"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 6
+        },
+        "ki_points": 10,
+        "unarmored_movement": 20
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [
+        "monastic-tradition-improvement-2"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 8
+        },
+        "ki_points": 11,
+        "unarmored_movement": 20
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "monk-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 8
+        },
+        "ki_points": 12,
+        "unarmored_movement": 20
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [
+        "tongue-of-the-sun-and-moon"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 8
+        },
+        "ki_points": 13,
+        "unarmored_movement": 20
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "diamond-soul"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 8
+        },
+        "ki_points": 14,
+        "unarmored_movement": 25
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [
+        "monk-timeless-body"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 8
+        },
+        "ki_points": 15,
+        "unarmored_movement": 25
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "monk-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 8
+        },
+        "ki_points": 16,
+        "unarmored_movement": 25
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [
+        "monastic-tradition-improvement-3"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 10
+        },
+        "ki_points": 17,
+        "unarmored_movement": 25
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "empty-body"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 10
+        },
+        "ki_points": 18,
+        "unarmored_movement": 30
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "monk-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 10
+        },
+        "ki_points": 19,
+        "unarmored_movement": 30
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "perfect-self"
+      ],
+      "class_specific": {
+        "martial_arts": {
+          "dice_count": 1,
+          "dice_value": 10
+        },
+        "ki_points": 20,
+        "unarmored_movement": 30
+      }
+    }
+  ],
+  "feature_indices": [
+    "monk-unarmored-defense",
+    "martial-arts",
+    "ki",
+    "flurry-of-blows",
+    "patient-defense",
+    "step-of-the-wind",
+    "unarmored-movement-1",
+    "monastic-tradition",
+    "deflect-missiles",
+    "monk-ability-score-improvement-1",
+    "slow-fall",
+    "monk-extra-attack",
+    "stunning-strike",
+    "ki-empowered-strikes",
+    "monastic-tradition-improvement-1",
+    "monk-evasion",
+    "stillness-of-mind",
+    "monk-ability-score-improvement-2",
+    "unarmored-movement-2",
+    "purity-of-body",
+    "monastic-tradition-improvement-2",
+    "monk-ability-score-improvement-3",
+    "tongue-of-the-sun-and-moon",
+    "diamond-soul",
+    "monk-timeless-body",
+    "monk-ability-score-improvement-4",
+    "monastic-tradition-improvement-3",
+    "empty-body",
+    "monk-ability-score-improvement-5",
+    "perfect-self"
+  ]
+}

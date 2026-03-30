@@ -1,0 +1,13 @@
+{
+  "index": "reckless-attack",
+  "name": "Attaque imprudente",
+  "level": 2,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 2, vous pouvez laisser de côté tout souci de défense pour attaquer avec un désespoir féroce. Lorsque vous effectuez votre première attaque à votre tour, vous pouvez décider d'attaquer de manière imprudente. Cela vous donne un avantage sur les jets d'attaque au corps à corps avec une arme en utilisant la Force pendant ce tour, mais les jets d'attaque contre vous ont un avantage jusqu'à votre prochain tour."
+  ],
+  "name_en": "Reckless Attack",
+  "class_name_fr": "",
+  "_translated": true
+}

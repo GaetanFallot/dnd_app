@@ -1,0 +1,13 @@
+{
+  "index": "pact-of-the-chain",
+  "name": "Pacte de la Chaîne",
+  "level": 3,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous apprenez le sort de recherche de familier et pouvez le lancer comme un rituel. Le sort ne compte pas dans votre nombre de sorts connus.\nLorsque vous lancez le sort, vous pouvez choisir l'une des formes normales de votre familier ou l'une des formes spéciales suivantes : diablotin, pseudodragon, quasit ou lutin.\nDe plus, lorsque vous effectuez l'action Attaque, vous pouvez renoncer à l'une de vos propres attaques pour permettre à votre familier de lancer sa propre attaque avec sa réaction.\nVotre familier est plus rusé qu’un familier classique. Sa forme par défaut peut être le reflet de votre patron, avec des diablotins et des quasits liés au Fiend."
+  ],
+  "name_en": "Pact of the Chain",
+  "class_name_fr": "",
+  "_translated": true
+}

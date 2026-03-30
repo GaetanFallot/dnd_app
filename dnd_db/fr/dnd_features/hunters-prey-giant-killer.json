@@ -1,0 +1,13 @@
+{
+  "index": "hunters-prey-giant-killer",
+  "name": "Hunter's Prey : tueur de géants",
+  "level": 3,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Lorsqu'une créature de taille Large ou plus grande à moins de 1,50 mètre de vous vous touche ou vous manque avec une attaque, vous pouvez utiliser votre réaction pour attaquer cette créature immédiatement après son attaque, à condition que vous puissiez voir la créature."
+  ],
+  "name_en": "Hunter's Prey: Giant Killer",
+  "class_name_fr": "",
+  "_translated": true
+}

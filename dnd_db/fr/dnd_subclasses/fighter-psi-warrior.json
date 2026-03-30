@@ -1,0 +1,42 @@
+{
+  "index": "fighter-psi-warrior",
+  "name": "Combattant : Guerrier Psi",
+  "class": "fighter",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Éveillé par le pouvoir psionique intérieur, un guerrier psi est un combattant qui augmente sa puissance physique avec des frappes d'armes infusées psi, des cils télékinésiques et des barrières de force mentale. De nombreux githyanki s’entraînent pour devenir de tels guerriers, tout comme certains des hauts elfes les plus disciplinés. Dans le monde d'Eberron, de nombreux jeunes kalashtar rêvent de devenir des Guerriers Psi.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Pouvoir psionique",
+      "level": 3,
+      "desc": "Au niveau 3, vous abritez en vous une source d’énergie psionique. Cette énergie est représentée par vos dés d’Énergie Psionique, qui sont chacun un d6. Vous disposez d'un nombre de ces dés égal à deux fois votre bonus de maîtrise, et ils alimentent divers pouvoirs psioniques dont vous disposez, qui sont détaillés ci-dessous.\n\nCertains de vos pouvoirs dépensent le dé d'énergie psionique qu'ils utilisent, comme spécifié dans la description d'un pouvoir, et vous ne pouvez pas utiliser un pouvoir s'il nécessite que vous utilisiez un dé lorsque vos dés sont tous dépensés. Vous récupérez tous vos d��s d'énergie psionique dépensés lorsque vous terminez un repos long. De plus, par une action bonus, vous pouvez récupérer un dé d'énergie psionique dépensé, mais vous ne pouvez plus le faire avant d'avoir terminé un repos court ou long.\n\nLorsque vous atteignez certains niveaux dans cette classe, la taille de vos dés d'énergie psionique augmente : au niveau 5 (d8), au niveau 11 (d10) et au niveau 17 (d12).\n\nLes pouvoirs ci-dessous utilisent vos dés d'énergie psionique.\n\nChamp de protection. Lorsque vous ou une autre créature que vous pouvez voir à moins de 9 mètres de vous subissez des dégâts, vous pouvez utiliser votre réaction pour dépenser un dé d'énergie psionique, lancer le dé et réduire les dégâts subis du nombre obtenu plus votre modificateur d'Intelligence (réduction minimale de 1), tout en créant un bouclier momentané de force télékinésique.\n\nFrappe psionique. Vous pouvez propulser vos armes avec une force psionique. Une fois à chacun de vos tours, immédiatement après avoir touché une cible à moins de 9 mètres de vous avec une attaque et lui avoir infligé des dégâts avec une arme, vous pouvez dépenser un dé d'énergie psionique, le lancer et infliger des dégâts de force à la cible égaux au nombre obtenu plus votre modificateur d'Intelligence.\n\nMouvement télékinésique. Vous pouvez déplacer un objet ou une créature avec votre esprit. Par une action, vous ciblez un objet libre de grande taille ou plus petit ou une créature volontaire, autre que vous-même. Si vous pouvez voir la cible et qu'elle se trouve à moins de 9 mètres de vous, vous pouvez la déplacer jusqu'à 9 mètres vers un espace inoccupé que vous pouvez voir. Alternativement, s’il s’agit d’un objet minuscule, vous pouvez le déplacer vers ou depuis votre main. Dans tous les cas, vous pouvez déplacer la cible horizontalement, verticalement ou les deux. Une fois que vous avez effectué cette action, vous ne pouvez plus la refaire jusqu'à ce que vous ayez terminé un repos court ou long, à moins que vous ne dépensiez un dé d'énergie psionique pour la reprendre.",
+      "name_en": "Psionic Power"
+    },
+    {
+      "name": "Adepte télékinésique",
+      "level": null,
+      "desc": "Au niveau 7, vous maîtrisez de nouvelles façons d’utiliser vos capacités télékinésiques, détaillées ci-dessous.\n\nSaut alimenté par le Psi. En guise d’action bonus, vous pouvez propulser votre corps grâce à votre esprit. Vous gagnez une vitesse de vol égale à deux fois votre vitesse de marche jusqu'à la fin du tour en cours. Une fois que vous avez effectué cette action bonus, vous ne pouvez plus la refaire avant d'avoir terminé un repos court ou long, à moins que vous ne dépensiez un dé d'énergie psionique pour la reprendre.\n\nPoussée télékinésique. Lorsque vous infligez des dégâts à une cible avec votre Frappe Psionique, vous pouvez forcer la cible à effectuer un jet de sauvegarde de Force contre un DD égal à 8 + votre bonus de maîtrise + votre modificateur d'Intelligence. Si la sauvegarde échoue, vous pouvez mettre la cible à terre ou la déplacer jusqu'à 10 pieds dans n'importe quelle direction horizontalement.",
+      "name_en": "Telekinetic Adept"
+    },
+    {
+      "name": "Esprit gardé",
+      "level": 10,
+      "desc": "À partir du niveau 10, l’énergie psionique qui vous traverse a renforcé votre esprit. Vous avez une résistance aux dégâts psychiques. De plus, si vous commencez votre tour charmé ou effrayé, vous pouvez dépenser un dé d'énergie psionique et mettre fin à tous les effets sur vous-même en vous soumettant à ces conditions.",
+      "name_en": "Guarded Mind"
+    },
+    {
+      "name": "Rempart de force",
+      "level": 15,
+      "desc": "Au niveau 15, vous pouvez vous protéger et protéger les autres grâce à la force télékinésique. Par une action bonus, vous pouvez choisir des créatures, qui peuvent vous inclure, que vous pouvez voir dans un rayon de 9 mètres autour de vous, jusqu'à un nombre de créatures égal à votre modificateur d'Intelligence (minimum d'une créature). Chacune des créatures choisies est protégée par une demi-couverture pendant 1 minute ou jusqu'à ce que vous soyez incapable d'agir.\n\nUne fois que vous avez effectué cette action bonus, vous ne pouvez plus la refaire avant d'avoir terminé un repos long, à moins que vous ne dépensiez un dé d'énergie psionique pour la reprendre.",
+      "name_en": "Bulwark of Force"
+    },
+    {
+      "name": "Maître télékinésique",
+      "level": 18,
+      "desc": "Au niveau 18, votre capacité à déplacer des créatures et des objets avec votre esprit est rarement égalée. Vous pouvez lancer le sort Télékinésie, ne nécessitant aucun composant, et votre capacité de lancement de sorts pour le sort est l'Intelligence. À chacun de vos tours pendant que vous vous concentrez sur le sort, y compris le tour où vous le lancez, vous pouvez effectuer une attaque avec une arme en guise d'action bonus.\n\nUne fois que vous avez lancé le sort avec cette fonctionnalité, vous ne pouvez plus le refaire avant d'avoir terminé un long repos, à moins que vous ne dépensiez un dé d'énergie psionique pour le lancer à nouveau.",
+      "name_en": "Telekinetic Master"
+    }
+  ],
+  "name_en": "Fighter: Psi Warrior",
+  "_translated": true
+}

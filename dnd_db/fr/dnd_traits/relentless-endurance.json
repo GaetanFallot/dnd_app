@@ -1,0 +1,11 @@
+{
+  "index": "relentless-endurance",
+  "name": "Endurance implacable",
+  "races": [
+    "half-orc"
+  ],
+  "subraces": [],
+  "desc": "Lorsque vous êtes réduit à 0 point de vie mais que vous n'êtes pas complètement tué, vous pouvez tomber à 1 point de vie à la place. vous ne pouvez plus utiliser cette fonctionnalité tant que vous n'avez pas terminé un long repos.",
+  "name_en": "Relentless Endurance",
+  "_translated": true
+}

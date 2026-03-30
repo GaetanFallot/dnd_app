@@ -1,0 +1,12 @@
+{
+  "index": "dragonmark-ua",
+  "name": "Dragonmark (UA)",
+  "source": "Unearthed Arcana 1 - Eberron",
+  "prerequisite": null,
+  "desc": "You have a magical mark that indicates you are a member of one of the dragonmarked houses. Select one of the options from the Dragonmarks table.",
+  "benefits": [
+    "When you first take this feat, you gain the least dragonmark. You learn the spells listed under the Least column.",
+    "At 5th level and higher, your mark becomes more potent, improving to lesser dragonmark. You also learn the spell listed under the Lesser column.",
+    "At 9th level and higher, your mark's power increases again, becoming a greater dragonmark. You also learn the spell listed under the Greater column."
+  ]
+}

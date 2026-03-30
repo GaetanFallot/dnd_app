@@ -1,0 +1,17 @@
+{
+  "index": "athlete",
+  "name": "Background: Athlete",
+  "source": "Mythic Odysseys of Theros",
+  "desc": "You strive to perfect yourself physically and in execution of everything you do. The thrill of competition lights fire in your blood, and the roar of the crowd drives you forward. Tales of your exploits precede you and might open doors or loosen tongues.\n\nWhether in one of the poleis, between them, or among the nonhuman peoples of Theros, physical contests and those who pursue them command respect bordering on reverence. Athletes arise from all walks of life and all cultures and quite often cross paths with one another.\n\nSkill Proficiencies: Acrobatics, Athletics\nLanguages: One of your choice\nTool Proficiencies: Vehicles (Land)\nEquipment: A bronze discus or leather ball, a lucky charm or past trophy, a set of traveler's clothes, and a pouch containing 10 gp",
+  "skill_proficiencies": [
+    "Acrobatics",
+    "Athletics\nLanguages: One of your choice\nTool Proficiencies: Vehicles (Land)\nEquipment: A bronze discus or leather ball",
+    "a lucky charm or past trophy",
+    "a set of traveler's clothes",
+    "and a pouch containing 10 gp"
+  ],
+  "feature": {
+    "name": "Echoes of Victory",
+    "desc": "You have attracted admiration among spectators, fellow athletes, and trainers in the region that hosted your past athletic victories. When visiting any settlement within 100 miles of where you grew up, there is a 50 percent chance you can find someone there who admires you and is willing to provide information and temporary shelter.\n\nBetween adventures, you might compete in athletic events sufficient enough to maintain a comfortable lifestyle, as per the \"Practicing a Profession\" downtime activity in chapter 8 of the Players Handbook."
+  }
+}

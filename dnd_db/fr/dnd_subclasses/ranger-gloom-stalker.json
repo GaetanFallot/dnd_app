@@ -1,0 +1,48 @@
+{
+  "index": "ranger-gloom-stalker",
+  "name": "Ranger : Conclave des Traqueurs Gloom",
+  "class": "ranger",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Les traqueurs de l'obscurité sont chez eux dans les endroits les plus sombres : au plus profond de la terre, dans les ruelles sombres, dans les forêts vierges et partout où la lumière faiblit. La plupart des gens entrent dans de tels endroits avec appréhension, mais un traqueur des ténèbres s'aventure hardiment dans les ténèbres, cherchant à tendre une embuscade aux menaces avant qu'elles n'atteignent le reste du monde. De tels rôdeurs se trouvent souvent dans l'Outreterre, mais ils iront partout où le mal se cache dans l'ombre.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Magie du Traqueur des Ténèbres",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous apprenez un sort supplémentaire lorsque vous atteignez certains niveaux dans cette classe, comme indiqué dans le tableau des sorts de Gloom Stalker. Le sort compte comme un sort de rôdeur pour vous, mais il ne compte pas dans le nombre de sorts de rôdeur que vous connaissez.\nSorts de traqueur des ténèbres\nNiveau Ranger | Sorts\n3ème | Se déguiser\n5ème | Tour de corde\n9ème | Peur\n13e | Une plus grande invisibilité\n17e | Apparent",
+      "name_en": "Gloom Stalker Magic"
+    },
+    {
+      "name": "Embusqué de l'effroi",
+      "level": 3,
+      "desc": "Au niveau 3, vous maîtrisez l'art de l'embuscade. Vous pouvez vous accorder un bonus à vos jets d'initiative égal à votre modificateur de Sagesse.\n\nAu début de votre premier tour de chaque combat, votre vitesse de marche augmente de 3 mètres, et ce jusqu'à la fin de ce tour. Si vous effectuez l'action Attaque à ce tour, vous pouvez effectuer une attaque avec une arme supplémentaire dans le cadre de cette action. Si cette attaque réussit, la cible subit 1d8 dégâts supplémentaires du type de dégâts de l'arme.",
+      "name_en": "Dread Ambusher"
+    },
+    {
+      "name": "Vue ombrale",
+      "level": 3,
+      "desc": "Au niveau 3, vous bénéficiez de la vision dans le noir jusqu'à une portée de 18 mètres. Si vous avez déjà la vision dans le noir de votre race, sa portée augmente de 9 mètres.\n\nVous savez également échapper aux créatures qui dépendent de la vision dans le noir. Dans l'obscurité, vous êtes invisible pour toute créature qui s'appuie sur la vision dans le noir pour vous voir dans cette obscurité.",
+      "name_en": "Umbral Sight"
+    },
+    {
+      "name": "Esprit de fer",
+      "level": 7,
+      "desc": "Au niveau 7, vous avez perfectionné votre capacité à résister aux pouvoirs altérant l’esprit de votre proie. Vous gagnez la maîtrise des jets de sauvegarde de Sagesse. Si vous possédez déjà cette compétence, vous gagnez à la place la maîtrise des jets de sauvegarde d'Intelligence ou de Charisme (au choix).",
+      "name_en": "Iron Mind"
+    },
+    {
+      "name": "Rafale de traqueur",
+      "level": 11,
+      "desc": "Au niveau 11, vous apprenez à attaquer avec une vitesse si inattendue que vous pouvez transformer un échec en une autre frappe. Une fois à chacun de vos tours, lorsque vous ratez une attaque avec une arme, vous pouvez effectuer une autre attaque avec une arme dans le cadre de la même action.",
+      "name_en": "Stalker's Flurry"
+    },
+    {
+      "name": "Esquive ténébreuse",
+      "level": 15,
+      "desc": "À partir du niveau 15, vous pouvez esquiver de manière imprévue, avec des volutes d'ombre surnaturelle autour de vous. Chaque fois qu'une créature effectue un jet d'attaque contre vous et n'a pas d'avantage sur ce jet, vous pouvez utiliser votre réaction pour lui imposer un désavantage. Vous devez utiliser cette fonctionnalité avant de connaître le résultat du jet d'attaque.",
+      "name_en": "Shadowy Dodge"
+    }
+  ],
+  "name_en": "Ranger: Gloom Stalker Conclave",
+  "_translated": true
+}

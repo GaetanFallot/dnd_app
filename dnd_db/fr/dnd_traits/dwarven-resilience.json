@@ -1,0 +1,11 @@
+{
+  "index": "dwarven-resilience",
+  "name": "Résilience naine",
+  "races": [
+    "dwarf"
+  ],
+  "subraces": [],
+  "desc": "Vous avez un avantage aux jets de sauvegarde contre le poison et vous avez une résistance aux dégâts de poison.",
+  "name_en": "Dwarven Resilience",
+  "_translated": true
+}

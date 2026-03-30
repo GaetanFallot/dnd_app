@@ -1,0 +1,18 @@
+{
+  "index": "soldier",
+  "name": "Background: Soldier",
+  "source": "Player's Handbook",
+  "desc": "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war.\n\nWhen you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble's or merchant's private army, or a mercenary company.\n\nSkill Proficiencies: Athletics, Intimidation\nTool Proficiencies: One type of gaming set, vehicles (land)\nLanguages: None\nEquipment: An insignia of rank, a trophy taken from a fallen enemy (a daggerValue:2gp Weight:1lb, broken blade, or piece of a banner), a set of bone diceValue:1sp Weight:0 or a deck of cardsValue:5sp Weight:0, a set of common clothesValue:5sp Weight:3lbs, and a pouchValue:5sp Weight:1lb containing 10gp",
+  "skill_proficiencies": [
+    "Athletics",
+    "Intimidation\nTool Proficiencies: One type of gaming set",
+    "vehicles (land)\nLanguages: None\nEquipment: An insignia of rank",
+    "a trophy taken from a fallen enemy (a daggerValue:2gp Weight:1lb",
+    "broken blade",
+    "or piece of a banner)",
+    "a set of bone diceValue:1sp Weight:0 or a deck of cardsValue:5sp Weight:0",
+    "a set of common clothesValue:5sp Weight:3lbs",
+    "and a pouchValue:5sp Weight:1lb containing 10gp"
+  ],
+  "feature": null
+}

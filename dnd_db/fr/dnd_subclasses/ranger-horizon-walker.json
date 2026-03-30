@@ -1,0 +1,48 @@
+{
+  "index": "ranger-horizon-walker",
+  "name": "Ranger : Conclave Horizon Walker",
+  "class": "ranger",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Les marcheurs de l'horizon protègent le monde contre les menaces provenant d'autres plans ou cherchant à ravager le royaume des mortels avec une magie surnaturelle. Ils recherchent des portails planaires et les surveillent, s'aventurant vers les plans intérieurs et extérieurs selon les besoins pour poursuivre leurs ennemis. Ces rôdeurs sont également les amis de toutes les forces du multivers – en particulier les dragons, les fées et les élémentaires bienveillants – qui s'efforcent de préserver la vie et l'ordre des plans.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Horizon Walker Magie",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous apprenez un sort supplémentaire lorsque vous atteignez certains niveaux dans cette classe, comme indiqué dans le tableau des sorts Horizon Walker. Le sort compte comme un sort de rôdeur pour vous, mais il ne compte pas dans le nombre de sorts de rôdeur que vous connaissez.\nSorts de marcheur de l'horizon\nNiveau Ranger | Sorts\n3ème | Protection contre le mal et le bien\n5ème | Étape brumeuse\n9ème | Hâte\n13e | Bannissement\n17e | Cercle de téléportation",
+      "name_en": "Horizon Walker Magic"
+    },
+    {
+      "name": "Détecter le portail",
+      "level": 3,
+      "desc": "Au niveau 3, vous gagnez la capacité de ressentir par magie la présence d'un portail planaire. Par une action, vous détectez la distance et la direction du portail planaire le plus proche dans un rayon de 1,6 km de vous.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.\n\nVoir la section « Voyage planaire » dans le chapitre 2 du Guide du maître du donjon pour des exemples de portails planaires.",
+      "name_en": "Detect Portal"
+    },
+    {
+      "name": "Guerrier planaire",
+      "level": 3,
+      "desc": "Au niveau 3, vous apprenez à puiser dans l'énergie du multivers pour augmenter vos attaques.\n\nPar une action bonus, choisissez une créature que vous pouvez voir à moins de 9 mètres de vous. La prochaine fois que vous toucherez cette créature ce tour-ci avec une attaque avec une arme, tous les dégâts infligés par l'attaque deviennent des dégâts de force, et la créature subit 1d8 dégâts de force supplémentaires dus à l'attaque. Lorsque vous atteignez le niveau 11 dans cette classe, les dégâts supplémentaires passent à 2d8.",
+      "name_en": "Planar Warrior"
+    },
+    {
+      "name": "Étape éthérée",
+      "level": 7,
+      "desc": "Au niveau 7, vous apprenez à traverser le plan Éthéré. Par une action bonus lors de votre tour, vous pouvez lancer le sort Éthéré avec cette fonctionnalité, sans dépenser d'emplacement de sort, mais le sort se termine à la fin du tour en cours.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un repos court ou long.",
+      "name_en": "Ethereal Step"
+    },
+    {
+      "name": "Frappe à distance",
+      "level": 11,
+      "desc": "Au niveau 11, vous gagnez la capacité de passer entre les plans en un clin d'œil. Lorsque vous utilisez l'action Attaque, vous pouvez vous téléporter jusqu'à 3 mètres avant chaque attaque dans un espace inoccupé que vous pouvez voir.\n\nSi vous attaquez au moins deux créatures différentes avec l'action, vous pouvez effectuer une attaque supplémentaire contre une troisième créature.",
+      "name_en": "Distant Strike"
+    },
+    {
+      "name": "Défense spectrale",
+      "level": 15,
+      "desc": "Au niveau 15, votre capacité à vous déplacer entre les plans vous permet de vous faufiler à travers les limites planaires pour réduire les dégâts qui vous sont causés pendant la bataille. Lorsque vous subissez des dégâts suite à une attaque, vous pouvez utiliser votre réaction pour vous conférer une résistance à tous les dégâts de cette attaque pendant ce tour.",
+      "name_en": "Spectral Defense"
+    }
+  ],
+  "name_en": "Ranger: Horizon Walker Conclave",
+  "_translated": true
+}

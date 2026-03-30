@@ -1,0 +1,13 @@
+{
+  "index": "multiattack-volley",
+  "name": "Multi-attaque : Volée",
+  "level": 11,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Vous pouvez utiliser votre action pour effectuer une attaque à distance contre n'importe quel nombre de créatures à moins de 3 mètres d'un point que vous pouvez voir à portée de votre arme. Vous devez avoir des munitions pour chaque cible, comme d'habitude, et vous effectuez un jet d'attaque séparé pour chaque cible."
+  ],
+  "name_en": "Multiattack: Volley",
+  "class_name_fr": "",
+  "_translated": true
+}

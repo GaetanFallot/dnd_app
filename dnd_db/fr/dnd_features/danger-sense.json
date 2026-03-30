@@ -1,0 +1,13 @@
+{
+  "index": "danger-sense",
+  "name": "Sens du danger",
+  "level": 2,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "Au niveau 2, vous ressentez étrangement quand les choses à proximité ne sont pas comme elles devraient l'être, ce qui vous donne un avantage lorsque vous esquivez le danger. Vous avez un avantage aux jets de sauvegarde de Dextérité contre les effets que vous pouvez voir, comme les pièges et les sorts. Pour bénéficier de cet avantage, vous ne pouvez pas être aveuglé, devenu sourd ou incapable d'agir."
+  ],
+  "name_en": "Danger Sense",
+  "class_name_fr": "",
+  "_translated": true
+}

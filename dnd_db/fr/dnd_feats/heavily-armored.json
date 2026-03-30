@@ -1,0 +1,13 @@
+{
+  "index": "heavily-armored",
+  "name": "Lourdement blindé",
+  "source": "Player's Handbook",
+  "prerequisite": "Maîtrise de l'armure moyenne",
+  "desc": "Vous vous êtes entraîné à maîtriser l'utilisation des armures lourdes, bénéficiant ainsi des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Force de 1, jusqu'à un maximum de 20.",
+    "Vous gagnez en maîtrise des armures lourdes."
+  ],
+  "name_en": "Heavily Armored",
+  "_translated": true
+}

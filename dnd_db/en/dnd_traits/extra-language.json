@@ -1,0 +1,9 @@
+{
+  "index": "extra-language",
+  "name": "Extra Language",
+  "races": [],
+  "subraces": [
+    "high-elf"
+  ],
+  "desc": "You can speak, read, and write one extra language of your choice."
+}

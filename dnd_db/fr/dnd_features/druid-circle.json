@@ -1,0 +1,13 @@
+{
+  "index": "druid-circle",
+  "name": "Cercle des Druides",
+  "level": 2,
+  "class": "druid",
+  "subclass": null,
+  "desc": [
+    "Au niveau 2, vous choisissez de vous identifier à un cercle de druides, comme le Cercle de la Terre. Votre choix vous accorde des fonctionnalités au niveau 2, puis aux niveaux 6, 10 et 14."
+  ],
+  "name_en": "Druid Circle",
+  "class_name_fr": "",
+  "_translated": true
+}

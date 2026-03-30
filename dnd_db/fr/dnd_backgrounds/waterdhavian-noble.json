@@ -1,0 +1,15 @@
+{
+  "index": "waterdhavian-noble",
+  "name": "Background: Waterdhavian Noble",
+  "source": "Sword Coast Adventurer's Guide",
+  "desc": "You are a scion of one of the great noble families of Waterdeep. Human families who jealously guard their privilege and place in the City of Splendors, Waterdhavian nobles have a reputation across Faerûn for being eccentric, spoiled, venal, and, above all else, rich.\n\nWhether you are a shining example of the reason for this reputation or one who proves the rule by being an exception, people expect things of you when they know your surname and what it means. Your reasons for taking up adventuring likely involve your family in some way: Are you the family rebel, who prefers delving in filthy dungeons to sipping zzar at a ball? Or have you taken up sword or spell on your family's behalf, ensuring that they have someone of renown to see to their legacy?\n\nWork with your DM to come up with the family you are part of – there are around seventy-five lineages in Waterdeep, each with its own financial interests, specialties, and schemes. You might be part of the main line of your family, possibly in line to become its leader one day. Or you might be one of any number of cousins, with less prestige but also less responsibility.\n\nSkill Proficiencies: History, Persuasion\nTool Proficiencies: One type of gaming set or one musical instrument\nLanguages: One of your choice\nEquipment: A set of fine clothesValue:15gp Weight:6lbs, a signet ringValue:5gp Weight:0 or brooch, a scroll of pedigree, a skinValue:2sp Weight:1lb (for the empty skin itself) of fine zzar or wine, and a purse containing 20gp",
+  "skill_proficiencies": [
+    "History",
+    "Persuasion\nTool Proficiencies: One type of gaming set or one musical instrument\nLanguages: One of your choice\nEquipment: A set of fine clothesValue:15gp Weight:6lbs",
+    "a signet ringValue:5gp Weight:0 or brooch",
+    "a scroll of pedigree",
+    "a skinValue:2sp Weight:1lb (for the empty skin itself) of fine zzar or wine",
+    "and a purse containing 20gp"
+  ],
+  "feature": null
+}

@@ -1,0 +1,16 @@
+{
+  "index": "inheritor",
+  "name": "Background: Inheritor",
+  "source": "Sword Coast Adventurer's Guide",
+  "desc": "You are the heir to something of great value – not mere coin or wealth, but an object that has been entrusted to you and you alone. Your inheritance might have come directly to you from a member of your family, by right of birth, or it could have been left to you by a friend, a mentor, a teacher, or someone else important in your life. The revelation of your inheritance changed your life, and might have set you on the path to adventure, but it could also come with many dangers, including those who covet your gift and want to take it from you – by force, if need be.\n\nSkill Proficiencies: Survival, plus one from among Arcana, History, and Religion\nTool Proficiencies: Your choice of a gaming set or a musical instrument\nLanguages: Any one of your choice\nEquipment: Your inheritance, a set of traveler's clothesValue:2gp Weight:4lbs, the tool you choose for this background’s tool proficiency, and a pouchValue:5sp Weight:1lb containing 15gp",
+  "skill_proficiencies": [
+    "Survival",
+    "plus one from among Arcana",
+    "History",
+    "and Religion\nTool Proficiencies: Your choice of a gaming set or a musical instrument\nLanguages: Any one of your choice\nEquipment: Your inheritance",
+    "a set of traveler's clothesValue:2gp Weight:4lbs",
+    "the tool you choose for this background’s tool proficiency",
+    "and a pouchValue:5sp Weight:1lb containing 15gp"
+  ],
+  "feature": null
+}

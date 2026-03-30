@@ -1,0 +1,11 @@
+{
+  "index": "draconic-ancestry-copper",
+  "name": "Ascendance draconique (cuivre)",
+  "races": [
+    "dragonborn"
+  ],
+  "subraces": [],
+  "desc": "Vous avez une ascendance draconique. Choisissez un type de dragon dans le tableau Draconic Ancestry. Votre souffle et votre résistance aux dégâts sont déterminés par le type de dragon, comme indiqué dans le tableau.",
+  "name_en": "Draconic Ancestry (Copper)",
+  "_translated": true
+}

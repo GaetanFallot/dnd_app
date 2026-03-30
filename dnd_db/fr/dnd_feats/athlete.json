@@ -1,0 +1,15 @@
+{
+  "index": "athlete",
+  "name": "Athlète",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous avez suivi un entraînement physique approfondi pour bénéficier des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Force ou de Dextérité de 1, jusqu'à un maximum de 20.",
+    "Lorsque vous êtes couché, vous lever n’utilise que 5 pieds de votre mouvement.",
+    "L'escalade ne vous coûte pas de mouvement supplémentaire.",
+    "Vous pouvez faire un saut en longueur ou un saut en hauteur après avoir bougé de seulement 5 pieds à pied, au lieu de 10 pieds."
+  ],
+  "name_en": "Athlete",
+  "_translated": true
+}

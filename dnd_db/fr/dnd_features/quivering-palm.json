@@ -1,0 +1,13 @@
+{
+  "index": "quivering-palm",
+  "name": "Paume frémissante",
+  "level": 17,
+  "class": "monk",
+  "subclass": "open-hand",
+  "desc": [
+    "Au niveau 17, vous obtenez la capacité de créer des vibrations mortelles dans le corps de quelqu'un. Lorsque vous frappez une créature avec une frappe à mains nues, vous pouvez dépenser 3 points de ki pour déclencher ces vibrations imperceptibles, qui durent un nombre de jours égal à votre niveau de moine. Les vibrations sont inoffensives à moins que vous n'utilisiez votre action pour y mettre fin. Pour ce faire, vous et la cible devez être sur le même plan d’existence. Lorsque vous utilisez cette action, la créature doit effectuer un jet de sauvegarde de Constitution. En cas d'échec, il est réduit à 0 point de vie. S'il réussit, il subit 10d10 dégâts nécrotiques.\nVous ne pouvez avoir qu'une seule créature sous l'effet de cette fonctionnalité à la fois. Vous pouvez choisir de mettre fin aux vibrations de manière inoffensive sans recourir à une action."
+  ],
+  "name_en": "Quivering Palm",
+  "class_name_fr": "",
+  "_translated": true
+}

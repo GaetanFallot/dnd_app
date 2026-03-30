@@ -1,0 +1,13 @@
+{
+  "index": "archdruid",
+  "name": "Archidruide",
+  "level": 20,
+  "class": "druid",
+  "subclass": null,
+  "desc": [
+    "Au niveau 20, vous pouvez utiliser votre Wild Shape un nombre illimité de fois.\nDe plus, vous pouvez ignorer les composantes verbales et somatiques de vos sorts de druide, ainsi que toutes les composantes matérielles qui n'ont pas de coût et ne sont pas consommées par un sort. Vous bénéficiez de cet avantage à la fois dans votre forme normale et dans votre forme de bête grâce à Wild Shape."
+  ],
+  "name_en": "Archdruid",
+  "class_name_fr": "",
+  "_translated": true
+}

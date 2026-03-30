@@ -1,0 +1,13 @@
+{
+  "index": "spellcasting-paladin",
+  "name": "Lancement de sorts : Paladin",
+  "level": 2,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Au niveau 2, vous avez appris à faire appel à la magie divine par la méditation et la prière pour lancer des sorts comme le fait un clerc."
+  ],
+  "name_en": "Spellcasting: Paladin",
+  "class_name_fr": "",
+  "_translated": true
+}

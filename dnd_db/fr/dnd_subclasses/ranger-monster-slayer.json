@@ -1,0 +1,48 @@
+{
+  "index": "ranger-monster-slayer",
+  "name": "Ranger : Conclave des tueurs de monstres",
+  "class": "ranger",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Vous vous êtes consacré à traquer les créatures de la nuit et les détenteurs de magie sinistre. Un tueur de monstres recherche des vampires, des dragons, des fées maléfiques, des démons et d'autres menaces magiques. Formés aux techniques surnaturelles pour vaincre de tels monstres, les tueurs sont experts dans l’art de déterrer et de vaincre de puissants ennemis mystiques.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Magie du tueur de monstres",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous apprenez un sort supplémentaire lorsque vous atteignez certains niveaux dans cette classe, comme indiqué dans le tableau des sorts de Monster Slayer. Le sort compte comme un sort de rôdeur pour vous, mais il ne compte pas dans le nombre de sorts de rôdeur que vous connaissez.\nSorts de tueur de monstres\nNiveau Ranger | Sorts\n3ème | Protection contre le mal et le bien\n5ème | Zone de vérité\n9ème | Cercle magique\n13e | Bannissement\n17e | Tenir le monstre",
+      "name_en": "Monster Slayer Magic"
+    },
+    {
+      "name": "Le sens du chasseur",
+      "level": 3,
+      "desc": "Au niveau 3, vous gagnez la capacité d'observer une créature et de discerner par magie la meilleure façon de la blesser. Par une action, choisissez une créature que vous pouvez voir à moins de 60 pieds de vous. Vous saurez immédiatement si la créature possède des immunités aux dégâts, des résistances ou des vulnérabilités et de quoi il s'agit. Si la créature est cachée à la magie divinatoire, vous sentez qu’elle n’a aucune immunité aux dégâts, aucune résistance ou vulnérabilité.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Sagesse (au minimum une fois). Vous en récupérez toutes les utilisations dépensées lorsque vous terminez un long repos.",
+      "name_en": "Hunter's Sense"
+    },
+    {
+      "name": "La proie du tueur",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous pouvez concentrer votre colère sur un ennemi, augmentant ainsi les dégâts que vous lui infligez. Par une action bonus, vous désignez une créature que vous pouvez voir dans un rayon de 20 mètres autour de vous comme cible de cette fonctionnalité. La première fois à chaque tour que vous touchez cette cible avec une attaque avec une arme, l'arme lui inflige 1d6 dégâts supplémentaires.\n\nCet avantage dure jusqu'à la fin d'un repos court ou long. Cela se termine plus tôt si vous désignez une créature différente.",
+      "name_en": "Slayer's Prey"
+    },
+    {
+      "name": "Défense surnaturelle",
+      "level": 7,
+      "desc": "Au niveau 7, vous gagnez une résilience supplémentaire contre les assauts de vos proies sur votre esprit et votre corps. Chaque fois que la cible de votre Slayer's Prey vous oblige à effectuer un jet de sauvegarde et chaque fois que vous effectuez un test de capacité pour échapper au grappin de cette cible, ajoutez 1d6 à votre jet.",
+      "name_en": "Supernatural Defense"
+    },
+    {
+      "name": "Némésis du magicien",
+      "level": 11,
+      "desc": "Au niveau 11, vous acquérez la capacité de contrecarrer la magie de quelqu'un d'autre. Lorsque vous voyez une créature lancer un sort ou se téléporter à moins de 20 mètres de vous, vous pouvez utiliser votre réaction pour essayer de la déjouer comme par magie. La créature doit réussir un jet de sauvegarde de Sagesse contre votre DD de sauvegarde de sort, sinon son sort ou sa téléportation échoue et est gaspillé.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Magic-User's Nemesis"
+    },
+    {
+      "name": "Compteur de tueur",
+      "level": 15,
+      "desc": "Au niveau 15, vous gagnez la capacité de contre-attaquer lorsque votre proie tente de vous saboter. Si la cible de votre proie de tueur vous oblige à effectuer un jet de sauvegarde, vous pouvez utiliser votre réaction pour effectuer une attaque avec une arme contre la proie. Vous effectuez cette attaque immédiatement avant d'effectuer le jet de sauvegarde. Si l’attaque réussit, votre sauvegarde réussit automatiquement, en plus des effets normaux de l’attaque.",
+      "name_en": "Slayer's Counter"
+    }
+  ],
+  "name_en": "Ranger: Monster Slayer Conclave",
+  "_translated": true
+}

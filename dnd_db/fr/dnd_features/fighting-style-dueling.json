@@ -1,0 +1,13 @@
+{
+  "index": "fighting-style-dueling",
+  "name": "Style de combat : Duel",
+  "level": 2,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous maniez une arme de mêlée dans une main et aucune autre arme, vous gagnez un bonus de +2 aux jets de dégâts avec cette arme."
+  ],
+  "name_en": "Fighting Style: Dueling",
+  "class_name_fr": "",
+  "_translated": true
+}

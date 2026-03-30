@@ -1,0 +1,13 @@
+{
+  "index": "channel-divinity-turn-the-unholy",
+  "name": "Channel Divinity : transformez l'impie",
+  "level": 3,
+  "class": "paladin",
+  "subclass": "devotion",
+  "desc": [
+    "En guise d'action, vous présentez votre symbole sacré et prononcez une prière censurant les démons et les morts-vivants, en utilisant votre canal divinité. Chaque démon ou mort-vivant qui peut vous voir ou vous entendre dans un rayon de 9 mètres autour de vous doit effectuer un jet de sauvegarde de Sagesse. Si la créature échoue à son jet de sauvegarde, elle est retournée pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts.\nUne créature transformée doit passer son tour à essayer de s'éloigner le plus possible de vous, et elle ne peut pas volontairement se déplacer vers un espace situé à moins de 9 mètres de vous. Il ne peut pas non plus accepter de réactions. Pour son action, il peut utiliser uniquement l'action Dash ou tenter d'échapper à un effet qui l'empêche de bouger. S'il n'y a nulle part où se déplacer, la créature peut utiliser l'action Esquiver."
+  ],
+  "name_en": "Channel Divinity: Turn the Unholy",
+  "class_name_fr": "",
+  "_translated": true
+}

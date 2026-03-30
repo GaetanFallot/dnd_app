@@ -1,0 +1,13 @@
+{
+  "index": "survivor",
+  "name": "Survivant",
+  "level": 18,
+  "class": "fighter",
+  "subclass": "champion",
+  "desc": [
+    "Au niveau 18, vous atteignez le summum de la résilience au combat. Au début de chacun de vos tours, vous récupérez des points de vie égaux à 5 + votre modificateur de Constitution s'il ne vous reste plus que la moitié de vos points de vie. Vous ne bénéficiez pas de cet avantage si vous avez 0 point de vie."
+  ],
+  "name_en": "Survivor",
+  "class_name_fr": "",
+  "_translated": true
+}

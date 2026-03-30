@@ -1,0 +1,13 @@
+{
+  "index": "ranger-archetype",
+  "name": "Archétype du Ranger",
+  "level": 3,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "Au niveau 3, vous choisissez un archétype que vous vous efforcez d'imiter, comme le Chasseur. Votre choix vous accorde des fonctionnalités au niveau 3 et à nouveau aux niveaux 7, 11 et 15."
+  ],
+  "name_en": "Ranger Archetype",
+  "class_name_fr": "",
+  "_translated": true
+}

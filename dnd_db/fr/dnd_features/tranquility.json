@@ -1,0 +1,13 @@
+{
+  "index": "tranquility",
+  "name": "Tranquillité",
+  "level": 11,
+  "class": "monk",
+  "subclass": "open-hand",
+  "desc": [
+    "À partir du niveau 11, vous pouvez entrer dans une méditation spéciale qui vous entoure d’une aura de paix. À la fin d'un repos long, vous bénéficiez de l'effet d'un sort de sanctuaire qui dure jusqu'au début de votre prochain repos long (le sort peut se terminer plus tôt que d'habitude). Le DD du jet de sauvegarde du sort est égal à 8 + votre modificateur de Sagesse + votre bonus de maîtrise."
+  ],
+  "name_en": "Tranquility",
+  "class_name_fr": "",
+  "_translated": true
+}

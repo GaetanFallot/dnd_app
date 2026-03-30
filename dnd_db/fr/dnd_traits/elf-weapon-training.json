@@ -1,0 +1,11 @@
+{
+  "index": "elf-weapon-training",
+  "name": "Entraînement aux armes des elfes",
+  "races": [],
+  "subraces": [
+    "high-elf"
+  ],
+  "desc": "Vous maîtrisez l’épée longue, l’épée courte, l’arc court et l’arc long.",
+  "name_en": "Elf Weapon Training",
+  "_translated": true
+}

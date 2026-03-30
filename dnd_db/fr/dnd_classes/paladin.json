@@ -1,0 +1,274 @@
+{
+  "index": "paladin",
+  "name": "Paladin",
+  "hit_die": 10,
+  "proficiencies": [
+    "All armor",
+    "Shields",
+    "Simple Weapons",
+    "Martial Weapons",
+    "Saving Throw: WIS",
+    "Saving Throw: CHA"
+  ],
+  "saving_throws": [
+    "WIS",
+    "CHA"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion",
+      "choose": 2,
+      "options": [
+        "Skill: Athletics",
+        "Skill: Insight",
+        "Skill: Intimidation",
+        "Skill: Medicine",
+        "Skill: Persuasion",
+        "Skill: Religion"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "chain-mail",
+        "name": "Chain Mail",
+        "url": "/api/2014/equipment/chain-mail"
+      },
+      "quantity": 1
+    }
+  ],
+  "subclasses": [
+    "devotion"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "divine-sense",
+        "lay-on-hands"
+      ],
+      "class_specific": {
+        "aura_range": 0
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "paladin-fighting-style",
+        "spellcasting-paladin",
+        "divine-smite"
+      ],
+      "class_specific": {
+        "aura_range": 0
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "divine-health",
+        "sacred-oath",
+        "oath-spells",
+        "channel-divinity"
+      ],
+      "class_specific": {
+        "aura_range": 0
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "paladin-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "aura_range": 0
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [
+        "paladin-extra-attack"
+      ],
+      "class_specific": {
+        "aura_range": 0
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "aura-of-protection"
+      ],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [
+        "sacred-oath-improvement-1"
+      ],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "paladin-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "aura-of-courage"
+      ],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [
+        "improved-divine-smite"
+      ],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "paladin-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "cleansing-touch"
+      ],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [
+        "sacred-oath-improvement-2"
+      ],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "paladin-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [],
+      "class_specific": {
+        "aura_range": 10
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "aura-improvements"
+      ],
+      "class_specific": {
+        "aura_range": 30
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "paladin-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "aura_range": 30
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "sacred-oath-improvement-3"
+      ],
+      "class_specific": {
+        "aura_range": 30
+      }
+    }
+  ],
+  "feature_indices": [
+    "divine-sense",
+    "lay-on-hands",
+    "paladin-fighting-style",
+    "spellcasting-paladin",
+    "divine-smite",
+    "divine-health",
+    "sacred-oath",
+    "oath-spells",
+    "channel-divinity",
+    "paladin-ability-score-improvement-1",
+    "paladin-extra-attack",
+    "aura-of-protection",
+    "sacred-oath-improvement-1",
+    "paladin-ability-score-improvement-2",
+    "aura-of-courage",
+    "improved-divine-smite",
+    "paladin-ability-score-improvement-3",
+    "cleansing-touch",
+    "sacred-oath-improvement-2",
+    "paladin-ability-score-improvement-4",
+    "aura-improvements",
+    "paladin-ability-score-improvement-5",
+    "sacred-oath-improvement-3"
+  ],
+  "name_en": "Paladin",
+  "desc": "",
+  "_translated": true
+}

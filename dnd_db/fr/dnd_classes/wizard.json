@@ -1,0 +1,250 @@
+{
+  "index": "wizard",
+  "name": "Magicien",
+  "hit_die": 6,
+  "proficiencies": [
+    "Daggers",
+    "Darts",
+    "Slings",
+    "Quarterstaffs",
+    "Crossbows, light",
+    "Saving Throw: INT",
+    "Saving Throw: WIS"
+  ],
+  "saving_throws": [
+    "INT",
+    "WIS"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion",
+      "choose": 2,
+      "options": [
+        "Skill: Arcana",
+        "Skill: History",
+        "Skill: Insight",
+        "Skill: Investigation",
+        "Skill: Medicine",
+        "Skill: Religion"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "spellbook",
+        "name": "Spellbook",
+        "url": "/api/2014/equipment/spellbook"
+      },
+      "quantity": 1
+    }
+  ],
+  "subclasses": [
+    "evocation"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "spellcasting-wizard",
+        "arcane-recovery"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 1
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "arcane-tradition"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 1
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [],
+      "class_specific": {
+        "arcane_recovery_levels": 2
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "wizard-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 2
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [],
+      "class_specific": {
+        "arcane_recovery_levels": 3
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "arcane-tradition-improvement-1"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 3
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [],
+      "class_specific": {
+        "arcane_recovery_levels": 4
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "wizard-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 4
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "arcane_recovery_levels": 5
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "arcane-tradition-improvement-2"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 5
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "arcane_recovery_levels": 6
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "wizard-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 6
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "arcane_recovery_levels": 7
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "arcane-tradition-improvement-3"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 7
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "arcane_recovery_levels": 8
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "wizard-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 8
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [],
+      "class_specific": {
+        "arcane_recovery_levels": 9
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "spell-mastery"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 9
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "wizard-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 10
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "signature-spell"
+      ],
+      "class_specific": {
+        "arcane_recovery_levels": 10
+      }
+    }
+  ],
+  "feature_indices": [
+    "spellcasting-wizard",
+    "arcane-recovery",
+    "arcane-tradition",
+    "wizard-ability-score-improvement-1",
+    "arcane-tradition-improvement-1",
+    "wizard-ability-score-improvement-2",
+    "arcane-tradition-improvement-2",
+    "wizard-ability-score-improvement-3",
+    "arcane-tradition-improvement-3",
+    "wizard-ability-score-improvement-4",
+    "spell-mastery",
+    "wizard-ability-score-improvement-5",
+    "signature-spell"
+  ],
+  "name_en": "Wizard",
+  "desc": "",
+  "_translated": true
+}

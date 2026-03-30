@@ -1,0 +1,13 @@
+{
+  "index": "deflect-missiles",
+  "name": "Dévier les missiles",
+  "level": 3,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 3, vous pouvez utiliser votre réaction pour dévier ou attraper le missile lorsque vous êtes touché par une attaque avec une arme à distance. Lorsque vous faites cela, les dégâts que vous subissez de l'attaque sont réduits de 1d10 + votre modificateur de Dextérité + votre niveau de moine.\nSi vous réduisez les dégâts à 0, vous pouvez attraper le missile s'il est suffisamment petit pour que vous puissiez le tenir dans une main et que vous avez au moins une main libre. Si vous attrapez un missile de cette manière, vous pouvez dépenser 1 point ki pour effectuer une attaque à distance avec l'arme ou la munition que vous venez d'attraper, dans le cadre de la même réaction. Vous effectuez cette attaque avec compétence, quelle que soit votre maîtrise des armes, et le missile compte comme une arme de moine pour l'attaque, qui a une portée normale de 20 pieds et une longue portée de 60 pieds."
+  ],
+  "name_en": "Deflect Missiles",
+  "class_name_fr": "",
+  "_translated": true
+}

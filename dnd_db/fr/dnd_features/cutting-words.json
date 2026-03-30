@@ -1,0 +1,13 @@
+{
+  "index": "cutting-words",
+  "name": "Couper les mots",
+  "level": 3,
+  "class": "bard",
+  "subclass": "lore",
+  "desc": [
+    "Au niveau 3 également, vous apprenez à utiliser votre esprit pour distraire, confondre et saper la confiance et la compétence des autres.\nLorsqu'une créature que vous pouvez voir à moins de 60 pieds de vous effectue un jet d'attaque, un test de capacité ou un jet de dégâts, vous pouvez utiliser votre réaction pour dépenser l'une de vos utilisations d'Inspiration bardique, en lançant un dé d'Inspiration bardique et en soustrayant le nombre obtenu au jet de la créature.\nVous pouvez choisir d'utiliser cette fonctionnalité après que la créature a effectué son jet, mais avant que le MJ ne détermine si le jet d'attaque ou le test de capacité réussit ou échoue, ou avant que la créature n'inflige ses blessures. La créature est immunisée si elle ne peut pas vous entendre ou si elle est immunisée contre les charmes."
+  ],
+  "name_en": "Cutting Words",
+  "class_name_fr": "",
+  "_translated": true
+}

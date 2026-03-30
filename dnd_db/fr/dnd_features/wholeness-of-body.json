@@ -1,0 +1,13 @@
+{
+  "index": "wholeness-of-body",
+  "name": "Intégrité du corps",
+  "level": 6,
+  "class": "monk",
+  "subclass": "open-hand",
+  "desc": [
+    "Au niveau 6, vous gagnez la capacité de vous soigner. Par une action, vous pouvez récupérer des points de vie égaux à trois fois votre niveau de moine. Vous devez terminer un long repos avant de pouvoir utiliser à nouveau cette fonctionnalité."
+  ],
+  "name_en": "Wholeness of Body",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "dragon-fear",
+  "name": "Peur du dragon",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Enfant de Dragon",
+  "desc": "Lorsque vous êtes en colère, vous rayonnez de menace. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Force, de Constitution ou de Charisme de 1, jusqu'à un maximum de 20.",
+    "Au lieu d'expirer de l'énergie destructrice, vous pouvez utiliser votre trait Souffle pour rugir, forçant chaque créature de votre choix à moins de 9 mètres de vous à effectuer un jet de sauvegarde de Sagesse (DD 8 + votre bonus de maîtrise + votre modificateur de Charisme). Une cible réussit automatiquement la sauvegarde si elle ne peut pas vous entendre ou vous voir. En cas d'échec, la cible devient effrayée pendant 1 minute. Si la cible effrayée subit des dégâts, elle peut répéter le jet de sauvegarde, mettant ainsi fin à l'effet sur elle-même en cas de réussite."
+  ],
+  "name_en": "Dragon Fear",
+  "_translated": true
+}

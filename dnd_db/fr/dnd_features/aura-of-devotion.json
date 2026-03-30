@@ -1,0 +1,13 @@
+{
+  "index": "aura-of-devotion",
+  "name": "Aura de dévotion",
+  "level": 7,
+  "class": "paladin",
+  "subclass": "devotion",
+  "desc": [
+    "À partir du niveau 7, vous et les créatures amies situées à moins de 3 mètres de vous ne pouvez plus être charmés tant que vous êtes conscient.\nAu niveau 18, la portée de cette aura passe à 9 mètres."
+  ],
+  "name_en": "Aura of Devotion",
+  "class_name_fr": "",
+  "_translated": true
+}

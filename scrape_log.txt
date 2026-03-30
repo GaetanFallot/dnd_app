@@ -1,0 +1,497 @@
+╔════════════════════════════════════════╗
+║  D&D 5e Wikidot Scraper                ║
+║  Feats · Subclasses · Classes          ║
+║  Races · Backgrounds                   ║
+╚════════════════════════════════════════╝
+
+  Rate limited to 1 req/sec. Large runs will take time.
+  Safe to interrupt (Ctrl+C) and resume any time.
+
+  ℹ️  Using cached sitemap (delete dnd_db/_wikidot_sitemap.json to refresh)
+
+  Categorised: 201 feats, 244 subclasses, 12 classes, 9 races, 102 backgrounds
+
+⭐ Scraping 201 feat pages...
+  ⏭    1/201  (1 skipped)  aberrant-dragonmark                  ⭐   2/201  acrobat                              ⚠ feat:acrobat                        skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⏭    3/201  (2 skipped)  actor                                ⭐   4/201  adept-of-the-black-robes             ⚠ feat:adept-of-the-black-robes       skipped (Dragonlance: Shadow of the Dragon Queen)
+  ⭐   5/201  adept-of-the-black-robes-ua          ⚠ feat:adept-of-the-black-robes-ua    skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⭐   6/201  adept-of-the-red-robes               ⚠ feat:adept-of-the-red-robes         skipped (Dragonlance: Shadow of the Dragon Queen)
+  ⭐   7/201  adept-of-the-red-robes-ua            ⚠ feat:adept-of-the-red-robes-ua      skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⭐   8/201  adept-of-the-white-robes             ⚠ feat:adept-of-the-white-robes       skipped (Dragonlance: Shadow of the Dragon Queen)
+  ⭐   9/201  adept-of-the-white-robes-ua          ⚠ feat:adept-of-the-white-robes-ua    skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⭐  10/201  aerenia-halflife                     ⚠ feat:aerenia-halflife               skipped (Exploring Ebberon)
+  ⭐  11/201  agent-of-order                       ⚠ feat:agent-of-order                 skipped (Planescape - Adventures in the Multiverse.)
+  ⭐  12/201  agent-of-order-ua                    ⚠ feat:agent-of-order-ua              skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐  13/201  alchemist                            ⚠ feat:alchemist                      skipped (Unearthed Arcana 15 - Feats)
+  ⏭   14/201  (3 skipped)  alert                                ⭐  15/201  animal-handler                       ⚠ feat:animal-handler                 skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐  16/201  arcanist                             ⚠ feat:arcanist                       skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⏭   17/201  (4 skipped)  artificer-initiate                   ⏭   18/201  (5 skipped)  athlete                              ⭐  19/201  baleful-scion                        ⚠ feat:baleful-scion                  skipped (Planescape - Adventures in the Multiverse)
+  ⭐  20/201  baleful-scion-ua                     ⚠ feat:baleful-scion-ua               skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐  21/201  barbed-hide                          ⚠ feat:barbed-hide                    skipped (Unearthed Arcana 39 - Feats for Races)
+  ⭐  22/201  blade-mastery                        ⚠ feat:blade-mastery                  skipped (Unearthed Arcana 15 - Feats)
+  ⏭   23/201  (6 skipped)  bountiful-luck                       ⭐  24/201  brawny                               ⚠ feat:brawny                         skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐  25/201  burglar                              ⚠ feat:burglar                        skipped (Unearthed Arcana 15 - Feats)
+  ⭐  26/201  cartomancer                          ⚠ feat:cartomancer                    skipped (The Book of Many Things)
+  ⭐  27/201  cartomancer-ua                       ⚠ feat:cartomancer-ua                 skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⏭   28/201  (7 skipped)  charger                              ⏭   29/201  (8 skipped)  chef                                 ⭐  30/201  cohort-of-chaos                      ⚠ feat:cohort-of-chaos                skipped (Planescape - Adventures in the Multiverse)
+  ⭐  31/201  cohort-of-chaos-ua                   ⚠ feat:cohort-of-chaos-ua             skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐  32/201  critter-friend                       ⚠ feat:critter-friend                 skipped (Unearthed Arcana 39 - Feats for Races)
+  ⏭   33/201  (9 skipped)  crossbow-expert                      ⭐  34/201  cruel                                ⚠ feat:cruel                          skipped (Tal'Dorei Campaign Setting Reborn)
+  ⏭   35/201  (10 skipped)  crusher                              ⏭   36/201  (11 skipped)  defensive-duelist                    ⭐  37/201  diplomat                             ⚠ feat:diplomat                       skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐  38/201  divine-communications-ua             ⚠ feat:divine-communications-ua       skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⭐  39/201  divinely-favored                     ⚠ feat:divinely-favored               skipped (Dragonlance: Shadow of the Dragon Queen)
+  ⭐  40/201  divinely-favored-ua                  ⚠ feat:divinely-favored-ua            skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⏭   41/201  (12 skipped)  dragon-fear                          ⏭   42/201  (13 skipped)  dragon-hide                          ⭐  43/201  dragon-wings                         ⚠ feat:dragon-wings                   skipped (Unearthed Arcana 39 - Feats for Races)
+  ⏭   44/201  (14 skipped)  dragonmark-ua                        ⏭   45/201  (15 skipped)  drow-high-magic                      ⏭   46/201  (16 skipped)  dual-wielder                         ⏭   47/201  (17 skipped)  dungeon-delver                       ⏭   48/201  (18 skipped)  durable                              ⏭   49/201  (19 skipped)  dwarven-resilience                   ⏭   50/201  (20 skipped)  eldritch-adept                       ⏭   51/201  (21 skipped)  elemental-adept                      ⭐  52/201  elemental-touched-ua                 ⚠ feat:elemental-touched-ua           skipped (Unearthed Arcana 83 - Giant Options)
+  ⭐  53/201  elven-accuracy                       ⚠ feat:elven-accuracy                 skipped (no source)
+  ⭐  54/201  ember-of-the-fire-giant              ⚠ feat:ember-of-the-fire-giant        skipped (Bigby Presents - Glory of the Giants)
+  ⭐  55/201  ember-of-the-fire-giant-revised-ua   ⚠ feat:ember-of-the-fire-giant-revised-ua skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐  56/201  ember-of-the-fire-giant-ua           ⚠ feat:ember-of-the-fire-giant-ua     skipped (Unearthed Arcana 83 - Giant Options)
+  ⭐  57/201  empathic                             ⚠ feat:empathic                       skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐  58/201  everybodys-friend                    ⚠ feat:everybodys-friend              skipped (Unearthed Arcana 39 - Feats for Races)
+  ⭐  59/201  fade-away                            ⚠ feat:fade-away                      skipped (no source)
+  ⭐  60/201  fell-handed                          ⚠ feat:fell-handed                    skipped (Unearthed Arcana 14 - Feats)
+  ⭐  61/201  fey-teleportation                    ⚠ feat:fey-teleportation              skipped (no source)
+  ⏭   62/201  (22 skipped)  fey-touched                          ⏭   63/201  (23 skipped)  fighting-initiate                    ⭐  64/201  flail-mastery                        ⚠ feat:flail-mastery                  skipped (Unearthed Arcana 15 - Feats)
+  ⏭   65/201  (24 skipped)  flames-of-phlegethos                 ⭐  66/201  flash-recall                         ⚠ feat:flash-recall                   skipped (Tal'Dorei Campaign Setting Reborn)
+  ⭐  67/201  fury-of-the-frost-giant              ⚠ feat:fury-of-the-frost-giant        skipped (Bigby Presents - Glory of the Giants)
+  ⭐  68/201  fury-of-the-frost-giant-revised-ua   ⚠ feat:fury-of-the-frost-giant-revised-ua skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐  69/201  fury-of-the-frost-giant-ua           ⚠ feat:fury-of-the-frost-giant-ua     skipped (Unearthed Arcana 83 - Giant Options)
+  ⏭   70/201  (25 skipped)  gift-of-the-chromatic-dragon         ⏭   71/201  (26 skipped)  gift-of-the-gem-dragon               ⏭   72/201  (27 skipped)  gift-of-the-metallic-dragon          ⭐  73/201  gourmand                             ⚠ feat:gourmand                       skipped (Unearthed Arcana 15 - Feats)
+  ⏭   74/201  (28 skipped)  grappler                             ⏭   75/201  (29 skipped)  great-weapon-master                  ⏭   76/201  (30 skipped)  greater-dragonmark                   ⭐  77/201  grudge-bearer                        ⚠ feat:grudge-bearer                  skipped (Unearthed Arcana 39 - Feats for Races)
+  ⭐  78/201  guile-of-the-cloud-giant             ⚠ feat:guile-of-the-cloud-giant       skipped (Bigby Presents - Glory of the Giants)
+  ⭐  79/201  guile-of-the-cloud-giant-revised-ua  ⚠ feat:guile-of-the-cloud-giant-revised-ua skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐  80/201  guile-of-the-cloud-giant-ua          ⚠ feat:guile-of-the-cloud-giant-ua    skipped (Unearthed Arcana 83 - Giant Options)
+  ⏭   81/201  (31 skipped)  gunner                               ⏭   82/201  (32 skipped)  healer                               ⏭   83/201  (33 skipped)  heavily-armored                      ⏭   84/201  (34 skipped)  heavy-armor-master                   ⭐  85/201  historian                            ⚠ feat:historian                      skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐  86/201  human-determination                  ⚠ feat:human-determination            skipped (Unearthed Arcana 39 - Feats for Races)
+  ⏭   87/201  (35 skipped)  infernal-constitution                ⭐  88/201  initiate-of-high-sorcery             ⚠ feat:initiate-of-high-sorcery       skipped (Dragonlance: Shadow of the Dragon Queen)
+  ⭐  89/201  initiate-of-high-sorcery-ua          ⚠ feat:initiate-of-high-sorcery-ua    skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⏭   90/201  (36 skipped)  inspiring-leader                     ⭐  91/201  investigator                         ⚠ feat:investigator                   skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⏭   92/201  (37 skipped)  keen-mind                            ⭐  93/201  keenness-of-the-stone-giant          ⚠ feat:keenness-of-the-stone-giant    skipped (Bigby Presents - Glory of the Giants)
+  ⭐  94/201  keenness-of-the-stone-giant-revised-ua  ⚠ feat:keenness-of-the-stone-giant-revised-ua skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐  95/201  keenness-of-the-stone-giant-ua       ⚠ feat:keenness-of-the-stone-giant-ua skipped (Unearthed Arcana 83 - Giant Options)
+  ⭐  96/201  knight-of-the-crown                  ⚠ feat:knight-of-the-crown            skipped (Dragonlance: Shadow of the Dragon Queen)
+  ⭐  97/201  knight-of-the-crown-ua               ⚠ feat:knight-of-the-crown-ua         skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⭐  98/201  knight-of-the-rose                   ⚠ feat:knight-of-the-rose             skipped (Dragonlance: Shadow of the Dragon Queen)
+  ⭐  99/201  knight-of-the-rose-ua                ⚠ feat:knight-of-the-rose-ua          skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⭐ 100/201  knight-of-the-sword                  ⚠ feat:knight-of-the-sword            skipped (Dragonlance: Shadow of the Dragon Queen)
+  ⭐ 101/201  knight-of-the-sword-ua               ⚠ feat:knight-of-the-sword-ua         skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⏭  102/201  (38 skipped)  lightly-armored                      ⏭  103/201  (39 skipped)  linguist                             ⏭  104/201  (40 skipped)  lucky                                ⏭  105/201  (41 skipped)  mage-slayer                          ⏭  106/201  (42 skipped)  magic-initiate                       ⏭  107/201  (43 skipped)  martial-adept                        ⭐ 108/201  master-of-disguise                   ⚠ feat:master-of-disguise             skipped (Unearthed Arcana 15 - Feats)
+  ⭐ 109/201  medic                                ⚠ feat:medic                          skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⏭  110/201  (44 skipped)  medium-armor-master                  ⭐ 111/201  menacing                             ⚠ feat:menacing                       skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐ 112/201  metabolic-control                    ⚠ feat:metabolic-control              skipped (Unearthed Arcana 71 - Psionic Options Revisited)
+  ⏭  113/201  (45 skipped)  metamagic-adept                      ⏭  114/201  (46 skipped)  mobile                               ⏭  115/201  (47 skipped)  moderately-armored                   ⏭  116/201  (48 skipped)  mounted-combatant                    ⭐ 117/201  mystic-conflux                       ⚠ feat:mystic-conflux                 skipped (Tal'Dorei Campaign Setting Reborn)
+  ⭐ 118/201  naturalist                           ⚠ feat:naturalist                     skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⏭  119/201  (49 skipped)  observant                            ⭐ 120/201  orcish-aggression                    ⚠ feat:orcish-aggression              skipped (Unearthed Arcana 39 - Feats for Races)
+  ⏭  121/201  (50 skipped)  orcish-fury                          ⭐ 122/201  outlands-envoy                       ⚠ feat:outlands-envoy                 skipped (Planescape - Adventures in the Multiverse)
+  ⭐ 123/201  outlands-envoy-ua                    ⚠ feat:outlands-envoy-ua              skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 124/201  outsized-might-ua                    ⚠ feat:outsized-might-ua              skipped (Unearthed Arcana 83 - Giant Options)
+  ⭐ 125/201  perceptive                           ⚠ feat:perceptive                     skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐ 126/201  performer                            ⚠ feat:performer                      skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⏭  127/201  (51 skipped)  piercer                              ⭐ 128/201  planar-wanderer                      ⚠ feat:planar-wanderer                skipped (Planescape - Adventures in the Multiverse)
+  ⭐ 129/201  planar-wanderer-ua                   ⚠ feat:planar-wanderer-ua             skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⏭  130/201  (52 skipped)  poisoner                             ⏭  131/201  (53 skipped)  polearm-master                       ⭐ 132/201  practiced-expert                     ⚠ feat:practiced-expert               skipped (Unearthed Arcana 73 - Feats)
+  ⏭  133/201  (54 skipped)  prodigy                              ⭐ 134/201  quick-fingered                       ⚠ feat:quick-fingered                 skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐ 135/201  quicksmithing                        ⚠ feat:quicksmithing                  skipped (Plane Shift - Kaladesh)
+  ⭐ 136/201  remarkable-recovery                  ⚠ feat:remarkable-recovery            skipped (Tal'Dorei Campaign Setting Reborn)
+  ⏭  137/201  (55 skipped)  resilient                            ⏭  138/201  (56 skipped)  revenant-blade                       ⏭  139/201  (57 skipped)  revenant-blade-wgte                  ⭐ 140/201  righteous-heritor                    ⚠ feat:righteous-heritor              skipped (Planescape - Adventures in the Multiverse)
+  ⭐ 141/201  righteous-heritor-ua                 ⚠ feat:righteous-heritor-ua           skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⏭  142/201  (58 skipped)  ritual-caster                        ⭐ 143/201  rune-carver-adept-revised-ua         ⚠ feat:rune-carver-adept-revised-ua   skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 144/201  rune-carver-adept-ua                 ⚠ feat:rune-carver-adept-ua           skipped (Unearthed Arcana 83 - Giant Options)
+  ⭐ 145/201  rune-carver-apprentice-revised-ua    ⚠ feat:rune-carver-apprentice-revised-ua skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 146/201  rune-carver-apprentice-ua            ⚠ feat:rune-carver-apprentice-ua      skipped (Unearthed Arcana 83 - Giant Options)
+  ⭐ 147/201  rune-shaper                          ⚠ feat:rune-shaper                    skipped (Bigby Presents - Glory of the Giants)
+  ⏭  148/201  (59 skipped)  savage-attacker                      ⭐ 149/201  scion-of-elemental-air-ua            ⚠ feat:scion-of-elemental-air-ua      skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 150/201  scion-of-elemental-earth-ua          ⚠ feat:scion-of-elemental-earth-ua    skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 151/201  scion-of-elemental-fire-ua           ⚠ feat:scion-of-elemental-fire-ua     skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 152/201  scion-of-elemental-water-ua          ⚠ feat:scion-of-elemental-water-ua    skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 153/201  scion-of-the-outer-planes            ⚠ feat:scion-of-the-outer-planes      skipped (Planescape - Adventures in the Multiverse)
+  ⭐ 154/201  scion-of-the-outer-planes-ua         ⚠ feat:scion-of-the-outer-planes-ua   skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⏭  155/201  (60 skipped)  second-chance                        ⏭  156/201  (61 skipped)  sentinel                             ⭐ 157/201  servo-crafting                       ⚠ feat:servo-crafting                 skipped (Plane Shift - Kaladesh)
+  ⏭  158/201  (62 skipped)  shadow-touched                       ⏭  159/201  (63 skipped)  sharpshooter                         ⏭  160/201  (64 skipped)  shield-master                        ⭐ 161/201  shield-training                      ⚠ feat:shield-training                skipped (Unearthed Arcana 73 - Feats)
+  ⭐ 162/201  silver-tongued                       ⚠ feat:silver-tongued                 skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⏭  163/201  (65 skipped)  skill-expert                         ⏭  164/201  (66 skipped)  skilled                              ⏭  165/201  (67 skipped)  skulker                              ⏭  166/201  (68 skipped)  slasher                              ⭐ 167/201  soul-of-the-storm-giant              ⚠ feat:soul-of-the-storm-giant        skipped (Bigby Presents - Glory of the Giants)
+  ⭐ 168/201  soul-of-the-storm-giant-revised-ua   ⚠ feat:soul-of-the-storm-giant-revised-ua skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 169/201  soul-of-the-storm-giant-ua           ⚠ feat:soul-of-the-storm-giant-ua     skipped (Unearthed Arcana 83 - Giant Options)
+  ⭐ 170/201  spear-mastery                        ⚠ feat:spear-mastery                  skipped (Unearthed Arcana 15 - Feats)
+  ⏭  171/201  (69 skipped)  spell-sniper                         ⭐ 172/201  spelldriver                          ⚠ feat:spelldriver                    skipped (Tal'Dorei Campaign Setting Reborn)
+  ⏭  173/201  (70 skipped)  squat-nimbleness                     ⭐ 174/201  squire-of-solamnia                   ⚠ feat:squire-of-solamnia             skipped (Dragonlance: Shadow of the Dragon Queen)
+  ⭐ 175/201  squire-of-solamnia-ua                ⚠ feat:squire-of-solamnia-ua          skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⭐ 176/201  stealthy                             ⚠ feat:stealthy                       skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐ 177/201  strike-of-the-giants                 ⚠ feat:strike-of-the-giants           skipped (Bigby Presents - Glory of the Giants)
+  ⭐ 178/201  strike-of-the-giants-ua              ⚠ feat:strike-of-the-giants-ua        skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 179/201  strixhaven-initiate                  ⚠ feat:strixhaven-initiate            skipped (Strixhaven: A Curriculum of Chaos)
+  ⭐ 180/201  strixhaven-mascot                    ⚠ feat:strixhaven-mascot              skipped (Strixhaven: A Curriculum of Chaos)
+  ⭐ 181/201  survivalist                          ⚠ feat:survivalist                    skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⏭  182/201  (71 skipped)  svirfneblin-magic                    ⭐ 183/201  tandem-tactician                     ⚠ feat:tandem-tactician               skipped (Unearthed Arcana 73 - Feats)
+  ⏭  184/201  (72 skipped)  tavern-brawler                       ⏭  185/201  (73 skipped)  telekinetic                          ⏭  186/201  (74 skipped)  telepathic                           ⭐ 187/201  theologian                           ⚠ feat:theologian                     skipped (Unearthed Arcana 38 - Feats for Skills)
+  ⭐ 188/201  thrown-arms-master                   ⚠ feat:thrown-arms-master             skipped (Tal'Dorei Campaign Setting Reborn)
+  ⏭  189/201  (75 skipped)  tough                                ⭐ 190/201  tower-of-iron-will                   ⚠ feat:tower-of-iron-will             skipped (Unearthed Arcana 71 - Psionic Options Revisited)
+  ⭐ 191/201  tracker                              ⚠ feat:tracker                        skipped (Unearthed Arcana 73 - Feats)
+  ⭐ 192/201  vampiric-exultation                  ⚠ feat:vampiric-exultation            skipped (Plane Shift - Ixalan)
+  ⭐ 193/201  vigor-of-the-hill-giant              ⚠ feat:vigor-of-the-hill-giant        skipped (Bigby Presents - Glory of the Giants)
+  ⭐ 194/201  vigor-of-the-hill-giant-revised-ua   ⚠ feat:vigor-of-the-hill-giant-revised-ua skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⭐ 195/201  vigor-of-the-hill-giant-ua           ⚠ feat:vigor-of-the-hill-giant-ua     skipped (Unearthed Arcana 83 - Giant Options)
+  ⭐ 196/201  vital-sacrifice                      ⚠ feat:vital-sacrifice                skipped (Tal'Dorei Campaign Setting Reborn)
+  ⏭  197/201  (76 skipped)  war-caster                           ⏭  198/201  (77 skipped)  weapon-master                        ⭐ 199/201  wild-talent                          ⚠ feat:wild-talent                    skipped (Unearthed Arcana 71 - Psionic Options Revisited)
+  ⭐ 200/201  wonder-maker                         ⚠ feat:wonder-maker                   skipped (Unearthed Arcana 39 - Feats for Races)
+  ⏭  201/201  (78 skipped)  wood-elf-magic                     
+  ✅ Feats: 0 saved, 78 already existed, 123 unofficial, 0 errors
+
+🎭 Scraping 244 subclass pages...
+  🎭   1/244  wizard:artificer-ua                  ✓ wizard:artificer-ua                 Artificer (UA) (ERftLW)
+  🎭   2/244  wizard:artificer-ua:magic-item-tables  ⚠ wizard:artificer-ua:magic-item-tables skipped (no source)
+  🎭   3/244  barbarian:ancestral-guardian         ✓ barbarian:ancestral-guardian        Barbarian: Path of the Ancestral Guardian (XGtE)
+  🎭   4/244  barbarian:battlerager                ✓ barbarian:battlerager               Barbarian: Path of the Battlerager (SCAG)
+  🎭   5/244  barbarian:beast                      ✓ barbarian:beast                     Barbarian: Path Of The Beast (TCoE)
+  🎭   6/244  barbarian:beast-ua                   ⚠ barbarian:beast-ua                  skipped (Unearthed Arcana 67 - Subclasses, Part 1)
+  🎭   7/244  barbarian:berserker                  ✓ barbarian:berserker                 Barbarian: Path of the Berserker (PHB)
+  🎭   8/244  barbarian:path-of-the-depths-pc      ⚠ barbarian:path-of-the-depths-pc     skipped (Legend of Runeterra: Dark Tides of Bilgewater)
+  🎭   9/244  barbarian:juggernaut                 ⚠ barbarian:juggernaut                skipped (Tal'Dorei Campaign Setting)
+  🎭  10/244  barbarian:juggernaut-reborn          ⚠ barbarian:juggernaut-reborn         skipped (Tal'Dorei Campaign Setting Reborn)
+  🎭  11/244  barbarian:storm-herald               ✓ barbarian:storm-herald              Barbarian: Path of the Storm Herald (XGtE)
+  🎭  12/244  barbarian:totem-warrior              ✓ barbarian:totem-warrior             Barbarian: Path of the Totem Warrior (PHB)
+  🎭  13/244  barbarian:wild-soul-ua               ⚠ barbarian:wild-soul-ua              skipped (Unearthed Arcana 60: Barbarian and Monk)
+  🎭  14/244  barbarian:zealot                     ✓ barbarian:zealot                    Barbarian: Path of the Zealot (XGtE)
+  🎭  15/244  barbarian:wild-magic                 ✓ barbarian:wild-magic                Barbarian: Path of Wild Magic (TCoE)
+  🎭  16/244  bard:creation                        ✓ bard:creation                       Bard: College of Creation (TCoE)
+  🎭  17/244  bard:creation-ua                     ⚠ bard:creation-ua                    skipped (Unearthed Arcana 68 - Subclasses, Part 2)
+  🎭  18/244  bard:eloquence                       ✓ bard:eloquence                      Bard: College of Eloquence (TCoE)
+  🎭  19/244  bard:glamour                         ✓ bard:glamour                        Bard: College of Glamour (XGtE)
+  🎭  20/244  bard:lore                            ✓ bard:lore                           Bard: College of Lore (PHB)
+  🎭  21/244  bard:satire-ua                       ⚠ bard:satire-ua                      skipped (Unearthed Arcana 12 - Kits of Old)
+  🎭  22/244  bard:spirits                         ✓ bard:spirits                        Bard: College of Spirits (VRGtR)
+  🎭  23/244  bard:spirits-ua                      ⚠ bard:spirits-ua                     skipped (Unearthed Arcana 74 - Subclasses, Part 4)
+  🎭  24/244  bard:swords                          ✓ bard:swords                         Bard: College of Swords (XGtE)
+  🎭  25/244  bard:dirge-singer                    ✓ bard:dirge-singer                   Bard: College of the Dirge Singer (HB) (ERftLW)
+  🎭  26/244  bard:fury                            ⚠ bard:fury                           skipped (Chronicles of Ebberon)
+  🎭  27/244  bard:maestro                         ⚠ bard:maestro                        skipped (DMSGuild)
+  🎭  28/244  bard:tragedy                         ⚠ bard:tragedy                        skipped (Tal'Dorei Campaign Setting Reborn)
+  🎭  29/244  bard:valor                           ✓ bard:valor                          Bard: College of Valor (PHB)
+  🎭  30/244  bard:whispers                        ✓ bard:whispers                       Bard: College of Whispers (XGtE)
+  🎭  31/244  fighter:battle-master:maneuvers      ⚠ fighter:battle-master:maneuvers     skipped (no source)
+  🎭  32/244  druid:primeval-ua                    ⚠ druid:primeval-ua                   skipped (Unearthed Arcana 83 - Giant Options)
+  🎭  33/244  cleric:ambition                      ⚠ cleric:ambition                     skipped (Plane Shift - Amonkhet)
+  🎭  34/244  cleric:arcana                        ✓ cleric:arcana                       Cleric: Arcana Domain (SCAG)
+  🎭  35/244  cleric:aspiration                    ⚠ cleric:aspiration                   skipped (Chronicles of Ebberon)
+  🎭  36/244  cleric:beauty-hb                     ⚠ cleric:beauty-hb                    skipped (no source)
+  🎭  37/244  cleric:blood                         ⚠ cleric:blood                        skipped (Tal'Dorei Campaign Setting)
+  🎭  38/244  cleric:blood-reborn                  ⚠ cleric:blood-reborn                 skipped (Tal'Dorei Campaign Setting Reborn)
+  🎭  39/244  cleric:city-ua                       ⚠ cleric:city-ua                      skipped (Unearthed Arcana 7 - Modern Magic)
+  🎭  40/244  cleric:death                         ✓ cleric:death                        Cleric: Death Domain (DMG)
+  🎭  41/244  cleric:fate-ua                       ⚠ cleric:fate-ua                      skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  🎭  42/244  cleric:forge                         ✓ cleric:forge                        Cleric: Forge Domain (XGtE)
+  🎭  43/244  cleric:grave                         ✓ cleric:grave                        Cleric: Grave Domain (XGtE)
+  🎭  44/244  cleric:knowledge                     ✓ cleric:knowledge                    Cleric: Knowledge Domain (PHB)
+  🎭  45/244  cleric:life                          ✓ cleric:life                         Cleric: Life Domain (PHB)
+  🎭  46/244  cleric:light                         ✓ cleric:light                        Cleric: Light Domain (PHB)
+  🎭  47/244  cleric:mind                          ✓ cleric:mind                         Cleric: Mind Domain (HB) (ERftLW)
+  🎭  48/244  cleric:moon                          ⚠ cleric:moon                         skipped (Tal'Dorei Campaign Setting Reborn)
+  🎭  49/244  cleric:nature                        ✓ cleric:nature                       Cleric: Nature Domain (PHB)
+  🎭  50/244  cleric:order                         ✓ cleric:order                        Cleric: Order Domain (TCoE)
+  🎭  51/244  cleric:peace                         ✓ cleric:peace                        Cleric: Peace Domain (TCoE)
+  🎭  52/244  cleric:protection-ua                 ⚠ cleric:protection-ua                skipped (Unearthed Arcana 22 - Cleric)
+  🎭  53/244  cleric:solidarity                    ⚠ cleric:solidarity                   skipped (Plane Shift - Amonkhet)
+  🎭  54/244  cleric:strength                      ⚠ cleric:strength                     skipped (Plane Shift - Amonkhet)
+  🎭  55/244  cleric:tempest                       ✓ cleric:tempest                      Cleric: Tempest Domain (PHB)
+  🎭  56/244  cleric:trickery                      ✓ cleric:trickery                     Cleric: Trickery Domain (PHB)
+  🎭  57/244  cleric:twilight                      ✓ cleric:twilight                     Cleric: Twilight Domain (TCoE)
+  🎭  58/244  cleric:twilight-ua                   ⚠ cleric:twilight-ua                  skipped (Unearthed Arcana 63 - Cleric, Druid, Wizard)
+  🎭  59/244  cleric:unity-ua                      ⚠ cleric:unity-ua                     skipped (Unearthed Arcana 68 - Subclasses, Part 2)
+  🎭  60/244  cleric:war                           ✓ cleric:war                          Cleric: War Domain (PHB)
+  🎭  61/244  cleric:zeal                          ⚠ cleric:zeal                         skipped (Plane Shift - Amonkhet)
+  🎭  62/244  ranger:drakewarden-ua                ⚠ ranger:drakewarden-ua               skipped (Unearthed Arcana 75 - Subclasses, Part 5)
+  🎭  63/244  druid:dreams                         ✓ druid:dreams                        Druid: Circle of Dreams (XGtE)
+  🎭  64/244  druid:spores                         ✓ druid:spores                        Druid: Circle of Spores (TCoE)
+  🎭  65/244  druid:stars                          ✓ druid:stars                         Druid: Circle of Stars (TCoE)
+  🎭  66/244  druid:stars-ua                       ⚠ druid:stars-ua                      skipped (Unearthed Arcana 69 - Subclasses, Part 3)
+  🎭  67/244  druid:blighted                       ⚠ druid:blighted                      skipped (Tal'Dorei Campaign Setting Reborn)
+  🎭  68/244  druid:forged-hb                      ✓ druid:forged-hb                     Druid: Circle Of The Forged (HB) (ERftLW)
+  🎭  69/244  druid:land                           ✓ druid:land                          Druid: Circle of the Land (PHB)
+  🎭  70/244  druid:moon                           ✓ druid:moon                          Druid: Circle of the Moon (PHB)
+  🎭  71/244  druid:shepherd                       ✓ druid:shepherd                      Druid: Circle of the Shepherd (XGtE)
+  🎭  72/244  druid:twilight-ua                    ⚠ druid:twilight-ua                   skipped (Unearthed Arcana 23 - Druid)
+  🎭  73/244  druid:wildfire                       ✓ druid:wildfire                      Druid: Circle of Wildfire (TCoE)
+  🎭  74/244  druid:wildlife-ua                    ⚠ druid:wildlife-ua                   skipped (Unearthed Arcana 63 - Cleric, Druid, Wizard)
+  🎭  75/244  warlock:eldritch-invocations         ✓ warlock:eldritch-invocations        Eldritch Invocations (PHB)
+  🎭  76/244  sorcerer:favored-soul-ua             ⚠ sorcerer:favored-soul-ua            skipped (Unearthed Arcana 3 - Modifying Classes)
+  🎭  77/244  fighter:arcane-archer                ✓ fighter:arcane-archer               Fighter: Arcane Archer (XGtE)
+  🎭  78/244  fighter:arcane-archer-revised-ua     ⚠ fighter:arcane-archer-revised-ua    skipped (Unearthed Arcana 39 - Revised Subclasses)
+  🎭  79/244  fighter:arcane-archer-ua             ⚠ fighter:arcane-archer-ua            skipped (Unearthed Arcana 23 - Fighter)
+  🎭  80/244  fighter:banneret                     ✓ fighter:banneret                    Fighter: Banneret (SCAG)
+  🎭  81/244  fighter:battle-master                ✓ fighter:battle-master               Fighter: Battle Master (PHB)
+  🎭  82/244  fighter:brute-ua                     ⚠ fighter:brute-ua                    skipped (Unearthed Arcana 46 - Three Subclasses)
+  🎭  83/244  fighter:cavalier                     ✓ fighter:cavalier                    Fighter: Cavalier (XGtE)
+  🎭  84/244  fighter:cavalier-ua                  ⚠ fighter:cavalier-ua                 skipped (Unearthed Arcana 40 - Revised Class Options)
+  🎭  85/244  fighter:champion                     ✓ fighter:champion                    Fighter: Champion (PHB)
+  🎭  86/244  fighter:echo-knight                  ✓ fighter:echo-knight                 Fighter: Echo Knight (EGtW)
+  🎭  87/244  fighter:eldritch-knight              ✓ fighter:eldritch-knight             Fighter: Eldritch Knight (PHB)
+  🎭  88/244  fighter:gunslinger                   ⚠ fighter:gunslinger                  skipped (D&D Beyond)
+  🎭  89/244  fighter:knight-ua                    ⚠ fighter:knight-ua                   skipped (Unearthed Arcana 23 - Fighter)
+  🎭  90/244  fighter:monster-hunter-ua            ⚠ fighter:monster-hunter-ua           skipped (Unearthed Arcana 13 - Gothic Heroes)
+  🎭  91/244  fighter:psi-knight-ua                ⚠ fighter:psi-knight-ua               skipped (Unearthed Arcana 71 - Psionic Options Revisited)
+  🎭  92/244  fighter:psi-warrior                  ✓ fighter:psi-warrior                 Fighter: Psi Warrior (TCoE)
+  🎭  93/244  fighter:psychic-warrior-ua           ⚠ fighter:psychic-warrior-ua          skipped (Unearthed Arcana 66 - Fighter, Rogue, Wizard)
+  🎭  94/244  fighter:renegade                     ⚠ fighter:renegade                    skipped (Legends of Runeterra: Dark Tides of Bilgewater)
+  🎭  95/244  fighter:rune-knight                  ✓ fighter:rune-knight                 Fighter: Rune Knight (TCoE)
+  🎭  96/244  fighter:rune-knight-ua               ⚠ fighter:rune-knight-ua              skipped (Unearthed Arcana 64 - Fighter, Ranger, Rogue)
+  🎭  97/244  fighter:samurai                      ✓ fighter:samurai                     Fighter: Samurai (XGtE)
+  🎭  98/244  fighter:samurai-ua                   ⚠ fighter:samurai-ua                  skipped (Unearthed Arcana 23 - Fighter)
+  🎭  99/244  fighter:scout-ua                     ⚠ fighter:scout-ua                    skipped (Unearthed Arcana 12 - Kits of Old)
+  🎭 100/244  fighter:sharpshooter-ua              ⚠ fighter:sharpshooter-ua             skipped (Unearthed Arcana 23 - Fighter)
+  🎭 101/244  fighter:gunslinger:firearm-properties  ⚠ fighter:gunslinger:firearm-properties skipped (no source)
+  🎭 102/244  fighter:renegade:firearm-upgrades    ⚠ fighter:renegade:firearm-upgrades   skipped (no source)
+  🎭 103/244  monk:four-elements:disciplines       ⚠ monk:four-elements:disciplines      skipped (no source)
+  🎭 104/244  warlock:genie                        ✗ warlock:genie                       ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 105/244  warlock:ghost-in-the-machine-ua      ⚠ warlock:ghost-in-the-machine-ua     skipped (Unearthed Arcana 7 - Modern Magic)
+  🎭 106/244  monk:kensei-ua                       ⚠ monk:kensei-ua                      skipped (Unearthed Arcana 24 - Monk)
+  🎭 107/244  bard:mage-of-lorehold-ua             ✗ bard:mage-of-lorehold-ua            ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 108/244  wizard:mage-of-lorehold-ua           ✗ wizard:mage-of-lorehold-ua          ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 109/244  warlock:mage-of-lorehold-ua          ✗ warlock:mage-of-lorehold-ua         ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 110/244  druid:mage-of-prismari-ua            ✗ druid:mage-of-prismari-ua           ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 111/244  sorcerer:mage-of-prismari-ua         ✗ sorcerer:mage-of-prismari-ua        ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 112/244  wizard:mage-of-prismari-ua           ✗ wizard:mage-of-prismari-ua          ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 113/244  sorcerer:mage-of-quandrix-ua         ✗ sorcerer:mage-of-quandrix-ua        ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 114/244  wizard:mage-of-quandrix-ua           ✗ wizard:mage-of-quandrix-ua          ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 115/244  bard:mage-of-silverquill-ua          ✗ bard:mage-of-silverquill-ua         ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 116/244  warlock:mage-of-silverquill-ua       ✗ warlock:mage-of-silverquill-ua      ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 117/244  wizard:mage-of-silverquill-ua        ✗ wizard:mage-of-silverquill-ua       ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 118/244  druid:mage-of-witherbloom-ua         ✗ druid:mage-of-witherbloom-ua        ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 119/244  warlock:mage-of-witherbloom-ua       ✗ warlock:mage-of-witherbloom-ua      ERROR: Protocol "http:" not supported. Expected "https:"
+  🎭 120/244  monk:mercy                           ✓ monk:mercy                          Monk: Way of Mercy (TCoE)
+  🎭 121/244  monk:mercy-ua                        ⚠ monk:mercy-ua                       skipped (Unearthed Arcana 67 - Subclasses, Part 1)
+  🎭 122/244  monk:shadow                          ✓ monk:shadow                         Monk: Way of Shadow (PHB)
+  🎭 123/244  monk:astral-self                     ✓ monk:astral-self                    Monk: Way of the Astral Self (TCoE)
+  🎭 124/244  monk:astral-self-ua                  ⚠ monk:astral-self-ua                 skipped (Unearthed Arcana 60 - Barbarian and Monk)
+  🎭 125/244  monk:cobalt-soul                     ⚠ monk:cobalt-soul                    skipped (Tal'Dorei Campaign Setting Reborn)
+  🎭 126/244  monk:drunken-master                  ✓ monk:drunken-master                 Monk: Way of the Drunken Master (XGtE)
+  🎭 127/244  monk:four-elements                   ✓ monk:four-elements                  Monk: Way of the Four Elements (PHB)
+  🎭 128/244  monk:kensei                          ✓ monk:kensei                         Monk: Way of the Kensei (XGtE)
+  🎭 129/244  monk:living-weapon                   ✓ monk:living-weapon                  Monk: Way of the Living Weapon (HB) (ERftLW)
+  🎭 130/244  monk:long-death                      ✓ monk:long-death                     Monk: Way of the Long Death (SCAG)
+  🎭 131/244  monk:open-hand                       ✓ monk:open-hand                      Monk: Way of the Open Hand (PHB)
+  🎭 132/244  monk:soul-knife                      ⚠ monk:soul-knife                     skipped (ThinkDM)
+  🎭 133/244  monk:sun-soul                        ⚠ monk:sun-soul                       skipped (no source)
+  🎭 134/244  monk:tranquility-ua                  ⚠ monk:tranquility-ua                 skipped (Unearthed Arcana 24 - Monk)
+  🎭 135/244  ranger:monster-slayer-ua             ⚠ ranger:monster-slayer-ua            skipped (Unearthed Arcana 35 - A Trio of Subclasses)
+  🎭 136/244  paladin:watchers-ua                  ⚠ paladin:watchers-ua                 skipped (Unearthed Arcana 67 - Subclasses, Part 1)
+  🎭 137/244  druid:wild-shape-forms-ua            ⚠ druid:wild-shape-forms-ua           skipped (Unearthed Arcana 22, Druid)
+  🎭 138/244  paladin:conquest                     ✓ paladin:conquest                    Paladin: Oath of Conquest (XGtE)
+  🎭 139/244  paladin:devotion                     ✓ paladin:devotion                    Paladin: Oath of Devotion (PHB)
+  🎭 140/244  paladin:glory                        ✓ paladin:glory                       Paladin: Oath of Glory (TCoE)
+  🎭 141/244  paladin:heroism-ua                   ⚠ paladin:heroism-ua                  skipped (Unearthed Arcana 62 - Bard and Paladin)
+  🎭 142/244  paladin:redemption                   ✓ paladin:redemption                  Paladin: Oath of Redemption (XGtE)
+  🎭 143/244  paladin:redemption-ua                ⚠ paladin:redemption-ua               skipped (Unearthed Arcana 35 - A Trio of Subclasses)
+  🎭 144/244  paladin:ancients                     ✓ paladin:ancients                    Paladin: Oath of the Ancients (PHB)
+  🎭 145/244  paladin:crown                        ✓ paladin:crown                       Paladin: Oath of the Crown (SCAG)
+  🎭 146/244  paladin:guardian-hb                  ⚠ paladin:guardian-hb                 skipped (no source)
+  🎭 147/244  paladin:open-sea                     ⚠ paladin:open-sea                    skipped (Tal'Dorei Campaign Setting Reborn)
+  🎭 148/244  paladin:watchers                     ✓ paladin:watchers                    Paladin: Oath of the Watchers (TCoE)
+  🎭 149/244  paladin:treachery-ua                 ⚠ paladin:treachery-ua                skipped (Unearthed Arcana 26 - Paladin)
+  🎭 150/244  paladin:vengeance                    ✓ paladin:vengeance                   Paladin: Oath of Vengeance (PHB)
+  🎭 151/244  paladin:oathbreaker                  ✓ paladin:oathbreaker                 Paladin: Oathbreaker (DMG)
+  🎭 152/244  barbarian:giant                      ⚠ barbarian:giant                     skipped (Bigby Presents - Glory of the Giants)
+  🎭 153/244  barbarian:giant-ua                   ⚠ barbarian:giant-ua                  skipped (Unearthed Arcana 83 - Giant Options)
+  🎭 154/244  sorcerer:psionic-soul-ua             ⚠ sorcerer:psionic-soul-ua            skipped (Unearthed Arcana 71 - Psionic Options Revisited)
+  🎭 155/244  sorcerer:pyromancy                   ⚠ sorcerer:pyromancy                  skipped (Plane Shift - Kaladesh)
+  🎭 156/244  ranger:beast-master                  ✓ ranger:beast-master                 Ranger: Beast Master Conclave (PHB)
+  🎭 157/244  ranger:deep-stalker-ua               ⚠ ranger:deep-stalker-ua              skipped (Unearthed Arcana 10 - Light, Dark, Underdark!)
+  🎭 158/244  ranger:drakewarden                   ✓ ranger:drakewarden                  Ranger: Drakewarden (FToD)
+  🎭 159/244  ranger:fey-wanderer                  ✓ ranger:fey-wanderer                 Ranger: Fey Wanderer (TCoE)
+  🎭 160/244  ranger:fey-wanderer-ua               ⚠ ranger:fey-wanderer-ua              skipped (Unearthed Arcana 69 - Subclasses, Part 3)
+  🎭 161/244  ranger:gloom-stalker                 ✓ ranger:gloom-stalker                Ranger: Gloom Stalker Conclave (XGtE)
+  🎭 162/244  ranger:horizon-walker                ✓ ranger:horizon-walker               Ranger: Horizon Walker Conclave (XGtE)
+  🎭 163/244  ranger:hunter                        ✓ ranger:hunter                       Ranger: Hunter Conclave (PHB)
+  🎭 164/244  ranger:monster-slayer                ✓ ranger:monster-slayer               Ranger: Monster Slayer Conclave (XGtE)
+  🎭 165/244  ranger:primeval-guardian-ua          ⚠ ranger:primeval-guardian-ua         skipped (Unearthed Arcana 27 - Ranger & Rogue)
+  🎭 166/244  ranger:swarmkeeper                   ✓ ranger:swarmkeeper                  Ranger: Swarmkeeper (TCoE)
+  🎭 167/244  ranger:swarmkeeper-ua                ⚠ ranger:swarmkeeper-ua               skipped (Unearthed Arcana 64 - Fighter, Ranger, Rogue)
+  🎭 168/244  rogue:arcane-trickster               ✓ rogue:arcane-trickster              Rogue: Arcane Trickster (PHB)
+  🎭 169/244  rogue:assassin                       ✓ rogue:assassin                      Rogue: Assassin (PHB)
+  🎭 170/244  rogue:inquisitive                    ✓ rogue:inquisitive                   Rogue: Inquisitive (XGtE)
+  🎭 171/244  rogue:mastermind                     ✓ rogue:mastermind                    Rogue: Mastermind (XGtE)
+  🎭 172/244  rogue:phantom                        ✓ rogue:phantom                       Rogue: Phantom (TCoE)
+  🎭 173/244  rogue:phantom-ua                     ⚠ rogue:phantom-ua                    skipped (Unearthed Arcana 72 - Subclasses Revisited)
+  🎭 174/244  rogue:revived-ua                     ⚠ rogue:revived-ua                    skipped (Unearthed Arcana 64 - Fighter, Ranger, Rogue)
+  🎭 175/244  rogue:scout                          ✓ rogue:scout                         Rogue: Scout (XGtE)
+  🎭 176/244  rogue:soulknife-ua                   ⚠ rogue:soulknife-ua                  skipped (Unearthed Arcana 66 - Fighter, Rogue, Wizard)
+  🎭 177/244  rogue:soulknife                      ✓ rogue:soulknife                     Rogue: Soulknife (TCoE)
+  🎭 178/244  rogue:soulknife-revisited-ua         ⚠ rogue:soulknife-revisited-ua        skipped (Unearthed Arcana 71 - Psionic Options Revisited)
+  🎭 179/244  rogue:swashbuckler                   ✓ rogue:swashbuckler                  Rogue: Swashbuckler (XGtE)
+  🎭 180/244  rogue:thief                          ✓ rogue:thief                         Rogue: Thief (PHB)
+  🎭 181/244  rogue:wild-card                      ⚠ rogue:wild-card                     skipped (Legends of Runeterra: Dark Tides of Bilgewater)
+  🎭 182/244  wizard:runecrafter-ua                ⚠ wizard:runecrafter-ua               skipped (Unearthed Arcana 83 - Giant Options)
+  🎭 183/244  sorcerer:aberrant-mind               ✓ sorcerer:aberrant-mind              Sorcerer: Aberrant Mind (TCoE)
+  🎭 184/244  sorcerer:aberrant-mind-ua            ⚠ sorcerer:aberrant-mind-ua           skipped (Unearthed Arcana 61 - Aberrant Mind)
+  🎭 185/244  sorcerer:clockwork-soul              ✓ sorcerer:clockwork-soul             Sorcerer: Clockwork Soul (TCoE)
+  🎭 186/244  sorcerer:clockwork-soul-ua           ⚠ sorcerer:clockwork-soul-ua          skipped (Unearthed Arcana 68 - Subclasses, Part 2)
+  🎭 187/244  sorcerer:divine-soul                 ✓ sorcerer:divine-soul                Sorcerer: Divine Soul (XGtE)
+  🎭 188/244  sorcerer:draconic-bloodline          ✓ sorcerer:draconic-bloodline         Sorcerer: Draconic Bloodline (PHB)
+  🎭 189/244  sorcerer:favored-soul-revisited-ua   ⚠ sorcerer:favored-soul-revisited-ua  skipped (Unearthed Arcana 28 - Sorcerer)
+  🎭 190/244  sorcerer:giant-soul-ua               ⚠ sorcerer:giant-soul-ua              skipped (Unearthed Arcana 51 - Giant Soul)
+  🎭 191/244  sorcerer:lunar-magic-ua              ⚠ sorcerer:lunar-magic-ua             skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  🎭 192/244  sorcerer:lunar-sorcery               ⚠ sorcerer:lunar-sorcery              skipped (Dragonlance: Shadow of the Dragon Queen)
+  🎭 193/244  sorcerer:phoenix-sorcery-ua          ⚠ sorcerer:phoenix-sorcery-ua         skipped (Unearthed Arcana 28 - Sorcerer)
+  🎭 194/244  sorcerer:runechild                   ⚠ sorcerer:runechild                  skipped (Tal'Dorei Campaign Guide)
+  🎭 195/244  sorcerer:runechild-reborn            ⚠ sorcerer:runechild-reborn           skipped (Tal'Dorei Campaign Setting Reborn)
+  🎭 196/244  sorcerer:sea-sorcery-ua              ⚠ sorcerer:sea-sorcery-ua             skipped (Unearthed Arcana 28 - Sorcerer)
+  🎭 197/244  sorcerer:shadow-ua                   ⚠ sorcerer:shadow-ua                  skipped (Unearthed Arcana 10 - Light, Dark, Underdark!)
+  🎭 198/244  sorcerer:shadow-magic                ✓ sorcerer:shadow-magic               Sorcerer: Shadow Magic (XGtE)
+  🎭 199/244  sorcerer:stone-sorcery-ua            ⚠ sorcerer:stone-sorcery-ua           skipped (Unearthed Arcana 28 - Sorcerer)
+  🎭 200/244  sorcerer:storm-sorcery               ✓ sorcerer:storm-sorcery              Sorcerer: Storm Sorcery (XGtE)
+  🎭 201/244  sorcerer:wild-magic                  ✓ sorcerer:wild-magic                 Sorcerer: Wild Magic (PHB)
+  🎭 202/244  fighter:gunslinger:trick-shots       ⚠ fighter:gunslinger:trick-shots      skipped (no source)
+  🎭 203/244  warlock:lurker-in-the-deep-ua        ⚠ warlock:lurker-in-the-deep-ua       skipped (Unearthed Arcana 61 - Sorcerer and Warlock)
+  🎭 204/244  warlock:archfey                      ✓ warlock:archfey                     Warlock: The Archfey (PHB)
+  🎭 205/244  warlock:celestial                    ✓ warlock:celestial                   Warlock: The Celestial (XGtE)
+  🎭 206/244  warlock:celestial-ua                 ⚠ warlock:celestial-ua                skipped (Unearthed Arcana 40 - Revised Class Options)
+  🎭 207/244  warlock:fathomless                   ✓ warlock:fathomless                  Warlock: The Fathomless (TCoE)
+  🎭 208/244  warlock:fiend                        ✓ warlock:fiend                       Warlock: The Fiend (PHB)
+  🎭 209/244  warlock:genie-ua                     ⚠ warlock:genie-ua                    skipped (Unearthed Arcana 72 - Subclasses Revisited)
+  🎭 210/244  warlock:the-genie                    ✓ warlock:the-genie                   Warlock: The Genie (TCoE)
+  🎭 211/244  warlock:great-old-one                ✓ warlock:great-old-one               Warlock: The Great Old One (PHB)
+  🎭 212/244  warlock:hexblade                     ✓ warlock:hexblade                    Warlock: The Hexblade (XGtE)
+  🎭 213/244  warlock:hexblade-ua                  ⚠ warlock:hexblade-ua                 skipped (Unearthed Arcana 29 - Warlock & Wizard)
+  🎭 214/244  warlock:kraken                       ⚠ warlock:kraken                      skipped (ThinkDM)
+  🎭 215/244  warlock:noble-genie-ua               ⚠ warlock:noble-genie-ua              skipped (Unearthed Arcana 67 - Subclasses, Part 1)
+  🎭 216/244  warlock:raven-queen-ua               ⚠ warlock:raven-queen-ua              skipped (Unearthed Arcana 29 - Warlock & Wizard)
+  🎭 217/244  warlock:seeker-ua                    ⚠ warlock:seeker-ua                   skipped (Unearthed Arcana 16 - The Faithful)
+  🎭 218/244  warlock:undead                       ✓ warlock:undead                      Warlock: The Undead (VRGtR)
+  🎭 219/244  warlock:undead-ua                    ⚠ warlock:undead-ua                   skipped (Unearthed Arcana 74 - Subclasses, Part 4)
+  🎭 220/244  warlock:undying                      ✓ warlock:undying                     Warlock: The Undying (SCAG)
+  🎭 221/244  warlock:undying-light-ua             ⚠ warlock:undying-light-ua            skipped (Unearthed Arcana 10 - Light, Dark, Underdark!)
+  🎭 222/244  monk:ascendant-dragon                ✓ monk:ascendant-dragon               Way of the Ascendant Dragon (FToD)
+  🎭 223/244  monk:ascendant-dragon-ua             ⚠ monk:ascendant-dragon-ua            skipped (Unearthed Arcana 75 - Subclasses, Part 5)
+  🎭 224/244  wizard:bladesinging                  ⚠ wizard:bladesinging                 skipped (no source)
+  🎭 225/244  wizard:blood-magic                   ⚠ wizard:blood-magic                  skipped (Tal'Dorei Campaign Setting Reborn)
+  🎭 226/244  wizard:chronurgy                     ⚠ wizard:chronurgy                    skipped (no source)
+  🎭 227/244  wizard:graviturgy                    ⚠ wizard:graviturgy                   skipped (no source)
+  🎭 228/244  wizard:lore-mastery-ua               ⚠ wizard:lore-mastery-ua              skipped (no source)
+  🎭 229/244  wizard:onomancy-ua                   ⚠ wizard:onomancy-ua                  skipped (no source)
+  🎭 230/244  wizard:order-of-scribes              ⚠ wizard:order-of-scribes             skipped (no source)
+  🎭 231/244  wizard:order-of-scribes-ua           ⚠ wizard:order-of-scribes-ua          skipped (no source)
+  🎭 232/244  wizard:psionics-ua                   ⚠ wizard:psionics-ua                  skipped (no source)
+  🎭 233/244  wizard:abjuration                    ⚠ wizard:abjuration                   skipped (no source)
+  🎭 234/244  wizard:conjuration                   ⚠ wizard:conjuration                  skipped (no source)
+  🎭 235/244  wizard:divination                    ⚠ wizard:divination                   skipped (no source)
+  🎭 236/244  wizard:enchantment                   ⚠ wizard:enchantment                  skipped (no source)
+  🎭 237/244  wizard:evocation                     ⚠ wizard:evocation                    skipped (no source)
+  🎭 238/244  wizard:illusion                      ⚠ wizard:illusion                     skipped (no source)
+  🎭 239/244  wizard:invention-ua                  ⚠ wizard:invention-ua                 skipped (no source)
+  🎭 240/244  wizard:necromancy                    ⚠ wizard:necromancy                   skipped (no source)
+  🎭 241/244  wizard:transmutation                 ⚠ wizard:transmutation                skipped (no source)
+  🎭 242/244  wizard:technomancy-ua                ⚠ wizard:technomancy-ua               skipped (no source)
+  🎭 243/244  wizard:theurgy-ua                    ⚠ wizard:theurgy-ua                   skipped (no source)
+  🎭 244/244  wizard:war-magic                     ⚠ wizard:war-magic                    skipped (no source)
+
+  ✅ Subclasses: 104 saved, 0 already existed, 126 unofficial, 14 errors
+
+🛡️  Scraping 12 class pages...
+  🛡️   1/12  barbarian             ⚠ barbarian            skipped (no source)
+  🛡️   2/12  bard                  ⚠ bard                 skipped (no source)
+  🛡️   3/12  cleric                ⚠ cleric               skipped (no source)
+  🛡️   4/12  druid                 ⚠ druid                skipped (no source)
+  🛡️   5/12  fighter               ⚠ fighter              skipped (no source)
+  🛡️   6/12  monk                  ⚠ monk                 skipped (no source)
+  🛡️   7/12  paladin               ⚠ paladin              skipped (no source)
+  🛡️   8/12  ranger                ⚠ ranger               skipped (no source)
+  🛡️   9/12  rogue                 ⚠ rogue                skipped (no source)
+  🛡️  10/12  sorcerer              ⚠ sorcerer             skipped (no source)
+  🛡️  11/12  warlock               ⚠ warlock              skipped (no source)
+  🛡️  12/12  wizard                ⚠ wizard               skipped (no source)
+
+  ✅ Classes: 0 saved, 0 already existed, 12 unofficial, 0 errors
+
+🧝 Scraping 9 race pages...
+  🧝  1/9  dragonborn            ✗ dragonborn           ERROR: Invalid URL
+  🧝  2/9  dwarf                 ✗ dwarf                ERROR: Invalid URL
+  🧝  3/9  elf                   ✗ elf                  ERROR: Invalid URL
+  🧝  4/9  gnome                 ✗ gnome                ERROR: Invalid URL
+  🧝  5/9  half-elf              ✗ half-elf             ERROR: Invalid URL
+  🧝  6/9  half-orc              ✗ half-orc             ERROR: Invalid URL
+  🧝  7/9  halfling              ✗ halfling             ERROR: Invalid URL
+  ⏭   8/9  (1 skipped)  human                 🧝  9/9  tiefling              ✗ tiefling             ERROR: Invalid URL
+
+  ✅ Races: 0 saved, 1 already existed, 0 unofficial, 8 errors
+
+📜 Scraping 102 background pages...
+  ⏭    1/102  (1 skipped)  acolyte                         📜   2/102  anthropologist                  ⚠ background:anthropologist            skipped (Tomb of Annihilation)
+  📜   3/102  archaeologist                   ⚠ background:archaeologist             skipped (Tomb of Annihilation)
+  📜   4/102  ashari                          ⚠ background:ashari                    skipped (Tal'Dorei Campaign Setting Reborn)
+  📜   5/102  astral-drifter                  ⚠ background:astral-drifter            skipped (Spelljamer: Adventures in Space - Astral Adventurer's Guide)
+  ⏭    6/102  (2 skipped)  athlete                         📜   7/102  azorius-functionary             ⚠ background:azorius-functionary       skipped (Guildmaster's Guide to Ravnica)
+  📜   8/102  black-fist-double-agent         ⚠ background:black-fist-double-agent   skipped (Curse of Strahd: Optional Backgrounds)
+  📜   9/102  boros-legionnaire               ⚠ background:boros-legionnaire         skipped (Guildmaster's Guide to Ravnica)
+  📜  10/102  caravan-specialist              ⚠ background:caravan-specialist        skipped (Mulmaster Bonds and Backgrounds)
+  ⏭   11/102  (3 skipped)  celebrity-adventurers-scion     ⏭   12/102  (4 skipped)  charlatan                       ⏭   13/102  (5 skipped)  city-watch                      ⏭   14/102  (6 skipped)  clan-crafter                    ⏭   15/102  (7 skipped)  cloistered-scholar              📜  16/102  cormanthor-refugee              ⚠ background:cormanthor-refugee        skipped (State of Hillsfar)
+  ⏭   17/102  (8 skipped)  courtier                        ⏭   18/102  (9 skipped)  criminal                        📜  19/102  dimir-operative                 ⚠ background:dimir-operative           skipped (Guildmaster's Guide to Ravnica)
+  📜  20/102  dissenter                       ⚠ background:dissenter                 skipped (Plane Shift - Amonkhet)
+  📜  21/102  dragon-casualty                 ⚠ background:dragon-casualty           skipped (Curse of Strahd: Optional Backgrounds)
+  📜  22/102  earthspur-miner                 ⚠ background:earthspur-miner           skipped (Mulmaster Bonds and Backgrounds)
+  ⏭   23/102  (10 skipped)  entertainer                     📜  24/102  faceless                        ⚠ background:faceless                  skipped (Baldur's Gate - Descent into Avernus)
+  ⏭   25/102  (11 skipped)  faction-agent                   ⏭   26/102  (12 skipped)  failed-merchant                 ⏭   27/102  (13 skipped)  far-traveler                    📜  28/102  feylost                         ⚠ background:feylost                   skipped (The Wild Beyond the Witchlight)
+  📜  29/102  fisher                          ⚠ background:fisher                    skipped (Ghosts of Saltmarsh)
+  ⏭   30/102  (14 skipped)  folk-hero                       ⏭   31/102  (15 skipped)  gambler                         📜  32/102  gate-urchin                     ⚠ background:gate-urchin               skipped (State of Hillsfar)
+  📜  33/102  gate-warden-ua                  ⚠ background:gate-warden-ua            skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  📜  34/102  giant-foundling-ua              ⚠ background:giant-foundling-ua        skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  📜  35/102  golgari-agent                   ⚠ background:golgari-agent             skipped (Guildmaster's Guide to Ravnica)
+  ⏭   36/102  (16 skipped)  grinner                         📜  37/102  gruul-anarch                    ⚠ background:gruul-anarch              skipped (Guildmaster's Guide to Ravnica)
+  ⏭   38/102  (17 skipped)  guild-artisan                   📜  39/102  harborfolk                      ⚠ background:harborfolk                skipped (Mulmaster Bonds and Backgrounds)
+  📜  40/102  haunted-one                     ⚠ background:haunted-one               skipped (Curse of Strahd)
+  ⏭   41/102  (18 skipped)  hermit                          📜  42/102  hillsfar-merchant               ⚠ background:hillsfar-merchant         skipped (no source)
+  📜  43/102  hillsfar-smuggler               ⚠ background:hillsfar-smuggler         skipped (State of Hillsfar)
+  ⏭   44/102  (19 skipped)  house-agent                     ⏭   45/102  (20 skipped)  inheritor                       📜  46/102  initiate                        ⚠ background:initiate                  skipped (Plane Shift - Amonkhet)
+  📜  47/102  inquisitor                      ⚠ background:inquisitor                skipped (Plane Shift - Innistrad)
+  ⏭   48/102  (21 skipped)  investigator                    📜  49/102  iron-route-bandit               ⚠ background:iron-route-bandit         skipped (Curse of Strahd: Optional Backgrounds)
+  📜  50/102  izzet-engineer                  ⚠ background:izzet-engineer            skipped (Guildmaster's Guide to Ravnica)
+  📜  51/102  knight-of-solamnia              ⚠ background:knight-of-solamnia        skipped (Dragonlance: Shadow of the Dragon Queen)
+  📜  52/102  knight-of-solamnia-ua           ⚠ background:knight-of-solamnia-ua     skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  ⏭   53/102  (22 skipped)  knight-of-the-order             📜  54/102  lorehold-student                ⚠ background:lorehold-student          skipped (Strixhaven: A Curriculum of Chaos)
+  📜  55/102  mage-of-high-sorcery            ⚠ background:mage-of-high-sorcery      skipped (Dragonlance: Shadow of the Dragon Queen)
+  📜  56/102  mage-of-high-sorcery-ua         ⚠ background:mage-of-high-sorcery-ua   skipped (Unearthed Arcana 81 - Heroes of Krynn)
+  📜  57/102  marine                          ⚠ background:marine                    skipped (no source)
+  ⏭   58/102  (23 skipped)  mercenary-veteran               📜  59/102  mulmaster-aristocrat            ⚠ background:mulmaster-aristocrat      skipped (Mulmaster Bonds and Backgrounds)
+  ⏭   60/102  (24 skipped)  noble                           📜  61/102  orzhov-representative           ⚠ background:orzhov-representative     skipped (Guildmaster's Guide to Ravnica)
+  ⏭   62/102  (25 skipped)  outlander                       📜  63/102  phlan-insurgent                 ⚠ background:phlan-insurgent           skipped (Curse of Strahd: Optional Backgrounds)
+  📜  64/102  phlan-refugee                   ⚠ background:phlan-refugee             skipped (Mulmaster Bonds and Backgrounds)
+  ⏭   65/102  (26 skipped)  plaintiff                       📜  66/102  planar-philosopher-ua           ⚠ background:planar-philosopher-ua     skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  📜  67/102  prismari-student                ⚠ background:prismari-student          skipped (Strixhaven: A Curriculum of Chaos)
+  📜  68/102  quandrix-student                ⚠ background:quandrix-student          skipped (Strixhaven: A Curriculum of Chaos)
+  📜  69/102  rakdos-cultist                  ⚠ background:rakdos-cultist            skipped (Guildmaster's Guide to Ravnica)
+  ⏭   70/102  (27 skipped)  rival-intern                    📜  71/102  rune-carver-ua                  ⚠ background:rune-carver-ua            skipped (Unearthed Arcana 85 - Wonders of the Multiverse)
+  ⏭   72/102  (28 skipped)  sage                            ⏭   73/102  (29 skipped)  sailor                          📜  74/102  secret-identity                 ⚠ background:secret-identity           skipped (State of Hillsfar)
+  📜  75/102  selesnya-initiate               ⚠ background:selesnya-initiate         skipped (Guildmaster's Guide to Ravnica)
+  📜  76/102  shade-fanatic                   ⚠ background:shade-fanatic             skipped (State of Hillsfar)
+  📜  77/102  shipwright                      ⚠ background:shipwright                skipped (Ghosts of Saltmarsh)
+  📜  78/102  silverquill-student             ⚠ background:silverquill-student       skipped (Strixhaven: A Curriculum of Chaos)
+  📜  79/102  simic-scientist                 ⚠ background:simic-scientist           skipped (Guildmaster's Guide to Ravnica)
+  📜  80/102  smuggler                        ⚠ background:smuggler                  skipped (Ghosts of Saltmarsh)
+  ⏭   81/102  (30 skipped)  soldier                         📜  82/102  stojanow-prisoner               ⚠ background:stojanow-prisoner         skipped (Curse of Strahd: Optional Backgrounds)
+  📜  83/102  ticklebelly-nomad               ⚠ background:ticklebelly-nomad         skipped (Curse of Strahd: Optional Backgrounds)
+  📜  84/102  trade-sheriff                   ⚠ background:trade-sheriff             skipped (State of Hillsfar)
+  ⏭   85/102  (31 skipped)  urban-bounty-hunter             ⏭   86/102  (32 skipped)  urchin                          ⏭   87/102  (33 skipped)  uthgardt-tribe-member           📜  88/102  vizier                          ⚠ background:vizier                    skipped (Plane Shift - Amonkhet)
+  ⏭   89/102  (34 skipped)  volstrucker-agent               ⏭   90/102  (35 skipped)  waterdhavian-noble              📜  91/102  wildspacer                      ⚠ background:wildspacer                skipped (Spelljamer: Adventures in Space - Astral Adventurer's Guide)
+  📜  92/102  witchlight-hand                 ⚠ background:witchlight-hand           skipped (The Wild Beyond the Witchlight)
+  📜  93/102  witherbloom-student             ⚠ background:witherbloom-student       skipped (Strixhaven: A Curriculum of Chaos)
+  📜  94/102  gate-warden                     ⚠ background:gate-warden               skipped (Planescape - Adventures in the Multiverse)
+  📜  95/102  giant-foundling                 ⚠ background:giant-foundling           skipped (Bigby Presents - Glory of the Giants)
+  📜  96/102  optional-features               ⚠ background:optional-features         skipped (Hoard of the Dragon Queen
+You have infiltrated the ranks of the Cult of the Dragon. Having spied on the organization for quite some time, you are familiar with its inner workings and customs. You have a second identity as an initiate of the cult, enough of a facade to blend in as a simple grunt or servant.)
+  📜  97/102  planar-philosopher              ⚠ background:planar-philosopher        skipped (Planescape - Adventures in the Multiverse)
+  📜  98/102  rewarded                        ⚠ background:rewarded                  skipped (The Book of Many Things)
+  📜  99/102  ruined                          ⚠ background:ruined                    skipped (The Book of Many Things)
+  📜 100/102  rune-carver                     ⚠ background:rune-carver               skipped (Bigby Presents - Glory of the Giants)
+  📜 101/102  sword-coast-heroic-chronicle    ⚠ background:sword-coast-heroic-chronicle skipped (no source)
+  📜 102/102  wildemount-heroic-chronicle     ⚠ background:wildemount-heroic-chronicle skipped (no source)
+
+  ✅ Backgrounds: 0 saved, 35 already existed, 67 unofficial, 0 errors
+
+📦 Rebuilding feat bundle...
+  📦 dnd_db/bundle_feats_en.js  (78 feats)
+
+╔════════════════════════════════════════╗
+║  Terminé !                             ║
+║  Fichiers créés dans dnd_db/en/        ║
+║  Prochaine étape :                     ║
+║    node scripts/rebuild_bundles.js     ║
+╚════════════════════════════════════════╝

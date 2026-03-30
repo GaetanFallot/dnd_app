@@ -1,0 +1,48 @@
+{
+  "index": "warlock-celestial",
+  "name": "Démoniste : Le Céleste",
+  "class": "warlock",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Votre patron est un être puissant des plans supérieurs. Vous vous êtes lié à une ancienne entité empyrée, solaire, ki-rin, licorne ou autre qui réside dans les plans du bonheur éternel. Votre pacte avec cet être vous permet de ressentir le moindre contact de la lumière sacrée qui illumine le multivers.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Liste de sorts étendue",
+      "level": null,
+      "desc": "Le Céleste vous permet de choisir parmi une liste étendue de sorts lorsque vous apprenez un sort de démoniste. Les sorts suivants sont ajoutés à la liste des sorts de démoniste pour vous.\nSorts étendus célestes\nNiveau de sort | Sorts\n1er | Guérir les blessures, boulon de guidage\n2ème | Sphère enflammée, restauration mineure\n3ème | Lumière du jour, revivifier\n4ème | Gardien de la Foi, Mur de Feu\n5ème | Frappe de flammes, restauration supérieure",
+      "name_en": "Expanded Spell List"
+    },
+    {
+      "name": "Cantrips bonus",
+      "level": 1,
+      "desc": "Au niveau 1, vous apprenez les sorts mineurs Lumière et Flamme sacrée. Ils comptent pour vous comme des sorts mineurs de démoniste, mais ils ne comptent pas dans votre nombre de sorts mineurs connus.",
+      "name_en": "Bonus Cantrips"
+    },
+    {
+      "name": "Lumière de guérison",
+      "level": 1,
+      "desc": "Au niveau 1, vous gagnez la capacité de canaliser l’énergie céleste pour soigner les blessures. Vous disposez d’une réserve de d6 que vous dépensez pour alimenter cette guérison. Le nombre de dés dans la réserve est égal à 1 + votre niveau de démoniste.\n\nPar une action bonus, vous pouvez soigner une créature que vous pouvez voir à moins de 20 mètres de vous, en dépensant des dés de la piscine. Le nombre maximum de dés que vous pouvez dépenser en même temps est égal à votre modificateur de Charisme (minimum d'un dé). Lancez les dés que vous dépensez, additionnez-les et restaurez un nombre de points de vie égal au total.\n\nVotre réserve récupère tous les dés dépensés lorsque vous terminez un repos long.",
+      "name_en": "Healing Light"
+    },
+    {
+      "name": "Âme Radieuse",
+      "level": 6,
+      "desc": "À partir du niveau 6, votre lien avec le Céleste vous permet de servir de conduit à l'énergie rayonnante. Vous avez une résistance aux dégâts radiants, et lorsque vous lancez un sort qui inflige des dégâts radiants ou de feu, vous ajoutez votre modificateur de Charisme à un jet de dégâts radiants ou de feu de ce sort contre l'une de ses cibles.",
+      "name_en": "Radiant Soul"
+    },
+    {
+      "name": "Résistance céleste",
+      "level": 10,
+      "desc": "À partir du niveau 10, vous gagnez des points de vie temporaires chaque fois que vous terminez un repos court ou long. Ces points de vie temporaires sont égaux à votre niveau de démoniste + votre modificateur de Charisme. De plus, choisissez jusqu'à cinq créatures que vous pouvez voir à la fin du reste. Ces créatures gagnent chacune des points de vie temporaires égaux à la moitié de votre niveau de démoniste + votre modificateur de Charisme.",
+      "name_en": "Celestial Resistance"
+    },
+    {
+      "name": "Vengeance brûlante",
+      "level": 14,
+      "desc": "À partir du niveau 14, l’énergie rayonnante que vous canalisez vous permet de résister à la mort. Lorsque vous devez effectuer un jet de sauvegarde contre la mort au début de votre tour, vous pouvez à la place vous remettre sur pied avec une explosion d'énergie rayonnante. Vous récupérez des points de vie égaux à la moitié de votre maximum de points de vie, puis vous vous relevez si vous le souhaitez. Chaque créature de votre choix qui se trouve à moins de 9 mètres de vous subit des dégâts radiants égaux à 2d8 + votre modificateur de Charisme, et est aveuglée jusqu'à la fin du tour en cours.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un long repos.",
+      "name_en": "Searing Vengeance"
+    }
+  ],
+  "name_en": "Warlock: The Celestial",
+  "_translated": true
+}

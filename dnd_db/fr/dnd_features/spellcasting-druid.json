@@ -1,0 +1,13 @@
+{
+  "index": "spellcasting-druid",
+  "name": "Lancement de sorts : Druide",
+  "level": 1,
+  "class": "druid",
+  "subclass": null,
+  "desc": [
+    "En vous appuyant sur l’essence divine de la nature elle-même, vous pouvez lancer des sorts pour façonner cette essence selon votre volonté."
+  ],
+  "name_en": "Spellcasting: Druid",
+  "class_name_fr": "",
+  "_translated": true
+}

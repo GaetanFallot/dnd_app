@@ -1,0 +1,13 @@
+{
+  "index": "tongue-of-the-sun-and-moon",
+  "name": "Langue du Soleil et de la Lune",
+  "level": 13,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 13, vous apprenez à toucher le ki des autres esprits afin de comprendre toutes les langues parlées. De plus, toute créature capable de comprendre une langue peut comprendre ce que vous dites."
+  ],
+  "name_en": "Tongue of the Sun and Moon",
+  "class_name_fr": "",
+  "_translated": true
+}

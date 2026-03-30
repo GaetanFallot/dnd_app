@@ -1,0 +1,9 @@
+{
+  "index": "hellish-resistance",
+  "name": "Hellish Resistance",
+  "races": [
+    "tiefling"
+  ],
+  "subraces": [],
+  "desc": "You have resistance to fire damage."
+}

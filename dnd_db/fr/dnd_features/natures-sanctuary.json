@@ -1,0 +1,13 @@
+{
+  "index": "natures-sanctuary",
+  "name": "Sanctuaire de la nature",
+  "level": 14,
+  "class": "druid",
+  "subclass": "land",
+  "desc": [
+    "Lorsque vous atteignez le niveau 14, les créatures du monde naturel sentent votre lien avec la nature et hésitent à vous attaquer. Lorsqu'une créature animale ou végétale vous attaque, cette créature doit effectuer un jet de sauvegarde de Sagesse contre le DD de sauvegarde de votre sort de druide. En cas d'échec, la créature doit choisir une cible différente, sinon l'attaque rate automatiquement. En cas de sauvegarde réussie, la créature est immunisée contre cet effet pendant 24 heures. La créature est consciente de cet effet avant de lancer son attaque contre vous."
+  ],
+  "name_en": "Nature's Sanctuary",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,10 @@
+{
+  "index": "savage-attacker",
+  "name": "Attaquant sauvage",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Une fois par tour, lorsque vous lancez des dégâts pour une attaque au corps à corps avec une arme, vous pouvez relancer les dés de dégâts de l'arme et utiliser l'un ou l'autre total.",
+  "benefits": [],
+  "name_en": "Savage Attacker",
+  "_translated": true
+}

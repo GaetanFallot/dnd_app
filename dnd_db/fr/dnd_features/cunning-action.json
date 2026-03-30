@@ -1,0 +1,13 @@
+{
+  "index": "cunning-action",
+  "name": "Action astucieuse",
+  "level": 2,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "Dès le niveau 2, votre rapidité de réflexion et votre agilité vous permettent de vous déplacer et d'agir rapidement. Vous pouvez effectuer une action bonus à chacun de vos tours de combat. Cette action ne peut être utilisée que pour effectuer l’action Dash, Désengagement ou Cacher."
+  ],
+  "name_en": "Cunning Action",
+  "class_name_fr": "",
+  "_translated": true
+}

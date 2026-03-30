@@ -1,0 +1,13 @@
+{
+  "index": "dark-ones-own-luck",
+  "name": "La chance du Ténébreux",
+  "level": 6,
+  "class": "warlock",
+  "subclass": "fiend",
+  "desc": [
+    "À partir du niveau 6, vous pouvez faire appel à votre patron pour modifier le destin en votre faveur. Lorsque vous effectuez un test de capacité ou un jet de sauvegarde, vous pouvez utiliser cette fonctionnalité pour ajouter un d10 à votre jet. Vous pouvez le faire après avoir vu le jet initial mais avant que l'un des effets du jet ne se produise.\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long."
+  ],
+  "name_en": "Dark One's Own Luck",
+  "class_name_fr": "",
+  "_translated": true
+}

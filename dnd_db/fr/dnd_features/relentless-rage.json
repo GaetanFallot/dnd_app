@@ -1,0 +1,13 @@
+{
+  "index": "relentless-rage",
+  "name": "Colère implacable",
+  "level": 11,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 11, votre rage peut vous permettre de vous battre malgré de graves blessures. Si vous tombez à 0 point de vie alors que vous êtes en rage et que vous ne mourez pas sur le coup, vous pouvez effectuer un jet de sauvegarde de Constitution DD 10. Si vous réussissez, vous perdez 1 point de vie.\nChaque fois que vous utilisez cette fonctionnalité après la première, le DC augmente de 5. Lorsque vous terminez un repos court ou long, le DC se réinitialise à 10."
+  ],
+  "name_en": "Relentless Rage",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "potent-cantrip",
+  "name": "Cantrip puissant",
+  "level": 6,
+  "class": "wizard",
+  "subclass": "evocation",
+  "desc": [
+    "À partir du niveau 6, vos sorts mineurs de dégâts affectent même les créatures qui évitent le plus gros de l'effet. Lorsqu'une créature réussit un jet de sauvegarde contre votre cantrip, la créature subit la moitié des dégâts du cantrip (le cas échéant) mais ne subit aucun effet supplémentaire du cantrip."
+  ],
+  "name_en": "Potent Cantrip",
+  "class_name_fr": "",
+  "_translated": true
+}

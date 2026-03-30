@@ -1,0 +1,42 @@
+{
+  "index": "rogue-assassin",
+  "name": "Voleur : Assassin",
+  "class": "rogue",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Vous concentrez votre formation sur l’art sinistre de la mort. Ceux qui adhèrent à cet archétype sont divers : des tueurs à gages, des espions, des chasseurs de primes et même des prêtres spécialement oints et formés pour exterminer les ennemis de leur divinité. La furtivité, le poison et le déguisement vous aident à éliminer vos ennemis avec une efficacité mortelle.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétences bonus",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cet archétype au niveau 3, vous gagnez la maîtrise du kit de déguisement et du kit de l'empoisonneur.",
+      "name_en": "Bonus Proficiencies"
+    },
+    {
+      "name": "Assassiner",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous êtes le plus meurtrier lorsque vous faites tomber vos ennemis. Vous avez un avantage aux jets d'attaque contre toute créature qui n'a pas encore pris son tour dans le combat. De plus, tout coup porté contre une créature surprise est un coup critique.",
+      "name_en": "Assassinate"
+    },
+    {
+      "name": "Expertise en infiltration",
+      "level": 9,
+      "desc": "À partir du niveau 9, vous pouvez infailliblement vous créer de fausses identités. Vous devez passer sept jours et 25 po pour établir l’histoire, la profession et les affiliations d’une identité. Vous ne pouvez pas établir une identité qui appartient à quelqu'un d'autre. Par exemple, vous pourriez acquérir des vêtements appropriés, des lettres d'introduction et un certificat d'apparence officielle pour vous établir en tant que membre d'une maison de commerce d'une ville éloignée afin de pouvoir vous insinuer en compagnie d'autres riches marchands.\n\nPar la suite, si vous adoptez la nouvelle identité comme déguisement, d’autres créatures croient que vous êtes cette personne jusqu’à ce qu’on leur donne une raison évidente de ne pas le faire.",
+      "name_en": "Infiltration Expertise"
+    },
+    {
+      "name": "Imposteur",
+      "level": 13,
+      "desc": "Au niveau 13, vous acquérez la capacité d’imiter de manière infaillible le discours, l’écriture et le comportement d’une autre personne. Vous devez passer au moins trois heures à étudier ces trois composantes du comportement de la personne, à écouter la parole, à examiner l'écriture manuscrite et à observer les manières.\n\nVotre ruse est indiscernable pour l’observateur occasionnel. Si une créature méfiante soupçonne que quelque chose ne va pas, vous avez l'avantage à tous les tests de Charisme (Tromperie) que vous effectuez pour éviter d'être détecté.",
+      "name_en": "Impostor"
+    },
+    {
+      "name": "Frappe mortelle",
+      "level": 17,
+      "desc": "À partir du niveau 17, vous devenez un maître de la mort instantanée. Lorsque vous attaquez et frappez une créature surprise, elle doit effectuer un jet de sauvegarde de Constitution (DD 8 + votre modificateur de Dextérité + votre bonus de maîtrise). En cas d'échec, doublez les dégâts de votre attaque contre la créature.",
+      "name_en": "Death Strike"
+    }
+  ],
+  "name_en": "Rogue: Assassin",
+  "_translated": true
+}

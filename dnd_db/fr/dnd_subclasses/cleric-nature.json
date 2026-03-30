@@ -1,0 +1,48 @@
+{
+  "index": "cleric-nature",
+  "name": "Clerc : Domaine de la Nature",
+  "class": "cleric",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Les dieux de la nature sont aussi variés que le monde naturel lui-même ; des dieux impénétrables des forêts profondes (comme Silvanus, Obad-Hai, Chislev, Balinor et Pan) aux divinités amicales associées à des sources et des bosquets particuliers (comme Eldath). Les druides vénèrent la nature dans son ensemble et peuvent servir l'une de ces divinités, pratiquant des rites mystérieux et récitant des prières presque oubliées dans leur propre langue secrète. Mais beaucoup de ces dieux ont également des prêtres, des champions qui jouent un rôle plus actif dans la promotion des intérêts d’un dieu de la nature particulier. Ces prêtres peuvent chasser les monstruosités maléfiques qui ravagent les forêts, bénir les récoltes des fidèles ou flétrir les récoltes de ceux qui irritent leurs dieux.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Acolyte de la Nature",
+      "level": 1,
+      "desc": "Au niveau 1, vous apprenez un sort mineur de votre choix dans la liste des sorts du druide. Ce cantrip compte pour vous comme un cantrip de clerc, mais il ne compte pas dans le nombre de cantrips de clerc que vous connaissez. Vous acquérez également la maîtrise de l'une des compétences suivantes de votre choix : manipulation des animaux, nature ou survie.",
+      "name_en": "Acolyte of Nature"
+    },
+    {
+      "name": "Compétence bonus",
+      "level": 1,
+      "desc": "Au niveau 1 également, vous maîtrisez le maniement des armures lourdes.",
+      "name_en": "Bonus Proficiency"
+    },
+    {
+      "name": "Channel Divinity : Charmer les animaux et les plantes",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous pouvez utiliser votre canal divinité pour charmer les animaux et les plantes.\n\nPar une action, vous présentez votre symbole sacré et invoquez le nom de votre divinité. Chaque bête ou créature végétale qui peut vous voir dans un rayon de 9 mètres autour de vous doit effectuer un jet de sauvegarde de Sagesse. Si la créature échoue à son jet de sauvegarde, vous la charmez pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. Bien qu'il soit charmé par vous, il est amical envers vous et les autres créatures que vous désignez.",
+      "name_en": "Channel Divinity: Charm Animals and Plants"
+    },
+    {
+      "name": "Éléments amortissants",
+      "level": 6,
+      "desc": "À partir du niveau 6, lorsque vous ou une créature à moins de 9 mètres de vous subissez des dégâts d'acide, de froid, de feu, de foudre ou de tonnerre, vous pouvez utiliser votre réaction pour accorder une résistance à la créature contre cette instance de dégâts.",
+      "name_en": "Dampen Elements"
+    },
+    {
+      "name": "Frappe divine",
+      "level": 8,
+      "desc": "Au niveau 8, vous gagnez la capacité d’imprégner vos frappes d’énergie divine. Une fois à chacun de vos tours, lorsque vous touchez une créature avec une attaque avec une arme, vous pouvez faire en sorte que l'attaque inflige 1d8 dégâts supplémentaires de froid, de feu ou de foudre (votre choix) à la cible. Lorsque vous atteignez le niveau 14, les dégâts supplémentaires passent à 2d8.",
+      "name_en": "Divine Strike"
+    },
+    {
+      "name": "Maître de la Nature",
+      "level": 17,
+      "desc": "Au niveau 17, vous acquérez la capacité de commander des animaux et des créatures végétales. Pendant que les créatures sont charmées par votre fonction Charmer les animaux et les plantes, vous pouvez effectuer une action bonus pendant votre tour pour ordonner verbalement ce que chacune de ces créatures fera lors de son prochain tour.",
+      "name_en": "Master of Nature"
+    }
+  ],
+  "name_en": "Cleric: Nature Domain",
+  "_translated": true
+}

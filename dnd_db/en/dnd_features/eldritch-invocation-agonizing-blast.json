@@ -1,0 +1,8 @@
+{
+  "index": "eldritch-invocation-agonizing-blast",
+  "name": "Eldritch Invocation: Agonizing Blast",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": "When you cast eldritch blast, add your Charisma modifier to the damage it deals on a hit."
+}

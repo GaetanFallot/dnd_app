@@ -1,0 +1,12 @@
+{
+  "index": "fey-ancestry",
+  "name": "Ascendance féerique",
+  "races": [
+    "elf",
+    "half-elf"
+  ],
+  "subraces": [],
+  "desc": "Vous avez un avantage aux jets de sauvegarde contre le charme, et la magie ne peut pas vous endormir.",
+  "name_en": "Fey Ancestry",
+  "_translated": true
+}

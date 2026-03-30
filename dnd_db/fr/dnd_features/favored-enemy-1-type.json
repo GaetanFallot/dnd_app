@@ -1,0 +1,13 @@
+{
+  "index": "favored-enemy-1-type",
+  "name": "Ennemi favori (1 type)",
+  "level": 1,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 1, vous possédez une expérience significative dans l’étude, le suivi, la chasse et même la conversation avec un certain type d’ennemi.\nChoisissez un type d'ennemi préféré : aberrations, bêtes, célestes, constructions, dragons, élémentaires, fées, démons, géants, monstruosités, limons, plantes ou morts-vivants. Alternativement, vous pouvez sélectionner deux races d'humanoïdes (comme les gnolls et les orcs) comme ennemis privilégiés.\nVous avez un avantage aux tests de Sagesse (Survie) pour traquer vos ennemis favoris, ainsi qu'aux tests d'Intelligence pour rappeler des informations les concernant.\nLorsque vous obtenez cette fonctionnalité, vous apprenez également une langue de votre choix qui est parlée par vos ennemis préférés, s'ils en parlent une.\nVous choisissez un ennemi favori supplémentaire, ainsi qu'une langue associée, aux niveaux 6 et 14. Au fur et à mesure que vous gagnez des niveaux, vos choix doivent refléter les types de monstres que vous avez rencontrés au cours de vos aventures."
+  ],
+  "name_en": "Favored Enemy (1 type)",
+  "class_name_fr": "",
+  "_translated": true
+}

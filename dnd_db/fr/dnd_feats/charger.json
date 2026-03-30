@@ -1,0 +1,10 @@
+{
+  "index": "charger",
+  "name": "Chargeur",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Lorsque vous utilisez votre action Dash, vous pouvez utiliser une action bonus pour effectuer une attaque au corps à corps avec une arme ou pour pousser une créature. Si vous vous déplacez d'au moins 3 mètres en ligne droite immédiatement avant d'effectuer cette action bonus, soit vous bénéficiez d'un bonus de +5 au jet de dégâts de l'attaque (si vous choisissez de faire une attaque au corps à corps et de toucher), soit vous poussez la cible jusqu'à 3 mètres de vous (si vous choisissez de la pousser et que vous réussissez).",
+  "benefits": [],
+  "name_en": "Charger",
+  "_translated": true
+}

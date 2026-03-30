@@ -1,0 +1,48 @@
+{
+  "index": "paladin-crown",
+  "name": "Paladin : Serment de la Couronne",
+  "class": "paladin",
+  "source": "Sword Coast Adventurer's Guide",
+  "subclass_flavor": "Le serment de la Couronne est prêté aux idéaux de la civilisation, qu'il s'agisse de l'esprit d'une nation, de la fidélité à un souverain ou du service rendu à une divinité de la loi et de la gouvernance. Les paladins qui prêtent ce serment se consacrent au service de la société et, en particulier, des lois justes qui maintiennent la cohésion de la société. Ces paladins sont les gardiens vigilants des murs, luttant contre les marées chaotiques de la barbarie qui menacent de détruire tout ce que la civilisation a construit, et sont communément appelés gardiens, exemplaires ou sentinelles. Souvent, les paladins qui prêtent ce serment sont membres d'un ordre de chevalerie au service d'une nation ou d'un souverain, et prêtent serment dans le cadre de leur admission dans les rangs de l'ordre.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Principes de la Couronne",
+      "level": null,
+      "desc": "Les principes du serment de la Couronne sont souvent fixés par le souverain auquel son serment est prêté, mais mettent généralement l'accent sur les principes suivants.\n\nLoi. La loi est primordiale. C’est le mortier qui maintient ensemble les pierres de la civilisation et il doit être respecté.\n\nLoyauté. Votre parole est votre lien. Sans loyauté, les serments et les lois n’ont aucun sens.\n\nCourage. Vous devez être prêt à faire ce qui doit être fait pour le bien de l’ordre, même face à des obstacles insurmontables. Si vous n’agissez pas, qui le fera ?\n\nResponsabilité. Vous devez faire face aux conséquences de vos actes et vous êtes responsable de remplir vos devoirs et obligations.",
+      "name_en": "Tenets of the Crown"
+    },
+    {
+      "name": "Sorts de serment",
+      "level": null,
+      "desc": "Vous gagnez des sorts de serment aux niveaux de paladin indiqués.\nSerment des sorts de la couronne\nNiveau Paladin | Sorts\n3ème | Commandement, duel forcé\n5ème | Lien de protection, zone de vérité\n9ème | Aura de vitalité, gardiens spirituels\n13e | Bannissement, gardien de la foi\n17e | Cercle de pouvoir, Geas",
+      "name_en": "Oath Spells"
+    },
+    {
+      "name": "Canal Divinité",
+      "level": 3,
+      "desc": "Lorsque vous prêtez ce serment au niveau 3, vous obtenez les deux options de canalisation divine suivantes.\n• Défi des champions. Par une action bonus, vous lancez un défi qui oblige d'autres créatures à se battre avec vous. Chaque créature de votre choix que vous pouvez voir à moins de 9 mètres de vous doit effectuer un jet de sauvegarde de Sagesse. En cas d'échec, une créature ne peut pas volontairement s'éloigner de plus de 9 mètres de vous. Cet effet prend fin sur la créature si vous êtes incapable d'agir ou mourez ou si la créature est à plus de 9 mètres de vous.\n• Renversez la tendance. Par une action bonus, vous pouvez renforcer les créatures blessées avec votre Channel Divinity. Chaque créature de votre choix qui peut vous entendre à moins de 9 mètres de vous récupère des points de vie égaux à 1d6 + votre modificateur de Charisme (minimum de 1) si elle n'a pas plus de la moitié de ses points de vie.",
+      "name_en": "Channel Divinity"
+    },
+    {
+      "name": "L'allégeance divine",
+      "level": 7,
+      "desc": "À partir du niveau 7, lorsqu'une créature à moins de 1,50 mètre de vous subit des dégâts, vous pouvez utiliser votre réaction pour substituer par magie votre propre santé à celle de la créature ciblée, empêchant ainsi cette créature de subir les dégâts. Au lieu de cela, vous subissez les dégâts. Ces dommages ne peuvent en aucun cas être réduits ou évités.",
+      "name_en": "Divine Allegiance"
+    },
+    {
+      "name": "Saint inflexible",
+      "level": 15,
+      "desc": "À partir du niveau 15, vous bénéficiez d’un avantage aux jets de sauvegarde pour éviter d’être paralysé ou étourdi.",
+      "name_en": "Unyielding Saint"
+    },
+    {
+      "name": "Champion Exalté",
+      "level": 20,
+      "desc": "Au niveau 20, votre présence sur le champ de bataille est une source d'inspiration pour ceux qui se consacrent à votre cause. Vous pouvez utiliser votre action pour bénéficier des avantages suivants pendant 1 heure :\n• Vous avez une résistance aux dégâts contondants, perçants et tranchants des armes non magiques.\n• Vos alliés ont un avantage aux jets de sauvegarde contre la mort lorsqu'ils se trouvent à moins de 9 mètres de vous.\n• Vous avez un avantage aux jets de sauvegarde de Sagesse, tout comme vos alliés à moins de 9 mètres de vous.\n\nCet effet prend fin plus tôt si vous êtes frappé d'incapacité ou si vous mourez. Une fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Exalted Champion"
+    }
+  ],
+  "name_en": "Paladin: Oath of the Crown",
+  "_translated": true
+}

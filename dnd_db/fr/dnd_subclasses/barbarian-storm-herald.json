@@ -1,0 +1,36 @@
+{
+  "index": "barbarian-storm-herald",
+  "name": "Barbare : La voie du héraut de la tempête",
+  "class": "barbarian",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Les barbares typiques abritent une fureur qui les habite. Leur rage leur confère une force, une durabilité et une vitesse supérieures. Les barbares qui suivent la voie du Storm Herald apprennent à transformer leur rage en un manteau de magie primitive qui tourbillonne autour d'eux. Lorsqu'il est en colère, un barbare de cette voie puise dans la nature pour créer des effets magiques puissants.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Aura de tempête",
+      "level": 3,
+      "desc": "Lorsque vous sélectionnez cette voie au niveau 3, vous dégagez une aura magique orageuse tandis que vous êtes en colère. L'aura s'étend à 3 mètres de vous dans toutes les directions, mais pas à travers une couverture totale.\n\nVotre aura a un effet qui s'active lorsque vous entrez dans votre rage, et vous pouvez réactiver l'effet à chacun de vos tours sous forme d'action bonus. Choisissez le désert, la mer ou la toundra. L'effet de votre aura dépend de l'environnement choisi, comme détaillé ci-dessous. Vous pouvez modifier votre choix d'environnement à chaque fois que vous gagnez un niveau dans cette classe.\n\nSi les effets de votre aura nécessitent un jet de sauvegarde, le DD est égal à 8 + votre bonus de maîtrise + votre modificateur de Constitution.\n\nDésert. Lorsque cet effet est activé, toutes les autres créatures de votre aura subissent chacune 2 dégâts de feu. Les dégâts augmentent lorsque vous atteignez certains niveaux dans cette classe, passant à 3 au niveau 5, 4 au niveau 10, 5 au niveau 15 et 6 au niveau 20.\n\nMer. Lorsque cet effet est activé, vous pouvez choisir une autre créature que vous pouvez voir dans votre aura. La cible doit effectuer un jet de sauvegarde de Dextérité. La cible subit 1d6 dégâts de foudre en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Les dégâts augmentent lorsque vous atteignez certains niveaux dans cette classe, passant à 2d6 au niveau 10, 3d6 au niveau 15 et 4d6 au niveau 20.\n\nToundra. Lorsque cet effet est activé, chaque créature de votre choix dans votre aura gagne 2 points de vie temporaires, à mesure que les esprits de glace l'habituent à la souffrance. Les points de vie temporaires augmentent lorsque vous atteignez certains niveaux dans cette classe, passant à 3 au niveau 5, 4 au niveau 10, 5 au niveau 15 et 6 au niveau 20.",
+      "name_en": "Storm Aura"
+    },
+    {
+      "name": "Âme de tempête",
+      "level": 6,
+      "desc": "Au niveau 6, la tempête vous accorde des bénéfices même lorsque votre aura n'est pas active. Les avantages dépendent de l'environnement que vous avez choisi pour votre Storm Aura.\n\nDésert. Vous gagnez une résistance aux dégâts de feu et vous ne subissez pas les effets de la chaleur extrême, comme décrit dans le Dungeon Master's Guide. De plus, en tant qu'action, vous pouvez toucher un objet inflammable qui n'est porté par personne d'autre et y mettre le feu.\n\nMer. Vous gagnez en résistance aux dégâts de la foudre et vous pouvez respirer sous l'eau. Vous gagnez également une vitesse de nage de 30 pieds.\n\nToundra. Vous gagnez en résistance aux dégâts du froid et vous ne subissez pas les effets du froid extrême, comme décrit dans le Dungeon Master's Guide. De plus, par une action, vous pouvez toucher de l'eau et en transformer un cube de 1,50 mètre en glace, qui fond après 1 minute. Cette action échoue si une créature est dans le cube.",
+      "name_en": "Storm Soul"
+    },
+    {
+      "name": "Tempête de protection",
+      "level": 10,
+      "desc": "Au niveau 10, vous apprenez à utiliser votre maîtrise de la tempête pour protéger les autres. Chaque créature de votre choix a la résistance aux dégâts que vous avez acquise grâce à la fonction Storm Soul tant que la créature est dans votre Storm Aura.",
+      "name_en": "Shielding Storm"
+    },
+    {
+      "name": "Tempête déchaînée",
+      "level": 14,
+      "desc": "Au niveau 14, la puissance de la tempête que vous canalisez devient plus puissante et s'abat sur vos ennemis. L'effet est basé sur l'environnement que vous avez choisi pour votre Storm Aura.\n\nDésert. Immédiatement après qu'une créature dans votre aura vous frappe avec une attaque, vous pouvez utiliser votre réaction pour forcer cette créature à effectuer un jet de sauvegarde de Dextérité. En cas d'échec, la créature subit des dégâts de feu égaux à la moitié de votre niveau de barbare.\n\nMer. Lorsque vous touchez une créature dans votre aura avec une attaque, vous pouvez utiliser votre réaction pour forcer cette créature à effectuer un jet de sauvegarde de Force. En cas d'échec, la créature est projetée à terre, comme si elle avait été frappée par une vague.\n\nToundra. Chaque fois que l'effet de votre Storm Aura est activé, vous pouvez choisir une créature que vous pouvez voir dans l'aura. Cette créature doit réussir un jet de sauvegarde de Force, sinon sa vitesse est réduite à 0 jusqu'au début de votre prochain tour, car le givre magique la recouvre.",
+      "name_en": "Raging Storm"
+    }
+  ],
+  "name_en": "Barbarian: Path of the Storm Herald",
+  "_translated": true
+}

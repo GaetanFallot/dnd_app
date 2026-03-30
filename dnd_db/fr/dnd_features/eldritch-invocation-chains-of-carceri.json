@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-chains-of-carceri",
+  "name": "Invocation surnaturelle : chaînes de Carceri",
+  "level": 15,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer un monstre à volonté (en ciblant un céleste, un démon ou un élémentaire) sans dépenser d'emplacement de sort ou de composants matériels. Vous devez terminer un long repos avant de pouvoir utiliser à nouveau cette invocation sur la même créature."
+  ],
+  "name_en": "Eldritch Invocation: Chains of Carceri",
+  "class_name_fr": "",
+  "_translated": true
+}

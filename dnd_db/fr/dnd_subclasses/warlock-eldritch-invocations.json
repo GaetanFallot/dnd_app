@@ -1,0 +1,450 @@
+{
+  "index": "warlock-eldritch-invocations",
+  "name": "Invocations surnaturelles",
+  "class": "warlock",
+  "source": "Player's Handbook\nPrerequisite: eldritch blast cantrip",
+  "subclass_flavor": "Condition préalable:",
+  "desc": "",
+  "features": [
+    {
+      "name": "Explosion angoissante",
+      "level": null,
+      "desc": "Lorsque vous lancez une explosion surnaturelle, ajoutez votre modificateur de Charisme aux dégâts qu'elle inflige en cas de coup.",
+      "name_en": "Agonizing Blast"
+    },
+    {
+      "name": "Armure des ombres",
+      "level": null,
+      "desc": "Vous pouvez lancer une armure de mage sur vous-même à volonté, sans dépenser d'emplacement de sort ni de composants matériels.",
+      "name_en": "Armor of Shadows"
+    },
+    {
+      "name": "Étape ascendante",
+      "level": null,
+      "desc": "Vous pouvez lancer Lévitation sur vous-même à volonté, sans dépenser d'emplacement de sort ni de composants matériels.",
+      "name_en": "Ascendant Step"
+    },
+    {
+      "name": "Aspect de la Lune",
+      "level": null,
+      "desc": "Vous n’avez plus besoin de dormir et vous ne pouvez en aucun cas être forcé de dormir. Pour bénéficier des bienfaits d’un long repos, vous pouvez consacrer les 8 heures à des activités légères, comme lire votre Livre des Ombres et surveiller.",
+      "name_en": "Aspect of the Moon"
+    },
+    {
+      "name": "Discours de la bête",
+      "level": null,
+      "desc": "Vous pouvez lancer parler avec les animaux à volonté, sans dépenser d'emplacement de sort.",
+      "name_en": "Beast Speech"
+    },
+    {
+      "name": "Influence séduisante",
+      "level": null,
+      "desc": "Vous maîtrisez les compétences de tromperie et de persuasion.",
+      "name_en": "Beguiling Influence"
+    },
+    {
+      "name": "Murmures envoûtantes",
+      "level": null,
+      "desc": "Prérequis : 7ème niveau\n\nVous pouvez lancer la contrainte une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos.",
+      "name_en": "Bewitching Whispers"
+    },
+    {
+      "name": "Lien du Talisman",
+      "level": null,
+      "desc": "Pendant que quelqu'un d'autre porte votre talisman, vous pouvez utiliser votre action pour vous téléporter vers l'espace inoccupé le plus proche de lui, à condition que vous soyez tous les deux sur le même plan d'existence. Le porteur de votre talisman peut faire la même chose, en utilisant son action pour se téléporter vers vous. La téléportation peut être utilisée un nombre de fois égal à votre bonus de maîtrise, et toutes les utilisations dépensées sont restaurées lorsque vous terminez un repos long.",
+      "name_en": "Bond of the Talisman"
+    },
+    {
+      "name": "Livre des secrets anciens",
+      "level": null,
+      "desc": "Prérequis : fonctionnalité Pacte du Tome\n\nVous pouvez désormais inscrire des rituels magiques dans votre Livre des Ombres. Choisissez deux sorts de 1er niveau qui ont l'étiquette rituelle dans la liste de sorts de n'importe quelle classe (les deux ne doivent pas nécessairement provenir de la même liste). Les sorts apparaissent dans le livre et ne comptent pas dans le nombre de sorts que vous connaissez. Avec votre Livre des Ombres en main, vous pouvez lancer les sorts choisis sous forme de rituels. Vous ne pouvez pas lancer de sorts sauf sous forme de rituels, à moins que vous ne les ayez appris par d'autres moyens. Vous pouvez également lancer un sort de démoniste que vous connaissez comme rituel s'il porte l'étiquette rituelle.\n\nAu cours de vos aventures, vous pouvez ajouter d'autres sorts rituels à votre Livre des Ombres. Lorsque vous trouvez un tel sort, vous pouvez l'ajouter au livre si le niveau du sort est égal ou inférieur à la moitié de votre niveau de démoniste (arrondi au supérieur) et si vous avez le temps de transcrire le sort. Pour chaque niveau du sort, le processus de transcription prend 2 heures et coûte 50 po pour les encres rares nécessaires à son inscription.",
+      "name_en": "Book of Ancient Secrets"
+    },
+    {
+      "name": "Chaînes de Carceri",
+      "level": null,
+      "desc": "Vous pouvez lancer Hold Monster à volonté – en ciblant un céleste, un démon ou un élémentaire – sans dépenser d'emplacement de sort ou de composants matériels. Vous devez terminer un long repos avant de pouvoir utiliser à nouveau cette invocation sur la même créature.",
+      "name_en": "Chains of Carceri"
+    },
+    {
+      "name": "Cape de mouches",
+      "level": null,
+      "desc": "En guise d'action bonus, vous pouvez vous entourer d'une aura magique qui ressemble à des mouches bourdonnantes. L'aura s'étend à 1,50 mètre de vous dans toutes les directions, mais pas à travers une couverture totale. Cela dure jusqu'à ce que vous soyez frappé d'incapacité ou que vous le rejetiez comme une action bonus.\n\nL'aura vous accorde un avantage sur les tests de Charisme (Intimidation) mais un désavantage sur tous les autres tests de Charisme. Toute autre créature qui commence son tour dans l'aura subit des dégâts de poison égaux à votre modificateur de Charisme (minimum de 0 dégâts).\n\nUne fois que vous avez utilisé cette invocation, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Cloak of Flies"
+    },
+    {
+      "name": "La vue du diable",
+      "level": null,
+      "desc": "Vous pouvez voir normalement dans l'obscurité, à la fois magique et non magique, jusqu'à une distance de 120 pieds.",
+      "name_en": "Devil's Sight"
+    },
+    {
+      "name": "Mot épouvantable",
+      "level": null,
+      "desc": "Vous pouvez lancer de la confusion une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos.",
+      "name_en": "Dreadful Word"
+    },
+    {
+      "name": "Esprit surnaturel",
+      "level": null,
+      "desc": "",
+      "name_en": "Eldritch Mind"
+    },
+    {
+      "name": "Vue surnaturelle",
+      "level": null,
+      "desc": "Vous pouvez lancer la détection de magie à volonté, sans dépenser d'emplacement de sort ni de composants matériels.",
+      "name_en": "Eldritch Sight"
+    },
+    {
+      "name": "Châtiment surnaturel",
+      "level": null,
+      "desc": "Une fois par tour, lorsque vous touchez une créature avec votre arme du pacte, vous pouvez dépenser un emplacement de sort de démoniste pour infliger 1d8 dégâts de force supplémentaires à la cible, plus 1d8 supplémentaires par niveau de l'emplacement de sort, et vous pouvez mettre la cible à terre si elle est énorme ou plus petite.",
+      "name_en": "Eldritch Smite"
+    },
+    {
+      "name": "Lance surnaturelle",
+      "level": null,
+      "desc": "Lorsque vous lancez une explosion mystique, sa portée est de 300 pieds.",
+      "name_en": "Eldritch Spear"
+    },
+    {
+      "name": "Yeux du gardien des runes",
+      "level": null,
+      "desc": "Vous pouvez lire tous les écrits.",
+      "name_en": "Eyes of the Rune Keeper"
+    },
+    {
+      "name": "Scribe lointain",
+      "level": null,
+      "desc": "Une nouvelle page apparaît dans votre Livre des Ombres. Avec votre permission, une créature peut utiliser son action pour écrire son nom sur cette page, qui peut contenir un nombre de noms égal à votre bonus de maîtrise.\n\nVous pouvez lancer le sort d'envoi, en ciblant une créature dont le nom est sur la page, sans utiliser d'emplacement de sort et sans utiliser de composants matériels. Pour ce faire, vous devez écrire le message sur la page. La cible entend le message dans son esprit et si elle répond, son message apparaît sur la page plutôt que dans votre esprit. L'écriture disparaît au bout d'1 minute.\n\nPar une action, vous pouvez effacer comme par magie un nom sur la page en le touchant.",
+      "name_en": "Far Scribe"
+    },
+    {
+      "name": "Vigueur diabolique",
+      "level": null,
+      "desc": "Vous pouvez vous lancer une fausse vie à volonté en tant que sort de niveau 1, sans dépenser d'emplacement de sort ni de composants matériels.",
+      "name_en": "Fiendish Vigor"
+    },
+    {
+      "name": "Regard de deux esprits",
+      "level": null,
+      "desc": "Vous pouvez utiliser votre action pour toucher un humanoïde consentant et percevoir à travers ses sens jusqu'à la fin de votre prochain tour. Tant que la créature est sur le même plan d'existence que vous, vous pouvez utiliser votre action lors des tours suivants pour maintenir cette connexion, prolongeant ainsi la durée jusqu'à la fin de votre prochain tour. Tout en percevant à travers les sens de l'autre créature, vous bénéficiez de tous les sens spéciaux possédés par cette créature, et vous êtes aveuglé et assourdi par rapport à votre propre environnement.",
+      "name_en": "Gaze of Two Minds"
+    },
+    {
+      "name": "Regard fantomatique",
+      "level": null,
+      "desc": "Par une action, vous gagnez la capacité de voir à travers des objets solides dans une portée de 9 mètres. Dans cette plage, vous avez la vision dans le noir si vous ne l’avez pas déjà. Cette vue spéciale dure 1 minute ou jusqu'à la fin de votre concentration (comme si vous vous concentriez sur un sort). Pendant ce temps, vous percevez les objets comme des images fantomatiques et transparentes.\n\nUne fois que vous avez utilisé cette invocation, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Ghostly Gaze"
+    },
+    {
+      "name": "Don des profondeurs",
+      "level": null,
+      "desc": "Vous pouvez respirer sous l’eau et vous gagnez une vitesse de nage égale à votre vitesse de marche.\n\nVous pouvez également lancer la respiration aquatique sans dépenser d’emplacement de sort. Vous retrouvez la capacité de le faire lorsque vous terminez un repos long.",
+      "name_en": "Gift of the Depths"
+    },
+    {
+      "name": "Don des éternels",
+      "level": null,
+      "desc": "Chaque fois que vous regagnez des points de vie alors que votre familier se trouve à moins de 100 pieds de vous, considérez tous les dés lancés pour déterminer les points de vie que vous regagnez comme ayant lancé leur valeur maximale pour vous.",
+      "name_en": "Gift of the Ever-Living Ones"
+    },
+    {
+      "name": "Don des Protecteurs",
+      "level": null,
+      "desc": "Une nouvelle page apparaît dans votre Livre des Ombres. Avec votre permission, une créature peut utiliser son action pour écrire son nom sur cette page, qui peut contenir un nombre de noms égal à votre bonus de maîtrise.\n\nLorsqu'une créature dont le nom est sur la page est réduite à 0 point de vie mais n'est pas tuée sur le coup, la créature tombe comme par magie à 1 point de vie. Une fois cette magie déclenchée, aucune créature ne peut en bénéficier tant que vous n'avez pas terminé un repos long.\n\nPar une action, vous pouvez effacer comme par magie un nom sur la page en le touchant.",
+      "name_en": "Gift of the Protectors"
+    },
+    {
+      "name": "Emprise de Hadar",
+      "level": null,
+      "desc": "Une fois à chacun de vos tours, lorsque vous touchez une créature avec votre explosion surnaturelle, vous pouvez déplacer cette créature en ligne droite de 10 pieds plus près de vous.",
+      "name_en": "Grasp of Hadar"
+    },
+    {
+      "name": "Arme du Pacte améliorée",
+      "level": null,
+      "desc": "Vous pouvez utiliser n'importe quelle arme que vous invoquez avec votre fonction Pacte de la Lame comme foyer de lancement de sorts pour vos sorts de démoniste.\n\nDe plus, l'arme bénéficie d'un bonus de +1 à ses jets d'attaque et de dégâts, sauf s'il s'agit d'une arme magique qui possède déjà un bonus à ces jets.\n\nEnfin, l'arme que vous invoquez peut être un arc court, un arc long, une arbalète légère ou une arbalète lourde.",
+      "name_en": "Improved Pact Weapon"
+    },
+    {
+      "name": "Investissement du Chain Master",
+      "level": null,
+      "desc": "Lorsque vous lancez Trouver un familier, vous infusez au familier invoqué une mesure de votre pouvoir surnaturel, accordant à la créature les avantages suivants :\n• Le familier gagne soit une vitesse de vol, soit une vitesse de nage (au choix) de 40 pieds.\n• Par une action bonus, vous pouvez ordonner au familier d'effectuer l'action Attaque.\n• Les attaques avec les armes du familier sont considérées comme magiques dans le but de vaincre l'immunité et la résistance aux attaques non magiques.\n• Si le familier force une créature à effectuer un jet de sauvegarde, elle utilise le DD de sauvegarde de vos sorts.\n• Lorsque le familier subit des dégâts, vous pouvez utiliser votre réaction pour lui accorder une résistance contre ces dégâts.",
+      "name_en": "Investment of the Chain Master"
+    },
+    {
+      "name": "Lance de léthargie",
+      "level": null,
+      "desc": "Une fois à chacun de vos tours, lorsque vous touchez une créature avec votre explosion surnaturelle, vous pouvez réduire la vitesse de cette créature de 10 pieds jusqu'à la fin de votre prochain tour.",
+      "name_en": "Lance of Lethargy"
+    },
+    {
+      "name": "Buveur de vie",
+      "level": null,
+      "desc": "Lorsque vous touchez une créature avec votre arme du pacte, la créature subit des dégâts nécrotiques supplémentaires égaux à votre modificateur de Charisme (minimum 1).",
+      "name_en": "Lifedrinker"
+    },
+    {
+      "name": "Sortilège exaspérant",
+      "level": null,
+      "desc": "Par une action bonus, vous provoquez une perturbation psychique autour de la cible maudite par votre sortilège ou par une de vos capacités de démoniste, comme la malédiction de Hexblade et le signe de mauvais présage. Ce faisant, vous infligez des dégâts psychiques à la cible maudite et à chaque créature de votre choix située à moins de 1,50 mètre d'elle. Les dégâts psychiques sont égaux à votre modificateur de Charisme (minimum de 1 dégât). Pour utiliser cette invocation, vous devez être capable de voir la cible maudite et elle doit se trouver à moins de 9 pieds de vous.",
+      "name_en": "Maddening Hex"
+    },
+    {
+      "name": "Masque aux multiples visages",
+      "level": null,
+      "desc": "Vous pouvez lancer un déguisement à volonté, sans dépenser d'emplacement de sort.",
+      "name_en": "Mask of Many Faces"
+    },
+    {
+      "name": "Maître des myriades de formes",
+      "level": null,
+      "desc": "Vous pouvez lancer une modification de soi à volonté, sans dépenser d'emplacement de sort.",
+      "name_en": "Master of Myriad Forms"
+    },
+    {
+      "name": "Les serviteurs du chaos",
+      "level": null,
+      "desc": "Vous pouvez lancer une conjuration élémentaire une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos.",
+      "name_en": "Minions of Chaos"
+    },
+    {
+      "name": "Enliser l'esprit",
+      "level": null,
+      "desc": "Vous pouvez lancer un sort lent une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos.",
+      "name_en": "Mire the Mind"
+    },
+    {
+      "name": "Visions brumeuses",
+      "level": null,
+      "desc": "Vous pouvez lancer une image silencieuse à volonté, sans dépenser d'emplacement de sort ni de composants matériels.",
+      "name_en": "Misty Visions"
+    },
+    {
+      "name": "Un avec des ombres",
+      "level": null,
+      "desc": "Lorsque vous vous trouvez dans une zone de faible luminosité ou d'obscurité, vous pouvez utiliser votre action pour devenir invisible jusqu'à ce que vous bougez ou entrepreniez une action ou une réaction.",
+      "name_en": "One with Shadows"
+    },
+    {
+      "name": "Saut d'un autre monde",
+      "level": null,
+      "desc": "Vous pouvez lancer saut à volonté, sans dépenser d'emplacement de sort.",
+      "name_en": "Otherworldly Leap"
+    },
+    {
+      "name": "Protection du Talisman",
+      "level": null,
+      "desc": "Lorsque le porteur de votre talisman échoue à un jet de sauvegarde, il peut ajouter un d4 au jet, transformant potentiellement la sauvegarde en succès. Cet avantage peut être utilisé un nombre de fois égal à votre bonus de maîtrise, et toutes les utilisations dépensées sont restaurées lorsque vous terminez un repos long.",
+      "name_en": "Protection of the Talisman"
+    },
+    {
+      "name": "Réprimande du Talisman",
+      "level": null,
+      "desc": "Lorsque le porteur de votre talisman est touché par un attaquant que vous pouvez voir à moins de 9 mètres de vous, vous pouvez utiliser votre réaction pour infliger des dégâts psychiques à l'attaquant égaux à votre bonus de maîtrise et le pousser jusqu'à 3 mètres du porteur du talisman.",
+      "name_en": "Rebuke of the Talisman"
+    },
+    {
+      "name": "Maléfice implacable",
+      "level": null,
+      "desc": "Votre malédiction crée un lien temporaire entre vous et votre cible. En tant qu'action bonus, vous pouvez vous téléporter comme par magie jusqu'à 9 mètres dans un espace inoccupé que vous pouvez voir à moins de 1,50 mètre de la cible maudite par votre sortilège ou par une de vos capacités de démoniste, comme la malédiction de Hexblade et le signe de mauvais présage. Pour vous téléporter de cette manière, vous devez pouvoir voir la cible maudite.",
+      "name_en": "Relentless Hex"
+    },
+    {
+      "name": "Explosion repoussante",
+      "level": null,
+      "desc": "Lorsque vous touchez une créature avec une explosion surnaturelle, vous pouvez la pousser jusqu'à 10 pieds de vous en ligne droite.",
+      "name_en": "Repelling Blast"
+    },
+    {
+      "name": "Sculpteur de chair",
+      "level": null,
+      "desc": "Vous pouvez lancer une métamorphose une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos.",
+      "name_en": "Sculptor of Flesh"
+    },
+    {
+      "name": "Linceul d'Ombre",
+      "level": null,
+      "desc": "Vous pouvez lancer l'invisibilité à volonté, sans dépenser d'emplacement de sort.",
+      "name_en": "Shroud of Shadow"
+    },
+    {
+      "name": "Signe de mauvais présage",
+      "level": null,
+      "desc": "Vous pouvez lancer une malédiction d'octroi une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos.",
+      "name_en": "Sign of Ill Omen"
+    },
+    {
+      "name": "Voleur des Cinq Destins",
+      "level": null,
+      "desc": "Vous pouvez lancer le fléau une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos.",
+      "name_en": "Thief of Five Fates"
+    },
+    {
+      "name": "Lame assoiffée",
+      "level": null,
+      "desc": "Vous pouvez attaquer avec votre arme du pacte deux fois, au lieu d'une, chaque fois que vous effectuez l'action Attaque pendant votre tour.",
+      "name_en": "Thirsting Blade"
+    },
+    {
+      "name": "Tombeau de Lévistus",
+      "level": null,
+      "desc": "En réaction lorsque vous subissez des dégâts, vous pouvez vous ensevelir dans la glace, qui fond à la fin de votre prochain tour. Vous gagnez 10 points de vie temporaires par niveau de démoniste, qui subissent autant de dégâts déclencheurs que possible. Immédiatement après avoir subi des dégâts, vous devenez vulnérable aux dégâts de feu, votre vitesse est réduite à 0 et vous êtes frappé d'incapacité. Ces effets, y compris les points de vie temporaires restants, prennent tous fin lorsque la glace fond.\n\nUne fois que vous avez utilisé cette invocation, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Tomb of Levistus"
+    },
+    {
+      "name": "L'évasion du filou",
+      "level": null,
+      "desc": "Vous pouvez lancer Liberté de mouvement une fois sur vous-même sans dépenser d'emplacement de sort. Vous retrouvez la capacité de le faire lorsque vous terminez un repos long.",
+      "name_en": "Trickster's Escape"
+    },
+    {
+      "name": "Servitude éternelle",
+      "level": null,
+      "desc": "Vous pouvez lancer des morts animés sans utiliser d'emplacement de sort. Une fois que vous l'avez fait, vous ne pouvez plus le lancer de cette manière tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Undying Servitude"
+    },
+    {
+      "name": "Visions de royaumes lointains",
+      "level": null,
+      "desc": "Vous pouvez lancer Œil arcanique à volonté, sans dépenser d’emplacement de sort.",
+      "name_en": "Visions of Distant Realms"
+    },
+    {
+      "name": "Voix du maître de la chaîne",
+      "level": null,
+      "desc": "Vous pouvez communiquer par télépathie avec votre familier et percevoir à travers ses sens tant que vous êtes sur le même plan d'existence. De plus, tout en percevant à travers les sens de votre familier, vous pouvez également parler à travers votre familier avec votre propre voix, même si votre familier est normalement incapable de parler.",
+      "name_en": "Voice of the Chain Master"
+    },
+    {
+      "name": "Les murmures de la tombe",
+      "level": null,
+      "desc": "Vous pouvez lancer parler avec les morts à volonté, sans dépenser d'emplacement de sort.",
+      "name_en": "Whispers of the Grave"
+    },
+    {
+      "name": "Vue de sorcière",
+      "level": null,
+      "desc": "Vous pouvez voir la véritable forme de n'importe quel changeur de forme ou créature dissimulée par une illusion ou une magie de transmutation tant que la créature se trouve à moins de 9 mètres de vous et dans votre champ de vision.",
+      "name_en": "Witch Sight"
+    },
+    {
+      "name": "Pistolero arcanique",
+      "level": null,
+      "desc": "Vous pouvez créer une arme de pacte qui est une arme de poing ou un bras long, et vous pouvez transformer une arme de poing ou un bras long magique en votre arme de pacte.",
+      "name_en": "Arcane Gunslinger"
+    },
+    {
+      "name": "Maléfice brûlant",
+      "level": null,
+      "desc": "Par une action bonus, vous faites subir à une cible maudite par la malédiction de votre Hexblade des dégâts de feu égaux à votre modificateur de Charisme (minimum de 1).",
+      "name_en": "Burning Hex"
+    },
+    {
+      "name": "Phare de Caïphon",
+      "level": null,
+      "desc": "L'étoile violette Caiphon est le destin tragique des marins inexpérimentés. Ceux qui utilisent sa lumière trompeuse pour guider leurs voyages finissent invariablement par se ruiner. Vous maîtrisez les compétences de Déception et de Discrétion, et vous avez un avantage aux jets d'attaque contre les créatures charmées.",
+      "name_en": "Caiphon's Beacon"
+    },
+    {
+      "name": "Sort de glace",
+      "level": null,
+      "desc": "Par une action bonus, vous faites tourbillonner du givre autour d'une cible maudite par la malédiction de votre Hexblade, infligeant des dégâts de froid à chacun de vos ennemis à moins de 1,50 mètre de la cible. Les dégâts de froid sont égaux à votre modificateur de Charisme (minimum de 1).",
+      "name_en": "Chilling Hex"
+    },
+    {
+      "name": "Chronique de la Reine Corbeau",
+      "level": null,
+      "desc": "Vous pouvez placer la main d'un cadavre ou un appendice similaire sur votre Livre des Ombres et poser une question à haute voix. Au bout d'1 minute, la réponse apparaît écrite avec du sang dans votre livre. La réponse est fournie par l'esprit de la créature morte au meilleur de ses connaissances et est traduite dans la langue de votre choix. Vous devez utiliser cette capacité dans la minute qui suit la mort d'une créature, et une créature donnée ne peut se voir poser qu'une seule question de cette manière.",
+      "name_en": "Chronicle of the Raven Queen"
+    },
+    {
+      "name": "Griffe d'Acamar",
+      "level": null,
+      "desc": "Vous pouvez créer un fléau de plomb noir à l’aide de votre fonction Pacte de la Lame. La tête du fléau est sculptée pour ressembler à une paire de tentacules agrippants. L'arme a la propriété de portée. Lorsque vous touchez une créature avec, vous pouvez dépenser un emplacement de sort pour infliger 2d8 dégâts nécrotiques supplémentaires à la cible par niveau de sort, et vous pouvez réduire la vitesse de la créature à 0 pied jusqu'à la fin de votre prochain tour.",
+      "name_en": "Claw of Acamar"
+    },
+    {
+      "name": "Porteur de malédiction",
+      "level": null,
+      "desc": "Vous pouvez créer une épée à deux mains forgée en argent, avec des runes noires gravées sur sa lame, en utilisant votre fonction Pacte de la Lame. Si vous réduisez une cible maudite par la malédiction de votre Hexblade à 0 point de vie avec cette épée, vous pouvez immédiatement changer la cible de la malédiction en une autre créature. Ce changement ne prolonge pas la durée de la malédiction.\n\nLorsque vous touchez une créature avec cette arme, vous pouvez dépenser un emplacement de sort pour infliger 2d8 dégâts tranchants supplémentaires à la cible par niveau de sort, et vous pouvez réduire la vitesse de la créature à 0 pied jusqu'à la fin de votre prochain tour.",
+      "name_en": "Curse Bringer"
+    },
+    {
+      "name": "Armure surnaturelle",
+      "level": null,
+      "desc": "Par une action, vous pouvez toucher une armure qui n'est portée par personne et l'enfiler instantanément, à condition que vous ne portiez pas déjà d'armure. Vous maîtrisez cette armure jusqu'à ce qu'elle soit retirée.",
+      "name_en": "Eldritch Armor"
+    },
+    {
+      "name": "Cadeau du Seigneur Vert",
+      "level": null,
+      "desc": "Le Seigneur Vert supervise un royaume verdoyant où règne un été éternel. Votre âme est liée à son pouvoir. Chaque fois que vous regagnez des points de vie, vous considérez tous les dés lancés pour déterminer les points de vie que vous regagnez comme ayant lancé leur valeur maximale.",
+      "name_en": "Green Lord's Gift"
+    },
+    {
+      "name": "Baiser de Méphistophélès",
+      "level": null,
+      "desc": "Lorsque vous touchez une créature avec votre explosion surnaturelle, vous pouvez lancer une boule de feu comme une action bonus en utilisant un emplacement de sort de démoniste. Le sort doit être centré sur la créature que vous avez touchée avec une explosion surnaturelle.",
+      "name_en": "Kiss of Mephistopheles"
+    },
+    {
+      "name": "Masse de Dispater",
+      "level": null,
+      "desc": "Lorsque vous créez votre arme du pacte sous forme de masse, elle se manifeste sous la forme d'une masse de fer forgée à Dis, le deuxième des Neuf Enfers. Lorsque vous frappez une créature avec, vous pouvez dépenser un emplacement de sort pour infliger 2d8 dégâts de force supplémentaires à la cible par niveau de sort, et vous pouvez mettre la cible à terre si elle est énorme ou plus petite.",
+      "name_en": "Mace of Dispater"
+    },
+    {
+      "name": "Sortilège exaspérant",
+      "level": null,
+      "desc": "Par une action bonus, vous provoquez une perturbation psychique autour de la cible maudite par votre sortilège ou par une de vos capacités de démoniste, comme la malédiction de Hexblade et le signe de mauvais présage. Lorsque vous faites cela, vous infligez des dégâts psychiques à la cible et à chaque créature de votre choix à moins de 1,50 mètre d'elle. Les dégâts psychiques sont égaux à votre modificateur de Charisme (minimum de 0 dégâts).",
+      "name_en": "Maddening Hex"
+    },
+    {
+      "name": "Arc de lune",
+      "level": null,
+      "desc": "Vous pouvez créer un arc long en utilisant votre fonction Pacte de la Lame. Lorsque vous retirez sa ficelle et tirez, il crée une flèche de bois blanc, qui disparaît au bout d'une minute. Vous avez l'avantage aux jets d'attaque contre les lycanthropes avec l'arc. Lorsque vous touchez une créature avec, vous pouvez dépenser un emplacement de sort pour infliger 2d8 dégâts radiants supplémentaires à la cible par niveau de sort.",
+      "name_en": "Moonbow"
+    },
+    {
+      "name": "Chemin du chercheur",
+      "level": null,
+      "desc": "Le Chercheur vous invite à voyager à la recherche de connaissances, et rien ne peut vous empêcher de suivre ce chemin. Vous ignorez les terrains difficiles, avez un avantage à tous les tests pour échapper à un grappin, des menottes ou des cordes, et un avantage aux jets de sauvegarde contre la paralysie.",
+      "name_en": "Path of the Seeker"
+    },
+    {
+      "name": "Bénédiction de la Reine Corbeau",
+      "level": null,
+      "desc": "Lorsque vous obtenez un coup critique avec votre sort magique d'explosion mystique, choisissez vous-même ou un allié que vous pouvez voir à moins de 9 mètres de vous. La créature choisie peut immédiatement dépenser un dé de vie pour récupérer des points de vie égaux au jet + le modificateur de Constitution de la créature (minimum 1 point de vie).",
+      "name_en": "Raven Queen's Blessing"
+    },
+    {
+      "name": "Discours du chercheur",
+      "level": null,
+      "desc": "Votre quête de connaissances vous permet de maîtriser n'importe quelle langue parlée. Lorsque vous effectuez un repos long, vous pouvez choisir deux langues. Vous acquérez la capacité de parler, lire et écrire les langues choisies jusqu'à la fin de votre prochain repos long.",
+      "name_en": "Seeker's Speech"
+    },
+    {
+      "name": "Linceul d'Oulban",
+      "level": null,
+      "desc": "L'étoile bleu-blanc Ulban maintient une présence inconstante parmi les étoiles, apparaissant uniquement pour annoncer un sinistre présage. Par une action, vous pouvez devenir invisible pendant 1 minute. Si vous attaquez, infligez des dégâts ou forcez une créature à faire un jet de sauvegarde, vous devenez visible à la fin du tour en cours.",
+      "name_en": "Shroud of Ulban"
+    },
+    {
+      "name": "Arme du Pacte supérieure",
+      "level": null,
+      "desc": "Vous pouvez utiliser n'importe quelle arme que vous invoquez avec votre fonction Pacte de la Lame comme foyer de lancement de sorts pour vos sorts de démoniste.\n\nDe plus, l'arme compte comme une arme magique avec un bonus de +2 à ses jets d'attaque et de dégâts, sauf s'il s'agit déjà d'une arme magique que vous avez transformée en arme de votre pacte.",
+      "name_en": "Superior Pact Weapon"
+    },
+    {
+      "name": "Arme du Pacte ultime",
+      "level": null,
+      "desc": "Vous pouvez utiliser n'importe quelle arme que vous invoquez avec votre fonction Pacte de la Lame comme foyer de lancement de sorts pour vos sorts de démoniste.\n\nDe plus, l'arme compte comme une arme magique avec un bonus de +3 à ses jets d'attaque et de dégâts, sauf s'il s'agit déjà d'une arme magique que vous avez transformée en arme de votre pacte.",
+      "name_en": "Ultimate Pact Weapon"
+    }
+  ],
+  "name_en": "Eldritch Invocations",
+  "_translated": true
+}

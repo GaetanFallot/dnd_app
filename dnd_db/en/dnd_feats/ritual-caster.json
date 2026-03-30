@@ -1,0 +1,8 @@
+{
+  "index": "ritual-caster",
+  "name": "Ritual Caster",
+  "source": "Player's Handbook",
+  "prerequisite": "Intelligence or Wisdom of 13 or higher",
+  "desc": "You have learned a number of spells that you can cast as rituals. These spells are written in a ritual book, which you must have in hand while casting one of them.",
+  "benefits": []
+}

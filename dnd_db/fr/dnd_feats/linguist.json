@@ -1,0 +1,14 @@
+{
+  "index": "linguist",
+  "name": "Linguiste",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous avez étudié les langues et les codes, bénéficiant des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score d'Intelligence de 1, jusqu'à un maximum de 20.",
+    "Vous apprenez trois langues de votre choix.",
+    "Vous pouvez habilement créer des chiffres écrits. Les autres ne peuvent pas déchiffrer un code que vous créez à moins que vous ne leur appreniez, qu'ils réussissent un test d'Intelligence (DD égal à votre score d'Intelligence + votre bonus de maîtrise) ou qu'ils utilisent la magie pour le déchiffrer."
+  ],
+  "name_en": "Linguist",
+  "_translated": true
+}

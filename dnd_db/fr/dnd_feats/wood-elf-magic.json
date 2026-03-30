@@ -1,0 +1,10 @@
+{
+  "index": "wood-elf-magic",
+  "name": "Magie des Elfes des Bois",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Elfe (Bois)",
+  "desc": "Vous apprenez la magie des bois primitifs, vénérés et protégés par votre peuple. Vous apprenez un cantrip Druide de votre choix. Vous apprenez également les sorts Longstrider et Pass Without Trace, que vous pouvez lancer chacun une fois sans dépenser d'emplacement de sort. Vous retrouvez ainsi la possibilité de lancer ces deux sorts lorsque vous terminez un repos long. La sagesse est votre capacité de lancement de sorts pour les trois sorts.",
+  "benefits": [],
+  "name_en": "Wood Elf Magic",
+  "_translated": true
+}

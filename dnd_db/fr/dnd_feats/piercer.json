@@ -1,0 +1,14 @@
+{
+  "index": "piercer",
+  "name": "Perceur",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": null,
+  "desc": "Vous avez atteint une précision pénétrante au combat, vous conférant les avantages suivants :",
+  "benefits": [
+    "Augmentez votre Force ou votre Dextérité de 1, jusqu'à un maximum de 20.",
+    "Une fois par tour, lorsque vous touchez une créature avec une attaque qui inflige des dégâts perçants, vous pouvez relancer un des dés de dégâts de l'attaque, et vous devez utiliser le nouveau jet.",
+    "Lorsque vous réussissez un coup critique qui inflige des dégâts perçants à une créature, vous pouvez lancer un dé de dégâts supplémentaire pour déterminer les dégâts perforants supplémentaires que la cible subit."
+  ],
+  "name_en": "Piercer",
+  "_translated": true
+}

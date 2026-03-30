@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-subtle-spell",
+  "name": "Métamagie : sort subtil",
+  "level": 3,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez un sort, vous pouvez dépenser 1 point de sorcellerie pour le lancer sans aucune composante somatique ou verbale."
+  ],
+  "name_en": "Metamagic: Subtle Spell",
+  "class_name_fr": "",
+  "_translated": true
+}

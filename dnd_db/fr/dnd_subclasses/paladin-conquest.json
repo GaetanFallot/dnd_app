@@ -1,0 +1,48 @@
+{
+  "index": "paladin-conquest",
+  "name": "Paladin : Serment de conquête",
+  "class": "paladin",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Le Serment de Conquête appelle les paladins qui recherchent la gloire au combat et la soumission de leurs ennemis. Il ne suffit pas à ces paladins de rétablir l’ordre. Ils doivent écraser les forces du chaos. Parfois appelés chevaliers tyrans ou marchands de fer, ceux qui prêtent ce serment se rassemblent en ordres sinistres qui servent les dieux ou les philosophies de guerre et de puissance bien ordonnée.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Principes de conquête",
+      "level": null,
+      "desc": "Un paladin qui prête ce serment a les principes de la conquête gravés sur le haut du bras.\n\nÉteignez la flamme de l’espoir. Il ne suffit pas de vaincre un ennemi au combat. Votre victoire doit être si écrasante que la volonté de combattre de vos ennemis soit brisée à jamais. Une lame peut mettre fin à une vie. La peur peut mettre fin à un empire.\n\nRègle avec une poigne de fer. Une fois que vous avez vaincu, ne tolérez aucune dissidence. Votre parole fait loi. Ceux qui y obéissent seront favorisés. Ceux qui le défieront seront punis comme exemple pour tous ceux qui pourraient le suivre.\n\nLa force avant tout. Vous gouvernerez jusqu'à ce qu'un plus fort surgisse. Ensuite, vous devez devenir plus puissant et relever le défi, ou tomber à votre propre ruine.",
+      "name_en": "Tenets of Conquest"
+    },
+    {
+      "name": "Sorts de serment",
+      "level": null,
+      "desc": "Vous gagnez des sorts de serment aux niveaux de paladin indiqués.\nSorts de serment de conquête\nNiveau Paladin | Sorts\n3ème | Armure d'Agathys, Commandement\n5ème | Tenir une personne, une arme spirituelle\n9ème | Accorder la malédiction, la peur\n13e | Bête dominante, peau de pierre\n17e | Cloudkill, dominer la personne",
+      "name_en": "Oath Spells"
+    },
+    {
+      "name": "Canal Divinité",
+      "level": 3,
+      "desc": "Lorsque vous prêtez ce serment au niveau 3, vous obtenez les deux options de canalisation divine suivantes.\n• Présence conquérante. Vous pouvez utiliser votre Channel Divinity pour dégager une présence terrifiante. Par une action, vous forcez chaque créature de votre choix que vous pouvez voir dans un rayon de 9 mètres autour de vous à effectuer un jet de sauvegarde de Sagesse. En cas d'échec, une créature a peur de vous pendant 1 minute. La créature effrayée peut répéter ce jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.\n• Frappe guidée. Vous pouvez utiliser votre Channel Divinity pour frapper avec une précision surnaturelle. Lorsque vous effectuez un jet d'attaque, vous pouvez utiliser votre Canal Divinité pour gagner un bonus de +10 au jet. Vous faites ce choix après avoir vu le jet, mais avant que le DM ne vous dise si l'attaque réussit ou rate.",
+      "name_en": "Channel Divinity"
+    },
+    {
+      "name": "Aura de conquête",
+      "level": 7,
+      "desc": "À partir du niveau 7, vous dégagez constamment une aura menaçante tant que vous n'êtes pas incapable d'agir. L'aura s'étend à 3 mètres de vous dans toutes les directions, mais pas à travers une couverture totale.\n\nSi une créature a peur de vous, sa vitesse est réduite à 0 tant qu'elle est dans l'aura, et cette créature subit des dégâts psychiques égaux à la moitié de votre niveau de paladin si elle commence son tour là-bas.\n\nAu niveau 18, la portée de cette aura passe à 9 mètres.",
+      "name_en": "Aura of Conquest"
+    },
+    {
+      "name": "Réprimande méprisante",
+      "level": 15,
+      "desc": "À partir du niveau 15, ceux qui osent vous frapper sont punis psychiquement pour leur audace. Chaque fois qu'une créature vous frappe avec une attaque, cette créature subit des dégâts psychiques égaux à votre modificateur de Charisme (minimum de 1) si vous n'êtes pas incapable d'agir.",
+      "name_en": "Scornful Rebuke"
+    },
+    {
+      "name": "Conquérant invincible",
+      "level": 20,
+      "desc": "Au niveau 20, vous acquérez la capacité d’exploiter des prouesses martiales extraordinaires. Par une action, vous pouvez devenir comme par magie un avatar de conquête, bénéficiant des avantages suivants pendant 1 minute :\n• Vous avez une résistance à tous les dégâts.\n• Lorsque vous effectuez l'action Attaque à votre tour, vous pouvez effectuer une attaque supplémentaire dans le cadre de cette action.\n• Vos attaques avec des armes de mêlée infligent un coup critique sur un résultat de 19 ou 20 au d20.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un long repos.",
+      "name_en": "Invincible Conqueror"
+    }
+  ],
+  "name_en": "Paladin: Oath of Conquest",
+  "_translated": true
+}

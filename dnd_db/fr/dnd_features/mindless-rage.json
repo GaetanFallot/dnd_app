@@ -1,0 +1,13 @@
+{
+  "index": "mindless-rage",
+  "name": "Rage insensée",
+  "level": 6,
+  "class": "barbarian",
+  "subclass": "berserker",
+  "desc": [
+    "À partir du niveau 6, vous ne pouvez plus être charmé ou effrayé lorsque vous êtes en colère. Si vous êtes charmé ou effrayé lorsque vous entrez dans votre rage, l'effet est suspendu pour la durée de la rage."
+  ],
+  "name_en": "Mindless Rage",
+  "class_name_fr": "",
+  "_translated": true
+}

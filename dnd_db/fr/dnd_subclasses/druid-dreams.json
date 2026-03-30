@@ -1,0 +1,36 @@
+{
+  "index": "druid-dreams",
+  "name": "Druide : Cercle des rêves",
+  "class": "druid",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Les druides membres du Cercle des Rêves sont originaires de régions ayant des liens étroits avec le Feywild et ses royaumes oniriques. La tutelle des druides sur le monde naturel crée une alliance naturelle entre eux et les fées d’alignement bon. Ces druides cherchent à remplir le monde d’émerveillements oniriques. Leur magie guérit les blessures et apporte de la joie aux cœurs abattus, et les royaumes qu’ils protègent sont des lieux brillants et féconds, où le rêve et la réalité se confondent et où les fatigués peuvent trouver le repos.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Baume de la Cour d'Été",
+      "level": 2,
+      "desc": "Au niveau 2, vous êtes imprégné des bénédictions de la Cour d'Été. Vous êtes une source d’énergie qui offre un répit après les blessures. Vous disposez d'une réserve d'énergie féerique représentée par un nombre de d6 égal à votre niveau de druide.\n\nPar une action bonus, vous pouvez choisir un allié que vous pouvez voir à moins de 120 pieds de vous et dépenser un nombre de ces dés égal à la moitié de votre niveau de druide ou moins. Lancez les dés dépensés et additionnez-les. La cible récupère un nombre de points de vie égal au total. La cible gagne également 1 point de vie temporaire par dé dépensé.\n\nVous récupérez les dés dépensés lorsque vous terminez un repos long.",
+      "name_en": "Balm of the Summer Court"
+    },
+    {
+      "name": "Foyer du clair de lune et de l'ombre",
+      "level": 6,
+      "desc": "Au niveau 6, la maison peut être où que vous soyez. Pendant un repos court ou long, vous pouvez invoquer le pouvoir obscur de la Cour Gloaming pour vous aider à garder votre répit. Au début du reste, vous touchez un point dans l'espace et une sphère magique invisible d'un rayon de 9 mètres apparaît, centrée sur ce point. La couverture totale bloque la sphère.\n\nÀ l'intérieur de la sphère, vous et vos alliés bénéficiez d'un bonus de +5 aux tests de Dextérité (Discrétion) et de Sagesse (Perception), et toute lumière provenant de flammes nues dans la sphère (un feu de camp, des torches ou autre) n'est pas visible à l'extérieur.\n\nLa sphère disparaît à la fin du reste ou lorsque vous quittez la sphère.",
+      "name_en": "Hearth of Moonlight and Shadow"
+    },
+    {
+      "name": "Chemins cachés",
+      "level": 10,
+      "desc": "À partir du niveau 10, vous pouvez utiliser les chemins cachés et magiques qu'utilisent certaines fées pour traverser l'espace en un clin d'œil. Par une action bonus pendant votre tour, vous pouvez vous téléporter jusqu'à 60 pieds vers un espace inoccupé que vous pouvez voir. Alternativement, vous pouvez utiliser votre action pour téléporter une créature volontaire que vous touchez jusqu'à 9 mètres vers un espace inoccupé que vous pouvez voir.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Sagesse (au minimum une fois), et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Hidden Paths"
+    },
+    {
+      "name": "Marcheur dans les rêves",
+      "level": 14,
+      "desc": "Au niveau 14, la magie du Feywild vous confère la capacité de voyager mentalement ou physiquement à travers les pays des rêves.\n\nLorsque vous terminez un court repos, vous pouvez lancer l'un des sorts suivants, sans dépenser d'emplacement de sort ni nécessiter de composants matériels : Rêve (avec vous comme messager), Clairvoyance ou Cercle de téléportation.\n\nCette utilisation du Cercle de Téléportation est particulière. Plutôt que d'ouvrir un portail vers un cercle de téléportation permanent, il ouvre un portail vers le dernier endroit où vous avez terminé un long repos sur votre plan d'existence actuel. Si vous ne vous êtes pas reposé longtemps sur votre plan actuel, le sort échoue mais n'est pas inutile.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Walker in Dreams"
+    }
+  ],
+  "name_en": "Druid: Circle of Dreams",
+  "_translated": true
+}

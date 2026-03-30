@@ -1,0 +1,16 @@
+{
+  "index": "darkvision",
+  "name": "Vision dans le noir",
+  "races": [
+    "dwarf",
+    "elf",
+    "gnome",
+    "half-elf",
+    "half-orc",
+    "tiefling"
+  ],
+  "subraces": [],
+  "desc": "Vous avez une vision supérieure dans des conditions sombres et sombres. Vous pouvez voir dans une faible lumière à moins de 60 pieds de vous comme s’il s’agissait d’une lumière vive, et dans l’obscurité comme s’il s’agissait d’une faible lumière. Vous ne pouvez pas distinguer les couleurs dans l’obscurité, seulement les nuances de gris.",
+  "name_en": "Darkvision",
+  "_translated": true
+}

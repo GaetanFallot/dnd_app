@@ -1,0 +1,13 @@
+{
+  "index": "aura-of-courage",
+  "name": "Aura de courage",
+  "level": 10,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 10, vous et les créatures amies situées à moins de 3 mètres de vous ne pouvez plus être effrayés tant que vous êtes conscient.\nAu niveau 18, la portée de cette aura passe à 9 mètres."
+  ],
+  "name_en": "Aura of Courage",
+  "class_name_fr": "",
+  "_translated": true
+}

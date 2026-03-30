@@ -1,0 +1,13 @@
+{
+  "index": "destroy-undead-cr-1-2-or-below",
+  "name": "Détruire les morts-vivants (CR 1/2 ou inférieur)",
+  "level": 5,
+  "class": "cleric",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 5, lorsqu'un mort-vivant échoue à son jet de sauvegarde contre votre fonction Turn Undead, la créature est instantanément détruite si son niveau de défi est égal ou inférieur à un certain seuil."
+  ],
+  "name_en": "Destroy Undead (CR 1/2 or below)",
+  "class_name_fr": "",
+  "_translated": true
+}

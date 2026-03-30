@@ -1,0 +1,42 @@
+{
+  "index": "fighter-champion",
+  "name": "Combattant : Champion",
+  "class": "fighter",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Le Champion archétypal se concentre sur le développement d’une puissance physique brute aiguisée à une perfection mortelle. Ceux qui se modèlent sur cet archétype allient entraînement rigoureux et excellence physique pour porter des coups dévastateurs.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Critique amélioré",
+      "level": 3,
+      "desc": "À partir du moment où vous choisissez cet archétype au niveau 3, vos attaques avec votre arme infligent un coup critique sur un résultat de 19 ou 20.",
+      "name_en": "Improved Critical"
+    },
+    {
+      "name": "Athlète remarquable",
+      "level": 7,
+      "desc": "À partir du niveau 7, vous pouvez ajouter la moitié de votre bonus de maîtrise (arrondi au supérieur) à tout test de Force, de Dextérité ou de Constitution que vous effectuez et qui n'utilise pas déjà votre bonus de maîtrise.\n\nDe plus, lorsque vous effectuez un saut en longueur en courant, la distance que vous pouvez parcourir augmente d'un nombre de pieds égal à votre modificateur de Force.",
+      "name_en": "Remarkable Athlete"
+    },
+    {
+      "name": "Style de combat supplémentaire",
+      "level": 10,
+      "desc": "Au niveau 10, vous pouvez choisir une deuxième option dans la fonctionnalité de classe Style de combat.",
+      "name_en": "Additional Fighting Style"
+    },
+    {
+      "name": "Critique supérieur",
+      "level": 15,
+      "desc": "À partir du niveau 15, vos attaques avec des armes infligent un coup critique sur un résultat de 18-20.",
+      "name_en": "Superior Critical"
+    },
+    {
+      "name": "Survivant",
+      "level": 18,
+      "desc": "Au niveau 18, vous atteignez le summum de la résilience au combat. Au début de chacun de vos tours, vous récupérez des points de vie égaux à 5 + votre modificateur de Constitution s'il ne vous reste plus que la moitié de vos points de vie. Vous ne bénéficiez pas de cet avantage si vous avez 0 point de vie.",
+      "name_en": "Survivor"
+    }
+  ],
+  "name_en": "Fighter: Champion",
+  "_translated": true
+}

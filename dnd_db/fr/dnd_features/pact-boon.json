@@ -1,0 +1,13 @@
+{
+  "index": "pact-boon",
+  "name": "Bénédiction du Pacte",
+  "level": 3,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Au niveau 3, votre patron d'un autre monde vous offre un cadeau pour vos loyaux services. Vous bénéficiez de l'une des fonctionnalités suivantes de votre choix."
+  ],
+  "name_en": "Pact Boon",
+  "class_name_fr": "",
+  "_translated": true
+}

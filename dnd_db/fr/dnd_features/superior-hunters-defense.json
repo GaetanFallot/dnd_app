@@ -1,0 +1,13 @@
+{
+  "index": "superior-hunters-defense",
+  "name": "Défense supérieure du chasseur",
+  "level": 15,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Au niveau 15, vous obtenez l'une des fonctionnalités suivantes de votre choix.\nÉvasion\nTenez-vous à contre-courant\nEsquive étrange"
+  ],
+  "name_en": "Superior Hunter's Defense",
+  "class_name_fr": "",
+  "_translated": true
+}

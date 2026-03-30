@@ -1,0 +1,13 @@
+{
+  "index": "spellcasting-sorcerer",
+  "name": "Lancement de sorts : Sorcier",
+  "level": 1,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Un événement de votre passé, ou de la vie d’un parent ou d’un ancêtre, a laissé une marque indélébile sur vous, vous imprégnant de magie arcanique. Cette source de magie, quelle que soit son origine, alimente vos sorts."
+  ],
+  "name_en": "Spellcasting: Sorcerer",
+  "class_name_fr": "",
+  "_translated": true
+}

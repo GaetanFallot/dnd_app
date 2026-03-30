@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-adept",
+  "name": "Adepte de métamagie",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": "Fonctionnalité de lancement de sorts ou de magie du pacte",
+  "desc": "Vous avez appris à exercer votre volonté sur vos sorts pour modifier leur fonctionnement :",
+  "benefits": [
+    "Vous apprenez deux options de métamagie de votre choix dans la classe de sorcier. Vous ne pouvez utiliser qu'une seule option métamagique sur un sort lorsque vous le lancez, sauf indication contraire dans l'option. Chaque fois que vous atteignez un niveau qui accorde la fonction d'amélioration du score de capacité, vous pouvez remplacer l'une de ces options métamagique par une autre de la classe de sorcier.",
+    "Vous gagnez 2 points de sorcellerie à dépenser en métamagie (ces points sont ajoutés à tous les points de sorcellerie que vous avez d'une autre source mais ne peuvent être utilisés qu'en métamagie). Vous récupérez tous les points de sorcellerie dépensés lorsque vous terminez un repos long."
+  ],
+  "name_en": "Metamagic Adept",
+  "_translated": true
+}

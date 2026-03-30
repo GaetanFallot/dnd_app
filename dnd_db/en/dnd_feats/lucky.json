@@ -1,0 +1,8 @@
+{
+  "index": "lucky",
+  "name": "Lucky",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "You have inexplicable luck that seems to kick in at just the right moment.",
+  "benefits": []
+}

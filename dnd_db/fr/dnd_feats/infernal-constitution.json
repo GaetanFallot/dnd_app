@@ -1,0 +1,14 @@
+{
+  "index": "infernal-constitution",
+  "name": "Constitution infernale",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Tieffelin",
+  "desc": "Le sang diabolique coule en vous, libérant une résilience semblable à celle que possèdent certains démons. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Constitution de 1, jusqu'à un maximum de 20.",
+    "Vous avez une résistance aux dégâts de froid et aux dégâts de poison.",
+    "Vous avez un avantage aux jets de sauvegarde contre l'empoisonnement."
+  ],
+  "name_en": "Infernal Constitution",
+  "_translated": true
+}

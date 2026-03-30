@@ -1,0 +1,13 @@
+{
+  "index": "fighter-fighting-style-great-weapon-fighting",
+  "name": "Style de combat : Grands combats avec des armes",
+  "level": 1,
+  "class": "fighter",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous obtenez un 1 ou un 2 sur un dé de dégâts pour une attaque que vous effectuez avec une arme de mêlée que vous maniez à deux mains, vous pouvez relancer le dé et devez utiliser le nouveau jet, même si le nouveau jet est un 1 ou un 2. L'arme doit avoir la propriété à deux mains ou polyvalente pour que vous puissiez bénéficier de cet avantage."
+  ],
+  "name_en": "Fighting Style: Great Weapon Fighting",
+  "class_name_fr": "",
+  "_translated": true
+}

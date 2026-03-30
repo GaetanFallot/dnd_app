@@ -1,0 +1,13 @@
+{
+  "index": "ki-empowered-strikes",
+  "name": "Frappes habilitées par Ki",
+  "level": 6,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 6, vos frappes à mains nues sont considérées comme magiques dans le but de vaincre la résistance et l'immunité aux attaques et dégâts non magiques."
+  ],
+  "name_en": "Ki Empowered Strikes",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,8 @@
+{
+  "index": "hunters-prey",
+  "name": "Hunter's Prey",
+  "level": 3,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": "At 3rd level, you gain one of the following features of your choice.\nColossus Slayer\nGiant Killer\nHorde Breaker"
+}

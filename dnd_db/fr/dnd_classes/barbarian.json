@@ -1,0 +1,326 @@
+{
+  "index": "barbarian",
+  "name": "Barbare",
+  "hit_die": 12,
+  "proficiencies": [
+    "Light Armor",
+    "Medium Armor",
+    "Shields",
+    "Simple Weapons",
+    "Martial Weapons",
+    "Saving Throw: STR",
+    "Saving Throw: CON"
+  ],
+  "saving_throws": [
+    "STR",
+    "CON"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival",
+      "choose": 2,
+      "options": [
+        "Skill: Animal Handling",
+        "Skill: Athletics",
+        "Skill: Intimidation",
+        "Skill: Nature",
+        "Skill: Perception",
+        "Skill: Survival"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "explorers-pack",
+        "name": "Explorer's Pack",
+        "url": "/api/2014/equipment/explorers-pack"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "javelin",
+        "name": "Javelin",
+        "url": "/api/2014/equipment/javelin"
+      },
+      "quantity": 4
+    }
+  ],
+  "subclasses": [
+    "berserker"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "rage",
+        "barbarian-unarmored-defense"
+      ],
+      "class_specific": {
+        "rage_count": 2,
+        "rage_damage_bonus": 2,
+        "brutal_critical_dice": 0
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "reckless-attack",
+        "danger-sense"
+      ],
+      "class_specific": {
+        "rage_count": 2,
+        "rage_damage_bonus": 2,
+        "brutal_critical_dice": 0
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "primal-path"
+      ],
+      "class_specific": {
+        "rage_count": 3,
+        "rage_damage_bonus": 2,
+        "brutal_critical_dice": 0
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "barbarian-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "rage_count": 3,
+        "rage_damage_bonus": 2,
+        "brutal_critical_dice": 0
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [
+        "barbarian-extra-attack",
+        "fast-movement"
+      ],
+      "class_specific": {
+        "rage_count": 3,
+        "rage_damage_bonus": 2,
+        "brutal_critical_dice": 0
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "primal-path-improvement-1"
+      ],
+      "class_specific": {
+        "rage_count": 4,
+        "rage_damage_bonus": 2,
+        "brutal_critical_dice": 0
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [
+        "feral-instinct"
+      ],
+      "class_specific": {
+        "rage_count": 4,
+        "rage_damage_bonus": 2,
+        "brutal_critical_dice": 0
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "barbarian-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "rage_count": 4,
+        "rage_damage_bonus": 2,
+        "brutal_critical_dice": 0
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [
+        "brutal-critical-1-die"
+      ],
+      "class_specific": {
+        "rage_count": 4,
+        "rage_damage_bonus": 3,
+        "brutal_critical_dice": 1
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "primal-path-improvement-2"
+      ],
+      "class_specific": {
+        "rage_count": 4,
+        "rage_damage_bonus": 3,
+        "brutal_critical_dice": 1
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [
+        "relentless-rage"
+      ],
+      "class_specific": {
+        "rage_count": 4,
+        "rage_damage_bonus": 3,
+        "brutal_critical_dice": 1
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "barbarian-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "rage_count": 5,
+        "rage_damage_bonus": 3,
+        "brutal_critical_dice": 1
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [
+        "brutal-critical-2-dice"
+      ],
+      "class_specific": {
+        "rage_count": 5,
+        "rage_damage_bonus": 3,
+        "brutal_critical_dice": 2
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "primal-path-improvement-3"
+      ],
+      "class_specific": {
+        "rage_count": 5,
+        "rage_damage_bonus": 3,
+        "brutal_critical_dice": 2
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [
+        "persistent-rage"
+      ],
+      "class_specific": {
+        "rage_count": 5,
+        "rage_damage_bonus": 3,
+        "brutal_critical_dice": 2
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "barbarian-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "rage_count": 5,
+        "rage_damage_bonus": 4,
+        "brutal_critical_dice": 2
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [
+        "brutal-critical-3-dice"
+      ],
+      "class_specific": {
+        "rage_count": 6,
+        "rage_damage_bonus": 4,
+        "brutal_critical_dice": 3
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "indomitable-might"
+      ],
+      "class_specific": {
+        "rage_count": 6,
+        "rage_damage_bonus": 4,
+        "brutal_critical_dice": 3
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "barbarian-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "rage_count": 6,
+        "rage_damage_bonus": 4,
+        "brutal_critical_dice": 3
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "primal-champion"
+      ],
+      "class_specific": {
+        "rage_count": 9999,
+        "rage_damage_bonus": 4,
+        "brutal_critical_dice": 3
+      }
+    }
+  ],
+  "feature_indices": [
+    "rage",
+    "barbarian-unarmored-defense",
+    "reckless-attack",
+    "danger-sense",
+    "primal-path",
+    "barbarian-ability-score-improvement-1",
+    "barbarian-extra-attack",
+    "fast-movement",
+    "primal-path-improvement-1",
+    "feral-instinct",
+    "barbarian-ability-score-improvement-2",
+    "brutal-critical-1-die",
+    "primal-path-improvement-2",
+    "relentless-rage",
+    "barbarian-ability-score-improvement-3",
+    "brutal-critical-2-dice",
+    "primal-path-improvement-3",
+    "persistent-rage",
+    "barbarian-ability-score-improvement-4",
+    "brutal-critical-3-dice",
+    "indomitable-might",
+    "barbarian-ability-score-improvement-5",
+    "primal-champion"
+  ],
+  "name_en": "Barbarian",
+  "desc": "",
+  "_translated": true
+}

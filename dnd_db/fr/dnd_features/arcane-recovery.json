@@ -1,0 +1,13 @@
+{
+  "index": "arcane-recovery",
+  "name": "Récupération des Arcanes",
+  "level": 1,
+  "class": "wizard",
+  "subclass": null,
+  "desc": [
+    "Vous avez appris à retrouver une partie de votre énergie magique en étudiant votre grimoire. Une fois par jour, lorsque vous terminez un court repos, vous pouvez choisir des emplacements de sorts dépensés à récupérer. Les emplacements de sorts peuvent avoir un niveau combiné égal ou inférieur à la moitié de votre niveau de sorcier (arrondi au supérieur), et aucun des emplacements ne peut être de niveau 6 ou supérieur.\nPar exemple, si vous êtes un sorcier de niveau 4, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sorts. Vous pouvez récupérer soit un emplacement de sort de niveau 2, soit deux emplacements de sort de niveau 1."
+  ],
+  "name_en": "Arcane Recovery",
+  "class_name_fr": "",
+  "_translated": true
+}

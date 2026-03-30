@@ -1,0 +1,42 @@
+{
+  "index": "sorcerer-divine-soul",
+  "name": "Sorcier : Âme divine",
+  "class": "sorcerer",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Parfois, l’étincelle magique qui alimente un sorcier vient d’une source divine qui scintille dans l’âme. Avoir une âme aussi bénie est un signe que votre magie innée pourrait provenir d’un lien familial lointain mais puissant avec un être divin. Peut-être que votre ancêtre était un ange, transformé en mortel et envoyé combattre au nom d’un dieu. Ou bien votre naissance pourrait s’aligner sur une ancienne prophétie, vous désignant comme un serviteur des dieux ou un vaisseau choisi de la magie divine.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Magie divine",
+      "level": null,
+      "desc": "Votre lien avec le divin vous permet d'apprendre des sorts normalement associés à la classe clerc. Lorsque votre fonction de lancement de sorts vous permet d'apprendre un sort mineur de sorcier ou un sort de sorcier de niveau 1 ou supérieur, vous pouvez choisir le nouveau sort dans la liste des sorts de clerc ou dans la liste des sorts de sorcier. Sinon, vous devez obéir à toutes les restrictions de sélection du sort, et celui-ci devient pour vous un sort de sorcier.\n\nDe plus, choisissez une affinité pour la source de votre pouvoir divin : le bien, le mal, la loi, le chaos ou la neutralité. Vous apprenez un sort supplémentaire basé sur cette affinité, comme indiqué ci-dessous. C'est un sort de sorcier pour vous, mais il ne compte pas dans votre nombre de sorts de sorcier connus. Si vous remplacez ce sort ultérieurement, vous devez le remplacer par un sort de la liste des sorts de clerc.\nAffinité | Sort\nBon | Guérir les blessures\nMal | Infliger des blessures\nDroit | Bénir\nChaos | Fléau\nNeutralité | Protection contre le mal et le bien",
+      "name_en": "Divine Magic"
+    },
+    {
+      "name": "Favorisé par les dieux",
+      "level": 1,
+      "desc": "Dès le niveau 1, le pouvoir divin protège votre destin. Si vous échouez à un jet de sauvegarde ou ratez un jet d'attaque, vous pouvez lancer 2d4 et l'ajouter au total, modifiant éventuellement le résultat.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Favored by the Gods"
+    },
+    {
+      "name": "Guérison habilitée",
+      "level": 6,
+      "desc": "À partir du niveau 6, l’énergie divine qui vous traverse peut activer des sorts de guérison. Chaque fois que vous ou un allié à moins de 1,50 mètre de vous lancez des dés pour déterminer le nombre de points de vie qu'un sort restaure, vous pouvez dépenser 1 point de sorcellerie pour relancer n'importe quel nombre de ces dés une fois, à condition que vous ne soyez pas incapable d'agir. Vous ne pouvez utiliser cette fonctionnalité qu'une seule fois par tour.",
+      "name_en": "Empowered Healing"
+    },
+    {
+      "name": "Forme angélique",
+      "level": 14,
+      "desc": "À partir du niveau 14, vous pouvez utiliser une action bonus pour manifester une paire d'ailes spectrales depuis votre dos. Tant que les ailes sont présentes, vous disposez d’une vitesse de vol de 30 pieds. Les ailes durent jusqu'à ce que vous soyez incapable d'agir, que vous mouriez ou que vous les rejetiez par une action bonus.\n\nL'affinité que vous avez choisie pour votre fonction Magie Divine détermine l'apparence des ailes spectrales : des ailes d'aigle pour le bien ou la loi, des ailes de chauve-souris pour le mal ou le chaos et des ailes de libellule pour la neutralité.",
+      "name_en": "Angelic Form"
+    },
+    {
+      "name": "Récupération surnaturelle",
+      "level": 18,
+      "desc": "Au niveau 18, vous gagnez la capacité de surmonter des blessures graves. Par une action bonus, lorsqu'il vous reste moins de la moitié de vos points de vie, vous pouvez récupérer un nombre de points de vie égal à la moitié de votre maximum de points de vie.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un long repos.",
+      "name_en": "Unearthly Recovery"
+    }
+  ],
+  "name_en": "Sorcerer: Divine Soul",
+  "_translated": true
+}

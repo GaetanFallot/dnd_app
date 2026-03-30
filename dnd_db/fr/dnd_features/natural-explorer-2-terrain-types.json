@@ -1,0 +1,13 @@
+{
+  "index": "natural-explorer-2-terrain-types",
+  "name": "Explorateur naturel (2 types de terrain)",
+  "level": 6,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "Vous connaissez particulièrement un type d’environnement naturel et êtes apte à voyager et à survivre dans de telles régions. Choisissez un type de terrain préféré : arctique, côte, désert, forêt, prairie, montagne ou marécage. Lorsque vous effectuez un test d'Intelligence ou de Sagesse lié à votre terrain préféré, votre bonus de maîtrise est doublé si vous utilisez une compétence que vous maîtrisez.\nEn voyageant pendant une heure ou plus sur votre terrain préféré, vous bénéficiez des avantages suivants :\n- Un terrain difficile ne ralentit pas le déplacement de votre groupe.\n- Votre groupe ne peut se perdre que par des moyens magiques.\n- Même lorsque vous êtes engagé dans une autre activité en voyage (comme la recherche de nourriture, la navigation ou le suivi), vous restez attentif au danger.\n- Si vous voyagez seul, vous pouvez vous déplacer furtivement à un rythme normal.\n- Lorsque vous recherchez de la nourriture, vous trouvez deux fois plus de nourriture que vous le feriez normalement.\n- En traquant d'autres créatures, vous apprenez également leur nombre exact, leur taille et depuis combien de temps elles ont traversé la zone.\nVous choisissez des types de terrain privilégiés supplémentaires aux niveaux 6 et 10."
+  ],
+  "name_en": "Natural Explorer (2 terrain types)",
+  "class_name_fr": "",
+  "_translated": true
+}

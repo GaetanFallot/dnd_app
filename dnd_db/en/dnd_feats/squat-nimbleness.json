@@ -1,0 +1,13 @@
+{
+  "index": "squat-nimbleness",
+  "name": "Squat Nimbleness",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Dwarf or a Small race",
+  "desc": "You are uncommonly nimble for your race. You gain the following benefits:",
+  "benefits": [
+    "Increase your Strength or Dexterity score by 1, to a maximum of 20.",
+    "Increase your walking speed by 5 feet.",
+    "You gain proficiency in the Acrobatics or Athletics skill (your choice).",
+    "You have advantage on any Strength (Athletics) or Dexterity (Acrobatics) check you make to escape from being grappled."
+  ]
+}

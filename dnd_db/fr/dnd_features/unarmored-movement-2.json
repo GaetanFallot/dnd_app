@@ -1,0 +1,13 @@
+{
+  "index": "unarmored-movement-2",
+  "name": "Mouvement sans armure",
+  "level": 9,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 2, votre vitesse augmente de 3 mètres tant que vous ne portez pas d'armure ou de bouclier. Ce bonus augmente lorsque vous atteignez certains niveaux de moine, comme indiqué dans le Tableau : Le Moine.\nAu niveau 9, vous gagnez la capacité de vous déplacer sur des surfaces verticales et sur des liquides pendant votre tour sans tomber pendant le mouvement."
+  ],
+  "name_en": "Unarmored Movement",
+  "class_name_fr": "",
+  "_translated": true
+}

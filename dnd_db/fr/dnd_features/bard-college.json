@@ -1,0 +1,13 @@
+{
+  "index": "bard-college",
+  "name": "Collège des bardes",
+  "level": 3,
+  "class": "bard",
+  "subclass": null,
+  "desc": [
+    "Au niveau 3, vous plongez dans les techniques avancées d'un collège de bardes de votre choix, comme le Collège du savoir. Votre choix vous accorde des fonctionnalités au 3ème niveau et encore aux 6ème et 14ème niveaux."
+  ],
+  "name_en": "Bard College",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "bard-expertise-1",
+  "name": "Compétence",
+  "level": 3,
+  "class": "bard",
+  "subclass": null,
+  "desc": [
+    "Au niveau 3, choisissez deux de vos compétences. Votre bonus de maîtrise est doublé pour tout test de capacité que vous effectuez et qui utilise l'une ou l'autre des compétences choisies. Au niveau 10, vous pouvez choisir deux autres compétences pour bénéficier de cet avantage."
+  ],
+  "name_en": "Expertise",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-lifedrinker",
+  "name": "Invocation surnaturelle : Buveur de vie",
+  "level": 12,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous touchez une créature avec votre arme du pacte, la créature subit des dégâts nécrotiques supplémentaires égaux à votre modificateur de Charisme (minimum 1)."
+  ],
+  "name_en": "Eldritch Invocation: Lifedrinker",
+  "class_name_fr": "",
+  "_translated": true
+}

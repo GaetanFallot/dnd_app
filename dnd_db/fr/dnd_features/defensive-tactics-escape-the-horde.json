@@ -1,0 +1,13 @@
+{
+  "index": "defensive-tactics-escape-the-horde",
+  "name": "Tactiques défensives : échapper à la Horde",
+  "level": 7,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Les attaques d’opportunité contre vous sont lancées avec un désavantage."
+  ],
+  "name_en": "Defensive Tactics: Escape the Horde",
+  "class_name_fr": "",
+  "_translated": true
+}

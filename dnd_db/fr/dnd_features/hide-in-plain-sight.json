@@ -1,0 +1,13 @@
+{
+  "index": "hide-in-plain-sight",
+  "name": "Cachez-vous à la vue de tous",
+  "level": 10,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 10, vous pouvez passer 1 minute à créer un camouflage pour vous-même. Vous devez avoir accès à de la boue fraîche, de la terre, des plantes, de la suie et d'autres matériaux naturels avec lesquels créer votre camouflage.\nUne fois que vous êtes ainsi camouflé, vous pouvez essayer de vous cacher en vous appuyant contre une surface solide, comme un arbre ou un mur, qui est au moins aussi haute et large que vous. Vous bénéficiez d'un bonus de +10 aux tests de Dextérité (Discrétion) tant que vous restez là sans bouger ni entreprendre d'actions. Une fois que vous bougez ou effectuez une action ou une réaction, vous devez à nouveau vous camoufler pour bénéficier de cet avantage."
+  ],
+  "name_en": "Hide in Plain Sight",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,11 @@
+{
+  "index": "damage-resistance",
+  "name": "Résistance aux dégâts",
+  "races": [
+    "dragonborn"
+  ],
+  "subraces": [],
+  "desc": "Vous avez une résistance au type de dégâts associé à votre ascendance draconique.",
+  "name_en": "Damage Resistance",
+  "_translated": true
+}

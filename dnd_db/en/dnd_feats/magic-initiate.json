@@ -1,0 +1,8 @@
+{
+  "index": "magic-initiate",
+  "name": "Magic Initiate",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Choose a class: bard, cleric, druid, sorcerer, warlock, or wizard. You learn two cantrips of your choice from that class's spell list.",
+  "benefits": []
+}

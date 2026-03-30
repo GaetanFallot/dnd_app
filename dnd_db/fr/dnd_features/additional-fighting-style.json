@@ -1,0 +1,13 @@
+{
+  "index": "additional-fighting-style",
+  "name": "Style de combat supplémentaire",
+  "level": 10,
+  "class": "fighter",
+  "subclass": "champion",
+  "desc": [
+    "Au niveau 10, vous pouvez choisir une deuxième option dans la fonctionnalité de classe Style de combat."
+  ],
+  "name_en": "Additional Fighting Style",
+  "class_name_fr": "",
+  "_translated": true
+}

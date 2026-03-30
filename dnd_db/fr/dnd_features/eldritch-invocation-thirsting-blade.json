@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-thirsting-blade",
+  "name": "Invocation surnaturelle : Lame assoiffée",
+  "level": 5,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez attaquer avec votre arme du pacte deux fois, au lieu d'une, chaque fois que vous effectuez l'action Attaque pendant votre tour."
+  ],
+  "name_en": "Eldritch Invocation: Thirsting Blade",
+  "class_name_fr": "",
+  "_translated": true
+}

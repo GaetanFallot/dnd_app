@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-eldritch-spear",
+  "name": "Invocation surnaturelle : Lance surnaturelle",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez une explosion mystique, sa portée est de 300 pieds."
+  ],
+  "name_en": "Eldritch Invocation: Eldritch Spear",
+  "class_name_fr": "",
+  "_translated": true
+}

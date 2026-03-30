@@ -1,0 +1,13 @@
+{
+  "index": "stroke-of-luck",
+  "name": "Coup de chance",
+  "level": 20,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "Au niveau 20, vous avez le don étrange de réussir lorsque vous en avez besoin. Si votre attaque manque une cible à portée, vous pouvez transformer cet échec en coup sûr. Alternativement, si vous échouez à un test de capacité, vous pouvez traiter le jet de d20 comme un 20.\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long."
+  ],
+  "name_en": "Stroke of Luck",
+  "class_name_fr": "",
+  "_translated": true
+}

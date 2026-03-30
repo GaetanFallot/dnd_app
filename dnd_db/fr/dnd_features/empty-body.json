@@ -1,0 +1,13 @@
+{
+  "index": "empty-body",
+  "name": "Corps vide",
+  "level": 18,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 18, vous pouvez utiliser votre action pour dépenser 4 points de ki afin de devenir invisible pendant 1 minute. Pendant ce temps, vous bénéficiez également d'une résistance à tous les dégâts, à l'exception des dégâts de force.\nDe plus, vous pouvez dépenser 8 points de ki pour lancer le sort de projection astrale, sans avoir besoin de composants matériels. Lorsque vous faites cela, vous ne pouvez emmener aucune autre créature avec vous."
+  ],
+  "name_en": "Empty Body",
+  "class_name_fr": "",
+  "_translated": true
+}

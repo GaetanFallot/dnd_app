@@ -1,0 +1,16 @@
+{
+  "index": "sage",
+  "name": "Background: Sage",
+  "source": "Player's Handbook",
+  "desc": "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.\n\nSkill Proficiencies: Arcana, History\nTool Proficiencies: None\nLanguages: Two of your choice\nEquipment: A bottle of inkValue:10gp Weight:0.0625lb, a quillValue:2cp Weight:0, a small knifeValue:0 Weight:0, a letter from a dead colleague posing a question you have not yet been able to answer, a set of common clothesValue:5sp Weight:3lbs, and a pouchValue:5sp Weight:1lb containing 10gp",
+  "skill_proficiencies": [
+    "Arcana",
+    "History\nTool Proficiencies: None\nLanguages: Two of your choice\nEquipment: A bottle of inkValue:10gp Weight:0.0625lb",
+    "a quillValue:2cp Weight:0",
+    "a small knifeValue:0 Weight:0",
+    "a letter from a dead colleague posing a question you have not yet been able to answer",
+    "a set of common clothesValue:5sp Weight:3lbs",
+    "and a pouchValue:5sp Weight:1lb containing 10gp"
+  ],
+  "feature": null
+}

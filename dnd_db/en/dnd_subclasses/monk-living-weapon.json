@@ -1,0 +1,40 @@
+{
+  "index": "monk-living-weapon",
+  "name": "Monk: Way of the Living Weapon (HB)",
+  "class": "monk",
+  "source": "Exploring Eberron",
+  "subclass_flavor": "A monk following the Way of the Living Weapon pursues physical perfection, honing their body as a smith sharpens a sword. Its traditions are drawn from cultures of shapeshifters and creatures who fight with tooth and claw. These are a few of the martial techniques that have evolved into the Way of the Living Weapon.",
+  "desc": "A monk following the Way of the Living Weapon pursues physical perfection, honing their body as a smith sharpens a sword. Its traditions are drawn from cultures of shapeshifters and creatures who fight with tooth and claw. These are a few of the martial techniques that have evolved into the Way of the Living Weapon.",
+  "features": [
+    {
+      "name": "Fists of Bone and Steel",
+      "level": 3,
+      "desc": "At 3rd level, when you choose this tradition, your Martial Arts damage die increases for unarmed strikes. You can roll a d6 in place of the normal damage for your unarmed strike. This die changes to a d8 at 5th level; a d10 at 11th level; and a d12 at 17th level. This increased damage can only be applied to an unarmed strike, and not to a monk weapon."
+    },
+    {
+      "name": "Martial Discipline",
+      "level": 3,
+      "desc": "Starting at 3rd level, when you adopt this tradition, choose a discipline and gain its feature.\n• Forged Heart. Your unarmed strikes are considered adamantine weapons. In addition, when you hit a creature with an unarmed attack, you can spend 1 ki point to cause it to make a Strength saving throw. On a failed save, the creature takes 2d6 additional damage of the same type as the unarmed strike and can be pushed up to 15 feet away from you. On a successful save, the creature only takes 1d6 points of additional damage and is not pushed back.\n• Nightmare Shroud. When you hit a creature with an unarmed attack, you can spend 1 ki point to assail it with fear, causing it to make a Wisdom saving throw. On a failed save, it takes 1d6 points of psychic damage and becomes frightened of you until the end of your next turn. If a creature succeeds on this save, they are immune to the fear effect of this ability for 24 hours.\n• Traveler’s Blade. Your reach extends by 5 feet. Additionally, at the start of your turn you can expend up to 4 ki points to extend your reach further. For every point of ki you spend, your reach extends by an additional 5 feet until the end of your turn.\n• Weretouched. Once per turn, when you hit a creature with an unarmed attack, you can spend 1 ki point to rend your target and inflict deep bleeding wounds. At the start of each of the creature’s turns for the next minute, it takes 1d4 points of slashing damage from this effect. The effect ends early if the creature has one or more hit points restored, if any creature uses its action to expend one use of a healer’s kit, or makes a successful Wisdom (Medicine) check with a DC equal to your ki save DC. When you reach 6th level, this slashing damage counts as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+    },
+    {
+      "name": "Mutable Strike",
+      "level": 3,
+      "desc": "You have the power to alter your natural weapons, growing claws or reinforcing your fists. Starting at 3rd level, when you use Martial Arts to make an unarmed strike, you can choose whether you inflict slashing, bludgeoning, or piercing damage with the attack."
+    },
+    {
+      "name": "Manifest Blow",
+      "level": 6,
+      "desc": "Starting at 6th level, choose one of the following damage types when you finish a long rest: bludgeoning, piercing, slashing, cold, lightning, necrotic, psychic, or thunder. On your turn, the first creature you hit with an unarmed strike takes an additional 1d6 points of damage of that type. If you select bludgeoning, piercing, or slashing damage, it benefits from your Ki-Empowered Strikes class feature and counts as magical damage. Nightmare Shroud monks typically inflict psychic damage with this ability, Forged Heart monks enhance their bludgeoning damage, and Weretouched grow sharper claws. However, you can choose any damage type, regardless of your discipline(s)."
+    },
+    {
+      "name": "Reflexive Adaptation",
+      "level": 11,
+      "desc": "Starting at 11th level, when you make a Strength (Athletics) or Dexterity (Acrobatics) check, you can spend 1 ki point to roll an additional d20. You can choose to use this ability after you roll the check, but before the outcome is determined. You choose which of the d20s is used for the ability check, omitting the highest if this check was rolled with disadvantage.\nIn addition, the extra damage dealt by the Manifest Blow class feature increases to 2d6."
+    },
+    {
+      "name": "Perfect Form",
+      "level": 17,
+      "desc": "At 17th level, you transform your body to become a weapon of war. You gain a feature based on a discipline of your choice. You can choose the same discipline you selected at 3rd level or a different one.\n• Forged Heart. When you are hit by an attack, you can use your reaction to add your Wisdom modifier (minimum of 1) to your AC, including against the triggering attack. This effect lasts until the start of your next turn.\n• Nightmare Shroud. When you damage a creature with your Manifest Blow, excess psionic energy ripples to up to 3 different creatures of your choice within 30 feet. Those creatures take an amount of psychic damage equal to half of your monk level.\n• Traveler’s Blade. When you deal piercing or slashing damage to a creature with an unarmed strike, it takes an additional 1d8 poison damage and must succeed on a Constitution saving throw against your ki save DC or be poisoned until the end of its next turn.\n• Weretouched. When you use your Flurry of Blows, you can make three unarmed strikes as a bonus action instead of two. You have advantage on these attacks."
+    }
+  ]
+}

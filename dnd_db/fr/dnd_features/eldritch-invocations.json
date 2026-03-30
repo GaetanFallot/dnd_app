@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocations",
+  "name": "Invocations surnaturelles",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Dans votre étude des connaissances occultes, vous avez découvert des invocations surnaturelles, des fragments de connaissances interdites qui vous confèrent une capacité magique permanente.\nAu niveau 2, vous gagnez deux invocations surnaturelles de votre choix. Vos options d'invocation sont détaillées à la fin de la description du cours. Lorsque vous gagnez certains niveaux de démoniste, vous gagnez des invocations supplémentaires de votre choix, comme indiqué dans la colonne Invocations connues du tableau des démonistes.\nDe plus, lorsque vous gagnez un niveau dans cette classe, vous pouvez choisir une des invocations que vous connaissez et la remplacer par une autre invocation que vous pourriez apprendre à ce niveau."
+  ],
+  "name_en": "Eldritch Invocations",
+  "class_name_fr": "",
+  "_translated": true
+}

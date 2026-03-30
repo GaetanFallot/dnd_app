@@ -1,0 +1,13 @@
+{
+  "index": "jack-of-all-trades",
+  "name": "Touche-à-tout",
+  "level": 2,
+  "class": "bard",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 2, vous pouvez ajouter la moitié de votre bonus de maîtrise, arrondi à l'inférieur, à tout test de caractéristique que vous effectuez et qui n'inclut pas déjà votre bonus de maîtrise."
+  ],
+  "name_en": "Jack of All Trades",
+  "class_name_fr": "",
+  "_translated": true
+}

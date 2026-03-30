@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-devils-sight",
+  "name": "Invocation surnaturelle : la vue du diable",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez voir normalement dans l'obscurité, à la fois magique et non magique, jusqu'à une distance de 120 pieds."
+  ],
+  "name_en": "Eldritch Invocation: Devil's Sight",
+  "class_name_fr": "",
+  "_translated": true
+}

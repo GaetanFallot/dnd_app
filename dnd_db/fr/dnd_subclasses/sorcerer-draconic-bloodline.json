@@ -1,0 +1,42 @@
+{
+  "index": "sorcerer-draconic-bloodline",
+  "name": "Sorcier : Lignée Draconique",
+  "class": "sorcerer",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Votre magie innée vient de la magie draconique mêlée à votre sang ou à celui de vos ancêtres. Le plus souvent, les sorciers ayant cette origine font remonter leur descendance à un puissant sorcier des temps anciens qui a conclu un marché avec un dragon ou qui aurait même pu revendiquer un parent dragon. Certaines de ces lignées sont bien établies dans le monde, mais la plupart sont obscures. N'importe quel sorcier peut être le premier d'une nouvelle lignée, à la suite d'un pacte ou d'une autre circonstance exceptionnelle.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Ancêtre Dragon",
+      "level": 1,
+      "desc": "Au niveau 1, vous choisissez un type de dragon comme ancêtre. Le type de dégâts associé à chaque dragon est utilisé par les fonctionnalités que vous gagnerez plus tard.\nAscendance draconique\nCouleur du dragon | Type de dommage\nNoir | Acide\nBleu | Foudre\nLaiton | Feu\nBronze | Foudre\nCuivre | Acide\nOr | Feu\nVert | Poison\nRouge | Feu\nArgent | Froid\nBlanc | Froid\n\nVous pouvez parler, lire et écrire le draconique. De plus, chaque fois que vous effectuez un test de Charisme lorsque vous interagissez avec des dragons, votre bonus de maîtrise est doublé s'il s'applique au test.",
+      "name_en": "Dragon Ancestor"
+    },
+    {
+      "name": "Résilience draconique",
+      "level": 1,
+      "desc": "À mesure que la magie circule dans votre corps, elle fait émerger les traits physiques de vos ancêtres dragons. Au 1er niveau, votre maximum de points de vie augmente de 1 et augmente à nouveau de 1 à chaque fois que vous gagnez un niveau dans cette classe.\n\nDe plus, certaines parties de votre peau sont recouvertes d’une fine couche d’écailles ressemblant à celles d’un dragon. Lorsque vous ne portez pas d'armure, votre CA est égale à 13 + votre modificateur de Dextérité.",
+      "name_en": "Draconic Resilience"
+    },
+    {
+      "name": "Affinité élémentaire",
+      "level": 6,
+      "desc": "À partir du niveau 6, lorsque vous lancez un sort qui inflige des dégâts du type associé à votre ascendance draconique, ajoutez votre modificateur de Charisme à un jet de dégâts de ce sort. En même temps, vous pouvez dépenser 1 point de sorcellerie pour gagner en résistance à ce type de dégâts pendant 1 heure.",
+      "name_en": "Elemental Affinity"
+    },
+    {
+      "name": "Ailes de dragon",
+      "level": 14,
+      "desc": "Au niveau 14, vous obtenez la capacité de faire pousser une paire d'ailes de dragon depuis votre dos, gagnant ainsi une vitesse de vol égale à votre vitesse actuelle. Vous pouvez créer ces ailes comme une action bonus pendant votre tour. Ils durent jusqu'à ce que vous les rejetiez comme une action bonus à votre tour.\n\nVous ne pouvez pas manifester vos ailes lorsque vous portez une armure à moins que l'armure ne soit conçue pour les accueillir, et les vêtements non conçus pour accueillir vos ailes peuvent être détruits lorsque vous les manifestez.",
+      "name_en": "Dragon Wings"
+    },
+    {
+      "name": "Présence draconique",
+      "level": 18,
+      "desc": "À partir du niveau 18, vous pouvez canaliser la présence redoutable de votre ancêtre dragon, provoquant la stupéfaction ou la peur chez ceux qui vous entourent. Par une action, vous pouvez dépenser 5 points de sorcellerie pour utiliser ce pouvoir et dégager une aura de crainte ou de peur (au choix) jusqu'à une distance de 60 pieds. Pendant 1 minute ou jusqu'à ce que vous perdiez votre concentration (comme si vous lanciez un sort de concentration), chaque créature hostile qui commence son tour dans cette aura doit réussir un jet de sauvegarde de Sagesse ou être charmée (si vous avez choisi la crainte) ou effrayée (si vous avez choisi la peur) jusqu'à la fin de l'aura. Une créature qui réussit ce jet de sauvegarde est immunisée contre votre aura pendant 24 heures.",
+      "name_en": "Draconic Presence"
+    }
+  ],
+  "name_en": "Sorcerer: Draconic Bloodline",
+  "_translated": true
+}

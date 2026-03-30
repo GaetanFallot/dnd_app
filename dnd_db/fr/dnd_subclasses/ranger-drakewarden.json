@@ -1,0 +1,42 @@
+{
+  "index": "ranger-drakewarden",
+  "name": "Ranger : Garde-Drake",
+  "class": "ranger",
+  "source": "Fizban's Treasury of Dragons",
+  "subclass_flavor": "Votre connexion au monde naturel prend la forme d’un esprit draconique, qui peut se manifester sous forme physique sous la forme d’un dragon. À mesure que vos pouvoirs grandissent, votre drake grandit également, passant d'un petit compagnon à quatre pattes à une majestueuse créature ailée suffisamment grande et forte pour que vous puissiez la chevaucher. En chemin, vous gagnez une part croissante du pouvoir impressionnant des dragons.",
+  "desc": "Votre connexion au monde naturel prend la forme d’un esprit draconique, qui peut se manifester sous forme physique sous la forme d’un dragon. À mesure que vos pouvoirs grandissent, votre drake grandit également, passant d'un petit compagnon à quatre pattes à une majestueuse créature ailée suffisamment grande et forte pour que vous puissiez la chevaucher. En chemin, vous gagnez une part croissante du pouvoir impressionnant des dragons.\n\nConsidérez la source de l’esprit draconique avec lequel vous êtes lié. La table Drakewarden Origin propose des exemples.",
+  "features": [
+    {
+      "name": "Cadeau draconique",
+      "level": 3,
+      "desc": "Au niveau 3, le lien que vous partagez avec votre drake crée une connexion avec l'espèce draconique, vous permettant de comprendre et de renforcer votre présence.\n\nVous bénéficiez des avantages suivants :\n• Thaumaturgie. Vous apprenez le cantrip Thaumaturgie, qui est un sort de rôdeur pour vous.\n• Langue des Dragons. Vous apprenez à parler, lire et écrire le draconique ou une autre langue de votre choix.",
+      "name_en": "Draconic Gift"
+    },
+    {
+      "name": "Compagnon Drake",
+      "level": 3,
+      "desc": "Au niveau 3, par une action, vous pouvez invoquer comme par magie le drake qui vous est lié. Il apparaît dans un espace inoccupé de votre choix à moins de 9 mètres de vous.\n\nLe drake est amical avec vous et vos compagnons et obéit à vos ordres. Consultez ses statistiques de jeu dans le bloc de statistiques Drake Companion qui l'accompagne, qui utilise votre bonus de compétence (PB) à plusieurs endroits. Chaque fois que vous invoquez le drake, choisissez un type de dégâts répertorié dans son trait Essence draconique. Vous pouvez déterminer les caractéristiques cosmétiques du drake, comme sa couleur, la texture de ses écailles, ou tout effet visible de son Essence Draconique ; votre choix n'a aucun effet sur ses statistiques de jeu.\n\nAu combat, le drake partage votre nombre d'initiatives, mais il prend son tour immédiatement après le vôtre. Il peut se déplacer et utiliser sa réaction tout seul, mais la seule action qu'il entreprend à son tour est l'action d'Esquive, à moins que vous n'effectuiez une action bonus à votre tour pour lui ordonner d'effectuer une autre action. Cette action peut être une action dans son bloc de statistiques ou une autre action. Si vous êtes frappé d'incapacité, le drake peut entreprendre n'importe quelle action de son choix, pas seulement Esquiver.\n\nLe drake reste jusqu'à ce qu'il soit réduit à 0 point de vie, jusqu'à ce que vous utilisiez cette fonctionnalité pour invoquer à nouveau le drake, ou jusqu'à votre mort. Tout ce que le drake portait ou transportait est laissé derrière lui lorsque le drake disparaît.\n\nUne fois que vous avez invoqué le drake, vous ne pouvez plus le faire avant d'avoir terminé un long repos, à moins que vous ne dépensiez un emplacement de sort de niveau 1 ou supérieur pour l'invoquer.\nCompagnon Drake\nPetit dragon\nClasse d'armure : 14 + PB (armure naturelle)\nPoints de vie : 5 + cinq fois votre niveau de rôdeur (le drake a un nombre de dés de vie [d10s] égal à votre niveau de rôdeur)\nVitesse : 40 pieds.\nSTR | DEX | ESCROQUER | INT | SIE | CHA\n16 (+3) | 12 (+1) | 15 (+2) | 8 (−1) | 14 (+2) | 8 (−1)\nJets de sauvegarde : Dex +1 plus PB, Sag +2 plus PB\nImmunités aux dégâts : déterminées par le trait Essence draconique du drake\nSens : vision dans le noir à 18 pieds, perception passive 12\nLangues : draconique\nDéfi : le bonus de compétence (PB) est égal à votre bonus\nEssence draconique. Lorsque vous invoquez le drake, choisissez un type de dégâts : acide, froid, feu, foudre ou poison. Le type choisi détermine l’immunité aux dégâts du drake et les dégâts de son trait Infused Strikes.\nActions\nMordez. Attaque au corps à corps avec une arme : +3 plus PB pour toucher, atteignez 1,50 m, une cible. Touché : 1d6 plus dégâts perforants PB.\nRéactions\nFrappes infusées. Lorsqu'une autre créature à moins de 9 mètres du drake et qu'elle peut voir touche une cible avec une attaque avec une arme, le drake imprègne la frappe de son essence, faisant subir à la cible 1d6 dégâts supplémentaires du type déterminé par son essence draconique.",
+      "name_en": "Drake Companion"
+    },
+    {
+      "name": "Lien de croc et d'écaille",
+      "level": 7,
+      "desc": "Au niveau 7, le lien que vous partagez avec votre drake s’intensifie, vous protégeant et attisant la fureur du drake. Lorsque vous invoquez votre drake, il lui pousse des ailes sur le dos et gagne une vitesse de vol égale à sa vitesse de marche.\n\nDe plus, lorsque votre drake est invoqué, vous et le drake bénéficiez des avantages suivants :\n\nMont Drake. Le canard atteint une taille moyenne. Reflétant votre lien spécial, vous pouvez utiliser le drake comme monture si votre taille est moyenne ou inférieure. Pendant que vous conduisez votre drake, il ne peut pas utiliser la vitesse de vol de cette fonctionnalité.\n\nCroc Magique. L’attaque de Morsure du drake inflige 1d6 dégâts supplémentaires du type choisi pour l’essence draconique du drake.\n\nRésistance. Vous gagnez une résistance au type de dégâts choisi pour l’essence draconique du drake.",
+      "name_en": "Bond of Fang and Scale"
+    },
+    {
+      "name": "Le souffle de Drake",
+      "level": 11,
+      "desc": "Au niveau 11, par une action, vous pouvez expirer un cône de 9 mètres de souffle dommageable ou faire expirer votre drake. Choisissez des dégâts d’acide, de froid, de feu, de foudre ou de poison (votre choix ne doit pas nécessairement correspondre à l’essence draconique de votre drake). Chaque créature dans le cône doit effectuer un jet de sauvegarde de Dextérité contre votre DD de sauvegarde de sort, subissant 8d6 dégâts en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\n\nCes dégâts passent à 10d6 lorsque vous atteignez le niveau 15 dans cette classe.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus le faire avant d'avoir terminé un repos long, à moins que vous ne dépensiez un emplacement de sort de niveau 3 ou supérieur pour l'utiliser à nouveau.",
+      "name_en": "Drake’s Breath"
+    },
+    {
+      "name": "Lien parfait",
+      "level": 15,
+      "desc": "Au niveau 15, votre lien avec votre drake atteint le summum de sa puissance. Pendant que votre drake est invoqué, vous et le drake bénéficiez des avantages suivants :\n\nMorsure puissante. L’attaque de Morsure du drake inflige 1d6 dégâts supplémentaires du type choisi pour son Essence Draconique (pour un total de 2d6 dégâts supplémentaires).\n\nGrand Drake. Le canard atteint une taille de grande taille. Lorsque vous chevauchez votre drake, il n'est plus interdit d'utiliser la vitesse de vol de Bond of Fang and Scale.\n\nRésistance réflexive. Lorsque vous ou le drake subissez des dégâts alors que vous êtes à moins de 9 pieds l'un de l'autre, vous pouvez utiliser votre réaction pour vous donner, à vous-même ou au drake, une résistance à cette instance de dégâts. Vous pouvez utiliser cette réaction un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Perfected Bond"
+    }
+  ],
+  "name_en": "Ranger: Drakewarden",
+  "_translated": true
+}

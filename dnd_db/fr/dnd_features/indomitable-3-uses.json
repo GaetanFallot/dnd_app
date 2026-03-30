@@ -1,0 +1,13 @@
+{
+  "index": "indomitable-3-uses",
+  "name": "Indomptable (3 utilisations)",
+  "level": 17,
+  "class": "fighter",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 9, vous pouvez relancer un jet de sauvegarde que vous échouez. Si vous le faites, vous devez utiliser le nouveau jet et vous ne pourrez plus utiliser cette fonctionnalité tant que vous n'aurez pas terminé un repos long. Vous pouvez utiliser cette fonctionnalité deux fois entre des repos longs à partir du niveau 13 et trois fois entre des repos longs à partir du niveau 17."
+  ],
+  "name_en": "Indomitable (3 uses)",
+  "class_name_fr": "",
+  "_translated": true
+}

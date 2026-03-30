@@ -1,0 +1,13 @@
+{
+  "index": "roguish-archetype-improvement-2",
+  "name": "Fonctionnalité d'archétype espiègle",
+  "level": 13,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "Au niveau 3, vous choisissez un archétype que vous imitez dans l'exercice de vos capacités de roublard, comme Voleur. Des archétypes supplémentaires sont disponibles dans le matériel source original. Votre choix d'archétype vous accorde des fonctionnalités au niveau 3, puis à nouveau aux niveaux 9, 13 et 17."
+  ],
+  "name_en": "Roguish Archetype feature",
+  "class_name_fr": "",
+  "_translated": true
+}

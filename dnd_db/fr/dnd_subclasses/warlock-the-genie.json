@@ -1,0 +1,42 @@
+{
+  "index": "warlock-the-genie",
+  "name": "Démoniste : le génie",
+  "class": "warlock",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Vous avez conclu un pacte avec l’un des types de génies les plus rares, un noble génie. De telles entités gouvernent de vastes fiefs sur les plans élémentaires et ont une grande influence sur les génies inférieurs et les créatures élémentaires. Les génies nobles ont des motivations variées, mais la plupart sont arrogants et exercent un pouvoir qui rivalise avec celui des divinités inférieures. Ils prennent plaisir à renverser la situation sur les mortels, qui enchaînent souvent les génies en servitude, et concluent facilement des pactes qui étendent leur portée.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Liste de sorts étendue",
+      "level": 1,
+      "desc": "Au niveau 1, le Génie vous permet de choisir parmi une liste étendue de sorts lorsque vous apprenez un sort de démoniste. Le tableau des sorts étendus de génie affiche les sorts de génie qui sont ajoutés à la liste des sorts de démoniste pour vous, ainsi que les sorts associés dans le tableau au type de votre patron : dao, djinni, éfrit ou marid.\nSorts étendus de génie\nNiveau de sort | Sorts de génie | Sorts Dao | Sorts Djinni | Sorts d’Éfrit | Sorts Marids\n1er | Détecter le mal et le bien | Sanctuaire | Onde d'orage | Mains brûlantes | Nuage de brouillard\n2ème | Force fantasmatique | Croissance en pointe | Coup de vent | Rayon brûlant | Flou\n3ème | Créer de la nourriture et de l'eau | Fondre dans la pierre | Mur de vent | Boule de feu | Tempête de neige fondue\n4ème | Tueur fantasmatique | Forme de pierre | Une plus grande invisibilité | Bouclier de feu | Contrôler l'eau\n5ème | Création | Mur de pierre | Semblant | Frappe de flamme | Cône de froid\n9ème | Souhait | — | — | — | —",
+      "name_en": "Expanded Spell List"
+    },
+    {
+      "name": "Le vaisseau du génie",
+      "level": 1,
+      "desc": "Au 1er niveau également, votre patron vous offre un vaisseau magique qui vous confère une mesure de la puissance du génie. Le vaisseau est un objet minuscule et vous pouvez l'utiliser comme foyer de lancement de sorts pour vos sorts de démoniste. Vous décidez quel est l'objet, ou vous pouvez déterminer de quoi il s'agit au hasard en lançant un jet sur la table du Récipient du Génie.\nLe vaisseau du génie\nd6 | Navire\n1 | Lampe à huile\n2 | Urne\n3 | Bague avec compartiment\n4 | Flacon bouché\n5 | Statuette creuse\n6 | Lanterne ornée\n\nPendant que vous touchez le récipient, vous pouvez l'utiliser des manières suivantes :\n• Répit en bouteille : par une action, vous pouvez disparaître comme par magie et entrer dans votre vaisseau, qui reste dans l'espace que vous avez quitté. L'intérieur du vaisseau est un espace extradimensionnel en forme de cylindre de 20 pieds de rayon et 20 pieds de haut, et ressemble à votre vaisseau. L'intérieur est aménagé avec des coussins et des tables basses et offre une température confortable. À l'intérieur, vous pouvez entendre la zone autour de votre navire comme si vous étiez dans son espace. Vous pouvez rester à l'intérieur du navire jusqu'à un nombre d'heures égal à deux fois votre bonus de maîtrise. Vous quittez le vaisseau plus tôt si vous utilisez une action bonus pour partir, si vous mourez ou si le vaisseau est détruit. Lorsque vous quittez le vaisseau, vous apparaissez dans l'espace inoccupé le plus proche de celui-ci. Tous les objets laissés dans le vaisseau y restent jusqu'à leur exécution, et si le vaisseau est détruit, tout objet qui y est stocké apparaît sans danger dans les espaces inoccupés les plus proches de l'ancien espace du vaisseau. Une fois que vous entrez dans le navire, vous ne pouvez plus y entrer avant d'avoir terminé un long repos.\n• Colère du Génie : Une fois à chacun de vos tours lorsque vous frappez avec un jet d'attaque, vous pouvez infliger des dégâts supplémentaires à la cible égaux à votre bonus de maîtrise. Le type de ces dégâts est déterminé par votre patron : contondant (dao), tonnerre (djinni), feu (éfrit) ou froid (marid).\n\nLa CA du vaisseau est égale à votre DD de sauvegarde de sorts. Ses points de vie sont égaux à votre niveau de démoniste plus votre bonus de maîtrise, et il est immunisé contre le poison et les dégâts psychiques.\n\nSi le vaisseau est détruit ou si vous le perdez, vous pouvez effectuer une cérémonie d'une heure pour recevoir un remplaçant de votre patron. Cette cérémonie peut être célébrée lors d'un repos court ou long, et le vaisseau précédent est détruit s'il existe encore. Le vaisseau disparaît dans une explosion de puissance élémentaire lorsque vous mourez.",
+      "name_en": "Genie's Vessel"
+    },
+    {
+      "name": "Don élémentaire",
+      "level": 6,
+      "desc": "Au niveau 6, vous commencez à adopter les caractéristiques de votre patron. Vous avez désormais une résistance à un type de dégâts déterminé par le type de votre patron : contondant (dao), tonnerre (djinni), feu (éfrit) ou froid (marid).\n\nDe plus, en guise d'action bonus, vous pouvez vous attribuer une vitesse de vol de 9 mètres qui dure 10 minutes, pendant lesquelles vous pouvez planer. Vous pouvez utiliser cette action bonus un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Elemental Gift"
+    },
+    {
+      "name": "Navire sanctuaire",
+      "level": 10,
+      "desc": "Au niveau 10, lorsque vous entrez dans votre vaisseau du génie via la fonction de répit en bouteille, vous pouvez désormais choisir jusqu'à cinq créatures volontaires que vous pouvez voir à moins de 9 mètres de vous, et les créatures choisies sont attirées dans le vaisseau avec vous.\n\nPar une action bonus, vous pouvez éjecter n'importe quel nombre de créatures du vaisseau, et tout le monde est éjecté si vous partez ou mourez ou si le vaisseau est détruit.\n\nDe plus, toute personne (y compris vous) qui reste à bord du vaisseau pendant au moins 10 minutes bénéficie de l'avantage de terminer un court repos, et n'importe qui peut ajouter votre bonus de maîtrise au nombre de points de vie qu'il regagne s'il dépense des dés de vie dans le cadre d'un court repos.",
+      "name_en": "Sanctuary Vessel"
+    },
+    {
+      "name": "Souhait limité",
+      "level": 14,
+      "desc": "Au niveau 14, vous suppliez votre patron de vous accorder un petit vœu. Par une action, vous pouvez exprimer votre désir à votre vaisseau de génie, en demandant l'effet d'un sort de niveau 6 ou inférieur et ayant un temps d'incantation de 1 action. Le sort peut provenir de la liste de sorts de n'importe quelle classe, et vous n'avez pas besoin de remplir les conditions de ce sort, y compris les composants coûteux : le sort prend simplement effet dans le cadre de cette action.\n\nUne fois que vous avez utilisé cette fonctionnalité, vous ne pouvez plus l'utiliser avant d'avoir terminé 1d4 repos longs.",
+      "name_en": "Limited Wish"
+    }
+  ],
+  "name_en": "Warlock: The Genie",
+  "_translated": true
+}

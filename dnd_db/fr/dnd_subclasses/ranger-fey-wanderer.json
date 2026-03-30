@@ -1,0 +1,48 @@
+{
+  "index": "ranger-fey-wanderer",
+  "name": "Ranger : Fey Wanderer",
+  "class": "ranger",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Une mystique féerique vous entoure, grâce à la bénédiction d'un archfée, aux fruits brillants que vous avez mangés d'un arbre parlant, à la source magique dans laquelle vous avez nagé ou à tout autre événement de bon augure. Quelle que soit la manière dont vous avez acquis votre magie féerique, vous êtes désormais un Fey Wanderer, un rôdeur qui représente à la fois le royaume des mortels et celui des fées. Tandis que vous parcourez le multivers, votre rire joyeux illumine le cœur des opprimés et vos prouesses martiales sèment la terreur chez vos ennemis, car grande est la gaieté des fées et terrible est leur fureur.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Frappes épouvantables",
+      "level": 3,
+      "desc": "Au niveau 3, vous pouvez augmenter vos frappes d'armes avec une magie effrayante, tirée des creux sombres du Feywild. Lorsque vous touchez une créature avec une arme, vous pouvez infliger 1d4 dégâts psychiques supplémentaires à la cible, qui ne peut subir ces dégâts supplémentaires qu'une seule fois par tour.\n\nLes dégâts supplémentaires augmentent à 1d6 lorsque vous atteignez le niveau 11 dans cette classe.",
+      "name_en": "Dreadful Strikes"
+    },
+    {
+      "name": "Magie du Vagabond Fey",
+      "level": 3,
+      "desc": "Également au niveau 3, vous apprenez un sort supplémentaire lorsque vous atteignez certains niveaux dans cette classe, comme indiqué dans le tableau des sorts Fey Wanderer. Chaque sort compte pour vous comme un sort de rôdeur, mais il ne compte pas dans le nombre de sorts de rôdeur que vous connaissez.\nSorts Fey Wanderer | \nNiveau Ranger | Sort\n3ème | Personne de charme\n5ème | Étape brumeuse\n9ème | Dissiper la magie\n13e | Porte dimensionnelle\n17e | Induire en erreur\n\nVous possédez également une bénédiction surnaturelle provenant d’un allié féerique ou d’un lieu de pouvoir féerique. Choisissez votre bénédiction dans le tableau Feywild Gifts ou déterminez-la au hasard.\nCadeaux Feywild | \nd6 | Cadeau\n1 | Des papillons illusoires voltigent autour de vous pendant que vous prenez un repos court ou long.\n2 | Des fleurs fraîches et saisonnières poussent de vos cheveux à chaque aube.\n3 | Vous sentez légèrement la cannelle, la lavande, la muscade ou une autre herbe ou épice réconfortante.\n4 | Votre ombre danse alors que personne ne la regarde directement.\n5 | Des cornes ou des bois poussent de votre tête.\n6 | Votre peau et vos cheveux changent de couleur pour correspondre à la saison à chaque aube.",
+      "name_en": "Fey Wanderer Magic"
+    },
+    {
+      "name": "Glamour d'un autre monde",
+      "level": 3,
+      "desc": "De plus, au niveau 3, vos qualités féeriques vous confèrent un charme surnaturel. En conséquence, chaque fois que vous effectuez un test de Charisme, vous gagnez un bonus au test égal à votre modificateur de Sagesse (minimum de +1).\n\nDe plus, vous maîtrisez l’une des compétences suivantes de votre choix : Tromperie, Performance ou Persuasion.",
+      "name_en": "Otherworldly Glamour"
+    },
+    {
+      "name": "Torsion séduisante",
+      "level": 7,
+      "desc": "À partir du niveau 7, la magie du Feywild garde votre esprit. Vous avez l'avantage aux jets de sauvegarde contre le fait d'être charmé ou effrayé.\n\nDe plus, chaque fois que vous ou une créature que vous pouvez voir à moins de 120 pieds de vous réussissez un jet de sauvegarde contre le charme ou l'effroi, vous pouvez utiliser votre réaction pour forcer une autre créature que vous pouvez voir à moins de 120 pieds de vous à effectuer un jet de sauvegarde de Sagesse contre le DD de votre sort. Si la sauvegarde échoue, la cible est charmée ou effrayée par vous (au choix) pendant 1 minute. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.",
+      "name_en": "Beguiling Twist"
+    },
+    {
+      "name": "Renforts Fey",
+      "level": 11,
+      "desc": "Au niveau 11, les cours royales du Feywild vous ont béni avec l'aide d'êtres féeriques : vous connaissez le sort Summon Fey. Il ne compte pas dans le nombre de sorts de rôdeur que vous connaissez, et vous pouvez le lancer sans composant matériel. Vous pouvez également le lancer une fois sans utiliser d'emplacement de sort, et vous retrouvez la possibilité de le faire lorsque vous terminez un repos long.\n\nChaque fois que vous commencez à lancer le sort, vous pouvez le modifier pour qu'il ne nécessite pas de concentration. Si vous le faites, la durée du sort devient 1 minute pour ce lancement.",
+      "name_en": "Fey Reinforcements"
+    },
+    {
+      "name": "Vagabond brumeux",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 15, vous pouvez entrer et sortir du Feywild pour vous déplacer en un clin d'œil : vous pouvez lancer Misty Step sans dépenser d'emplacement de sort. Vous pouvez le faire un nombre de fois égal à votre modificateur de Sagesse (au minimum une fois), et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.\n\nDe plus, chaque fois que vous lancez Misty Step, vous pouvez amener avec vous une créature volontaire que vous pouvez voir à moins de 1,50 mètre de vous. Cette créature se téléporte vers un espace inoccupé de votre choix à moins de 1,50 mètre de votre espace de destination.",
+      "name_en": "Misty Wanderer"
+    }
+  ],
+  "name_en": "Ranger: Fey Wanderer",
+  "_translated": true
+}

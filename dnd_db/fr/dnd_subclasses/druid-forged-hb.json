@@ -1,0 +1,42 @@
+{
+  "index": "druid-forged-hb",
+  "name": "Druide : Cercle des Forgés (HB)",
+  "class": "druid",
+  "source": "Exploring Eberron",
+  "subclass_flavor": "Qu’est-ce qui est vraiment naturel ? Les forgeliers sont des créatures vivantes, bien qu'ils soient construits en bois et en acier. Les druides qui adoptent le Cercle des Forgés explorent le potentiel de la forme des forgerons, mêlant formes animales et durabilité. Il s’agit d’une voie jeune, lancée par une poignée de forgeliers qui cherchaient à mieux comprendre leur rôle dans le monde. Au cours des dernières décennies, un certain nombre de forgeliers ont adopté le Cercle des Forgés ; cependant, cela ne se limite pas aux forgeliers ; un héritier Cannith ou un aspirant artisan pourrait rechercher le pouvoir primordial comme moyen de transcender la chair limitée avec laquelle il est né.",
+  "desc": "Qu’est-ce qui est vraiment naturel ? Les forgeliers sont des créatures vivantes, bien qu'ils soient construits en bois et en acier. Les druides qui adoptent le Cercle des Forgés explorent le potentiel de la forme des forgerons, mêlant formes animales et durabilité. Il s’agit d’une voie jeune, lancée par une poignée de forgeliers qui cherchaient à mieux comprendre leur rôle dans le monde. Au cours des dernières décennies, un certain nombre de forgeliers ont adopté le Cercle des Forgés ; cependant, cela ne se limite pas aux forgeliers ; un héritier Cannith ou un aspirant artisan pourrait rechercher le pouvoir primordial comme moyen de transcender la chair limitée avec laquelle il est né.\n\nSeule une poignée de druides suivent ce Cercle. Avez-vous appris ces techniques auprès d'un mentor ? Êtes-vous motivé par l'instinct et êtes-vous encore en train d'apprendre de quoi vous êtes capable ? Ou, si vous êtes un forgeron de guerre, avez-vous été conçu avec le potentiel de prendre plusieurs formes… et si oui, qui vous a créé et pourquoi ?",
+  "features": [
+    {
+      "name": "Formes de cercle",
+      "level": 2,
+      "desc": "Les rites de votre cercle vous confèrent la capacité de vous transformer en formes animales plus dangereuses. À partir du niveau 2, vous pouvez utiliser votre Forme Sauvage pour vous transformer en une bête avec un indice de défi aussi élevé que 1 (vous ignorez la colonne CR Max. du tableau Formes de Bête, mais devez respecter les autres limitations qui s'y trouvent).\n\nÀ partir du niveau 6, vous pouvez vous transformer en bête avec un niveau de défi aussi élevé que votre niveau de druide divisé par 3, arrondi à l'inférieur.",
+      "name_en": "Circle Forms"
+    },
+    {
+      "name": "Peau d'acier",
+      "level": 2,
+      "desc": "À partir du niveau 2, pendant que vous êtes transformé par Wild Shape, vous bénéficiez des avantages suivants :\n• Vous gagnez un bonus de +2 à la Classe d'Armure.\n• Vous avez un avantage aux jets de sauvegarde contre l'empoisonnement et vous avez une résistance aux dégâts de poison.\n• Vous n'avez pas besoin de manger, de boire ou de respirer.\n• Vous êtes immunisé contre la maladie.\n• Vous n'avez pas besoin de dormir et la magie ne peut pas vous endormir.\n\nSous forme de bête, votre corps est fabriqué à partir des mêmes matériaux que ceux d'un forgeron ; vos muscles sont des vrilles semblables à des racines protégées par des plaques blindées. Il est évident pour un observateur que vous n'êtes pas un animal normal.",
+      "name_en": "Skin of Steel"
+    },
+    {
+      "name": "Fureur élémentaire",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous acquérez la capacité d'imprégner vos attaques de dégâts élémentaires, en chargeant vos griffes d'électricité ou en libérant des flammes de vos crocs. Lorsque vous utilisez Wild Shape, choisissez l’un des types de dégâts suivants : acide, froid, feu ou foudre. Sous votre forme de bête, la première fois que vous frappez une créature avec une attaque de mêlée à votre tour, vous pouvez dépenser un emplacement de sort pour infliger des dégâts supplémentaires de ce type à la cible, en plus des dégâts normaux de l'attaque. Les dégâts supplémentaires sont de 1d6 par niveau d'emplacement de sort dépensé, jusqu'à un maximum de 5d6.\n\nLorsque vous utilisez cette capacité sur une créature, votre attaque a un effet supplémentaire, déterminé par le type de dégâts que vous avez sélectionné lorsque vous avez utilisé Wild Shape. Si une créature est à nouveau affectée par cette capacité lors des tours suivants, les effets ne se cumulent pas et la nouvelle durée remplace l'ancienne.\n\nAcide. La cible doit effectuer un jet de sauvegarde de Constitution contre votre DD de sauvegarde de sort de druide. En cas d'échec, sa CA est réduite pendant une minute d'un montant égal à la moitié de votre modificateur de Sagesse (minimum de 1). Au début de chacun de ses tours pour la minute suivante, la cible peut effectuer un nouveau jet de sauvegarde de Constitution. En cas de sauvegarde réussie, l'effet prend fin.\n\nFroid. Au début de chacun de ses tours pendant 1 minute, la cible doit effectuer un jet de sauvegarde de Constitution contre votre DD de sauvegarde de sort de druide. En cas d'échec, leur vitesse de déplacement est réduite à 0 et ils sont désavantagés aux tests de Force et de Dextérité. En cas de sauvegarde réussie, l'effet prend fin.\n\nFeu. Au début de chacun de ses tours pendant 1 minute, la cible doit effectuer un jet de sauvegarde de Constitution contre votre DD de sauvegarde de sort de druide. En cas d'échec, il subit des dégâts de feu égaux à votre modificateur de Sagesse. En cas de sauvegarde réussie, le feu s'éteint. Si la cible ou une créature à moins de 1,50 mètre d'elle utilise une action pour éteindre les flammes, ou si un autre effet éteint les flammes (comme par exemple si la cible est immergée dans l'eau), l'effet prend fin.\n\nFoudre. Au début de chacun de ses tours pendant 1 minute, la cible doit effectuer un jet de sauvegarde de Constitution contre votre DD de sauvegarde de sort de druide. En cas d'échec, il perd sa réaction jusqu'au début de son prochain tour et la première attaque qu'il effectue à son tour est effectuée en désavantage. En cas de sauvegarde réussie, l'effet prend fin.",
+      "name_en": "Elemental Fury"
+    },
+    {
+      "name": "Peau adamantine",
+      "level": 10,
+      "desc": "À partir du niveau 10, pendant que vous êtes transformé par Wild Shape, vous gagnez une résistance aux dégâts contondants, perçants et tranchants des attaques non magiques. De plus, vous obtenez la possibilité d'utiliser Wild Shape en réaction lorsque vous subissez des dégâts, et les dégâts de cette attaque sont appliqués aux points de vie de votre forme de bête.",
+      "name_en": "Adamantine Hide"
+    },
+    {
+      "name": "La perfection construite",
+      "level": 14,
+      "desc": "À partir du niveau 14, pendant que vous êtes transformé par Wild Shape, vous ne pouvez pas être charmé, effrayé, paralysé, pétrifié ou empoisonné. De plus, vous êtes immunisé contre les dégâts de poison.",
+      "name_en": "Constructed Perfection"
+    }
+  ],
+  "name_en": "Druid: Circle Of The Forged (HB)",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "overchannel",
+  "name": "Overcanal",
+  "level": 14,
+  "class": "wizard",
+  "subclass": "evocation",
+  "desc": [
+    "À partir du niveau 14, vous pouvez augmenter la puissance de vos sorts les plus simples. Lorsque vous lancez un sort de sorcier du niveau 1 au niveau 5 qui inflige des dégâts, vous pouvez infliger un maximum de dégâts avec ce sort.\nLa première fois que vous le faites, vous ne subissez aucun effet indésirable. Si vous utilisez à nouveau cette fonctionnalité avant de terminer un repos long, vous subissez 2d12 dégâts nécrotiques pour chaque niveau du sort, immédiatement après l'avoir lancé. Chaque fois que vous utilisez à nouveau cette fonctionnalité avant de terminer un repos long, les dégâts nécrotiques par niveau de sort augmentent de 1d12. Ces dégâts ignorent la résistance et l’immunité."
+  ],
+  "name_en": "Overchannel",
+  "class_name_fr": "",
+  "_translated": true
+}

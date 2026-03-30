@@ -1,0 +1,13 @@
+{
+  "index": "frenzy",
+  "name": "Frénésie",
+  "level": 3,
+  "class": "barbarian",
+  "subclass": "berserker",
+  "desc": [
+    "À partir du moment où vous choisissez cette voie au niveau 3, vous pouvez entrer dans une frénésie lorsque vous êtes en colère. Si vous le faites, pendant toute la durée de votre rage, vous pouvez effectuer une seule attaque avec une arme de mêlée comme une action bonus à chacun de vos tours suivants celui-ci. Lorsque votre rage prend fin, vous souffrez d'un niveau d'épuisement (comme décrit dans l'annexe A)."
+  ],
+  "name_en": "Frenzy",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,48 @@
+{
+  "index": "monk-living-weapon",
+  "name": "Moine : Voie de l'arme vivante (HB)",
+  "class": "monk",
+  "source": "Exploring Eberron",
+  "subclass_flavor": "Un moine suivant la Voie de l'Arme Vivante recherche la perfection physique, aiguisant son corps comme un forgeron aiguise une épée. Ses traditions sont tirées de cultures de métamorphes et de créatures qui se battent avec leurs dents et leurs griffes. Ce sont quelques-unes des techniques martiales qui ont évolué vers la Voie de l’Arme Vivante.",
+  "desc": "Un moine suivant la Voie de l'Arme Vivante recherche la perfection physique, aiguisant son corps comme un forgeron aiguise une épée. Ses traditions sont tirées de cultures de métamorphes et de créatures qui se battent avec leurs dents et leurs griffes. Ce sont quelques-unes des techniques martiales qui ont évolué vers la Voie de l’Arme Vivante.",
+  "features": [
+    {
+      "name": "Poings d'os et d'acier",
+      "level": 3,
+      "desc": "Au niveau 3, lorsque vous choisissez cette tradition, votre dé de dégâts d'Arts Martiaux augmente pour les frappes à mains nues. Vous pouvez lancer un d6 à la place des dégâts normaux de votre frappe à mains nues. Ce dé se transforme en d8 au niveau 5 ; un d10 au niveau 11 ; et un d12 au niveau 17. Cette augmentation des dégâts ne peut être appliquée qu'à une frappe à mains nues, et non à une arme de moine.",
+      "name_en": "Fists of Bone and Steel"
+    },
+    {
+      "name": "Discipline martiale",
+      "level": 3,
+      "desc": "Dès le niveau 3, lorsque vous adoptez cette tradition, choisissez une discipline et gagnez sa particularité.\n• Cœur Forgé. Vos frappes à mains nues sont considérées comme des armes adamantines. De plus, lorsque vous touchez une créature avec une attaque à mains nues, vous pouvez dépenser 1 point de ki pour lui faire effectuer un jet de sauvegarde de Force. En cas d'échec, la créature subit 2d6 dégâts supplémentaires du même type que la frappe à mains nues et peut être repoussée jusqu'à 4,50 mètres de vous. En cas de sauvegarde réussie, la créature ne subit que 1d6 points de dégâts supplémentaires et n'est pas repoussée.\n• Linceul de cauchemar. Lorsque vous touchez une créature avec une attaque à mains nues, vous pouvez dépenser 1 point de ki pour l'assaillir de peur, lui permettant ainsi d'effectuer un jet de sauvegarde de Sagesse. En cas d'échec, il subit 1d6 points de dégâts psychiques et a peur de vous jusqu'à la fin de votre prochain tour. Si une créature réussit ce jet, elle est immunisée contre l'effet de peur de cette capacité pendant 24 heures.\n�� Lame du voyageur. Votre portée s'étend de 5 pieds. De plus, au début de votre tour, vous pouvez dépenser jusqu'à 4 points de ki pour étendre davantage votre portée. Pour chaque point de ki que vous dépensez, votre portée s'étend de 1,50 mètre supplémentaire jusqu'à la fin de votre tour.\n• Nous avons été touchés. Une fois par tour, lorsque vous touchez une créature avec une attaque à mains nues, vous pouvez dépenser 1 point de ki pour déchirer votre cible et lui infliger de profondes blessures saignantes. Au début de chacun des tours de la créature pendant la minute suivante, elle subit 1d4 points de dégâts tranchants dus à cet effet. L'effet se termine plus tôt si la créature a un ou plusieurs points de vie restaurés, si une créature utilise son action pour dépenser une utilisation d'un kit de guérisseur, ou réussit un test de Sagesse (Médecine) avec un DD égal à votre DD de sauvegarde de ki. Lorsque vous atteignez le niveau 6, ces dégâts tranchants sont considérés comme magiques dans le but de vaincre la résistance et l'immunité aux attaques et dégâts non magiques.",
+      "name_en": "Martial Discipline"
+    },
+    {
+      "name": "Frappe mutable",
+      "level": 3,
+      "desc": "Vous avez le pouvoir de modifier vos armes naturelles, de faire pousser des griffes ou de renforcer vos poings. À partir du niveau 3, lorsque vous utilisez les arts martiaux pour effectuer une frappe à mains nues, vous pouvez choisir si vous infligez des dégâts tranchants, contondants ou perçants avec l'attaque.",
+      "name_en": "Mutable Strike"
+    },
+    {
+      "name": "Coup manifeste",
+      "level": 6,
+      "desc": "À partir du niveau 6, choisissez l'un des types de dégâts suivants à la fin d'un repos long : contondant, perçant, tranchant, froid, éclair, nécrotique, psychique ou tonnerre. À votre tour, la première créature que vous touchez avec une frappe à mains nues subit 1d6 points de dégâts supplémentaires de ce type. Si vous sélectionnez des dégâts contondants, perçants ou tranchants, ils bénéficient de votre fonctionnalité de classe Ki-Empowered Strikes et comptent comme des dégâts magiques. Les moines de Nightmare Shroud infligent généralement des dégâts psychiques avec cette capacité, les moines Forged Heart améliorent leurs dégâts contondants et les Weretouched ont des griffes plus acérées. Cependant, vous pouvez choisir n’importe quel type de dégâts, quelle que soit votre(vos) discipline(s).",
+      "name_en": "Manifest Blow"
+    },
+    {
+      "name": "Adaptation réflexive",
+      "level": 11,
+      "desc": "À partir du niveau 11, lorsque vous effectuez un test de Force (Athlétisme) ou de Dextérité (Acrobatie), vous pouvez dépenser 1 point de ki pour lancer un d20 supplémentaire. Vous pouvez choisir d’utiliser cette capacité après avoir lancé le test, mais avant que le résultat ne soit déterminé. Vous choisissez lequel des d20 est utilisé pour le test de capacité, en omettant le plus élevé si ce test a été lancé avec un désavantage.\nDe plus, les dégâts supplémentaires infligés par la fonction de classe Manifest Blow passent à 2d6.",
+      "name_en": "Reflexive Adaptation"
+    },
+    {
+      "name": "Forme parfaite",
+      "level": 17,
+      "desc": "Au niveau 17, vous transformez votre corps pour devenir une arme de guerre. Vous gagnez une fonctionnalité basée sur une discipline de votre choix. Vous pouvez choisir la même discipline que celle que vous avez sélectionnée au niveau 3 ou une autre.\n• Cœur Forgé. Lorsque vous êtes touché par une attaque, vous pouvez utiliser votre réaction pour ajouter votre modificateur de Sagesse (minimum de 1) à votre CA, y compris contre l'attaque déclenchante. Cet effet dure jusqu'au début de votre prochain tour.\n• Linceul de cauchemar. Lorsque vous blessez une créature avec votre Coup manifeste, l'excès d'énergie psionique se répercute sur jusqu'à 3 créatures différentes de votre choix dans un rayon de 9 mètres. Ces créatures subissent un montant de dégâts psychiques égal à la moitié de votre niveau de moine.\n• Lame du voyageur. Lorsque vous infligez des dégâts perçants ou tranchants à une créature avec une frappe à mains nues, elle subit 1d8 dégâts de poison supplémentaires et doit réussir un jet de sauvegarde de Constitution contre votre DD de sauvegarde de ki sous peine d'être empoisonnée jusqu'à la fin de son prochain tour.\n• Nous avons été touchés. Lorsque vous utilisez votre Rafale de coups, vous pouvez effectuer trois frappes à mains nues comme action bonus au lieu de deux. Vous avez l'avantage sur ces attaques.",
+      "name_en": "Perfect Form"
+    }
+  ],
+  "name_en": "Monk: Way of the Living Weapon (HB)",
+  "_translated": true
+}

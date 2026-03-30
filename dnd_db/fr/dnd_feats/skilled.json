@@ -1,0 +1,10 @@
+{
+  "index": "skilled",
+  "name": "Qualifié",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous maîtrisez n’importe quelle combinaison de trois compétences ou outils de votre choix.",
+  "benefits": [],
+  "name_en": "Skilled",
+  "_translated": true
+}

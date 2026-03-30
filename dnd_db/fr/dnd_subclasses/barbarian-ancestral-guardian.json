@@ -1,0 +1,36 @@
+{
+  "index": "barbarian-ancestral-guardian",
+  "name": "Barbare : Voie du Gardien Ancestral",
+  "class": "barbarian",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Certains barbares sont issus de cultures qui vénèrent leurs ancêtres. Ces tribus enseignent que les guerriers du passé demeurent dans le monde en tant qu’esprits puissants, capables de guider et de protéger les vivants. Lorsqu'un barbare qui suit cette voie se met en colère, il contacte le monde des esprits et fait appel à ces esprits gardiens pour obtenir de l'aide.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Protecteurs ancestraux",
+      "level": 3,
+      "desc": "Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, the first creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Jusqu'au début de votre prochain tour, cette cible a un désavantage sur tout jet d'attaque qui n'est pas contre vous, et lorsque la cible touche une créature autre que vous avec une attaque, cette créature a une résistance aux dégâts infligés par l'attaque. The effect on the target ends early if your rage ends.",
+      "name_en": "Ancestral Protectors"
+    },
+    {
+      "name": "Bouclier spirituel",
+      "level": 6,
+      "desc": "À partir du niveau 6, les esprits gardiens qui vous aident peuvent offrir une protection surnaturelle à ceux que vous défendez. Si vous êtes enragé et qu'une autre créature que vous pouvez voir à moins de 9 mètres de vous subit des dégâts, vous pouvez utiliser votre réaction pour réduire ces dégâts de 2d6.\n\nLorsque vous atteignez certains niveaux dans cette classe, vous pouvez réduire davantage les dégâts : de 3d6 au niveau 10 et de 4d6 au niveau 14.",
+      "name_en": "Spirit Shield"
+    },
+    {
+      "name": "Consulter les Esprits",
+      "level": 10,
+      "desc": "Au niveau 10, vous gagnez la capacité de consulter vos esprits ancestraux. Ce faisant, vous lancez le sort Augure ou Clairvoyance, sans utiliser d'emplacement de sort ni de composants matériels. Plutôt que de créer un capteur sphérique, cette utilisation de la clairvoyance invoque de manière invisible l'un de vos esprits ancestraux à l'endroit choisi. La sagesse est votre capacité à lancer des sorts pour ces sorts.\n\nAprès avoir lancé l'un ou l'autre sort de cette manière, vous ne pouvez plus utiliser cette fonctionnalité tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Consult the Spirits"
+    },
+    {
+      "name": "Ancêtres vengeurs",
+      "level": 14,
+      "desc": "Au niveau 14, vos esprits ancestraux deviennent suffisamment puissants pour riposter. Lorsque vous utilisez votre Bouclier spirituel pour réduire les dégâts d'une attaque, l'attaquant subit une quantité de dégâts de force que votre Bouclier spirituel empêche.",
+      "name_en": "Vengeful Ancestors"
+    }
+  ],
+  "name_en": "Barbarian: Path of the Ancestral Guardian",
+  "_translated": true
+}

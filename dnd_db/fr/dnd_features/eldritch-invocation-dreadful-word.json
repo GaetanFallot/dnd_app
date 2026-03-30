@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-dreadful-word",
+  "name": "Invocation surnaturelle : mot épouvantable",
+  "level": 7,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer de la confusion une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos."
+  ],
+  "name_en": "Eldritch Invocation: Dreadful Word",
+  "class_name_fr": "",
+  "_translated": true
+}

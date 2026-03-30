@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-mire-the-mind",
+  "name": "Invocation surnaturelle : embrouiller l'esprit",
+  "level": 5,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer un sort lent une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos."
+  ],
+  "name_en": "Eldritch Invocation: Mire the Mind",
+  "class_name_fr": "",
+  "_translated": true
+}

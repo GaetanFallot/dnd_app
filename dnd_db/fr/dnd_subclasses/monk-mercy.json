@@ -1,0 +1,48 @@
+{
+  "index": "monk-mercy",
+  "name": "Moine : Voie de la Miséricorde",
+  "class": "monk",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Les moines de la Voie de la Miséricorde apprennent à manipuler la force vitale des autres pour apporter de l'aide à ceux qui en ont besoin. Ce sont des médecins itinérants auprès des pauvres et des blessés. Cependant, à ceux qui n’ont pas leur aide, ils apportent une fin rapide en guise d’acte de miséricorde.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Instruments de miséricorde",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cette tradition au niveau 3, vous gagnez la maîtrise des compétences Insight et Médecine, ainsi que la maîtrise du kit d'herboristerie.\n\nVous obtenez également un masque spécial, que vous portez souvent lorsque vous utilisez les fonctionnalités de cette sous-classe. Vous déterminez son apparence, ou la générez aléatoirement en lançant sur le tableau du Masque Miséricordieux.\nMasque miséricordieux | \nd6 | Apparence du masque\n1 | Corbeau\n2 | Vide et blanc\n3 | Visage qui pleure\n4 | Visage rieur\n5 | Crâne\n6 | Papillon",
+      "name_en": "Implements of Mercy"
+    },
+    {
+      "name": "Mains de guérison",
+      "level": 3,
+      "desc": "Au niveau 3, votre touche mystique peut panser les blessures. Par une action, vous pouvez dépenser 1 point de ki pour toucher une créature et restaurer un nombre de points de vie égal à un lancer de votre dé d'Arts Martiaux + votre modificateur de Sagesse.\n\nLorsque vous utilisez votre Rafale de Coups, vous pouvez remplacer l'une des frappes à mains nues par une utilisation de cette fonctionnalité sans dépenser de point de ki pour la guérison.",
+      "name_en": "Hands of Healing"
+    },
+    {
+      "name": "Mains de mal",
+      "level": 3,
+      "desc": "Au niveau 3, vous utilisez votre ki pour infliger des blessures. Lorsque vous frappez une créature avec une frappe à mains nues, vous pouvez dépenser 1 point de ki pour infliger des dégâts nécrotiques supplémentaires égaux à un lancer de votre dé d'arts martiaux + votre modificateur de Sagesse. Vous ne pouvez utiliser cette fonctionnalité qu'une seule fois par tour.",
+      "name_en": "Hands of Harm"
+    },
+    {
+      "name": "Le contact du médecin",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez administrer des remèdes encore plus puissants d'un simple toucher, et si vous le jugez nécessaire, vous pouvez utiliser vos connaissances pour causer du mal.\n\nLorsque vous utilisez Mains de guérison sur une créature, vous pouvez également mettre fin à une maladie ou à l'une des conditions suivantes affectant la créature : aveuglée, assourdie, paralysée, empoisonnée ou étourdie.\n\nLorsque vous utilisez Hands of Harm sur une créature, vous pouvez soumettre cette créature à l'état empoisonné jusqu'à la fin de votre prochain tour.",
+      "name_en": "Physician's Touch"
+    },
+    {
+      "name": "Déferlante de guérison et de préjudice",
+      "level": 11,
+      "desc": "À partir du niveau 11, vous pouvez désormais infliger une vague de réconfort et de souffrance. Lorsque vous utilisez Rafale de Coups, vous pouvez désormais remplacer chacune des frappes à mains nues par une utilisation de vos Mains de Guérison, sans dépenser de points de ki pour la guérison.\n\nDe plus, lorsque vous effectuez une frappe à mains nues avec Flurry of Blows, vous pouvez utiliser Hand of Harm avec cette frappe sans dépenser le point de ki pour Hands of Harm. Vous ne pouvez toujours utiliser Hands of Harm qu’une seule fois par tour.",
+      "name_en": "Flurry of Healing and Harm"
+    },
+    {
+      "name": "Main de la Miséricorde Ultime",
+      "level": 17,
+      "desc": "Au niveau 17, votre maîtrise de l’énergie vitale ouvre la porte à la miséricorde ultime. Par une action, vous pouvez toucher le cadavre d'une créature décédée au cours des dernières 24 heures et dépenser 5 points de ki. La créature revient alors à la vie, récupérant un nombre de points de vie égal à 4d10 + votre modificateur de Sagesse. Si la créature meurt alors qu'elle est soumise à l'une des conditions suivantes, elle ressuscite sans ces conditions : aveuglée, assourdie, paralysée, empoisonnée et étourdie.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Hand of Ultimate Mercy"
+    }
+  ],
+  "name_en": "Monk: Way of Mercy",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-heightened-spell",
+  "name": "Métamagie : sort accru",
+  "level": 3,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez un sort qui oblige une créature à effectuer un jet de sauvegarde pour résister à ses effets, vous pouvez dépenser 3 points de sorcellerie pour désavantager une cible du sort lors de son premier jet de sauvegarde effectué contre le sort."
+  ],
+  "name_en": "Metamagic: Heightened Spell",
+  "class_name_fr": "",
+  "_translated": true
+}

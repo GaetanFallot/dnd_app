@@ -1,0 +1,13 @@
+{
+  "index": "flexible-casting-creating-spell-slots",
+  "name": "Casting flexible : création d'emplacements de sorts",
+  "level": 2,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez transformer les points de sorcellerie non dépensés en un emplacement de sort en tant qu'action bonus pendant votre tour. Le tableau Création d'emplacements de sort montre le coût de création d'un emplacement de sort d'un niveau donné. Vous pouvez créer des emplacements de sorts dont le niveau ne dépasse pas le 5. \nTout emplacement de sort que vous créez avec cette fonctionnalité disparaît lorsque vous terminez un repos long."
+  ],
+  "name_en": "Flexible Casting: Creating Spell Slots",
+  "class_name_fr": "",
+  "_translated": true
+}

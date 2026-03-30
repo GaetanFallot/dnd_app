@@ -1,0 +1,13 @@
+{
+  "index": "uncanny-dodge",
+  "name": "Esquive étrange",
+  "level": 5,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 5, lorsqu'un attaquant que vous pouvez voir vous frappe avec une attaque, vous pouvez utiliser votre réaction pour réduire de moitié les dégâts de l'attaque contre vous."
+  ],
+  "name_en": "Uncanny Dodge",
+  "class_name_fr": "",
+  "_translated": true
+}

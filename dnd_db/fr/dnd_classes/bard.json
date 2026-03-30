@@ -1,0 +1,399 @@
+{
+  "index": "bard",
+  "name": "Barde",
+  "hit_die": 8,
+  "proficiencies": [
+    "Light Armor",
+    "Simple Weapons",
+    "Longswords",
+    "Rapiers",
+    "Shortswords",
+    "Hand crossbows",
+    "Saving Throw: DEX",
+    "Saving Throw: CHA"
+  ],
+  "saving_throws": [
+    "DEX",
+    "CHA"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose any three",
+      "choose": 3,
+      "options": [
+        "Skill: Acrobatics",
+        "Skill: Animal Handling",
+        "Skill: Arcana",
+        "Skill: Athletics",
+        "Skill: Deception",
+        "Skill: History",
+        "Skill: Insight",
+        "Skill: Intimidation",
+        "Skill: Investigation",
+        "Skill: Medicine",
+        "Skill: Nature",
+        "Skill: Perception",
+        "Skill: Performance",
+        "Skill: Persuasion",
+        "Skill: Religion",
+        "Skill: Sleight of Hand",
+        "Skill: Stealth",
+        "Skill: Survival"
+      ]
+    },
+    {
+      "desc": "Three musical instruments of your choice",
+      "choose": 3,
+      "options": [
+        "Bagpipes",
+        "Drum",
+        "Dulcimer",
+        "Flute",
+        "Lute",
+        "Lyre",
+        "Horn",
+        "Pan flute",
+        "Shawm",
+        "Viol"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "leather-armor",
+        "name": "Leather Armor",
+        "url": "/api/2014/equipment/leather-armor"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "Dagger",
+        "url": "/api/2014/equipment/dagger"
+      },
+      "quantity": 1
+    }
+  ],
+  "subclasses": [
+    "lore"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "spellcasting-bard",
+        "bardic-inspiration-d6"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 6,
+        "song_of_rest_die": 0,
+        "magical_secrets_max_5": 0,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "jack-of-all-trades",
+        "song-of-rest-d6"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 6,
+        "song_of_rest_die": 6,
+        "magical_secrets_max_5": 0,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "bard-expertise-1",
+        "bard-college"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 6,
+        "song_of_rest_die": 6,
+        "magical_secrets_max_5": 0,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "bard-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 6,
+        "song_of_rest_die": 6,
+        "magical_secrets_max_5": 0,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [
+        "bardic-inspiration-d8",
+        "font-of-inspiration"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 8,
+        "song_of_rest_die": 6,
+        "magical_secrets_max_5": 0,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "countercharm",
+        "bard-college-improvement-1"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 8,
+        "song_of_rest_die": 6,
+        "magical_secrets_max_5": 0,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [],
+      "class_specific": {
+        "bardic_inspiration_die": 8,
+        "song_of_rest_die": 6,
+        "magical_secrets_max_5": 0,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "bard-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 8,
+        "song_of_rest_die": 6,
+        "magical_secrets_max_5": 0,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [
+        "song-of-rest-d8"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 8,
+        "song_of_rest_die": 8,
+        "magical_secrets_max_5": 0,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "bard-expertise-2",
+        "bardic-inspiration-d10",
+        "magical-secrets-1"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 10,
+        "song_of_rest_die": 8,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "bardic_inspiration_die": 10,
+        "song_of_rest_die": 8,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "bard-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 10,
+        "song_of_rest_die": 8,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [
+        "song-of-rest-d10"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 10,
+        "song_of_rest_die": 10,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 0,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "magical-secrets-2",
+        "bard-college-improvement-2"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 10,
+        "song_of_rest_die": 10,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 2,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [
+        "bardic-inspiration-d12"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 12,
+        "song_of_rest_die": 10,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 2,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "bard-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 12,
+        "song_of_rest_die": 10,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 2,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [
+        "song-of-rest-d12"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 12,
+        "song_of_rest_die": 12,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 2,
+        "magical_secrets_max_9": 0
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "magical-secrets-3"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 12,
+        "song_of_rest_die": 12,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 2,
+        "magical_secrets_max_9": 2
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "bard-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 12,
+        "song_of_rest_die": 12,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 2,
+        "magical_secrets_max_9": 2
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "superior-inspiration"
+      ],
+      "class_specific": {
+        "bardic_inspiration_die": 12,
+        "song_of_rest_die": 12,
+        "magical_secrets_max_5": 2,
+        "magical_secrets_max_7": 2,
+        "magical_secrets_max_9": 2
+      }
+    }
+  ],
+  "feature_indices": [
+    "spellcasting-bard",
+    "bardic-inspiration-d6",
+    "jack-of-all-trades",
+    "song-of-rest-d6",
+    "bard-expertise-1",
+    "bard-college",
+    "bard-ability-score-improvement-1",
+    "bardic-inspiration-d8",
+    "font-of-inspiration",
+    "countercharm",
+    "bard-college-improvement-1",
+    "bard-ability-score-improvement-2",
+    "song-of-rest-d8",
+    "bard-expertise-2",
+    "bardic-inspiration-d10",
+    "magical-secrets-1",
+    "bard-ability-score-improvement-3",
+    "song-of-rest-d10",
+    "magical-secrets-2",
+    "bard-college-improvement-2",
+    "bardic-inspiration-d12",
+    "bard-ability-score-improvement-4",
+    "song-of-rest-d12",
+    "magical-secrets-3",
+    "bard-ability-score-improvement-5",
+    "superior-inspiration"
+  ],
+  "name_en": "Bard",
+  "desc": "",
+  "_translated": true
+}

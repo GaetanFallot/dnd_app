@@ -1,0 +1,10 @@
+{
+  "index": "ritual-caster",
+  "name": "Lanceur rituel",
+  "source": "Player's Handbook",
+  "prerequisite": "Intelligence ou sagesse de 13 ou plus",
+  "desc": "Vous avez appris un certain nombre de sorts que vous pouvez lancer sous forme de rituels. Ces sorts sont écrits dans un livre de rituels, que vous devez avoir en main lorsque vous lancez l'un d'entre eux.",
+  "benefits": [],
+  "name_en": "Ritual Caster",
+  "_translated": true
+}

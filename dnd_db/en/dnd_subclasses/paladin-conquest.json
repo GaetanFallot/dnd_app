@@ -1,0 +1,40 @@
+{
+  "index": "paladin-conquest",
+  "name": "Paladin: Oath of Conquest",
+  "class": "paladin",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "The Oath of Conquest calls to paladins who seek glory in battle and the subjugation of their enemies. It isn’t enough for these paladins to establish order. They must crush the forces of chaos. Sometimes called knight tyrants or iron mongers, those who swear this oath gather into grim orders that serve gods or philosophies of war and well-ordered might.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Tenets of Conquest",
+      "level": null,
+      "desc": "A paladin who takes this oath has the tenets of conquest seared on the upper arm.\n\nDouse the Flame of Hope. It is not enough to merely defeat an enemy in battle. Your victory must be so overwhelming that your enemies’ will to fight is shattered forever. A blade can end a life. Fear can end an empire.\n\nRule with an Iron Fist. Once you have conquered, tolerate no dissent. Your word is law. Those who obey it shall be favored. Those who defy it shall be punished as an example to all who might follow.\n\nStrength Above All. You shall rule until a stronger one arises. Then you must grow mightier and meet the challenge, or fall to your own ruin."
+    },
+    {
+      "name": "Oath Spells",
+      "level": null,
+      "desc": "You gain oath spells at the paladin levels listed.\nOath of Conquest Spells\nPaladin Level | Spells\n3rd | Armor of Agathys, Command\n5th | Hold Person, Spiritual Weapon\n9th | Bestow Curse, Fear\n13th | Dominate Beast, Stoneskin\n17th | Cloudkill, Dominate Person"
+    },
+    {
+      "name": "Channel Divinity",
+      "level": 3,
+      "desc": "When you take this oath at 3rd level, you gain the following two Channel Divinity options.\n• Conquering Presence. You can use your Channel Divinity to exude a terrifying presence. As an action, you force each creature of your choice that you can see within 30 feet of you to make a Wisdom saving throw. On a failed save, a creature becomes frightened of you for 1 minute. The frightened creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success.\n• Guided Strike. You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+    },
+    {
+      "name": "Aura of Conquest",
+      "level": 7,
+      "desc": "Starting at 7th level, you constantly emanate a menacing aura while you're not incapacitated. The aura extends 10 feet from you in every direction, but not through total cover.\n\nIf a creature is frightened of you, its speed is reduced to 0 while in the aura, and that creature takes psychic damage equal to half your paladin level if it starts its turn there.\n\nAt 18th level, the range of this aura increases to 30 feet."
+    },
+    {
+      "name": "Scornful Rebuke",
+      "level": 15,
+      "desc": "Starting at 15th level, those who dare to strike you are psychically punished for their audacity. Whenever a creature hits you with an attack, that creature takes psychic damage equal to your Charisma modifier (minimum of 1) if you’re not incapacitated."
+    },
+    {
+      "name": "Invincible Conqueror",
+      "level": 20,
+      "desc": "At 20th level, you gain the ability to harness extraordinary martial prowess. As an action, you can magically become an avatar of conquest, gaining the following benefits for 1 minute:\n• You have resistance to all damage.\n• When you take the Attack action on your turn, you can make one additional attack as part of that action.\n• Your melee weapon attacks score a critical hit on a roll of 19 or 20 on the d20.\n\nOnce you use this feature, you can’t use it again until you finish a long rest."
+    }
+  ]
+}

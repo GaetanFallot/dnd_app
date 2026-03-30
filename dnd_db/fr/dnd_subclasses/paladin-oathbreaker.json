@@ -1,0 +1,42 @@
+{
+  "index": "paladin-oathbreaker",
+  "name": "Paladin : Briseur de serment",
+  "class": "paladin",
+  "source": "Dungeon Master's Guide",
+  "subclass_flavor": "Un briseur de serment est un paladin qui rompt ses serments sacrés pour poursuivre une sombre ambition ou servir une puissance maléfique. Quelle que soit la lumière qui brûlait dans le cœur du paladin, elle s'est éteinte. Il ne reste que l'obscurité.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Sorts de serment",
+      "level": null,
+      "desc": "Vous gagnez des sorts de serment aux niveaux de paladin indiqués.\nSorts de briseur de serment\nNiveau Paladin | Sorts\n3ème | Réprimande infernale, infliger des blessures\n5ème | Couronne de folie, ténèbres\n9ème | Animer les morts, accorder la malédiction\n13e | Fléau, Confusion\n17e | Contagion, personne dominante",
+      "name_en": "Oath Spells"
+    },
+    {
+      "name": "Canal Divinité",
+      "level": 3,
+      "desc": "Lorsque vous prêtez ce serment au niveau 3, vous obtenez les deux options de canalisation divine suivantes.\n• Contrôlez les morts-vivants. Par une action, vous ciblez une créature mort-vivante que vous pouvez voir à moins de 9 mètres de vous. La cible doit effectuer un jet de sauvegarde de Sagesse. En cas d'échec de la sauvegarde, la cible doit obéir à vos ordres pendant les prochaines 24 heures, ou jusqu'à ce que vous utilisiez à nouveau cette option Channel Divinity. Un mort-vivant dont le niveau de défi est égal ou supérieur à votre niveau de paladin est immunisé contre cet effet.\n• Aspect épouvantable. Par une action, vous canalisez les émotions les plus sombres et les concentrez en une explosion de menace magique. Chaque créature de votre choix à moins de 9 mètres de vous doit effectuer un jet de sauvegarde de Sagesse si elle peut vous voir. En cas d'échec, la cible a peur de vous pendant 1 minute. Si une créature effrayée par cet effet termine son tour à plus de 9 mètres de vous, elle peut tenter un autre jet de sauvegarde de Sagesse pour mettre fin à l'effet sur elle.",
+      "name_en": "Channel Divinity"
+    },
+    {
+      "name": "Aura de haine",
+      "level": 7,
+      "desc": "À partir du niveau 7, vous, ainsi que tous les démons et morts-vivants à moins de 3 mètres de vous, bénéficiez d'un bonus aux jets de dégâts des armes en mêlée égal à votre modificateur de Charisme (minimum de +1). Une créature ne peut bénéficier de cette fonctionnalité que d'un seul paladin à la fois.\n\nAu niveau 18, la portée de cette aura passe à 9 mètres.",
+      "name_en": "Aura of Hate"
+    },
+    {
+      "name": "Résistance surnaturelle",
+      "level": 15,
+      "desc": "Au niveau 15, vous gagnez la résistance aux dégâts contondants, perçants et tranchants des armes non magiques.",
+      "name_en": "Supernatural Resistance"
+    },
+    {
+      "name": "Seigneur de l'effroi",
+      "level": 20,
+      "desc": "Au niveau 20, vous pouvez, par une action, vous entourer d'une aura de tristesse qui dure 1 minute. L'aura réduit toute lumière vive dans un rayon de 9 mètres autour de vous pour atténuer la lumière. Chaque fois qu'un ennemi effrayé par vous commence son tour dans l'aura, il subit 4d10 dégâts psychiques. De plus, vous et toutes les créatures de votre choix dans l’aura êtes enveloppés dans une ombre plus profonde. Les créatures qui dépendent de la vue ont un désavantage aux jets d'attaque contre les créatures drapées dans cette ombre.\n\nTant que dure l'aura, vous pouvez utiliser une action bonus pendant votre tour pour amener les ombres de l'aura à attaquer une créature. Lancez une attaque magique au corps à corps contre la cible. Si l'attaque réussit, la cible subit des dégâts nécrotiques égaux à 3d10 + votre modificateur de Charisme.\n\nAprès avoir activé l'aura, vous ne pouvez plus le faire avant d'avoir terminé un long repos.",
+      "name_en": "Dread Lord"
+    }
+  ],
+  "name_en": "Paladin: Oathbreaker",
+  "_translated": true
+}

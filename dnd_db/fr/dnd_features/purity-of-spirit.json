@@ -1,0 +1,13 @@
+{
+  "index": "purity-of-spirit",
+  "name": "Pureté de l'Esprit",
+  "level": 15,
+  "class": "paladin",
+  "subclass": "devotion",
+  "desc": [
+    "À partir du niveau 15, vous êtes toujours sous l'effet d'un sort de protection contre le mal et le bien."
+  ],
+  "name_en": "Purity of Spirit",
+  "class_name_fr": "",
+  "_translated": true
+}

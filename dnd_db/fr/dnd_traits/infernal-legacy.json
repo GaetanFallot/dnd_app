@@ -1,0 +1,11 @@
+{
+  "index": "infernal-legacy",
+  "name": "Héritage infernal",
+  "races": [
+    "tiefling"
+  ],
+  "subraces": [],
+  "desc": "Vous connaissez le sort magique de la thaumaturgie. Lorsque vous atteignez le niveau 3, vous pouvez lancer une fois le sort de réprimande infernale comme un sort de niveau 2 avec ce trait et retrouver la capacité de le faire lorsque vous terminez un repos long. Lorsque vous atteignez le niveau 5, vous pouvez lancer le sort d'obscurité une fois avec ce trait et retrouver la capacité de le faire lorsque vous terminez un repos long. Le charisme est votre capacité à lancer des sorts pour ces sorts.",
+  "name_en": "Infernal Legacy",
+  "_translated": true
+}

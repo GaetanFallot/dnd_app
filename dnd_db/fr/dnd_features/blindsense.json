@@ -1,0 +1,13 @@
+{
+  "index": "blindsense",
+  "name": "Sens aveugle",
+  "level": 14,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 14, si vous êtes capable d'entendre, vous connaissez l'emplacement de toute créature cachée ou invisible dans un rayon de 3 mètres autour de vous."
+  ],
+  "name_en": "Blindsense",
+  "class_name_fr": "",
+  "_translated": true
+}

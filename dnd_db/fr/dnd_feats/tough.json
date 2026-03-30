@@ -1,0 +1,10 @@
+{
+  "index": "tough",
+  "name": "Difficile",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Votre maximum de points de vie augmente d'un montant égal à deux fois votre niveau lorsque vous obtenez ce don. Chaque fois que vous gagnez un niveau par la suite, votre maximum de points de vie augmente de 2 points de vie supplémentaires.",
+  "benefits": [],
+  "name_en": "Tough",
+  "_translated": true
+}

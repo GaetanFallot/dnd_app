@@ -1,0 +1,15 @@
+{
+  "index": "hermit",
+  "name": "Background: Hermit",
+  "source": "Player's Handbook",
+  "desc": "You lived in seclusion – either in a sheltered community such as a monastery, or entirely alone – for a formative part of your life. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for.\n\nSkill Proficiencies: Medicine, Religion\nTool Proficiencies: Herbalism kit\nLanguages: One of your choice\nEquipment: A scroll caseValue:1gp Weight:1lb stuffed full of notes from your studies or prayers, a winter blanketValue:5sp Weight:3lbs, a set of common clothesValue:5sp Weight:3lbs, an herbalism kitValue:5gp Weight:3lbs, and 5gp",
+  "skill_proficiencies": [
+    "Medicine",
+    "Religion\nTool Proficiencies: Herbalism kit\nLanguages: One of your choice\nEquipment: A scroll caseValue:1gp Weight:1lb stuffed full of notes from your studies or prayers",
+    "a winter blanketValue:5sp Weight:3lbs",
+    "a set of common clothesValue:5sp Weight:3lbs",
+    "an herbalism kitValue:5gp Weight:3lbs",
+    "and 5gp"
+  ],
+  "feature": null
+}

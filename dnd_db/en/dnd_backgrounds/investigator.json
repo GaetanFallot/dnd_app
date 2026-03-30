@@ -1,0 +1,15 @@
+{
+  "index": "investigator",
+  "name": "Background: Investigator",
+  "source": "Van Richten's Guide to Ravenloft",
+  "desc": "You relentlessly seek the truth. Perhaps you're motivated by belief in the law and a sense of universal justice, or maybe that very law has failed you and you seek to make things right. You could have witnessed something remarkable or terrible, and now you must know more about this hidden truth. Or maybe you're a detective for hire, uncovering secrets for well-paying clients. Whether the mysteries you're embroiled in are local crimes or realm-spanning conspiracies, you're driven by a personal need to hunt down even the most elusive clues and reveal what others would keep hidden in the shadows.\n\nSkill Proficiencies: Choose two from among Insight, Investigation, or Perception\nTool Proficiencies: Disguise kit, thieves' tools\nEquipment: A magnifying glassValue:100gp, evidence from a past case (choose one or roll for a trinket from the Horror Trinkets table) a set of common clothesValue:5sp Weight:3lbs, and 10gp.\n\nYour first case influenced the types of mysteries you're interested in. Why was this case so impactful, personal, or traumatic? Whom did it affect besides you? Why and how did you get involved? Was it solved? How did it set you on the path to investigating other mysteries? Roll on or choose details from the First Case table below to develop the mystery that started your career as an investigator.",
+  "skill_proficiencies": [
+    "Choose two from among Insight",
+    "Investigation",
+    "or Perception\nTool Proficiencies: Disguise kit",
+    "thieves' tools\nEquipment: A magnifying glassValue:100gp",
+    "evidence from a past case (choose one or roll for a trinket from the Horror Trinkets table) a set of common clothesValue:5sp Weight:3lbs",
+    "and 10gp."
+  ],
+  "feature": null
+}

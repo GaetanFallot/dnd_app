@@ -1,0 +1,10 @@
+{
+  "index": "defensive-duelist",
+  "name": "Duelliste défensif",
+  "source": "Player's Handbook",
+  "prerequisite": "Dextérité 13 ou plus",
+  "desc": "Lorsque vous maniez une arme de finesse avec laquelle vous maîtrisez et qu'une autre créature vous frappe avec une attaque de mêlée, vous pouvez utiliser votre réaction pour ajouter votre bonus de maîtrise à votre CA pour cette attaque, ce qui pourrait faire en sorte que l'attaque vous manque.",
+  "benefits": [],
+  "name_en": "Defensive Duelist",
+  "_translated": true
+}

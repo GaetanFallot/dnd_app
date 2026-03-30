@@ -1,0 +1,48 @@
+{
+  "index": "cleric-war",
+  "name": "Clerc : Domaine de guerre",
+  "class": "cleric",
+  "source": "Player's Handbook",
+  "subclass_flavor": "La guerre a de nombreuses manifestations. Cela peut faire des gens ordinaires des héros. Cela peut être désespéré et horrible, avec des actes de cruauté et de lâcheté éclipsant les exemples d’excellence et de courage. Dans les deux cas, les dieux de la guerre veillent sur les guerriers et les récompensent pour leurs hauts faits. Les prêtres de ces dieux excellent au combat, inspirant les autres à mener le bon combat ou offrant des actes de violence sous forme de prières. Les dieux de la guerre comprennent des champions d'honneur et de chevalerie (tels que Torm, Heironeous et Kiri-Jolith), ainsi que des dieux de la destruction et du pillage (tels qu'Erythnul, la Furie, Gruumsh et Ares) et des dieux de la conquête et de la domination (tels que Bane, Hextor et Maglubiyet). D'autres dieux de la guerre (tels que Tempus, Ni",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétence bonus",
+      "level": 1,
+      "desc": "Au niveau 1, vous maîtrisez les armes de combat et les armures lourdes.",
+      "name_en": "Bonus Proficiency"
+    },
+    {
+      "name": "Prêtre de guerre",
+      "level": 1,
+      "desc": "Dès le niveau 1, votre dieu vous délivre des éclairs d'inspiration pendant que vous êtes engagé dans un combat. Lorsque vous utilisez l’action Attaque, vous pouvez effectuer une attaque avec une arme comme action bonus.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Sagesse (au minimum une fois). Vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "War Priest"
+    },
+    {
+      "name": "Channel Divinity : Frappe guidée",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous pouvez utiliser votre Channel Divinity pour frapper avec une précision surnaturelle. Lorsque vous effectuez un jet d'attaque, vous pouvez utiliser votre Canal Divinité pour gagner un bonus de +10 au jet. Vous faites ce choix après avoir vu le jet, mais avant que le DM ne vous dise si l'attaque réussit ou rate.",
+      "name_en": "Channel Divinity: Guided Strike"
+    },
+    {
+      "name": "Channel Divinity : La bénédiction de Dieu de la guerre",
+      "level": 6,
+      "desc": "Au niveau 6, lorsqu'une créature à moins de 9 mètres de vous effectue un jet d'attaque, vous pouvez utiliser votre réaction pour accorder à cette créature un bonus de +10 au jet, en utilisant votre Canalisation Divinité. Vous faites ce choix après avoir vu le jet, mais avant que le DM ne vous dise si l'attaque réussit ou rate.",
+      "name_en": "Channel Divinity: War God's Blessing"
+    },
+    {
+      "name": "Frappe divine",
+      "level": 8,
+      "desc": "Au niveau 8, vous gagnez la capacité d’imprégner vos frappes d’énergie divine. Une fois à chacun de vos tours, lorsque vous touchez une créature avec une attaque avec une arme, vous pouvez faire en sorte que l'attaque inflige 1d8 dégâts supplémentaires du même type infligé par l'arme à la cible. Lorsque vous atteignez le niveau 14, les dégâts supplémentaires passent à 2d8.",
+      "name_en": "Divine Strike"
+    },
+    {
+      "name": "Avatar de bataille",
+      "level": 17,
+      "desc": "Au niveau 17, vous gagnez la résistance aux dégâts contondants, perçants et tranchants des attaques non magiques.",
+      "name_en": "Avatar of Battle"
+    }
+  ],
+  "name_en": "Cleric: War Domain",
+  "_translated": true
+}

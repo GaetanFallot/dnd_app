@@ -1,0 +1,11 @@
+{
+  "index": "halfling-nimbleness",
+  "name": "Agilité halfelin",
+  "races": [
+    "halfling"
+  ],
+  "subraces": [],
+  "desc": "Vous pouvez vous déplacer dans l’espace de n’importe quelle créature d’une taille supérieure à la vôtre.",
+  "name_en": "Halfling Nimbleness",
+  "_translated": true
+}

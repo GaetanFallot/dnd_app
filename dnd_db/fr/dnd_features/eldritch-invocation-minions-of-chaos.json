@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-minions-of-chaos",
+  "name": "Invocation surnaturelle : les serviteurs du chaos",
+  "level": 9,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer une conjuration élémentaire une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos."
+  ],
+  "name_en": "Eldritch Invocation: Minions of Chaos",
+  "class_name_fr": "",
+  "_translated": true
+}

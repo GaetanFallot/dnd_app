@@ -1,0 +1,13 @@
+{
+  "index": "aura-of-protection",
+  "name": "Aura de protection",
+  "level": 6,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 6, chaque fois que vous ou une créature amie à moins de 3 mètres de vous devez effectuer un jet de sauvegarde, la créature gagne un bonus au jet de sauvegarde égal à votre modificateur de Charisme (avec un bonus minimum de +1). Vous devez en être conscient pour accorder ce bonus.\nAu niveau 18, la portée de cette aura passe à 9 mètres."
+  ],
+  "name_en": "Aura of Protection",
+  "class_name_fr": "",
+  "_translated": true
+}

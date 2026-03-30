@@ -1,0 +1,8 @@
+{
+  "index": "svirfneblin-magic",
+  "name": "Svirfneblin Magic",
+  "source": "Mordenkainen's Tome of Foes",
+  "prerequisite": "Gnome (Deep Gnome)",
+  "desc": "You have inherited the innate spellcasting ability of your ancestors. This ability allows you to cast Nondetection on yourself at will, without needing a material component.",
+  "benefits": []
+}

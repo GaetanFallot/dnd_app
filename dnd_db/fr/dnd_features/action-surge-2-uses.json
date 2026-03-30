@@ -1,0 +1,13 @@
+{
+  "index": "action-surge-2-uses",
+  "name": "Action Surge (2 utilisations)",
+  "level": 17,
+  "class": "fighter",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 2, vous pouvez repousser un instant vos limites normales. À votre tour, vous pouvez effectuer une action supplémentaire en plus de votre action habituelle et d’une éventuelle action bonus.\nUne fois que vous utilisez cette fonctionnalité, vous devez terminer un repos court ou long avant de pouvoir l'utiliser à nouveau. À partir du niveau 17, vous pouvez l'utiliser deux fois avant un repos, mais une seule fois dans le même tour."
+  ],
+  "name_en": "Action Surge (2 uses)",
+  "class_name_fr": "",
+  "_translated": true
+}

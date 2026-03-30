@@ -1,0 +1,14 @@
+{
+  "index": "city-watch",
+  "name": "Background: City Watch",
+  "source": "Sword Coast Adventurer's Guide",
+  "desc": "You have served the community where you grew up, standing as its first line of defense against crime. You aren't a soldier, directing your gaze outward at possible enemies. Instead, your service to your hometown was to help police its populace, protecting the citizenry from lawbreakers and malefactors of every stripe.\n\nYou might have been part of the City Watch of Waterdeep, the baton-wielding police force of the City of Splendors, protecting the common folk from thieves and rowdy nobility alike. Or you might have been one of the valiant defenders of Silverymoon, a member of the Silverwatch or even one of the magic-wielding Spellguard.\n\nPerhaps you hail from Neverwinter and have served as one of its Wintershield watchmen, the newly founded branch of guards who vow to keep safe the City of Skilled Hands.\n\nEven if you're not city-born or city-bred, this background can describe your early years as a member of law enforcement. Most settlements of any size have their own constables and police forces, and even smaller communities have sheriffs and bailiffs who stand ready to protect their community.\n\nSkill Proficiencies: Athletics, Insight\nTool Proficiencies: None\nLanguages: Two of your choice\nEquipment: A uniform in the style of your unit and indicative of your rank, a hornValue:3gp Weight:2lbs with which to summon help, a set of manaclesValue:2gp Weight:6lbs, and a pouchValue:5sp Weight:1lb containing 10gp",
+  "skill_proficiencies": [
+    "Athletics",
+    "Insight\nTool Proficiencies: None\nLanguages: Two of your choice\nEquipment: A uniform in the style of your unit and indicative of your rank",
+    "a hornValue:3gp Weight:2lbs with which to summon help",
+    "a set of manaclesValue:2gp Weight:6lbs",
+    "and a pouchValue:5sp Weight:1lb containing 10gp"
+  ],
+  "feature": null
+}

@@ -1,0 +1,42 @@
+{
+  "index": "ranger-swarmkeeper",
+  "name": "Ranger : gardien de l'essaim",
+  "class": "ranger",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Ressentant un lien profond avec l'environnement qui les entoure, certains rangers s'étendent grâce à leur connexion magique avec le monde et se lient à un essaim d'esprits de la nature. L'essaim devient une force puissante au combat, ainsi qu'une compagnie utile pour le ranger. Certains Swarmkeepers sont des parias ou des ermites, restant seuls et avec leurs essaims plutôt que de faire face à l'inconfort des autres. D’autres Swarmkeepers aiment bâtir des communautés dynamiques qui travaillent pour le bénéfice mutuel de tous ceux qu’ils considèrent comme faisant partie de leur essaim.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Essaim rassemblé",
+      "level": 3,
+      "desc": "Au niveau 3, un essaim d'esprits de la nature intangibles s'est lié à vous et peut vous aider au combat. Tant que vous êtes en vie, l’essaim reste dans votre espace, rampant sur vous ou volant et voltigeant autour de vous dans votre espace. Vous déterminez son apparence, ou vous générez son apparence en lançant un jet sur la table d'apparence de l'essaim.\nApparition d'un essaim | \nd4 | Apparence\n1 | Essaimage d'insectes\n2 | Brûlures miniatures des rameaux\n3 | Oiseaux flottants\n4 | Pixies ludiques\n\nUne fois à chacun de vos tours, vous pouvez demander à l'essaim de vous aider de l'une des manières suivantes, immédiatement après avoir touché une créature avec une attaque :\n• La cible de l'attaque subit 1d6 dégâts perforants de la nuée.\n• La cible de l'attaque doit réussir un jet de sauvegarde de Force contre votre DD de sauvegarde de sort ou être déplacée par l'essaim jusqu'à 15 pieds horizontalement dans la direction de votre choix.\n• Vous êtes déplacé par l'essaim de 1,50 mètre horizontalement dans la direction de votre choix.",
+      "name_en": "Gathered Swarm"
+    },
+    {
+      "name": "Magie des gardiens d'essaims",
+      "level": 3,
+      "desc": "Également au niveau 3, vous apprenez le cantrip Mage Hand si vous ne le connaissez pas déjà. Lorsque vous le lancez, la main prend la forme de vos esprits de la nature grouillants.\n\nVous apprenez également un sort supplémentaire de niveau 1 ou supérieur lorsque vous atteignez certains niveaux dans cette classe, comme indiqué dans le tableau des sorts de Swarmkeeper. Chaque sort compte pour vous comme un sort de rôdeur, mais il ne compte pas dans le nombre de sorts de rôdeur que vous connaissez.\nSorts de gardien d’essaim | \nNiveau Ranger | Sort\n3ème | Feu féerique, main de mage\n5ème | Web\n9ème | Forme gazeuse\n13e | Œil arcanique\n17e | Peste d'insectes",
+      "name_en": "Swarmkeeper Magic"
+    },
+    {
+      "name": "Marée se tordant",
+      "level": 7,
+      "desc": "À partir du niveau 7, vous pouvez condenser une partie de votre essaim en une masse concentrée qui vous élève. Par une action bonus, vous gagnez une vitesse de vol de 3 mètres et pouvez planer. Cet effet dure 1 minute ou jusqu'à ce que vous soyez incapable d'agir.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Writhing Tide"
+    },
+    {
+      "name": "Puissant essaim",
+      "level": 11,
+      "desc": "Au niveau 11, votre Essaim rassemblé devient plus puissant des manières suivantes :\n• Les dégâts de Gathered Swarm augmentent à 1d8.\n• Si une créature échoue à son jet de sauvegarde contre le déplacement de la nuée rassemblée, vous pouvez également faire en sorte que la nuée la jette à terre.\n• Lorsque vous êtes déplacé par Gathered Swarm, il vous offre une demi-couverture jusqu'au début de votre prochain tour.",
+      "name_en": "Mighty Swarm"
+    },
+    {
+      "name": "Dispersion en essaim",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 15, vous pouvez vous désincorporer dans votre essaim, évitant ainsi le danger. Lorsque vous subissez des dégâts, vous pouvez utiliser votre réaction pour vous conférer une résistance à ces dégâts. Vous disparaissez dans votre essaim puis vous téléportez dans un espace inoccupé que vous pouvez voir à moins de 9 mètres de vous, où vous réapparaissez avec l'essaim.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Swarming Dispersal"
+    }
+  ],
+  "name_en": "Ranger: Swarmkeeper",
+  "_translated": true
+}

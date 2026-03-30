@@ -1,0 +1,42 @@
+{
+  "index": "rogue-mastermind",
+  "name": "Voleur : cerveau",
+  "class": "rogue",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Vous vous concentrez sur les gens, sur leur influence et leurs secrets. De nombreux espions, courtisans et intrigants suivent cet archétype, menant une vie d’intrigues. Les mots sont vos armes aussi souvent que les couteaux ou le poison, et les secrets et les faveurs font partie de vos trésors préférés.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Maître de l'intrigue",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cet archétype au niveau 3, vous maîtrisez le kit de déguisement, le kit de contrefaçon et un ensemble de jeu de votre choix. Vous apprenez également deux langues de votre choix.\n\nDe plus, vous pouvez imiter de manière infaillible les schémas de parole et l'accent d'une créature que vous entendez parler pendant au moins 1 minute, ce qui vous permet de vous faire passer pour un locuteur natif d'un pays particulier, à condition que vous connaissiez la langue.",
+      "name_en": "Master of Intrigue"
+    },
+    {
+      "name": "Maître de Tactique",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous pouvez utiliser l’action Aide comme action bonus. De plus, lorsque vous utilisez l'action Aide pour aider un allié à attaquer une créature, la cible de cette attaque peut se trouver à moins de 9 mètres de vous, au lieu de 1,50 mètre de vous, si la cible peut vous voir ou vous entendre.",
+      "name_en": "Master of Tactics"
+    },
+    {
+      "name": "Manipulateur perspicace",
+      "level": 9,
+      "desc": "À partir du niveau 9, si vous passez au moins 1 minute à observer ou à interagir avec une autre créature en dehors du combat, vous pouvez apprendre certaines informations sur ses capacités par rapport aux vôtres. Le DM vous indique si la créature est votre égale, supérieure ou inférieure en ce qui concerne deux des caractéristiques suivantes de votre choix :\n• Score d'intelligence\n• Indice de sagesse\n• Score de charisme\n• Niveaux de classe (le cas échéant)\n\nAu choix du MD, vous pourriez également réaliser que vous connaissez un morceau de l'histoire de la créature ou l'un de ses traits de personnalité, le cas échéant.",
+      "name_en": "Insightful Manipulator"
+    },
+    {
+      "name": "Mauvaise orientation",
+      "level": 13,
+      "desc": "À partir du niveau 13, vous pouvez parfois faire subir à une autre créature une attaque qui vous est destinée. Lorsque vous êtes ciblé par une attaque alors qu'une créature à moins de 1,50 mètre de vous vous accorde une couverture contre cette attaque, vous pouvez utiliser votre réaction pour que l'attaque cible cette créature à votre place.",
+      "name_en": "Misdirection"
+    },
+    {
+      "name": "Âme de tromperie",
+      "level": 17,
+      "desc": "À partir du niveau 17, vos pensées ne peuvent plus être lues par télépathie ou par d'autres moyens, sauf si vous l'autorisez. Vous pouvez présenter de fausses pensées en effectuant un test de Charisme (Tromperie) contesté par le test de Sagesse (Perspicacité) du lecteur d'esprit.\n\nDe plus, peu importe ce que vous dites, la magie qui déterminerait si vous dites la vérité indique que vous dites la vérité si vous le souhaitez, et vous ne pouvez pas être obligé de dire la vérité par magie.",
+      "name_en": "Soul of Deceit"
+    }
+  ],
+  "name_en": "Rogue: Mastermind",
+  "_translated": true
+}

@@ -1,0 +1,14 @@
+{
+  "index": "house-agent",
+  "name": "Background: House Agent",
+  "source": "Eberron - Rising from the Last War",
+  "desc": "You have sworn fealty to a dragonmarked house. If you have a dragonmark, you're likely a member of one of the house's influential families; otherwise you're an outsider who hopes to make your fortune through the house. Your main task is to serve as the eyes of your house, but you could be called on at any time to act as its hand. Such missions can be perilous but lucrative.\n\nSkill Proficiencies: Investigation, Persuasion\nTool Proficiencies: Two proficiencies from the House Tool Proficiencies table\nLanguages: None\nEquipment: A set of fine clothesValue:15gp Weight:6lbs, the signet ringValue:5gp Weight:0 of your house, identification papers, and a purse containing 20gp",
+  "skill_proficiencies": [
+    "Investigation",
+    "Persuasion\nTool Proficiencies: Two proficiencies from the House Tool Proficiencies table\nLanguages: None\nEquipment: A set of fine clothesValue:15gp Weight:6lbs",
+    "the signet ringValue:5gp Weight:0 of your house",
+    "identification papers",
+    "and a purse containing 20gp"
+  ],
+  "feature": null
+}

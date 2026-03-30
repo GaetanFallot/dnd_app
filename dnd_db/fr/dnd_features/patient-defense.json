@@ -1,0 +1,13 @@
+{
+  "index": "patient-defense",
+  "name": "Défense des patients",
+  "level": 2,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez dépenser 1 point ki pour effectuer l’action Esquiver comme action bonus pendant votre tour."
+  ],
+  "name_en": "Patient Defense",
+  "class_name_fr": "",
+  "_translated": true
+}

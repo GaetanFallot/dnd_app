@@ -1,0 +1,13 @@
+{
+  "index": "monk-unarmored-defense",
+  "name": "Défense sans armure",
+  "level": 1,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 1, tant que vous ne portez aucune armure et ne brandissez pas de bouclier, votre CA est égale à 10 + votre modificateur de Dextérité + votre modificateur de Sagesse."
+  ],
+  "name_en": "Unarmored Defense",
+  "class_name_fr": "",
+  "_translated": true
+}

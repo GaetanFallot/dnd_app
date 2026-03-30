@@ -1,0 +1,14 @@
+{
+  "index": "volstrucker-agent",
+  "name": "Background: Volstrucker Agent",
+  "source": "Explorer's Guide to Wildemount",
+  "desc": "The Volstrucker are a clandestine organization of arcane assassins and enforcers in the service of the Cerberus Assembly. Their operatives bear no official title, but are referred to in hushed tones as \"scourgers\" by residents of large Dwendalian cities such as Zadash and Rexxentrum.\n\nYou are a Volstrucker agent. Your duty is to silence dissidents who would undermine the will of King Dwendal - and more importantly, the will of the Assembly.\n\nSkill Proficiencies: Deception, Stealth\nTool Proficiencies: Poisoner's Kit\nLanguages: One of your choice\nEquipment: A set of common clothesValue:5sp Weight:3lbs, a black cloak with a hood, a poisoner's kitValue:50gp Weight:2lbs, and a pouchValue:5sp Weight:1lb containing 10gp",
+  "skill_proficiencies": [
+    "Deception",
+    "Stealth\nTool Proficiencies: Poisoner's Kit\nLanguages: One of your choice\nEquipment: A set of common clothesValue:5sp Weight:3lbs",
+    "a black cloak with a hood",
+    "a poisoner's kitValue:50gp Weight:2lbs",
+    "and a pouchValue:5sp Weight:1lb containing 10gp"
+  ],
+  "feature": null
+}

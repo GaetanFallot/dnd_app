@@ -1,0 +1,15 @@
+{
+  "index": "squat-nimbleness",
+  "name": "Agilité des squats",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Nain ou petite race",
+  "desc": "Vous êtes exceptionnellement agile pour votre race. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Force ou de Dextérité de 1, jusqu'à un maximum de 20.",
+    "Augmentez votre vitesse de marche de 5 pieds.",
+    "Vous maîtrisez la compétence Acrobatie ou Athlétisme (au choix).",
+    "Vous avez un avantage à tous les tests de Force (Athlétisme) ou de Dextérité (Acrobaties) que vous effectuez pour échapper aux prises."
+  ],
+  "name_en": "Squat Nimbleness",
+  "_translated": true
+}

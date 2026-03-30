@@ -1,0 +1,13 @@
+{
+  "index": "dragon-ancestor",
+  "name": "Ancêtre Dragon",
+  "level": 1,
+  "class": "sorcerer",
+  "subclass": "draconic",
+  "desc": [
+    "Au niveau 1, vous choisissez un type de dragon comme ancêtre. Le type de dégâts associé à chaque dragon est utilisé par les fonctionnalités que vous gagnerez plus tard.\nVous pouvez parler, lire et écrire le draconique. De plus, chaque fois que vous effectuez un test de Charisme lorsque vous interagissez avec des dragons, votre bonus de maîtrise est doublé s'il s'applique au test."
+  ],
+  "name_en": "Dragon Ancestor",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-master",
+  "name": "Maître surnaturel",
+  "level": 20,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Au niveau 20, vous pouvez puiser dans votre réserve intérieure de pouvoir mystique tout en suppliant votre protecteur de récupérer les emplacements de sorts dépensés. Vous pouvez passer 1 minute à demander de l'aide à votre patron pour récupérer tous vos emplacements de sorts dépensés grâce à votre fonction Pact Magic.\nUne fois que vous avez récupéré des emplacements de sorts avec cette fonctionnalité, vous devez terminer un long repos avant de pouvoir le faire à nouveau."
+  ],
+  "name_en": "Eldritch Master",
+  "class_name_fr": "",
+  "_translated": true
+}

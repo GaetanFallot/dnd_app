@@ -1,0 +1,13 @@
+{
+  "index": "retaliation",
+  "name": "Représailles",
+  "level": 14,
+  "class": "barbarian",
+  "subclass": "berserker",
+  "desc": [
+    "À partir du niveau 14, lorsque vous subissez des dégâts d'une créature située à moins de 1,50 mètre de vous, vous pouvez utiliser votre réaction pour lancer une attaque de mêlée avec une arme contre cette créature."
+  ],
+  "name_en": "Retaliation",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "multiattack",
+  "name": "Multi-attaque",
+  "level": 11,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Au niveau 11, vous obtenez l'une des fonctionnalités suivantes de votre choix.\nVolée\nAttaque tourbillonnante"
+  ],
+  "name_en": "Multiattack",
+  "class_name_fr": "",
+  "_translated": true
+}

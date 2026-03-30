@@ -1,0 +1,13 @@
+{
+  "index": "druidic",
+  "name": "Druidique",
+  "level": 1,
+  "class": "druid",
+  "subclass": null,
+  "desc": [
+    "Vous connaissez le Druidique, le langage secret des druides. Vous pouvez parler la langue et l'utiliser pour laisser des messages cachés. Vous et d’autres personnes connaissant cette langue repérez automatiquement un tel message. D'autres détectent la présence du message en réussissant un test de Sagesse (Perception) DD 15, mais ne peuvent pas le déchiffrer sans magie."
+  ],
+  "name_en": "Druidic",
+  "class_name_fr": "",
+  "_translated": true
+}

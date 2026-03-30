@@ -1,0 +1,13 @@
+{
+  "index": "rage",
+  "name": "Rage",
+  "level": 1,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "Au combat, vous combattez avec une férocité primordiale. À votre tour, vous pouvez entrer en colère comme une action bonus. En rage, vous bénéficiez des avantages suivants si vous ne portez pas d'armure lourde :\n- Vous avez un avantage aux tests de Force et aux jets de sauvegarde de Force.\n- Lorsque vous effectuez une attaque au corps à corps avec une arme en utilisant la Force, vous bénéficiez d'un bonus de +2 au jet de dégâts. Ce bonus augmente à mesure que vous progressez.\n- Vous avez une résistance aux dégâts contondants, perçants et tranchants.\nSi vous êtes capable de lancer des sorts, vous ne pouvez pas les lancer ni vous concentrer dessus lorsque vous êtes en colère.\nVotre rage dure 1 minute. Il se termine plus tôt si vous êtes assommé ou si votre tour se termine et que vous n'avez pas attaqué de créature hostile depuis votre dernier tour ni subi de dégâts depuis lors. Vous pouvez également mettre fin à votre rage pendant votre tour en tant qu'action bonus.\nUne fois que vous avez enragé le nombre maximum de fois correspondant à votre niveau de barbare, vous devez terminer un repos long avant de pouvoir à nouveau enrager. Vous pouvez faire rage 2 fois au niveau 1, 3 au niveau 3, 4 au niveau 6, 5 au niveau 12 et 6 au niveau 17."
+  ],
+  "name_en": "Rage",
+  "class_name_fr": "",
+  "_translated": true
+}

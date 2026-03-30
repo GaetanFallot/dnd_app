@@ -1,0 +1,54 @@
+{
+  "index": "cleric-twilight",
+  "name": "Clerc : Domaine du Crépuscule",
+  "class": "cleric",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Le passage crépusculaire de la lumière à l'obscurité apporte souvent du calme, voire de la joie, alors que les travaux de la journée se terminent et que les heures de repos commencent. L'obscurité peut aussi apporter la terreur, mais les dieux du crépuscule protègent contre les horreurs de la nuit.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétences bonus",
+      "level": 1,
+      "desc": "Au niveau 1, vous maîtrisez les armes de combat et les armures lourdes.",
+      "name_en": "Bonus Proficiencies"
+    },
+    {
+      "name": "Yeux de la nuit",
+      "level": 1,
+      "desc": "À partir du 1er niveau, vous pouvez voir au-delà des ténèbres les plus profondes. Vous avez une vision dans le noir jusqu'à une portée de 300 pieds. Dans ce rayon, vous pouvez voir dans une lumière faible comme s’il s’agissait d’une lumière vive et dans l’obscurité comme s’il s’agissait d’une lumière faible.\n\nPar une action, vous pouvez partager comme par magie la vision sombre de cette fonctionnalité avec des créatures volontaires que vous pouvez voir dans un rayon de 3 mètres autour de vous, jusqu'à un nombre de créatures égal à votre modificateur de Sagesse (au minimum une créature). La vision dans le noir partagée dure 1 heure. Une fois que vous l'avez partagé, vous ne pouvez plus le faire avant d'avoir terminé un long repos, à moins que vous ne dépensiez un emplacement de sort de n'importe quel niveau pour le partager à nouveau.",
+      "name_en": "Eyes of Night"
+    },
+    {
+      "name": "Bénédiction vigilante",
+      "level": 1,
+      "desc": "Au niveau 1, la nuit vous a appris à être vigilant. Par une action, vous donnez à une créature que vous touchez (y compris éventuellement vous-même) un avantage lors du prochain jet d'initiative effectué par la créature. Cet avantage prend fin immédiatement après le lancer ou si vous utilisez à nouveau cette fonctionnalité.",
+      "name_en": "Vigilant Blessing"
+    },
+    {
+      "name": "Channel Divinity : Sanctuaire du Crépuscule",
+      "level": 2,
+      "desc": "Au niveau 2, vous pouvez utiliser votre canal divinité pour rafraîchir vos alliés avec un crépuscule apaisant.\n\nPar une action, vous présentez votre symbole sacré et une sphère de crépuscule émane de vous. La sphère est centrée sur vous, a un rayon de 9 mètres et est remplie d’une faible lumière. La sphère se déplace avec vous et dure 1 minute ou jusqu'à ce que vous soyez frappé d'incapacité ou mouriez. À chaque fois qu'une créature (vous y compris) termine son tour dans la sphère, vous pouvez accorder à cette créature l'un de ces avantages :\n• Vous lui accordez des points de vie temporaires égaux à 1d6 plus votre niveau de clerc.\n• Vous mettez fin à un effet sur lui, le charmant ou l'effrayant.",
+      "name_en": "Channel Divinity: Twilight Sanctuary"
+    },
+    {
+      "name": "Étapes de la nuit",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez faire appel au pouvoir mystique de la nuit pour vous élever dans les airs. Par une action bonus, lorsque vous êtes dans une faible lumière ou dans l'obscurité, vous pouvez par magie vous donner une vitesse de vol égale à votre vitesse de marche pendant 1 minute. Vous pouvez utiliser cette action bonus un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Steps of Night"
+    },
+    {
+      "name": "Frappe divine",
+      "level": 8,
+      "desc": "Au niveau 8, vous gagnez la capacité d’imprégner vos frappes d’énergie divine. Une fois à chacun de vos tours, lorsque vous touchez une créature avec une attaque avec une arme, vous pouvez faire en sorte que l'attaque inflige 1d8 dégâts radiants supplémentaires. Lorsque vous atteignez le niveau 14, les dégâts supplémentaires passent à 2d8.",
+      "name_en": "Divine Strike"
+    },
+    {
+      "name": "Linceul du Crépuscule",
+      "level": 17,
+      "desc": "Au niveau 17, le Crépuscule que vous invoquez offre une étreinte protectrice : vous et vos alliés êtes à moitié couverts lorsque vous êtes dans la sphère créée par votre Sanctuaire du Crépuscule.",
+      "name_en": "Twilight Shroud"
+    }
+  ],
+  "name_en": "Cleric: Twilight Domain",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "fiendish-resilience",
+  "name": "Résilience diabolique",
+  "level": 10,
+  "class": "warlock",
+  "subclass": "fiend",
+  "desc": [
+    "À partir du niveau 10, vous pouvez choisir un type de dégâts lorsque vous terminez un repos court ou long. Vous gagnez en résistance à ce type de dégâts jusqu'à ce que vous en choisissiez un autre avec cette fonctionnalité. Les dégâts causés par les armes magiques ou les armes en argent ignorent cette résistance."
+  ],
+  "name_en": "Fiendish Resilience",
+  "class_name_fr": "",
+  "_translated": true
+}

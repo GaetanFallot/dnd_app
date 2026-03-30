@@ -1,0 +1,314 @@
+{
+  "index": "druid",
+  "name": "Druid",
+  "hit_die": 8,
+  "proficiencies": [
+    "Light Armor",
+    "Medium Armor",
+    "Shields",
+    "Clubs",
+    "Daggers",
+    "Javelins",
+    "Maces",
+    "Quarterstaffs",
+    "Sickles",
+    "Spears",
+    "Darts",
+    "Slings",
+    "Scimitars",
+    "Herbalism Kit",
+    "Saving Throw: INT",
+    "Saving Throw: WIS"
+  ],
+  "saving_throws": [
+    "INT",
+    "WIS"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival",
+      "choose": 2,
+      "options": [
+        "Skill: Arcana",
+        "Skill: Animal Handling",
+        "Skill: Insight",
+        "Skill: Medicine",
+        "Skill: Nature",
+        "Skill: Perception",
+        "Skill: Religion",
+        "Skill: Survival"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "leather-armor",
+        "name": "Leather Armor",
+        "url": "/api/2014/equipment/leather-armor"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "explorers-pack",
+        "name": "Explorer's Pack",
+        "url": "/api/2014/equipment/explorers-pack"
+      },
+      "quantity": 1
+    }
+  ],
+  "subclasses": [
+    "land"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "spellcasting-druid",
+        "druidic"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 0,
+        "wild_shape_swim": false,
+        "wild_shape_fly": false
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "wild-shape-cr-1-4-or-below-no-flying-or-swim-speed",
+        "druid-circle"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 0.25,
+        "wild_shape_swim": false,
+        "wild_shape_fly": false
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [],
+      "class_specific": {
+        "wild_shape_max_cr": 0.25,
+        "wild_shape_swim": false,
+        "wild_shape_fly": false
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "wild-shape-cr-1-2-or-below-no-flying-speed",
+        "druid-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 0.5,
+        "wild_shape_swim": true,
+        "wild_shape_fly": false
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [],
+      "class_specific": {
+        "wild_shape_max_cr": 0.5,
+        "wild_shape_swim": true,
+        "wild_shape_fly": false
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "druid-circle-improvement-1"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 0.5,
+        "wild_shape_swim": true,
+        "wild_shape_fly": false
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": false
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "wild-shape-cr-1-or-below",
+        "druid-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "druid-circle-improvement-2"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "druid-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "druid-circle-improvement-3"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "druid-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "druid-timeless-body",
+        "beast-spells"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "druid-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "archdruid"
+      ],
+      "class_specific": {
+        "wild_shape_max_cr": 1,
+        "wild_shape_swim": true,
+        "wild_shape_fly": true
+      }
+    }
+  ],
+  "feature_indices": [
+    "spellcasting-druid",
+    "druidic",
+    "wild-shape-cr-1-4-or-below-no-flying-or-swim-speed",
+    "druid-circle",
+    "wild-shape-cr-1-2-or-below-no-flying-speed",
+    "druid-ability-score-improvement-1",
+    "druid-circle-improvement-1",
+    "wild-shape-cr-1-or-below",
+    "druid-ability-score-improvement-2",
+    "druid-circle-improvement-2",
+    "druid-ability-score-improvement-3",
+    "druid-circle-improvement-3",
+    "druid-ability-score-improvement-4",
+    "druid-timeless-body",
+    "beast-spells",
+    "druid-ability-score-improvement-5",
+    "archdruid"
+  ]
+}

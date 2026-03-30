@@ -1,0 +1,48 @@
+{
+  "index": "druid-land",
+  "name": "Druide : Cercle de la Terre",
+  "class": "druid",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Le Cercle de la Terre est composé de mystiques et de sages qui sauvegardent les savoirs et les rites anciens à travers une vaste tradition orale. Ces druides se réunissent dans des cercles sacrés d'arbres ou de pierres dressées pour murmurer des secrets primordiaux en druidique. Les membres les plus sages du cercle président en tant que prêtres en chef des communautés attachées à l'ancienne foi et servent de conseillers aux dirigeants de ces gens. En tant que membre de ce cercle, votre magie est influencée par le pays où vous avez été initié aux rites mystérieux du cercle.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Cantrip bonus",
+      "level": 2,
+      "desc": "Lorsque vous choisissez ce cercle au niveau 2, vous apprenez un cantrip de druide supplémentaire de votre choix. Ce petit sort ne compte pas dans le nombre de petits sorts de druide que vous connaissez.",
+      "name_en": "Bonus Cantrip"
+    },
+    {
+      "name": "Récupération naturelle",
+      "level": 2,
+      "desc": "À partir du 2ème niveau, vous pouvez retrouver une partie de votre énergie magique en vous asseyant en méditation et en communiquant avec la nature. Pendant un court repos, vous choisissez des emplacements de sorts dépensés à récupérer. Les emplacements de sorts peuvent avoir un niveau combiné égal ou inférieur à la moitié de votre niveau de druide (arrondi au supérieur), et aucun des emplacements ne peut être de niveau 6 ou supérieur. Vous ne pouvez plus utiliser cette fonctionnalité tant que vous n'avez pas terminé un repos long.\n\nPar exemple, lorsque vous êtes un druide de niveau 4, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sorts. Vous pouvez récupérer soit un emplacement de 2ème niveau, soit deux emplacements de 1er niveau.",
+      "name_en": "Natural Recovery"
+    },
+    {
+      "name": "Sorts de cercle",
+      "level": null,
+      "desc": "Votre lien mystique avec la terre vous confère la capacité de lancer certains sorts. Aux niveaux 3, 5, 7 et 9, vous avez accès aux sorts de cercle liés au terrain où vous êtes devenu druide. Choisissez cette terre (Arctique, côte, désert, forêt, prairie, montagne, marais ou Underdark) et consultez la liste de sorts associée.\n\nUne fois que vous avez accès à un sort de cercle, vous l'avez toujours préparé, et il ne compte pas dans le nombre de sorts que vous pouvez préparer chaque jour. Si vous accédez à un sort qui n'apparaît pas dans la liste des sorts de druide, le sort n'en est pas moins un sort de druide pour vous.\nArctique\nNiveau Druide | Sorts de cercle\n3ème | Tenez la personne, augmentez la croissance\n5ème | Tempête de neige fondue, lente\n7ème | Liberté de mouvement, tempête de verglas\n9ème | Communier avec la nature, Cône de froid\nCôte\nNiveau Druide | Sorts de cercle\n3ème | Image miroir, étape brumeuse\n5ème | Respiration aquatique, marche sur l'eau\n7ème | Contrôle de l'eau, liberté de mouvement\n9ème | Invocation d'élémentaire, divination\nDésert\nNiveau Druide | Sorts de cercle\n3ème | Flou, Silence\n5ème | Créer de la nourriture et de l'eau, une protection contre l'énergie\n7ème | Fléau, terrain hallucinatoire\n9ème | Peste d'insectes, mur de pierre\nForêt\nNiveau Druide | Sorts de cercle\n3ème | Écorce, escalade d'araignée\n5ème | Appelez la foudre, la croissance des plantes\n7ème | Divination, Liberté de Mouvement\n9ème | Communiquer avec la nature, Tree Stride\nPrairie\nNiveau Druide | Sorts de cercle\n3ème | Invisibilité, passage sans trace\n5ème | Lumière du jour, hâte\n7ème | Divination, Liberté de Mouvement\n9ème | Rêve, peste d'insectes\nMontagne\nNiveau Druide | Sorts de cercle\n3ème | Escalade d'araignée, croissance en pointe\n5ème | Éclair, fondu dans la pierre\n7ème | Forme de pierre, peau de pierre\n9ème | Passwall, mur de pierre\nMarais\nNiveau Druide | Sorts de cercle\n3ème | Ténèbres, flèche acide de Melf\n5ème | Promenade aquatique, nuage puant\n7ème | Liberté de mouvement, localisation de la créature\n9ème | Peste d'insectes, divination\nTénèbres\nNiveau Druide | Sorts de cercle\n3ème | Escalade d'araignée, toile\n5ème | Forme gazeuse, nuage puant\n7ème | Plus grande invisibilité, forme de pierre\n9ème | Cloudkill, peste d'insectes",
+      "name_en": "Circle Spells"
+    },
+    {
+      "name": "La foulée de la terre",
+      "level": 6,
+      "desc": "À partir du niveau 6, se déplacer sur un terrain difficile non magique ne vous coûte aucun mouvement supplémentaire. Vous pouvez également traverser des plantes non magiques sans être ralenti par elles et sans subir de dégâts si elles ont des épines, des épines ou un danger similaire.\n\nDe plus, vous avez un avantage aux jets de sauvegarde contre les plantes créées ou manipulées par magie pour entraver le mouvement, comme celles créées par le sort Entangle.",
+      "name_en": "Land's Stride"
+    },
+    {
+      "name": "Le quartier de la nature",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 10, vous ne pouvez plus être charmé ou effrayé par les élémentaires ou les fées, et vous êtes immunisé contre le poison et la maladie.",
+      "name_en": "Nature's Ward"
+    },
+    {
+      "name": "Sanctuaire de la nature",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 14, les créatures du monde naturel sentent votre lien avec la nature et hésitent à vous attaquer. Lorsqu'une créature animale ou végétale vous attaque, cette créature doit effectuer un jet de sauvegarde de Sagesse contre le DD de sauvegarde de votre sort de druide. En cas d'échec, la créature doit choisir une cible différente, sinon l'attaque rate automatiquement. En cas de sauvegarde réussie, la créature est immunisée contre cet effet pendant 24 heures.\n\nLa créature est consciente de cet effet avant de lancer son attaque contre vous.",
+      "name_en": "Nature's Sanctuary"
+    }
+  ],
+  "name_en": "Druid: Circle of the Land",
+  "_translated": true
+}

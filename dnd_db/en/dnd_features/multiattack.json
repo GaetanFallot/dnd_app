@@ -1,0 +1,8 @@
+{
+  "index": "multiattack",
+  "name": "Multiattack",
+  "level": 11,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": "At 11th level, you gain one of the following features of your choice.\nVolley\nWhirlwind Attack"
+}

@@ -1,0 +1,16 @@
+{
+  "index": "folk-hero",
+  "name": "Background: Folk Hero",
+  "source": "Player's Handbook",
+  "desc": "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.\n\nSkill Proficiencies: Animal Handling, Survival\nTool Proficiencies: One type of artisan's tools, vehicles (land)\nLanguages: None\nEquipment: A set of artisan's tools (one of your choice), a shovelValue:2gp Weight:5lbs, an iron potValue:2gp Weight:10lbs, a set of common clothesValue:5sp Weight:3lbs, and a pouchValue:5sp Weight:1lb containing 10gp",
+  "skill_proficiencies": [
+    "Animal Handling",
+    "Survival\nTool Proficiencies: One type of artisan's tools",
+    "vehicles (land)\nLanguages: None\nEquipment: A set of artisan's tools (one of your choice)",
+    "a shovelValue:2gp Weight:5lbs",
+    "an iron potValue:2gp Weight:10lbs",
+    "a set of common clothesValue:5sp Weight:3lbs",
+    "and a pouchValue:5sp Weight:1lb containing 10gp"
+  ],
+  "feature": null
+}

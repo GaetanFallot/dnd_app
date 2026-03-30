@@ -1,0 +1,13 @@
+{
+  "index": "superior-hunters-defense-evasion",
+  "name": "Défense supérieure du chasseur : évasion",
+  "level": 15,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Lorsque vous êtes soumis à un effet, comme le souffle enflammé d'un dragon rouge ou un sort d'éclair, qui vous permet d'effectuer un jet de sauvegarde de Dextérité pour ne subir que la moitié des dégâts, vous ne subissez aucun dégât si vous réussissez le jet de sauvegarde, et seulement la moitié des dégâts si vous échouez."
+  ],
+  "name_en": "Superior Hunter's Defense: Evasion",
+  "class_name_fr": "",
+  "_translated": true
+}

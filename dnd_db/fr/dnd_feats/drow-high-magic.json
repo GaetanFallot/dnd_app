@@ -1,0 +1,10 @@
+{
+  "index": "drow-high-magic",
+  "name": "Drow Haute Magie",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Elfe (drow)",
+  "desc": "Vous en apprenez davantage sur la magie typique des elfes noirs. Vous apprenez le sort Détection de magie et pouvez le lancer à volonté, sans dépenser d'emplacement de sort. Vous apprenez également Lévitation et Dissipation de la magie, que vous pouvez lancer chacune une fois sans dépenser d'emplacement de sort. Vous retrouvez la possibilité de lancer le sort de cette manière lorsque vous terminez un repos long. Le charisme est votre capacité à lancer des sorts pour ces sorts.",
+  "benefits": [],
+  "name_en": "Drow High Magic",
+  "_translated": true
+}

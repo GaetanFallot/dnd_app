@@ -1,0 +1,13 @@
+{
+  "index": "perfect-self",
+  "name": "Soi parfait",
+  "level": 20,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "Au niveau 20, lorsque vous lancez un jet d'initiative et qu'il ne vous reste plus de points de ki, vous récupérez 4 points de ki."
+  ],
+  "name_en": "Perfect Self",
+  "class_name_fr": "",
+  "_translated": true
+}

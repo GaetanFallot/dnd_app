@@ -1,0 +1,13 @@
+{
+  "index": "pact-magic",
+  "name": "Magie du Pacte",
+  "level": 1,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vos recherches arcaniques et la magie que vous confère votre patron vous ont donné de la facilité avec les sorts."
+  ],
+  "name_en": "Pact Magic",
+  "class_name_fr": "",
+  "_translated": true
+}

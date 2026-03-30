@@ -1,0 +1,40 @@
+{
+  "index": "monk-mercy",
+  "name": "Monk: Way of Mercy",
+  "class": "monk",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Monks of the Way of Mercy learn to manipulate the life force of others to bring aid to those in need. They are wandering physicians to the poor and hurt. However, to those beyond their help, they bring a swift end as an act of mercy.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Implements of Mercy",
+      "level": 3,
+      "desc": "When you choose this tradition at 3rd level, you gain proficiency in the Insight and Medicine skills, and you gain proficiency with the herbalism kit.\n\nYou also gain a special mask, which you often wear when using the features of this subclass. You determine its appearance, or generate it randomly by rolling on the Merciful Mask table.\nMerciful Mask | \nd6 | Mask Appearance\n1 | Raven\n2 | Blank and white\n3 | Crying visage\n4 | Laughing visage\n5 | Skull\n6 | Butterfly"
+    },
+    {
+      "name": "Hands of Healing",
+      "level": 3,
+      "desc": "At 3rd level, your mystical touch can mend wounds. As an action, you can spend 1 ki point to touch a creature and restore a number of hit points equal to a roll of your Martial Arts die + your Wisdom modifier.\n\nWhen you use your Flurry of Blows, you can replace one of the unarmed strikes with a use of this feature without spending a ki point for the healing."
+    },
+    {
+      "name": "Hands of Harm",
+      "level": 3,
+      "desc": "At 3rd level, you use your ki to inflict wounds. When you hit a creature with an unarmed strike, you can spend 1 ki point to deal extra necrotic damage equal to one roll of your Martial Arts die + your Wisdom modifier. You can use this feature only once per turn."
+    },
+    {
+      "name": "Physician's Touch",
+      "level": 6,
+      "desc": "Starting at 6th level, you can administer even greater cures with a touch, and if you feel it's necessary, you can use your knowledge to cause harm.\n\nWhen you use Hands of Healing on a creature, you can also end one disease or one of the following conditions affecting the creature: blinded, deafened, paralyzed, poisoned, or stunned.\n\nWhen you use Hands of Harm on a creature, you can subject that creature to the poisoned condition until the end of your next turn."
+    },
+    {
+      "name": "Flurry of Healing and Harm",
+      "level": 11,
+      "desc": "Starting at 11th level, you can now mete out a flurry of comfort and hurt. When you use Flurry of Blows, you can now replace each of the unarmed strikes with a use of your Hands of Healing, without spending ki points for the healing.\n\nIn addition, when you make an unarmed strike with Flurry of Blows, you can use Hand of Harm with that strike without spending the ki point for Hands of Harm. You can still use Hands of Harm only once per turn."
+    },
+    {
+      "name": "Hand of Ultimate Mercy",
+      "level": 17,
+      "desc": "By 17th level, your mastery of life energy opens the door to the ultimate mercy. As an action, you can touch the corpse of a creature that died within the past 24 hours and expend 5 ki points. The creature then returns to life, regaining a number of hit points equal to 4d10 + your Wisdom modifier. If the creature died while subject to any of the following conditions, it revives with them removed: blinded, deafened, paralyzed, poisoned, and stunned.\n\nOnce you use this feature, you can't use it again until you finish a long rest."
+    }
+  ]
+}

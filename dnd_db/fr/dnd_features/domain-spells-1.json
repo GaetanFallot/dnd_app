@@ -1,0 +1,13 @@
+{
+  "index": "domain-spells-1",
+  "name": "Sorts de domaine",
+  "level": 1,
+  "class": "cleric",
+  "subclass": null,
+  "desc": [
+    "Chaque domaine possède une liste de sorts (ses sorts de domaine) que vous gagnez aux niveaux de clerc indiqués dans la description du domaine. Une fois que vous obtenez un sort de domaine, vous l'avez toujours préparé, et cela ne compte pas dans le nombre de sorts que vous pouvez préparer chaque jour.\nSi vous possédez un sort de domaine qui n'apparaît pas dans la liste des sorts de clerc, le sort est néanmoins un sort de clerc pour vous."
+  ],
+  "name_en": "Domain Spells",
+  "class_name_fr": "",
+  "_translated": true
+}

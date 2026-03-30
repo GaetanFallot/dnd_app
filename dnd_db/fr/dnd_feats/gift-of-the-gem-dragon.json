@@ -1,0 +1,13 @@
+{
+  "index": "gift-of-the-gem-dragon",
+  "name": "Don du dragon gemme",
+  "source": "Fizban's Treasury of Dragons",
+  "prerequisite": null,
+  "desc": "Vous avez manifesté une partie du pouvoir des dragons de gemmes, vous accordant les avantages suivants :",
+  "benefits": [
+    "Augmentation du score de capacité. Augmentez votre score d'Intelligence, de Sagesse ou de Charisme de 1, jusqu'à un maximum de 20.",
+    "Représailles télékinésiques. Lorsque vous subissez des dégâts d'une créature située à moins de 3 mètres de vous, vous pouvez utiliser votre réaction pour émettre de l'énergie télékinésique. La créature qui vous a infligé des blessures doit effectuer un jet de sauvegarde de Force (DD égal à 8 + votre bonus de maîtrise + le modificateur de capacité du score augmenté de ce don). En cas d'échec, la créature subit 2d8 dégâts de force et est poussée jusqu'à 3 mètres de vous. En cas de sauvegarde réussie, la créature subit deux fois moins de dégâts et n’est pas poussée. Vous pouvez utiliser cette réaction un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long."
+  ],
+  "name_en": "Gift of the Gem Dragon",
+  "_translated": true
+}

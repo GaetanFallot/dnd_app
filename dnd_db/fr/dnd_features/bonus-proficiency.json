@@ -1,0 +1,13 @@
+{
+  "index": "bonus-proficiency",
+  "name": "Compétence bonus",
+  "level": 1,
+  "class": "cleric",
+  "subclass": "life",
+  "desc": [
+    "Lorsque vous choisissez ce domaine au niveau 1, vous gagnez en maîtrise des armures lourdes."
+  ],
+  "name_en": "Bonus Proficiency",
+  "class_name_fr": "",
+  "_translated": true
+}

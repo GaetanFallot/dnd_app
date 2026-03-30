@@ -1,0 +1,13 @@
+{
+  "index": "monastic-tradition",
+  "name": "Tradition monastique",
+  "level": 3,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous atteignez le niveau 3, vous vous engagez dans une tradition monastique, comme la Voie de la Main Ouverte. Votre tradition vous accorde des fonctionnalités au niveau 3, puis aux niveaux 6, 11 et 17."
+  ],
+  "name_en": "Monastic Tradition",
+  "class_name_fr": "",
+  "_translated": true
+}

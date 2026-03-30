@@ -1,0 +1,9 @@
+{
+  "index": "keen-senses",
+  "name": "Keen Senses",
+  "races": [
+    "elf"
+  ],
+  "subraces": [],
+  "desc": "You have proficiency in the Perception skill."
+}

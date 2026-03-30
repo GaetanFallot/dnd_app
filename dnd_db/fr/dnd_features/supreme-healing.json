@@ -1,0 +1,13 @@
+{
+  "index": "supreme-healing",
+  "name": "Guérison Suprême",
+  "level": 17,
+  "class": "cleric",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 17, alors que vous lanceriez normalement un ou plusieurs dés pour restaurer des points de vie avec un sort, vous utilisez à la place le nombre le plus élevé possible pour chaque dé. Par exemple, au lieu de redonner 2d6 points de vie à une créature, vous en restaurez 12."
+  ],
+  "name_en": "Supreme Healing",
+  "class_name_fr": "",
+  "_translated": true
+}

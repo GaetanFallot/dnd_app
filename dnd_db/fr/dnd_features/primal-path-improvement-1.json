@@ -1,0 +1,13 @@
+{
+  "index": "primal-path-improvement-1",
+  "name": "Fonctionnalité de chemin",
+  "level": 6,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "Au niveau 3, vous choisissez un chemin qui façonne la nature de votre rage. Choisissez la Voie du Berserker ou la Voie du Guerrier Totem, toutes deux détaillées à la fin de la description de la classe. Votre choix vous accorde des fonctionnalités au 3ème niveau et encore aux 6ème, 10ème et 14ème niveaux."
+  ],
+  "name_en": "Path feature",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-distant-spell",
+  "name": "Métamagie : sort lointain",
+  "level": 3,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez un sort qui a une portée de 1,50 mètre ou plus, vous pouvez dépenser 1 point de sorcellerie pour doubler la portée du sort.\nLorsque vous lancez un sort qui a une portée de contact, vous pouvez dépenser 1 point de sorcellerie pour porter la portée du sort à 9 mètres."
+  ],
+  "name_en": "Metamagic: Distant Spell",
+  "class_name_fr": "",
+  "_translated": true
+}

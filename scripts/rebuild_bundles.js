@@ -264,6 +264,119 @@ function buildMonstersFR(enMonsters) {
   return bundle;
 }
 
+// ── EN FEATS ──────────────────────────────────────────────────────────────────
+
+function buildFeatsEN() {
+  const dir = path.join(EN_DIR, 'dnd_feats');
+  const files = listFiles(dir);
+  if (!files.length) return [];
+  const bundle = files
+    .map(f => readJSON(path.join(dir, f)))
+    .filter(Boolean);
+  bundle.sort((a, b) => a.name.localeCompare(b.name, 'en'));
+  return bundle;
+}
+
+function buildFeatsFR(enFeats) {
+  const frDir = path.join(FR_DIR, 'dnd_feats');
+  const enDir = path.join(EN_DIR, 'dnd_feats');
+  const frFiles = new Set(listFiles(frDir));
+  return enFeats.map(en => {
+    const frFile = `${en.index}.json`;
+    const src = frFiles.has(frFile) ? readJSON(path.join(frDir, frFile)) : null;
+    return src || readJSON(path.join(enDir, `${en.index}.json`)) || en;
+  }).filter(Boolean);
+}
+
+// ── EN SUBCLASSES ─────────────────────────────────────────────────────────────
+
+function buildSubclassesEN() {
+  const dir = path.join(EN_DIR, 'dnd_subclasses');
+  const files = listFiles(dir);
+  if (!files.length) return [];
+  const bundle = files.map(f => readJSON(path.join(dir, f))).filter(Boolean);
+  bundle.sort((a, b) => (a.class||'').localeCompare(b.class||'', 'en') || a.name.localeCompare(b.name, 'en'));
+  return bundle;
+}
+
+function buildSubclassesFR(enSubclasses) {
+  const frDir = path.join(FR_DIR, 'dnd_subclasses');
+  const enDir = path.join(EN_DIR, 'dnd_subclasses');
+  const frFiles = new Set(listFiles(frDir));
+  return enSubclasses.map(en => {
+    const fileBase = en.index ? `${en.index}.json` : null;
+    if (!fileBase) return en;
+    const src = frFiles.has(fileBase) ? readJSON(path.join(frDir, fileBase)) : null;
+    return src || readJSON(path.join(enDir, fileBase)) || en;
+  }).filter(Boolean);
+}
+
+// ── EN CLASSES ────────────────────────────────────────────────────────────────
+
+function buildClassesEN() {
+  const dir = path.join(EN_DIR, 'dnd_classes');
+  const files = listFiles(dir);
+  if (!files.length) return [];
+  const bundle = files.map(f => readJSON(path.join(dir, f))).filter(Boolean);
+  bundle.sort((a, b) => a.name.localeCompare(b.name, 'en'));
+  return bundle;
+}
+
+function buildClassesFR(enClasses) {
+  const frDir = path.join(FR_DIR, 'dnd_classes');
+  const enDir = path.join(EN_DIR, 'dnd_classes');
+  const frFiles = new Set(listFiles(frDir));
+  return enClasses.map(en => {
+    const frFile = `${en.index}.json`;
+    const src = frFiles.has(frFile) ? readJSON(path.join(frDir, frFile)) : null;
+    return src || readJSON(path.join(enDir, `${en.index}.json`)) || en;
+  }).filter(Boolean);
+}
+
+// ── EN RACES ──────────────────────────────────────────────────────────────────
+
+function buildRacesEN() {
+  const dir = path.join(EN_DIR, 'dnd_races');
+  const files = listFiles(dir);
+  if (!files.length) return [];
+  const bundle = files.map(f => readJSON(path.join(dir, f))).filter(Boolean);
+  bundle.sort((a, b) => a.name.localeCompare(b.name, 'en'));
+  return bundle;
+}
+
+function buildRacesFR(enRaces) {
+  const frDir = path.join(FR_DIR, 'dnd_races');
+  const enDir = path.join(EN_DIR, 'dnd_races');
+  const frFiles = new Set(listFiles(frDir));
+  return enRaces.map(en => {
+    const frFile = `${en.index}.json`;
+    const src = frFiles.has(frFile) ? readJSON(path.join(frDir, frFile)) : null;
+    return src || readJSON(path.join(enDir, `${en.index}.json`)) || en;
+  }).filter(Boolean);
+}
+
+// ── EN BACKGROUNDS ────────────────────────────────────────────────────────────
+
+function buildBackgroundsEN() {
+  const dir = path.join(EN_DIR, 'dnd_backgrounds');
+  const files = listFiles(dir);
+  if (!files.length) return [];
+  const bundle = files.map(f => readJSON(path.join(dir, f))).filter(Boolean);
+  bundle.sort((a, b) => a.name.localeCompare(b.name, 'en'));
+  return bundle;
+}
+
+function buildBackgroundsFR(enBgs) {
+  const frDir = path.join(FR_DIR, 'dnd_backgrounds');
+  const enDir = path.join(EN_DIR, 'dnd_backgrounds');
+  const frFiles = new Set(listFiles(frDir));
+  return enBgs.map(en => {
+    const frFile = `${en.index}.json`;
+    const src = frFiles.has(frFile) ? readJSON(path.join(frDir, frFile)) : null;
+    return src || readJSON(path.join(enDir, `${en.index}.json`)) || en;
+  }).filter(Boolean);
+}
+
 // ── MAIN ──────────────────────────────────────────────────────────────────────
 
 function main() {
@@ -289,6 +402,51 @@ function main() {
   );
   console.log(`${enMonsters.length} monstres ✓`);
 
+  // EN Feats
+  process.stdout.write('⭐ Building EN feats bundle... ');
+  const enFeats = buildFeatsEN();
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_feats_en.js'),
+    `/* D&D 5e Feats — English — ${enFeats.length} feats */\nwindow.DND_FEATS_EN=${JSON.stringify(enFeats)};`
+  );
+  console.log(`${enFeats.length} dons ✓`);
+
+  // EN Subclasses
+  process.stdout.write('🎭 Building EN subclasses bundle... ');
+  const enSubclasses = buildSubclassesEN();
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_subclasses_en.js'),
+    `/* D&D 5e Subclasses — English — ${enSubclasses.length} subclasses */\nwindow.DND_SUBCLASSES_EN=${JSON.stringify(enSubclasses)};`
+  );
+  console.log(`${enSubclasses.length} sous-classes ✓`);
+
+  // EN Classes
+  process.stdout.write('🛡️  Building EN classes bundle... ');
+  const enClasses = buildClassesEN();
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_classes_en.js'),
+    `/* D&D 5e Classes — English — ${enClasses.length} classes */\nwindow.DND_CLASSES_EN=${JSON.stringify(enClasses)};`
+  );
+  console.log(`${enClasses.length} classes ✓`);
+
+  // EN Races
+  process.stdout.write('🧝 Building EN races bundle... ');
+  const enRaces = buildRacesEN();
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_races_en.js'),
+    `/* D&D 5e Races — English — ${enRaces.length} races */\nwindow.DND_RACES_EN=${JSON.stringify(enRaces)};`
+  );
+  console.log(`${enRaces.length} races ✓`);
+
+  // EN Backgrounds
+  process.stdout.write('📜 Building EN backgrounds bundle... ');
+  const enBgs = buildBackgroundsEN();
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_backgrounds_en.js'),
+    `/* D&D 5e Backgrounds — English — ${enBgs.length} backgrounds */\nwindow.DND_BACKGROUNDS_EN=${JSON.stringify(enBgs)};`
+  );
+  console.log(`${enBgs.length} historiques ✓`);
+
   // FR Spells
   process.stdout.write('📖 Building FR spells bundle... ');
   const frSpells = buildSpellsFR(enSpells);
@@ -308,6 +466,56 @@ function main() {
     `/* D&D 5e Monsters — Français — ${frMonstersTranslated}/${frMonsters.length} traduits */\nwindow.DND_MONSTERS_FR=${JSON.stringify(frMonsters)};`
   );
   console.log(`${frMonsters.length} monstres (${frMonstersTranslated} traduits) ✓`);
+
+  // FR Feats
+  process.stdout.write('⭐ Building FR feats bundle... ');
+  const frFeats = buildFeatsFR(enFeats);
+  const frFeatsTranslated = frFeats.filter(f => f._translated).length;
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_feats_fr.js'),
+    `/* D&D 5e Feats — Français — ${frFeatsTranslated}/${frFeats.length} traduits */\nwindow.DND_FEATS_FR=${JSON.stringify(frFeats)};`
+  );
+  console.log(`${frFeats.length} dons (${frFeatsTranslated} traduits) ✓`);
+
+  // FR Subclasses
+  process.stdout.write('🎭 Building FR subclasses bundle... ');
+  const frSubclasses = buildSubclassesFR(enSubclasses);
+  const frSubclassesTranslated = frSubclasses.filter(s => s._translated).length;
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_subclasses_fr.js'),
+    `/* D&D 5e Subclasses — Français — ${frSubclassesTranslated}/${frSubclasses.length} traduits */\nwindow.DND_SUBCLASSES_FR=${JSON.stringify(frSubclasses)};`
+  );
+  console.log(`${frSubclasses.length} sous-classes (${frSubclassesTranslated} traduits) ✓`);
+
+  // FR Classes
+  process.stdout.write('🛡️  Building FR classes bundle... ');
+  const frClasses = buildClassesFR(enClasses);
+  const frClassesTranslated = frClasses.filter(c => c._translated).length;
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_classes_fr.js'),
+    `/* D&D 5e Classes — Français — ${frClassesTranslated}/${frClasses.length} traduits */\nwindow.DND_CLASSES_FR=${JSON.stringify(frClasses)};`
+  );
+  console.log(`${frClasses.length} classes (${frClassesTranslated} traduits) ✓`);
+
+  // FR Races
+  process.stdout.write('🧝 Building FR races bundle... ');
+  const frRaces = buildRacesFR(enRaces);
+  const frRacesTranslated = frRaces.filter(r => r._translated).length;
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_races_fr.js'),
+    `/* D&D 5e Races — Français — ${frRacesTranslated}/${frRaces.length} traduits */\nwindow.DND_RACES_FR=${JSON.stringify(frRaces)};`
+  );
+  console.log(`${frRaces.length} races (${frRacesTranslated} traduits) ✓`);
+
+  // FR Backgrounds
+  process.stdout.write('📜 Building FR backgrounds bundle... ');
+  const frBgs = buildBackgroundsFR(enBgs);
+  const frBgsTranslated = frBgs.filter(b => b._translated).length;
+  fs.writeFileSync(
+    path.join(ROOT, 'dnd_db', 'bundle_backgrounds_fr.js'),
+    `/* D&D 5e Backgrounds — Français — ${frBgsTranslated}/${frBgs.length} traduits */\nwindow.DND_BACKGROUNDS_FR=${JSON.stringify(frBgs)};`
+  );
+  console.log(`${frBgs.length} historiques (${frBgsTranslated} traduits) ✓`);
 
   console.log('\n╔══════════════════════════════════════╗');
   console.log('║  Bundles mis à jour !                ║');

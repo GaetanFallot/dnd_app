@@ -1,0 +1,42 @@
+{
+  "index": "rogue-swashbuckler",
+  "name": "Voleur : Swashbuckler",
+  "class": "rogue",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Vous concentrez votre formation sur l’art du bois, en misant sur la vitesse, l’élégance et le charme à parts égales. Même si certains guerriers sont des brutes vêtues d'armures lourdes, votre méthode de combat ressemble presque à une performance. Les duellistes et les pirates appartiennent généralement à cet archétype.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Jeu de jambes fantaisie",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cet archétype au niveau 3, vous apprenez à porter une frappe puis à vous enfuir sans représailles. Pendant votre tour, si vous effectuez une attaque au corps à corps contre une créature, cette créature ne peut pas effectuer d'attaques d'opportunité contre vous pour le reste de votre tour.",
+      "name_en": "Fancy Footwork"
+    },
+    {
+      "name": "Audace rakish",
+      "level": 3,
+      "desc": "Dès le niveau 3, votre confiance vous propulse au combat. Vous pouvez vous accorder un bonus à vos jets d'initiative égal à votre modificateur de Charisme.\n\nVous bénéficiez également d'une façon supplémentaire d'utiliser votre attaque sournoise ; vous n'avez pas besoin d'un avantage au jet d'attaque pour utiliser votre attaque sournoise contre une créature si vous êtes à moins de 1,50 mètre d'elle, qu'aucune autre créature n'est à moins de 1,50 mètre de vous et que vous n'avez pas de désavantage au jet d'attaque. Toutes les autres règles de l'attaque sournoise s'appliquent toujours à vous.",
+      "name_en": "Rakish Audacity"
+    },
+    {
+      "name": "Panache",
+      "level": 9,
+      "desc": "Au niveau 9, votre charme devient extraordinairement séduisant. Par une action, vous pouvez effectuer un test de Charisme (Persuasion) contesté par le test de Sagesse (Perspicacité) d'une créature. La créature doit être capable de vous entendre et vous devez partager une langue tous les deux.\n\nSi vous réussissez le test et que la créature vous est hostile, elle a un désavantage aux jets d'attaque contre des cibles autres que vous et ne peut pas effectuer d'attaques d'opportunité contre des cibles autres que vous. Cet effet dure 1 minute, jusqu'à ce qu'un de vos compagnons attaque la cible ou l'affecte avec un sort, ou jusqu'à ce que vous et la cible soyez à plus de 60 pieds l'un de l'autre.\n\nSi vous réussissez le test et que la créature ne vous est pas hostile, elle est charmée par vous pendant 1 minute. Bien que charmé, il vous considère comme une connaissance amicale. Cet effet prend fin immédiatement si vous ou vos compagnons lui faites quelque chose de nuisible.",
+      "name_en": "Panache"
+    },
+    {
+      "name": "Manœuvre élégante",
+      "level": 13,
+      "desc": "À partir du niveau 13, vous pouvez utiliser une action bonus pendant votre tour pour obtenir un avantage lors du prochain test de Dextérité (Acrobatie) ou de Force (Athlétisme) que vous effectuez au cours du même tour.",
+      "name_en": "Elegant Maneuver"
+    },
+    {
+      "name": "Maître duelliste",
+      "level": 17,
+      "desc": "Dès le niveau 17, votre maîtrise de la lame vous permet de transformer l'échec en succès au combat. Si vous ratez un jet d'attaque, vous pouvez le relancer avec avantage. Une fois cela fait, vous ne pourrez plus utiliser cette fonctionnalité tant que vous n'aurez pas terminé un repos court ou long.",
+      "name_en": "Master Duelist"
+    }
+  ],
+  "name_en": "Rogue: Swashbuckler",
+  "_translated": true
+}

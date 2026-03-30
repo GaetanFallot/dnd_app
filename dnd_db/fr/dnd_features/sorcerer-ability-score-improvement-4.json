@@ -1,0 +1,13 @@
+{
+  "index": "sorcerer-ability-score-improvement-4",
+  "name": "Amélioration du score de capacité",
+  "level": 16,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous atteignez le niveau 4, puis aux niveaux 8, 12, 16 et 19, vous pouvez augmenter une valeur de capacité de votre choix de 2, ou vous pouvez augmenter deux valeurs de capacité de votre choix de 1. Comme d'habitude, vous ne pouvez pas augmenter une valeur de capacité au-dessus de 20 en utilisant cette fonctionnalité."
+  ],
+  "name_en": "Ability Score Improvement",
+  "class_name_fr": "",
+  "_translated": true
+}

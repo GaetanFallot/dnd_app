@@ -1,0 +1,42 @@
+{
+  "index": "monk-ascendant-dragon",
+  "name": "Voie du Dragon Ascendant",
+  "class": "monk",
+  "source": "Fizban's Treasury of Dragons",
+  "subclass_flavor": "L'enseignement fondamental de cette tradition veut qu'en imitant les dragons, un moine devient une partie plus intégrée du monde et de sa magie. En modifiant leur esprit pour qu'il résonne avec la puissance draconique, les moines qui suivent cette tradition augmentent leurs prouesses au combat, renforcent leurs alliés et peuvent même voler dans les airs sur des ailes draconiques. Mais toute cette puissance est au service d’un objectif plus vaste : parvenir à une unité spirituelle avec l’essence du plan Matériel.",
+  "desc": "En tant qu'adepte de cette tradition monastique, vous décidez comment vous débloquez le pouvoir des dragons grâce à votre ki. La table Ascendant Dragon Origin offre quelques possibilités.",
+  "features": [
+    {
+      "name": "Disciple draconique",
+      "level": 3,
+      "desc": "Au niveau 3, vous pouvez canaliser le pouvoir draconique pour amplifier votre présence et imprégner vos frappes à mains nues de l’essence du souffle d’un dragon. Vous bénéficiez des avantages suivants :\n• Présence draconique. Si vous échouez à un test de Charisme (Intimidation) ou de Charisme (Persuasion), vous pouvez utiliser votre réaction pour relancer le test, tout en profitant de la puissante présence des dragons. Une fois que cette fonctionnalité transforme un échec en succès, vous ne pouvez plus l'utiliser avant d'avoir terminé un long repos.\n• Frappe draconique. Lorsque vous endommagez une cible avec une frappe à mains nues, vous pouvez modifier le type de dégâts en acide, froid, feu, foudre ou poison.\n• Langue des Dragons. Vous apprenez à parler, lire et écrire le draconique ou une autre langue de votre choix.",
+      "name_en": "Draconic Disciple"
+    },
+    {
+      "name": "Souffle du Dragon",
+      "level": 3,
+      "desc": "Au niveau 3, vous pouvez canaliser des vagues d'énergie destructrices, comme celles créées par les dragons que vous émulez. Lorsque vous effectuez l'action Attaque à votre tour, vous pouvez remplacer l'une des attaques par une expiration d'énergie draconique dans un cône de 20 pieds ou une ligne de 30 pieds et 5 pieds de large (votre choix). Choisissez un type de dégâts : acide, froid, feu, foudre ou poison. Chaque créature dans cette zone doit effectuer un jet de sauvegarde de Dextérité contre votre DD de sauvegarde de ki, subissant des dégâts du type choisi égaux à deux lancers de votre dé d'arts martiaux en cas d'échec, ou la moitié de dégâts en cas de réussite.\n\nAu niveau 11, les dégâts de cette fonctionnalité s'élèvent à trois lancers de votre dé d'arts martiaux.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long. Tant que vous n'avez aucune utilisation disponible, vous pouvez dépenser 2 points ki pour utiliser à nouveau cette fonctionnalité.",
+      "name_en": "Breath of the Dragon"
+    },
+    {
+      "name": "Ailes déployées",
+      "level": 6,
+      "desc": "Au niveau 6, lorsque vous utilisez votre Pas du Vent, vous pouvez déployer des ailes draconiques spectrales depuis votre dos qui disparaissent à la fin de votre tour. Tant que les ailes existent, vous avez une vitesse de vol égale à votre vitesse de marche.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Wings Unfurled"
+    },
+    {
+      "name": "Aspect du Wyrm",
+      "level": 11,
+      "desc": "Au niveau 11, le pouvoir de votre esprit draconique rayonne désormais de vous, protégeant vos alliés ou inspirant la peur chez vos ennemis. Par une action bonus, vous pouvez créer une aura de puissance draconique qui rayonne à 3 mètres de vous pendant 1 minute. Pendant toute la durée, vous bénéficiez de l'un des effets suivants de votre choix :\n• Présence effrayante. Lorsque vous créez cette aura, et par une action bonus lors des tours suivants, vous pouvez choisir une créature au sein de l'aura. La cible doit réussir un jet de sauvegarde de Sagesse contre votre DD de sauvegarde de ki ou avoir peur de vous pendant 1 minute. La cible peut répéter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet sur elle-même en cas de réussite.\n• Résistance. Choisissez un type de dégâts lorsque vous activez cette aura : acide, froid, feu, foudre ou poison. Vous et vos alliés dans l’aura avez une résistance à ces dégâts.\n\nUne fois que vous avez créé cette aura, vous ne pouvez plus la recréer avant d’avoir terminé un long repos, à moins que vous ne dépensiez 3 points de ki pour la recréer.",
+      "name_en": "Aspect of the Wyrm"
+    },
+    {
+      "name": "Aspect ascendant",
+      "level": 17,
+      "desc": "Au niveau 17, votre esprit draconique atteint son apogée. Vous bénéficiez des avantages suivants :\n• Augmenter la respiration. Lorsque vous utilisez votre Souffle du Dragon, vous pouvez dépenser 1 point de ki pour augmenter sa forme et sa puissance. L'expiration de l'énergie draconique devient soit un cône de 60 pieds, soit une ligne de 90 pieds de large (votre choix), et chaque créature dans cette zone subit des dégâts égaux à quatre lancers de votre dé d'arts martiaux en cas d'échec, ou la moitié de dégâts en cas de réussite.\n• Vision aveugle. Vous bénéficiez d'une vision aveugle jusqu'à 10 pieds. Dans cette plage, vous pouvez effectivement voir tout ce qui ne se trouve pas derrière une couverture totale, même si vous êtes aveuglé ou dans l’obscurité. De plus, vous pouvez voir une créature invisible dans cette portée, à moins que la créature ne réussisse à se cacher de vous.\n• Fureur explosive. Lorsque vous activez votre Aspect du Wyrm, une fureur draconique explose de vous. Choisissez n'importe quel nombre de créatures que vous pouvez voir dans votre aura. Chacune de ces créatures doit réussir un jet de sauvegarde de Dextérité contre votre DD de sauvegarde de ki ou subir 3d10 dégâts d'acide, de froid, de feu, de foudre ou de poison (votre choix).",
+      "name_en": "Ascendant Aspect"
+    }
+  ],
+  "name_en": "Way of the Ascendant Dragon",
+  "_translated": true
+}

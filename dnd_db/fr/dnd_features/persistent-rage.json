@@ -1,0 +1,13 @@
+{
+  "index": "persistent-rage",
+  "name": "Colère persistante",
+  "level": 15,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 15, votre rage est si féroce qu'elle ne se termine prématurément que si vous perdez connaissance ou si vous choisissez d'y mettre fin."
+  ],
+  "name_en": "Persistent Rage",
+  "class_name_fr": "",
+  "_translated": true
+}

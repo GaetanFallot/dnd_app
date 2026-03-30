@@ -1,0 +1,14 @@
+{
+  "index": "poisoner",
+  "name": "Empoisonneur",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": null,
+  "desc": "Vous pouvez préparer et livrer des poisons mortels, bénéficiant des avantages suivants :",
+  "benefits": [
+    "Lorsque vous effectuez un jet de dégâts, vous ignorez la résistance aux dégâts de poison.",
+    "Vous pouvez enduire une arme de poison par une action bonus, au lieu d’une action.",
+    "Vous maîtrisez le kit de l'empoisonneur si vous ne l'avez pas déjà. En travaillant une heure avec un kit d'empoisonneur et en dépensant 50 po de matériaux, vous pouvez créer un nombre de doses de poison puissant égal à votre bonus de maîtrise. Une fois appliqué sur une arme ou une munition, le poison conserve sa puissance pendant 1 minute ou jusqu'à ce que vous frappiez avec l'arme ou la munition. Lorsqu'une créature subit des dégâts de l'arme ou des munitions enduites, cette créature doit réussir un jet de sauvegarde de Constitution DD 14 ou subir 2d8 dégâts de poison et être empoisonnée jusqu'à la fin de votre prochain tour."
+  ],
+  "name_en": "Poisoner",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "evocation-savant",
+  "name": "Savant d'évocation",
+  "level": 2,
+  "class": "wizard",
+  "subclass": "evocation",
+  "desc": [
+    "À partir du moment où vous sélectionnez cette école au niveau 2, l'or et le temps que vous devez consacrer à la copie d'un sort d'évocation dans votre grimoire sont réduits de moitié."
+  ],
+  "name_en": "Evocation Savant",
+  "class_name_fr": "",
+  "_translated": true
+}

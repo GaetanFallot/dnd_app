@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-sign-of-ill-omen",
+  "name": "Invocation surnaturelle : signe de mauvais présage",
+  "level": 5,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer une malédiction d'octroi une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos."
+  ],
+  "name_en": "Eldritch Invocation: Sign of Ill Omen",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "draconic-resilience",
+  "name": "Résilience draconique",
+  "level": 1,
+  "class": "sorcerer",
+  "subclass": "draconic",
+  "desc": [
+    "À mesure que la magie circule dans votre corps, elle fait émerger les traits physiques de vos ancêtres dragons. Au 1er niveau, votre maximum de points de vie augmente de 1 et augmente à nouveau de 1 à chaque fois que vous gagnez un niveau dans cette classe.\nDe plus, certaines parties de votre peau sont recouvertes d’une fine couche d’écailles ressemblant à celles d’un dragon. Lorsque vous ne portez pas d'armure, votre CA est égale à 13 + votre modificateur de Dextérité."
+  ],
+  "name_en": "Draconic Resilience",
+  "class_name_fr": "",
+  "_translated": true
+}

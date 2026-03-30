@@ -1,0 +1,13 @@
+{
+  "index": "feral-senses",
+  "name": "Sens sauvages",
+  "level": 18,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "Au niveau 18, vous acquérez des sens surnaturels qui vous aident à combattre des créatures que vous ne pouvez pas voir. Lorsque vous attaquez une créature que vous ne pouvez pas voir, votre incapacité à la voir n'impose pas de désavantage à vos jets d'attaque contre elle.\nVous connaissez également l'emplacement de toute créature invisible dans un rayon de 9 mètres autour de vous, à condition que la créature ne vous soit pas cachée et que vous ne soyez pas aveuglé ou assourdi."
+  ],
+  "name_en": "Feral Senses",
+  "class_name_fr": "",
+  "_translated": true
+}

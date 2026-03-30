@@ -1,0 +1,54 @@
+{
+  "index": "warlock-fathomless",
+  "name": "Démoniste : L'Insondable",
+  "class": "warlock",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Vous avez conclu un pacte avec les profondeurs. Une entité de l'océan, le plan élémentaire de l'eau, ou une autre mer d'un autre monde, vous permet désormais de puiser dans son pouvoir thalassique. Est-ce qu’il vous utilise simplement pour en apprendre davantage sur les royaumes terrestres, ou veut-il que vous ouvriez les vannes cosmiques et noyiez le monde ?",
+  "desc": "",
+  "features": [
+    {
+      "name": "Liste de sorts étendue",
+      "level": null,
+      "desc": "The Fathomless vous permet de choisir parmi une liste étendue de sorts lorsque vous apprenez un sort de démoniste. Les sorts suivants sont ajoutés à la liste des sorts de démoniste pour vous.\nSorts étendus insondables\nNiveau de sort | Sorts\n1er | Créer ou détruire de l'eau, Thunderwave\n2ème | Coup de vent, silence\n3ème | Éclair, tempête de neige fondue\n4ème | Contrôler l'eau, invoquer un élémental (eau uniquement)\n5ème | Bigby's Hand (apparaît comme un tentacule), Cone of Cold",
+      "name_en": "Expanded Spell List"
+    },
+    {
+      "name": "Tentacule des profondeurs",
+      "level": 1,
+      "desc": "Au niveau 1, vous pouvez invoquer par magie un tentacule spectral qui frappe vos ennemis. Par une action bonus, vous créez un tentacule de 3 mètres de long en un point que vous pouvez voir à moins de 18 mètres de vous. Le tentacule dure 1 minute ou jusqu'à ce que vous utilisiez cette fonctionnalité pour créer un autre tentacule.\n\nLorsque vous créez le tentacule, vous pouvez lancer une attaque au corps à corps contre une créature à moins de 3 mètres de lui. En cas de coup, la cible subit 1d8 dégâts de froid et sa vitesse est réduite de 3 mètres jusqu'au début de votre prochain tour. Lorsque vous atteignez le niveau 10 dans cette classe, les dégâts passent à 2d8.\n\nEn guise d'action bonus pendant votre tour, vous pouvez déplacer le tentacule jusqu'à 9 mètres et répéter l'attaque.\n\nVous pouvez invoquer le tentacule un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Tentacle of the Deep"
+    },
+    {
+      "name": "Cadeau de la mer",
+      "level": 1,
+      "desc": "Au niveau 1 également, vous gagnez une vitesse de nage de 40 pieds et vous pouvez respirer sous l'eau.",
+      "name_en": "Gift of the Sea"
+    },
+    {
+      "name": "Âme océanique",
+      "level": 6,
+      "desc": "Au niveau 6, vous êtes désormais encore plus à l'aise dans les profondeurs. Vous gagnez en résistance aux dégâts du froid. De plus, lorsque vous êtes complètement immergé, toute créature également entièrement immergée peut comprendre votre discours, et vous pouvez comprendre le leur.",
+      "name_en": "Oceanic Soul"
+    },
+    {
+      "name": "Bobine de gardien",
+      "level": 6,
+      "desc": "Au niveau 6, votre Tentacule des Profondeurs peut vous défendre ainsi que les autres, s'interposant entre eux et leur nuire. Lorsque vous ou une créature que vous pouvez voir subissez des dégâts à moins de 3 mètres du tentacule, vous pouvez utiliser votre réaction pour choisir l'une de ces créatures et réduire les dégâts infligés à cette créature de 1d8. Lorsque vous atteignez le niveau 10 dans cette classe, les dégâts réduits par le tentacule passent à 2d8.",
+      "name_en": "Guardian Coil"
+    },
+    {
+      "name": "Tentacules saisissantes",
+      "level": 10,
+      "desc": "À partir du niveau 10, vous apprenez le sort Tentacules noires d'Evard. Cela compte comme un sort de démoniste pour vous, mais cela ne compte pas dans le nombre de sorts que vous connaissez. Vous pouvez également le lancer une fois sans utiliser d'emplacement de sort, et vous retrouvez la possibilité de le faire lorsque vous terminez un repos long.\n\nChaque fois que vous lancez ce sort, la magie de votre patron vous renforce, vous accordant un nombre de points de vie temporaires égal à votre niveau de démoniste. De plus, les dégâts ne peuvent pas briser votre concentration sur ce sort.",
+      "name_en": "Grasping Tentacles"
+    },
+    {
+      "name": "Plongée insondable",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 14, vous pouvez ouvrir par magie des conduits temporaires vers des destinations aquatiques. Par une action, vous pouvez vous téléporter ainsi que jusqu'à cinq autres créatures volontaires que vous pouvez voir à moins de 9 mètres de vous. Au milieu d'un tourbillon de tentacules, vous disparaissez tous puis réapparaissez jusqu'à 1,6 km dans un plan d'eau que vous avez vu (de la taille d'un étang ou plus) ou à moins de 9 mètres de celui-ci, chacun de vous apparaissant dans un espace inoccupé à moins de 9 mètres des autres.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Fathomless Plunge"
+    }
+  ],
+  "name_en": "Warlock: The Fathomless",
+  "_translated": true
+}

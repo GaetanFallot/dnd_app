@@ -1,0 +1,48 @@
+{
+  "index": "cleric-forge",
+  "name": "Clerc : Domaine Forge",
+  "class": "cleric",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Les dieux de la forge sont les patrons des artisans qui travaillent le métal, depuis un humble forgeron qui entretient un village avec des fers à cheval et des lames de charrue jusqu'au puissant artisan elfe dont les flèches de mithral à pointe de diamant ont abattu des seigneurs démons. Les dieux de la forge enseignent qu'avec de la patience et un travail acharné, même le métal le plus intraitable peut être transformé d'un morceau de minerai en un objet magnifiquement ouvré. Les prêtres de ces divinités recherchent des objets perdus par les forces des ténèbres, libèrent des mines envahies par les orcs et découvrent des matériaux rares et merveilleux nécessaires à la création de puissants objets magiques. Les adeptes de ces dieux sont très fiers de leur travail et sont prêts à fabriquer et à utiliser des armures lourdes et des armes puissantes pour les protéger. Les divinités de ce domaine incluent Gond, Reorx, Onatar, Moradin, Hephaestus et Goibhniu.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétences bonus",
+      "level": 1,
+      "desc": "Lorsque vous choisissez ce domaine au niveau 1, vous gagnez en maîtrise des armures lourdes et des outils de forgeron.",
+      "name_en": "Bonus Proficiencies"
+    },
+    {
+      "name": "Bénédiction de la Forge",
+      "level": 1,
+      "desc": "Au niveau 1, vous gagnez la capacité d’imprégner de magie une arme ou une armure. À la fin d'un long repos, vous pouvez toucher un objet non magique qui est une armure ou une arme simple ou martiale. Jusqu'à la fin de votre prochain repos long ou jusqu'à votre mort, l'objet devient un objet magique, conférant un bonus de +1 à la CA s'il s'agit d'une armure ou un bonus de +1 aux jets d'attaque et de dégâts s'il s'agit d'une arme.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Blessing of the Forge"
+    },
+    {
+      "name": "Channel Divinity : Bénédiction de l'artisan",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous pouvez utiliser votre Channel Divinity pour créer des objets simples.\n\nVous effectuez un rituel d'une heure qui fabrique un objet non magique qui doit contenir du métal : une arme simple ou martiale, une armure, dix pièces de munitions, un ensemble d'outils ou un autre objet métallique. La création est terminée à la fin de l'heure, fusionnant dans un espace inoccupé de votre choix sur une surface à moins de 5 pieds de vous.\n\nLa chose que vous créez ne peut pas valoir plus de 100 po. Dans le cadre de ce rituel, vous devez disposer du métal, qui peut inclure des pièces de monnaie, d'une valeur égale à la création. Le métal fusionne irrémédiablement et se transforme en la création à la fin du rituel, formant par magie même des parties non métalliques de la création.\n\nLe rituel peut créer une copie d'un objet non magique contenant du métal, comme une clé, si vous possédez l'original pendant le rituel.",
+      "name_en": "Channel Divinity: Artisan's Blessing"
+    },
+    {
+      "name": "Âme de la Forge",
+      "level": 6,
+      "desc": "Dès le niveau 6, votre maîtrise de la forge vous confère des capacités spéciales :\n• Vous gagnez en résistance aux dégâts de feu.\n• Lorsque vous portez une armure lourde, vous gagnez un bonus de +1 à la CA.",
+      "name_en": "Soul of the Forge"
+    },
+    {
+      "name": "Frappe divine",
+      "level": 8,
+      "desc": "Au niveau 8, vous gagnez la capacité d'imprégner vos frappes d'armes de la puissance ardente de la forge. Une fois à chacun de vos tours, lorsque vous touchez une créature avec une attaque avec une arme, vous pouvez faire en sorte que l'attaque inflige 1d8 dégâts de feu supplémentaires à la cible. Lorsque vous atteignez le niveau 14, les dégâts supplémentaires passent à 2d8.",
+      "name_en": "Divine Strike"
+    },
+    {
+      "name": "Saint de la Forge et du Feu",
+      "level": 17,
+      "desc": "Au niveau 17, votre affinité bénie avec le feu et le métal devient plus puissante :\n• Vous gagnez l'immunité contre les dégâts de feu.\n• Lorsque vous portez une armure lourde, vous bénéficiez d'une résistance aux dégâts contondants, perforants et tranchants des attaques non magiques.",
+      "name_en": "Saint of Forge and Fire"
+    }
+  ],
+  "name_en": "Cleric: Forge Domain",
+  "_translated": true
+}

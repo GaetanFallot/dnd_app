@@ -1,0 +1,15 @@
+{
+  "index": "chef",
+  "name": "Cuisinier",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": null,
+  "desc": "Le temps et les efforts consacrés à la maîtrise des arts culinaires ont porté leurs fruits. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Constitution ou de Sagesse de 1, jusqu'à un maximum de 20.",
+    "Vous maîtrisez les ustensiles de cuisine si vous ne les possédez pas déjà.",
+    "Dans le cadre d'un court repos, vous pouvez cuisiner des plats spéciaux, à condition d'avoir à portée de main les ingrédients et les ustensiles de cuisine. Vous pouvez préparer suffisamment de cette nourriture pour un nombre de créatures égal à 4 + votre bonus de maîtrise. À la fin du court repos, toute créature qui mange la nourriture et dépense un ou plusieurs dés de vie pour regagner des points de vie récupère 1d8 points de vie supplémentaires.",
+    "Avec une heure de travail ou à la fin d'un long repos, vous pouvez cuisiner un nombre de gourmandises égal à votre bonus de maîtrise. Ces friandises spéciales durent 8 heures après avoir été préparées. Une créature peut utiliser une action bonus pour manger l'une de ces friandises afin de gagner des points de vie temporaires égaux à votre bonus de maîtrise."
+  ],
+  "name_en": "Chef",
+  "_translated": true
+}

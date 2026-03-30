@@ -1,0 +1,10 @@
+{
+  "index": "fey-ancestry",
+  "name": "Fey Ancestry",
+  "races": [
+    "elf",
+    "half-elf"
+  ],
+  "subraces": [],
+  "desc": "You have advantage on saving throws against being charmed, and magic cannot put you to sleep."
+}

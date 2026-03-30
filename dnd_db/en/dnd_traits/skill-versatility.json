@@ -1,0 +1,9 @@
+{
+  "index": "skill-versatility",
+  "name": "Skill Versatility",
+  "races": [
+    "half-elf"
+  ],
+  "subraces": [],
+  "desc": "You gain proficiency in two skills of your choice."
+}

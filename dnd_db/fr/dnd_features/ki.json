@@ -1,0 +1,13 @@
+{
+  "index": "ki",
+  "name": "Ki",
+  "level": 2,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "Dès le niveau 2, votre entraînement vous permet d’exploiter l’énergie mystique du ki. Votre accès à cette énergie est représenté par un certain nombre de points ki. Votre niveau de moine détermine le nombre de points dont vous disposez, comme indiqué dans la colonne Points Ki du Tableau : Le Moine.\nVous pouvez dépenser ces points pour alimenter diverses fonctionnalités du ki. Vous commencez à connaître trois de ces fonctionnalités : Rafale de coups, Défense du patient et Pas du vent. Vous apprenez davantage de fonctionnalités du ki à mesure que vous gagnez des niveaux dans cette classe.\nLorsque vous dépensez un point de ki, il n'est pas disponible jusqu'à ce que vous ayez terminé un repos court ou long, à la fin duquel vous récupérez tout votre ki dépensé en vous. Vous devez passer au moins 30 minutes de repos à méditer pour retrouver vos points ki.\nCertaines de vos fonctionnalités ki nécessitent que votre cible effectue un jet de sauvegarde pour résister aux effets de la fonctionnalité. Le DC du jet de sauvegarde est calculé comme suit :\nKi DD de sauvegarde = 8 + votre bonus de maîtrise + votre modificateur de Sagesse"
+  ],
+  "name_en": "Ki",
+  "class_name_fr": "",
+  "_translated": true
+}

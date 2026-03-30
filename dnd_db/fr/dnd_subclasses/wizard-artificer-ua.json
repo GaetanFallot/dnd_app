@@ -1,0 +1,42 @@
+{
+  "index": "wizard-artificer-ua",
+  "name": "Artificier (UA)",
+  "class": "wizard",
+  "source": "Unearthed Arcana 1 - Eberron",
+  "subclass_flavor": "",
+  "desc": "Les artificiers sont un élément clé du monde d'Eberron. Ils illustrent l’évolution de la magie, d’une force sauvage et imprévisible à une force de plus en plus accessible au grand public. Les objets magiques font partie de la vie quotidienne des Cinq Nations du Khorvaire ; avec un artificier dans votre groupe, ils font partie de chaque expédition d'aventure.",
+  "features": [
+    {
+      "name": "Infuser des potions",
+      "level": 2,
+      "desc": "Dès le niveau 2, vous pouvez produire des potions magiques. Vous passez 10 minutes à concentrer votre magie sur une fiole d’eau banale et dépensez un emplacement de sort pour la transformer en potion. Une fois que vous avez dépensé un emplacement de sort pour créer une potion, vous ne pouvez pas récupérer cet emplacement tant que la potion n'est pas consommée ou après 1 semaine, moment auquel la potion perd son efficacité. Vous pouvez créer jusqu'à trois potions à la fois ; la création d'une quatrième potion fait perdre immédiatement sa puissance à la plus ancienne potion actuellement active. Si cette potion a été consommée, ses effets prennent immédiatement fin.\n\nL'emplacement de sort que vous dépensez détermine le type de potion que vous pouvez créer. Voir le chapitre 7 du Dungeon Master’s Guide pour les règles complètes sur les potions.\nEmplacement de sort | Potion créée\n1er | Escalade, croissance ou guérison\n2ème | Lecture dans les pensées ou guérison supérieure\n3ème | Invisibilité, guérison supérieure ou respiration aquatique\n4ème | Résistance",
+      "name_en": "Infuse Potions"
+    },
+    {
+      "name": "Infuser des parchemins",
+      "level": 2,
+      "desc": "Au niveau 2, vous pouvez également puiser dans vos réserves d'énergie magique pour créer des parchemins de sorts. Vous pouvez utiliser votre capacité Arcane Recovery pour créer un parchemin au lieu de récupérer les emplacements de sorts dépensés.\n\nVous devez terminer un court repos, puis passer 10 minutes avec du parchemin, une plume et de l'encre pour créer un parchemin de sorts contenant un sort choisi parmi ceux que vous connaissez. Soustrayez le niveau du sort du total des niveaux d’emplacements que vous récupérez en utilisant Arcane Recovery. Cette réduction de votre récupération arcanique s’applique jusqu’à ce que vous utilisiez le parchemin, puis que vous terminiez un long repos.",
+      "name_en": "Infuse Scrolls"
+    },
+    {
+      "name": "Infuser des armes et des armures",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez produire des armes et armures magiques. Vous passez 10 minutes à concentrer votre magie sur une arme banale, une armure, un bouclier ou un paquet de vingt pièces de munitions, et dépensez un emplacement de sort pour lui insuffler de l'énergie magique. L'objet magique conserve son amélioration pendant 8 heures ou jusqu'à son utilisation (dans le cas des munitions magiques). Vous ne pouvez infuser qu’un seul élément à la fois ; si vous en infusez un deuxième, le premier perd immédiatement sa puissance. Une fois que vous avez dépensé un emplacement de sort pour créer un tel objet, vous ne pouvez pas récupérer cet emplacement jusqu'à ce que l'objet devienne non magique.\n\nL'emplacement de sort que vous dépensez détermine le type d'arme, d'armure ou de bouclier que vous pouvez créer.\nEmplacement de sort | Article créé\n2ème | +1 munition (20 pièces)\n3ème | +1 arme ou +1 bouclier\n4ème | +1 armure\n5ème | Arme +2 ou munitions +2 (20 pièces)\n6ème | +2 armure",
+      "name_en": "Infuse Weapons and Armor"
+    },
+    {
+      "name": "Artificier supérieur",
+      "level": 10,
+      "desc": "À partir du niveau 10, vous pouvez créer une deuxième arme magique, une armure, un bouclier ou un paquet de munitions en utilisant votre capacité Infuser des armes et des armures. Si vous tentez d'infuser un troisième élément, le plus ancien perd immédiatement sa puissance.\n\nVous pouvez également créer une potion ou un parchemin supplémentaire en utilisant Infuse Potions ou Infuse Scrolls.",
+      "name_en": "Superior Artificer"
+    },
+    {
+      "name": "Maître artificier",
+      "level": null,
+      "desc": "En atteignant le niveau 14, votre maîtrise de la magie arcanique vous permet de produire une variété d'objets magiques. Vous pouvez créer un seul objet choisi dans les tableaux d’objets magiques A et B du chapitre 7 du Dungeon Master’s Master’s Guide. Il vous faut 1 semaine pour produire un tel objet, et vous devez vous reposer pendant 1 mois avant d'utiliser cette capacité pour fabriquer un autre objet.",
+      "name_en": "Master Artificer"
+    }
+  ],
+  "name_en": "Artificer (UA)",
+  "_translated": true
+}

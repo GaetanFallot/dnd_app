@@ -1,0 +1,13 @@
+{
+  "index": "otherworldly-patron-improvement-2",
+  "name": "Fonctionnalité de mécène d'un autre monde",
+  "level": 10,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Au niveau 1, vous avez conclu un marché avec un être d'un autre monde de votre choix, comme le Démon. Votre choix vous accorde des fonctionnalités au 1er niveau et encore aux 6ème, 10ème et 14ème niveaux."
+  ],
+  "name_en": "Otherworldly Patron feature",
+  "class_name_fr": "",
+  "_translated": true
+}

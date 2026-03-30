@@ -1,0 +1,13 @@
+{
+  "index": "divine-smite",
+  "name": "Châtiment divin",
+  "level": 2,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 2, lorsque vous touchez une créature avec une attaque au corps à corps avec une arme, vous pouvez dépenser un emplacement de sort pour infliger des dégâts radiants à la cible, en plus des dégâts de l'arme. Les dégâts supplémentaires sont de 2d8 pour un emplacement de sort de niveau 1, plus 1d8 pour chaque niveau de sort supérieur au 1er, jusqu'à un maximum de 5d8. Les dégâts augmentent de 1d8 si la cible est un mort-vivant ou un démon."
+  ],
+  "name_en": "Divine Smite",
+  "class_name_fr": "",
+  "_translated": true
+}

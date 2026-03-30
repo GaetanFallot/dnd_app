@@ -1,0 +1,8 @@
+{
+  "index": "wholeness-of-body",
+  "name": "Wholeness of Body",
+  "level": 6,
+  "class": "monk",
+  "subclass": "open-hand",
+  "desc": "At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again."
+}

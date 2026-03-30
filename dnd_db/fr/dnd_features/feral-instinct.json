@@ -1,0 +1,13 @@
+{
+  "index": "feral-instinct",
+  "name": "Instinct sauvage",
+  "level": 7,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "Au niveau 7, votre instinct est si aiguisé que vous avez l'avantage aux jets d'initiative.\nDe plus, si vous êtes surpris au début du combat et n'êtes pas incapable d'agir, vous pouvez agir normalement lors de votre premier tour, mais seulement si vous entrez dans votre rage avant de faire autre chose pendant ce tour."
+  ],
+  "name_en": "Feral Instinct",
+  "class_name_fr": "",
+  "_translated": true
+}

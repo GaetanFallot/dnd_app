@@ -1,0 +1,13 @@
+{
+  "index": "fast-hands",
+  "name": "Des mains rapides",
+  "level": 3,
+  "class": "rogue",
+  "subclass": "thief",
+  "desc": [
+    "À partir du niveau 3, vous pouvez utiliser l'action bonus accordée par votre action de ruse pour effectuer un test de Dextérité (tour de passe-passe), utiliser les outils de vos voleurs pour désamorcer un piège ou ouvrir une serrure, ou encore effectuer l'action Utiliser un objet."
+  ],
+  "name_en": "Fast Hands",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "second-chance",
+  "name": "Deuxième chance",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Halfelin",
+  "desc": "La fortune vous sourit lorsque quelqu'un tente de vous frapper. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Dextérité, Constitution ou Charisme de 1, jusqu'à un maximum de 20.",
+    "Lorsqu'une créature que vous pouvez voir vous frappe avec un jet d'attaque, vous pouvez utiliser votre réaction pour forcer cette créature à relancer. Une fois que vous utilisez cette capacité, vous ne pouvez plus l'utiliser jusqu'à ce que vous obteniez un jet d'initiative au début du combat ou jusqu'à ce que vous ayez terminé un repos court ou long."
+  ],
+  "name_en": "Second Chance",
+  "_translated": true
+}

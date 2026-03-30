@@ -1,0 +1,13 @@
+{
+  "index": "lay-on-hands",
+  "name": "Imposer les mains",
+  "level": 1,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Votre contact béni peut guérir les blessures. Vous disposez d’une réserve de pouvoir de guérison qui se reconstitue lorsque vous prenez un long repos. Avec cette réserve, vous pouvez restaurer un nombre total de points de vie égal à votre niveau de paladin x 5.\nPar une action, vous pouvez toucher une créature et tirer de la puissance de la réserve pour redonner un certain nombre de points de vie à cette créature, jusqu'à concurrence du montant maximum restant dans votre réserve.\nAlternativement, vous pouvez dépenser 5 points de vie de votre réserve de soins pour guérir la cible d'une maladie ou neutraliser un poison qui l'affecte. Vous pouvez guérir plusieurs maladies et neutraliser plusieurs poisons avec une seule utilisation d’Imposition des mains, en dépensant des points de vie séparément pour chacune.\nCette fonctionnalité n'a aucun effet sur les morts-vivants et les constructions."
+  ],
+  "name_en": "Lay on Hands",
+  "class_name_fr": "",
+  "_translated": true
+}

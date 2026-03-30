@@ -1,0 +1,15 @@
+{
+  "index": "tavern-brawler",
+  "name": "Bagarreur de taverne",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Habitué aux combats acharnés utilisant toutes les armes à portée de main, vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Force ou de Constitution de 1, jusqu'à un maximum de 20.",
+    "Vous maîtrisez les armes improvisées.",
+    "Votre frappe à mains nues utilise un d4 pour les dégâts.",
+    "Lorsque vous touchez une créature avec une frappe à mains nues ou avec une arme improvisée pendant votre tour, vous pouvez utiliser une action bonus pour tenter d'attraper la cible."
+  ],
+  "name_en": "Tavern Brawler",
+  "_translated": true
+}

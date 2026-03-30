@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-one-with-shadows",
+  "name": "Invocation surnaturelle : Celui avec les ombres",
+  "level": 5,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous vous trouvez dans une zone de faible luminosité ou d'obscurité, vous pouvez utiliser votre action pour devenir invisible jusqu'à ce que vous bougez ou entrepreniez une action ou une réaction."
+  ],
+  "name_en": "Eldritch Invocation: One with Shadows",
+  "class_name_fr": "",
+  "_translated": true
+}

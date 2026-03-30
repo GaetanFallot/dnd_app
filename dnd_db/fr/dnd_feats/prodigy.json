@@ -1,0 +1,13 @@
+{
+  "index": "prodigy",
+  "name": "Prodige",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Mi-elfe, mi-orque ou humain",
+  "desc": "Vous avez le don d’apprendre de nouvelles choses. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Vous acquérez une compétence de votre choix, une maîtrise d'un outil de votre choix et la maîtrise d'une langue de votre choix.",
+    "Choisissez une compétence que vous maîtrisez. Vous gagnez de l'expertise avec cette compétence, ce qui signifie que votre bonus de maîtrise est doublé pour tout test de capacité que vous effectuez avec cette compétence. La compétence que vous choisissez doit être une compétence qui ne bénéficie pas déjà d'une fonctionnalité, telle que l'Expertise, qui double votre bonus de maîtrise."
+  ],
+  "name_en": "Prodigy",
+  "_translated": true
+}

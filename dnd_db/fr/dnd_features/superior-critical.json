@@ -1,0 +1,13 @@
+{
+  "index": "superior-critical",
+  "name": "Critique supérieur",
+  "level": 15,
+  "class": "fighter",
+  "subclass": "champion",
+  "desc": [
+    "À partir du niveau 15, vos attaques avec des armes infligent un coup critique sur un résultat de 18-20."
+  ],
+  "name_en": "Superior Critical",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,16 @@
+{
+  "index": "rock-gnome",
+  "name": "Rock Gnome",
+  "race": "gnome",
+  "desc": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes.",
+  "ability_bonuses": [
+    {
+      "ability": "CON",
+      "bonus": 1
+    }
+  ],
+  "trait_indices": [
+    "artificers-lore",
+    "tinker"
+  ]
+}

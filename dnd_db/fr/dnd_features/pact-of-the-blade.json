@@ -1,0 +1,13 @@
+{
+  "index": "pact-of-the-blade",
+  "name": "Pacte de la Lame",
+  "level": 3,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez utiliser votre action pour créer une arme du pacte dans votre main vide. Vous pouvez choisir la forme que prend cette arme de mêlée à chaque fois que vous la créez. Vous le maîtrisez pendant que vous l’utilisez. Cette arme est considérée comme magique dans le but de vaincre la résistance et l’immunité aux attaques et dégâts non magiques.\nVotre arme du pacte disparaît si elle se trouve à plus de 1,50 mètre de vous pendant 1 minute ou plus. Elle disparaît également si vous utilisez à nouveau cette fonctionnalité, si vous rejetez l'arme (aucune action requise) ou si vous mourez.\nVous pouvez transformer une arme magique en arme de pacte en effectuant un rituel spécial pendant que vous tenez l'arme. Vous effectuez le rituel sur une durée d'1 heure, qui peut être réalisé lors d'un court repos. Vous pouvez ensuite renvoyer l'arme, la dirigeant vers un espace extradimensionnel, et elle apparaîtra chaque fois que vous créerez votre arme de pacte par la suite. Vous ne pouvez pas affecter un artefact ou une arme sensible de cette manière. L'arme cesse d'être votre arme de pacte si vous mourez, si vous effectuez le rituel d'une heure sur une autre arme ou si vous utilisez un rituel d'une heure pour rompre votre lien avec celle-ci. L'arme apparaît à vos pieds si elle se trouve dans l'espace extradimensionnel lorsque le lien se brise.\nSi vous servez le Fiend, votre arme pourrait être une hache en métal noir et ornée de flammes décoratives."
+  ],
+  "name_en": "Pact of the Blade",
+  "class_name_fr": "",
+  "_translated": true
+}

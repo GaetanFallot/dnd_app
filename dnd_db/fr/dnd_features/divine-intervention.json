@@ -1,0 +1,13 @@
+{
+  "index": "divine-intervention",
+  "name": "Intervention divine",
+  "level": 10,
+  "class": "cleric",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 10, vous pouvez faire appel à votre divinité pour qu'elle intervienne en votre faveur lorsque vous en avez grand besoin.\nImplorer l’aide de votre divinité vous oblige à utiliser votre action. Décrivez l’aide que vous recherchez et lancez les dés centiles. Si vous obtenez un nombre égal ou inférieur à votre niveau de clerc, votre divinité intervient. Le GM choisit la nature de l'intervention ; l'effet de n'importe quel sort de clerc ou de domaine de clerc serait approprié.\nSi votre divinité intervient, vous ne pourrez plus utiliser cette fonctionnalité pendant 7 jours. Sinon, vous pouvez l'utiliser à nouveau après avoir terminé un long repos.\nAu niveau 20, votre appel à l'intervention réussit automatiquement, aucun jet n'est requis."
+  ],
+  "name_en": "Divine Intervention",
+  "class_name_fr": "",
+  "_translated": true
+}

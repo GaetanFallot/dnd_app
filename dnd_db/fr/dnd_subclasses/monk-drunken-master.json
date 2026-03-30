@@ -1,0 +1,42 @@
+{
+  "index": "monk-drunken-master",
+  "name": "Moine : Voie du Maître Ivre",
+  "class": "monk",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "La Voie du Maître Ivre apprend à ses étudiants à se déplacer avec les mouvements saccadés et imprévisibles d'un ivrogne. Un maître ivre se balance, chancelant sur des pieds instables, pour présenter ce qui semble être un combattant incompétent dont l'engagement s'avère frustrant. Les trébuchements erratiques du maître ivre cachent une danse soigneusement exécutée de blocages, de parades, d’avancées, d’attaques et de retraites.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Compétences bonus",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cette tradition au niveau 3, vous gagnez la maîtrise de la compétence Performance si vous ne la possédez pas déjà. Votre technique d'arts martiaux mélange l'entraînement au combat avec la précision d'un danseur et les pitreries d'un bouffon. Vous gagnez également en maîtrise avec les fournitures de brasseur si vous ne les possédez pas déjà.",
+      "name_en": "Bonus Proficiencies"
+    },
+    {
+      "name": "Technique ivre",
+      "level": 3,
+      "desc": "Au niveau 3, vous apprenez à vous tordre et à vous retourner rapidement dans le cadre de votre Rafale de coups. Chaque fois que vous utilisez Rafale de coups, vous bénéficiez de l'action Désengagement et votre vitesse de marche augmente de 3 mètres jusqu'à la fin du tour en cours.",
+      "name_en": "Drunken Technique"
+    },
+    {
+      "name": "Balancement éméché",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez vous déplacer de manière soudaine et instable. Vous bénéficiez des avantages suivants.\n• Sautez sur vos pieds. Lorsque vous êtes couché, vous pouvez vous lever en effectuant 1,50 mètre de mouvement, plutôt que la moitié de votre vitesse.\n• Rediriger l'attaque. Lorsqu'une créature vous manque avec un jet d'attaque au corps à corps, vous pouvez dépenser 1 point de ki en réaction pour que cette attaque touche une créature de votre choix, autre que l'attaquant, que vous pouvez voir à moins de 1,50 mètre de vous.",
+      "name_en": "Tipsy Sway"
+    },
+    {
+      "name": "La chance de l'ivrogne",
+      "level": 11,
+      "desc": "À partir du niveau 11, vous semblez toujours avoir un coup de chance au bon moment. Lorsque vous effectuez un test de caractéristique, un jet d'attaque ou un jet de sauvegarde et que vous avez un désavantage, vous pouvez dépenser 2 points de ki pour annuler le désavantage de ce jet.",
+      "name_en": "Drunkard's Luck"
+    },
+    {
+      "name": "Frénésie ivre",
+      "level": 17,
+      "desc": "Au niveau 17, vous obtenez la capacité de lancer un nombre écrasant d’attaques contre un groupe d’ennemis. Lorsque vous utilisez votre Rafale de coups, vous pouvez effectuer jusqu'à trois attaques supplémentaires avec (jusqu'à un total de cinq attaques Rafale de coups), à condition que chaque attaque Rafale de coups cible une créature différente ce tour-ci.",
+      "name_en": "Intoxicated Frenzy"
+    }
+  ],
+  "name_en": "Monk: Way of the Drunken Master",
+  "_translated": true
+}

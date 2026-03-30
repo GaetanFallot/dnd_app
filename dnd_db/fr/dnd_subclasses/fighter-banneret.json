@@ -1,0 +1,36 @@
+{
+  "index": "fighter-banneret",
+  "name": "Combattant : Banneret",
+  "class": "fighter",
+  "source": "Sword Coast Adventurer's Guide",
+  "subclass_flavor": "Un Banneret est un chevalier qui inspire la grandeur aux autres en commettant des actes courageux au combat. La simple présence d'un individu dans un hameau suffit à inciter certains orques et bandits à rechercher des proies plus faciles. Un Banneret solitaire est un guerrier habile, mais un Banneret menant une bande d'alliés peut transformer même la milice la plus mal équipée en une bande de guerre féroce.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Cri de ralliement",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cet archétype au niveau 3, vous apprenez à inciter vos alliés à se battre au-delà de leurs blessures.\n\nLorsque vous utilisez votre fonction Second souffle, vous pouvez choisir jusqu'à trois créatures alliées à vous dans un rayon de 60 pieds autour de vous. Chacun récupère des points de vie égaux à votre niveau de combattant, à condition que la créature puisse vous voir ou vous entendre.",
+      "name_en": "Rallying Cry"
+    },
+    {
+      "name": "Envoyé Royal",
+      "level": 7,
+      "desc": "Les chevaliers de haut rang sont censés se conduire avec grâce.\n\nAu niveau 7, vous maîtrisez la compétence Persuasion. Si vous le maîtrisez déjà, vous maîtrisez l'une des compétences suivantes de votre choix : manipulation des animaux, perspicacité, intimidation ou performance.\n\nVotre bonus de maîtrise est doublé pour tout test de capacité que vous effectuez qui utilise la persuasion. Vous bénéficiez de cet avantage quelle que soit la maîtrise des compétences acquises grâce à cette fonctionnalité.",
+      "name_en": "Royal Envoy"
+    },
+    {
+      "name": "Une poussée inspirante",
+      "level": 10,
+      "desc": "À partir du niveau 10, lorsque vous utilisez votre fonction Action Surge, vous pouvez choisir une créature à moins de 60 pieds de vous qui est alliée avec vous. Cette créature peut effectuer une attaque au corps à corps ou à distance avec sa réaction, à condition qu'elle puisse vous voir ou vous entendre.\n\nÀ partir du niveau 18, vous pouvez choisir deux alliés à moins de 20 mètres de vous, au lieu d'un.",
+      "name_en": "Inspiring Surge"
+    },
+    {
+      "name": "Rempart",
+      "level": 15,
+      "desc": "À partir du niveau 15, vous pouvez étendre les avantages de votre fonctionnalité Indomptable à un allié. Lorsque vous décidez d'utiliser Indomptable pour relancer un jet de sauvegarde d'Intelligence, de Sagesse ou de Charisme et que vous n'êtes pas incapable d'agir, vous pouvez choisir un allié à moins de 60 pieds de vous qui a également échoué à son jet de sauvegarde contre le même effet. Si cette créature peut vous voir ou vous entendre, elle peut relancer son jet de sauvegarde et doit utiliser le nouveau jet.",
+      "name_en": "Bulwark"
+    }
+  ],
+  "name_en": "Fighter: Banneret",
+  "_translated": true
+}

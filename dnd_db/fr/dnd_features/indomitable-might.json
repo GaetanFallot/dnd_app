@@ -1,0 +1,13 @@
+{
+  "index": "indomitable-might",
+  "name": "Pouvoir indomptable",
+  "level": 18,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 18, si votre total pour un test de Force est inférieur à votre valeur de Force, vous pouvez utiliser cette valeur à la place du total."
+  ],
+  "name_en": "Indomitable Might",
+  "class_name_fr": "",
+  "_translated": true
+}

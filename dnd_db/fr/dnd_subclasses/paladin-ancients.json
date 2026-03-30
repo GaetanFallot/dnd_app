@@ -1,0 +1,48 @@
+{
+  "index": "paladin-ancients",
+  "name": "Paladin : Serment des Anciens",
+  "class": "paladin",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Le Serment des Anciens est aussi vieux que la race des elfes et les rituels des druides. Parfois appelés chevaliers féeriques, chevaliers verts ou chevaliers à cornes, les paladins qui prêtent ce serment se sont rangés du côté de la lumière dans la lutte cosmique contre les ténèbres parce qu'ils aiment les choses belles et vivifiantes du monde, pas nécessairement parce qu'ils croient aux principes d'honneur, de courage et de justice. Ils ornent leur armure et leurs vêtements d'images d'objets en croissance - feuilles, bois ou fleurs - pour refléter leur engagement à préserver la vie et la lumière dans le monde.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Principes des Anciens",
+      "level": null,
+      "desc": "Les principes du Serment des Anciens ont été préservés pendant d'innombrables siècles. Ce serment met l'accent sur les principes du bien avant toute préoccupation de loi ou de chaos. Ses quatre principes centraux sont simples.\n\nAllumez la Lumière. Par vos actes de miséricorde, de gentillesse et de pardon, allumez la lumière de l’espoir dans le monde, repoussant le désespoir.\n\nAbritez la Lumière. Là où il y a du bien, de la beauté, de l’amour et du rire dans le monde, opposez-vous à la méchanceté qui voudrait les avaler. Là où la vie s’épanouit, opposez-vous aux forces qui la rendraient stérile.\n\nPréservez votre propre lumière. Délectez-vous du chant et du rire, de la beauté et de l'art. Si vous laissez la lumière mourir dans votre propre cœur, vous ne pourrez pas la préserver dans le monde.\n\nSoyez la Lumière. Soyez un phare glorieux pour tous ceux qui vivent dans le désespoir. Laissez la lumière de votre joie et de votre courage briller dans toutes vos actions.",
+      "name_en": "Tenets of the Ancients"
+    },
+    {
+      "name": "Sorts de serment",
+      "level": null,
+      "desc": "Vous gagnez des sorts de serment aux niveaux de paladin indiqués.\nSerment des sorts des Anciens\nNiveau Paladin | Sorts\n3ème | Frappe prenante, Parler avec les animaux\n5ème | Rayon de lune, pas brumeux\n9ème | Croissance des plantes, protection contre l'énergie\n13e | Tempête de verglas, peau de pierre\n17e | Communiquer avec la nature, Tree Stride",
+      "name_en": "Oath Spells"
+    },
+    {
+      "name": "Canal Divinité",
+      "level": 3,
+      "desc": "Lorsque vous prêtez ce serment au niveau 3, vous obtenez les deux options de canalisation divine suivantes.\n• La colère de la nature. Vous pouvez utiliser votre Channel Divinity pour invoquer des forces primitives afin de piéger un ennemi. Par une action, vous pouvez faire surgir des vignes spectrales et atteindre une créature à moins de 3 mètres de vous que vous pouvez voir. La créature doit réussir un jet de sauvegarde de Force ou de Dextérité (au choix) ou être retenue. Bien qu'elle soit retenue par les vignes, la créature répète le jet de sauvegarde à la fin de chacun de ses tours. En cas de succès, il se libère et les vignes disparaissent.\n• Transformez les infidèles. Vous pouvez utiliser votre canal divinité pour prononcer des mots anciens qui sont douloureux à entendre pour les fées et les démons. Par une action, vous présentez votre symbole sacré, et chaque fée ou démon à moins de 9 mètres de vous et qui peut vous entendre doit effectuer un jet de sauvegarde de Sagesse. En cas d'échec de la sauvegarde, la créature est retournée pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. Une créature transformée doit passer son tour à essayer de s'éloigner le plus possible de vous, et elle ne peut pas volontairement se déplacer vers un espace situé à moins de 9 mètres de vous. Il ne peut pas non plus accepter de réactions. Pour son action, il peut utiliser uniquement l'action Dash ou tenter d'échapper à un effet qui l'empêche de bouger. S'il n'y a nulle part où se déplacer, la créature peut utiliser l'action Esquiver. Si la véritable forme de la créature est masquée par une illusion, un changement de forme ou un autre effet, cette forme est révélée pendant sa transformation.",
+      "name_en": "Channel Divinity"
+    },
+    {
+      "name": "Aura de protection",
+      "level": 7,
+      "desc": "À partir du niveau 7, la magie ancienne pèse si lourdement sur vous qu'elle forme une protection surnaturelle. Vous et les créatures amies situées à moins de 3 mètres de vous avez une résistance aux dégâts des sorts.\n\nAu niveau 18, la portée de cette aura passe à 9 mètres.",
+      "name_en": "Aura of Warding"
+    },
+    {
+      "name": "Sentinelle éternelle",
+      "level": 15,
+      "desc": "À partir du niveau 15, lorsque vous êtes réduit à 0 point de vie et que vous n'êtes pas tué sur le coup, vous pouvez choisir de tomber à 1 point de vie à la place. Une fois que vous avez utilisé cette capacité, vous ne pouvez plus l'utiliser avant d'avoir terminé un long repos.\n\nDe plus, vous ne souffrez d’aucun des inconvénients de la vieillesse et vous ne pouvez pas vieillir comme par magie.",
+      "name_en": "Undying Sentinel"
+    },
+    {
+      "name": "Champion aîné",
+      "level": 20,
+      "desc": "Au niveau 20, vous pouvez prendre la forme d’une ancienne force de la nature, en prenant l’apparence de votre choix. Par exemple, votre peau peut devenir verte ou prendre une texture semblable à celle d'une écorce, vos cheveux peuvent devenir feuillus ou mousseux, ou vous pouvez faire pousser des bois ou une crinière semblable à un lion.\n\nGrâce à votre action, vous subissez une transformation. Pendant 1 minute, vous bénéficiez des avantages suivants :\n• Au début de chacun de vos tours, vous regagnez 10 points de vie.\n• Chaque fois que vous lancez un sort de paladin ayant un temps d'incantation de 1 action, vous pouvez le lancer en utilisant une action bonus à la place.\n• Les créatures ennemies à moins de 3 mètres de vous ont un désavantage aux jets de sauvegarde contre vos sorts de paladin et vos options de canalisation de la divinité.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Elder Champion"
+    }
+  ],
+  "name_en": "Paladin: Oath of the Ancients",
+  "_translated": true
+}

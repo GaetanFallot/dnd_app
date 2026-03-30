@@ -1,0 +1,42 @@
+{
+  "index": "fighter-battle-master",
+  "name": "Combattant : Maître de bataille",
+  "class": "fighter",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Ceux qui imitent l’archétype du Battle Master emploient des techniques martiales transmises de génération en génération. Pour un Battle Master, le combat est un domaine académique, incluant parfois des sujets allant au-delà du combat, comme la fabrication d'armes et la calligraphie. Tous les combattants n’absorbent pas les leçons d’histoire, de théorie et d’art qui se reflètent dans l’archétype Battle Master, mais ceux qui le font sont des combattants complets dotés de grandes compétences et connaissances.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Supériorité au combat",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cet archétype au niveau 3, vous apprenez des manœuvres qui sont alimentées par des dés spéciaux appelés dés de supériorité.\n\nManœuvres. Vous apprenez trois manœuvres de votre choix. De nombreuses manœuvres améliorent une attaque d’une manière ou d’une autre. Vous ne pouvez utiliser qu'une seule manœuvre par attaque. Vous apprenez deux manœuvres supplémentaires de votre choix aux niveaux 7, 10 et 15. Chaque fois que vous apprenez de nouvelles manœuvres, vous pouvez également remplacer une manœuvre que vous connaissez par une autre.\n\nDés de supériorité. Vous disposez de quatre dés de supériorité, qui sont des d8. Un dé de supériorité est dépensé lorsque vous l’utilisez. Vous récupérez tous vos dés de supériorité dépensés lorsque vous terminez un repos court ou long. Vous gagnez un autre dé de supériorité au niveau 7 et un autre au niveau 15.\n\nJets de sauvegarde. Certaines de vos manœuvres nécessitent que votre cible effectue un jet de sauvegarde pour résister aux effets de la manœuvre. Le DC du jet de sauvegarde est calculé comme suit :\n\nDD de sauvegarde de manœuvre = 8 + votre bonus de maîtrise + votre modificateur de Force ou de Dextérité (au choix)",
+      "name_en": "Combat Superiority"
+    },
+    {
+      "name": "Étudiant en guerre",
+      "level": 3,
+      "desc": "Au niveau 3, vous maîtrisez un type d'outils d'artisan de votre choix.",
+      "name_en": "Student of War"
+    },
+    {
+      "name": "Connaissez votre ennemi",
+      "level": 7,
+      "desc": "À partir du niveau 7, si vous passez au moins 1 minute à observer ou à interagir avec une autre créature en dehors du combat, vous pouvez apprendre certaines informations sur ses capacités par rapport aux vôtres. Le DM vous indique si la créature est votre égale, supérieure ou inférieure en ce qui concerne deux des caractéristiques suivantes de votre choix :\n• Indice de force\n• Score de dextérité\n• Note constitutionnelle\n• Classe d'armure\n• Points de vie actuels\n• Niveaux totaux de classe, le cas échéant\n• Niveaux de classe de combattant, le cas échéant",
+      "name_en": "Know Your Enemy"
+    },
+    {
+      "name": "Supériorité de combat améliorée",
+      "level": 10,
+      "desc": "Au niveau 10, vos dés de supériorité se transforment en d10. Au niveau 18, ils se transforment en d12.",
+      "name_en": "Improved Combat Superiority"
+    },
+    {
+      "name": "Sans relâche",
+      "level": 15,
+      "desc": "À partir du niveau 15, lorsque vous lancez un jet d’initiative et qu’il ne vous reste plus de dé de supériorité, vous récupérez 1 dé de supériorité.",
+      "name_en": "Relentless"
+    }
+  ],
+  "name_en": "Fighter: Battle Master",
+  "_translated": true
+}

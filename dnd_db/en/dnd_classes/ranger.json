@@ -1,0 +1,304 @@
+{
+  "index": "ranger",
+  "name": "Ranger",
+  "hit_die": 10,
+  "proficiencies": [
+    "Light Armor",
+    "Medium Armor",
+    "Shields",
+    "Simple Weapons",
+    "Martial Weapons",
+    "Saving Throw: DEX",
+    "Saving Throw: STR"
+  ],
+  "saving_throws": [
+    "STR",
+    "DEX"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival",
+      "choose": 3,
+      "options": [
+        "Skill: Animal Handling",
+        "Skill: Athletics",
+        "Skill: Insight",
+        "Skill: Investigation",
+        "Skill: Nature",
+        "Skill: Perception",
+        "Skill: Stealth",
+        "Skill: Survival"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "longbow",
+        "name": "Longbow",
+        "url": "/api/2014/equipment/longbow"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "arrow",
+        "name": "Arrow",
+        "url": "/api/2014/equipment/arrow"
+      },
+      "quantity": 20
+    }
+  ],
+  "subclasses": [
+    "hunter"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "favored-enemy-1-type",
+        "natural-explorer-1-terrain-type"
+      ],
+      "class_specific": {
+        "favored_enemies": 1,
+        "favored_terrain": 1
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "ranger-fighting-style",
+        "spellcasting-ranger"
+      ],
+      "class_specific": {
+        "favored_enemies": 1,
+        "favored_terrain": 1
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "ranger-archetype",
+        "primeval-awareness"
+      ],
+      "class_specific": {
+        "favored_enemies": 1,
+        "favored_terrain": 1
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "ranger-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "favored_enemies": 1,
+        "favored_terrain": 1
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [
+        "ranger-extra-attack"
+      ],
+      "class_specific": {
+        "favored_enemies": 1,
+        "favored_terrain": 1
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "favored-enemy-2-types",
+        "natural-explorer-2-terrain-types"
+      ],
+      "class_specific": {
+        "favored_enemies": 2,
+        "favored_terrain": 2
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [
+        "ranger-archetype-improvement-1"
+      ],
+      "class_specific": {
+        "favored_enemies": 2,
+        "favored_terrain": 2
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "ranger-ability-score-improvement-2",
+        "ranger-lands-stride"
+      ],
+      "class_specific": {
+        "favored_enemies": 2,
+        "favored_terrain": 2
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "favored_enemies": 2,
+        "favored_terrain": 2
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "natural-explorer-3-terrain-types",
+        "hide-in-plain-sight"
+      ],
+      "class_specific": {
+        "favored_enemies": 2,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [
+        "ranger-archetype-improvement-2"
+      ],
+      "class_specific": {
+        "favored_enemies": 2,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "ranger-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "favored_enemies": 2,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [],
+      "class_specific": {
+        "favored_enemies": 2,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "favored-enemy-3-enemies",
+        "vanish"
+      ],
+      "class_specific": {
+        "favored_enemies": 3,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [
+        "ranger-archetype-improvement-3"
+      ],
+      "class_specific": {
+        "favored_enemies": 3,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "ranger-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "favored_enemies": 3,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [],
+      "class_specific": {
+        "favored_enemies": 3,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "feral-senses"
+      ],
+      "class_specific": {
+        "favored_enemies": 3,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "ranger-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "favored_enemies": 3,
+        "favored_terrain": 3
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "foe-slayer"
+      ],
+      "class_specific": {
+        "favored_enemies": 3,
+        "favored_terrain": 3
+      }
+    }
+  ],
+  "feature_indices": [
+    "favored-enemy-1-type",
+    "natural-explorer-1-terrain-type",
+    "ranger-fighting-style",
+    "spellcasting-ranger",
+    "ranger-archetype",
+    "primeval-awareness",
+    "ranger-ability-score-improvement-1",
+    "ranger-extra-attack",
+    "favored-enemy-2-types",
+    "natural-explorer-2-terrain-types",
+    "ranger-archetype-improvement-1",
+    "ranger-ability-score-improvement-2",
+    "ranger-lands-stride",
+    "natural-explorer-3-terrain-types",
+    "hide-in-plain-sight",
+    "ranger-archetype-improvement-2",
+    "ranger-ability-score-improvement-3",
+    "favored-enemy-3-enemies",
+    "vanish",
+    "ranger-archetype-improvement-3",
+    "ranger-ability-score-improvement-4",
+    "feral-senses",
+    "ranger-ability-score-improvement-5",
+    "foe-slayer"
+  ]
+}

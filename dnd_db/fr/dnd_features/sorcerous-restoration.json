@@ -1,0 +1,13 @@
+{
+  "index": "sorcerous-restoration",
+  "name": "Restauration sorcière",
+  "level": 20,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Au niveau 20, vous récupérez 4 points de sorcellerie dépensés chaque fois que vous terminez un court repos."
+  ],
+  "name_en": "Sorcerous Restoration",
+  "class_name_fr": "",
+  "_translated": true
+}

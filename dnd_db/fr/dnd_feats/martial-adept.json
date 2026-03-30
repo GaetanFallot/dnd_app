@@ -1,0 +1,13 @@
+{
+  "index": "martial-adept",
+  "name": "Adepte martial",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous disposez d'un entraînement martial qui vous permet d'effectuer des manœuvres de combat spéciales. Vous bénéficiez des avantages suivants.",
+  "benefits": [
+    "Vous apprenez deux manœuvres de votre choix parmi celles disponibles pour l'archétype Battle Master dans la classe combattant. Si une manœuvre que vous utilisez nécessite que votre cible effectue un jet de sauvegarde pour résister aux effets de la manœuvre, le DD du jet de sauvegarde est égal à 8 + votre bonus de maîtrise + votre modificateur de Force ou de Dextérité (au choix).",
+    "Vous gagnez un dé de supériorité, qui est un d6 (ce dé est ajouté à tous les dés de supériorité que vous possédez d’une autre source). Ce dé sert à alimenter vos manœuvres. Un dé de supériorité est dépensé lorsque vous l’utilisez. Vous récupérez vos dés de supériorité dépensés lorsque vous terminez un repos court ou long."
+  ],
+  "name_en": "Martial Adept",
+  "_translated": true
+}

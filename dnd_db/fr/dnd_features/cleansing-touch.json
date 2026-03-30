@@ -1,0 +1,13 @@
+{
+  "index": "cleansing-touch",
+  "name": "Touche Nettoyante",
+  "level": 14,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 14, vous pouvez utiliser votre action pour mettre fin à un sort sur vous-même ou sur une créature volontaire que vous touchez.\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Charisme (au minimum une fois). Vous récupérez les utilisations dépensées lorsque vous terminez un repos long."
+  ],
+  "name_en": "Cleansing Touch",
+  "class_name_fr": "",
+  "_translated": true
+}

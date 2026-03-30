@@ -1,0 +1,14 @@
+{
+  "index": "crossbow-expert",
+  "name": "Expert en arbalète",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Grâce à une pratique approfondie de l'arbalète, vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Vous ignorez la qualité de chargement des arbalètes que vous maîtrisez.",
+    "Être à moins de 1,50 mètre d’une créature hostile n’impose pas de désavantage à vos jets d’attaque à distance.",
+    "Lorsque vous utilisez l'action Attaque et attaquez avec une arme à une main, vous pouvez utiliser une action bonus pour attaquer avec une arbalète à main que vous tenez."
+  ],
+  "name_en": "Crossbow Expert",
+  "_translated": true
+}

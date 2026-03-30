@@ -1,0 +1,11 @@
+{
+  "index": "hellish-resistance",
+  "name": "Résistance infernale",
+  "races": [
+    "tiefling"
+  ],
+  "subraces": [],
+  "desc": "Vous avez une résistance aux dégâts de feu.",
+  "name_en": "Hellish Resistance",
+  "_translated": true
+}

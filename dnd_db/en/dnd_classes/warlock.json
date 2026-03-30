@@ -1,0 +1,345 @@
+{
+  "index": "warlock",
+  "name": "Warlock",
+  "hit_die": 8,
+  "proficiencies": [
+    "Light Armor",
+    "Simple Weapons",
+    "Saving Throw: WIS",
+    "Saving Throw: CHA"
+  ],
+  "saving_throws": [
+    "WIS",
+    "CHA"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion",
+      "choose": 2,
+      "options": [
+        "Skill: Arcana",
+        "Skill: Deception",
+        "Skill: History",
+        "Skill: Intimidation",
+        "Skill: Investigation",
+        "Skill: Nature",
+        "Skill: Religion"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "Dagger",
+        "url": "/api/2014/equipment/dagger"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "leather-armor",
+        "name": "Leather Armor",
+        "url": "/api/2014/equipment/leather-armor"
+      },
+      "quantity": 1
+    }
+  ],
+  "subclasses": [
+    "fiend"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "otherworldly-patron",
+        "pact-magic"
+      ],
+      "class_specific": {
+        "invocations_known": 0,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "eldritch-invocations"
+      ],
+      "class_specific": {
+        "invocations_known": 2,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "pact-boon"
+      ],
+      "class_specific": {
+        "invocations_known": 2,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "warlock-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "invocations_known": 3,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [],
+      "class_specific": {
+        "invocations_known": 3,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "otherworldly-patron-improvement-1"
+      ],
+      "class_specific": {
+        "invocations_known": 4,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [],
+      "class_specific": {
+        "invocations_known": 4,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "warlock-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "invocations_known": 4,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [],
+      "class_specific": {
+        "invocations_known": 5,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "otherworldly-patron-improvement-2"
+      ],
+      "class_specific": {
+        "invocations_known": 5,
+        "mystic_arcanum_level_6": 0,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [
+        "mystic-arcanum-6th-level"
+      ],
+      "class_specific": {
+        "invocations_known": 5,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "warlock-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "invocations_known": 6,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 0,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [
+        "mystic-arcanum-7th-level"
+      ],
+      "class_specific": {
+        "invocations_known": 6,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 1,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "otherworldly-patron-improvement-3"
+      ],
+      "class_specific": {
+        "invocations_known": 6,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 1,
+        "mystic_arcanum_level_8": 0,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [
+        "mystic-arcanum-8th-level"
+      ],
+      "class_specific": {
+        "invocations_known": 7,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 1,
+        "mystic_arcanum_level_8": 1,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "warlock-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "invocations_known": 7,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 1,
+        "mystic_arcanum_level_8": 1,
+        "mystic_arcanum_level_9": 0
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [
+        "mystic-arcanum-9th-level"
+      ],
+      "class_specific": {
+        "invocations_known": 7,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 1,
+        "mystic_arcanum_level_8": 1,
+        "mystic_arcanum_level_9": 1
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [],
+      "class_specific": {
+        "invocations_known": 8,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 1,
+        "mystic_arcanum_level_8": 1,
+        "mystic_arcanum_level_9": 1
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "warlock-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "invocations_known": 8,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 1,
+        "mystic_arcanum_level_8": 1,
+        "mystic_arcanum_level_9": 1
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "eldritch-master"
+      ],
+      "class_specific": {
+        "invocations_known": 8,
+        "mystic_arcanum_level_6": 1,
+        "mystic_arcanum_level_7": 1,
+        "mystic_arcanum_level_8": 1,
+        "mystic_arcanum_level_9": 1
+      }
+    }
+  ],
+  "feature_indices": [
+    "otherworldly-patron",
+    "pact-magic",
+    "eldritch-invocations",
+    "pact-boon",
+    "warlock-ability-score-improvement-1",
+    "otherworldly-patron-improvement-1",
+    "warlock-ability-score-improvement-2",
+    "otherworldly-patron-improvement-2",
+    "mystic-arcanum-6th-level",
+    "warlock-ability-score-improvement-3",
+    "mystic-arcanum-7th-level",
+    "otherworldly-patron-improvement-3",
+    "mystic-arcanum-8th-level",
+    "warlock-ability-score-improvement-4",
+    "mystic-arcanum-9th-level",
+    "warlock-ability-score-improvement-5",
+    "eldritch-master"
+  ]
+}

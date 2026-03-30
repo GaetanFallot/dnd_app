@@ -1,0 +1,13 @@
+{
+  "index": "improved-divine-smite",
+  "name": "Châtiment divin amélioré",
+  "level": 11,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Au niveau 11, vous êtes tellement imprégné d’une puissance vertueuse que toutes vos frappes avec des armes de mêlée transportent avec elles un pouvoir divin. Chaque fois que vous touchez une créature avec une arme de mêlée, la créature subit 1d8 dégâts radiants supplémentaires. Si vous utilisez également votre Châtiment divin avec une attaque, vous ajoutez ces dégâts aux dégâts supplémentaires de votre Châtiment divin."
+  ],
+  "name_en": "Improved Divine Smite",
+  "class_name_fr": "",
+  "_translated": true
+}

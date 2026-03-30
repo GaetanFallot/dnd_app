@@ -1,0 +1,13 @@
+{
+  "index": "peerless-skill",
+  "name": "Compétence inégalée",
+  "level": 14,
+  "class": "bard",
+  "subclass": "lore",
+  "desc": [
+    "À partir du niveau 14, lorsque vous effectuez un test de caractéristique, vous pouvez dépenser une utilisation d'Inspiration bardique. Lancez un dé d’inspiration bardique et ajoutez le nombre obtenu à votre test de capacité. Vous pouvez choisir de le faire après avoir lancé le dé pour le test de capacité, mais avant que le MJ ne vous dise si vous réussissez ou échouez."
+  ],
+  "name_en": "Peerless Skill",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,42 @@
+{
+  "index": "barbarian-zealot",
+  "name": "Barbare : la Voie du Zélote",
+  "class": "barbarian",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Certaines divinités incitent leurs adeptes à se lancer dans une fureur de combat féroce. Ces barbares sont des fanatiques – des guerriers qui canalisent leur rage dans de puissantes démonstrations de pouvoir divin.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Fureur divine",
+      "level": 3,
+      "desc": "À partir du moment où vous choisissez cette voie au niveau 3, vous pouvez canaliser la fureur divine dans vos frappes avec vos armes. Pendant que vous êtes en rage, la première créature que vous touchez à chacun de vos tours avec une attaque avec une arme subit des dégâts supplémentaires égaux à 1d6 + la moitié de votre niveau de barbare. Les dégâts supplémentaires sont nécrotiques ou radiants ; vous choisissez le type de dégâts lorsque vous obtenez cette fonctionnalité.",
+      "name_en": "Divine Fury"
+    },
+    {
+      "name": "Guerrier des Dieux",
+      "level": 3,
+      "desc": "Au niveau 3, votre âme est prête à se battre sans fin. Si un sort, tel que Raise Dead, a pour seul effet de vous redonner la vie (mais pas la non-mort), le lanceur n'a pas besoin de composants matériels pour lancer le sort sur vous.",
+      "name_en": "Warrior of the Gods"
+    },
+    {
+      "name": "Concentration fanatique",
+      "level": 6,
+      "desc": "À partir du niveau 6, le pouvoir divin qui alimente votre rage peut vous protéger. Si vous échouez à un jet de sauvegarde alors que vous êtes en rage, vous pouvez le relancer et vous devez utiliser le nouveau jet. Vous ne pouvez utiliser cette capacité qu’une seule fois par rage.",
+      "name_en": "Fanatical Focus"
+    },
+    {
+      "name": "Présence zélée",
+      "level": 10,
+      "desc": "Au niveau 10, vous apprenez à canaliser le pouvoir divin pour inspirer le fanatisme chez les autres. Par une action bonus, vous lancez un cri de guerre imprégné d'énergie divine. Jusqu'à dix autres créatures de votre choix dans un rayon de 60 pieds autour de vous et qui peuvent vous entendre bénéficient d'un avantage aux jets d'attaque et aux jets de sauvegarde jusqu'au début de votre prochain tour.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un long repos.",
+      "name_en": "Zealous Presence"
+    },
+    {
+      "name": "La rage au-delà de la mort",
+      "level": 14,
+      "desc": "À partir du niveau 14, le pouvoir divin qui alimente votre rage vous permet d'ignorer les coups fatals.\n\nPendant que vous êtes en rage, avoir 0 point de vie ne vous fait pas perdre connaissance. Vous devez toujours effectuer des jets de sauvegarde contre la mort et vous subissez les effets normaux des dégâts subis alors que vous êtes à 0 point de vie. Cependant, si vous mourez suite à l’échec d’un jet de sauvegarde contre la mort, vous ne mourrez pas avant la fin de votre rage, et vous ne mourrez alors que si vous n’avez toujours aucun point de vie.",
+      "name_en": "Rage Beyond Death"
+    }
+  ],
+  "name_en": "Barbarian: Path of the Zealot",
+  "_translated": true
+}

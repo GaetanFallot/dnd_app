@@ -1,0 +1,11 @@
+{
+  "index": "lucky",
+  "name": "Chanceux",
+  "races": [
+    "halfling"
+  ],
+  "subraces": [],
+  "desc": "Lorsque vous obtenez un 1 sur le d20 pour un jet d'attaque, un test de caractéristique ou un jet de sauvegarde, vous pouvez relancer le dé et devez utiliser le nouveau jet.",
+  "name_en": "Lucky",
+  "_translated": true
+}

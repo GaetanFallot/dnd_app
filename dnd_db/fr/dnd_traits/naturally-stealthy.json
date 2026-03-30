@@ -1,0 +1,11 @@
+{
+  "index": "naturally-stealthy",
+  "name": "Naturellement furtif",
+  "races": [],
+  "subraces": [
+    "lightfoot-halfling"
+  ],
+  "desc": "Vous pouvez tenter de vous cacher même si vous êtes obscurci uniquement par une créature d'au moins une taille plus grande que vous.",
+  "name_en": "Naturally Stealthy",
+  "_translated": true
+}

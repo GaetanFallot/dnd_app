@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-whispers-of-the-grave",
+  "name": "Invocation surnaturelle : murmures de la tombe",
+  "level": 9,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer parler avec les morts à volonté, sans dépenser d'emplacement de sort."
+  ],
+  "name_en": "Eldritch Invocation: Whispers of the Grave",
+  "class_name_fr": "",
+  "_translated": true
+}

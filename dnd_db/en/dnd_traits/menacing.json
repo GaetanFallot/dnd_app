@@ -1,0 +1,9 @@
+{
+  "index": "menacing",
+  "name": "Menacing",
+  "races": [
+    "half-orc"
+  ],
+  "subraces": [],
+  "desc": "You gain proficiency in the Intimidation skill."
+}

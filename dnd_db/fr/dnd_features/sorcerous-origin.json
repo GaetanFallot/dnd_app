@@ -1,0 +1,13 @@
+{
+  "index": "sorcerous-origin",
+  "name": "Origine sorcière",
+  "level": 1,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Choisissez une origine sorcière, qui décrit la source de votre pouvoir magique inné, comme Draconic Bloodline.\nVotre choix vous accorde des fonctionnalités lorsque vous le choisissez au niveau 1 puis à nouveau aux niveaux 6, 14 et 18."
+  ],
+  "name_en": "Sorcerous Origin",
+  "class_name_fr": "",
+  "_translated": true
+}

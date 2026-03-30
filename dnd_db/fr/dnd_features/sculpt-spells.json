@@ -1,0 +1,13 @@
+{
+  "index": "sculpt-spells",
+  "name": "Sorts de sculpture",
+  "level": 2,
+  "class": "wizard",
+  "subclass": "evocation",
+  "desc": [
+    "À partir du niveau 2, vous pouvez créer des poches de relative sécurité dans les effets de vos sorts d'évocation. Lorsque vous lancez un sort d'évocation qui affecte d'autres créatures que vous pouvez voir, vous pouvez en choisir un nombre égal à 1 + le niveau du sort. Les créatures choisies réussissent automatiquement leurs jets de sauvegarde contre le sort, et elles ne subissent aucun dégât si elles devraient normalement subir la moitié des dégâts en cas de sauvegarde réussie."
+  ],
+  "name_en": "Sculpt Spells",
+  "class_name_fr": "",
+  "_translated": true
+}

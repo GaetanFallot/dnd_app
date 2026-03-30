@@ -1,0 +1,42 @@
+{
+  "index": "cleric-knowledge",
+  "name": "Clerc : Domaine de connaissances",
+  "class": "cleric",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Les dieux de la connaissance – dont Oghma, Boccob, Gilean, Aureon et Thot – valorisent avant tout l’apprentissage et la compréhension. Certains enseignent que le savoir doit être rassemblé et partagé dans les bibliothèques et les universités, ou promeuvent la connaissance pratique de l’artisanat et de l’invention. Certaines divinités accumulent des connaissances et gardent leurs secrets pour elles. Et certains promettent à leurs adeptes qu’ils obtiendront un pouvoir énorme s’ils découvrent les secrets du multivers. Les adeptes de ces dieux étudient les traditions ésotériques, collectionnent de vieux tomes, se plongent dans les lieux secrets de la terre et apprennent tout ce qu'ils peuvent. Certains dieux de la connaissance promeuvent la connaissance pratique de l'artisanat et de l'invention, notamment des divinités forgerons comme Gond, Reorx, Onatar, Moradin, Héphaïstos et Goibhniu.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Bénédictions de la connaissance",
+      "level": 1,
+      "desc": "Au 1er niveau, vous apprenez deux langues de votre choix. Vous maîtrisez également votre choix dans deux des compétences suivantes : Arcanes, Histoire, Nature ou Religion.\n\nVotre bonus de maîtrise est doublé pour tout test de capacité que vous effectuez et qui utilise l'une de ces compétences.",
+      "name_en": "Blessings of Knowledge"
+    },
+    {
+      "name": "Channel Divinity : Connaissance des âges",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous pouvez utiliser votre canal divinité pour puiser dans un puits divin de connaissances. En tant qu'action, vous choisissez une compétence ou un outil. Pendant 10 minutes, vous maîtrisez la compétence ou l’outil choisi.",
+      "name_en": "Channel Divinity: Knowledge of the Ages"
+    },
+    {
+      "name": "Channel Divinity : Lire les pensées",
+      "level": 6,
+      "desc": "Au niveau 6, vous pouvez utiliser votre canal divinité pour lire les pensées d'une créature. Vous pouvez alors utiliser votre accès à l'esprit de la créature pour la commander.\n\nPar une action, choisissez une créature que vous pouvez voir dans un rayon de 20 mètres autour de vous. Cette créature doit réussir un jet de sauvegarde de Sagesse. Si la créature réussit son jet de sauvegarde, vous ne pourrez plus utiliser cette fonctionnalité sur elle tant que vous n'aurez pas terminé un repos long.\n\nSi la créature échoue à son jet de sauvegarde, vous pouvez lire ses pensées superficielles (celles qui se trouvent au premier plan dans son esprit, reflétant ses émotions actuelles et ce à quoi elle pense activement) lorsqu'elle se trouve à moins de 20 pieds de vous. Cet effet dure 1 minute.\n\nPendant ce temps, vous pouvez utiliser votre action pour mettre fin à cet effet et lancer le sort Suggestion sur la créature sans dépenser d'emplacement de sort. La cible échoue automatiquement à son jet de sauvegarde contre le sort.",
+      "name_en": "Channel Divinity: Read Thoughts"
+    },
+    {
+      "name": "Lancement de sorts puissant",
+      "level": 8,
+      "desc": "À partir du niveau 8, vous ajoutez votre modificateur de Sagesse aux dégâts que vous infligez avec n'importe quel cantrip de clerc.",
+      "name_en": "Potent Spellcasting"
+    },
+    {
+      "name": "Visions du passé",
+      "level": 17,
+      "desc": "À partir du niveau 17, vous pouvez évoquer des visions du passé liées à un objet que vous tenez ou à votre environnement immédiat. Vous passez au moins 1 minute en méditation et en prière, puis recevez des aperçus oniriques et sombres des événements récents. Vous pouvez méditer de cette manière pendant un nombre de minutes égal à votre score de Sagesse et devez maintenir votre concentration pendant ce temps, comme si vous jetiez un sort.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.\n\nLecture d'objets. En tenant un objet pendant que vous méditez, vous pouvez voir des visions de l’ancien propriétaire de l’objet. Après avoir médité pendant 1 minute, vous apprenez comment le propriétaire a acquis et perdu l'objet, ainsi que l'événement important le plus récent impliquant l'objet et ce propriétaire. Si l'objet appartenait à une autre créature dans un passé récent (dans un nombre de jours égal à votre score de Sagesse), vous pouvez consacrer 1 minute supplémentaire à chaque propriétaire pour apprendre les mêmes informations sur cette créature.\n\nZone de lecture. Pendant que vous méditez, vous avez des visions d'événements récents dans votre voisinage immédiat (une pièce, une rue, un tunnel, une clairière ou autre, jusqu'à un cube de 50 pieds), remontant à un nombre de jours égal à votre score de Sagesse. Pour chaque minute que vous méditez, vous découvrez un événement important, en commençant par le plus récent. Les événements importants impliquent généralement des émotions fortes, telles que des batailles et des trahisons, des mariages et des meurtres, des naissances et des funérailles. Cependant, ils peuvent également inclure des événements plus banals mais néanmoins importants dans votre situation actuelle.",
+      "name_en": "Visions of the Past"
+    }
+  ],
+  "name_en": "Cleric: Knowledge Domain",
+  "_translated": true
+}

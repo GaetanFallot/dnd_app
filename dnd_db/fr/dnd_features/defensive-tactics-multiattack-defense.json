@@ -1,0 +1,13 @@
+{
+  "index": "defensive-tactics-multiattack-defense",
+  "name": "Tactiques défensives : défense multi-attaques",
+  "level": 7,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Lorsqu'une créature vous frappe avec une attaque, vous gagnez un bonus de +4 à la CA contre toutes les attaques ultérieures effectuées par cette créature pour le reste du tour."
+  ],
+  "name_en": "Defensive Tactics: Multiattack Defense",
+  "class_name_fr": "",
+  "_translated": true
+}

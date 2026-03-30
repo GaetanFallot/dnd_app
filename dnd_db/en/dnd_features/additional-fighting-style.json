@@ -1,0 +1,8 @@
+{
+  "index": "additional-fighting-style",
+  "name": "Additional Fighting Style",
+  "level": 10,
+  "class": "fighter",
+  "subclass": "champion",
+  "desc": "At 10th level, you can choose a second option from the Fighting Style class feature."
+}

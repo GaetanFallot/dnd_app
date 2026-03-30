@@ -1,0 +1,13 @@
+{
+  "index": "spellcasting-ranger",
+  "name": "Lancement de sorts : Rôdeur",
+  "level": 2,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "Au moment où vous atteignez le niveau 2, vous avez appris à utiliser l’essence magique de la nature pour lancer des sorts, un peu comme le fait un druide."
+  ],
+  "name_en": "Spellcasting: Ranger",
+  "class_name_fr": "",
+  "_translated": true
+}

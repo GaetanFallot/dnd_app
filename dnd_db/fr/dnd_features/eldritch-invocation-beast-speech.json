@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-beast-speech",
+  "name": "Invocation surnaturelle : discours de bête",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer parler avec les animaux à volonté, sans dépenser d'emplacement de sort."
+  ],
+  "name_en": "Eldritch Invocation: Beast Speech",
+  "class_name_fr": "",
+  "_translated": true
+}

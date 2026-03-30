@@ -1,0 +1,13 @@
+{
+  "index": "divine-strike",
+  "name": "Frappe divine",
+  "level": 8,
+  "class": "cleric",
+  "subclass": "life",
+  "desc": [
+    "Au niveau 8, vous gagnez la capacité d’imprégner vos frappes d’énergie divine. Une fois à chacun de vos tours, lorsque vous touchez une créature avec une attaque avec une arme, vous pouvez faire en sorte que l'attaque inflige 1d8 dégâts radiants supplémentaires à la cible. Lorsque vous atteignez le niveau 14, les dégâts supplémentaires passent à 2d8."
+  ],
+  "name_en": "Divine Strike",
+  "class_name_fr": "",
+  "_translated": true
+}

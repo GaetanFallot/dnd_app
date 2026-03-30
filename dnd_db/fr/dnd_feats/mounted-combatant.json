@@ -1,0 +1,14 @@
+{
+  "index": "mounted-combatant",
+  "name": "Combattant monté",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous êtes un ennemi dangereux à affronter lorsque vous êtes monté. Tant que vous êtes monté et que vous n'êtes pas incapable d'agir, vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Vous avez un avantage aux jets d'attaque en mêlée contre toute créature non montée qui est plus petite que votre monture.",
+    "Vous pouvez forcer une attaque ciblée sur votre monture à vous cibler à la place.",
+    "Si votre monture est soumise à un effet qui lui permet d'effectuer un jet de sauvegarde de Dextérité pour ne subir que la moitié des dégâts, elle ne subit aucun dégât si elle réussit le jet de sauvegarde, et seulement la moitié des dégâts si elle échoue."
+  ],
+  "name_en": "Mounted Combatant",
+  "_translated": true
+}

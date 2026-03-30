@@ -1,0 +1,13 @@
+{
+  "index": "ranger-lands-stride",
+  "name": "La foulée de la terre",
+  "level": 8,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 8, se déplacer sur un terrain difficile non magique ne vous coûte aucun mouvement supplémentaire. Vous pouvez également traverser des plantes non magiques sans être ralenti par elles et sans subir de dégâts si elles ont des épines, des épines ou un danger similaire.\nDe plus, vous bénéficiez d'un avantage aux jets de sauvegarde contre les plantes créées ou manipulées par magie pour entraver le mouvement, comme celles créées par le sort d'enchevêtrement."
+  ],
+  "name_en": "Land's Stride",
+  "class_name_fr": "",
+  "_translated": true
+}

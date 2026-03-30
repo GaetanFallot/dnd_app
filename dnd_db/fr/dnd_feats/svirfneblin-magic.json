@@ -1,0 +1,10 @@
+{
+  "index": "svirfneblin-magic",
+  "name": "Magie des Svirfnebelins",
+  "source": "Mordenkainen's Tome of Foes",
+  "prerequisite": "Gnome (Gnome profond)",
+  "desc": "Vous avez hérité de la capacité innée de lancement de sorts de vos ancêtres. Cette capacité vous permet de lancer Non-détection sur vous-même à volonté, sans avoir besoin d'un composant matériel.",
+  "benefits": [],
+  "name_en": "Svirfneblin Magic",
+  "_translated": true
+}

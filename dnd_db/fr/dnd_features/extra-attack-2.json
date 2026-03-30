@@ -1,0 +1,13 @@
+{
+  "index": "extra-attack-2",
+  "name": "Attaque supplémentaire (2)",
+  "level": 11,
+  "class": "fighter",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 5, vous pouvez attaquer deux fois, au lieu d'une, chaque fois que vous effectuez l'action Attaque pendant votre tour. Le nombre d'attaques passe à trois lorsque vous atteignez le niveau 11 dans cette classe et à quatre lorsque vous atteignez le niveau 20 dans cette classe."
+  ],
+  "name_en": "Extra Attack (2)",
+  "class_name_fr": "",
+  "_translated": true
+}

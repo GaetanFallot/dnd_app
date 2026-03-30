@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-visions-of-distant-realms",
+  "name": "Invocation Eldritch : Visions de royaumes lointains",
+  "level": 15,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer Œil arcanique à volonté, sans dépenser d’emplacement de sort."
+  ],
+  "name_en": "Eldritch Invocation: Visions of Distant Realms",
+  "class_name_fr": "",
+  "_translated": true
+}

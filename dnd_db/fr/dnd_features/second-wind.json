@@ -1,0 +1,13 @@
+{
+  "index": "second-wind",
+  "name": "Deuxième souffle",
+  "level": 1,
+  "class": "fighter",
+  "subclass": null,
+  "desc": [
+    "Vous disposez d’une réserve d’endurance limitée sur laquelle vous pouvez puiser pour vous protéger du danger. A votre tour, vous pouvez utiliser une action bonus pour récupérer des points de vie égaux à 1d10 + votre niveau de combattant. Une fois que vous utilisez cette fonctionnalité, vous devez terminer un repos court ou long avant de pouvoir l'utiliser à nouveau."
+  ],
+  "name_en": "Second Wind",
+  "class_name_fr": "",
+  "_translated": true
+}

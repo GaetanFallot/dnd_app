@@ -1,0 +1,14 @@
+{
+  "index": "skulker",
+  "name": "Skulker",
+  "source": "Player's Handbook",
+  "prerequisite": "Dextérité 13 ou plus",
+  "desc": "Vous êtes un expert pour vous faufiler dans les ombres. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Vous pouvez essayer de vous cacher lorsque vous êtes légèrement caché de la créature dont vous vous cachez.",
+    "Lorsque vous êtes caché d'une créature et que vous la manquez avec une attaque avec une arme à distance, l'attaque ne révèle pas votre position.",
+    "Une lumière tamisée n'impose pas de désavantage à vos tests de Sagesse (Perception) basés sur la vue."
+  ],
+  "name_en": "Skulker",
+  "_translated": true
+}

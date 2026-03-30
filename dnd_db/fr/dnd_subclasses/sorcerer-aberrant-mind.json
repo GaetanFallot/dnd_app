@@ -1,0 +1,48 @@
+{
+  "index": "sorcerer-aberrant-mind",
+  "name": "Sorcier : Esprit aberrant",
+  "class": "sorcerer",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Une influence extraterrestre a enroulé ses vrilles autour de votre esprit, vous donnant un pouvoir psionique. Vous pouvez désormais toucher d’autres esprits avec ce pouvoir et modifier le monde qui vous entoure en l’utilisant pour contrôler l’énergie magique du multivers. Ce pouvoir rayonnera-t-il de vous comme un phare d’espoir pour les autres ? Ou serez-vous une source de terreur pour ceux qui ressentent l’attaque de votre esprit et sont témoins des étranges manifestations de votre puissance ?",
+  "desc": "",
+  "features": [
+    {
+      "name": "Sorts psioniques",
+      "level": 1,
+      "desc": "À partir du niveau 1, vous apprenez des sorts supplémentaires lorsque vous atteignez certains niveaux dans cette classe, comme indiqué dans le tableau des sorts psioniques. Chacun de ces sorts compte pour vous comme un sort de sorcier, mais il ne compte pas dans le nombre de sorts de sorcier que vous connaissez.\n\nChaque fois que vous gagnez un niveau de sorcier, vous pouvez remplacer un sort que vous avez gagné grâce à cette fonctionnalité par un autre sort du même niveau. Le nouveau sort doit être un sort de divination ou d'enchantement de la liste des sorts de sorcier, démoniste ou sorcier.\nSorts psioniques\nNiveau Sorcier | Sorts\n1er | Armes de Hadar, Murmures dissonantes, Slivoïde mental\n3ème | Calmer les émotions, détecter les pensées\n5ème | Faim de Hadar, Envoi\n7ème | Tentacules noires d'Evard, invocation d'aberration\n9ème | Lien télépathique de Rary, télékinésie",
+      "name_en": "Psionic Spells"
+    },
+    {
+      "name": "Discours télépathique",
+      "level": 1,
+      "desc": "À partir du 1er niveau, vous pouvez établir une connexion télépathique entre votre esprit et celui d’un autre. Par une action bonus, choisissez une créature que vous pouvez voir à moins de 9 mètres de vous. Vous et la créature choisie pouvez vous parler par télépathie tant que vous êtes tous les deux à un nombre de kilomètres l'un de l'autre égal à votre modificateur de Charisme (minimum de 1 mile). Pour vous comprendre, vous devez chacun parler mentalement dans une langue que l’autre connaît.\n\nLa connexion télépathique dure un nombre de minutes égal à votre niveau de sorcier. Il se termine plus tôt si vous êtes frappé d'incapacité ou mourez ou si vous utilisez cette capacité pour établir une connexion avec une autre créature.",
+      "name_en": "Telepathic Speech"
+    },
+    {
+      "name": "Sorcellerie Psionique",
+      "level": 6,
+      "desc": "À partir du niveau 6, lorsque vous lancez un sort de niveau 1 ou supérieur à partir de votre fonction Sorts psioniques, vous pouvez le lancer en dépensant un emplacement de sort comme d'habitude ou en dépensant un nombre de points de sorcellerie égal au niveau du sort. Si vous lancez le sort en utilisant des points de sorcellerie, il ne nécessite aucune composante verbale ou somatique, et il ne nécessite aucune composante matérielle, à moins qu'elles ne soient consommées par le sort.",
+      "name_en": "Psionic Sorcery"
+    },
+    {
+      "name": "Défenses psychiques",
+      "level": 6,
+      "desc": "Au niveau 6, vous gagnez une résistance aux dégâts psychiques et vous avez un avantage aux jets de sauvegarde contre le charme ou l'effroi.",
+      "name_en": "Psychic Defenses"
+    },
+    {
+      "name": "Révélation dans la chair",
+      "level": 14,
+      "desc": "À partir du niveau 14, vous pouvez libérer la vérité aberrante cachée en vous. Par une action bonus, vous pouvez dépenser 1 ou plusieurs points de sorcellerie pour transformer magiquement votre corps pendant 10 minutes. Pour chaque point de sorcellerie que vous dépensez, vous pouvez gagner l'un des avantages suivants de votre choix, dont les effets durent jusqu'à la fin de la transformation :\n• Vous pouvez voir n'importe quelle créature invisible dans un rayon de 20 mètres autour de vous, à condition qu'elle ne soit pas à couvert. Vos yeux deviennent également noirs ou deviennent des vrilles sensorielles se tordant.\n• Vous gagnez une vitesse de vol égale à votre vitesse de marche et pouvez planer. Pendant que vous volez, votre peau scintille de mucus ou brille d’une lumière surnaturelle.\n• Vous gagnez une vitesse de nage égale à deux fois votre vitesse de marche et vous pouvez respirer sous l'eau. De plus, des branchies poussent à partir de votre cou ou se déploient derrière vos oreilles, vos doigts deviennent palmés ou des cils se tordent qui s'étendent à travers vos vêtements.\n• Votre corps, ainsi que tout équipement que vous portez ou transportez, devient gluant et souple. Vous pouvez vous déplacer dans n'importe quel espace aussi étroit que 1 pouce sans vous serrer, et vous pouvez dépenser 1,50 mètre de mouvement pour échapper aux contraintes non magiques ou être agrippé.",
+      "name_en": "Revelation in Flesh"
+    },
+    {
+      "name": "Implosion déformée",
+      "level": 18,
+      "desc": "Au niveau 18, vous pouvez libérer votre pouvoir aberrant en tant qu'anomalie de déformation spatiale. Par une action, vous pouvez vous téléporter dans un espace inoccupé que vous pouvez voir à moins de 120 pieds de vous. Immédiatement après votre disparition, chaque créature à moins de 9 mètres de l'espace que vous avez quitté doit effectuer un jet de sauvegarde de Force contre votre DD de sauvegarde de sort. En cas d'échec, une créature subit 3d10 dégâts de force et est tirée directement vers l'espace que vous avez laissé, se terminant dans un espace inoccupé aussi proche que possible de votre ancien espace. En cas de sauvegarde réussie, la créature subit deux fois moins de dégâts et n'est pas tirée.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus le faire avant d'avoir terminé un long repos, à moins que vous ne dépensiez 5 points de sorcellerie pour l'utiliser à nouveau.",
+      "name_en": "Warping Implosion"
+    }
+  ],
+  "name_en": "Sorcerer: Aberrant Mind",
+  "_translated": true
+}

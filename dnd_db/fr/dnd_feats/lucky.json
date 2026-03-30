@@ -1,0 +1,10 @@
+{
+  "index": "lucky",
+  "name": "Chanceux",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous avez une chance inexplicable qui semble survenir juste au bon moment.",
+  "benefits": [],
+  "name_en": "Lucky",
+  "_translated": true
+}

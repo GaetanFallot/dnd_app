@@ -1,0 +1,18 @@
+{
+  "index": "charlatan",
+  "name": "Background: Charlatan",
+  "source": "Player's Handbook",
+  "desc": "You have always had a way with people. You know what makes them tick, you can tease out their hearts' desires after a few minutes of conversation, and with a few leading questions you can read them like they were children's books. It's a useful talent, and one that you're perfectly willing to use for your advantage.\n\nYou know what people want and you deliver, or rather, you promise to deliver. Common sense should steer people away from things that sound too good to be true, but common sense seems to be in short supply when you're around. The bottle of pink colored liquid will surely cure that unseemly rash, this ointment – nothing more than a bit of fat with a sprinkle of silver dust can restore youth and vigor, and there's a bridge in the city that just happens to be for sale. These marvels sound implausible, but you make them sound like the real deal.\n\nSkill Proficiencies: Deception, Sleight of Hand\nTool Proficiencies: Disguise kit, forgery kit\nLanguages: None\nEquipment: A set of fine clothesValue:15gp Weight:6lbs, a disguise kitValue:25gp Weight:3lbs, tools of the con of your choice (ten stoppered bottlesValue:2gp Weight:2lbs (individually) filled with colored liquid, a set of weighted diceValue:1sp Weight:0, a deck of marked cardsValue:5sp Weight:0, or a signet ringValue:5gp Weight:0 of an imaginary duke), and a pouchValue:5sp Weight:1lb containing 15gp",
+  "skill_proficiencies": [
+    "Deception",
+    "Sleight of Hand\nTool Proficiencies: Disguise kit",
+    "forgery kit\nLanguages: None\nEquipment: A set of fine clothesValue:15gp Weight:6lbs",
+    "a disguise kitValue:25gp Weight:3lbs",
+    "tools of the con of your choice (ten stoppered bottlesValue:2gp Weight:2lbs (individually) filled with colored liquid",
+    "a set of weighted diceValue:1sp Weight:0",
+    "a deck of marked cardsValue:5sp Weight:0",
+    "or a signet ringValue:5gp Weight:0 of an imaginary duke)",
+    "and a pouchValue:5sp Weight:1lb containing 15gp"
+  ],
+  "feature": null
+}

@@ -1,0 +1,14 @@
+{
+  "index": "spell-sniper",
+  "name": "Tireur d'élite",
+  "source": "Player's Handbook",
+  "prerequisite": "La capacité de lancer au moins un sort",
+  "desc": "Vous avez appris des techniques pour améliorer vos attaques avec certains types de sorts, bénéficiant ainsi des avantages suivants :",
+  "benefits": [
+    "Lorsque vous lancez un sort qui nécessite d'effectuer un jet d'attaque, la portée du sort est doublée.",
+    "Vos attaques de sorts à distance ignorent la moitié et les trois quarts de la couverture.",
+    "Vous apprenez un petit sort qui nécessite un jet d'attaque. Choisissez le sort mineur dans la liste des sorts de barde, clerc, druide, sorcier, démoniste ou sorcier. Votre capacité de lancement de sorts pour ce cantrip dépend de la liste de sorts que vous avez choisie parmi : Charisme pour le barde, le sorcier et le démoniste ; Sagesse pour clerc ou druide ; ou Intelligence pour l'assistant."
+  ],
+  "name_en": "Spell Sniper",
+  "_translated": true
+}

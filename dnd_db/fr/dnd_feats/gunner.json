@@ -1,0 +1,15 @@
+{
+  "index": "gunner",
+  "name": "Canonnier",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": null,
+  "desc": "Vous avez une main rapide et un œil vif lorsque vous utilisez des armes à feu, vous offrant les avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Dextérité de 1, jusqu'à un maximum de 20.",
+    "Vous gagnez la maîtrise des armes à feu (voir « Armes à feu » dans le Guide du Maître du Donjon).",
+    "Vous ignorez la propriété de chargement des armes à feu.",
+    "Être à moins de 1,50 mètre d'une créature hostile n'impose pas de désavantage à vos jets d'attaque à distance."
+  ],
+  "name_en": "Gunner",
+  "_translated": true
+}

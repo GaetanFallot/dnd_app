@@ -1,0 +1,13 @@
+{
+  "index": "pact-of-the-tome",
+  "name": "Pacte du Tome",
+  "level": 3,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Votre patron vous donne un grimoire appelé Livre des Ombres. Lorsque vous bénéficiez de cette fonctionnalité, choisissez trois sorts mineurs dans la liste de sorts de n'importe quelle classe (les trois ne doivent pas nécessairement provenir de la même liste). Tant que le livre est sur vous, vous pouvez lancer ces sorts magiques à volonté. Ils ne comptent pas dans votre nombre de cantrips connus. S'ils n'apparaissent pas dans la liste des sorts de démoniste, ce sont néanmoins des sorts de démoniste pour vous.\nSi vous perdez votre Livre des Ombres, vous pouvez effectuer une cérémonie d'une heure pour recevoir un remplaçant de votre mécène. Cette cérémonie peut être pratiquée lors d'un repos court ou long, et elle détruit le livre précédent. Le livre se transforme en cendres à votre mort.\nVotre Livre des Ombres pourrait être un gros tome relié en peau de démon parsemée de fer, contenant des sorts de conjuration et une richesse de connaissances interdites sur les régions sinistres du cosmos, un cadeau du Démon."
+  ],
+  "name_en": "Pact of the Tome",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,42 @@
+{
+  "index": "druid-shepherd",
+  "name": "Druide : Cercle du Berger",
+  "class": "druid",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Les druides du Cercle du Berger communient avec les esprits de la nature, en particulier les esprits des bêtes et des fées, et appellent ces esprits à l'aide. Ces druides reconnaissent que tous les êtres vivants jouent un rôle dans le monde naturel, mais ils se concentrent sur la protection des animaux et des créatures féeriques qui ont du mal à se défendre. Les bergers, comme on les appelle, considèrent ces créatures comme leurs protégés. Ils repoussent les monstres qui les menacent, réprimandent les chasseurs qui tuent plus de proies que nécessaire et empêchent la civilisation d'empiéter sur les habitats d'animaux rares et sur les sites sacrés pour les fées.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Discours des bois",
+      "level": 2,
+      "desc": "Au niveau 2, vous gagnez la capacité de converser avec des bêtes et de nombreuses fées.\n\nVous apprenez à parler, lire et écrire Sylvan. De plus, les bêtes peuvent comprendre votre discours et vous acquérez la capacité de déchiffrer leurs bruits et leurs mouvements. La plupart des bêtes n'ont pas l'intelligence nécessaire pour transmettre ou comprendre des concepts sophistiqués, mais une bête amicale pourrait transmettre ce qu'elle a vu ou entendu dans un passé récent. Cette capacité ne vous accorde aucune amitié particulière avec les bêtes, bien que vous puissiez combiner cette capacité avec des cadeaux pour gagner leurs faveurs comme vous le feriez avec n'importe quel personnage non-joueur.",
+      "name_en": "Speech of the Woods"
+    },
+    {
+      "name": "Totem spirituel",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous acquérez la capacité d'invoquer les esprits de la nature et de les utiliser pour influencer le monde qui vous entoure.\n\nPar une action bonus, vous pouvez invoquer par magie un esprit incorporel jusqu'à un point que vous pouvez voir à moins de 20 mètres de vous. L'esprit crée une aura dans un rayon de 9 mètres autour de ce point. Il ne compte ni comme une créature ni comme un objet, bien qu'il ait l'apparence spectrale de la créature qu'il représente. Par une action bonus, vous pouvez déplacer l'esprit jusqu'à 60 pieds jusqu'à un point que vous pouvez voir.\n\nL'esprit persiste pendant 1 minute. Une fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un repos court ou long.\n\nL’effet de l’aura de l’esprit dépend du type d’esprit que vous invoquez parmi les options ci-dessous.\n\nEsprit de l'ours. L'esprit de l'ours vous accorde, à vous et à vos alliés, sa puissance et son endurance. Chaque créature de votre choix dans l'aura lorsque l'esprit apparaît gagne des points de vie temporaires égaux à 5 + votre niveau de druide. De plus, vous et vos alliés bénéficiez d'un avantage aux tests de Force et aux jets de sauvegarde de Force lorsque vous êtes dans l'aura.\n\nEsprit de faucon. L'esprit du faucon est un chasseur accompli, vous aidant ainsi que vos alliés grâce à sa vue perçante. Lorsqu'une créature effectue un jet d'attaque contre une cible dans l'aura de l'esprit, vous pouvez utiliser votre réaction pour accorder un avantage à ce jet d'attaque. De plus, vous et vos alliés avez un avantage aux tests de Sagesse (Perception) lorsque vous êtes dans l'aura.\n\nEsprit Licorne. L'esprit licorne prête sa protection à ceux qui se trouvent à proximité. Vous et vos alliés bénéficiez d’un avantage à tous les tests de capacité effectués pour détecter les créatures dans l’aura de l’esprit. De plus, si vous lancez un sort en utilisant un emplacement de sort qui redonne des points de vie à n'importe quelle créature à l'intérieur ou à l'extérieur de l'aura, chaque créature de votre choix dans l'aura récupère également des points de vie égaux à votre niveau de druide.",
+      "name_en": "Spirit Totem"
+    },
+    {
+      "name": "Puissant invocateur",
+      "level": 6,
+      "desc": "Au niveau 6, les bêtes et les fées que vous invoquez sont plus résistantes que la normale. Toute bête ou fée invoquée ou créée par un sort que vous lancez bénéficie de deux avantages :\n• La créature apparaît avec plus de points de vie que d'habitude : 2 points de vie supplémentaires par dé de vie qu'elle possède.\n• Les dégâts causés par ses armes naturelles sont considérés comme magiques dans le but de vaincre l'immunité et la résistance aux attaques et dégâts non magiques.",
+      "name_en": "Mighty Summoner"
+    },
+    {
+      "name": "Esprit gardien",
+      "level": 10,
+      "desc": "À partir du niveau 10, votre totem spirituel protège les bêtes et les fées que vous invoquez avec votre magie. Lorsqu'une bête ou une fée que vous avez invoquée ou créée avec un sort termine son tour dans votre aura de Totem spirituel, cette créature récupère un nombre de points de vie égal à la moitié de votre niveau de druide.",
+      "name_en": "Guardian Spirit"
+    },
+    {
+      "name": "Invocation fidèle",
+      "level": 14,
+      "desc": "À partir du niveau 14, les esprits de la nature avec lesquels vous communiez vous protègent lorsque vous êtes le plus sans défense. Si vous êtes réduit à 0 point de vie ou êtes frappé d'incapacité contre votre volonté, vous pouvez immédiatement bénéficier des avantages de Conjuration d'animaux comme s'il était lancé avec un emplacement de sort de niveau 9. Il invoque quatre bêtes de votre choix dont le niveau de défi est de 2 ou moins. Les bêtes invoquées apparaissent à moins de 20 pieds de vous. S'ils ne reçoivent aucun ordre de votre part, ils vous protègent du mal et attaquent vos ennemis. Le sort dure 1 heure, ne nécessitant aucune concentration, ou jusqu'à ce que vous le rejetiez (aucune action requise).\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un long repos.",
+      "name_en": "Faithful Summons"
+    }
+  ],
+  "name_en": "Druid: Circle of the Shepherd",
+  "_translated": true
+}

@@ -1,0 +1,36 @@
+{
+  "index": "monk-shadow",
+  "name": "Moine : Voie de l'Ombre",
+  "class": "monk",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Les moines de la Voie de l'Ombre suivent une tradition qui valorise la furtivité et le subterfuge. Ces moines pourraient être appelés ninjas ou danseurs de l’ombre, et ils servent d’espions et d’assassins. Parfois, les membres d'un monastère ninja sont des membres de la famille, formant un clan juré de garder le secret sur leurs arts et leurs missions. D'autres monastères ressemblent davantage à des guildes de voleurs, louant leurs services à des nobles, de riches marchands ou à toute autre personne pouvant payer leurs honoraires. Quelles que soient leurs méthodes, les chefs de ces monastères attendent l’obéissance inconditionnelle de leurs étudiants.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Arts de l'Ombre",
+      "level": 3,
+      "desc": "Dès que vous choisissez cette tradition au niveau 3, vous pouvez utiliser votre ki pour dupliquer les effets de certains sorts. En tant qu'action, vous pouvez dépenser 2 points de ki pour lancer Ténèbres, Vision dans le noir, Passer sans trace ou Silence, sans fournir de composants matériels. De plus, vous gagnez le cantrip Minor Illusion si vous ne le connaissez pas déjà.",
+      "name_en": "Shadow Arts"
+    },
+    {
+      "name": "Étape de l'ombre",
+      "level": 6,
+      "desc": "Au niveau 6, vous gagnez la capacité de passer d’une ombre à une autre. Lorsque vous êtes dans une faible lumière ou dans l'obscurité, par une action bonus, vous pouvez vous téléporter jusqu'à 60 pieds dans un espace inoccupé que vous pouvez voir et qui est également dans une faible lumière ou dans l'obscurité. Vous avez alors l'avantage sur la première attaque de mêlée que vous effectuez avant la fin du tour.",
+      "name_en": "Shadow Step"
+    },
+    {
+      "name": "Cape des ombres",
+      "level": 11,
+      "desc": "Au niveau 11, vous avez appris à ne faire qu'un avec les ombres. Lorsque vous vous trouvez dans une zone de faible luminosité ou d’obscurité, vous pouvez utiliser votre action pour devenir invisible. Vous restez invisible jusqu'à ce que vous effectuiez une attaque, que vous lanciez un sort ou que vous soyez dans une zone de lumière vive.",
+      "name_en": "Cloak of Shadows"
+    },
+    {
+      "name": "Opportuniste",
+      "level": 17,
+      "desc": "Au niveau 17, vous pouvez exploiter la distraction momentanée d'une créature lorsqu'elle est touchée par une attaque. Chaque fois qu'une créature à moins de 1,50 mètre de vous est touchée par une attaque lancée par une créature autre que vous, vous pouvez utiliser votre réaction pour lancer une attaque au corps à corps contre cette créature.",
+      "name_en": "Opportunist"
+    }
+  ],
+  "name_en": "Monk: Way of Shadow",
+  "_translated": true
+}

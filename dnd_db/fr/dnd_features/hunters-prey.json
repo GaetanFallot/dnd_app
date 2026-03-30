@@ -1,0 +1,13 @@
+{
+  "index": "hunters-prey",
+  "name": "La proie du chasseur",
+  "level": 3,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Au niveau 3, vous gagnez l'une des fonctionnalités suivantes de votre choix.\nTueur de colosses\nTueur géant\nBrise-horde"
+  ],
+  "name_en": "Hunter's Prey",
+  "class_name_fr": "",
+  "_translated": true
+}

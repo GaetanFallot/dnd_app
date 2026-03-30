@@ -1,0 +1,14 @@
+{
+  "index": "dual-wielder",
+  "name": "Double porteur",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous maîtrisez le combat avec deux armes, bénéficiant des avantages suivants :",
+  "benefits": [
+    "Vous gagnez un bonus de +1 à la CA lorsque vous utilisez une arme de mêlée distincte dans chaque main.",
+    "Vous pouvez utiliser le combat à deux armes même lorsque les armes de mêlée à une main que vous utilisez ne sont pas légères.",
+    "Vous pouvez dégainer ou ranger deux armes à une main alors que vous ne pourriez normalement dégainer ou ranger qu'une seule."
+  ],
+  "name_en": "Dual Wielder",
+  "_translated": true
+}

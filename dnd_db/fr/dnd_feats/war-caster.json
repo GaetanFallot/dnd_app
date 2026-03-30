@@ -1,0 +1,14 @@
+{
+  "index": "war-caster",
+  "name": "Lanceur de guerre",
+  "source": "Player's Handbook",
+  "prerequisite": "La capacité de lancer au moins un sort",
+  "desc": "Vous vous êtes entraîné à lancer des sorts en plein combat, apprenant des techniques qui vous accordent les avantages suivants :",
+  "benefits": [
+    "Vous avez un avantage sur les jets de sauvegarde de Constitution que vous effectuez pour maintenir votre concentration sur un sort lorsque vous subissez des dégâts.",
+    "Vous pouvez exécuter les composantes somatiques des sorts même si vous avez des armes ou un bouclier dans une ou dans les deux mains.",
+    "Lorsque le mouvement d'une créature hostile provoque une attaque d'opportunité de votre part, vous pouvez utiliser votre réaction pour lancer un sort sur la créature, plutôt que de lancer une attaque d'opportunité. Le sort doit avoir un temps d'incantation de 1 action et doit cibler uniquement cette créature."
+  ],
+  "name_en": "War Caster",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "barbarian-unarmored-defense",
+  "name": "Défense sans armure",
+  "level": 1,
+  "class": "barbarian",
+  "subclass": null,
+  "desc": [
+    "Tant que vous ne portez aucune armure, votre classe d'armure est égale à 10 + votre modificateur de Dextérité + votre modificateur de Constitution. Vous pouvez utiliser un bouclier tout en bénéficiant de cet avantage."
+  ],
+  "name_en": "Unarmored Defense",
+  "class_name_fr": "",
+  "_translated": true
+}

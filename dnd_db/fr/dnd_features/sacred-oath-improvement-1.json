@@ -1,0 +1,13 @@
+{
+  "index": "sacred-oath-improvement-1",
+  "name": "Fonctionnalité de serment sacré",
+  "level": 7,
+  "class": "paladin",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous atteignez le niveau 3, vous prêtez le serment qui vous lie à jamais en tant que paladin. Jusqu’à présent, vous étiez dans une phase préparatoire, engagés sur le chemin mais pas encore juré de l’emprunter. Maintenant, vous choisissez un serment, comme le serment de dévotion.\nVotre choix vous accorde des fonctionnalités au niveau 3 et encore aux niveaux 7, 15 et 20. Ces fonctionnalités incluent les sorts de serment et la fonctionnalité Channel Divinity."
+  ],
+  "name_en": "Sacred Oath feature",
+  "class_name_fr": "",
+  "_translated": true
+}

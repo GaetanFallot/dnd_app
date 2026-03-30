@@ -1,0 +1,13 @@
+{
+  "index": "stillness-of-mind",
+  "name": "Calme d'esprit",
+  "level": 7,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 7, vous pouvez utiliser votre action pour mettre fin à un effet sur vous-même qui vous charme ou vous effraie."
+  ],
+  "name_en": "Stillness of Mind",
+  "class_name_fr": "",
+  "_translated": true
+}

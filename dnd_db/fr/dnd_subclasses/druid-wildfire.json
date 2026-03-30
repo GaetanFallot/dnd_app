@@ -1,0 +1,42 @@
+{
+  "index": "druid-wildfire",
+  "name": "Druide : Cercle de feux de forêt",
+  "class": "druid",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Les druides du Cercle des Feux de forêt comprennent que la destruction est parfois le précurseur de la création, comme lorsqu'un incendie de forêt favorise une croissance ultérieure. Ces druides se lient à un esprit primordial qui recèle un pouvoir à la fois destructeur et créatif, leur permettant de créer des flammes contrôlées qui brûlent une chose mais donnent vie à une autre.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Sorts de cercle",
+      "level": 2,
+      "desc": "Lorsque vous rejoignez ce cercle au niveau 2, vous avez formé un lien avec un esprit de feu de forêt, un être primordial de création et de destruction. Votre lien avec cet esprit vous donne accès à certains sorts lorsque vous atteignez certains niveaux dans cette classe, comme indiqué sur le tableau des sorts du Cercle des Feu de forêt.\n\nUne fois que vous avez accès à l'un de ces sorts, vous l'avez toujours préparé, et cela ne compte pas dans le nombre de sorts que vous pouvez préparer chaque jour. Si vous accédez à un sort qui n'apparaît pas dans la liste des sorts de druide, le sort est néanmoins un sort de druide pour vous.\nNiveau Druide | Sorts\n2ème | Brûler les mains, guérir les blessures\n3ème | Sphère enflammée, rayon brûlant\n5ème | Croissance des plantes, revivifier\n7ème | Aura de vie, bouclier de feu\n9ème | Frappe de flammes, guérison de masse des blessures",
+      "name_en": "Circle Spells"
+    },
+    {
+      "name": "Invoquer un esprit de feu sauvage",
+      "level": 2,
+      "desc": "Au niveau 2, vous pouvez invoquer l'esprit primordial lié à votre âme. Par une action, vous pouvez dépenser une utilisation de votre fonction Forme sauvage pour invoquer votre esprit de feu de forêt, plutôt que de prendre une forme de bête.\n\nL'esprit apparaît dans un espace inoccupé de votre choix que vous pouvez voir à moins de 9 mètres de vous. Chaque créature à moins de 3 mètres de l'esprit (autre que vous) lorsqu'il apparaît doit réussir un jet de sauvegarde de Dextérité contre votre DD de sauvegarde de sort ou subir 2d6 dégâts de feu.\n\nL’esprit est amical envers vous et vos compagnons et obéit à vos ordres. Consultez les statistiques de jeu de cette créature dans le bloc de statistiques Wildfire Spirit, qui utilise votre bonus de maîtrise (PB) à plusieurs endroits. Vous déterminez l'apparence de l'esprit. Certains esprits prennent la forme d'une figure humanoïde faite de branches noueuses couvertes de flammes, tandis que d'autres ressemblent à des bêtes entourées de feu.\n\nAu combat, l'esprit partage votre nombre d'initiatives, mais il prend son tour immédiatement après le vôtre. La seule action qu'il effectue à son tour est l'action Esquiver, à moins que vous n'effectuiez une action bonus à votre tour pour lui ordonner d'effectuer une autre action. Cette action peut être une action dans son bloc de statistiques ou une autre action. Si vous êtes frappé d'incapacité, l'esprit peut entreprendre n'importe quelle action de son choix, pas seulement Esquiver.\n\nL'esprit se manifeste pendant 1 heure, jusqu'à ce qu'il soit réduit à 0 point de vie, jusqu'à ce que vous utilisiez cette fonctionnalité pour invoquer à nouveau l'esprit, ou jusqu'à votre mort.\nEsprit de feu de forêt\nPetit élémentaire\nClasse d'armure : 13 (armure naturelle)\nPoints de vie : 5 + cinq fois votre niveau de druide\nVitesse : 30 pieds, vol 30 pieds (vol stationnaire)\nSTR | DEX | ESCROQUER | INT | SIE | CHA\n10 (+0) | 14 (+2) | 14 (+2) | 13 (+1) | 15 (+2) | 11 (+0)\nImmunités aux dégâts : feu\nImmunités aux conditions : charmé, effrayé, aux prises, à terre, retenu\nSens : vision dans le noir à 18 pieds, perception passive 12\nLangues : comprend les langues que vous parlez\nDéfi : –\nBonus de compétence : équivaut à votre bonus\nActions\nGraine de flamme. Attaque avec arme à distance : votre modificateur d'attaque de sort pour toucher, portée de 60 pieds, une cible que vous pouvez voir. Touché : 1d6 + PB dégâts de feu.\nTéléportation enflammée. L'esprit et chaque créature volontaire de votre choix à moins de 1,50 mètre de lui se téléportent jusqu'à 15 pieds vers des espaces inoccupés que vous pouvez voir. Ensuite, chaque créature à moins de 1,50 mètre de l'espace laissé par l'esprit doit réussir un jet de sauvegarde de Dextérité contre votre DD de sauvegarde de sort ou subir 1d6 + PB de dégâts de feu.",
+      "name_en": "Summon Wildfire Spirit"
+    },
+    {
+      "name": "Lien amélioré",
+      "level": 6,
+      "desc": "Au niveau 6, le lien avec votre esprit de feu de forêt améliore vos sorts destructeurs et réparateurs. Chaque fois que vous lancez un sort qui inflige des dégâts de feu ou restaure des points de vie pendant que votre esprit de feu de forêt est invoqué, lancez un d8 et vous gagnez un bonus égal au nombre obtenu pour un jet de dégâts ou de guérison du sort.\n\nDe plus, lorsque vous lancez un sort avec une portée autre que vous-même, le sort peut provenir de vous ou de votre esprit de feu de forêt.",
+      "name_en": "Enhanced Bond"
+    },
+    {
+      "name": "Flammes cautérisantes",
+      "level": 10,
+      "desc": "Au niveau 10, vous acquérez la capacité de transformer la mort en flammes magiques capables de guérir ou d'incinérer. Lorsqu'une créature de petite taille ou plus grande meurt à moins de 9 mètres de vous ou de votre esprit de feu de forêt, une flamme spectrale inoffensive jaillit dans l'espace de la créature morte et y scintille pendant 1 minute. Lorsqu'une créature que vous pouvez voir entre dans cet espace, vous pouvez utiliser votre réaction pour éteindre la flamme spectrale et soit soigner la créature, soit lui infliger des dégâts de feu. Les soins ou dégâts sont égaux à 2d10 + votre modificateur de Sagesse.\n\nVous pouvez utiliser cette réaction un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Cauterizing Flames"
+    },
+    {
+      "name": "Un renouveau flamboyant",
+      "level": 14,
+      "desc": "Au niveau 14, le lien avec votre esprit de feu de forêt peut vous sauver de la mort. Si l'esprit se trouve à moins de 120 pieds de vous lorsque vous êtes réduit à 0 point de vie et que vous tombez ainsi inconscient, vous pouvez faire tomber l'esprit à 0 point de vie. Vous récupérez alors la moitié de vos points de vie et vous relevez immédiatement.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Blazing Revival"
+    }
+  ],
+  "name_en": "Druid: Circle of Wildfire",
+  "_translated": true
+}

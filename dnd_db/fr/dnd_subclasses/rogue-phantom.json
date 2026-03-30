@@ -1,0 +1,42 @@
+{
+  "index": "rogue-phantom",
+  "name": "Voleur : Fantôme",
+  "class": "rogue",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "De nombreux voleurs marchent sur une ligne ténue entre la vie et la mort, risquant leur propre vie et ôtant celle des autres. En s'aventurant sur cette ligne, certains voleurs découvrent un lien mystique avec la mort elle-même. Ces voleurs prennent la connaissance des morts et se plongent dans l'énergie négative, devenant finalement comme des fantômes. Les guildes de voleurs les considèrent comme des collecteurs d'informations et des espions très efficaces.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Murmures des morts",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cet archétype au niveau 3, les échos de ceux qui sont morts s'accrochent à vous. Chaque fois que vous terminez un repos court ou long, vous pouvez acquérir une compétence ou un outil de votre choix, car une présence fantomatique partage ses connaissances avec vous. Vous perdez cette compétence lorsque vous utilisez cette fonctionnalité pour choisir une autre compétence qui vous manque.",
+      "name_en": "Whispers of the Dead"
+    },
+    {
+      "name": "Gémissements de la tombe",
+      "level": 3,
+      "desc": "Au niveau 3, lorsque vous rapprochez quelqu'un de la tombe, vous pouvez également canaliser le pouvoir de la mort pour nuire à quelqu'un d'autre. Immédiatement après avoir infligé vos dégâts d'attaque sournoise à une créature pendant votre tour, vous pouvez cibler une deuxième créature que vous pouvez voir à moins de 9 mètres de la première créature. Lancez la moitié du nombre de dés d'attaque sournoise correspondant à votre niveau (arrondi au supérieur), et la deuxième créature subit des dégâts nécrotiques égaux au total du lancer, tandis que les gémissements des morts résonnent autour d'elle pendant un instant.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Wails from the Grave"
+    },
+    {
+      "name": "Les jetons des défunts",
+      "level": 9,
+      "desc": "Au niveau 9, lorsqu'une vie se termine en votre présence, vous pouvez arracher un jeton à l'âme qui s'en va, un fragment de son essence vitale qui prend une forme physique : en réaction lorsqu'une créature que vous pouvez voir meurt à moins de 9 mètres de vous, vous pouvez ouvrir votre main libre et y faire apparaître un petit bijou, un bijou d'âme. Le MD détermine la forme du bijou ou vous demande de lancer un jet sur le tableau des bibelots du manuel du joueur pour le générer.\n\nVous pouvez avoir un nombre maximum de bibelots d'âme égal à votre bonus de maîtrise, et vous ne pouvez pas en créer un tant que vous avez atteint votre maximum.\n\nVous pouvez utiliser les bibelots d’âme des manières suivantes :\n• Tant qu'un bijou d'âme est sur vous, vous avez un avantage aux jets de sauvegarde contre la mort et aux jets de sauvegarde de Constitution, car votre vitalité est renforcée par l'essence vitale contenue dans l'objet.\n• Lorsque vous infligez des dégâts d'Attaque sournoise pendant votre tour, vous pouvez détruire l'un de vos bibelots d'âme qui se trouve sur vous, puis utiliser immédiatement Wails from the Grave, sans dépenser d'utilisation de cette fonctionnalité.\n• Par une action, vous pouvez détruire l'un de vos bibelots d'âme, peu importe où il se trouve. Ce faisant, vous pouvez poser une question à l’esprit associé au bijou. L'esprit vous apparaît et vous répond dans une langue qu'il a connue de son vivant. Il n'a aucune obligation d'être honnête et il répond le plus brièvement possible, désireux d'être libre. L'esprit ne sait que ce qu'il a connu dans la vie, tel que déterminé par le DM.",
+      "name_en": "Tokens of the Departed"
+    },
+    {
+      "name": "Marche des fantômes",
+      "level": 13,
+      "desc": "Au niveau 13, vous pouvez entrer partiellement dans le royaume des morts, devenant comme un fantôme. Par une action bonus, vous prenez une forme spectrale. Sous cette forme, vous avez une vitesse de vol de 10 pieds, vous pouvez planer et les jets d'attaque ont un désavantage contre vous. Vous pouvez également vous déplacer à travers des créatures et des objets comme s'il s'agissait d'un terrain difficile, mais vous subissez 1d10 dégâts de force si vous terminez votre tour à l'intérieur d'une créature ou d'un objet.\n\nVous restez sous cette forme pendant 10 minutes ou jusqu'à ce que vous y mettiez fin sous forme d'action bonus. Pour utiliser à nouveau cette fonctionnalité, vous devez terminer un long repos ou détruire l'un de vos bibelots d'âme dans le cadre de l'action bonus que vous utilisez pour activer Ghost Walk.",
+      "name_en": "Ghost Walk"
+    },
+    {
+      "name": "L'ami de la mort",
+      "level": 17,
+      "desc": "Au niveau 17, votre association avec la mort est devenue si étroite que vous bénéficiez des avantages suivants :\n• Lorsque vous utilisez vos Lamentations de la Tombe, vous pouvez désormais infliger des dégâts nécrotiques à la première et à la deuxième créature.\n• À la fin d'un long repos, un bijou d'âme apparaît dans votre main si vous n'en avez pas, car les esprits des morts sont attirés vers vous.",
+      "name_en": "Death's Friend"
+    }
+  ],
+  "name_en": "Rogue: Phantom",
+  "_translated": true
+}

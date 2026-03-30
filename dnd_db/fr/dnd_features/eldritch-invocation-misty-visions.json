@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-misty-visions",
+  "name": "Invocation surnaturelle : Visions brumeuses",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer une image silencieuse à volonté, sans dépenser d'emplacement de sort ni de composants matériels."
+  ],
+  "name_en": "Eldritch Invocation: Misty Visions",
+  "class_name_fr": "",
+  "_translated": true
+}

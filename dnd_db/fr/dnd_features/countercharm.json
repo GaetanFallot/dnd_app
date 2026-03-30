@@ -1,0 +1,13 @@
+{
+  "index": "countercharm",
+  "name": "Contre-charme",
+  "level": 6,
+  "class": "bard",
+  "subclass": null,
+  "desc": [
+    "Au niveau 6, vous gagnez la capacité d'utiliser des notes de musique ou des mots de pouvoir pour perturber les effets d'influence mentale. Par une action, vous pouvez démarrer une représentation qui dure jusqu'à la fin de votre prochain tour. Pendant ce temps, vous et toutes les créatures amies à moins de 9 mètres de vous avez un avantage aux jets de sauvegarde contre l'effroi ou le charme. Une créature doit être capable de vous entendre pour bénéficier de cet avantage. La représentation se termine plus tôt si vous êtes frappé d'incapacité ou réduit au silence ou si vous y mettez volontairement fin (aucune action requise)."
+  ],
+  "name_en": "Countercharm",
+  "class_name_fr": "",
+  "_translated": true
+}

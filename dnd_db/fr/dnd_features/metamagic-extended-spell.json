@@ -1,0 +1,13 @@
+{
+  "index": "metamagic-extended-spell",
+  "name": "Métamagie : sort prolongé",
+  "level": 3,
+  "class": "sorcerer",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez un sort d'une durée de 1 minute ou plus, vous pouvez dépenser 1 point de sorcellerie pour doubler sa durée, jusqu'à une durée maximale de 24 heures."
+  ],
+  "name_en": "Metamagic: Extended Spell",
+  "class_name_fr": "",
+  "_translated": true
+}

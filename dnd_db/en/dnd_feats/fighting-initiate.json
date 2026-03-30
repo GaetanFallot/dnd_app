@@ -1,0 +1,8 @@
+{
+  "index": "fighting-initiate",
+  "name": "Fighting Initiate",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": "Proficiency with a martial weapon",
+  "desc": "Your martial training has helped you develop a particular style of fighting. As a result, you learn one Fighting Style option of your choice from the fighter class. If you already have a style, the one you choose must be different.",
+  "benefits": []
+}

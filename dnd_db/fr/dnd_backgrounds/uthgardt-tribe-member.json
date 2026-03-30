@@ -1,0 +1,14 @@
+{
+  "index": "uthgardt-tribe-member",
+  "name": "Background: Uthgardt Tribe Member",
+  "source": "Sword Coast Adventurer's Guide",
+  "desc": "Though you might have only recently arrived in civilized lands, you are no stranger to the values of cooperation and group effort when striving for supremacy. You learned these principles, and much more, as a member of an Uthgardt tribe.\n\nYour people have always tried to hold to the old ways. Tradition and taboo have kept the Uthgardt strong while the kingdoms of others have collapsed into chaos and ruin. But for the last few generations, some bands among the tribes were tempted to settle, make peace, trade, and even to build towns. Perhaps this is why Uthgar chose to raise up the totems among the people as living embodiments of his power. Perhaps they needed a reminder of who they were and from whence they came. The Chosen of Uthgar led bands back to the old ways, and most of your people abandoned the soft ways of civilization.\n\nYou might have grown up in one of the tribes that had decided to settle down, and now that they have abandoned that path, you find yourself adrift. Or you might come from a segment of the Uthgardt that adheres to tradition, but you seek to bring glory to your tribe by achieving great things as a formidable adventurer.\n\nSee the \"Uthgardt Tribes and Their Territories\" section below for details on each tribe's territory and its activities that will help you choose your affiliation.\n\nSkill Proficiencies: Athletics, Survival\nTool Proficiencies: One type of musical instrument or artisan's tools\nLanguages: One of your choice\nEquipment: A hunting trapValue:5gp Weight:25lbs, a totemic token or set of tattoos marking your loyalty to Uthgar and your tribal totem, a set of traveler's clothesValue:2gp Weight:4lbs, and a pouchValue:5sp Weight:1lb containing 10gp",
+  "skill_proficiencies": [
+    "Athletics",
+    "Survival\nTool Proficiencies: One type of musical instrument or artisan's tools\nLanguages: One of your choice\nEquipment: A hunting trapValue:5gp Weight:25lbs",
+    "a totemic token or set of tattoos marking your loyalty to Uthgar and your tribal totem",
+    "a set of traveler's clothesValue:2gp Weight:4lbs",
+    "and a pouchValue:5sp Weight:1lb containing 10gp"
+  ],
+  "feature": null
+}

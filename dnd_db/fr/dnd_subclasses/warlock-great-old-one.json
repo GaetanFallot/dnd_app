@@ -1,0 +1,42 @@
+{
+  "index": "warlock-great-old-one",
+  "name": "Warlock : Le Grand Ancien",
+  "class": "warlock",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Votre patron est une entité mystérieuse dont la nature est totalement étrangère au tissu de la réalité. Il pourrait provenir du Royaume Lointain, de l'espace au-delà de la réalité, ou il pourrait s'agir de l'un des dieux les plus anciens connus uniquement dans les légendes. Ses motivations sont incompréhensibles pour les mortels, et ses connaissances si immenses et anciennes que même les plus grandes bibliothèques pâlissent en comparaison des vastes secrets qu’elles recèlent. Le Grand Ancien ignore peut-être votre existence ou est totalement indifférent à votre égard, mais les secrets que vous avez appris vous permettent d'en tirer votre magie.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Liste de sorts étendue",
+      "level": null,
+      "desc": "Le Grand Ancien vous permet de choisir parmi une liste étendue de sorts lorsque vous apprenez un sort de démoniste. Les sorts suivants sont ajoutés à la liste des sorts de démoniste pour vous.\nSorts étendus du Grand Ancien\nNiveau de sort | Sorts\n1er | Murmures dissonantes, rire hideux de Tasha\n2ème | Détecter les pensées, force fantasmatique\n3ème | Clairvoyance, Envoi\n4ème | Dominez la bête, les tentacules noires d'Evard\n5ème | Personne dominante, télékinésie",
+      "name_en": "Expanded Spell List"
+    },
+    {
+      "name": "Esprit éveillé",
+      "level": 1,
+      "desc": "Dès le niveau 1, vos connaissances extraterrestres vous donnent la possibilité de toucher l'esprit d'autres créatures. Vous pouvez parler par télépathie à toute créature que vous pouvez voir à moins de 9 mètres de vous. Vous n'avez pas besoin de partager une langue avec la créature pour qu'elle comprenne vos paroles télépathiques, mais la créature doit être capable de comprendre au moins une langue.",
+      "name_en": "Awakened Mind"
+    },
+    {
+      "name": "Salle entropique",
+      "level": 6,
+      "desc": "Au niveau 6, vous apprenez à vous protéger magiquement contre les attaques et à transformer l'attaque ratée d'un ennemi en porte-bonheur pour vous-même. Lorsqu'une créature effectue un jet d'attaque contre vous, vous pouvez utiliser votre réaction pour imposer un désavantage à ce jet. Si l'attaque vous manque, votre prochain jet d'attaque contre la créature a un avantage si vous le faites avant la fin de votre prochain tour.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Entropic Ward"
+    },
+    {
+      "name": "Bouclier de pensée",
+      "level": 10,
+      "desc": "À partir du niveau 10, vos pensées ne peuvent plus être lues par télépathie ou par d'autres moyens, sauf si vous l'autorisez. Vous avez également une résistance aux dégâts psychiques, et chaque fois qu'une créature vous inflige des dégâts psychiques, cette créature subit le même nombre de dégâts que vous.",
+      "name_en": "Thought Shield"
+    },
+    {
+      "name": "Créer un esclave",
+      "level": 14,
+      "desc": "Au niveau 14, vous obtenez la capacité d'infecter l'esprit d'un humanoïde avec la magie extraterrestre de votre patron. Vous pouvez utiliser votre action pour toucher un humanoïde incapable. Cette créature est ensuite charmée par vous jusqu'à ce qu'un sort Supprimer la malédiction soit lancé sur elle, que la condition charmée en soit supprimée ou que vous utilisiez à nouveau cette fonctionnalité.\n\nVous pouvez communiquer par télépathie avec la créature charmée tant que vous êtes tous les deux sur le même plan d'existence.",
+      "name_en": "Create Thrall"
+    }
+  ],
+  "name_en": "Warlock: The Great Old One",
+  "_translated": true
+}

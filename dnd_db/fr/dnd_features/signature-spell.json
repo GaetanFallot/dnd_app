@@ -1,0 +1,13 @@
+{
+  "index": "signature-spell",
+  "name": "Sort de signature",
+  "level": 20,
+  "class": "wizard",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous atteignez le niveau 20, vous maîtrisez deux sorts puissants et pouvez les lancer avec peu d’effort. Choisissez deux sorts de sorcier de niveau 3 dans votre livre de sorts comme sorts de signature. Vous avez toujours ces sorts préparés, ils ne comptent pas dans le nombre de sorts que vous avez préparés, et vous pouvez lancer chacun d'eux une fois au niveau 3 sans dépenser d'emplacement de sort. Lorsque vous le faites, vous ne pouvez plus le faire avant d'avoir terminé un repos court ou long.\nSi vous souhaitez lancer l'un ou l'autre sort à un niveau supérieur, vous devez dépenser un emplacement de sort comme d'habitude."
+  ],
+  "name_en": "Signature Spell",
+  "class_name_fr": "",
+  "_translated": true
+}

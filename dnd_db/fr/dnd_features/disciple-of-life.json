@@ -1,0 +1,13 @@
+{
+  "index": "disciple-of-life",
+  "name": "Disciple de Vie",
+  "level": 1,
+  "class": "cleric",
+  "subclass": "life",
+  "desc": [
+    "Dès le niveau 1 également, vos sorts de soins sont plus efficaces. À chaque fois que vous utilisez un sort de niveau 1 ou supérieur pour redonner des points de vie à une créature, la créature récupère des points de vie supplémentaires égaux à 2 + le niveau du sort."
+  ],
+  "name_en": "Disciple of Life",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,356 @@
+{
+  "index": "rogue",
+  "name": "Rogue",
+  "hit_die": 8,
+  "proficiencies": [
+    "Light Armor",
+    "Simple Weapons",
+    "Longswords",
+    "Rapiers",
+    "Shortswords",
+    "Hand crossbows",
+    "Thieves' Tools",
+    "Saving Throw: DEX",
+    "Saving Throw: INT"
+  ],
+  "saving_throws": [
+    "DEX",
+    "INT"
+  ],
+  "proficiency_choices": [
+    {
+      "desc": "Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth",
+      "choose": 4,
+      "options": [
+        "Skill: Acrobatics",
+        "Skill: Athletics",
+        "Skill: Deception",
+        "Skill: Insight",
+        "Skill: Intimidation",
+        "Skill: Investigation",
+        "Skill: Perception",
+        "Skill: Performance",
+        "Skill: Persuasion",
+        "Skill: Sleight of Hand",
+        "Skill: Stealth"
+      ]
+    }
+  ],
+  "starting_equipment": [
+    {
+      "equipment": {
+        "index": "leather-armor",
+        "name": "Leather Armor",
+        "url": "/api/2014/equipment/leather-armor"
+      },
+      "quantity": 1
+    },
+    {
+      "equipment": {
+        "index": "dagger",
+        "name": "Dagger",
+        "url": "/api/2014/equipment/dagger"
+      },
+      "quantity": 2
+    },
+    {
+      "equipment": {
+        "index": "thieves-tools",
+        "name": "Thieves' Tools",
+        "url": "/api/2014/equipment/thieves-tools"
+      },
+      "quantity": 1
+    }
+  ],
+  "subclasses": [
+    "thief"
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "prof_bonus": 2,
+      "features": [
+        "rogue-expertise-1",
+        "sneak-attack",
+        "thieves-cant"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 1,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 2,
+      "prof_bonus": 2,
+      "features": [
+        "cunning-action"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 1,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 3,
+      "prof_bonus": 2,
+      "features": [
+        "roguish-archetype"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 2,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 4,
+      "prof_bonus": 2,
+      "features": [
+        "rogue-ability-score-improvement-1"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 2,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 5,
+      "prof_bonus": 3,
+      "features": [
+        "uncanny-dodge"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 3,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 6,
+      "prof_bonus": 3,
+      "features": [
+        "rogue-expertise-2"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 3,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 7,
+      "prof_bonus": 3,
+      "features": [
+        "rogue-evasion"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 4,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 8,
+      "prof_bonus": 3,
+      "features": [
+        "rogue-ability-score-improvement-2"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 4,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 9,
+      "prof_bonus": 4,
+      "features": [
+        "roguish-archetype-improvement-1"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 5,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 10,
+      "prof_bonus": 4,
+      "features": [
+        "rogue-ability-score-improvement-3"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 5,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 11,
+      "prof_bonus": 4,
+      "features": [
+        "reliable-talent"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 6,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 12,
+      "prof_bonus": 4,
+      "features": [
+        "rogue-ability-score-improvement-4"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 6,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 13,
+      "prof_bonus": 5,
+      "features": [
+        "roguish-archetype-improvement-2"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 7,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 14,
+      "prof_bonus": 5,
+      "features": [
+        "blindsense"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 7,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 15,
+      "prof_bonus": 5,
+      "features": [
+        "slippery-mind"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 8,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 16,
+      "prof_bonus": 5,
+      "features": [
+        "rogue-ability-score-improvement-5"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 8,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 17,
+      "prof_bonus": 6,
+      "features": [
+        "roguish-archetype-improvement-3"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 9,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 18,
+      "prof_bonus": 6,
+      "features": [
+        "elusive"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 9,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 19,
+      "prof_bonus": 6,
+      "features": [
+        "rogue-ability-score-improvement-6"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 10,
+          "dice_value": 6
+        }
+      }
+    },
+    {
+      "level": 20,
+      "prof_bonus": 6,
+      "features": [
+        "stroke-of-luck"
+      ],
+      "class_specific": {
+        "sneak_attack": {
+          "dice_count": 10,
+          "dice_value": 6
+        }
+      }
+    }
+  ],
+  "feature_indices": [
+    "rogue-expertise-1",
+    "sneak-attack",
+    "thieves-cant",
+    "cunning-action",
+    "roguish-archetype",
+    "rogue-ability-score-improvement-1",
+    "uncanny-dodge",
+    "rogue-expertise-2",
+    "rogue-evasion",
+    "rogue-ability-score-improvement-2",
+    "roguish-archetype-improvement-1",
+    "rogue-ability-score-improvement-3",
+    "reliable-talent",
+    "rogue-ability-score-improvement-4",
+    "roguish-archetype-improvement-2",
+    "blindsense",
+    "slippery-mind",
+    "rogue-ability-score-improvement-5",
+    "roguish-archetype-improvement-3",
+    "elusive",
+    "rogue-ability-score-improvement-6",
+    "stroke-of-luck"
+  ]
+}

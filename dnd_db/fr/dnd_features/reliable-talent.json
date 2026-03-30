@@ -1,0 +1,13 @@
+{
+  "index": "reliable-talent",
+  "name": "Talent fiable",
+  "level": 11,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "Au niveau 11, vous avez affiné les compétences que vous avez choisies jusqu'à ce qu'elles se rapprochent de la perfection. Chaque fois que vous effectuez un test de capacité qui vous permet d'ajouter votre bonus de maîtrise, vous pouvez traiter un résultat d20 de 9 ou moins comme un 10."
+  ],
+  "name_en": "Reliable Talent",
+  "class_name_fr": "",
+  "_translated": true
+}

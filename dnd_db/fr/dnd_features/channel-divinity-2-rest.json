@@ -1,0 +1,13 @@
+{
+  "index": "channel-divinity-2-rest",
+  "name": "Canal Divinité (2/repos)",
+  "level": 6,
+  "class": "cleric",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 6, vous pouvez utiliser votre Channel Divinity deux fois entre les repos, et à partir du niveau 18, vous pouvez l'utiliser trois fois entre les repos. Lorsque vous terminez un repos court ou long, vous récupérez vos utilisations dépensées."
+  ],
+  "name_en": "Channel Divinity (2/rest)",
+  "class_name_fr": "",
+  "_translated": true
+}

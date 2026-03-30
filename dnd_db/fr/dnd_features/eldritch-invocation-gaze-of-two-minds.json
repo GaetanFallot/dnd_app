@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-gaze-of-two-minds",
+  "name": "Invocation Eldritch : Regard de deux esprits",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez utiliser votre action pour toucher un humanoïde consentant et percevoir à travers ses sens jusqu'à la fin de votre prochain tour. Tant que la créature est sur le même plan d'existence que vous, vous pouvez utiliser votre action lors des tours suivants pour maintenir cette connexion, prolongeant ainsi la durée jusqu'à la fin de votre prochain tour. Tout en percevant à travers les sens de l'autre créature, vous bénéficiez de tous les sens spéciaux possédés par cette créature, et vous êtes aveuglé et assourdi par rapport à votre propre environnement."
+  ],
+  "name_en": "Eldritch Invocation: Gaze of Two Minds",
+  "class_name_fr": "",
+  "_translated": true
+}

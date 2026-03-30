@@ -1,0 +1,13 @@
+{
+  "index": "thieves-cant",
+  "name": "Les voleurs ne peuvent pas",
+  "level": 1,
+  "class": "rogue",
+  "subclass": null,
+  "desc": [
+    "Au cours de votre formation de voleur, vous avez appris le langage des voleurs, un mélange secret de dialecte, de jargon et de code qui vous permet de cacher des messages dans une conversation apparemment normale. Seule une autre créature qui connaît les voleurs ne peut pas comprendre de tels messages. Il faut quatre fois plus de temps pour transmettre un tel message que pour exprimer clairement la même idée.\nDe plus, vous comprenez un ensemble de signes et de symboles secrets utilisés pour transmettre des messages courts et simples, par exemple si une zone est dangereuse ou si le territoire d'une guilde de voleurs, si un butin se trouve à proximité ou si les personnes se trouvant dans une zone sont des cibles faciles ou fourniront un refuge aux voleurs en fuite."
+  ],
+  "name_en": "Thieves' Cant",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "durable",
+  "name": "Durable",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Robuste et résilient, vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Constitution de 1, jusqu'à un maximum de 20.",
+    "Lorsque vous lancez un dé de vie pour regagner des points de vie, le nombre minimum de points de vie que vous récupérez grâce au lancer est égal à deux fois votre modificateur de Constitution (minimum de 2)."
+  ],
+  "name_en": "Durable",
+  "_translated": true
+}

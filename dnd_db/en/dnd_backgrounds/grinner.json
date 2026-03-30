@@ -1,0 +1,16 @@
+{
+  "index": "grinner",
+  "name": "Background: Grinner",
+  "source": "Explorer's Guide to Wildemount",
+  "desc": "The Golden Grin began in the far-off land of Tal'Dorei trading secret messages through a network of bards and minstrels to undermine an iron-fisted king's authoritarian rule. Today, Tal'Dorei is a relatively peaceful republic, and some Grinners have grown restless while waiting for tyranny to raise its ugly head again. A contingent of such Grinners traveled to the Menagerie Coast and set up a network of secret bases in the cities of the Clovis Concord, from which they are presently working their way into the highest echelons of the Dwendalian Empire.\n\nYou are a Grinner. Your goals are to spread freedom and inspire hope - or, in time, revolution - in the hearts of the oppressed.\n\nSkill Proficiencies: Deception, Performance\nTool Proficiencies: One type of musical instrument, thieves' tools\nLanguages: None\nEquipment: A set of fine clothesValue:15gp Weight:6lbs, a disguise kitValue:25gp Weight:3lbs, a musical instrument of your choice, a gold-plated ring depicting a smiling face, and a pouchValue:5sp Weight:1lb containing 15gp.",
+  "skill_proficiencies": [
+    "Deception",
+    "Performance\nTool Proficiencies: One type of musical instrument",
+    "thieves' tools\nLanguages: None\nEquipment: A set of fine clothesValue:15gp Weight:6lbs",
+    "a disguise kitValue:25gp Weight:3lbs",
+    "a musical instrument of your choice",
+    "a gold-plated ring depicting a smiling face",
+    "and a pouchValue:5sp Weight:1lb containing 15gp."
+  ],
+  "feature": null
+}

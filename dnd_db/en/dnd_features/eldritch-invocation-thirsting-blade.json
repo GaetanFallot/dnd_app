@@ -1,0 +1,8 @@
+{
+  "index": "eldritch-invocation-thirsting-blade",
+  "name": "Eldritch Invocation: Thirsting Blade",
+  "level": 5,
+  "class": "warlock",
+  "subclass": null,
+  "desc": "You can attack with your pact weapon twice, instead of once, whenever you take the Attack action on your turn."
+}

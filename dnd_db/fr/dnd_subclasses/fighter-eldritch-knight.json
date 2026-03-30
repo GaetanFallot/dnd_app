@@ -1,0 +1,48 @@
+{
+  "index": "fighter-eldritch-knight",
+  "name": "Combattant : Chevalier surnaturel",
+  "class": "fighter",
+  "source": "Player's Handbook",
+  "subclass_flavor": "L'archétype du Chevalier Eldritch combine la maîtrise martiale commune à tous les combattants avec une étude minutieuse de la magie. Les chevaliers surnaturels utilisent des techniques magiques similaires à celles pratiquées par les sorciers. Ils concentrent leur étude sur deux des huit écoles de magie : l'abjuration et l'évocation. Les sorts d'abjuration confèrent au chevalier surnaturel une protection supplémentaire au combat, et les sorts d'évocation infligent des dégâts à plusieurs ennemis à la fois, étendant ainsi la portée du combattant au combat. Ces chevaliers apprennent un nombre relativement restreint de sorts, les mémorisant au lieu de les conserver dans un livre de sorts.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Lancement de sorts",
+      "level": 10,
+      "desc": "Lorsque vous atteignez le niveau 3, vous augmentez vos prouesses martiales grâce à la capacité de lancer des sorts.\n\nVous apprenez deux sorts mineurs de votre choix dans la liste des sorts du sorcier. Vous apprenez un sort mineur supplémentaire de sorcier de votre choix au niveau 10.\n\nLe tableau de lancement de sorts Eldritch Knight indique le nombre d'emplacements de sorts dont vous disposez pour lancer vos sorts de sorcier de niveau 1 et supérieur. Pour lancer l'un de ces sorts, vous devez dépenser un emplacement du niveau du sort ou supérieur. Vous récupérez tous les emplacements de sorts dépensés lorsque vous terminez un repos long.\n\nPar exemple, si vous connaissez le sort Bouclier de niveau 1 et que vous disposez d'un emplacement de sort de niveau 1 et de niveau 2, vous pouvez lancer Bouclier en utilisant l'un ou l'autre emplacement.\n\nVous connaissez trois sorts de sorcier de niveau 1 de votre choix, dont deux que vous devez choisir parmi les sorts d'abjuration et d'évocation de la liste des sorts de sorcier.\n\nLa colonne Sorts connus du tableau de lancement de sorts Eldritch Knight indique quand vous apprenez plus de sorts de sorcier de niveau 1 ou supérieur. Chacun de ces sorts doit être un sort d'abjuration ou d'évocation de votre choix, et doit être d'un niveau pour lequel vous disposez d'emplacements de sorts. Par exemple, lorsque vous atteignez le niveau 7 dans cette classe, vous pouvez apprendre un nouveau sort de niveau 1 ou 2.\n\nLes sorts que vous apprenez aux niveaux 8, 14 et 20 peuvent provenir de n’importe quelle école de magie.\n\nÀ chaque fois que vous gagnez un niveau dans cette classe, vous pouvez remplacer l'un des sorts de sorcier que vous connaissez par un autre sort de votre choix dans la liste des sorts de sorcier. Le nouveau sort doit être d'un niveau pour lequel vous disposez d'emplacements de sort, et il doit s'agir d'un sort d'abjuration ou d'évocation, à moins que vous ne remplaciez le sort que vous avez acquis au niveau 3, 8, 14 ou 20 dans n'importe quelle école de magie.\n\nL'intelligence est votre capacité à lancer des sorts pour vos sorts de sorcier, puisque vous apprenez vos sorts par l'étude et la mémorisation. Vous utilisez votre Intelligence chaque fois qu'un sort fait référence à votre capacité de lancer des sorts. De plus, vous utilisez votre modificateur d'Intelligence lorsque vous définissez le DD du jet de sauvegarde pour un sort de sorcier que vous lancez et lorsque vous effectuez un jet d'attaque avec celui-ci.\n\nDD de sauvegarde des sorts = 8 + votre bonus de maîtrise + votre modificateur d'Intelligence\n\nModificateur d'attaque des sorts = votre bonus de maîtrise + votre modificateur d'Intelligence",
+      "name_en": "Spellcasting"
+    },
+    {
+      "name": "Lien d'arme",
+      "level": 3,
+      "desc": "Au niveau 3, vous apprenez un rituel qui crée un lien magique entre vous et une arme. Vous effectuez le rituel sur une durée d'1 heure, qui peut être réalisé lors d'un court repos. L'arme doit être à votre portée tout au long du rituel, à l'issue duquel vous touchez l'arme et forgez le lien.\n\nUne fois que vous avez lié une arme à vous-même, vous ne pouvez pas être désarmé de cette arme à moins que vous ne soyez frappé d'incapacité. Si elle se trouve sur le même plan d'existence, vous pouvez invoquer cette arme comme une action bonus pendant votre tour, la faisant se téléporter instantanément dans votre main.\n\nVous pouvez avoir jusqu'à deux armes liées, mais vous ne pouvez en invoquer qu'une à la fois grâce à votre action bonus. Si vous tentez de créer un lien avec une troisième arme, vous devez rompre le lien avec l'une des deux autres.",
+      "name_en": "Weapon Bond"
+    },
+    {
+      "name": "Magie de guerre",
+      "level": 7,
+      "desc": "À partir du niveau 7, lorsque vous utilisez votre action pour lancer un sort mineur, vous pouvez effectuer une attaque avec une arme en tant qu'action bonus.",
+      "name_en": "War Magic"
+    },
+    {
+      "name": "Frappe surnaturelle",
+      "level": 10,
+      "desc": "Au niveau 10, vous apprenez à faire en sorte que vos frappes avec votre arme sapent la résistance d'une créature à vos sorts. Lorsque vous touchez une créature avec une attaque avec une arme, cette créature est désavantagée lors de son prochain jet de sauvegarde contre un sort que vous avez lancé avant la fin de votre prochain tour.",
+      "name_en": "Eldritch Strike"
+    },
+    {
+      "name": "Charge arcanique",
+      "level": 15,
+      "desc": "Au niveau 15, vous obtenez la possibilité de vous téléporter jusqu'à 9 mètres vers un espace inoccupé que vous pouvez voir lorsque vous utilisez votre Action Surge. Vous pouvez vous téléporter avant ou après l'action supplémentaire.",
+      "name_en": "Arcane Charge"
+    },
+    {
+      "name": "Magie de guerre améliorée",
+      "level": 18,
+      "desc": "À partir du niveau 18, lorsque vous utilisez votre action pour lancer un sort, vous pouvez effectuer une attaque avec une arme en tant qu'action bonus.",
+      "name_en": "Improved War Magic"
+    }
+  ],
+  "name_en": "Fighter: Eldritch Knight",
+  "_translated": true
+}

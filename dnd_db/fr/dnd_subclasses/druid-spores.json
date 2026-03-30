@@ -1,0 +1,48 @@
+{
+  "index": "druid-spores",
+  "name": "Druide : Cercle de spores",
+  "class": "druid",
+  "source": "Guildmaster's Guide to Ravnica, Tasha's Cauldron of Everything",
+  "subclass_flavor": "Les druides du Cercle des Spores trouvent la beauté dans la décadence. Ils voient dans la moisissure et d’autres champignons la capacité de transformer des matériaux sans vie en une vie abondante, quoique quelque peu étrange. Ces druides croient que la vie et la mort font partie d'un grand cycle, l'une menant à l'autre puis inversement. La mort n’est pas la fin de la vie, mais plutôt un changement d’état qui voit la vie prendre une nouvelle forme.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Sorts de cercle",
+      "level": 2,
+      "desc": "Votre lien symbiotique avec les champignons et votre capacité à puiser dans le cycle de la vie et de la mort vous donnent accès à certains sorts. Au niveau 2, vous apprenez le cantrip Chill Touch.\n\nAux niveaux 3, 5, 7 et 9, vous avez accès aux sorts répertoriés pour ce niveau dans le tableau des sorts du Cercle des Spores. Une fois que vous avez accès à l'un de ces sorts, vous l'avez toujours préparé, et cela ne compte pas dans le nombre de sorts que vous pouvez préparer chaque jour. Si vous accédez à un sort qui n'apparaît pas dans la liste des sorts de druide, le sort n'en est pas moins un sort de druide pour vous.\nSorts du Cercle des Spores\nNiveau Druide | Sorts de cercle\n2ème | Toucher froid\n3ème | Cécité/Surdité, Repos en douceur\n5ème | Animer une forme gazeuse morte\n7ème | Fléau, Confusion\n9ème | Tuerie des nuages, Contagion",
+      "name_en": "Circle Spells"
+    },
+    {
+      "name": "Halo de spores",
+      "level": 2,
+      "desc": "À partir du niveau 2, vous êtes entouré de spores nécrotiques invisibles qui sont inoffensives jusqu'à ce que vous les lâchiez sur une créature à proximité. Lorsqu'une créature que vous pouvez voir se déplace dans un espace à moins de 3 mètres de vous ou y commence son tour, vous pouvez utiliser votre réaction pour infliger 1d4 dégâts nécrotiques à cette créature, à moins qu'elle ne réussisse un jet de sauvegarde de Constitution contre votre DD de sauvegarde de sort. Les dégâts nécrotiques augmentent à 1d6 au niveau 6, 1d8 au niveau 10 et 1d10 au niveau 14.",
+      "name_en": "Halo of Spores"
+    },
+    {
+      "name": "Entité Symbiotique",
+      "level": 2,
+      "desc": "Au niveau 2 également, vous gagnez la capacité de canaliser la magie dans vos spores. Par une action, vous pouvez dépenser une utilisation de votre fonction Forme Sauvage pour réveiller ces spores, plutôt que de vous transformer en forme de bête, et vous gagnez 4 points de vie temporaires pour chaque niveau que vous avez dans cette classe. Tant que cette fonctionnalité est active, vous bénéficiez des avantages suivants :\n• Lorsque vous infligez des dégâts de Halo de Spores, lancez le dé de dégâts une seconde fois et ajoutez-le au total.\n• Vos attaques avec des armes de mêlée infligent 1d6 dégâts nécrotiques supplémentaires à toute cible touchée.\n\nCes avantages durent 10 minutes, jusqu'à ce que vous perdiez tous ces points de vie temporaires. ou jusqu'à ce que vous utilisiez à nouveau votre Wild Shape.",
+      "name_en": "Symbiotic Entity"
+    },
+    {
+      "name": "Infestation fongique",
+      "level": 6,
+      "desc": "Au niveau 6, vos spores acquièrent la capacité d'infester un cadavre et de l'animer. Si une bête ou un humanoïde de taille Petite ou Moyenne meurt à moins de 3 mètres de vous, vous pouvez utiliser votre réaction pour l'animer, le faisant se relever immédiatement avec 1 point de vie. La créature utilise le bloc de statistiques Zombie dans le Monster Manual. Il reste animé pendant 1 heure, après quoi il s'effondre et meurt.\n\nEn combat, le tour du zombie vient immédiatement après le vôtre. Il obéit à vos ordres mentaux et la seule action qu'il peut entreprendre est l'action d'Attaque, en effectuant une attaque au corps à corps.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Sagesse (au minimum une fois), et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Fungal Infestation"
+    },
+    {
+      "name": "Spores qui se propagent",
+      "level": 10,
+      "desc": "Au niveau 10, vous gagnez la capacité d'ensemencer une zone de spores mortelles. Par une action bonus lorsque votre fonction Entité Symbiotique est active, vous pouvez lancer des spores jusqu'à 9 mètres de distance, où elles tourbillonnent dans un cube de 3 mètres pendant 1 minute. Les spores disparaissent prématurément si vous utilisez à nouveau cette fonctionnalité, si vous les rejetez comme une action bonus ou si votre fonctionnalité Entité Symbiotique n'est plus active.\n\nChaque fois qu'une créature entre dans le cube ou y commence son tour, cette créature subit les dégâts de votre Halo de spores, à moins qu'elle ne réussisse un jet de sauvegarde de Constitution contre votre DD de sauvegarde de sort. Une créature ne peut pas subir ces dégâts plus d'une fois par tour.\n\nTant que le cube de spores persiste, vous ne pouvez pas utiliser votre réaction Halo de spores.",
+      "name_en": "Spreading Spores"
+    },
+    {
+      "name": "Corps fongique",
+      "level": 14,
+      "desc": "Au niveau 14, les spores fongiques présentes dans votre corps vous altèrent : vous ne pouvez pas être aveuglé, assourdi, effrayé ou empoisonné, et tout coup critique contre vous compte comme un coup normal, à moins que vous ne soyez incapable d'agir.",
+      "name_en": "Fungal Body"
+    }
+  ],
+  "name_en": "Druid: Circle of Spores",
+  "_translated": true
+}

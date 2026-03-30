@@ -1,0 +1,13 @@
+{
+  "index": "supreme-sneak",
+  "name": "Furtivité suprême",
+  "level": 9,
+  "class": "rogue",
+  "subclass": "thief",
+  "desc": [
+    "À partir du niveau 9, vous avez un avantage lors d'un test de Dextérité (Furtivité) si vous ne vous déplacez pas à plus de la moitié de votre vitesse au cours du même tour."
+  ],
+  "name_en": "Supreme Sneak",
+  "class_name_fr": "",
+  "_translated": true
+}

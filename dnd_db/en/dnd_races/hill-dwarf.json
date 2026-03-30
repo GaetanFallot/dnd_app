@@ -1,0 +1,15 @@
+{
+  "index": "hill-dwarf",
+  "name": "Hill Dwarf",
+  "race": "dwarf",
+  "desc": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience.",
+  "ability_bonuses": [
+    {
+      "ability": "WIS",
+      "bonus": 1
+    }
+  ],
+  "trait_indices": [
+    "dwarven-toughness"
+  ]
+}

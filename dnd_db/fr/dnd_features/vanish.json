@@ -1,0 +1,13 @@
+{
+  "index": "vanish",
+  "name": "Disparaître",
+  "level": 14,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 14, vous pouvez utiliser l'action Cacher comme une action bonus pendant votre tour. De plus, vous ne pouvez pas être suivi par des moyens non magiques, à moins que vous ne choisissiez de laisser une trace."
+  ],
+  "name_en": "Vanish",
+  "class_name_fr": "",
+  "_translated": true
+}

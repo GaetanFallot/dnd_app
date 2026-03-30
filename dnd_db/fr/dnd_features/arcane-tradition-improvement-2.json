@@ -1,0 +1,13 @@
+{
+  "index": "arcane-tradition-improvement-2",
+  "name": "Fonctionnalité Arcane Tradition",
+  "level": 10,
+  "class": "wizard",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous atteignez le niveau 2, vous choisissez une tradition arcanique, façonnant votre pratique de la magie à travers l'une des huit écoles, comme l'Évocation.\nVotre choix vous accorde des fonctionnalités au niveau 2, puis aux niveaux 6, 10 et 14."
+  ],
+  "name_en": "Arcane Tradition feature",
+  "class_name_fr": "",
+  "_translated": true
+}

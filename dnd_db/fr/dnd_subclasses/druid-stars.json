@@ -1,0 +1,42 @@
+{
+  "index": "druid-stars",
+  "name": "Druide : Cercle d'étoiles",
+  "class": "druid",
+  "source": "Tasha's Cauldron of Everything",
+  "subclass_flavor": "Le Cercle des Étoiles permet aux druides de tirer parti du pouvoir de la lumière des étoiles. Ces druides traquent les schémas célestes depuis des temps immémoriaux, découvrant des secrets cachés au milieu des constellations. En révélant et en comprenant ces secrets, le Cercle des Étoiles cherche à exploiter les puissances du cosmos.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Carte des étoiles",
+      "level": 2,
+      "desc": "Au niveau 2, vous avez créé une carte des étoiles dans le cadre de vos études célestes. C'est un objet minuscule et peut servir de foyer de lancement de sorts pour vos sorts de druide. Vous déterminez sa forme en lançant sur la table Star Map ou en en choisissant une.\n\nEn détenant cette carte, vous bénéficiez des avantages suivants :\n• Vous connaissez le sort mineur Guidage.\n• Vous avez préparé le sort Trait de Guidage. Cela compte comme un sort de druide pour vous, et cela ne compte pas dans le nombre de sorts que vous pouvez préparer.\n• Vous pouvez lancer Trait de guidage sans dépenser d'emplacement de sort. Vous pouvez le faire un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.\n\nSi vous perdez la carte, vous pouvez effectuer une cérémonie d'une heure pour créer comme par magie une carte de remplacement. Cette cérémonie peut être effectuée lors d'un repos court ou long, et elle détruit la carte précédente.\nd6 | Formulaire de carte\n1 | Un parchemin couvert de représentations de constellations\n2 | Une tablette de pierre percée de fins trous\n3 | Une peau d'ours-hibou mouchetée, ornée de marques en relief\n4 | Une collection de cartes reliées sous une couverture en ébène\n5 | Un cristal qui projette des motifs étoilés lorsqu'il est placé devant une lumière\n6 | Disques de verre représentant des constellations",
+      "name_en": "Star Map"
+    },
+    {
+      "name": "Forme étoilée",
+      "level": 2,
+      "desc": "Au niveau 2, vous obtenez la capacité d'exploiter le pouvoir des constellations pour modifier votre forme. En tant qu'action bonus, vous pouvez dépenser une utilisation de votre fonction Forme sauvage pour prendre une forme étoilée, plutôt que de vous transformer en bête.\n\nSous votre forme étoilée, vous conservez vos statistiques de jeu, mais votre corps devient lumineux ; vos articulations brillent comme des étoiles et des lignes lumineuses les relient comme sur une carte des étoiles. Cette forme projette une lumière vive dans un rayon de 10 pieds et une lumière tamisée sur 10 pieds supplémentaires. Le formulaire dure 10 minutes. Il se termine plus tôt si vous le rejetez (aucune action requise), si vous êtes frappé d'incapacité, si vous mourez ou si vous utilisez à nouveau cette fonctionnalité.\n\nChaque fois que vous prenez votre forme étoilée, choisissez laquelle des constellations suivantes scintille sur votre corps ; votre choix vous offre certains avantages sous la forme :\n\nArcher. Une constellation d'archer apparaît sur vous. Lorsque vous activez cette forme, et comme une action bonus lors de vos tours suivants pendant qu'elle dure, vous pouvez effectuer une attaque magique à distance, lançant une flèche lumineuse qui cible une créature à moins de 60 pieds de vous. En cas de coup, l'attaque inflige des dégâts radiants égaux à 1d8 + votre modificateur de Sagesse.\n\nCalice. Une constellation de coupe vivifiante apparaît sur vous. Chaque fois que vous lancez un sort en utilisant un emplacement de sort qui redonne des points de vie à une créature, vous ou une autre créature à moins de 9 mètres de vous pouvez récupérer des points de vie égaux à 1d8 + votre modificateur de Sagesse.\n\nDragon. Une constellation d'un dragon sage apparaît sur vous. Lorsque vous effectuez un test d'Intelligence ou de Sagesse ou un jet de sauvegarde de Constitution pour rester concentré sur un sort, vous pouvez traiter un résultat de 9 ou moins sur le d20 comme un 10.",
+      "name_en": "Starry Form"
+    },
+    {
+      "name": "Présage cosmique",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 6, vous apprenez à utiliser votre carte des étoiles pour deviner la volonté du cosmos. Chaque fois que vous terminez un long repos, vous pouvez consulter votre carte des étoiles pour rechercher des présages. Lorsque vous le faites, lancez un dé. Jusqu'à la fin de votre prochain repos long, vous avez accès à une réaction spéciale selon que vous avez obtenu un nombre pair ou impair sur le dé :\n\nRichesse (même). Chaque fois qu'une créature que vous pouvez voir à moins de 9 mètres de vous est sur le point d'effectuer un jet d'attaque, un jet de sauvegarde ou un test de capacité, vous pouvez utiliser votre réaction pour lancer un d6 et ajouter le nombre obtenu au total.\n\nMalheur (étrange). Chaque fois qu'une créature que vous pouvez voir à moins de 9 mètres de vous est sur le point d'effectuer un jet d'attaque, un jet de sauvegarde ou un test de capacité, vous pouvez utiliser votre réaction pour lancer un d6 et soustraire le nombre obtenu du total.\n\nVous pouvez utiliser cette réaction un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Cosmic Omen"
+    },
+    {
+      "name": "Constellations scintillantes",
+      "level": 10,
+      "desc": "Au niveau 10, les constellations de votre Forme Étoilée s'améliorent. Les 1d8 de l'Archer et du Calice deviennent 2d8, et tant que le Dragon est actif, vous avez une vitesse de vol de 20 pieds et pouvez planer.\n\nDe plus, au début de chacun de vos tours, sous votre forme étoilée, vous pouvez changer la constellation qui brille sur votre corps.",
+      "name_en": "Twinkling Constellations"
+    },
+    {
+      "name": "Plein d'étoiles",
+      "level": 14,
+      "desc": "Au niveau 14, lorsque vous êtes sous votre forme étoilée, vous devenez partiellement incorporel, vous conférant une résistance aux dégâts contondants, perçants et tranchants.",
+      "name_en": "Full of Stars"
+    }
+  ],
+  "name_en": "Druid: Circle of Stars",
+  "_translated": true
+}

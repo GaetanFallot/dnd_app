@@ -1,0 +1,10 @@
+{
+  "index": "inspiring-leader",
+  "name": "Leader inspirant",
+  "source": "Player's Handbook",
+  "prerequisite": "Charisme 13 ou supérieur",
+  "desc": "Vous pouvez passer 10 minutes à inspirer vos compagnons, renforçant ainsi leur détermination à se battre. Ce faisant, choisissez jusqu'à six créatures amies (qui peuvent vous inclure) à moins de 9 mètres de vous qui peuvent vous voir ou vous entendre et qui peuvent vous comprendre. Chaque créature peut gagner des points de vie temporaires égaux à votre niveau + votre modificateur de Charisme. Une créature ne peut plus gagner de points de vie temporaires grâce à ce don tant qu'elle n'a pas terminé un repos court ou long.",
+  "benefits": [],
+  "name_en": "Inspiring Leader",
+  "_translated": true
+}

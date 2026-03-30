@@ -1,0 +1,35 @@
+{
+  "index": "wizard-artificer-ua",
+  "name": "Artificer (UA)",
+  "class": "wizard",
+  "source": "Unearthed Arcana 1 - Eberron",
+  "subclass_flavor": "",
+  "desc": "Artificers are a key part of the world of Eberron. They illustrate the evolution of magic from a wild, unpredictable force to one that is becoming available to the masses. Magic items are part of everyday life in the Five Nations of Khorvaire; with an artificer in your party, they become part of every adventuring expedition.",
+  "features": [
+    {
+      "name": "Infuse Potions",
+      "level": 2,
+      "desc": "Starting at 2nd level, you can produce magic potions. You spend 10 minutes focusing your magic on a vial of mundane water and expend a spell slot to transform it into a potion. Once you have expended a spell slot to create a potion, you cannot regain that slot until the potion is consumed or after 1 week, at which time the potion loses its effectiveness. You can create up to three potions at a time; creating a fourth potion causes the oldest currently active one to immediately lose its potency. If that potion has been consumed, its effects immediately end.\n\nThe spell slot you expend determines the type of potion you can create. See chapter 7 of the Dungeon Master’s Guide for complete rules on potions.\nSpell Slot | Potion Created\n1st | Climbing, Growth, or Healing\n2nd | Mind Reading or Greater Healing\n3rd | Invisibility, Superior Healing, or Water Breathing\n4th | Resistance"
+    },
+    {
+      "name": "Infuse Scrolls",
+      "level": 2,
+      "desc": "At 2nd level, you can also tap into your reserves of magical energy to create spell scrolls. You can use your Arcane Recovery ability to create a scroll instead of regaining expended spell slots.\n\nYou must finish a short rest, then spend 10 minutes with parchment, quill, and ink to create a spell scroll containing one spell chosen from those you know. Subtract the spell’s level from the total levels worth of slots you regain using Arcane Recovery. This reduction to your Arcane Recovery applies until you use the scroll and then finish a long rest."
+    },
+    {
+      "name": "Infuse Weapons and Armor",
+      "level": 6,
+      "desc": "Beginning at 6th level, you can produce magic weapons and armor. You spend 10 minutes focusing your magic on a mundane weapon, suit of armor, shield, or bundle of twenty pieces of ammunition, and expend a spell slot to infuse it with magical energy. The magic item retains its enhancement for 8 hours or until used (in the case of magic ammunition). You can infuse only one item at a time; if you infuse a second one, the first immediately loses its potency. Once you have expended a spell slot to create such an item, you cannot regain that slot until the item becomes nonmagical.\n\nThe spell slot you expend determines the type of weapon, armor, or shield you can create.\nSpell Slot | Item Created\n2nd | +1 ammunition (20 pieces)\n3rd | +1 weapon or +1 shield\n4th | +1 armor\n5th | +2 weapon or +2 ammunition (20 pieces)\n6th | +2 armor"
+    },
+    {
+      "name": "Superior Artificer",
+      "level": 10,
+      "desc": "Starting at 10th level, you can create a second magic weapon, suit of armor, shield, or bundle of ammunition using your Infuse Weapons and Armor ability. Attempting to infuse a third item causes the oldest one to immediately lose its potency.\n\nYou can also create one additional potion or scroll using Infuse Potions or Infuse Scrolls."
+    },
+    {
+      "name": "Master Artificer",
+      "level": null,
+      "desc": "On reaching 14th level, your mastery of arcane magic allows you to produce a variety of magic items. You can create a single item chosen from Magic Item Tables A and B in chapter 7 of the Dungeon Master’s Master’s Guide. It takes you 1 week to produce such an item, and you must rest for 1 month before using this ability to craft another item."
+    }
+  ]
+}

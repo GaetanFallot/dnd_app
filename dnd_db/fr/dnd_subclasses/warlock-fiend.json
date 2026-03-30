@@ -1,0 +1,42 @@
+{
+  "index": "warlock-fiend",
+  "name": "Démoniste : le démon",
+  "class": "warlock",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Vous avez conclu un pacte avec un démon des plans inférieurs de l'existence, un être dont les objectifs sont mauvais, même si vous luttez contre ces objectifs. De tels êtres désirent la corruption ou la destruction de toutes choses, y compris vous-même. Les démons suffisamment puissants pour forger un pacte incluent des seigneurs démons tels que Demogorgon, Orcus, Fraz'Urb-luu et Baphomet ; des archidiables tels qu'Asmodée, Dispater, Méphistophélès et Bélial ; des démons des fosses et des balors particulièrement puissants ; et les ultroloths et autres seigneurs des yugoloths.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Liste de sorts étendue",
+      "level": null,
+      "desc": "Le Fiend vous permet de choisir parmi une liste étendue de sorts lorsque vous apprenez un sort de démoniste. Les sorts suivants sont ajoutés à la liste des sorts de démoniste pour vous.\nSorts étendus de démon\nNiveau de sort | Sorts\n1er | Mains brûlantes, commandement\n2ème | Cécité/Surdité, Rayon Brûlant\n3ème | Boule de feu, nuage puant\n4ème | Bouclier de feu, mur de feu\n5ème | Frappe de flamme, sacré",
+      "name_en": "Expanded Spell List"
+    },
+    {
+      "name": "Bénédiction du Ténébreux",
+      "level": 1,
+      "desc": "À partir du niveau 1, lorsque vous réduisez une créature hostile à 0 point de vie, vous gagnez des points de vie temporaires égaux à votre modificateur de Charisme + votre niveau de démoniste (minimum de 1).",
+      "name_en": "Dark One's Blessing"
+    },
+    {
+      "name": "La chance du Ténébreux",
+      "level": 6,
+      "desc": "À partir du niveau 6, vous pouvez faire appel à votre patron pour modifier le destin en votre faveur. Lorsque vous effectuez un test de capacité ou un jet de sauvegarde, vous pouvez utiliser cette fonctionnalité pour ajouter un d10 à votre jet. Vous pouvez le faire après avoir vu le jet initial mais avant que l'un des effets du jet ne se produise.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou long.",
+      "name_en": "Dark One's Own Luck"
+    },
+    {
+      "name": "Résilience diabolique",
+      "level": 10,
+      "desc": "À partir du niveau 10, vous pouvez choisir un type de dégâts lorsque vous terminez un repos court ou long. Vous gagnez en résistance à ce type de dégâts jusqu'à ce que vous en choisissiez un autre avec cette fonctionnalité. Les dégâts causés par les armes magiques ou les armes en argent ignorent cette résistance.",
+      "name_en": "Fiendish Resilience"
+    },
+    {
+      "name": "Traversez l'enfer",
+      "level": 14,
+      "desc": "À partir du niveau 14, lorsque vous touchez une créature avec une attaque, vous pouvez utiliser cette fonctionnalité pour transporter instantanément la cible à travers les plans inférieurs. La créature disparaît et se précipite dans un paysage cauchemardesque.\n\nÀ la fin de votre prochain tour, la cible retourne dans la case qu'elle occupait précédemment, ou dans la case inoccupée la plus proche. Si la cible n’est pas un démon, elle subit 10d10 dégâts psychiques lorsqu’elle se remet de son horrible expérience.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Hurl Through Hell"
+    }
+  ],
+  "name_en": "Warlock: The Fiend",
+  "_translated": true
+}

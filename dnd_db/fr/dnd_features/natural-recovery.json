@@ -1,0 +1,13 @@
+{
+  "index": "natural-recovery",
+  "name": "Récupération naturelle",
+  "level": 2,
+  "class": "druid",
+  "subclass": "land",
+  "desc": [
+    "À partir du 2ème niveau, vous pouvez retrouver une partie de votre énergie magique en vous asseyant en méditation et en communiquant avec la nature. Pendant un court repos, vous choisissez des emplacements de sorts dépensés à récupérer. Les emplacements de sorts peuvent avoir un niveau combiné égal ou inférieur à la moitié de votre niveau de druide (arrondi au supérieur), et aucun des emplacements ne peut être de niveau 6 ou supérieur. Vous ne pouvez plus utiliser cette fonctionnalité tant que vous n'avez pas terminé un repos long.\nPar exemple, lorsque vous êtes un druide de niveau 4, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sorts. Vous pouvez récupérer soit un emplacement de 2ème niveau, soit deux emplacements de 1er niveau."
+  ],
+  "name_en": "Natural Recovery",
+  "class_name_fr": "",
+  "_translated": true
+}

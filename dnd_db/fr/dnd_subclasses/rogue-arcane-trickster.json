@@ -1,0 +1,42 @@
+{
+  "index": "rogue-arcane-trickster",
+  "name": "Voleur : le filou des arcanes",
+  "class": "rogue",
+  "source": "Player's Handbook",
+  "subclass_flavor": "Certains voleurs améliorent leurs compétences de furtivité et d'agilité grâce à la magie, apprenant des tours d'enchantement et d'illusion. Ces voleurs comprennent des pickpockets et des cambrioleurs, mais aussi des farceurs, des fauteurs de troubles et un nombre important d'aventuriers.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Lancement de sorts",
+      "level": 10,
+      "desc": "Lorsque vous atteignez le niveau 3, vous augmentez vos prouesses martiales grâce à la capacité de lancer des sorts.\n\nVous apprenez trois petits sorts : Mage Hand et deux autres petits sorts de votre choix dans la liste des sorts de l'assistant. Vous apprenez un autre sort mineur de sorcier de votre choix au niveau 10.\n\nLe tableau de lancement de sorts Arcane Trickster indique le nombre d'emplacements de sorts dont vous disposez pour lancer vos sorts de sorcier de niveau 1 et supérieur. Pour lancer l'un de ces sorts, vous devez dépenser un emplacement du niveau du sort ou supérieur. Vous récupérez tous les emplacements de sorts dépensés lorsque vous terminez un repos long.\n\nPar exemple, si vous connaissez le sort Charme de personne de niveau 1 et que vous disposez d'un emplacement de sort de niveau 1 et de niveau 2, vous pouvez lancer Charme de personne en utilisant l'un ou l'autre emplacement.\n\nVous connaissez trois sorts de sorcier de niveau 1 de votre choix, dont deux que vous devez choisir parmi les sorts d'enchantement et d'illusion de la liste des sorts de sorcier.\n\nLa colonne Sorts connus du tableau de lancement de sorts Arcane Trickster indique quand vous apprenez plus de sorts de sorcier de niveau 1 ou supérieur. Chacun de ces sorts doit être un sort d'enchantement ou d'illusion de votre choix, et doit être d'un niveau pour lequel vous disposez d'emplacements de sorts. Par exemple, lorsque vous atteignez le niveau 7 dans cette classe, vous pouvez apprendre un nouveau sort de niveau 1 ou 2.\n\nLes sorts que vous apprenez aux niveaux 8, 14 et 20 peuvent provenir de n’importe quelle école de magie.\n\nÀ chaque fois que vous gagnez un niveau dans cette classe, vous pouvez remplacer l'un des sorts de sorcier que vous connaissez par un autre sort de votre choix dans la liste des sorts de sorcier. Le nouveau sort doit être d'un niveau pour lequel vous disposez d'emplacements de sort, et il doit s'agir d'un sort d'enchantement ou d'illusion, à moins que vous ne remplaciez le sort que vous avez obtenu au niveau 3, 8, 14 ou 20 dans n'importe quelle école de magie.\n\nL'intelligence est votre capacité à lancer des sorts pour vos sorts de sorcier, puisque vous apprenez vos sorts grâce à une étude et une mémorisation dédiées. Vous utilisez votre Intelligence chaque fois qu'un sort fait référence à votre capacité de lancer des sorts. De plus, vous utilisez votre modificateur d'Intelligence lorsque vous définissez le DD du jet de sauvegarde pour un sort de sorcier que vous lancez et lorsque vous effectuez un jet d'attaque avec celui-ci.\n\nDD de sauvegarde des sorts = 8 + votre bonus de maîtrise + votre modificateur d'Intelligence\n\nModificateur d'attaque des sorts = votre bonus de maîtrise + votre modificateur d'Intelligence",
+      "name_en": "Spellcasting"
+    },
+    {
+      "name": "Legerdemain de la main du mage",
+      "level": 3,
+      "desc": "À partir du niveau 3, lorsque vous lancez Main de Mage, vous pouvez rendre la main spectrale invisible et vous pouvez effectuer les tâches supplémentaires suivantes avec :\n• Vous pouvez ranger un objet que la main tient dans un récipient porté ou transporté par une autre créature.\n• Vous pouvez récupérer un objet dans un conteneur porté ou transporté par une autre créature.\n• Vous pouvez utiliser les outils des voleurs pour crocheter les serrures et désamorcer les pièges à distance.\n\nVous pouvez effectuer l'une de ces tâches sans être remarqué par une créature si vous réussissez un test de Dextérité (Tour de passe-passe) contesté par le test de Sagesse (Perception) de la créature.\n\nDe plus, vous pouvez utiliser l'action bonus accordée par votre Action Cunning pour contrôler la main.",
+      "name_en": "Mage Hand Legerdemain"
+    },
+    {
+      "name": "Embuscade magique",
+      "level": 9,
+      "desc": "À partir du niveau 9, si vous êtes caché d'une créature lorsque vous lancez un sort sur elle, la créature est désavantagée à tous les jets de sauvegarde qu'elle effectue contre le sort ce tour-ci.",
+      "name_en": "Magical Ambush"
+    },
+    {
+      "name": "Filou polyvalent",
+      "level": 13,
+      "desc": "Au niveau 13, vous gagnez la capacité de distraire les cibles avec votre Main de Mage. Par une action bonus lors de votre tour, vous pouvez désigner une créature à moins de 1,50 mètre de la main spectrale créée par le sort. Cela vous donne un avantage aux jets d'attaque contre cette créature jusqu'à la fin du tour.",
+      "name_en": "Versatile Trickster"
+    },
+    {
+      "name": "Voleur de sorts",
+      "level": 17,
+      "desc": "Au niveau 17, vous acquérez la capacité de voler par magie à un autre lanceur de sorts les connaissances nécessaires pour lancer un sort.\n\nImmédiatement après qu'une créature a lancé un sort qui vous cible ou vous inclut dans sa zone d'effet, vous pouvez utiliser votre réaction pour forcer la créature à effectuer un jet de sauvegarde avec son modificateur de capacité de lancement de sorts. Le DD est égal à votre DD de sauvegarde de sorts. En cas d'échec, vous annulez l'effet du sort contre vous et vous volez la connaissance du sort s'il est au moins de niveau 1 et d'un niveau que vous pouvez lancer (il n'est pas nécessaire qu'il s'agisse d'un sort de sorcier). Pendant les 8 prochaines heures, vous connaissez le sort et pouvez le lancer en utilisant vos emplacements de sorts. La créature ne peut pas lancer ce sort avant que les 8 heures ne soient écoulées.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un long repos.",
+      "name_en": "Spell Thief"
+    }
+  ],
+  "name_en": "Rogue: Arcane Trickster",
+  "_translated": true
+}

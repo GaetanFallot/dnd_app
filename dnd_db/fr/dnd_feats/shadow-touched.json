@@ -1,0 +1,13 @@
+{
+  "index": "shadow-touched",
+  "name": "Ombre touchée",
+  "source": "Tasha's Cauldron of Everything",
+  "prerequisite": null,
+  "desc": "Votre exposition à la magie de Shadowfell vous a transformé, vous accordant les avantages suivants :",
+  "benefits": [
+    "Augmentez votre score d'Intelligence, de Sagesse ou de Charisme de 1, jusqu'à un maximum de 20.",
+    "Vous apprenez le sort Invisibilité et un sort de niveau 1 de votre choix. Le sort de niveau 1 doit provenir de l’école de magie Illusion ou Nécromancie. Vous pouvez lancer chacun de ces sorts sans dépenser d'emplacement de sort. Une fois que vous avez lancé l'un de ces sorts de cette manière, vous ne pouvez plus lancer ce sort de cette manière tant que vous n'avez pas terminé un repos long. Vous pouvez également lancer ces sorts en utilisant les emplacements de sorts dont vous disposez et du niveau approprié. La capacité de lancement de sorts des sorts est la capacité augmentée par ce don."
+  ],
+  "name_en": "Shadow Touched",
+  "_translated": true
+}

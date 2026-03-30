@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-sculptor-of-flesh",
+  "name": "Invocation surnaturelle : sculpteur de chair",
+  "level": 7,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lancer une métamorphose une fois en utilisant un emplacement de sort de démoniste. Vous ne pouvez plus recommencer avant d'avoir terminé un long repos."
+  ],
+  "name_en": "Eldritch Invocation: Sculptor of Flesh",
+  "class_name_fr": "",
+  "_translated": true
+}

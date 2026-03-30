@@ -1,0 +1,36 @@
+{
+  "index": "bard-whispers",
+  "name": "Barde : Collège des Murmures",
+  "class": "bard",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "La plupart des gens sont heureux d’accueillir un barde parmi eux. Les bardes du Collège des Murmures utilisent cela à leur avantage. Ils ressemblent à n’importe quel autre barde, partageant des nouvelles, chantant des chansons et racontant des histoires au public qu’ils rassemblent. En vérité, le Collège des Murmures enseigne à ses étudiants qu'ils sont des loups parmi les moutons. Ces bardes utilisent leurs connaissances et leur magie pour découvrir des secrets et les retourner contre les autres par l'extorsion et les menaces.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Lames psychiques",
+      "level": 3,
+      "desc": "Lorsque vous rejoignez le Collège des Murmures au niveau 3, vous obtenez la capacité de rendre vos attaques avec des armes magiquement toxiques pour l'esprit d'une créature.\n\nLorsque vous touchez une créature avec une attaque avec une arme, vous pouvez dépenser une utilisation de votre Inspiration bardique pour infliger 2d6 dégâts psychiques supplémentaires à cette cible. Vous ne pouvez le faire qu’une fois par tour, pendant votre tour.\n\nLes dégâts psychiques augmentent lorsque vous atteignez certains niveaux dans cette classe, passant à 3d6 au niveau 5, 5d6 au niveau 10 et 8d6 au niveau 15.",
+      "name_en": "Psychic Blades"
+    },
+    {
+      "name": "Mots de terreur",
+      "level": 3,
+      "desc": "Au niveau 3, vous apprenez à insuffler à des mots apparemment innocents une magie insidieuse qui peut inspirer la terreur.\n\nSi vous parlez seul à un humanoïde pendant au moins 1 minute, vous pouvez tenter de semer la paranoïa et la peur dans son esprit. A la fin de la conversation, la cible doit réussir un jet de sauvegarde de Sagesse contre votre DD de sauvegarde de sort sous peine d'avoir peur de vous ou d'une autre créature de votre choix. La cible est ainsi effrayée pendant 1 heure, jusqu'à ce qu'elle soit attaquée ou endommagée, ou jusqu'à ce qu'elle voit ses alliés être attaqués ou endommagés.\n\nSi la cible réussit son jet de sauvegarde, elle n'a aucune idée que vous avez essayé de l'effrayer.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser tant que vous n'avez pas terminé un repos court ou un repos long.",
+      "name_en": "Words of Terror"
+    },
+    {
+      "name": "Manteau des murmures",
+      "level": 6,
+      "desc": "Au niveau 6, vous gagnez la capacité d'adopter le personnage d'un humanoïde. Lorsqu'un humanoïde meurt à moins de 9 mètres de vous, vous pouvez capturer son ombre comme par magie en utilisant votre réaction. Vous conservez cette ombre jusqu'à ce que vous l'utilisiez ou que vous terminiez un long repos.\n\nVous pouvez utiliser l'ombre comme une action. Lorsque vous le faites, il disparaît, se transformant comme par magie en un déguisement qui apparaît sur vous. Vous ressemblez maintenant à la personne décédée, mais en bonne santé et vivante. Ce déguisement dure 1 heure ou jusqu'à ce que vous y mettiez fin par une action bonus.\n\nPendant que vous êtes déguisé, vous avez accès à toutes les informations que l'humanoïde partagerait librement avec une connaissance occasionnelle. Ces informations comprennent des détails généraux sur son parcours et sa vie personnelle, mais n'incluent pas de secrets. Les informations sont suffisantes pour que vous puissiez vous faire passer pour la personne en puisant dans ses souvenirs.\n\nUne autre créature peut voir à travers ce déguisement en réussissant un test de Sagesse (Perspicacité) contesté par votre test de Charisme (Tromperie). Vous gagnez un bonus de +5 à votre chèque.\n\nUne fois que vous avez capturé une ombre avec cette fonctionnalité, vous ne pouvez pas en capturer une autre avant d'avoir terminé un repos court ou long.",
+      "name_en": "Mantle of Whispers"
+    },
+    {
+      "name": "Connaissance des ombres",
+      "level": 14,
+      "desc": "Au niveau 14, vous acquérez la capacité d’intégrer la magie noire dans vos mots et d’exploiter les peurs les plus profondes d’une créature.\n\nPar une action, vous murmurez comme par magie une phrase qu'une seule créature de votre choix à moins de 9 mètres de vous peut entendre. La cible doit effectuer un jet de sauvegarde de Sagesse contre votre DD de sauvegarde de sort. Il réussit automatiquement s’il ne partage pas de langue avec vous ou s’il ne vous entend pas. Lors d'un jet de sauvegarde réussi, votre murmure ressemble à un marmonnement inintelligible et n'a aucun effet.\n\nSi la cible échoue à son jet de sauvegarde, vous la charmez pendant les 8 heures suivantes ou jusqu'à ce que vous ou vos alliés l'attaquiez ou l'endommagez. Il interprète les murmures comme une description de son secret le plus mortifiant.\n\nMême si vous n'obtenez aucune connaissance de ce secret, la cible est convaincue que vous le connaissez. Ainsi charmée, la créature obéit à vos ordres de peur que vous ne révéliez son secret. Il ne risquera pas sa vie pour vous et ne se battra pas pour vous, à moins qu’il ne soit déjà enclin à le faire. Il vous accorde des faveurs et des cadeaux qu'il offrirait à un ami proche.\n\nLorsque l’effet prend fin, la créature ne comprend pas pourquoi elle vous a fait si peur.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un long repos.",
+      "name_en": "Shadow Lore"
+    }
+  ],
+  "name_en": "Bard: College of Whispers",
+  "_translated": true
+}

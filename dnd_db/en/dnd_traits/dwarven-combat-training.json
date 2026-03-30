@@ -1,0 +1,9 @@
+{
+  "index": "dwarven-combat-training",
+  "name": "Dwarven Combat Training",
+  "races": [
+    "dwarf"
+  ],
+  "subraces": [],
+  "desc": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer."
+}

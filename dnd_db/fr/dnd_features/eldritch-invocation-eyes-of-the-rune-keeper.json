@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-eyes-of-the-rune-keeper",
+  "name": "Invocation surnaturelle : les yeux du gardien des runes",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Vous pouvez lire tous les écrits."
+  ],
+  "name_en": "Eldritch Invocation: Eyes of the Rune Keeper",
+  "class_name_fr": "",
+  "_translated": true
+}

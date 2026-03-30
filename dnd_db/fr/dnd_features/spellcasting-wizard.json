@@ -1,0 +1,13 @@
+{
+  "index": "spellcasting-wizard",
+  "name": "Lancement de sorts : Sorcier",
+  "level": 1,
+  "class": "wizard",
+  "subclass": null,
+  "desc": [
+    "En tant qu'étudiant en magie arcanique, vous disposez d'un livre de sorts contenant des sorts qui montrent les premières lueurs de votre véritable pouvoir."
+  ],
+  "name_en": "Spellcasting: Wizard",
+  "class_name_fr": "",
+  "_translated": true
+}

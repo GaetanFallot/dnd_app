@@ -1,0 +1,11 @@
+{
+  "index": "tool-proficiency",
+  "name": "Maîtrise des outils",
+  "races": [
+    "dwarf"
+  ],
+  "subraces": [],
+  "desc": "Vous maîtrisez les outils d'artisan de votre choix : outils de forgeron, fournitures de brasseur ou outils de maçon.",
+  "name_en": "Tool Proficiency",
+  "_translated": true
+}

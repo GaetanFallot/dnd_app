@@ -1,0 +1,11 @@
+{
+  "index": "dwarven-combat-training",
+  "name": "Entraînement au combat des nains",
+  "races": [
+    "dwarf"
+  ],
+  "subraces": [],
+  "desc": "Vous maîtrisez la hache de combat, la hache à main, le marteau léger et le marteau de guerre.",
+  "name_en": "Dwarven Combat Training",
+  "_translated": true
+}

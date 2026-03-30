@@ -1,0 +1,42 @@
+{
+  "index": "barbarian-battlerager",
+  "name": "Barbare : la Voie du Battlerager",
+  "class": "barbarian",
+  "source": "Sword Coast Adventurer's Guide",
+  "subclass_flavor": "Connus sous le nom de Kuldjargh (littéralement « idiot de la hache ») en nain, les Battleragers sont des adeptes nains des dieux de la guerre et empruntent la Voie du Battlerager. Ils se spécialisent dans le port d'armures volumineuses à pointes et dans le combat, frappant avec leur corps lui-même et s'abandonnant à la fureur du combat.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Restriction : Nains uniquement",
+      "level": null,
+      "desc": "Seuls les nains peuvent suivre la Voie du Battlerager. Le Battlerager occupe une niche particulière dans la société et la culture naine.\n\nVotre DM peut lever cette restriction pour mieux l'adapter à la campagne. La restriction existe pour les Royaumes Oubliés. Cela peut ne pas s'appliquer aux paramètres de votre DM ou à la version des royaumes de votre DM.",
+      "name_en": "Restriction: Dwarves Only"
+    },
+    {
+      "name": "Armure de Battlerager",
+      "level": 3,
+      "desc": "Lorsque vous choisissez cette voie au niveau 3, vous obtenez la possibilité d’utiliser une armure à pointes comme arme.\n\nPendant que vous portez une armure à pointes et que vous êtes enragé, vous pouvez utiliser une action bonus pour effectuer une attaque au corps à corps avec vos pointes d'armure contre une cible à moins de 1,50 mètre de vous. Si l'attaque réussit, les pointes infligent 1d4 dégâts perforants. Vous utilisez votre modificateur de Force pour les jets d'attaque et de dégâts.\n\nDe plus, lorsque vous utilisez l'action Attaque pour agripper une créature, la cible subit 3 dégâts perforants si votre test de lutte réussit.",
+      "name_en": "Battlerager Armor"
+    },
+    {
+      "name": "Abandon imprudent",
+      "level": 6,
+      "desc": "À partir du niveau 6, lorsque vous utilisez Attaque téméraire en étant enragé, vous gagnez également des points de vie temporaires égaux à votre modificateur de Constitution (minimum de 1). Ils disparaissent s’il en reste à la fin de votre rage.",
+      "name_en": "Reckless Abandon"
+    },
+    {
+      "name": "Charge de Battlerager",
+      "level": 10,
+      "desc": "À partir du niveau 10, vous pouvez effectuer l’action Dash comme action bonus pendant que vous êtes en rage.",
+      "name_en": "Battlerager Charge"
+    },
+    {
+      "name": "Châtiment enrichi",
+      "level": 14,
+      "desc": "À partir du niveau 14, lorsqu'une créature à moins de 1,50 mètre de vous vous frappe avec une attaque de mêlée, l'attaquant subit 3 dégâts perforants si vous êtes en colère, n'êtes pas incapable d'agir et portez une armure à pointes.",
+      "name_en": "Spiked Retribution"
+    }
+  ],
+  "name_en": "Barbarian: Path of the Battlerager",
+  "_translated": true
+}

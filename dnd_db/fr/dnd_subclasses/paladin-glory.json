@@ -1,0 +1,48 @@
+{
+  "index": "paladin-glory",
+  "name": "Paladin : Serment de gloire",
+  "class": "paladin",
+  "source": "Mythic Odysseys of Theros, Tasha's Cauldron of Everything",
+  "subclass_flavor": "",
+  "desc": "Les Paladins qui prêtent le Serment de Gloire croient qu'eux et leurs compagnons sont destinés à atteindre la gloire grâce à des actes d'héroïsme. Ils s'entraînent assidûment et encouragent leurs compagnons afin qu'ils soient tous prêts lorsque le destin les appelle.",
+  "features": [
+    {
+      "name": "Principes de gloire",
+      "level": null,
+      "desc": "Les principes du Serment de Gloire poussent un paladin à tenter des actes héroïques qui pourraient un jour briller dans la légende.\n\nLes actions plutôt que les mots. Efforcez-vous d’être connu par des actes glorieux, pas par des mots.\n\nLes défis ne sont que des tests. Affrontez les difficultés avec courage et encouragez vos alliés à les affronter avec vous.\n\nAffûtez le corps. Comme la pierre brute, votre corps doit être travaillé pour que son potentiel se réalise.\n\nDisciplinez l’âme. Vous devez faire preuve de discipline pour surmonter vos échecs qui menacent de ternir votre gloire et celle de vos amis.",
+      "name_en": "Tenets Of Glory"
+    },
+    {
+      "name": "Sorts de serment",
+      "level": null,
+      "desc": "Vous gagnez des sorts de serment aux niveaux de paladin indiqués.\nSorts de serment de gloire\nNiveau Paladin | Sorts\n3ème | Trait de guidage, héroïsme\n5ème | Améliorer la capacité, arme magique\n9ème | Hâte, protection contre l'énergie\n13e | Contrainte, Liberté De Mouvement\n17e | Commune, grève des flammes",
+      "name_en": "Oath Spells"
+    },
+    {
+      "name": "Canal Divinité",
+      "level": 3,
+      "desc": "Lorsque vous prêtez ce serment au niveau 3, vous obtenez les deux options de canalisation divine suivantes. Consultez la fonctionnalité de classe Sacred Oath pour savoir comment fonctionne Channel Divinity.\n• Athlète hors pair. En tant qu'action bonus, vous pouvez utiliser votre Channel Divinity pour augmenter vos qualités athlétiques. Pendant les 10 prochaines minutes, vous avez l'avantage aux tests de Force (Athlétisme) et de Dextérité (Acrobatie) ; vous pouvez porter, pousser, traîner et soulever deux fois plus de poids que d'habitude ; et la distance de vos sauts en longueur et en hauteur augmente de 10 pieds (cette distance supplémentaire coûte du mouvement normalement).\n• Châtiment inspirant. Immédiatement après avoir infligé des dégâts à une créature avec votre fonction Châtiment divin, vous pouvez utiliser votre Canalisation de la Divinité comme une action bonus et distribuer des points de vie temporaires aux créatures de votre choix dans un rayon de 9 mètres autour de vous, qui peuvent vous inclure. Le nombre total de points de vie temporaires est égal à 2d8 + votre niveau dans cette classe, répartis entre les créatures choisies comme bon vous semble.",
+      "name_en": "Channel Divinity"
+    },
+    {
+      "name": "Aura d'empressement",
+      "level": 7,
+      "desc": "Au niveau 7, vous dégagez une aura qui vous remplit, vous et vos compagnons, d'une vitesse surnaturelle, vous permettant de courir en formation sur un champ de bataille. Votre vitesse de marche augmente de 10 pieds. De plus, si vous n'êtes pas incapable d'agir, la vitesse de marche de tout allié qui commence son tour à moins de 1,50 mètre de vous augmente de 10 pieds jusqu'à la fin de ce tour.\n\nLorsque vous atteignez le niveau 18 dans cette classe, la portée de l'aura augmente jusqu'à 3 mètres.",
+      "name_en": "Aura of Alacrity"
+    },
+    {
+      "name": "Défense glorieuse",
+      "level": null,
+      "desc": "Lorsque vous atteignez le niveau 15, vous pouvez transformer la défense en une frappe soudaine. Lorsque vous ou une autre créature que vous pouvez voir à moins de 3 mètres de vous êtes touché par un jet d'attaque, vous pouvez utiliser votre réaction pour accorder un bonus à la CA de la cible contre cette attaque, la faisant potentiellement rater. Le bonus est égal à votre modificateur de Charisme (minimum de +1). Si l'attaque échoue, vous pouvez lancer une attaque avec votre arme contre l'attaquant dans le cadre de cette réaction, à condition que l'attaquant soit à portée de votre arme.\n\nVous pouvez utiliser cette fonctionnalité un nombre de fois égal à votre modificateur de Charisme (au minimum une fois), et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Glorious Defense"
+    },
+    {
+      "name": "Légende vivante",
+      "level": 20,
+      "desc": "Au niveau 20, vous pouvez vous enrichir des légendes – vraies ou exagérées – de vos grandes actions. Par une action bonus, vous bénéficiez des avantages suivants pendant 1 minute :\n• Vous bénéficiez d'une présence surnaturelle qui vous permet d'obtenir un avantage à tous les tests de Charisme.\n• Une fois à chacun de vos tours, lorsque vous effectuez une attaque avec une arme et que vous la ratez, vous pouvez faire en sorte que cette attaque frappe à la place.\n• Si vous échouez à un jet de sauvegarde, vous pouvez utiliser votre réaction pour le relancer. Vous devez utiliser ce nouveau jet.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser avant d'avoir terminé un repos long, à moins que vous ne dépensiez un emplacement de sort de niveau 5 pour l'utiliser à nouveau.",
+      "name_en": "Living Legend"
+    }
+  ],
+  "name_en": "Paladin: Oath of Glory",
+  "_translated": true
+}

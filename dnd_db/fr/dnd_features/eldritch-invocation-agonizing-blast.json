@@ -1,0 +1,13 @@
+{
+  "index": "eldritch-invocation-agonizing-blast",
+  "name": "Invocation Eldritch : Explosion Agonisante",
+  "level": 2,
+  "class": "warlock",
+  "subclass": null,
+  "desc": [
+    "Lorsque vous lancez une explosion surnaturelle, ajoutez votre modificateur de Charisme aux dégâts qu'elle inflige en cas de coup."
+  ],
+  "name_en": "Eldritch Invocation: Agonizing Blast",
+  "class_name_fr": "",
+  "_translated": true
+}

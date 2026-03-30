@@ -1,0 +1,13 @@
+{
+  "index": "weapon-master",
+  "name": "Maître d'armes",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous avez beaucoup pratiqué avec diverses armes, bénéficiant des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Force ou de Dextérité de 1, jusqu'à un maximum de 20.",
+    "Vous maîtrisez quatre armes de votre choix. Chacun doit être une arme simple ou martiale."
+  ],
+  "name_en": "Weapon Master",
+  "_translated": true
+}

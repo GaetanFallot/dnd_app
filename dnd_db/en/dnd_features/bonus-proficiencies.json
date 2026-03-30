@@ -1,0 +1,8 @@
+{
+  "index": "bonus-proficiencies",
+  "name": "Bonus Proficiencies",
+  "level": 3,
+  "class": "bard",
+  "subclass": "lore",
+  "desc": "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice."
+}

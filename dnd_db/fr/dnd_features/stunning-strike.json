@@ -1,0 +1,13 @@
+{
+  "index": "stunning-strike",
+  "name": "Frappe époustouflante",
+  "level": 5,
+  "class": "monk",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 5, vous pouvez interférer avec la circulation du ki dans le corps d'un adversaire. Lorsque vous touchez une autre créature avec une attaque au corps à corps avec une arme, vous pouvez dépenser 1 point de ki pour tenter une frappe étourdissante. La cible doit réussir un jet de sauvegarde de Constitution ou être étourdie jusqu'à la fin de votre prochain tour."
+  ],
+  "name_en": "Stunning Strike",
+  "class_name_fr": "",
+  "_translated": true
+}

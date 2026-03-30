@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stat Block — D&D 5e</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0d0a07;
+  color: #d8c8a8;
+  font-family: 'Georgia', serif;
+  min-height: 100vh;
+}
+
+/* ── Toolbar ── */
+#toolbar {
+  position: sticky; top: 0; z-index: 100;
+  background: #120e0a;
+  border-bottom: 1px solid #4a3420;
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+#toolbar h1 { font-family: 'Georgia', serif; font-size: 1rem; color: #c8a84b; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tb-btn {
+  padding: 0.3rem 0.7rem; font-size: 0.78rem; cursor: pointer; border-radius: 4px;
+  background: #1e1610; border: 1px solid #4a3420; color: #d8c8a8;
+}
+.tb-btn:hover { border-color: #c8a84b; color: #c8a84b; }
+.tb-btn.primary { background: #2a1a4e; color: #b89fff; border-color: #b89fff; }
+#edit-notice {
+  font-size: 0.72rem; color: #7a6a55; padding: 0.2rem 0.6rem;
+  background: #1a1208; border: 1px solid #3a2a10; border-radius: 3px;
+}
+
+/* ── Layout ── */
+#page { max-width: 760px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+/* ── Stat Block ── */
+.stat-block {
+  background: #fdf1dc;
+  color: #1a0900;
+  border: 2px solid #9c7136;
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 4px 16px rgba(0,0,0,.6);
+}
+
+.sb-name {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7a200d;
+  border-bottom: 2px solid #9c7136;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.sb-type {
+  font-style: italic;
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+  color: #3a2000;
+}
+.sb-divider {
+  border: none; border-top: 2px solid #9c7136; margin: 0.5rem 0;
+}
+.sb-prop { font-size: 0.88rem; margin: 0.18rem 0; }
+.sb-prop strong { color: #7a200d; }
+
+/* Stats grid */
+.sb-stats {
+  display: flex; justify-content: space-around;
+  background: #f0d9aa;
+  border-radius: 3px;
+  padding: 0.4rem 0;
+  margin: 0.5rem 0;
+}
+.sb-stat { text-align: center; }
+.sb-stat-name { font-size: 0.7rem; font-weight: bold; color: #7a200d; }
+.sb-stat-val { font-size: 0.92rem; font-weight: bold; }
+.sb-stat-mod { font-size: 0.78rem; }
+
+/* Sections */
+.sb-section-title {
+  font-size: 1rem; font-variant: small-caps;
+  color: #7a200d; border-bottom: 1px solid #9c7136;
+  margin: 0.6rem 0 0.3rem; padding-bottom: 0.1rem;
+}
+.sb-entry { font-size: 0.88rem; margin-bottom: 0.4rem; line-height: 1.5; }
+.sb-entry strong { font-style: italic; color: #3a2000; }
+
+/* ── Edit Panel ── */
+#edit-panel {
+  display: none;
+  margin-top: 1.5rem;
+  background: #1a1410;
+  border: 1px solid #4a3420;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+}
+#edit-panel h2 { font-size: 0.9rem; color: #c8a84b; margin-bottom: 0.8rem; }
+.ep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 0.8rem; }
+.ep-full { grid-column: 1 / -1; }
+.ep-field label { display: block; font-size: 0.7rem; color: #7a6a55; margin-bottom: 0.2rem; }
+.ep-field input, .ep-field textarea {
+  width: 100%; background: #100d09; border: 1px solid #4a3420;
+  color: #d8c8a8; padding: 0.3rem 0.5rem; border-radius: 3px;
+  font-size: 0.82rem; font-family: inherit;
+}
+.ep-field textarea { min-height: 60px; resize: vertical; }
+.ep-stats { display: grid; grid-template-columns: repeat(6,1fr); gap: 0.4rem; }
+.ep-stats label { font-size: 0.65rem; color: #7a6a55; text-align: center; display: block; }
+.ep-stats input { text-align: center; padding: 0.2rem; }
+.ep-section { margin-top: 0.8rem; }
+.ep-section h3 { font-size: 0.78rem; color: #c8a84b; margin-bottom: 0.4rem; }
+.ep-entry-row { display: flex; gap: 0.4rem; align-items: flex-start; margin-bottom: 0.4rem; }
+.ep-entry-row input { flex: 0 0 140px; }
+.ep-entry-row textarea { flex: 1; min-height: 38px; }
+.ep-entry-row button { padding: 0.2rem 0.4rem; background: #2a0a0a; border: 1px solid #7a3030; color: #d07070; border-radius: 3px; cursor: pointer; font-size: 0.75rem; line-height: 1; }
+.ep-add-btn { padding: 0.25rem 0.7rem; background: #0a1a0a; border: 1px solid #3a6a3a; color: #7fbf7f; border-radius: 3px; cursor: pointer; font-size: 0.75rem; margin-top: 0.2rem; }
+
+/* ── No data notice ── */
+#no-data { display: none; text-align: center; padding: 4rem 1rem; color: #7a6a55; font-style: italic; }
+
+/* ── Toast ── */
+#mv-toast { position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);background:#2a1f12;color:#d8c8a8;border:1px solid #c8a84b;padding:.45rem 1rem;border-radius:4px;font-size:.82rem;z-index:9999;pointer-events:none;opacity:0;transition:opacity .2s; }
+#mv-toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <h1 id="tb-title">Chargement…</h1>
+  <span id="edit-notice" style="display:none">✎ Mode édition</span>
+  <button class="tb-btn" onclick="copyLink()" title="Copier le lien de partage">🔗 Copier le lien</button>
+  <button class="tb-btn primary" id="btn-edit" onclick="toggleEdit()">✎ Éditer</button>
+</div>
+
+<div id="page">
+  <div id="no-data">
+    Aucun monstre trouvé dans l'URL.<br>
+    Génère un lien depuis le gestionnaire de combat (bouton 🔗 Partager).
+  </div>
+  <div id="stat-block-wrap"></div>
+  <div id="edit-panel">
+    <h2>✎ Modifier le stat block</h2>
+    <div class="ep-grid">
+      <div class="ep-field ep-full"><label>Nom</label><input id="ep_name" type="text"></div>
+      <div class="ep-field ep-full"><label>Type / taille / alignement</label><input id="ep_type" type="text"></div>
+      <div class="ep-field"><label>Classe d'armure</label><input id="ep_ac" type="text"></div>
+      <div class="ep-field"><label>Points de vie</label><input id="ep_hp" type="text"></div>
+      <div class="ep-field"><label>Vitesse</label><input id="ep_speed" type="text"></div>
+      <div class="ep-field"><label>FP</label><input id="ep_cr" type="text"></div>
+    </div>
+    <div class="ep-section">
+      <h3>Caractéristiques</h3>
+      <div class="ep-stats">
+        ${['str','dex','con','int','wis','cha'].map(s => `
+          <div><label>${s.toUpperCase()}</label><input id="ep_${s}" type="number" min="1" max="30"></div>
+        `).join('')}
+      </div>
+    </div>
+    <div class="ep-section">
+      <h3>Détails</h3>
+      <div class="ep-grid">
+        <div class="ep-field"><label>Sens</label><input id="ep_senses" type="text"></div>
+        <div class="ep-field"><label>Langues</label><input id="ep_languages" type="text"></div>
+        <div class="ep-field"><label>Immunités (dégâts)</label><input id="ep_dmg_immune" type="text"></div>
+        <div class="ep-field"><label>Résistances</label><input id="ep_dmg_resist" type="text"></div>
+        <div class="ep-field"><label>Vulnérabilités</label><input id="ep_dmg_vuln" type="text"></div>
+        <div class="ep-field"><label>Immunités (états)</label><input id="ep_cond_immune" type="text"></div>
+      </div>
+    </div>
+
+    <div class="ep-section" id="ep-traits-section">
+      <h3>Capacités spéciales</h3>
+      <div id="ep-traits-list"></div>
+      <button class="ep-add-btn" onclick="epAddEntry('ep-traits-list')">＋ Ajouter</button>
+    </div>
+    <div class="ep-section" id="ep-actions-section">
+      <h3>Actions</h3>
+      <div id="ep-actions-list"></div>
+      <button class="ep-add-btn" onclick="epAddEntry('ep-actions-list')">＋ Ajouter</button>
+    </div>
+    <div class="ep-section" id="ep-reactions-section">
+      <h3>Réactions</h3>
+      <div id="ep-reactions-list"></div>
+      <button class="ep-add-btn" onclick="epAddEntry('ep-reactions-list')">＋ Ajouter</button>
+    </div>
+    <div class="ep-section" id="ep-legendary-section">
+      <h3>Actions légendaires</h3>
+      <div class="ep-field" style="margin-bottom:0.5rem"><label>Description</label><textarea id="ep_legendary_desc"></textarea></div>
+      <div id="ep-legendary-list"></div>
+      <button class="ep-add-btn" onclick="epAddEntry('ep-legendary-list')">＋ Ajouter</button>
+    </div>
+    <div class="ep-section">
+      <div class="ep-field"><label>Notes</label><textarea id="ep_notes"></textarea></div>
+    </div>
+
+    <div style="display:flex;gap:0.6rem;margin-top:1rem;flex-wrap:wrap">
+      <button onclick="applyEdit()" style="padding:0.4rem 1rem;background:#2a1a4e;color:#b89fff;border:1px solid #b89fff;border-radius:4px;cursor:pointer;font-size:0.82rem">✓ Appliquer &amp; mettre à jour le lien</button>
+      <button onclick="toggleEdit()" style="padding:0.4rem 1rem;background:none;border:1px solid #4a3420;color:#7a6a55;border-radius:4px;cursor:pointer;font-size:0.82rem">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<div id="mv-toast"></div>
+
+<script>
+// ── Data ──────────────────────────────────────────────────────────────────────
+
+let _monster = null;
+
+(function init() {
+  const hash = window.location.hash.slice(1);
+  if (!hash) { showNoData(); return; }
+  try {
+    _monster = JSON.parse(decodeURIComponent(escape(atob(hash))));
+  } catch(e) {
+    showNoData(); return;
+  }
+  renderStatBlock();
+  document.getElementById('tb-title').textContent = _monster.name || 'Stat Block';
+})();
+
+function showNoData() {
+  document.getElementById('no-data').style.display = 'block';
+  document.getElementById('tb-title').textContent = 'Aucun monstre';
+  document.getElementById('btn-edit').style.display = 'none';
+}
+
+// ── Render Stat Block ─────────────────────────────────────────────────────────
+
+function _esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function _mod(v) {
+  const n = parseInt(v) || 10;
+  const m = Math.floor((n - 10) / 2);
+  return (m >= 0 ? '+' : '') + m;
+}
+
+function renderStatBlock() {
+  const m = _monster;
+  if (!m) return;
+
+  const stats = ['str','dex','con','int','wis','cha'];
+  const statLabels = ['FOR','DEX','CON','INT','SAG','CHA'];
+
+  const statsHtml = `
+    <div class="sb-stats">
+      ${stats.map((s,i) => `
+        <div class="sb-stat">
+          <div class="sb-stat-name">${statLabels[i]}</div>
+          <div class="sb-stat-val">${m[s]||10}</div>
+          <div class="sb-stat-mod">(${_mod(m[s]||10)})</div>
+        </div>`).join('')}
+    </div>`;
+
+  function section(title, entries) {
+    if (!entries || !entries.length) return '';
+    return `
+      <div class="sb-section-title">${title}</div>
+      ${entries.map(e => `
+        <div class="sb-entry">
+          ${e.name ? `<strong>${_esc(e.name)}.</strong> ` : ''}${_esc(e.desc||'')}
+        </div>`).join('')}`;
+  }
+
+  function propLine(label, val) {
+    if (!val) return '';
+    return `<div class="sb-prop"><strong>${label}</strong> ${_esc(val)}</div>`;
+  }
+
+  const saves = Array.isArray(m.saves) ? m.saves.join(', ') : (m.saves||'');
+  const skills = Array.isArray(m.skills) ? m.skills.join(', ') : (m.skills||'');
+
+  document.getElementById('stat-block-wrap').innerHTML = `
+    <div class="stat-block">
+      <div class="sb-name">${_esc(m.name||'Monstre')}</div>
+      <div class="sb-type">${_esc(m.type||'')}</div>
+      <hr class="sb-divider">
+      ${propLine('Classe d\'armure', m.ac)}
+      ${propLine('Points de vie', m.hp)}
+      ${propLine('Vitesse', m.speed)}
+      ${statsHtml}
+      <hr class="sb-divider">
+      ${saves    ? propLine('Jets de sauvegarde', saves) : ''}
+      ${skills   ? propLine('Compétences', skills) : ''}
+      ${m.dmg_immune  ? propLine('Immunités aux dégâts', Array.isArray(m.dmg_immune) ? m.dmg_immune.join(', ') : m.dmg_immune) : ''}
+      ${m.dmg_resist  ? propLine('Résistances aux dégâts', Array.isArray(m.dmg_resist) ? m.dmg_resist.join(', ') : m.dmg_resist) : ''}
+      ${m.dmg_vuln    ? propLine('Vulnérabilités', Array.isArray(m.dmg_vuln) ? m.dmg_vuln.join(', ') : m.dmg_vuln) : ''}
+      ${m.cond_immune ? propLine('Immunités aux états', Array.isArray(m.cond_immune) ? m.cond_immune.join(', ') : m.cond_immune) : ''}
+      ${m.senses    ? propLine('Sens', m.senses) : ''}
+      ${m.languages ? propLine('Langues', m.languages) : ''}
+      ${propLine('Facteur de puissance', m.cr)}
+      <hr class="sb-divider">
+      ${section('Capacités spéciales', m.traits)}
+      ${section('Actions', m.actions)}
+      ${section('Réactions', m.reactions)}
+      ${m.legendary_desc ? `<div class="sb-entry" style="margin-top:0.4rem">${_esc(m.legendary_desc)}</div>` : ''}
+      ${section('Actions légendaires', m.legendary)}
+      ${m.notes ? `<hr class="sb-divider"><div class="sb-entry"><em>${_esc(m.notes)}</em></div>` : ''}
+    </div>`;
+}
+
+// ── Edit Panel ────────────────────────────────────────────────────────────────
+
+let _editing = false;
+
+function toggleEdit() {
+  _editing = !_editing;
+  const panel = document.getElementById('edit-panel');
+  const notice = document.getElementById('edit-notice');
+  const btn = document.getElementById('btn-edit');
+  panel.style.display = _editing ? 'block' : 'none';
+  notice.style.display = _editing ? '' : 'none';
+  btn.textContent = _editing ? '✕ Fermer édition' : '✎ Éditer';
+  if (_editing) populateEditPanel();
+}
+
+function epAddEntry(listId, name='', desc='') {
+  const list = document.getElementById(listId);
+  if (!list) return;
+  const row = document.createElement('div');
+  row.className = 'ep-entry-row';
+  row.innerHTML = `
+    <input type="text" placeholder="Nom" value="${_esc(name)}">
+    <textarea placeholder="Description">${_esc(desc)}</textarea>
+    <button onclick="this.closest('.ep-entry-row').remove()">✕</button>`;
+  list.appendChild(row);
+}
+
+function epGetEntries(listId) {
+  return [...document.querySelectorAll('#' + listId + ' .ep-entry-row')].map(row => ({
+    name: row.querySelector('input')?.value || '',
+    desc: row.querySelector('textarea')?.value || '',
+  })).filter(e => e.name || e.desc);
+}
+
+function populateEditPanel() {
+  const m = _monster;
+  if (!m) return;
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.value = v || ''; };
+  set('ep_name', m.name);
+  set('ep_type', m.type);
+  set('ep_ac', m.ac);
+  set('ep_hp', m.hp);
+  set('ep_speed', m.speed);
+  set('ep_cr', m.cr);
+  ['str','dex','con','int','wis','cha'].forEach(s => set('ep_' + s, m[s]));
+  set('ep_senses', m.senses);
+  set('ep_languages', m.languages);
+  set('ep_dmg_immune',  Array.isArray(m.dmg_immune)  ? m.dmg_immune.join(', ')  : (m.dmg_immune||''));
+  set('ep_dmg_resist',  Array.isArray(m.dmg_resist)  ? m.dmg_resist.join(', ')  : (m.dmg_resist||''));
+  set('ep_dmg_vuln',    Array.isArray(m.dmg_vuln)    ? m.dmg_vuln.join(', ')    : (m.dmg_vuln||''));
+  set('ep_cond_immune', Array.isArray(m.cond_immune) ? m.cond_immune.join(', ') : (m.cond_immune||''));
+  set('ep_legendary_desc', m.legendary_desc);
+  set('ep_notes', m.notes);
+
+  ['traits','actions','reactions','legendary'].forEach(key => {
+    const listId = 'ep-' + key + '-list';
+    document.getElementById(listId).innerHTML = '';
+    (m[key] || []).forEach(e => epAddEntry(listId, e.name, e.desc));
+  });
+}
+
+function applyEdit() {
+  const get = id => document.getElementById(id)?.value || '';
+  const splitList = v => v ? v.split(',').map(s => s.trim()).filter(Boolean) : [];
+
+  _monster = {
+    ..._monster,
+    name:     get('ep_name'),
+    type:     get('ep_type'),
+    ac:       get('ep_ac'),
+    hp:       get('ep_hp'),
+    speed:    get('ep_speed'),
+    cr:       get('ep_cr'),
+    str: parseInt(get('ep_str'))||10, dex: parseInt(get('ep_dex'))||10,
+    con: parseInt(get('ep_con'))||10, int: parseInt(get('ep_int'))||10,
+    wis: parseInt(get('ep_wis'))||10, cha: parseInt(get('ep_cha'))||10,
+    senses:    get('ep_senses'),
+    languages: get('ep_languages'),
+    dmg_immune:  splitList(get('ep_dmg_immune')),
+    dmg_resist:  splitList(get('ep_dmg_resist')),
+    dmg_vuln:    splitList(get('ep_dmg_vuln')),
+    cond_immune: splitList(get('ep_cond_immune')),
+    legendary_desc: get('ep_legendary_desc'),
+    notes:  get('ep_notes'),
+    traits:    epGetEntries('ep-traits-list'),
+    actions:   epGetEntries('ep-actions-list'),
+    reactions: epGetEntries('ep-reactions-list'),
+    legendary: epGetEntries('ep-legendary-list'),
+  };
+
+  renderStatBlock();
+  document.getElementById('tb-title').textContent = _monster.name || 'Stat Block';
+  updateHash();
+  toggleEdit();
+  showToast('✓ Stat block mis à jour — lien régénéré !');
+}
+
+function updateHash() {
+  const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(_monster))));
+  history.replaceState(null, '', '#' + b64);
+}
+
+function copyLink() {
+  const url = window.location.href.split('#')[0] + '#' + btoa(unescape(encodeURIComponent(JSON.stringify(_monster))));
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url)
+      .then(() => showToast('🔗 Lien copié !'))
+      .catch(() => prompt('Copie ce lien :', url));
+  } else {
+    prompt('Copie ce lien :', url);
+  }
+}
+
+function showToast(msg) {
+  const t = document.getElementById('mv-toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+</script>
+</body>
+</html>

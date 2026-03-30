@@ -1,0 +1,13 @@
+{
+  "index": "superior-hunters-defense-uncanny-dodge",
+  "name": "Défense supérieure du chasseur : esquive étrange",
+  "level": 15,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Lorsqu'un attaquant que vous pouvez voir vous frappe avec une attaque, vous pouvez utiliser votre réaction pour réduire de moitié les dégâts de l'attaque contre vous."
+  ],
+  "name_en": "Superior Hunter's Defense: Uncanny Dodge",
+  "class_name_fr": "",
+  "_translated": true
+}

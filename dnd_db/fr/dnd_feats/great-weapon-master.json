@@ -1,0 +1,13 @@
+{
+  "index": "great-weapon-master",
+  "name": "Grand maître d'armes",
+  "source": "Player's Handbook",
+  "prerequisite": null,
+  "desc": "Vous avez appris à mettre le poids d'une arme à votre avantage, en laissant son élan renforcer vos frappes. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "À votre tour, lorsque vous réussissez un coup critique avec une arme de mêlée ou réduisez une créature à 0 point de vie avec une, vous pouvez effectuer une attaque avec une arme de mêlée en tant qu'action bonus.",
+    "Avant de réaliser une attaque au corps à corps avec une arme lourde que vous maîtrisez, vous pouvez choisir de subir un malus de -5 au jet d'attaque. Si l'attaque réussit, vous ajoutez +10 aux dégâts de l'attaque."
+  ],
+  "name_en": "Great Weapon Master",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "multiattack-whirlwind-attack",
+  "name": "Multiattaque : Attaque tourbillonnante",
+  "level": 11,
+  "class": "ranger",
+  "subclass": "hunter",
+  "desc": [
+    "Vous pouvez utiliser votre action pour effectuer une attaque au corps à corps contre n'importe quel nombre de créatures à moins de 1,50 mètre de vous, avec un jet d'attaque distinct pour chaque cible."
+  ],
+  "name_en": "Multiattack: Whirlwind Attack",
+  "class_name_fr": "",
+  "_translated": true
+}

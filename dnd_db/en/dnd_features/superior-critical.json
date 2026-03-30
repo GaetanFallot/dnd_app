@@ -1,0 +1,8 @@
+{
+  "index": "superior-critical",
+  "name": "Superior Critical",
+  "level": 15,
+  "class": "fighter",
+  "subclass": "champion",
+  "desc": "Starting at 15th level, your weapon attacks score a critical hit on a roll of 18-20."
+}

@@ -1,0 +1,14 @@
+{
+  "index": "revenant-blade-wgte",
+  "name": "Lame revenante",
+  "source": "Wayfinder's Guide to Eberron",
+  "prerequisite": "Elfe",
+  "desc": "Vous descendez d'un maître de la double lame et ses compétences vous ont été transmises. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Dextérité ou de Force de 1, jusqu'à un maximum de 20.",
+    "Lorsque vous maniez une arme à double lame à deux mains, l'arme a le trait de finesse pour vos attaques avec elle et vous gagnez +1 CA.",
+    "A votre tour, lorsque vous utilisez une action bonus pour effectuer une attaque au corps à corps avec la lame à l'extrémité opposée de l'arme, le dé de dégâts de l'arme pour cette attaque passe à 2d4, au lieu de 1d4."
+  ],
+  "name_en": "Revenant Blade",
+  "_translated": true
+}

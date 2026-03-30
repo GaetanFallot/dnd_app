@@ -1,0 +1,13 @@
+{
+  "index": "channel-divinity-preserve-life",
+  "name": "Channel Divinity : Préserver la vie",
+  "level": 2,
+  "class": "cleric",
+  "subclass": "life",
+  "desc": [
+    "À partir du niveau 2, vous pouvez utiliser votre canal divinité pour soigner les blessés graves.\nPar une action, vous présentez votre symbole sacré et évoquez une énergie de guérison qui peut restaurer un nombre de points de vie égal à cinq fois votre niveau de clerc.\nChoisissez n'importe quelle créature à moins de 9 mètres de vous et répartissez ces points de vie entre elles. Cette fonctionnalité ne peut restaurer une créature qu'à la moitié de son maximum de points de vie. Vous ne pouvez pas utiliser cette fonctionnalité sur un mort-vivant ou une construction."
+  ],
+  "name_en": "Channel Divinity: Preserve Life",
+  "class_name_fr": "",
+  "_translated": true
+}

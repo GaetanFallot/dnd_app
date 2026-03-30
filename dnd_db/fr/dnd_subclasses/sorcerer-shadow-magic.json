@@ -1,0 +1,48 @@
+{
+  "index": "sorcerer-shadow-magic",
+  "name": "Sorcier : Magie de l'Ombre",
+  "class": "sorcerer",
+  "source": "Xanathar's Guide to Everything",
+  "subclass_flavor": "Vous êtes une créature de l'ombre, car votre magie innée vient de Shadowfell elle-même. Vous pourriez retracer votre lignée jusqu'à une entité de cet endroit, ou peut-être avez-vous été exposé à son énergie déchue et transformé par elle.",
+  "desc": "",
+  "features": [
+    {
+      "name": "bizarreries du sorcier de l'ombre",
+      "level": null,
+      "desc": "À votre discrétion, vous pouvez choisir ou lancer un jet sur le tableau des bizarreries du sorcier de l'ombre pour créer une bizarrerie pour votre personnage.\nd6 | Bizarre\n1 | Vous êtes toujours glacial au toucher.\n2 | Lorsque vous dormez, vous ne semblez pas respirer (même si vous devez quand même respirer pour survivre).\n3 | Vous saignez à peine, même si vous êtes gravement blessé.\n4 | Votre cœur bat une fois par minute. Cet événement surprend parfois.\n5 | Vous avez du mal à vous rappeler que les êtres vivants et les cadavres doivent être traités différemment.\n6 | Vous avez cligné des yeux. Une fois. La semaine dernière.",
+      "name_en": "Shadow Sorcerer Quirks"
+    },
+    {
+      "name": "Les yeux du noir",
+      "level": 1,
+      "desc": "Dès le 1er niveau, vous disposez d'une vision dans le noir avec une portée de 120 pieds.\n\nLorsque vous atteignez le niveau 3 dans cette classe, vous apprenez le sort des ténèbres, qui ne compte pas dans votre nombre de sorts de sorcier connus. De plus, vous pouvez le lancer en dépensant 2 points de sorcellerie ou en dépensant un emplacement de sort. Si vous le lancez avec des points de sorcellerie, vous pouvez voir à travers les ténèbres créées par le sort.",
+      "name_en": "Eyes of the Dark"
+    },
+    {
+      "name": "Force de la tombe",
+      "level": 1,
+      "desc": "Dès le niveau 1, votre existence dans un état crépusculaire entre la vie et la mort vous rend difficile à vaincre. Lorsque les dégâts vous réduisent à 0 point de vie, vous pouvez faire un jet de sauvegarde de Charisme (DD 5 + les dégâts subis). En cas de réussite, vous chutez à 1 point de vie. Vous ne pouvez pas utiliser cette fonctionnalité si vous êtes réduit à 0 point de vie par des dégâts radiants ou par un coup critique.\n\nUne fois le jet de sauvegarde réussi, vous ne pouvez plus utiliser cette fonctionnalité tant que vous n'avez pas terminé un repos long.",
+      "name_en": "Strength of the Grave"
+    },
+    {
+      "name": "Chien de mauvais présage",
+      "level": 6,
+      "desc": "Au niveau 6, vous obtenez la capacité d'invoquer une créature des ténèbres hurlante pour harceler vos ennemis. Par une action bonus, vous pouvez dépenser 3 points de sorcellerie pour invoquer un chien de mauvais augure afin de cibler une créature que vous pouvez voir à moins de 120 pieds de vous. Le chien utilise les statistiques du loup terrible, avec les modifications suivantes :\n• Le chien est de taille Medium, pas Large, et il compte comme une monstruosité, pas comme une bête.\n• Il apparaît avec un nombre de points de vie temporaires égal à la moitié de votre niveau de sorcier.\n• Il peut se déplacer à travers d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Le chien subit 5 dégâts de force s'il termine son tour à l'intérieur d'un objet.\n• Au début de son tour, le chien connaît automatiquement l'emplacement de sa cible. Si la cible était cachée, elle n'est plus cachée au chien.\n\nLe chien apparaît dans un espace inoccupé de votre choix à moins de 9 mètres de la cible. Lancez l'initiative pour le chien. A son tour, il ne peut se déplacer vers sa cible que par la route la plus directe, et il ne peut utiliser son action que pour attaquer sa cible. Le chien peut lancer des attaques d’opportunité, mais uniquement contre sa cible. De plus, tant que le chien se trouve à moins de 1,50 mètre de la cible, celle-ci est désavantagée aux jets de sauvegarde contre tout sort que vous lancez. Le chien disparaît s'il est réduit à 0 point de vie, si sa cible est réduite à 0 point de vie ou au bout de 5 minutes.",
+      "name_en": "Hound of Ill Omen"
+    },
+    {
+      "name": "Promenade dans l'ombre",
+      "level": 14,
+      "desc": "Au niveau 14, vous gagnez la capacité de passer d’une ombre à une autre. Lorsque vous êtes dans une faible lumière ou dans l'obscurité, par une action bonus, vous pouvez vous téléporter jusqu'à 120 pieds dans un espace inoccupé que vous pouvez voir et qui est également dans une faible lumière ou dans l'obscurité.",
+      "name_en": "Shadow Walk"
+    },
+    {
+      "name": "Forme ombrale",
+      "level": 18,
+      "desc": "À partir du niveau 18, vous pouvez dépenser 6 points de sorcellerie comme action bonus pour vous transformer en une forme sombre. Sous cette forme, vous avez une résistance à tous les dégâts, à l'exception des dégâts de force et des dégâts radiants, et vous pouvez vous déplacer à travers d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Vous subissez 5 dégâts de force si vous terminez votre tour à l'intérieur d'un objet.\n\nVous restez sous cette forme pendant 1 minute. Il se termine plus tôt si vous êtes frappé d'incapacité, si vous mourez ou si vous le rejetez comme une action bonus.",
+      "name_en": "Umbral Form"
+    }
+  ],
+  "name_en": "Sorcerer: Shadow Magic",
+  "_translated": true
+}

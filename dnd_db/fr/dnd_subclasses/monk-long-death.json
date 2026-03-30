@@ -1,0 +1,36 @@
+{
+  "index": "monk-long-death",
+  "name": "Moine : Voie de la longue mort",
+  "class": "monk",
+  "source": "Sword Coast Adventurer's Guide",
+  "subclass_flavor": "Les moines de la Voie de la Longue Mort sont obsédés par le sens et les mécanismes de la mort. Ils capturent des créatures et préparent des expériences élaborées pour capturer, enregistrer et comprendre les moments de leur disparition. Ils utilisent ensuite ces connaissances pour guider leur compréhension des arts martiaux, créant ainsi un style de combat mortel.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Toucher de la mort",
+      "level": 3,
+      "desc": "À partir du moment où vous choisissez cette tradition au niveau 3, votre étude de la mort vous permet d'extraire la vitalité d'une autre créature alors qu'elle approche de sa disparition. Lorsque vous réduisez une créature à moins de 1,50 mètre de vous à 0 point de vie, vous gagnez des points de vie temporaires égaux à votre modificateur de Sagesse + votre niveau de moine (minimum de 1 point de vie temporaire).",
+      "name_en": "Touch of Death"
+    },
+    {
+      "name": "L'heure de la récolte",
+      "level": 6,
+      "desc": "Au niveau 6, vous gagnez la capacité de déstabiliser ou de terrifier ceux qui vous entourent par une action, car votre âme a été touchée par l'ombre de la mort. Lorsque vous effectuez cette action, chaque créature à moins de 9 mètres de vous et qui peut vous voir doit réussir un jet de sauvegarde de Sagesse ou avoir peur de vous jusqu'à la fin de votre prochain tour.",
+      "name_en": "Hour of Reaping"
+    },
+    {
+      "name": "Maîtrise de la mort",
+      "level": 11,
+      "desc": "À partir du niveau 11, vous utilisez votre familiarité avec la mort pour échapper à son emprise. Lorsque vous êtes réduit à 0 point de vie, vous pouvez dépenser 1 point de ki (aucune action requise) pour avoir 1 point de vie à la place.",
+      "name_en": "Mastery of Death"
+    },
+    {
+      "name": "Toucher de la longue mort",
+      "level": 17,
+      "desc": "À partir du niveau 17, votre contact peut canaliser l'énergie de la mort vers une créature. Par une action, vous touchez une créature à moins de 1,50 mètre de vous et vous dépensez 1 à 10 points de ki. La cible doit effectuer un jet de sauvegarde de Constitution, et elle subit 2d10 dégâts nécrotiques par point de ki dépensé en cas d'échec, ou la moitié de ces dégâts en cas de réussite.",
+      "name_en": "Touch of the Long Death"
+    }
+  ],
+  "name_en": "Monk: Way of the Long Death",
+  "_translated": true
+}

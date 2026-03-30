@@ -1,0 +1,11 @@
+{
+  "index": "skill-versatility",
+  "name": "Polyvalence des compétences",
+  "races": [
+    "half-elf"
+  ],
+  "subraces": [],
+  "desc": "Vous maîtrisez deux compétences de votre choix.",
+  "name_en": "Skill Versatility",
+  "_translated": true
+}

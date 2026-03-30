@@ -1,0 +1,14 @@
+{
+  "index": "orcish-fury",
+  "name": "Fureur orque",
+  "source": "Xanathar's Guide to Everything",
+  "prerequisite": "Demi-orque",
+  "desc": "Votre fureur brûle inlassablement. Vous bénéficiez des avantages suivants :",
+  "benefits": [
+    "Augmentez votre score de Force ou de Constitution de 1, jusqu'à un maximum de 20.",
+    "Lorsque vous frappez avec une attaque effectuée avec une arme simple ou martiale, vous pouvez lancer un dé de dégâts de l’arme une fois de plus et l’ajouter comme dégâts supplémentaires du type de dégâts de l’arme. Une fois que vous avez utilisé cette capacité, vous ne pouvez plus l’utiliser tant que vous n’avez pas terminé un repos court ou long.",
+    "Immédiatement après avoir utilisé votre trait Endurance implacable, vous pouvez utiliser votre réaction pour effectuer une attaque avec une arme."
+  ],
+  "name_en": "Orcish Fury",
+  "_translated": true
+}

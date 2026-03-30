@@ -1,0 +1,11 @@
+{
+  "index": "trance",
+  "name": "Transe",
+  "races": [
+    "elf"
+  ],
+  "subraces": [],
+  "desc": "Les elfes n'ont pas besoin de dormir. Au lieu de cela, ils méditent profondément, en restant semi-conscients, 4 heures par jour. (Le mot courant pour une telle méditation est « transe ».) Pendant la méditation, vous pouvez rêver d'une manière ou d'une autre ; de tels rêves sont en fait des exercices mentaux devenus réflexifs au fil des années de pratique. Après vous être reposé de cette façon, vous bénéficiez du même bénéfice qu’un humain après 8 heures de sommeil.",
+  "name_en": "Trance",
+  "_translated": true
+}

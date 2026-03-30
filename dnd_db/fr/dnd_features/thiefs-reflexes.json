@@ -1,0 +1,13 @@
+{
+  "index": "thiefs-reflexes",
+  "name": "Les réflexes du voleur",
+  "level": 17,
+  "class": "rogue",
+  "subclass": "thief",
+  "desc": [
+    "Lorsque vous atteignez le niveau 17, vous êtes devenu adepte de l'art de tendre des embuscades et d'échapper rapidement au danger. Vous pouvez jouer deux tours au cours du premier round de n'importe quel combat. Vous prenez votre premier tour à votre initiative normale et votre deuxième tour à votre initiative moins 10. Vous ne pouvez pas utiliser cette fonctionnalité lorsque vous êtes surpris."
+  ],
+  "name_en": "Thief's Reflexes",
+  "class_name_fr": "",
+  "_translated": true
+}

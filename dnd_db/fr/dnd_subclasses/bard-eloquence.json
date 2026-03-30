@@ -1,0 +1,42 @@
+{
+  "index": "bard-eloquence",
+  "name": "Barde : Collège d'éloquence",
+  "class": "bard",
+  "source": "Mythic Odysseys of Theros, Tasha's Cauldron of Everything",
+  "subclass_flavor": "Les adeptes du Collège d'Éloquence maîtrisent l'art de l'oratoire. La persuasion est considérée comme un grand art, et un argument bien argumenté et bien formulé s’avère souvent plus puissant que la vérité objective. Ces bardes manient un mélange de logique et de jeux de mots théâtraux, convainquant les sceptiques et les détracteurs avec des arguments logiques, et touchant les cordes sensibles pour faire appel aux émotions d'un public entier.",
+  "desc": "",
+  "features": [
+    {
+      "name": "Langue d'argent",
+      "level": 3,
+      "desc": "À partir du niveau 3, vous maîtrisez parfaitement l’art de dire la bonne chose au bon moment. Lorsque vous effectuez un test de Charisme (Persuasion) ou de Charisme (Déception), vous pouvez traiter un résultat d20 de 9 ou moins comme un 10.",
+      "name_en": "Silver Tongue"
+    },
+    {
+      "name": "Des mots troublants",
+      "level": 3,
+      "desc": "Également au niveau 3, vous pouvez lancer des mots empreints de magie qui déstabilisent une créature et la font douter d'elle-même. Par une action bonus, vous pouvez dépenser une utilisation de votre Inspiration bardique et choisir une créature que vous pouvez voir à moins de 20 mètres de vous. Lancez le dé Inspiration Bardique. La créature doit soustraire le nombre obtenu lors du prochain jet de sauvegarde qu'elle effectue avant le début de votre prochain tour.",
+      "name_en": "Unsettling Words"
+    },
+    {
+      "name": "Une inspiration sans faille",
+      "level": 6,
+      "desc": "Au niveau 6, vos paroles inspirantes sont si convaincantes que les autres se sentent poussés à réussir. Lorsqu'une créature ajoute l'un de vos dés d'Inspiration bardique à son test de capacité, son jet d'attaque ou son jet de sauvegarde et que le jet échoue, la créature peut conserver le dé d'Inspiration bardique.",
+      "name_en": "Unfailing Inspiration"
+    },
+    {
+      "name": "Discours universel",
+      "level": 6,
+      "desc": "Au niveau 6 également, vous avez acquis la capacité de rendre votre discours intelligible à n'importe quelle créature. Par une action, choisissez une ou plusieurs créatures à moins de 60 pieds de vous, jusqu'à un nombre égal à votre modificateur de Charisme (au minimum une créature). Les créatures choisies peuvent vous comprendre comme par magie, quelle que soit la langue que vous parlez, pendant 1 heure.\n\nUne fois que vous utilisez cette fonctionnalité, vous ne pouvez plus l'utiliser avant d'avoir terminé un repos long, à moins que vous ne dépensiez un emplacement de sort pour l'utiliser à nouveau.",
+      "name_en": "Universal Speech"
+    },
+    {
+      "name": "Inspiration infectieuse",
+      "level": 14,
+      "desc": "Au niveau 14, lorsque vous parvenez à inspirer quelqu'un, le pouvoir de votre éloquence peut désormais s'étendre à quelqu'un d'autre. Lorsqu'une créature à moins de 20 mètres de vous ajoute un de vos dés d'Inspiration bardique à son test de capacité, à son jet d'attaque ou à son jet de sauvegarde et que le jet réussit, vous pouvez utiliser votre réaction pour encourager une créature différente (autre que vous) qui peut vous entendre à moins de 60 pieds de vous, lui donnant un dé d'Inspiration bardique sans dépenser aucune de vos utilisations d'Inspiration bardique.\n\nVous pouvez utiliser cette réaction un nombre de fois égal à votre modificateur de Charisme (au minimum une fois), et vous récupérez toutes les utilisations dépensées lorsque vous terminez un repos long.",
+      "name_en": "Infectious Inspiration"
+    }
+  ],
+  "name_en": "Bard: College of Eloquence",
+  "_translated": true
+}

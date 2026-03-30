@@ -1,0 +1,13 @@
+{
+  "index": "bonus-cantrip",
+  "name": "Cantrip bonus",
+  "level": 2,
+  "class": "druid",
+  "subclass": "land",
+  "desc": [
+    "Lorsque vous choisissez ce cercle au niveau 2, vous apprenez un cantrip de druide supplémentaire de votre choix."
+  ],
+  "name_en": "Bonus Cantrip",
+  "class_name_fr": "",
+  "_translated": true
+}

@@ -1,0 +1,13 @@
+{
+  "index": "spellcasting-cleric",
+  "name": "Lancement de sorts : Clerc",
+  "level": 1,
+  "class": "cleric",
+  "subclass": null,
+  "desc": [
+    "En tant que canal du pouvoir divin, vous pouvez lancer des sorts de clerc."
+  ],
+  "name_en": "Spellcasting: Cleric",
+  "class_name_fr": "",
+  "_translated": true
+}

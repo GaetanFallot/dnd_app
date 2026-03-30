@@ -1,0 +1,13 @@
+{
+  "index": "ranger-extra-attack",
+  "name": "Attaque supplémentaire",
+  "level": 5,
+  "class": "ranger",
+  "subclass": null,
+  "desc": [
+    "À partir du niveau 5, vous pouvez attaquer deux fois, au lieu d'une, chaque fois que vous effectuez l'action Attaque pendant votre tour."
+  ],
+  "name_en": "Extra Attack",
+  "class_name_fr": "",
+  "_translated": true
+}

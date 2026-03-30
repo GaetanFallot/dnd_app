@@ -1,0 +1,14 @@
+{
+  "index": "guild-artisan",
+  "name": "Background: Guild Artisan",
+  "source": "Player's Handbook",
+  "desc": "You are a member of an artisan's guild, skilled in a particular field and closely associated with other artisans. You are a well-established part of the mercantile world, freed by talent and wealth from the constraints of a feudal social order. You learned your skills as an apprentice to a master artisan, under the sponsorship of your guild, until you became a master in your own right.\n\nSkill Proficiencies: Insight, Persuasion\nTool Proficiencies: One type of artisan's tools\nLanguages: One of your choice\nEquipment: A set of artisan's tools (one of your choice), a letter of introduction from your guild, a set of traveler's clothesValue:2gp Weight:4lbs, and a pouchValue:5sp Weight:1lb containing 15gp",
+  "skill_proficiencies": [
+    "Insight",
+    "Persuasion\nTool Proficiencies: One type of artisan's tools\nLanguages: One of your choice\nEquipment: A set of artisan's tools (one of your choice)",
+    "a letter of introduction from your guild",
+    "a set of traveler's clothesValue:2gp Weight:4lbs",
+    "and a pouchValue:5sp Weight:1lb containing 15gp"
+  ],
+  "feature": null
+}
