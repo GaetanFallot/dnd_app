@@ -1,3 +1,13 @@
+// ── URL Shortener (is.gd, fallback null) ─────────────────────────────────────
+async function _shortenUrl(url) {
+  try {
+    const res = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`);
+    if (!res.ok) return null;
+    const short = (await res.text()).trim();
+    return short.startsWith('http') ? short : null;
+  } catch { return null; }
+}
+
 const DND = {
   // Spell slot tables
   _SLOTS_FULL: [null, [2,0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0,0],[4,2,0,0,0,0,0,0,0],[4,3,0,0,0,0,0,0,0],[4,3,2,0,0,0,0,0,0],[4,3,3,0,0,0,0,0,0],[4,3,3,1,0,0,0,0,0],[4,3,3,2,0,0,0,0,0],[4,3,3,3,1,0,0,0,0],[4,3,3,3,2,0,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,0,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,0,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,0],[4,3,3,3,2,1,1,1,1],[4,3,3,3,3,1,1,1,1],[4,3,3,3,3,2,1,1,1],[4,3,3,3,3,2,2,1,1]],
@@ -918,18 +928,20 @@ const DND = {
     this.showToast('📄 ' + (data.char_name || 'Personnage') + ' exporté !');
   },
 
-  shareLink() {
+  async shareLink() {
     const data = this.gatherData();
     const json = JSON.stringify(data);
-    // Unicode-safe base64 (fonctionne avec les accents, emojis, etc.)
     const b64  = btoa(unescape(encodeURIComponent(json)));
     const url  = 'https://gaetanfallot.github.io/dnd_app/dnd5e-sheets/view.html#' + b64;
+    this.showToast('⏳ Raccourcissement…');
+    const short = await _shortenUrl(url);
+    const final = short || url;
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(url)
-        .then(() => this.showToast('🔗 Lien copié !'))
-        .catch(() => prompt('Copie ce lien :', url));
+      navigator.clipboard.writeText(final)
+        .then(() => this.showToast(short ? '🔗 Lien court copié !' : '🔗 Lien copié !'))
+        .catch(() => prompt('Copie ce lien :', final));
     } else {
-      prompt('Copie ce lien :', url);
+      prompt('Copie ce lien :', final);
     }
   },
 

@@ -894,7 +894,16 @@ async function saveMonsterModal(){
   }
 }
 
-function shareMonsterLink(){
+async function _shortenUrl(url) {
+  try {
+    const res = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`);
+    if (!res.ok) return null;
+    const short = (await res.text()).trim();
+    return short.startsWith('http') ? short : null;
+  } catch { return null; }
+}
+
+async function shareMonsterLink(){
   saveMonsterModal();
   const m = _editingEid
     ? encounterMonsters.find(x => x._eid === _editingEid)
@@ -902,12 +911,15 @@ function shareMonsterLink(){
   if(!m) return;
   const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(m))));
   const url = 'https://gaetanfallot.github.io/dnd_app/monster-view.html#' + b64;
+  showToast('⏳ Raccourcissement…');
+  const short = await _shortenUrl(url);
+  const final = short || url;
   if(navigator.clipboard){
-    navigator.clipboard.writeText(url)
-      .then(()=>showToast('🔗 Lien monstre copié !'))
-      .catch(()=>prompt('Copie ce lien :', url));
+    navigator.clipboard.writeText(final)
+      .then(()=>showToast(short ? '🔗 Lien court copié !' : '🔗 Lien copié !'))
+      .catch(()=>prompt('Copie ce lien :', final));
   } else {
-    prompt('Copie ce lien :', url);
+    prompt('Copie ce lien :', final);
   }
 }
 

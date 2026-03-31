@@ -409,14 +409,26 @@ function updateHash() {
   history.replaceState(null, '', '#' + b64);
 }
 
-function copyLink() {
+async function _shortenUrl(url) {
+  try {
+    const res = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`);
+    if (!res.ok) return null;
+    const short = (await res.text()).trim();
+    return short.startsWith('http') ? short : null;
+  } catch { return null; }
+}
+
+async function copyLink() {
   const url = window.location.href.split('#')[0] + '#' + btoa(unescape(encodeURIComponent(JSON.stringify(_monster))));
+  showToast('⏳ Raccourcissement…');
+  const short = await _shortenUrl(url);
+  const final = short || url;
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(url)
-      .then(() => showToast('🔗 Lien copié !'))
-      .catch(() => prompt('Copie ce lien :', url));
+    navigator.clipboard.writeText(final)
+      .then(() => showToast(short ? '🔗 Lien court copié !' : '🔗 Lien copié !'))
+      .catch(() => prompt('Copie ce lien :', final));
   } else {
-    prompt('Copie ce lien :', url);
+    prompt('Copie ce lien :', final);
   }
 }
 
