@@ -1,0 +1,9 @@
+{
+  "index": "fighter-banneret",
+  "name": "Fighter: Banneret",
+  "class": "fighter",
+  "source": "Sword Coast Adventurer's Guide",
+  "subclass_flavor": "A banneret is a knight who inspires greatness in others by committing brave deeds in battle. The mere presence of one in a hamlet is enough to cause some orcs and bandits to seek easier prey. A lone banneret is a skilled warrior, but a banneret leading a band of allies can transform even the most poorly equipped militia into a ferocious war band.",
+  "desc": "A banneret is a knight who inspires greatness in others by committing brave deeds in battle. The mere presence of one in a hamlet is enough to cause some orcs and bandits to seek easier prey. A lone banneret is a skilled warrior, but a banneret leading a band of allies can transform even the most poorly equipped militia into a ferocious war band.\n\nA banneret prefers to lead through deeds, not words. As a banneret spearheads an attack, their actions can awaken reserves of courage and conviction in allies that they never suspected they had.\n\nBanneret serves as the generic name for the Purple Dragon Knight archetype if you use it in campaign settings other than the Forgotten Realms or to model warlords other than Purple Dragon Knights.",
+  "features": []
+}

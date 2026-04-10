@@ -1800,8 +1800,10 @@ input[type="checkbox"]:checked::after {
         <button class="btn" onclick="DND.exportPDF()" title="Exporter en PDF">📄 PDF</button>
         <button class="btn" onclick="DND.exportJSON()">📤</button>
         <button class="btn" onclick="DND.importJSON()">📥</button>
-        
-        
+        <button class="btn" onclick="DND.shareLink()" title="Copier le lien de partage">🔗</button>
+        <button class="btn" onclick="DND.openImportLinkModal()" title="Importer depuis un lien">📎</button>
+
+
         <button class="btn btn-shortrest" onclick="DND.shortRest()">☀️ Court</button>
         <button class="btn btn-longrest" onclick="DND.longRest()">🌙 Long</button>
         
@@ -3318,6 +3320,36 @@ const DND = {
     }
   },
 
+  openImportLinkModal() {
+    const m = document.getElementById('import-link-modal');
+    if (!m) return;
+    m.style.display = 'flex';
+    const inp = document.getElementById('import-link-input');
+    if (inp) { inp.value = ''; inp.focus(); }
+  },
+
+  async importFromLink() {
+    let raw = (document.getElementById('import-link-input')?.value || '').trim();
+    if (!raw) { alert('Colle un lien de partage valide.'); return; }
+    if (raw.startsWith('http') && !raw.includes('#')) {
+      try {
+        this.showToast('⏳ Résolution du lien…');
+        const r = await fetch(raw, { redirect: 'follow' });
+        if (r.url && r.url.includes('#')) raw = r.url;
+      } catch(e) {}
+    }
+    const hash = raw.includes('#') ? raw.split('#').pop() : raw;
+    if (!hash) { alert('Colle un lien de partage valide.'); return; }
+    try {
+      const data = JSON.parse(decodeURIComponent(escape(atob(hash))));
+      this._meta = data; this.applyData(data); this.recalcAll(); this.save();
+      document.getElementById('import-link-modal').style.display = 'none';
+      this.showToast('✓ Fiche importée depuis le lien !');
+    } catch(e) {
+      alert('Lien invalide ou corrompu.\n\nAstuce : collez le lien complet (celui avec #… dans la barre d\'adresse).');
+    }
+  },
+
   importJSON() {
     const input=document.createElement('input'); input.type='file'; input.accept='.json';
     input.onchange=(e)=>{
@@ -3513,5 +3545,22 @@ const MONSTER = {
   }
 })();
 </script>
+
+<!-- ── Import From Link Modal ────────────────────────────────── -->
+<div id="import-link-modal" style="display:none;position:fixed;inset:0;z-index:1100;background:rgba(0,0,0,.82);align-items:center;justify-content:center;padding:1rem"
+  onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:var(--bg-panel,#1a1410);border:1px solid var(--gold,#c8a84b);border-radius:6px;padding:1.2rem 1.5rem;width:100%;max-width:520px">
+    <div style="font-family:'Cinzel',serif;font-size:0.95rem;color:var(--gold,#c8a84b);margin-bottom:0.8rem">📎 Importer depuis un lien</div>
+    <input id="import-link-input" type="text" placeholder="Colle ici le lien de partage…"
+      style="width:100%;box-sizing:border-box;background:#100d09;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-light,#d8c8a8);padding:0.45rem 0.7rem;border-radius:4px;font-size:0.85rem;margin-bottom:0.8rem"
+      onkeydown="if(event.key==='Enter')DND.importFromLink()">
+    <div style="display:flex;gap:0.5rem;justify-content:flex-end">
+      <button onclick="document.getElementById('import-link-modal').style.display='none'"
+        style="padding:0.35rem 0.9rem;background:none;border:1px solid var(--border-ornate,#4a3420);color:var(--ink-faded,#7a6a55);border-radius:4px;cursor:pointer;font-size:0.8rem">Annuler</button>
+      <button onclick="DND.importFromLink()"
+        style="padding:0.35rem 0.9rem;background:var(--arcane-bg,#2a1a4e);color:var(--arcane-glow,#b89fff);border:1px solid var(--arcane-glow,#b89fff);border-radius:4px;cursor:pointer;font-size:0.8rem">Importer</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>

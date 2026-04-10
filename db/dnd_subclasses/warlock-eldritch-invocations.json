@@ -1,0 +1,9 @@
+{
+  "index": "warlock-eldritch-invocations",
+  "name": "Eldritch Invocations",
+  "class": "warlock",
+  "source": "Player's Handbook\nPrerequisite: eldritch blast cantrip",
+  "subclass_flavor": "Prerequisite:",
+  "desc": "",
+  "features": []
+}

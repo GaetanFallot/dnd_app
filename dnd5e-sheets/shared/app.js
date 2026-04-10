@@ -928,20 +928,17 @@ const DND = {
     this.showToast('📄 ' + (data.char_name || 'Personnage') + ' exporté !');
   },
 
-  async shareLink() {
+  shareLink() {
     const data = this.gatherData();
     const json = JSON.stringify(data);
     const b64  = btoa(unescape(encodeURIComponent(json)));
     const url  = 'https://gaetanfallot.github.io/dnd_app/dnd5e-sheets/view.html#' + b64;
-    this.showToast('⏳ Raccourcissement…');
-    const short = await _shortenUrl(url);
-    const final = short || url;
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(final)
-        .then(() => this.showToast(short ? '🔗 Lien court copié !' : '🔗 Lien copié !'))
-        .catch(() => prompt('Copie ce lien :', final));
+      navigator.clipboard.writeText(url)
+        .then(() => this.showToast('🔗 Lien copié !'))
+        .catch(() => prompt('Copie ce lien :', url));
     } else {
-      prompt('Copie ce lien :', final);
+      prompt('Copie ce lien :', url);
     }
   },
 
@@ -953,8 +950,17 @@ const DND = {
     if (inp) { inp.value = ''; inp.focus(); }
   },
 
-  importFromLink() {
-    const raw = (document.getElementById('import-link-input')?.value || '').trim();
+  async importFromLink() {
+    let raw = (document.getElementById('import-link-input')?.value || '').trim();
+    if (!raw) { alert('Colle un lien de partage valide.'); return; }
+    // Lien court (sans #) → tenter de résoudre la redirection
+    if (raw.startsWith('http') && !raw.includes('#')) {
+      try {
+        this.showToast('⏳ Résolution du lien…');
+        const r = await fetch(raw, { redirect: 'follow' });
+        if (r.url && r.url.includes('#')) raw = r.url;
+      } catch(e) { /* CORS ou réseau — on continue avec la valeur brute */ }
+    }
     const hash = raw.includes('#') ? raw.split('#').pop() : raw;
     if (!hash) { alert('Colle un lien de partage valide.'); return; }
     try {
@@ -962,7 +968,9 @@ const DND = {
       this._meta = data; this.applyData(data); this.recalcAll(); this.save();
       document.getElementById('import-link-modal').style.display = 'none';
       this.showToast('✓ Fiche importée depuis le lien !');
-    } catch(e) { alert('Lien invalide ou corrompu.'); }
+    } catch(e) {
+      alert('Lien invalide ou corrompu.\n\nAstuce : collez le lien complet (celui avec #… dans la barre d\'adresse), pas un lien court.');
+    }
   },
 
   importJSON() {

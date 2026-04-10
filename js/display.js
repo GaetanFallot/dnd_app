@@ -73,6 +73,7 @@ function openSecondScreen(){
     Object.entries(effectVolumes).forEach(([id,vol])=>secondWindow.postMessage({type:'effect-volume',id,volume:vol},'*'));
     if(stormMode)secondWindow.postMessage({type:'storm-mode',active:true},'*');
     if(vidAudioOn)secondWindow.postMessage({type:'vid-audio',muted:false,volume:effectVolumes.vidaudio||0.6},'*');
+    if(typeof sendInitToScreen==='function')sendInitToScreen();
     showToast('✓ Écran 2 ouvert');
   };
   const t=setInterval(()=>{if(secondWindow?.closed){clearInterval(t);secondWindow=null;updateBtn(false);}},800);
@@ -111,6 +112,23 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;cursor:none}
 @keyframes fireFlicker{from{background:radial-gradient(ellipse at 50% 110%,rgba(255,90,0,.25) 0%,rgba(180,40,0,.1) 40%,transparent 65%)}to{background:radial-gradient(ellipse at 50% 110%,rgba(255,120,0,.35) 0%,rgba(200,60,0,.15) 40%,transparent 70%)}}
 @keyframes magicPulse{0%,100%{background:radial-gradient(ellipse at 50% 50%,rgba(120,0,200,.15) 0%,transparent 60%)}50%{background:radial-gradient(ellipse at 50% 50%,rgba(60,0,200,.25) 0%,rgba(200,0,180,.1) 50%,transparent 70%)}}
 @keyframes waveMotion{0%{transform:translateY(0) scaleY(1)}50%{transform:translateY(-8px) scaleY(1.01)}100%{transform:translateY(5px) scaleY(.99)}}
+#turn-order-bar{position:fixed;top:0;left:50%;transform:translateX(-50%) translateY(-110%);z-index:50;display:flex;align-items:center;gap:5px;padding:6px 16px 14px;background:linear-gradient(to bottom,rgba(8,5,2,.97),rgba(10,6,2,.82));border-bottom:1px solid rgba(200,168,75,.22);border-left:1px solid rgba(200,168,75,.13);border-right:1px solid rgba(200,168,75,.13);border-radius:0 0 14px 14px;transition:transform .5s cubic-bezier(.34,1.56,.64,1);max-width:88vw;overflow-x:auto;scrollbar-width:none}
+#turn-order-bar::-webkit-scrollbar{display:none}
+#turn-order-bar.visible{transform:translateX(-50%) translateY(0)}
+.to-round-badge{display:flex;flex-direction:column;align-items:center;min-width:34px;padding-right:2px;flex-shrink:0}
+.to-round-label{font-family:Georgia,serif;font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(200,168,75,.45)}
+.to-round-num{font-family:Georgia,serif;font-size:1.05rem;color:rgba(200,168,75,.8);line-height:1.1}
+.to-sep{width:1px;height:36px;background:rgba(200,168,75,.12);flex-shrink:0}
+.to-fighter{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:50px;flex-shrink:0;padding:0 2px}
+.to-portrait{width:44px;height:44px;border-radius:50%;border:2px solid rgba(200,168,75,.28);background:rgba(18,10,4,.9);display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:1.1rem;color:rgba(200,168,75,.65);position:relative;transition:all .35s;flex-shrink:0}
+.to-fighter.active .to-portrait{border-color:#c8a84b;color:#c8a84b;box-shadow:0 0 0 3px rgba(200,168,75,.15),0 0 18px rgba(200,168,75,.55);transform:scale(1.14);animation:toGlow 2s ease-in-out infinite alternate}
+.to-fighter.upcoming .to-portrait{border-color:rgba(200,168,75,.48);opacity:.72}
+.to-init-badge{position:absolute;bottom:-7px;right:-5px;background:rgba(8,5,2,.95);border:1px solid rgba(200,168,75,.48);border-radius:8px;font-size:.57rem;color:#c8a84b;font-family:Georgia,serif;padding:1px 4px;min-width:17px;text-align:center;line-height:1.4}
+.to-fighter-name{font-family:Georgia,serif;font-size:.54rem;color:rgba(200,168,75,.55);max-width:50px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;letter-spacing:.03em}
+.to-fighter.active .to-fighter-name{color:#c8a84b;font-weight:bold}
+.to-pip{width:5px;height:5px;border-radius:50%;background:#c8a84b;box-shadow:0 0 6px #c8a84b;animation:toPip 1s ease-in-out infinite alternate;margin-bottom:-1px;flex-shrink:0}
+@keyframes toGlow{from{box-shadow:0 0 0 3px rgba(200,168,75,.15),0 0 12px rgba(200,168,75,.45)}to{box-shadow:0 0 0 3px rgba(200,168,75,.22),0 0 24px rgba(200,168,75,.75)}}
+@keyframes toPip{from{opacity:.65;transform:scale(1)}to{opacity:1;transform:scale(1.4)}}
 </style></head><body>
 <div id="audio-gate" onclick="unlockAudio()"><div class="ag-icon">🔊</div><div class="ag-text">Cliquer pour activer le son</div></div>
 <div id="bg"></div>
@@ -118,6 +136,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;cursor:none}
 <canvas id="fx-canvas"></canvas>
 <div id="overlay-layer"></div>
 <div id="lightning-flash"></div>
+<div id="turn-order-bar"></div>
 <div id="idle"><div id="idle-t">⚔ En attente ⚔</div><div id="idle-s">DM Screen Controller</div></div>
 <script>
 const bg=document.getElementById('bg'),iw=document.getElementById('img-wrap'),
@@ -386,6 +405,29 @@ window.addEventListener('message',e=>{
   }
   if(d.type==='fullscreen'&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen();
   if(d.type==='sb-visual') triggerSbVisual(d.effect);
+  if(d.type==='turn-order'){
+    const bar=document.getElementById('turn-order-bar');
+    if(!d.visible||!d.combatants||!d.combatants.length){bar.classList.remove('visible');return;}
+    bar.innerHTML='';
+    bar.classList.add('visible');
+    const rb=document.createElement('div');rb.className='to-round-badge';
+    rb.innerHTML='<div class="to-round-label">Round</div><div class="to-round-num">'+d.round+'</div>';
+    bar.appendChild(rb);
+    d.combatants.forEach((c,i)=>{
+      const sep=document.createElement('div');sep.className='to-sep';bar.appendChild(sep);
+      const isActive=i===d.currentIdx;
+      const isUpcoming=d.currentIdx>=0&&i===(d.currentIdx+1)%d.combatants.length&&d.combatants.length>1;
+      const fighter=document.createElement('div');fighter.className='to-fighter'+(isActive?' active':isUpcoming?' upcoming':'');
+      if(isActive){const pip=document.createElement('div');pip.className='to-pip';fighter.appendChild(pip);}
+      const portrait=document.createElement('div');portrait.className='to-portrait';portrait.textContent=c.name.charAt(0).toUpperCase();
+      const badge=document.createElement('div');badge.className='to-init-badge';badge.textContent=c.init;
+      portrait.appendChild(badge);
+      const name=document.createElement('div');name.className='to-fighter-name';name.textContent=c.name;
+      fighter.appendChild(portrait);fighter.appendChild(name);
+      bar.appendChild(fighter);
+    });
+    setTimeout(()=>{const a=bar.querySelector('.to-fighter.active');if(a)a.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});},60);
+  }
 });
 
 // ═══ SOUNDBOARD VISUALS (screen 2) ═══

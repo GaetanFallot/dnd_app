@@ -119,6 +119,7 @@
       <button onclick="prevTurn()">◀ Préc.</button>
       <button onclick="nextTurn()">Suiv. ▶</button>
     </div>
+    <button id="initDisplayBtn" onclick="toggleInitDisplay()" style="width:100%;margin:.4rem 0 .2rem;background:rgba(200,168,75,.08);border:1px solid rgba(200,168,75,.3);color:rgba(200,168,75,.7);font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.08em;padding:.45rem;border-radius:3px;cursor:pointer;transition:all .2s" onmouseover="this.style.background='rgba(200,168,75,.15)'" onmouseout="if(!initDisplayVisible)this.style.background='rgba(200,168,75,.08)'">👁 Afficher le tour sur l'écran 2</button>
     <div class="turn-round" id="roundDisplay">Round <span id="roundNum">1</span></div>
     <div class="turn-list" id="turnList"></div>
     <button class="clear-btn" onclick="clearInit()">✕ Vider l'initiative</button>
