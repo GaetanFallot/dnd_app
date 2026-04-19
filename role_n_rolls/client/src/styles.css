@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    font-family: theme('fontFamily.body');
+    background:
+      radial-gradient(ellipse at top, rgba(139, 0, 0, 0.08), transparent 60%),
+      radial-gradient(ellipse at bottom, rgba(201, 168, 76, 0.06), transparent 60%),
+      theme('colors.night.DEFAULT');
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: theme('fontFamily.display');
+    letter-spacing: 0.02em;
+  }
+
+  ::selection {
+    background: rgba(201, 168, 76, 0.35);
+    color: #fff;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: theme('colors.night.deep'); }
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.night.panel');
+    border-radius: 4px;
+    border: 2px solid theme('colors.night.deep');
+  }
+  ::-webkit-scrollbar-thumb:hover { background: theme('colors.gold.dark'); }
+}
+
+@layer components {
+  .panel {
+    @apply bg-card border border-border/60 rounded-lg shadow-lg shadow-black/40;
+  }
+
+  .panel-accent {
+    @apply panel;
+    background:
+      linear-gradient(135deg, rgba(201, 168, 76, 0.04), transparent 50%),
+      theme('colors.card.DEFAULT');
+  }
+
+  .heading-rune {
+    @apply font-display text-gold uppercase tracking-widest;
+    text-shadow: 0 0 12px rgba(201, 168, 76, 0.25);
+  }
+
+  .btn-rune {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2
+           font-display uppercase tracking-wider text-sm transition-all
+           border border-gold/40 text-gold bg-night-muted/60
+           hover:bg-gold/10 hover:border-gold hover:shadow-[0_0_12px_rgba(201,168,76,0.35)]
+           active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-blood {
+    @apply btn-rune text-parchment border-blood/60 hover:bg-blood/20 hover:border-blood
+           hover:shadow-[0_0_12px_rgba(139,0,0,0.5)];
+  }
+}
