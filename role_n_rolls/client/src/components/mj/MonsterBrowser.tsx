@@ -2,22 +2,26 @@ import { useMemo, useState } from 'react';
 import { useDndMonsters } from '@/hooks/useDndData';
 import { useSession } from '@/stores/session';
 import { useMj } from '@/stores/mj';
+import { useCustomMonstersDb } from '@/hooks/useCustomMonstersDb';
 import { parseCr, type Monster } from '@/types/monster';
 import { StatBlock } from './StatBlock';
 import { cn } from '@/lib/utils';
-import { Search, X, Plus } from 'lucide-react';
+import { Search, X, Plus, Pencil, Copy, Trash2 } from 'lucide-react';
 
 interface Props {
   open: boolean;
   onClose: () => void;
+  onEdit: (monster: Monster) => void;
+  onDuplicate: (monster: Monster) => void;
 }
 
 type TabId = 'library' | 'custom';
 
-export function MonsterBrowser({ open, onClose }: Props) {
+export function MonsterBrowser({ open, onClose, onEdit, onDuplicate }: Props) {
   const { data: library = [], isLoading } = useDndMonsters();
   const { lang, setLang } = useSession();
-  const { encounterMonsters, addEncounterMonster } = useMj();
+  const { addEncounterMonster } = useMj();
+  const { monsters: custom, remove: removeCustom } = useCustomMonstersDb();
 
   const [tab, setTab] = useState<TabId>('library');
   const [search, setSearch] = useState('');
@@ -26,14 +30,6 @@ export function MonsterBrowser({ open, onClose }: Props) {
   const [type, setType] = useState('');
   const [size, setSize] = useState('');
   const [selected, setSelected] = useState<Monster | null>(null);
-
-  const custom = useMemo(
-    () =>
-      encounterMonsters
-        .map((e) => e.data)
-        .filter((m) => m.source === 'custom'),
-    [encounterMonsters],
-  );
 
   const source = tab === 'library' ? (library as Monster[]) : custom;
 
@@ -216,15 +212,57 @@ export function MonsterBrowser({ open, onClose }: Props) {
             {selected ? (
               <>
                 <StatBlock monster={selected} compact />
-                <button
-                  type="button"
-                  onClick={() => {
-                    addEncounterMonster({ ...selected, source: (selected.source ?? 'srd') as Monster['source'] });
-                  }}
-                  className="btn-rune w-full mt-4"
-                >
-                  <Plus className="w-4 h-4" /> Ajouter à la rencontre
-                </button>
+                <div className="mt-4 space-y-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      addEncounterMonster({ ...selected, source: (selected.source ?? 'srd') as Monster['source'] });
+                    }}
+                    className="btn-rune w-full"
+                  >
+                    <Plus className="w-4 h-4" /> Ajouter à la rencontre
+                  </button>
+                  {selected.source === 'custom' ? (
+                    <div className="flex gap-2">
+                      <button
+                        type="button"
+                        onClick={() => onEdit(selected)}
+                        className="btn-rune flex-1 text-xs"
+                      >
+                        <Pencil className="w-3 h-3" /> Modifier
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => onDuplicate(selected)}
+                        className="btn-rune flex-1 text-xs"
+                      >
+                        <Copy className="w-3 h-3" /> Dupliquer
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (!selected.slug) return;
+                          if (!window.confirm(`Supprimer "${selected.name}" ?`)) return;
+                          void removeCustom(selected.slug);
+                          setSelected(null);
+                        }}
+                        className="btn-blood text-xs"
+                        title="Supprimer"
+                      >
+                        <Trash2 className="w-3 h-3" />
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => onDuplicate(selected)}
+                      className="btn-rune w-full text-xs"
+                      title="Cloner ce monstre SRD en personnalisé pour l'éditer"
+                    >
+                      <Copy className="w-3 h-3" /> Dupliquer pour éditer
+                    </button>
+                  )}
+                </div>
               </>
             ) : (
               <p className="italic text-muted-foreground text-center pt-16">

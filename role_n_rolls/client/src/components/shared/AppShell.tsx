@@ -82,8 +82,8 @@ export function AppShell() {
         >
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
-        <Dices className="text-gold w-5 h-5" />
-        <div className="font-display text-gold text-sm">Roll'n'Roles</div>
+        <Dices className="text-brand-gold w-5 h-5" />
+        <div className="font-display text-brand-gold text-sm">Roll'n'Roles</div>
       </div>
 
       {/* Sidebar — width-animated on md+, drawer on mobile */}
@@ -102,11 +102,11 @@ export function AppShell() {
           'border-b border-border/60 flex items-center gap-2 transition-all',
           collapsed ? 'p-2 justify-center' : 'p-4',
         )}>
-          <Dices className="text-gold w-6 h-6 shrink-0" />
+          <Dices className="text-brand-gold w-6 h-6 shrink-0" />
           {!collapsed && (
             <>
               <div className="min-w-0 flex-1">
-                <div className="font-display text-gold text-lg leading-tight truncate">Roll'n'Roles</div>
+                <div className="font-display text-brand-gold text-lg leading-tight truncate">Roll'n'Roles</div>
                 <div className="text-xs text-muted-foreground font-body italic truncate">
                   {activeCampaign.data?.title ?? (activeCampaignId ? 'Campagne…' : 'Aucune campagne')}
                 </div>

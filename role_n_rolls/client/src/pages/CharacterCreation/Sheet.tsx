@@ -178,7 +178,7 @@ export function Sheet() {
             : 'Personnage introuvable.'}
         </p>
         <button type="button" onClick={() => nav('/character')} className="btn-rune mt-4">
-          <ChevronLeft className="w-4 h-4" /> Retour au roster
+          <ChevronLeft className="w-4 h-4" /> Retour au personnages
         </button>
       </div>
     );

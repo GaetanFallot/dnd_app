@@ -17,9 +17,10 @@ import {
 interface Props {
   onOpenBrowser: () => void;
   onOpenEditor: (existing?: Monster) => void;
+  onDuplicate: (existing: Monster) => void;
 }
 
-export function EncounterDock({ onOpenBrowser, onOpenEditor }: Props) {
+export function EncounterDock({ onOpenBrowser, onOpenEditor, onDuplicate }: Props) {
   const {
     encounterMonsters,
     updateEncounterMonster,
@@ -200,13 +201,24 @@ export function EncounterDock({ onOpenBrowser, onOpenEditor }: Props) {
                         className="flex-1 min-h-24 bg-input border border-border/60 rounded p-2 text-sm focus:outline-none focus:border-gold resize-none"
                       />
                       <div className="flex gap-2">
-                        <button
-                          type="button"
-                          onClick={() => onOpenEditor(em.data)}
-                          className="btn-rune flex-1 text-xs"
-                        >
-                          Éditer fiche
-                        </button>
+                        {em.data.source === 'srd' ? (
+                          <button
+                            type="button"
+                            onClick={() => onDuplicate(em.data)}
+                            className="btn-rune flex-1 text-xs"
+                            title="SRD en lecture seule — duplique pour éditer"
+                          >
+                            Dupliquer &amp; éditer
+                          </button>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={() => onOpenEditor(em.data)}
+                            className="btn-rune flex-1 text-xs"
+                          >
+                            Éditer fiche
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>

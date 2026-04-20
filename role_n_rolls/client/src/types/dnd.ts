@@ -73,9 +73,31 @@ export interface DndFeatureEntry {
   [key: string]: unknown;
 }
 
+export type AbilityShort = 'STR' | 'DEX' | 'CON' | 'INT' | 'WIS' | 'CHA';
+export type SpellAreaType = 'sphere' | 'cone' | 'cube' | 'line' | 'cylinder';
+
+export interface SpellDamage {
+  damage_type?: string;
+  damage_at_slot_level?: Record<string, string>;
+  damage_at_character_level?: Record<string, string>;
+}
+
+export interface SpellDc {
+  dc_type?: AbilityShort | string;
+  dc_success?: 'half' | 'none' | 'other';
+  // Never present in the bundle; reserved for client-side calculations.
+  dc_value?: number;
+}
+
+export interface SpellAreaOfEffect {
+  type?: SpellAreaType;
+  size?: number;
+}
+
 export interface DndSpellEntry {
   slug: string;
   name: string;
+  name_en?: string;
   level: number;
   school?: string;
   casting_time?: string;
@@ -87,6 +109,11 @@ export interface DndSpellEntry {
   classes?: string[];
   description?: string;
   higher_level?: string;
+  attack_type?: '' | 'ranged' | 'melee';
+  damage?: SpellDamage | null;
+  dc?: SpellDc | null;
+  area_of_effect?: SpellAreaOfEffect | null;
+  material?: string;
   [key: string]: unknown;
 }
 

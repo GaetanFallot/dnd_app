@@ -1,5 +1,5 @@
 import type { Monster } from '@/types/monster';
-import { cn } from '@/lib/utils';
+import { ChipRow, type ChipDef } from '@/components/shared/Chip';
 
 function asText(v: unknown): string {
   if (v === null || v === undefined) return '';
@@ -19,8 +19,6 @@ const DMG_FR: Record<string, string> = {
   thunder: 'tonner.', force: 'force', psychic: 'psy.',
 };
 
-type Chip = { kind: 'recharge' | 'atk' | 'dc' | 'dmg'; text: string };
-
 interface RawAction {
   attack_bonus?: number;
   damage?: Array<{
@@ -31,8 +29,8 @@ interface RawAction {
   usage?: { type?: string; min_value?: number; times?: number };
 }
 
-function buildChips(a: RawAction): Chip[] {
-  const out: Chip[] = [];
+function buildChips(a: RawAction): ChipDef[] {
+  const out: ChipDef[] = [];
   const u = a.usage;
   if (u?.type === 'recharge on roll' && u.min_value !== undefined) {
     out.push({ kind: 'recharge', text: `⟳ ${u.min_value}–6` });
@@ -57,32 +55,6 @@ function buildChips(a: RawAction): Chip[] {
     if (str) out.push({ kind: 'dmg', text: `⚔ ${str}` });
   }
   return out;
-}
-
-const CHIP_STYLE: Record<Chip['kind'], string> = {
-  recharge: 'bg-amber-900/40 text-amber-300 border-amber-500/40',
-  atk:      'bg-blue-900/20 text-blue-300 border-blue-500/30',
-  dc:       'bg-purple-900/20 text-purple-300 border-purple-500/30',
-  dmg:      'bg-orange-900/20 text-orange-300 border-orange-500/30',
-};
-
-function ChipRow({ chips }: { chips: Chip[] }) {
-  if (!chips.length) return null;
-  return (
-    <div className="flex flex-wrap gap-1 mt-1">
-      {chips.map((c, i) => (
-        <span
-          key={i}
-          className={cn(
-            'inline-block text-[10px] px-1.5 py-0.5 rounded border font-display tracking-wide whitespace-nowrap',
-            CHIP_STYLE[c.kind],
-          )}
-        >
-          {c.text}
-        </span>
-      ))}
-    </div>
-  );
 }
 
 function ActionEntry({ entry }: { entry: { name: string; description?: string } & RawAction }) {

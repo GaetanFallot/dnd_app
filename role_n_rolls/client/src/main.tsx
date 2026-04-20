@@ -9,10 +9,15 @@ import 'gridstack/dist/gridstack.min.css';
 import './styles.css';
 
 initAuth();
-// Push the persisted theme colors onto :root before the first render so the
-// app never flashes with the default palette.
+// Subscribe BEFORE the first apply so any pending persist rehydrate (which
+// can fire as a `set` call during module evaluation) is caught. Then push
+// the current colours onto :root before the first render so the app never
+// flashes the default palette. The listener handles every subsequent user
+// change in /settings — no React tree involvement needed, CSS vars cascade.
+useTheme.subscribe((s, prev) => {
+  if (!prev || s.colors !== prev.colors) applyThemeToDocument(s.colors);
+});
 applyThemeToDocument(useTheme.getState().colors);
-useTheme.subscribe((s) => applyThemeToDocument(s.colors));
 
 const queryClient = new QueryClient({
   defaultOptions: {

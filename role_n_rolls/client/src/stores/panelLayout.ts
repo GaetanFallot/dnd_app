@@ -29,7 +29,7 @@ export interface PanelRect {
 }
 
 export const COLS = 4;
-export const ROW_HEIGHT = 96;
+export const ROW_HEIGHT = 80;
 
 export const DEFAULT_ORDER: PanelId[] = [
   'identity', 'combat', 'deathSaves',

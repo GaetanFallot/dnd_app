@@ -47,7 +47,16 @@ export function MjBoard({ editMode, widgetIds, renderWidget, nonce }: Props) {
       animate: true,
       disableResize: !editMode,
       disableDrag: !editMode,
-      handle: '.mj-drag',
+      // Whole widget body is draggable (same feel as the character sheet);
+      // form controls/scrollable content opt out via `cancel`. The visible
+      // `.mj-drag` grip is a purely decorative affordance.
+      handle: '.grid-stack-item-content',
+      draggable: {
+        handle: '.grid-stack-item-content',
+        cancel:
+          'input, textarea, button, select, option, a, [contenteditable="true"], .gs-width-picker',
+        appendTo: 'body',
+      },
       staticGrid: false,
     };
     let grid: GridStack | null = null;
@@ -119,13 +128,10 @@ export function MjBoard({ editMode, widgetIds, renderWidget, nonce }: Props) {
           gs-max-w={MJ_COLS}
         >
           <div className="grid-stack-item-content">
-            <button
-              type="button"
-              className="mj-drag gs-control-handle"
-              title="Glisser pour déplacer"
-              aria-label="Déplacer"
-              onMouseDown={(e) => e.stopPropagation()}
-            >
+            {/* Purely decorative grip — the whole card is the drag handle;
+                `pointer-events: none` on .gs-control-handle keeps this out of
+                the way so it doesn't compete with gridstack's drag init. */}
+            <span className="mj-drag gs-control-handle" aria-hidden>
               <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor" aria-hidden>
                 <circle cx="9" cy="6" r="1.2" />
                 <circle cx="15" cy="6" r="1.2" />
@@ -134,7 +140,7 @@ export function MjBoard({ editMode, widgetIds, renderWidget, nonce }: Props) {
                 <circle cx="9" cy="18" r="1.2" />
                 <circle cx="15" cy="18" r="1.2" />
               </svg>
-            </button>
+            </span>
             <div className="gs-panel-scroll">{renderWidget(id)}</div>
           </div>
         </div>

@@ -17,6 +17,10 @@ const config: Config = {
     extend: {
       colors: {
         parchment: withAlpha('--tw-parchment'),
+        // Brand gold is intentionally FIXED — never tracks the user theme.
+        // The Role'n'Rolls wordmark + dice logo must stay golden regardless
+        // of the palette the user picks in /settings (product contract).
+        'brand-gold': '#c9a84c',
         gold: {
           DEFAULT: withAlpha('--tw-gold'),
           light:   withAlpha('--tw-gold-light'),

@@ -53,7 +53,18 @@ export function GridstackSheet({ editMode, panelIds, renderPanel, nonce }: Props
       animate: true,
       disableResize: !editMode,
       disableDrag: !editMode,
-      handle: '.gs-drag',
+      // Whole widget body is draggable (match gridstackjs.com demo feel);
+      // inputs/buttons/links/scrollable content opt out via `cancel` so typing
+      // and clicks don't accidentally start a drag. React's onMouseDown
+      // stopPropagation on a button would ALSO block drag, which is why the
+      // legacy `.gs-drag` handle is now a visual affordance only.
+      handle: '.grid-stack-item-content',
+      draggable: {
+        handle: '.grid-stack-item-content',
+        cancel:
+          'input, textarea, button, select, option, a, [contenteditable="true"], .gs-width-picker',
+        appendTo: 'body',
+      },
       staticGrid: false,
     };
 
@@ -146,13 +157,13 @@ export function GridstackSheet({ editMode, panelIds, renderPanel, nonce }: Props
           gs-max-w={COLS}
         >
           <div className="grid-stack-item-content">
-            {/* Drag handle — always mounted, hidden via CSS in read-only. */}
-            <button
-              type="button"
+            {/* Drag affordance — purely decorative: the whole card is the drag
+                handle now (gridstackjs.com demo feel). `pointer-events: none`
+                in CSS keeps this out of the way so it doesn't compete with
+                `cancel` selectors or block drag initiation. */}
+            <span
               className="gs-drag gs-control-handle"
-              title="Glisser pour déplacer"
-              aria-label="Déplacer"
-              onMouseDown={(e) => e.stopPropagation()}
+              aria-hidden
             >
               <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor" aria-hidden>
                 <circle cx="9" cy="6" r="1.2" />
@@ -162,8 +173,7 @@ export function GridstackSheet({ editMode, panelIds, renderPanel, nonce }: Props
                 <circle cx="9" cy="18" r="1.2" />
                 <circle cx="15" cy="18" r="1.2" />
               </svg>
-            </button>
-            <WidthPicker id={id} onPick={setWidth} />
+            </span>
             <div className="gs-panel-scroll">{renderPanel(id)}</div>
           </div>
         </div>

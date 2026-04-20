@@ -12,6 +12,9 @@ import { NowPlayingBar } from '@/components/mj/NowPlayingBar';
 import { Soundboard } from '@/components/mj/Soundboard';
 import { EncounterDock } from '@/components/mj/EncounterDock';
 import { MonsterBrowser } from '@/components/mj/MonsterBrowser';
+import { MonsterEditor } from '@/components/mj/MonsterEditor';
+import { useCustomMonstersDb } from '@/hooks/useCustomMonstersDb';
+import type { Monster } from '@/types/monster';
 import { CampaignMapsDock } from '@/components/mj/CampaignMapsDock';
 import { LoreDock } from '@/components/mj/LoreDock';
 import { MjBoard } from './MjBoard';
@@ -37,11 +40,14 @@ export function MJScreen() {
 
   const { isOpen, open, close, send, sendScene, sendOverlays, sendTurnOrder } = useSecondScreenCtx();
   const { scenes: customScenes, addFromFile, rename, remove } = useCustomScenesDb();
+  const { add: addCustomMonster, update: updateCustomMonster } = useCustomMonstersDb();
 
   const [scenesCollapsed, setScenesCollapsed] = useState(false);
   const [customCollapsed, setCustomCollapsed] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [browserOpen, setBrowserOpen] = useState(false);
+  const [editorOpen, setEditorOpen] = useState(false);
+  const [editorInitial, setEditorInitial] = useState<Monster | null>(null);
   const [gridNonce, setGridNonce] = useState(0);
   const { order: mjOrder, editMode: mjEdit, toggleEdit: toggleMjEdit, reset: resetMj } = useMjLayout();
 
@@ -49,6 +55,37 @@ export function MJScreen() {
     setToast(msg);
     window.setTimeout(() => setToast(null), 2500);
   }, []);
+
+  const openEditor = useCallback((existing?: Monster) => {
+    if (existing && existing.source === 'srd') {
+      showToast('Les monstres SRD sont en lecture seule — duplique-le pour le modifier');
+      return;
+    }
+    setEditorInitial(existing ?? null);
+    setEditorOpen(true);
+  }, [showToast]);
+
+  const duplicateAndEdit = useCallback((existing: Monster) => {
+    const clone: Monster = {
+      ...existing,
+      slug: undefined,
+      id: undefined,
+      name: `${existing.name} (copie)`,
+      source: 'custom',
+    };
+    setEditorInitial(clone);
+    setEditorOpen(true);
+  }, []);
+
+  const handleEditorSave = useCallback(async (monster: Monster) => {
+    if (monster.slug && editorInitial?.slug === monster.slug) {
+      await updateCustomMonster(monster.slug, monster);
+      showToast(`✓ ${monster.name} mis à jour`);
+    } else {
+      await addCustomMonster(monster);
+      showToast(`✓ ${monster.name} créé`);
+    }
+  }, [addCustomMonster, editorInitial, showToast, updateCustomMonster]);
 
   // Resync any time the store changes and the popup is open.
   const syncAll = useCallback(() => {
@@ -296,9 +333,21 @@ export function MJScreen() {
       {/* Encounter dock + monster browser */}
       <EncounterDock
         onOpenBrowser={() => setBrowserOpen(true)}
-        onOpenEditor={() => showToast('Éditeur de monstre à venir (Phase C+)')}
+        onOpenEditor={openEditor}
+        onDuplicate={duplicateAndEdit}
       />
-      <MonsterBrowser open={browserOpen} onClose={() => setBrowserOpen(false)} />
+      <MonsterBrowser
+        open={browserOpen}
+        onClose={() => setBrowserOpen(false)}
+        onEdit={openEditor}
+        onDuplicate={duplicateAndEdit}
+      />
+      <MonsterEditor
+        open={editorOpen}
+        initial={editorInitial}
+        onClose={() => setEditorOpen(false)}
+        onSave={handleEditorSave}
+      />
 
       {/* Toast */}
       {toast && (

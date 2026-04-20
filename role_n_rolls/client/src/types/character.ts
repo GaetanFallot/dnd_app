@@ -4,6 +4,8 @@
  * files load unchanged.
  */
 
+import type { SpellAreaOfEffect, SpellDamage, SpellDc } from '@/types/dnd';
+
 export type AbilityKey = 'str' | 'dex' | 'con' | 'int' | 'wis' | 'cha';
 export type SpellType = 'full' | 'half' | 'warlock' | 'third' | 'none';
 
@@ -26,6 +28,13 @@ export interface DnDSpell {
   ritual?: boolean;
   classes?: string[];
   higher_level?: string;
+  name_en?: string;
+  attack_type?: 'ranged' | 'melee';
+  damage?: SpellDamage | null;
+  dc?: SpellDc | null;
+  area_of_effect?: SpellAreaOfEffect | null;
+  // Persisted slug — lets us re-hydrate missing fields (e.g. AoE) from the FR/EN bundles.
+  slug?: string;
 }
 
 export interface DnDAttack {

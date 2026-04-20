@@ -98,6 +98,17 @@ function normalizeEntry(bundle: BundleName, raw: unknown): unknown {
         material: typeof out.material === 'string' ? (out.material as string) : undefined,
       };
     }
+
+    // Normalise attack_type empty-string -> undefined so callers can rely on truthiness.
+    if (out.attack_type === '' || out.attack_type == null) {
+      out.attack_type = undefined;
+    }
+
+    // damage/dc/area_of_effect already ride through the spread; force null -> null
+    // (vs undefined) so "has-damage" checks stay meaningful.
+    if (out.damage === undefined) out.damage = null;
+    if (out.dc === undefined) out.dc = null;
+    if (out.area_of_effect === undefined) out.area_of_effect = null;
   }
 
   if (bundle === 'monsters') {

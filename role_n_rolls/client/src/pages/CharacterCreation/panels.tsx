@@ -22,9 +22,11 @@ import { cn } from '@/lib/utils';
 import { Plus, Trash2, BookOpen, ChevronDown, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import { SpellBrowser } from '@/components/character/SpellBrowser';
+import { SpellCard } from '@/components/character/SpellCard';
 import { ClassPicker } from '@/components/character/ClassPicker';
 import { FeaturesModal } from '@/components/character/FeaturesModal';
 import { useImageUpload } from '@/hooks/useImageUpload';
+import { useDndSpellsAoe } from '@/hooks/useDndSpellsAoe';
 
 type Patch = (p: Partial<DnDCharacter>) => void;
 
@@ -35,9 +37,9 @@ interface PanelProps {
 
 function Panel({ title, children, className }: { title: string; children: React.ReactNode; className?: string }) {
   return (
-    <section className={cn('panel p-4 space-y-3', className)}>
-      <h3 className="heading-rune text-sm border-b border-border/60 pb-2">{title}</h3>
-      {children}
+    <section className={cn('panel p-4 flex flex-col gap-3 min-h-0', className)}>
+      <h3 className="heading-rune text-sm border-b border-border/60 pb-2 shrink-0">{title}</h3>
+      <div className="flex-1 min-h-0 flex flex-col gap-3">{children}</div>
     </section>
   );
 }
@@ -252,13 +254,10 @@ export function SkillsPanel({ ch, patch }: PanelProps) {
 
   return (
     <Panel title="Compétences">
-      <div className="text-[10px] text-muted-foreground grid grid-cols-[24px_24px_1fr_40px] gap-1 px-1">
-        <span className="text-center">M</span>
-        <span className="text-center">E</span>
-        <span />
-        <span className="text-right">Mod.</span>
-      </div>
-      <ul className="space-y-0.5 max-h-80 overflow-y-auto">
+      <ul
+        className="flex-1 min-h-0 overflow-y-auto"
+        style={{ columnWidth: '220px', columnGap: '1rem' }}
+      >
         {SKILLS.map((sk) => {
           const isProf = state.proficient.includes(sk.name);
           const isExp = state.expert.includes(sk.name);
@@ -266,7 +265,7 @@ export function SkillsPanel({ ch, patch }: PanelProps) {
           const bonus = isExp ? pb * 2 : isProf ? pb : 0;
           const total = base + bonus;
           return (
-            <li key={sk.name} className="grid grid-cols-[24px_24px_1fr_40px] gap-1 items-center hover:bg-white/[0.02] rounded px-1">
+            <li key={sk.name} className="grid grid-cols-[24px_24px_1fr_40px] gap-1 items-center hover:bg-white/[0.02] rounded px-1 break-inside-avoid">
               <input
                 type="checkbox"
                 checked={isProf}
@@ -298,6 +297,7 @@ export function SkillsPanel({ ch, patch }: PanelProps) {
 
 export function SpellsPanel({ ch, patch }: PanelProps) {
   const [browserOpen, setBrowserOpen] = useState(false);
+  const { data: aoeMap } = useDndSpellsAoe();
   const slots = getSlots(ch._spellType, ch.level);
   const levels = Object.keys(slots).map(Number).sort((a, b) => a - b);
 
@@ -405,13 +405,16 @@ export function SpellsPanel({ ch, patch }: PanelProps) {
         </div>
       )}
 
-      <div className="space-y-1 max-h-72 overflow-y-auto pt-2 border-t border-border/40">
+      <div
+        className="flex-1 min-h-0 overflow-y-auto pt-2 border-t border-border/40"
+        style={{ columnWidth: '280px', columnGap: '0.75rem' }}
+      >
         {orderedLevels.length === 0 ? (
           <p className="text-xs italic text-muted-foreground text-center py-2">
             Aucun sort ajouté.
           </p>
         ) : orderedLevels.map((lvl) => (
-          <div key={lvl}>
+          <div key={lvl} className="break-inside-avoid mb-1">
             <div className="text-[10px] uppercase tracking-wider text-gold/80 py-1">
               {lvl === 0 ? 'Cantrips' : `Niveau ${lvl}`}
             </div>
@@ -419,6 +422,8 @@ export function SpellsPanel({ ch, patch }: PanelProps) {
               <SpellRow
                 key={i}
                 spell={s}
+                characterLevel={ch.level}
+                aoeMap={aoeMap}
                 onUpdate={(p) => updateSpell(i, p)}
                 onDelete={() => delSpell(i)}
               />
@@ -447,10 +452,14 @@ export function SpellsPanel({ ch, patch }: PanelProps) {
 
 function SpellRow({
   spell,
+  characterLevel,
+  aoeMap,
   onUpdate,
   onDelete,
 }: {
   spell: DnDSpell;
+  characterLevel?: number;
+  aoeMap?: Record<string, import('@/types/dnd').SpellAreaOfEffect>;
   onUpdate: (p: Partial<DnDSpell>) => void;
   onDelete: () => void;
 }) {
@@ -487,102 +496,8 @@ function SpellRow({
       </div>
 
       {s.expanded && (
-        <div className="ml-6 mr-1 mb-2 mt-1 rounded bg-night-deep/50 border border-border/40 p-2 space-y-1.5 text-xs">
-          <div className="flex flex-wrap gap-1">
-            {s.concentration && (
-              <span className="text-[10px] px-1.5 py-0.5 rounded border bg-blue-900/20 text-blue-300 border-blue-500/30 font-display tracking-wide">
-                Concentration
-              </span>
-            )}
-            {s.ritual && (
-              <span className="text-[10px] px-1.5 py-0.5 rounded border bg-purple-900/20 text-purple-300 border-purple-500/30 font-display tracking-wide">
-                Rituel
-              </span>
-            )}
-          </div>
-          <div className="grid grid-cols-[auto_1fr] gap-x-2 gap-y-0.5">
-            <span className="text-gold/80">École</span>
-            <input
-              type="text"
-              value={s.school}
-              onChange={(e) => onUpdate({ school: e.target.value })}
-              className="bg-transparent focus:bg-input border-b border-transparent focus:border-gold/60 px-1 focus:outline-none"
-            />
-            {s.casting_time !== undefined && (
-              <>
-                <span className="text-gold/80">Incantation</span>
-                <input
-                  type="text"
-                  value={s.casting_time ?? ''}
-                  onChange={(e) => onUpdate({ casting_time: e.target.value })}
-                  className="bg-transparent focus:bg-input border-b border-transparent focus:border-gold/60 px-1 focus:outline-none"
-                />
-              </>
-            )}
-            <span className="text-gold/80">Portée</span>
-            <input
-              type="text"
-              value={s.range}
-              onChange={(e) => onUpdate({ range: e.target.value })}
-              className="bg-transparent focus:bg-input border-b border-transparent focus:border-gold/60 px-1 focus:outline-none"
-            />
-            <span className="text-gold/80">Composantes</span>
-            <div className="flex items-center gap-2">
-              {(['v', 's', 'm'] as const).map((k) => (
-                <label key={k} className="flex items-center gap-1 text-[11px]">
-                  <input
-                    type="checkbox"
-                    checked={s[k]}
-                    onChange={(e) => onUpdate({ [k]: e.target.checked } as Partial<DnDSpell>)}
-                    className="accent-gold"
-                  />
-                  {k.toUpperCase()}
-                </label>
-              ))}
-              {s.m && (
-                <input
-                  type="text"
-                  value={s.material ?? ''}
-                  placeholder="Matériel"
-                  onChange={(e) => onUpdate({ material: e.target.value })}
-                  className="flex-1 bg-transparent italic focus:bg-input border-b border-transparent focus:border-gold/60 px-1 focus:outline-none"
-                />
-              )}
-            </div>
-            <span className="text-gold/80">Durée</span>
-            <input
-              type="text"
-              value={s.duration}
-              onChange={(e) => onUpdate({ duration: e.target.value })}
-              className="bg-transparent focus:bg-input border-b border-transparent focus:border-gold/60 px-1 focus:outline-none"
-            />
-            {s.classes?.length ? (
-              <>
-                <span className="text-gold/80">Classes</span>
-                <span className="px-1 text-muted-foreground">{s.classes.join(', ')}</span>
-              </>
-            ) : null}
-          </div>
-          <label className="block">
-            <span className="text-gold/80 text-[10px] uppercase tracking-wider">Description</span>
-            <textarea
-              value={s.summary}
-              onChange={(e) => onUpdate({ summary: e.target.value })}
-              rows={3}
-              className="w-full mt-0.5 bg-input/60 border border-border/40 rounded px-2 py-1 text-xs resize-y focus:outline-none focus:border-gold whitespace-pre-line"
-            />
-          </label>
-          {s.higher_level !== undefined && (
-            <label className="block">
-              <span className="text-gold/80 text-[10px] uppercase tracking-wider">Aux niveaux supérieurs</span>
-              <textarea
-                value={s.higher_level ?? ''}
-                onChange={(e) => onUpdate({ higher_level: e.target.value })}
-                rows={2}
-                className="w-full mt-0.5 bg-input/60 border border-border/40 rounded px-2 py-1 text-xs italic resize-y focus:outline-none focus:border-gold"
-              />
-            </label>
-          )}
+        <div className="ml-6 mr-1 mb-2 mt-1 rounded bg-night-deep/50 border border-border/40 p-3">
+          <SpellCard spell={s} characterLevel={characterLevel} aoeMap={aoeMap} />
         </div>
       )}
     </div>
@@ -620,11 +535,14 @@ export function EquipmentPanel({ ch, patch }: PanelProps) {
 
   return (
     <Panel title="Équipement">
-      <div className="space-y-1 max-h-64 overflow-y-auto">
+      <div
+        className="flex-1 min-h-0 overflow-y-auto"
+        style={{ columnWidth: '240px', columnGap: '0.75rem' }}
+      >
         {ch._equipment.length === 0 ? (
           <p className="text-xs italic text-muted-foreground text-center py-2">Aucun objet.</p>
         ) : ch._equipment.map((e, i) => (
-          <div key={i} className="flex items-center gap-2 text-sm">
+          <div key={i} className="flex items-center gap-2 text-sm break-inside-avoid mb-1">
             <input
               type="number"
               value={e.qty ?? 1}
@@ -660,11 +578,14 @@ export function FeaturesPanel({ ch, patch }: PanelProps) {
 
   return (
     <Panel title="Aptitudes & Traits">
-      <div className="space-y-2 max-h-80 overflow-y-auto">
+      <div
+        className="flex-1 min-h-0 overflow-y-auto"
+        style={{ columnWidth: '280px', columnGap: '0.75rem' }}
+      >
         {ch._features.length === 0 ? (
           <p className="text-xs italic text-muted-foreground text-center py-2">Aucune aptitude.</p>
         ) : ch._features.map((f, i) => (
-          <div key={i} className="space-y-1 bg-night-deep/40 rounded p-2">
+          <div key={i} className="space-y-1 bg-night-deep/40 rounded p-2 break-inside-avoid mb-2">
             <div className="flex items-center gap-2">
               <input
                 type="text"
@@ -735,13 +656,16 @@ export function ResourcesPanel({ ch, patch }: PanelProps) {
 
   return (
     <Panel title="Ressources">
-      <div className="space-y-2 max-h-80 overflow-y-auto">
+      <div
+        className="flex-1 min-h-0 overflow-y-auto"
+        style={{ columnWidth: '260px', columnGap: '0.75rem' }}
+      >
         {ch._resources.length === 0 ? (
           <p className="text-xs italic text-muted-foreground text-center py-2">
             Aucune ressource. Ajoute-en une pour les usages limités (Rage, Ki, Chancellerie divine…).
           </p>
         ) : ch._resources.map((r) => (
-          <div key={r.id} className="bg-night-deep/40 rounded p-2 space-y-1">
+          <div key={r.id} className="bg-night-deep/40 rounded p-2 space-y-1 break-inside-avoid mb-2">
             <div className="flex items-center gap-2">
               <input
                 type="text"

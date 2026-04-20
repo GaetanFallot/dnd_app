@@ -1,10 +1,12 @@
 import { useMemo, useState } from 'react';
 import { useDndSpells } from '@/hooks/useDndData';
+import { useDndSpellsAoe } from '@/hooks/useDndSpellsAoe';
 import type { DnDSpell } from '@/types/character';
-import type { DndSpellEntry } from '@/types/dnd';
+import type { DndSpellEntry, SpellAreaOfEffect } from '@/types/dnd';
 import { SPELL_SCHOOLS } from '@/lib/helpers/dndRules';
 import { cn } from '@/lib/utils';
 import { Search, X, Plus } from 'lucide-react';
+import { SpellCard } from './SpellCard';
 
 interface Props {
   open: boolean;
@@ -14,8 +16,12 @@ interface Props {
 }
 
 /** Convert an SRD/wikidot spell entry into the legacy DnDSpell shape. */
-function toSheetSpell(entry: DndSpellEntry): DnDSpell {
+function toSheetSpell(entry: DndSpellEntry, aoe?: SpellAreaOfEffect): DnDSpell {
   const comp = entry.components ?? {};
+  // loadDndBundle already coerces the empty-string case to undefined, so a
+  // plain truthy check yields the "ranged"|"melee" subset.
+  const attackType: 'ranged' | 'melee' | undefined =
+    entry.attack_type === 'ranged' || entry.attack_type === 'melee' ? entry.attack_type : undefined;
   return {
     prepared: true,
     level: entry.level,
@@ -29,20 +35,29 @@ function toSheetSpell(entry: DndSpellEntry): DnDSpell {
     summary: entry.description ?? '',
     expanded: false,
     casting_time: entry.casting_time,
-    material: comp.material,
+    material: comp.material ?? (typeof entry.material === 'string' ? entry.material : undefined),
     concentration: entry.concentration,
     ritual: entry.ritual,
     classes: entry.classes,
     higher_level: entry.higher_level,
+    name_en: entry.name_en,
+    attack_type: attackType,
+    damage: entry.damage ?? null,
+    dc: entry.dc ?? null,
+    area_of_effect: entry.area_of_effect ?? aoe ?? null,
+    slug: entry.slug,
   };
 }
 
 export function SpellBrowser({ open, onClose, onPick, existingNames }: Props) {
   const { data = [], isLoading } = useDndSpells();
+  const { data: aoeMap } = useDndSpellsAoe();
   const [search, setSearch] = useState('');
   const [level, setLevel] = useState<string>('');
   const [school, setSchool] = useState('');
   const [selected, setSelected] = useState<DndSpellEntry | null>(null);
+
+  const selectedAoe = selected && aoeMap ? aoeMap[selected.slug] : undefined;
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -130,61 +145,17 @@ export function SpellBrowser({ open, onClose, onPick, existingNames }: Props) {
           <div className="w-[360px] overflow-y-auto p-4 bg-night-deep/60">
             {selected ? (
               <>
-                <h3 className="font-display text-gold text-lg leading-tight">{selected.name}</h3>
-                {typeof selected.name_en === 'string' && selected.name_en && selected.name_en !== selected.name && (
-                  <div className="text-[11px] text-muted-foreground italic">{String(selected.name_en)}</div>
-                )}
-                <div className="text-xs text-muted-foreground italic">
-                  {selected.level === 0 ? 'Cantrip' : `Niveau ${selected.level}`}
-                  {selected.school ? ` — ${selected.school}` : ''}
-                </div>
-                <div className="flex flex-wrap gap-1 mt-1">
-                  {selected.concentration && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded border bg-blue-900/20 text-blue-300 border-blue-500/30 font-display tracking-wide">
-                      Concentration
-                    </span>
-                  )}
-                  {selected.ritual && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded border bg-purple-900/20 text-purple-300 border-purple-500/30 font-display tracking-wide">
-                      Rituel
-                    </span>
-                  )}
-                </div>
-                <table className="w-full mt-3 text-xs border-collapse">
-                  <tbody>
-                    {selected.casting_time && (
-                      <tr className="border-b border-border/30"><td className="text-gold py-0.5 pr-2 w-[45%]">Temps d'incantation</td><td className="py-0.5">{selected.casting_time}</td></tr>
-                    )}
-                    {selected.range && (
-                      <tr className="border-b border-border/30"><td className="text-gold py-0.5 pr-2">Portée</td><td className="py-0.5">{selected.range}</td></tr>
-                    )}
-                    <tr className="border-b border-border/30">
-                      <td className="text-gold py-0.5 pr-2">Composantes</td>
-                      <td className="py-0.5">
-                        {[selected.components?.v && 'V', selected.components?.s && 'S', selected.components?.m && 'M'].filter(Boolean).join(', ') || '—'}
-                        {selected.components?.material && (
-                          <span className="text-muted-foreground italic"> ({selected.components.material})</span>
-                        )}
-                      </td>
-                    </tr>
-                    {selected.duration && (
-                      <tr className="border-b border-border/30"><td className="text-gold py-0.5 pr-2">Durée</td><td className="py-0.5">{selected.duration}</td></tr>
-                    )}
-                    {selected.classes?.length ? (
-                      <tr><td className="text-gold py-0.5 pr-2">Classes</td><td className="py-0.5">{selected.classes.join(', ')}</td></tr>
-                    ) : null}
-                  </tbody>
-                </table>
-                <p className="mt-3 text-sm whitespace-pre-line">{selected.description}</p>
-                {selected.higher_level && (
-                  <div className="mt-3 p-2 rounded bg-gold/5 border border-gold/20 text-sm">
-                    <b className="text-gold">Aux niveaux supérieurs :</b>{' '}
-                    <span className="whitespace-pre-line">{selected.higher_level}</span>
-                  </div>
-                )}
+                <SpellCard
+                  spell={toSheetSpell(selected, selectedAoe)}
+                  subtitle={
+                    typeof selected.name_en === 'string' && selected.name_en && selected.name_en !== selected.name
+                      ? String(selected.name_en)
+                      : undefined
+                  }
+                />
                 <button
                   type="button"
-                  onClick={() => onPick(toSheetSpell(selected))}
+                  onClick={() => onPick(toSheetSpell(selected, selectedAoe))}
                   disabled={existingNames.has(selected.name)}
                   className="btn-rune w-full mt-4 disabled:opacity-40 disabled:cursor-not-allowed"
                 >
