@@ -7,6 +7,7 @@ import type { LoreEntityRow, LoreRelationRow, LoreEventRow } from '@/hooks/useLo
 import type { MapRow } from '@/hooks/useMaps';
 import { cn } from '@/lib/utils';
 import { BookMarked, Link as LinkIcon, Activity, Map as MapIcon, Compass, Loader2 } from 'lucide-react';
+import { EntityIcon } from '@/components/lore/IconPicker';
 
 type Tab = 'entities' | 'relations' | 'events' | 'maps';
 
@@ -130,7 +131,7 @@ export function PublicLorePage() {
                             : 'border-transparent',
                         )}
                       >
-                        <span className="text-base">{LORE_TYPE_META[e.type].emoji}</span>
+                        <EntityIcon type={e.type} iconRef={e.image_url} size={16} />
                         <span className="flex-1 truncate">{e.name}</span>
                       </button>
                     </li>
@@ -146,7 +147,7 @@ export function PublicLorePage() {
                       className="w-20 h-20 rounded border-2 border-gold/40 bg-night-deep shrink-0 flex items-center justify-center text-3xl bg-cover bg-center"
                       style={selected.image_url ? { backgroundImage: `url(${selected.image_url})` } : undefined}
                     >
-                      {!selected.image_url && LORE_TYPE_META[selected.type].emoji}
+                      {!selected.image_url && <EntityIcon type={selected.type} iconRef={selected.image_url} size={28} className="text-gold" />}
                     </div>
                     <div>
                       <h2 className="font-display text-gold text-2xl">{selected.name}</h2>
@@ -176,12 +177,14 @@ export function PublicLorePage() {
                 const b = entityById.get(r.entity_b_id);
                 return (
                   <li key={r.id} className="panel flex items-center gap-2 px-3 py-2 text-sm">
-                    <span className="font-display text-gold">
-                      {a ? `${LORE_TYPE_META[a.type].emoji} ${a.name}` : '—'}
+                    <span className="font-display font-bold text-gold flex items-center gap-1.5">
+                      {a && <EntityIcon type={a.type} iconRef={a.image_url} size={14} />}
+                      {a ? a.name : '—'}
                     </span>
                     <span className="text-xs text-muted-foreground italic">→ {r.relation_label}</span>
-                    <span className="font-display text-gold flex-1 truncate">
-                      {b ? `${LORE_TYPE_META[b.type].emoji} ${b.name}` : '—'}
+                    <span className="font-display font-bold text-gold flex-1 truncate flex items-center gap-1.5">
+                      {b && <EntityIcon type={b.type} iconRef={b.image_url} size={14} />}
+                      {b ? b.name : '—'}
                     </span>
                   </li>
                 );

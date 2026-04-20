@@ -1,4 +1,4 @@
-# Role'n'Rolls
+# Roll'n'Roles
 
 D&D companion app — React 18 + Vite + TypeScript, Supabase (Postgres + Auth + Realtime + Storage), Tailwind + shadcn/ui.
 

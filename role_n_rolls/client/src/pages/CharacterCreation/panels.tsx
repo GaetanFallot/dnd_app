@@ -24,6 +24,7 @@ import { useState } from 'react';
 import { SpellBrowser } from '@/components/character/SpellBrowser';
 import { ClassPicker } from '@/components/character/ClassPicker';
 import { FeaturesModal } from '@/components/character/FeaturesModal';
+import { useImageUpload } from '@/hooks/useImageUpload';
 
 type Patch = (p: Partial<DnDCharacter>) => void;
 
@@ -79,8 +80,18 @@ function TextField({ label, value, onChange, className }: {
 
 export function IdentityPanel({ ch, patch }: PanelProps) {
   const [picker, setPicker] = useState<null | 'class' | 'subclass' | 'race' | 'background'>(null);
+  const uploadM = useImageUpload();
   const subclassFromFeatures =
     ch._features.find((f) => f.source.endsWith('(sous-classe)'))?.source.replace(' (sous-classe)', '') ?? '';
+
+  const uploadPortrait = async (file: File) => {
+    try {
+      const { url } = await uploadM.mutateAsync(file);
+      patch({ _portrait: url });
+    } catch (err) {
+      alert('Upload impossible : ' + (err instanceof Error ? err.message : String(err)));
+    }
+  };
 
   const pickerField = (label: string, value: string, kind: 'class' | 'race' | 'background' | 'subclass', disabled = false) => (
     <label className="flex flex-col gap-1">
@@ -99,17 +110,29 @@ export function IdentityPanel({ ch, patch }: PanelProps) {
   return (
     <Panel title="Identité">
       <div className="flex items-start gap-3">
-        <div
-          className="w-20 h-20 rounded-full border-2 border-gold/40 bg-night-deep shrink-0 flex items-center justify-center text-3xl bg-cover bg-center cursor-pointer"
+        <label
+          className="relative w-20 h-20 rounded-full border-2 border-gold/40 bg-night-deep shrink-0 flex items-center justify-center text-3xl bg-cover bg-center cursor-pointer overflow-hidden"
           style={ch._portrait ? { backgroundImage: `url(${ch._portrait})` } : undefined}
-          onClick={() => {
-            const url = window.prompt('URL du portrait (ou vide pour retirer)', ch._portrait || '');
-            if (url !== null) patch({ _portrait: url });
-          }}
-          title="Cliquer pour changer le portrait"
+          title="Cliquer pour charger un portrait (ou glisser une image)"
         >
           {!ch._portrait && (ch._classIcon || '🗡️')}
-        </div>
+          {uploadM.isPending && (
+            <div className="absolute inset-0 bg-night/70 grid place-items-center">
+              <span className="text-gold text-xs animate-pulse">…</span>
+            </div>
+          )}
+          <input
+            type="file"
+            accept="image/*"
+            className="hidden"
+            disabled={uploadM.isPending}
+            onChange={(e) => {
+              const f = e.target.files?.[0];
+              if (f) void uploadPortrait(f);
+              e.target.value = '';
+            }}
+          />
+        </label>
         <div className="flex-1 grid grid-cols-2 gap-2">
           <TextField label="Nom" value={ch.char_name} onChange={(v) => patch({ char_name: v })} className="col-span-2" />
           {pickerField('Race', ch.race, 'race')}

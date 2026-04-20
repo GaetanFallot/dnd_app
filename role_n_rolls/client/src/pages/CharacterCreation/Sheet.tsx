@@ -1,20 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import {
-  DndContext,
-  DragOverlay,
-  PointerSensor,
-  TouchSensor,
-  closestCorners,
-  useSensor,
-  useSensors,
-  type DragEndEvent,
-  type DragOverEvent,
-  type DragStartEvent,
-} from '@dnd-kit/core';
-import { SortableContext, arrayMove, verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { useCharacter, useUpdateCharacter } from '@/hooks/useCharacters';
-import { usePanelLayout, type ColumnId, type PanelId } from '@/stores/panelLayout';
+import { usePanelLayout, type PanelId } from '@/stores/panelLayout';
+import { GridstackSheet } from './GridstackSheet';
 import { recalcDerived } from '@/lib/helpers/dndRules';
 import type { DnDCharacter } from '@/types/character';
 import { buildShareUrl, downloadJson } from '@/lib/helpers/characterShare';
@@ -30,8 +18,17 @@ import {
   Loader2,
   Check,
   CloudOff,
+  User,
+  Swords,
+  Skull,
+  Target,
+  Wand2,
+  Coins,
+  Package,
+  BookOpen,
+  Feather,
+  Pencil,
 } from 'lucide-react';
-import { SortablePanel } from '@/components/character/SortablePanel';
 import {
   CombatPanel,
   DeathSavesPanel,
@@ -60,22 +57,35 @@ const PANEL_RENDERERS: Record<PanelId, (ch: DnDCharacter, patch: Patch) => React
   personality: (ch, patch) => <PersonalityPanel ch={ch} patch={patch} />,
 };
 
-const COLUMNS: ColumnId[] = ['left', 'center', 'right'];
 const SAVE_DEBOUNCE_MS = 600;
 
-function findColumn(order: Record<ColumnId, PanelId[]>, id: string): ColumnId | null {
-  for (const c of COLUMNS) if (order[c].includes(id as PanelId)) return c;
-  return null;
-}
+const MOBILE_PANEL_META: Record<PanelId, { label: string; Icon: typeof User }> = {
+  identity:    { label: 'Identité', Icon: User },
+  combat:      { label: 'Combat',   Icon: Swords },
+  deathSaves:  { label: 'Mort',     Icon: Skull },
+  skills:      { label: 'Compét.',  Icon: Target },
+  spells:      { label: 'Sorts',    Icon: Wand2 },
+  wealth:      { label: 'Trésor',   Icon: Coins },
+  resources:   { label: 'Ress.',    Icon: RefreshCw },
+  equipment:   { label: 'Équip.',   Icon: Package },
+  features:    { label: 'Aptit.',   Icon: BookOpen },
+  personality: { label: 'Persona.', Icon: Feather },
+};
+
+const MOBILE_PANEL_ORDER: PanelId[] = [
+  'identity', 'combat', 'skills', 'spells', 'features',
+  'equipment', 'resources', 'wealth', 'deathSaves', 'personality',
+];
 
 export function Sheet() {
   const { characterId } = useParams<{ characterId: string }>();
   const nav = useNavigate();
   const query = useCharacter(characterId);
   const updateM = useUpdateCharacter();
-  const { order, setOrder, reset: resetLayout } = usePanelLayout();
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const { order, editMode, toggleEdit, reset: resetLayout } = usePanelLayout();
   const [toast, setToast] = useState<string | null>(null);
+  const [mobilePanel, setMobilePanel] = useState<PanelId>('identity');
+  const [gridNonce, setGridNonce] = useState(0);
 
   // Local editing buffer — seeded from the query once, then patched locally
   // and flushed to Supabase via a debounced mutation.
@@ -118,11 +128,6 @@ export function Sheet() {
     };
   }, [characterId]);
 
-  const sensors = useSensors(
-    useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
-    useSensor(TouchSensor, { activationConstraint: { delay: 180, tolerance: 6 } }),
-  );
-
   const flash = useCallback((msg: string) => {
     setToast(msg);
     window.setTimeout(() => setToast(null), 2200);
@@ -147,6 +152,14 @@ export function Sheet() {
     if (updateM.isError) return 'error' as const;
     return 'saved' as const;
   }, [updateM.isPending, updateM.isError, dirty]);
+
+  // Must stay above any conditional early returns — calling a hook after a
+  // return would break React's hook ordering (React #321 / "Rendered more
+  // hooks than during the previous render").
+  const renderPanel = useCallback(
+    (pid: PanelId) => (ch ? PANEL_RENDERERS[pid](ch, patch) : null),
+    [ch, patch],
+  );
 
   if (query.isLoading || (!ch && !query.isError)) {
     return (
@@ -207,43 +220,6 @@ export function Sheet() {
     }
   };
 
-  const onDragStart = (e: DragStartEvent) => setActiveId(String(e.active.id));
-
-  const onDragOver = (e: DragOverEvent) => {
-    const from = findColumn(order, String(e.active.id));
-    const overId = String(e.over?.id ?? '');
-    const to = findColumn(order, overId) ?? (COLUMNS.includes(overId as ColumnId) ? (overId as ColumnId) : null);
-    if (!from || !to || from === to) return;
-    const next = {
-      ...order,
-      [from]: order[from].filter((p) => p !== e.active.id),
-      [to]: [...order[to], e.active.id as PanelId],
-    };
-    setOrder(next);
-  };
-
-  const onDragEnd = (e: DragEndEvent) => {
-    setActiveId(null);
-    const col = findColumn(order, String(e.active.id));
-    if (!col || !e.over) return;
-    const fromIdx = order[col].indexOf(e.active.id as PanelId);
-    const toIdx = order[col].indexOf(e.over.id as PanelId);
-    if (fromIdx === -1 || toIdx === -1 || fromIdx === toIdx) return;
-    setOrder({ ...order, [col]: arrayMove(order[col], fromIdx, toIdx) });
-  };
-
-  const renderColumn = (col: ColumnId) => (
-    <SortableContext items={order[col]} strategy={verticalListSortingStrategy}>
-      <div className="space-y-4" data-column={col}>
-        {order[col].map((pid) => (
-          <SortablePanel key={pid} id={pid}>
-            {PANEL_RENDERERS[pid](ch, patch)}
-          </SortablePanel>
-        ))}
-      </div>
-    </SortableContext>
-  );
-
   return (
     <div className="h-full overflow-auto">
       <header
@@ -281,36 +257,77 @@ export function Sheet() {
         <button
           type="button"
           onClick={() => {
-            resetLayout();
-            flash('Mise en page restaurée');
+            toggleEdit();
+            flash(editMode ? 'Mode lecture' : 'Mode édition — déplace, redimensionne');
           }}
-          className="btn-rune text-xs"
-          title="Réinitialiser la disposition des panneaux"
+          className={
+            'btn-rune text-xs ' +
+            (editMode ? 'bg-gold/15 border-gold text-gold' : '')
+          }
+          title={editMode ? 'Verrouiller la mise en page' : 'Déverrouiller pour réorganiser'}
         >
-          <RotateCcw className="w-3 h-3" />
+          <Pencil className="w-3 h-3" />
+          <span className="hidden md:inline">{editMode ? 'Verrouiller' : 'Édition'}</span>
         </button>
+        {editMode && (
+          <button
+            type="button"
+            onClick={() => {
+              resetLayout();
+              setGridNonce((n) => n + 1);
+              flash('Mise en page restaurée');
+            }}
+            className="btn-rune text-xs"
+            title="Réinitialiser la disposition"
+          >
+            <RotateCcw className="w-3 h-3" />
+          </button>
+        )}
       </header>
 
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCorners}
-        onDragStart={onDragStart}
-        onDragOver={onDragOver}
-        onDragEnd={onDragEnd}
+      {/* Desktop/tablet: Gridstack widget board (4 cols, drag+resize in edit mode) */}
+      <div className="hidden md:block pb-6 p-3 sm:p-4">
+        <GridstackSheet
+          editMode={editMode}
+          panelIds={order}
+          renderPanel={renderPanel}
+          nonce={gridNonce}
+        />
+      </div>
+
+      {/* Mobile: single active panel + fixed bottom nav */}
+      <div className="md:hidden pb-20 px-3 py-3 space-y-3">
+        {PANEL_RENDERERS[mobilePanel](ch, patch)}
+      </div>
+      <nav
+        className="md:hidden fixed bottom-0 inset-x-0 z-30 bg-night-deep/95 backdrop-blur border-t border-gold/30 overflow-x-auto"
+        aria-label="Navigation panneaux"
       >
-        <div className="grid gap-4 p-3 sm:p-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1">
-          {renderColumn('left')}
-          {renderColumn('center')}
-          {renderColumn('right')}
+        <div className="flex">
+          {MOBILE_PANEL_ORDER.map((pid) => {
+            const { label, Icon } = MOBILE_PANEL_META[pid];
+            const active = pid === mobilePanel;
+            return (
+              <button
+                key={pid}
+                type="button"
+                onClick={() => setMobilePanel(pid)}
+                className={
+                  'flex-1 min-w-[64px] flex flex-col items-center gap-1 py-2 px-1 transition-colors ' +
+                  (active
+                    ? 'text-gold bg-gold/10 border-t-2 border-gold'
+                    : 'text-parchment/70 border-t-2 border-transparent')
+                }
+              >
+                <Icon className="w-4 h-4" />
+                <span className="text-[10px] uppercase tracking-wider font-display font-bold truncate max-w-full">
+                  {label}
+                </span>
+              </button>
+            );
+          })}
         </div>
-        <DragOverlay>
-          {activeId && (
-            <div className="panel p-4 opacity-90 shadow-[0_0_30px_rgba(201,168,76,0.4)] rotate-1">
-              <div className="heading-rune text-sm">Déplacement…</div>
-            </div>
-          )}
-        </DragOverlay>
-      </DndContext>
+      </nav>
 
       {toast && (
         <div

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useMj, type FitMode } from '@/stores/mj';
 import { SCENES, type Scene } from '@/data/scenes';
-import { useSecondScreen } from '@/hooks/useSecondScreen';
+import { useSecondScreenCtx } from '@/components/shared/SecondScreenProvider';
 import { useCustomScenesDb } from '@/hooks/useCustomScenesDb';
 import { SceneCard } from '@/components/mj/SceneCard';
 import { OverlayPanel } from '@/components/mj/OverlayPanel';
@@ -12,7 +12,12 @@ import { NowPlayingBar } from '@/components/mj/NowPlayingBar';
 import { Soundboard } from '@/components/mj/Soundboard';
 import { EncounterDock } from '@/components/mj/EncounterDock';
 import { MonsterBrowser } from '@/components/mj/MonsterBrowser';
-import { ChevronDown, ChevronRight, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
+import { CampaignMapsDock } from '@/components/mj/CampaignMapsDock';
+import { LoreDock } from '@/components/mj/LoreDock';
+import { MjBoard } from './MjBoard';
+import { useMjLayout, type MjWidgetId } from '@/stores/mjLayout';
+import { Pencil, RotateCcw } from 'lucide-react';
+import { ChevronDown, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function MJScreen() {
@@ -30,14 +35,15 @@ export function MJScreen() {
     showInitOnScreen,
   } = useMj();
 
-  const { isOpen, open, close, send, sendScene, sendOverlays, sendTurnOrder } = useSecondScreen();
+  const { isOpen, open, close, send, sendScene, sendOverlays, sendTurnOrder } = useSecondScreenCtx();
   const { scenes: customScenes, addFromFile, rename, remove } = useCustomScenesDb();
 
   const [scenesCollapsed, setScenesCollapsed] = useState(false);
   const [customCollapsed, setCustomCollapsed] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [browserOpen, setBrowserOpen] = useState(false);
-  const [leftCollapsed, setLeftCollapsed] = useState(false);
+  const [gridNonce, setGridNonce] = useState(0);
+  const { order: mjOrder, editMode: mjEdit, toggleEdit: toggleMjEdit, reset: resetMj } = useMjLayout();
 
   const showToast = useCallback((msg: string) => {
     setToast(msg);
@@ -133,90 +139,65 @@ export function MJScreen() {
   const customSceneCount = customScenes.length;
   const visibleCustom = useMemo(() => customScenes, [customScenes]);
 
-  return (
-    <div className="h-full overflow-auto pb-[48vh]">
-      <header className="px-6 py-4 border-b border-border/60">
-        <h1 className="heading-rune text-2xl flex items-center gap-3">
-          ⚔ Écran MJ ⚔
-        </h1>
-      </header>
-
-      <div
-        className={cn(
-          'grid gap-4 p-3 sm:p-4 grid-cols-1',
-          leftCollapsed ? 'lg:grid-cols-[40px_1fr_280px]' : 'lg:grid-cols-[260px_1fr_280px]',
-        )}
-      >
-        {/* Left column — controls (collapsible) */}
-        {leftCollapsed ? (
-          <button
-            type="button"
-            onClick={() => setLeftCollapsed(false)}
-            className="panel p-2 h-fit text-gold/70 hover:text-gold sticky top-2"
-            title="Afficher le panneau latéral"
-          >
-            <PanelLeftOpen className="w-4 h-4" />
-          </button>
-        ) : (
-        <div className="space-y-4">
-          <div className="flex justify-end">
-            <button
-              type="button"
-              onClick={() => setLeftCollapsed(true)}
-              className="text-muted-foreground hover:text-gold text-xs flex items-center gap-1"
-              title="Masquer le panneau"
-            >
-              <PanelLeftClose className="w-3 h-3" /> Réduire
-            </button>
-          </div>
-          <SecondScreenPanel
-            isOpen={isOpen}
-            onToggle={toggleSecondScreen}
-            onFullscreen={() => {
-              if (!isOpen) return showToast('⚠️ Ouvre d\'abord l\'écran 2');
-              send({ type: 'fullscreen' });
-            }}
-            onBlack={() => {
-              if (!isOpen) return showToast('⚠️ Ouvre d\'abord l\'écran 2');
-              send({ type: 'black' });
-            }}
-            onFitChange={onFitChange}
-          />
-          <OverlayPanel onChange={() => { /* effects re-synced via useEffect */ }} />
-          <Soundboard />
-          <SceneImportPanel onFiles={onFiles} />
-        </div>
-        )}
-
-        {/* Center — scenes grid */}
-        <main className="space-y-4 min-w-0">
-          <NowPlayingBar scene={activeScene} />
-
-          <section>
-            <button
-              type="button"
-              onClick={() => setScenesCollapsed((c) => !c)}
-              className="flex items-center gap-2 mb-3 heading-rune text-sm"
-            >
-              {scenesCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-              Scènes D&amp;D <span className="text-muted-foreground normal-case">({SCENES.length})</span>
-            </button>
-            {!scenesCollapsed && (
-              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
-                {SCENES.map((s) => (
-                  <SceneCard
-                    key={s.id}
-                    scene={s}
-                    active={activeSceneId === s.id}
-                    onSelect={() => onSceneSelect(s)}
-                  />
-                ))}
-              </div>
-            )}
-          </section>
-
-          {customSceneCount > 0 && (
-            <section>
+  const renderWidget = useCallback(
+    (id: MjWidgetId): React.ReactNode => {
+      switch (id) {
+        case 'secondScreen':
+          return (
+            <SecondScreenPanel
+              isOpen={isOpen}
+              onToggle={toggleSecondScreen}
+              onFullscreen={() => {
+                if (!isOpen) return showToast('⚠️ Ouvre d\'abord l\'écran 2');
+                send({ type: 'fullscreen' });
+              }}
+              onBlack={() => {
+                if (!isOpen) return showToast('⚠️ Ouvre d\'abord l\'écran 2');
+                send({ type: 'black' });
+              }}
+              onFitChange={onFitChange}
+            />
+          );
+        case 'overlays':
+          return <OverlayPanel onChange={() => { /* synced via useEffect */ }} />;
+        case 'soundboard':
+          return <Soundboard />;
+        case 'maps':
+          return <CampaignMapsDock />;
+        case 'lore':
+          return <LoreDock />;
+        case 'sceneImport':
+          return <SceneImportPanel onFiles={onFiles} />;
+        case 'nowPlaying':
+          return <NowPlayingBar scene={activeScene} />;
+        case 'scenes':
+          return (
+            <section className="panel p-3 h-full overflow-auto">
+              <button
+                type="button"
+                onClick={() => setScenesCollapsed((c) => !c)}
+                className="flex items-center gap-2 mb-3 heading-rune text-sm"
+              >
+                {scenesCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                Scènes D&amp;D <span className="text-muted-foreground normal-case">({SCENES.length})</span>
+              </button>
+              {!scenesCollapsed && (
+                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
+                  {SCENES.map((s) => (
+                    <SceneCard
+                      key={s.id}
+                      scene={s}
+                      active={activeSceneId === s.id}
+                      onSelect={() => onSceneSelect(s)}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+          );
+        case 'imports':
+          return customSceneCount > 0 ? (
+            <section className="panel p-3 h-full overflow-auto">
               <button
                 type="button"
                 onClick={() => setCustomCollapsed((c) => !c)}
@@ -247,13 +228,68 @@ export function MJScreen() {
                 </div>
               )}
             </section>
-          )}
-        </main>
+          ) : (
+            <div className="panel p-3 h-full flex items-center justify-center text-xs italic text-muted-foreground">
+              Aucun import de scène pour l'instant.
+            </div>
+          );
+        case 'initiative':
+          return (
+            <InitiativePanel
+              onChange={() => { /* synced via useEffect */ }}
+            />
+          );
+      }
+    },
+    [
+      isOpen, toggleSecondScreen, send, showToast, onFitChange, onFiles, activeScene,
+      scenesCollapsed, activeSceneId, onSceneSelect, customSceneCount,
+      customCollapsed, visibleCustom, rename, remove, setActiveScene,
+    ],
+  );
 
-        {/* Right — initiative */}
-        <InitiativePanel
-          onChange={() => { /* resync via useEffect */ }}
-          onCombatantClick={() => setLeftCollapsed(true)}
+  return (
+    <div className="h-full overflow-auto pb-[48vh]">
+      <header className="px-6 py-4 border-b border-border/60 flex items-center gap-3">
+        <h1 className="heading-rune text-2xl flex items-center gap-3 flex-1">
+          ⚔ Écran MJ ⚔
+        </h1>
+        <button
+          type="button"
+          onClick={() => {
+            toggleMjEdit();
+            showToast(mjEdit ? 'Mise en page verrouillée' : 'Édition — glisse et redimensionne');
+          }}
+          className={cn(
+            'btn-rune text-xs',
+            mjEdit && 'bg-gold/15 border-gold text-gold',
+          )}
+        >
+          <Pencil className="w-3 h-3" />
+          {mjEdit ? 'Verrouiller' : 'Édition'}
+        </button>
+        {mjEdit && (
+          <button
+            type="button"
+            onClick={() => {
+              resetMj();
+              setGridNonce((n) => n + 1);
+              showToast('Mise en page restaurée');
+            }}
+            className="btn-rune text-xs"
+            title="Réinitialiser la disposition"
+          >
+            <RotateCcw className="w-3 h-3" />
+          </button>
+        )}
+      </header>
+
+      <div className="p-3 sm:p-4">
+        <MjBoard
+          editMode={mjEdit}
+          widgetIds={mjOrder}
+          renderWidget={renderWidget}
+          nonce={gridNonce}
         />
       </div>
 

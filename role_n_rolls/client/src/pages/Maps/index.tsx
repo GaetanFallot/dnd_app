@@ -12,7 +12,8 @@ import {
 import { useLoreEntities } from '@/hooks/useLore';
 import { NoCampaignHint } from '@/components/shared/NoCampaignHint';
 import { MapCanvas } from './MapCanvas';
-import { Plus, Trash2, Loader2, Globe, Lock, Image as ImageIcon } from 'lucide-react';
+import { useImageUpload } from '@/hooks/useImageUpload';
+import { Plus, Trash2, Loader2, Globe, Lock, Image as ImageIcon, Upload, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function MapsPage() {
@@ -31,6 +32,8 @@ export function MapsPage() {
   const [newTitle, setNewTitle] = useState('');
   const [newUrl, setNewUrl] = useState('');
   const [showForm, setShowForm] = useState(false);
+  const [sideCollapsed, setSideCollapsed] = useState(false);
+  const uploadM = useImageUpload();
 
   if (!activeCampaignId) return <NoCampaignHint title="Cartes" />;
 
@@ -55,12 +58,84 @@ export function MapsPage() {
     }
   };
 
+  const onFileUpload = async (file: File) => {
+    try {
+      const { url } = await uploadM.mutateAsync(file);
+      setNewUrl(url);
+      if (!newTitle.trim()) setNewTitle(file.name.replace(/\.[a-z0-9]+$/i, ''));
+    } catch (err) {
+      alert('Upload impossible : ' + (err instanceof Error ? err.message : String(err)));
+    }
+  };
+
+  if (sideCollapsed) {
+    return (
+      <div className="h-full flex overflow-hidden">
+        <button
+          type="button"
+          onClick={() => setSideCollapsed(false)}
+          className="m-2 h-fit panel p-2 text-gold/70 hover:text-gold sticky top-2 z-10"
+          title="Afficher la liste des cartes"
+        >
+          <PanelLeftOpen className="w-4 h-4" />
+        </button>
+        <main className="flex-1 overflow-hidden relative">
+          {renderMain()}
+        </main>
+      </div>
+    );
+  }
+
+  function renderMain() {
+    if (!selected) {
+      return (
+        <div className="h-full flex items-center justify-center text-muted-foreground italic">
+          Sélectionne ou crée une carte.
+        </div>
+      );
+    }
+    return (
+      <MapView
+        map={selected}
+        readOnly={!isMj}
+        entities={entities.data ?? []}
+        onTogglePublic={() =>
+          updateM.mutate({ id: selected.id, campaignId: selected.campaign_id, patch: { is_public: !selected.is_public } })
+        }
+        onRename={() => {
+          const t = window.prompt('Nouveau titre', selected.title);
+          if (t && t.trim()) {
+            updateM.mutate({ id: selected.id, campaignId: selected.campaign_id, patch: { title: t.trim() } });
+          }
+        }}
+        onDelete={() => {
+          if (window.confirm(`Supprimer "${selected.title}" ?`)) {
+            deleteM.mutate(
+              { id: selected.id, campaignId: selected.campaign_id },
+              { onSuccess: () => setSelectedId(null) },
+            );
+          }
+        }}
+      />
+    );
+  }
+
   return (
     <div className="h-full flex overflow-hidden">
       <aside className="w-[260px] shrink-0 border-r border-border/60 flex flex-col">
-        <header className="p-3 border-b border-border/60">
-          <h1 className="heading-rune text-lg">🗺️ Cartes</h1>
-          <div className="text-xs text-muted-foreground truncate">{campaign.data?.title}</div>
+        <header className="p-3 border-b border-border/60 flex items-start gap-2">
+          <div className="flex-1 min-w-0">
+            <h1 className="heading-rune text-lg">🗺️ Cartes</h1>
+            <div className="text-xs text-muted-foreground truncate">{campaign.data?.title}</div>
+          </div>
+          <button
+            type="button"
+            onClick={() => setSideCollapsed(true)}
+            className="text-muted-foreground hover:text-gold"
+            title="Masquer la liste"
+          >
+            <PanelLeftClose className="w-4 h-4" />
+          </button>
         </header>
         <div className="flex-1 overflow-y-auto">
           {maps.isLoading ? (
@@ -104,16 +179,53 @@ export function MapsPage() {
                   onChange={(e) => setNewTitle(e.target.value)}
                   className="w-full bg-input border border-border/60 rounded px-2 py-1 text-xs focus:outline-none focus:border-gold"
                 />
-                <input
-                  type="url"
-                  required
-                  placeholder="URL de l'image"
-                  value={newUrl}
-                  onChange={(e) => setNewUrl(e.target.value)}
-                  className="w-full bg-input border border-border/60 rounded px-2 py-1 text-xs focus:outline-none focus:border-gold"
-                />
                 <div className="flex gap-1">
-                  <button type="submit" disabled={createM.isPending} className="btn-rune text-[10px] flex-1">
+                  <label
+                    className={
+                      'btn-rune text-[10px] cursor-pointer ' +
+                      (uploadM.isPending ? 'opacity-60 cursor-wait' : '')
+                    }
+                    title="Charger depuis ton ordinateur"
+                  >
+                    {uploadM.isPending ? (
+                      <Loader2 className="w-3 h-3 animate-spin" />
+                    ) : (
+                      <Upload className="w-3 h-3" />
+                    )}
+                    Importer
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      disabled={uploadM.isPending}
+                      onChange={(e) => {
+                        const f = e.target.files?.[0];
+                        if (f) void onFileUpload(f);
+                        e.target.value = '';
+                      }}
+                    />
+                  </label>
+                  <input
+                    type="url"
+                    placeholder="…ou URL"
+                    value={newUrl}
+                    onChange={(e) => setNewUrl(e.target.value)}
+                    className="flex-1 bg-input border border-border/60 rounded px-2 py-1 text-xs focus:outline-none focus:border-gold"
+                  />
+                </div>
+                {newUrl && (
+                  <img
+                    src={newUrl}
+                    alt=""
+                    className="w-full h-24 object-cover rounded border border-border/60"
+                  />
+                )}
+                <div className="flex gap-1">
+                  <button
+                    type="submit"
+                    disabled={createM.isPending || !newTitle.trim() || !newUrl.trim()}
+                    className="btn-rune text-[10px] flex-1"
+                  >
                     {createM.isPending ? <Loader2 className="w-3 h-3 animate-spin" /> : <Plus className="w-3 h-3" />}
                     Créer
                   </button>
@@ -131,36 +243,7 @@ export function MapsPage() {
         )}
       </aside>
 
-      <main className="flex-1 overflow-hidden relative">
-        {selected ? (
-          <MapView
-            map={selected}
-            readOnly={!isMj}
-            entities={entities.data ?? []}
-            onTogglePublic={() =>
-              updateM.mutate({ id: selected.id, campaignId: selected.campaign_id, patch: { is_public: !selected.is_public } })
-            }
-            onRename={() => {
-              const t = window.prompt('Nouveau titre', selected.title);
-              if (t && t.trim()) {
-                updateM.mutate({ id: selected.id, campaignId: selected.campaign_id, patch: { title: t.trim() } });
-              }
-            }}
-            onDelete={() => {
-              if (window.confirm(`Supprimer "${selected.title}" ?`)) {
-                deleteM.mutate(
-                  { id: selected.id, campaignId: selected.campaign_id },
-                  { onSuccess: () => setSelectedId(null) },
-                );
-              }
-            }}
-          />
-        ) : (
-          <div className="h-full flex items-center justify-center text-muted-foreground italic">
-            Sélectionne ou crée une carte.
-          </div>
-        )}
-      </main>
+      <main className="flex-1 overflow-hidden relative">{renderMain()}</main>
     </div>
   );
 }

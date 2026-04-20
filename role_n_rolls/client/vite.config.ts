@@ -11,8 +11,8 @@ export default defineConfig({
       injectRegister: 'auto',
       includeAssets: ['icon.svg', 'favicon.svg'],
       manifest: {
-        name: "Role'n'Rolls",
-        short_name: "Role'n'Rolls",
+        name: "Roll'n'Roles",
+        short_name: "Roll'n'Roles",
         description: 'D&D companion — MJ screen, character sheets, lore builder, maps',
         lang: 'fr',
         start_url: '/',

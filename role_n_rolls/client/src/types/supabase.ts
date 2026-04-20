@@ -94,6 +94,7 @@ export interface Database {
           created_by: string;
           created_at: string;
           updated_at: string;
+          custom_data: unknown;
         };
         Insert: {
           id?: string;
@@ -106,6 +107,7 @@ export interface Database {
           created_by: string;
           created_at?: string;
           updated_at?: string;
+          custom_data?: unknown;
         };
         Update: Partial<Database['public']['Tables']['lore_entities']['Row']>;
         Relationships: Rel;
@@ -246,6 +248,42 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['map_annotations']['Row']>;
         Relationships: Rel;
       };
+      lore_entity_overrides: {
+        Row: {
+          campaign_id: string;
+          entity_id: string;
+          is_hidden: boolean;
+          local_note: string | null;
+          updated_at: string;
+          updated_by: string | null;
+        };
+        Insert: {
+          campaign_id: string;
+          entity_id: string;
+          is_hidden?: boolean;
+          local_note?: string | null;
+          updated_at?: string;
+          updated_by?: string | null;
+        };
+        Update: Partial<Database['public']['Tables']['lore_entity_overrides']['Row']>;
+        Relationships: Rel;
+      };
+      campaign_libraries: {
+        Row: {
+          campaign_id: string;
+          source_campaign_id: string;
+          added_at: string;
+          added_by: string | null;
+        };
+        Insert: {
+          campaign_id: string;
+          source_campaign_id: string;
+          added_at?: string;
+          added_by?: string | null;
+        };
+        Update: Partial<Database['public']['Tables']['campaign_libraries']['Row']>;
+        Relationships: Rel;
+      };
       characters: {
         Row: {
           id: string;
@@ -288,6 +326,10 @@ export interface Database {
       public_maps: {
         Args: { p_token: string };
         Returns: Database['public']['Tables']['maps']['Row'][];
+      };
+      campaign_lore_sources: {
+        Args: { p_campaign_id: string };
+        Returns: string[];
       };
     };
     Enums: {

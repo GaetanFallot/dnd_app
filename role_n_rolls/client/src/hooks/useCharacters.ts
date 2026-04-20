@@ -72,11 +72,15 @@ export function useCreateCharacter() {
   const qc = useQueryClient();
   const userId = useAuth((s) => s.user?.id);
   return useMutation({
-    mutationFn: async (): Promise<CharacterRecord> => {
+    mutationFn: async (args?: { campaignId?: string | null }): Promise<CharacterRecord> => {
       if (!userId) throw new Error('Pas de session active');
       const { data, error } = await supabase
         .from('characters')
-        .insert({ user_id: userId, character_data: blankCharacter() })
+        .insert({
+          user_id: userId,
+          character_data: blankCharacter(),
+          campaign_id: args?.campaignId ?? null,
+        })
         .select('id, character_data, updated_at')
         .single();
       if (error) throw error;

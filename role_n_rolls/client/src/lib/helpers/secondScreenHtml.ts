@@ -10,7 +10,7 @@
  * by the popup (not the parent).
  */
 export function buildSecondScreenHtml(): string {
-  return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Role'n'Rolls — Écran DnD</title>
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Roll'n'Roles — Écran DnD</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;height:100%;overflow:hidden;background:#000;cursor:none}
@@ -67,7 +67,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;cursor:none}
 <div id="overlay-layer"></div>
 <div id="lightning-flash"></div>
 <div id="turn-order-bar"></div>
-<div id="idle"><div id="idle-t">⚔ En attente ⚔</div><div id="idle-s">Role'n'Rolls</div></div>
+<div id="idle"><div id="idle-t">⚔ En attente ⚔</div><div id="idle-s">Roll'n'Roles</div></div>
 <script>
 const bg=document.getElementById('bg'),iw=document.getElementById('img-wrap'),
   mi=document.getElementById('mi'),mv=document.getElementById('mv'),
@@ -263,6 +263,15 @@ window.addEventListener('message',e=>{
     if(ovs.includes('fire')&&!audioNodes.fire)startAmb('fire');
     if(!ovs.includes('fire')&&audioNodes.fire)stopAmb('fire');
     activeEffects=newFX;
+  }
+  if(d.type==='lightning-flash'){
+    // Fire the visual thunder strike regardless of whether the thunder
+    // overlay is currently active — the soundboard uses this to sync
+    // flashes to its own thunder track.
+    const intensity=typeof d.intensity==='number'?d.intensity:0.8;
+    const bolts=intensity>1?2:1;
+    for(let b=0;b<bolts;b++)setTimeout(()=>createLightningBolt(),b*60);
+    triggerFlash(intensity);
   }
   if(d.type==='fullscreen'&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen();
   if(d.type==='turn-order'){

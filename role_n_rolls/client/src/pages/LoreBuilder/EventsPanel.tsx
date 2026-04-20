@@ -88,7 +88,7 @@ export function EventsPanel({ campaignId, readOnly }: Props) {
               >
                 {entities.data?.map((ent) => (
                   <option key={ent.id} value={ent.id}>
-                    {LORE_TYPE_META[ent.type].emoji} {ent.name}
+                    {LORE_TYPE_META[ent.type].label} · {ent.name}
                   </option>
                 ))}
               </select>
@@ -125,7 +125,7 @@ export function EventsPanel({ campaignId, readOnly }: Props) {
               readOnly={readOnly}
               entityName={(id) => {
                 const ent = entities.data?.find((e) => e.id === id);
-                return ent ? `${LORE_TYPE_META[ent.type].emoji} ${ent.name}` : '(supprimé)';
+                return ent ? `${LORE_TYPE_META[ent.type].label} · ${ent.name}` : '(supprimé)';
               }}
               onToggleVisibility={() =>
                 updateM.mutate({ id: ev.id, campaignId, patch: { is_public: !ev.is_public } })

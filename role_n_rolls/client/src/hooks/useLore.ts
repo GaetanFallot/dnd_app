@@ -6,7 +6,16 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/stores/auth';
+import { useLoreOverrides } from '@/hooks/useLoreOverrides';
 import type { LoreEntityType } from '@/types/supabase';
+
+export interface LoreMetaRow { k: string; v: string }
+export interface LoreStatRow { k: string; v: number; c?: 'gold' | 'red' | 'green' | 'blue' | 'purple' }
+export interface LoreCustomData {
+  meta?: LoreMetaRow[];
+  stats?: LoreStatRow[];
+  tags?: string[];
+}
 
 export interface LoreEntityRow {
   id: string;
@@ -19,6 +28,7 @@ export interface LoreEntityRow {
   created_by: string;
   created_at: string;
   updated_at: string;
+  custom_data?: LoreCustomData | null;
 }
 
 export interface LoreRelationRow {
@@ -43,22 +53,64 @@ export interface LoreEventRow {
 const ENTITIES_KEY = (campaignId: string) => ['lore', campaignId, 'entities'] as const;
 const RELATIONS_KEY = (campaignId: string) => ['lore', campaignId, 'relations'] as const;
 const EVENTS_KEY = (campaignId: string) => ['lore', campaignId, 'events'] as const;
+const SOURCES_KEY = (campaignId: string) => ['lore', campaignId, 'sources'] as const;
+
+/**
+ * Returns every campaign whose lore the active campaign should display:
+ * its own + any campaigns linked via `campaign_libraries`. Falls back to
+ * `[campaignId]` if the RPC or the table is missing (older DBs).
+ */
+async function resolveLoreSources(campaignId: string): Promise<string[]> {
+  const { data, error } = await supabase.rpc('campaign_lore_sources', {
+    p_campaign_id: campaignId,
+  });
+  if (error || !data) return [campaignId];
+  // Returns setof uuid → PostgREST usually serialises as string[], but some
+  // configurations wrap each row as `{ campaign_lore_sources: uuid }`.
+  const unknownData = data as unknown;
+  if (Array.isArray(unknownData) && unknownData.length && typeof unknownData[0] === 'object' && unknownData[0] !== null) {
+    return (unknownData as Array<Record<string, string>>)
+      .map((row) => Object.values(row)[0])
+      .filter(Boolean);
+  }
+  return (unknownData as string[] | null) ?? [campaignId];
+}
 
 // ─── Entities ────────────────────────────────────────────────────────────────
 
-export function useLoreEntities(campaignId: string | undefined) {
+export function useLoreSources(campaignId: string | undefined) {
   return useQuery({
-    queryKey: ENTITIES_KEY(campaignId ?? ''),
+    queryKey: SOURCES_KEY(campaignId ?? ''),
     enabled: !!campaignId,
+    queryFn: () => (campaignId ? resolveLoreSources(campaignId) : Promise.resolve([])),
+  });
+}
+
+export function useLoreEntities(campaignId: string | undefined) {
+  const sources = useLoreSources(campaignId);
+  const overrides = useLoreOverrides(campaignId);
+  return useQuery({
+    queryKey: [
+      ...ENTITIES_KEY(campaignId ?? ''),
+      (sources.data ?? []).join(','),
+      Object.keys(overrides.data ?? {}).length,
+    ],
+    enabled: !!campaignId && !!sources.data,
     queryFn: async (): Promise<LoreEntityRow[]> => {
       if (!campaignId) return [];
+      const ids = sources.data?.length ? sources.data : [campaignId];
       const { data, error } = await supabase
         .from('lore_entities')
         .select('*')
-        .eq('campaign_id', campaignId)
+        .in('campaign_id', ids)
         .order('name');
       if (error) throw error;
-      return (data ?? []) as LoreEntityRow[];
+      const hidden = new Set(
+        Object.values(overrides.data ?? {})
+          .filter((o) => o.is_hidden)
+          .map((o) => o.entity_id),
+      );
+      return ((data ?? []) as LoreEntityRow[]).filter((e) => !hidden.has(e.id));
     },
   });
 }
@@ -102,7 +154,7 @@ export function useUpdateLoreEntity() {
     mutationFn: async (args: {
       id: string;
       campaignId: string;
-      patch: Partial<Pick<LoreEntityRow, 'type' | 'name' | 'description' | 'image_url' | 'is_public'>>;
+      patch: Partial<Pick<LoreEntityRow, 'type' | 'name' | 'description' | 'image_url' | 'is_public' | 'custom_data'>>;
     }) => {
       const { error } = await supabase.from('lore_entities').update(args.patch).eq('id', args.id);
       if (error) throw error;
@@ -129,15 +181,17 @@ export function useDeleteLoreEntity() {
 // ─── Relations ───────────────────────────────────────────────────────────────
 
 export function useLoreRelations(campaignId: string | undefined) {
+  const sources = useLoreSources(campaignId);
   return useQuery({
-    queryKey: RELATIONS_KEY(campaignId ?? ''),
-    enabled: !!campaignId,
+    queryKey: [...RELATIONS_KEY(campaignId ?? ''), (sources.data ?? []).join(',')],
+    enabled: !!campaignId && !!sources.data,
     queryFn: async (): Promise<LoreRelationRow[]> => {
       if (!campaignId) return [];
+      const ids = sources.data?.length ? sources.data : [campaignId];
       const { data, error } = await supabase
         .from('lore_relations')
         .select('*')
-        .eq('campaign_id', campaignId);
+        .in('campaign_id', ids);
       if (error) throw error;
       return (data ?? []) as LoreRelationRow[];
     },
@@ -179,15 +233,17 @@ export function useDeleteLoreRelation() {
 // ─── Events ──────────────────────────────────────────────────────────────────
 
 export function useLoreEvents(campaignId: string | undefined) {
+  const sources = useLoreSources(campaignId);
   return useQuery({
-    queryKey: EVENTS_KEY(campaignId ?? ''),
-    enabled: !!campaignId,
+    queryKey: [...EVENTS_KEY(campaignId ?? ''), (sources.data ?? []).join(',')],
+    enabled: !!campaignId && !!sources.data,
     queryFn: async (): Promise<LoreEventRow[]> => {
       if (!campaignId) return [];
+      const ids = sources.data?.length ? sources.data : [campaignId];
       const { data, error } = await supabase
         .from('lore_events')
         .select('*, lore_event_entities(entity_id)')
-        .eq('campaign_id', campaignId)
+        .in('campaign_id', ids)
         .order('created_at', { ascending: false });
       if (error) throw error;
       type Joined = {

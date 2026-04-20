@@ -28,7 +28,7 @@ export function EncounterDock({ onOpenBrowser, onOpenEditor }: Props) {
     addEncounterMonster,
     addCombatant,
   } = useMj();
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const fileInput = useRef<HTMLInputElement | null>(null);
 
   const handleImport = async (files: FileList) => {

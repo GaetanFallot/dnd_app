@@ -7,6 +7,7 @@ import {
   useJoinCampaignByToken,
   type CampaignSummary,
 } from '@/hooks/useCampaigns';
+import { useCreateCharacter } from '@/hooks/useCharacters';
 import { useSession } from '@/stores/session';
 import { useAuth } from '@/stores/auth';
 import { cn } from '@/lib/utils';
@@ -20,14 +21,18 @@ import {
   Sparkles,
   LogIn,
   Swords,
+  UserPlus,
 } from 'lucide-react';
 import { CampaignSharePanel } from './CampaignSharePanel';
+import { ActiveCampaignFeed } from './ActiveCampaignFeed';
+import { LinkedLibrariesPanel } from './LinkedLibrariesPanel';
 
 export function SessionPage() {
   const list = useCampaigns();
   const createM = useCreateCampaign();
   const joinM = useJoinCampaignByToken();
   const removeM = useDeleteCampaign();
+  const createCharM = useCreateCharacter();
   const { activeCampaignId, setActiveCampaign } = useSession();
   const userId = useAuth((s) => s.user?.id);
   const nav = useNavigate();
@@ -180,6 +185,15 @@ export function SessionPage() {
                     onOpenLore={() => { setActiveCampaign(c.id); nav('/lore'); }}
                     onOpenMaps={() => { setActiveCampaign(c.id); nav('/maps'); }}
                     onOpenMJ={() => { setActiveCampaign(c.id); nav('/mj'); }}
+                    onCreateChar={async () => {
+                      try {
+                        const rec = await createCharM.mutateAsync({ campaignId: c.id });
+                        setActiveCampaign(c.id);
+                        nav(`/character/${rec.id}`);
+                      } catch (err) {
+                        alert('Création impossible : ' + (err instanceof Error ? err.message : String(err)));
+                      }
+                    }}
                     onDelete={() => {
                       if (window.confirm(`Supprimer "${c.title}" ? Les entités, maps et joueurs seront retirés.`)) {
                         removeM.mutate(c.id, {
@@ -209,6 +223,15 @@ export function SessionPage() {
                     onActivate={() => setActiveCampaign(c.id)}
                     onOpenLore={() => { setActiveCampaign(c.id); nav('/lore'); }}
                     onOpenMaps={() => { setActiveCampaign(c.id); nav('/maps'); }}
+                    onCreateChar={async () => {
+                      try {
+                        const rec = await createCharM.mutateAsync({ campaignId: c.id });
+                        setActiveCampaign(c.id);
+                        nav(`/character/${rec.id}`);
+                      } catch (err) {
+                        alert('Création impossible : ' + (err instanceof Error ? err.message : String(err)));
+                      }
+                    }}
                   />
                 ))}
               </div>
@@ -217,8 +240,15 @@ export function SessionPage() {
         </>
       )}
 
+      {active && (
+        <ActiveCampaignFeed campaignId={active.id} />
+      )}
+
       {active?.is_mj && active.mj_user_id === userId && (
-        <CampaignSharePanel campaignId={active.id} />
+        <>
+          <LinkedLibrariesPanel campaignId={active.id} />
+          <CampaignSharePanel campaignId={active.id} />
+        </>
       )}
     </div>
   );
@@ -231,6 +261,7 @@ function CampaignCard({
   onOpenLore,
   onOpenMaps,
   onOpenMJ,
+  onCreateChar,
   onDelete,
 }: {
   c: CampaignSummary;
@@ -239,6 +270,7 @@ function CampaignCard({
   onOpenLore: () => void;
   onOpenMaps: () => void;
   onOpenMJ?: () => void;
+  onCreateChar?: () => void;
   onDelete?: () => void;
 }) {
   return (
@@ -274,6 +306,16 @@ function CampaignCard({
         </button>
         <button type="button" onClick={onOpenLore} className="btn-rune text-[10px] px-2 py-1">Lore</button>
         <button type="button" onClick={onOpenMaps} className="btn-rune text-[10px] px-2 py-1">Cartes</button>
+        {onCreateChar && (
+          <button
+            type="button"
+            onClick={onCreateChar}
+            className="btn-rune text-[10px] px-2 py-1"
+            title="Créer un personnage lié à cette campagne"
+          >
+            <UserPlus className="w-3 h-3" /> Perso
+          </button>
+        )}
         {onOpenMJ && (
           <button type="button" onClick={onOpenMJ} className="btn-rune text-[10px] px-2 py-1">
             <Swords className="w-3 h-3" /> MJ

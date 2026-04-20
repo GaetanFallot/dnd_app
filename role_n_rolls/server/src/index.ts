@@ -17,5 +17,5 @@ app.use('/api/health', healthRouter);
 // admin jobs, or aggregations that bypass RLS).
 
 app.listen(PORT, () => {
-  console.log(`[server] Role'n'Rolls API listening on http://localhost:${PORT}`);
+  console.log(`[server] Roll'n'Roles API listening on http://localhost:${PORT}`);
 });

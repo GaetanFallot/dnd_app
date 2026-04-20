@@ -1,4 +1,4 @@
--- Role'n'Rolls — initial schema
+-- Roll'n'Roles — initial schema
 -- Users, campaigns, lore entities/relations/events, maps, characters.
 
 create extension if not exists "uuid-ossp";

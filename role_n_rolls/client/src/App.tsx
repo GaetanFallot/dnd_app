@@ -8,6 +8,7 @@ import { SessionPage } from '@/pages/Session';
 import { AuthPage } from '@/pages/Auth';
 import { PublicLorePage } from '@/pages/PublicLore';
 import { SharedView } from '@/pages/CharacterCreation/SharedView';
+import { SettingsPage } from '@/pages/Settings';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/character/:characterId" element={<CharacterCreation />} />
         <Route path="/lore" element={<LoreBuilder />} />
         <Route path="/maps" element={<MapsPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
         <Route path="*" element={<Navigate to="/session" replace />} />
       </Route>
     </Routes>

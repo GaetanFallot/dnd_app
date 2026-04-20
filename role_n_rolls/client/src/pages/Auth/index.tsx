@@ -62,7 +62,7 @@ export function AuthPage() {
       <div className="panel w-full max-w-md p-6 space-y-5">
         <div className="text-center space-y-1">
           <Dices className="w-10 h-10 text-gold mx-auto" />
-          <h1 className="heading-rune text-2xl">Role'n'Rolls</h1>
+          <h1 className="heading-rune text-2xl">Roll'n'Roles</h1>
           <p className="text-xs text-muted-foreground font-body italic">
             Connecte-toi pour synchroniser tes personnages et tes campagnes
           </p>

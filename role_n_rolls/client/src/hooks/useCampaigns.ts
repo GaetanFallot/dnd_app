@@ -262,3 +262,78 @@ export function useRevokeShareToken() {
     onSuccess: (_, campaignId) => qc.invalidateQueries({ queryKey: SHARE_KEY(campaignId) }),
   });
 }
+
+// ─── Linked lore libraries (many-to-many between campaigns) ───────────────
+
+export interface LinkedLibraryRow {
+  source_campaign_id: string;
+  added_at: string;
+  title: string | null;
+}
+
+const LIBS_KEY = (campaignId: string) => ['campaigns', campaignId, 'libraries'] as const;
+
+export function useCampaignLibraries(campaignId: string | undefined) {
+  return useQuery({
+    queryKey: LIBS_KEY(campaignId ?? ''),
+    enabled: !!campaignId,
+    queryFn: async (): Promise<LinkedLibraryRow[]> => {
+      if (!campaignId) return [];
+      const { data, error } = await supabase
+        .from('campaign_libraries')
+        .select('source_campaign_id, added_at, campaigns:source_campaign_id(title)')
+        .eq('campaign_id', campaignId);
+      if (error) throw error;
+      return ((data ?? []) as unknown as Array<{
+        source_campaign_id: string;
+        added_at: string;
+        campaigns?: { title: string } | null;
+      }>).map((r) => ({
+        source_campaign_id: r.source_campaign_id,
+        added_at: r.added_at,
+        title: r.campaigns?.title ?? null,
+      }));
+    },
+  });
+}
+
+export function useLinkCampaignLibrary() {
+  const qc = useQueryClient();
+  const userId = useAuth((s) => s.user?.id);
+  return useMutation({
+    mutationFn: async (args: { campaignId: string; sourceCampaignId: string }) => {
+      if (!userId) throw new Error('Pas de session active');
+      if (args.campaignId === args.sourceCampaignId) {
+        throw new Error('Impossible de lier une campagne à elle-même');
+      }
+      const { error } = await supabase.from('campaign_libraries').insert({
+        campaign_id: args.campaignId,
+        source_campaign_id: args.sourceCampaignId,
+        added_by: userId,
+      });
+      if (error && !('code' in error && (error as { code: string }).code === '23505')) throw error;
+    },
+    onSuccess: (_, args) => {
+      qc.invalidateQueries({ queryKey: LIBS_KEY(args.campaignId) });
+      qc.invalidateQueries({ queryKey: ['lore', args.campaignId] });
+    },
+  });
+}
+
+export function useUnlinkCampaignLibrary() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (args: { campaignId: string; sourceCampaignId: string }) => {
+      const { error } = await supabase
+        .from('campaign_libraries')
+        .delete()
+        .eq('campaign_id', args.campaignId)
+        .eq('source_campaign_id', args.sourceCampaignId);
+      if (error) throw error;
+    },
+    onSuccess: (_, args) => {
+      qc.invalidateQueries({ queryKey: LIBS_KEY(args.campaignId) });
+      qc.invalidateQueries({ queryKey: ['lore', args.campaignId] });
+    },
+  });
+}

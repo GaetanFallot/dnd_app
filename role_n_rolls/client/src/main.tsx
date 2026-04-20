@@ -4,9 +4,15 @@ import { BrowserRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import App from './App';
 import { initAuth } from './stores/auth';
+import { applyThemeToDocument, useTheme } from './stores/theme';
+import 'gridstack/dist/gridstack.min.css';
 import './styles.css';
 
 initAuth();
+// Push the persisted theme colors onto :root before the first render so the
+// app never flashes with the default palette.
+applyThemeToDocument(useTheme.getState().colors);
+useTheme.subscribe((s) => applyThemeToDocument(s.colors));
 
 const queryClient = new QueryClient({
   defaultOptions: {

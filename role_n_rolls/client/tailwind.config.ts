@@ -1,63 +1,71 @@
 import type { Config } from 'tailwindcss';
 import animate from 'tailwindcss-animate';
 
+/**
+ * Colour tokens are declared as `rgb(var(--tw-*) / <alpha-value>)` so that
+ * the user-editable theme (see `stores/theme.ts` + Settings page) re-tints
+ * the entire app at runtime without a rebuild. Raw hex fallbacks live in
+ * `styles.css` :root so the default palette still shows during SSR or if
+ * JS hasn't run yet.
+ */
+const withAlpha = (v: string) => `rgb(var(${v}) / <alpha-value>)`;
+
 const config: Config = {
   darkMode: 'class',
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        // Dark fantasy palette
-        parchment: '#e8e0d0',
+        parchment: withAlpha('--tw-parchment'),
         gold: {
-          DEFAULT: '#c9a84c',
-          light: '#d4b860',
-          dark: '#a8882e',
+          DEFAULT: withAlpha('--tw-gold'),
+          light:   withAlpha('--tw-gold-light'),
+          dark:    withAlpha('--tw-gold-dark'),
         },
         blood: {
-          DEFAULT: '#8b0000',
-          light: '#a61a1a',
-          dark: '#5c0000',
+          DEFAULT: withAlpha('--tw-blood'),
+          light:   withAlpha('--tw-blood-light'),
+          dark:    withAlpha('--tw-blood-dark'),
         },
         night: {
-          DEFAULT: '#0d0d0f',
-          deep: '#05050a',
-          panel: '#16213e',
-          muted: '#1a1a2e',
+          DEFAULT: withAlpha('--tw-night'),
+          deep:    withAlpha('--tw-night-deep'),
+          panel:   withAlpha('--tw-night-panel'),
+          muted:   withAlpha('--tw-night-muted'),
         },
-        border: '#2a2f4a',
-        ring: '#c9a84c',
-        background: '#0d0d0f',
-        foreground: '#e8e0d0',
+        border:      withAlpha('--tw-border'),
+        ring:        withAlpha('--tw-gold'),
+        background:  withAlpha('--tw-night'),
+        foreground:  withAlpha('--tw-parchment'),
         card: {
-          DEFAULT: '#16213e',
-          foreground: '#e8e0d0',
+          DEFAULT:     withAlpha('--tw-night-panel'),
+          foreground:  withAlpha('--tw-parchment'),
         },
         popover: {
-          DEFAULT: '#0f1a2e',
-          foreground: '#e8e0d0',
+          DEFAULT:     withAlpha('--tw-night-panel'),
+          foreground:  withAlpha('--tw-parchment'),
         },
         primary: {
-          DEFAULT: '#c9a84c',
-          foreground: '#0d0d0f',
+          DEFAULT:     withAlpha('--tw-gold'),
+          foreground:  withAlpha('--tw-night'),
         },
         secondary: {
-          DEFAULT: '#1a1a2e',
-          foreground: '#e8e0d0',
+          DEFAULT:     withAlpha('--tw-night-muted'),
+          foreground:  withAlpha('--tw-parchment'),
         },
         muted: {
-          DEFAULT: '#1a1a2e',
-          foreground: '#8b8b9c',
+          DEFAULT:     withAlpha('--tw-night-muted'),
+          foreground:  withAlpha('--tw-muted-fg'),
         },
         accent: {
-          DEFAULT: '#8b0000',
-          foreground: '#e8e0d0',
+          DEFAULT:     withAlpha('--tw-blood'),
+          foreground:  withAlpha('--tw-parchment'),
         },
         destructive: {
-          DEFAULT: '#8b0000',
-          foreground: '#e8e0d0',
+          DEFAULT:     withAlpha('--tw-blood'),
+          foreground:  withAlpha('--tw-parchment'),
         },
-        input: '#1a1a2e',
+        input:        withAlpha('--tw-night-muted'),
       },
       fontFamily: {
         display: ['Cinzel', 'serif'],
@@ -80,8 +88,8 @@ const config: Config = {
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         'glow-pulse': {
-          '0%, 100%': { boxShadow: '0 0 8px rgba(201, 168, 76, 0.3)' },
-          '50%': { boxShadow: '0 0 16px rgba(201, 168, 76, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 8px rgb(var(--tw-gold) / 0.3)' },
+          '50%':      { boxShadow: '0 0 16px rgb(var(--tw-gold) / 0.6)' },
         },
       },
       animation: {

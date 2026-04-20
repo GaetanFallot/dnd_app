@@ -24,7 +24,7 @@ export function Roster() {
 
   const newChar = async () => {
     try {
-      const rec = await createM.mutateAsync();
+      const rec = await createM.mutateAsync(undefined);
       nav(`/character/${rec.id}`);
     } catch (err) {
       alert('Création impossible : ' + (err instanceof Error ? err.message : String(err)));

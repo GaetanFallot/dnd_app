@@ -4,6 +4,13 @@ import { loadThunderSounds } from '@/lib/helpers/loadThunderSounds';
 import type { Scene } from '@/data/scenes';
 import type { Combatant } from '@/stores/mj';
 
+/**
+ * Popup ready states. Storage matters because we need to stop retrying
+ * `thunder-sounds` once the popup has decoded them, and to avoid flashing
+ * "unavailable" while a legitimate load is still in progress.
+ */
+export type ThunderStatus = 'loading' | 'sent' | 'failed' | 'unavailable';
+
 export type SecondScreenMessage =
   | { type: 'scene'; src: string | null; bg: string; fit: string; isVideo: boolean }
   | { type: 'fit'; fit: string }
@@ -21,7 +28,9 @@ export type SecondScreenMessage =
       round?: number;
     }
   | { type: 'vid-audio'; muted: boolean; volume: number }
-  | { type: 'thunder-sounds'; sounds: Record<string, string> };
+  | { type: 'thunder-sounds'; sounds: Record<string, string> }
+  /** Manually trigger a single lightning flash + bolt (used by soundboard). */
+  | { type: 'lightning-flash'; intensity?: number };
 
 /**
  * Opens/closes a popup window and exposes a `send(msg)` that forwards
@@ -32,6 +41,7 @@ export function useSecondScreen() {
   const winRef = useRef<Window | null>(null);
   const urlRef = useRef<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [thunderStatus, setThunderStatus] = useState<ThunderStatus>('unavailable');
 
   const send = useCallback((msg: SecondScreenMessage) => {
     const w = winRef.current;
@@ -69,13 +79,38 @@ export function useSecondScreen() {
     }
     winRef.current = w;
     setIsOpen(true);
-    // Pre-load real thunder buffers and forward them once the popup is live.
+    // Pre-load real thunder buffers. The popup script lives inside a Blob
+    // URL and boots async, so the first postMessage is often dropped. We
+    // retry a few times until the popup acks by firing `load`.
+    setThunderStatus('loading');
     loadThunderSounds()
       .then((sounds) => {
         const target = winRef.current;
-        if (target && !target.closed) target.postMessage({ type: 'thunder-sounds', sounds }, '*');
+        if (!target || target.closed) {
+          setThunderStatus('unavailable');
+          return;
+        }
+        const push = () => {
+          const t = winRef.current;
+          if (!t || t.closed) return;
+          t.postMessage({ type: 'thunder-sounds', sounds }, '*');
+        };
+        push();
+        // Also re-push on the popup's `load` and at 500ms / 1500ms as a
+        // safety net against the script not being ready yet.
+        try {
+          w.addEventListener('load', push, { once: true });
+        } catch { /* ignore: cross-origin guard */ }
+        window.setTimeout(push, 500);
+        window.setTimeout(() => {
+          push();
+          setThunderStatus('sent');
+        }, 1500);
       })
-      .catch((err) => console.warn('[thunder] load failed, falling back to synth', err));
+      .catch((err) => {
+        console.warn('[thunder] load failed, falling back to synth', err);
+        setThunderStatus('failed');
+      });
     return w;
   }, []);
 
@@ -139,5 +174,5 @@ export function useSecondScreen() {
     [send],
   );
 
-  return { isOpen, open, close, send, sendScene, sendOverlays, sendTurnOrder };
+  return { isOpen, open, close, send, sendScene, sendOverlays, sendTurnOrder, thunderStatus };
 }

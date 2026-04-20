@@ -1,4 +1,4 @@
--- Row Level Security for Role'n'Rolls
+-- Row Level Security for Roll'n'Roles
 --
 -- Rules:
 --   * A MJ sees everything in their campaigns.

@@ -7,6 +7,7 @@ import {
 } from '@/hooks/useLore';
 import { LORE_TYPE_META } from './meta';
 import { Plus, Trash2, Loader2, ArrowRight } from 'lucide-react';
+import { EntityIcon } from '@/components/lore/IconPicker';
 
 interface Props {
   campaignId: string;
@@ -88,14 +89,16 @@ export function RelationsPanel({ campaignId, readOnly }: Props) {
                 key={r.id}
                 className="panel flex items-center gap-2 px-3 py-2 text-sm"
               >
-                <span className="font-display text-gold">
-                  {a ? `${LORE_TYPE_META[a.type].emoji} ${a.name}` : '(supprimé)'}
+                <span className="font-display font-bold text-gold flex items-center gap-1.5">
+                  {a && <EntityIcon type={a.type} iconRef={a.image_url} size={14} />}
+                  {a ? a.name : '(supprimé)'}
                 </span>
                 <span className="text-xs text-muted-foreground italic flex items-center gap-1">
                   <ArrowRight className="w-3 h-3" /> {r.relation_label}
                 </span>
-                <span className="font-display text-gold flex-1 truncate">
-                  {b ? `${LORE_TYPE_META[b.type].emoji} ${b.name}` : '(supprimé)'}
+                <span className="font-display font-bold text-gold flex-1 truncate flex items-center gap-1.5">
+                  {b && <EntityIcon type={b.type} iconRef={b.image_url} size={14} />}
+                  {b ? b.name : '(supprimé)'}
                 </span>
                 {!readOnly && (
                   <button
@@ -136,7 +139,7 @@ function EntitySelect({
       <option value="">{placeholder}</option>
       {entities.map((e) => (
         <option key={e.id} value={e.id}>
-          {LORE_TYPE_META[e.type].emoji} {e.name}
+          {LORE_TYPE_META[e.type].label} · {e.name}
         </option>
       ))}
     </select>
